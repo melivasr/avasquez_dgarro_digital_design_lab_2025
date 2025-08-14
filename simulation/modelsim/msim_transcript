@@ -1,0 +1,61 @@
+# Reading pref.tcl
+# do bin_gray_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -sv -work work +incdir+C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025 {C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/bin_gray.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:41:11 on Aug 13,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025" C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/bin_gray.sv 
+# -- Compiling module bin_gray
+# 
+# Top level modules:
+# 	bin_gray
+# End time: 19:41:12 on Aug 13,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# 
+# vlog -sv -work work +incdir+C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025 {C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/bin_gray_tb.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:41:12 on Aug 13,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025" C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/bin_gray_tb.sv 
+# -- Compiling module bin_gray_tb
+# 
+# Top level modules:
+# 	bin_gray_tb
+# End time: 19:41:12 on Aug 13,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  bin_gray_tb
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" bin_gray_tb 
+# Start time: 19:41:12 on Aug 13,2025
+# Loading sv_std.std
+# Loading work.bin_gray_tb
+# Loading work.bin_gray
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# 0000	0000
+# 0001	0001
+# 0010	0011
+# 0011	0010
+# 0100	0110
+# 0101	0111
+# 1010	1111
+# 1111	1000
+# ** Note: $finish    : C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/bin_gray_tb.sv(37)
+#    Time: 8 ns  Iteration: 0  Instance: /bin_gray_tb
+# 1
+# Break in Module bin_gray_tb at C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/bin_gray_tb.sv line 37
+# End time: 19:41:38 on Aug 13,2025, Elapsed time: 0:00:26
+# Errors: 0, Warnings: 0
