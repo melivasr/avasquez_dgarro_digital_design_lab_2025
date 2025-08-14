@@ -1,0 +1,134 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab1/problema2/simulation/modelsim
+Efull_subtractor
+Z1 w1755201089
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 0
+R0
+Z4 8C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab1/problema2/full_subtractor.vhd
+Z5 FC:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab1/problema2/full_subtractor.vhd
+l0
+L4 1
+VoROaJ00<Ph[z31Nb@kQG?3
+!s100 Ve<EESRMFnQd<A2GD9N5Y1
+Z6 OV;C;2020.1;71
+31
+Z7 !s110 1755204904
+!i10b 1
+Z8 !s108 1755204904.000000
+Z9 !s90 -reportprogress|300|-93|-work|work|C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab1/problema2/full_subtractor.vhd|
+Z10 !s107 C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab1/problema2/full_subtractor.vhd|
+!i113 1
+Z11 o-93 -work work
+Z12 tExplicit 1 CvgOpt 0
+Aestructural
+R2
+R3
+DEx4 work 15 full_subtractor 0 22 oROaJ00<Ph[z31Nb@kQG?3
+!i122 0
+l15
+L9 22
+Vh^AKMR:7^3I1g8DWPM^[b1
+!s100 ToCU@]j_Ifc1O1WhM_XZC3
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Efull_subtractor_4bit
+Z13 w1755204726
+R2
+R3
+!i122 1
+R0
+Z14 8C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab1/problema2/full_subtractor_4bit.vhd
+Z15 FC:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab1/problema2/full_subtractor_4bit.vhd
+l0
+L4 1
+VX_nIUekAR]BESGjEHLM1z2
+!s100 k9EQBCmF;V^YK:QJnMYl02
+R6
+31
+Z16 !s110 1755204905
+!i10b 1
+R8
+Z17 !s90 -reportprogress|300|-93|-work|work|C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab1/problema2/full_subtractor_4bit.vhd|
+Z18 !s107 C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab1/problema2/full_subtractor_4bit.vhd|
+!i113 1
+R11
+R12
+Aestructural
+R2
+R3
+DEx4 work 20 full_subtractor_4bit 0 22 X_nIUekAR]BESGjEHLM1z2
+!i122 1
+l22
+L14 50
+VI?SnO84[k<mR9cYCl?HWb2
+!s100 1hodV920lFP^V2z]Tj>nD0
+R6
+31
+R16
+!i10b 1
+R8
+R17
+R18
+!i113 1
+R11
+R12
+Efull_subtractor_4bit_tb
+Z19 w1755204861
+R2
+R3
+!i122 2
+R0
+Z20 8C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab1/problema2/full_subtractor_4bit_tb.vhd
+Z21 FC:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab1/problema2/full_subtractor_4bit_tb.vhd
+l0
+L4 1
+V^>3@@T2UCl>5?I5DH[h901
+!s100 [j]afW2LN?WJOX@jg@LE^0
+R6
+31
+R16
+!i10b 1
+Z22 !s108 1755204905.000000
+Z23 !s90 -reportprogress|300|-93|-work|work|C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab1/problema2/full_subtractor_4bit_tb.vhd|
+!s107 C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab1/problema2/full_subtractor_4bit_tb.vhd|
+!i113 1
+R11
+R12
+Asim
+R2
+R3
+DEx4 work 23 full_subtractor_4bit_tb 0 22 ^>3@@T2UCl>5?I5DH[h901
+!i122 2
+l23
+L7 55
+VQ1T0WY4kONkBaoCz>L?;V0
+!s100 S4gF7LQ^b6dQ9eleAJH`>3
+R6
+31
+R16
+!i10b 1
+R22
+R23
+Z24 !s107 C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab1/problema2/full_subtractor_4bit_tb.vhd|
+!i113 1
+R11
+R12

@@ -1,0 +1,69 @@
+|full_subtractor_4bit
+A[0] => full_subtractor:FS0.A
+A[1] => full_subtractor:FS1.A
+A[2] => full_subtractor:FS2.A
+A[3] => full_subtractor:FS3.A
+B[0] => full_subtractor:FS0.B
+B[1] => full_subtractor:FS1.B
+B[2] => full_subtractor:FS2.B
+B[3] => full_subtractor:FS3.B
+Cin => full_subtractor:FS0.Cin
+S[0] <= full_subtractor:FS0.S
+S[1] <= full_subtractor:FS1.S
+S[2] <= full_subtractor:FS2.S
+S[3] <= full_subtractor:FS3.S
+Cout <= full_subtractor:FS3.Cout
+
+
+|full_subtractor_4bit|full_subtractor:FS0
+A => xor1_out.IN0
+A => xor3_out.IN0
+A => and1_out.IN0
+B => xor1_out.IN1
+B => and1_out.IN1
+B => xor3_out.IN1
+Cin => xor2_out.IN1
+Cin => and2_out.IN1
+S <= xor2_out.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= or1_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|full_subtractor_4bit|full_subtractor:FS1
+A => xor1_out.IN0
+A => xor3_out.IN0
+A => and1_out.IN0
+B => xor1_out.IN1
+B => and1_out.IN1
+B => xor3_out.IN1
+Cin => xor2_out.IN1
+Cin => and2_out.IN1
+S <= xor2_out.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= or1_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|full_subtractor_4bit|full_subtractor:FS2
+A => xor1_out.IN0
+A => xor3_out.IN0
+A => and1_out.IN0
+B => xor1_out.IN1
+B => and1_out.IN1
+B => xor3_out.IN1
+Cin => xor2_out.IN1
+Cin => and2_out.IN1
+S <= xor2_out.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= or1_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|full_subtractor_4bit|full_subtractor:FS3
+A => xor1_out.IN0
+A => xor3_out.IN0
+A => and1_out.IN0
+B => xor1_out.IN1
+B => and1_out.IN1
+B => xor3_out.IN1
+Cin => xor2_out.IN1
+Cin => and2_out.IN1
+S <= xor2_out.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= or1_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
