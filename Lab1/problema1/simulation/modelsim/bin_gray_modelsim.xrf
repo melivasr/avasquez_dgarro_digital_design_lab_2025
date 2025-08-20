@@ -1,7 +1,7 @@
 vendor_name = ModelSim
-source_file = 1, C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/bin_gray.sv
-source_file = 1, C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/bin_gray_tb.sv
-source_file = 1, C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/db/bin_gray.cbx.xml
+source_file = 1, C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab1/problema1/bin_gray.sv
+source_file = 1, C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab1/problema1/bin_gray_tb.sv
+source_file = 1, C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab1/problema1/db/bin_gray.cbx.xml
 design_name = bin_gray
 instance = comp, \gray[0]~output , gray[0]~output, bin_gray, 1
 instance = comp, \gray[1]~output , gray[1]~output, bin_gray, 1

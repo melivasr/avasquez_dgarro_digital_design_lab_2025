@@ -6,7 +6,7 @@ JedecChain;
 	P ActionCode(Ign)
 		Device PartName(SOCVHPS) MfrSpec(OpMask(0));
 	P ActionCode(Cfg)
-		Device PartName(5CSXFC6D6F31) Path("C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/output_files/") File("bin_gray.sof") MfrSpec(OpMask(1));
+		Device PartName(5CSXFC6D6F31) Path("C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab1/problema1/output_files/") File("bin_gray.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 
