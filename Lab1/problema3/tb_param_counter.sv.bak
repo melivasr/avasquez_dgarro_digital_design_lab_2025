@@ -1,0 +1,138 @@
+// tb_param_counter.sv
+`timescale 1ns/1ps
+module tb_param_counter;
+  timeunit 1ns; timeprecision 1ps;
+
+  // --- Parámetros de prueba (ajusta si quieres) ---
+  localparam int N_TB    = 4;             // usa un ancho pequeño para verificar wrap (2^N)
+  localparam logic [N_TB-1:0] INIT_TB = 4'hA;
+  localparam realtime TCLK = 10.0;        // periodo de reloj = 10 ns (100 MHz)
+
+  // --- Señales ---
+  logic clk;
+  logic arst;
+  logic en;
+  logic [N_TB-1:0] q;
+
+  // --- DUT ---
+  param_counter #(.N(N_TB), .INIT(INIT_TB)) dut (
+    .clk (clk),
+    .arst(arst),
+    .en  (en),
+    .q   (q)
+  );
+
+  // --- Reloj ---
+  initial begin
+    clk = 0;
+    forever #(TCLK/2.0) clk = ~clk;
+  end
+
+  // --- Modelo de referencia para comparación ciclo a ciclo ---
+  logic [N_TB-1:0] q_ref;
+  always_ff @(posedge clk or posedge arst) begin
+    if (arst) q_ref <= INIT_TB;
+    else if (en) q_ref <= q_ref + 1'b1;
+    // si en=0, mantiene q_ref
+  end
+
+  // --- Cobertura simple de eventos interesantes ---
+  covergroup cg @(posedge clk);
+    option.per_instance = 1;
+    coverpoint en { bins zero = {0}; bins uno = {1}; }
+    coverpoint q {
+      bins init    = {INIT_TB};
+      bins wrap0   = {0};
+      bins max_val = {2**N_TB-1};
+    }
+    // transición que captura incremento con wrap
+    q_x_en: cross q, en;
+  endgroup
+  cg cov = new();
+
+  // --- Aserciones SVA ---
+  // Cuando en=1 y no hubo reset, el valor debe incrementar en el siguiente flanco
+  property p_inc;
+    @(posedge clk)
+      !$rose(arst) && $past(!arst) && $past(en)
+      |-> q == $past(q) + 1'b1;
+  endproperty
+  a_inc: assert property(p_inc) else $error("INC fallo: q=%0d, past(q)=%0d, en(past)=1", q, $past(q));
+
+  // Cuando en=0 y no hay reset, el valor debe mantenerse
+  property p_hold;
+    @(posedge clk)
+      !$rose(arst) && $past(!arst) && !$past(en)
+      |-> q == $past(q);
+  endproperty
+  a_hold: assert property(p_hold) else $error("HOLD fallo: q cambio con en=0");
+
+  // Al activar reset asíncrono, q debe ir a INIT inmediatamente (sensibilidad a posedge arst)
+  // Comprobación inmediata con #0 tras flanco de reset
+  always @(posedge arst) begin
+    #0 assert (q == INIT_TB)
+      else $error("ASYNC RESET fallo: q=%0h, esperado=%0h justo tras arst", q, INIT_TB);
+  end
+
+  // --- Estímulos ---
+  initial begin
+    // VCD para waves
+    $dumpfile("tb_param_counter.vcd");
+    $dumpvars(0, tb_param_counter);
+
+    // Inicialización
+    en   = 0;
+    arst = 0;
+    q_ref = 'x;
+
+    // Reset asíncrono no alineado al reloj
+    #3.7;  arst = 1;
+    #2.1;  arst = 0;
+
+    // Unos ciclos con en=0 (q debe mantenerse en INIT)
+    repeat (3) @(posedge clk);
+
+    // Habilita y deja contar algunos ciclos
+    en = 1;
+    repeat (5) @(posedge clk);
+
+    // Deshabilita y verifica hold
+    en = 0;
+    repeat (3) @(posedge clk);
+
+    // Secuencia aleatoria de enable para más cobertura, incluyendo wrap
+    en = 0;
+    repeat (30) begin
+      en = $urandom_range(0,1);
+      @(posedge clk);
+    end
+
+    // Pulso de reset asíncrono en medio del periodo de reloj
+    #(TCLK*0.3); arst = 1;
+    #(TCLK*0.2); arst = 0;
+
+    // Verifica nuevamente después del reset
+    en = 1;
+    repeat (8) @(posedge clk);
+
+    // Comparación final con el modelo de referencia
+    if (q !== q_ref) begin
+      $error("Mismatch final: q=%0h q_ref=%0h", q, q_ref);
+    end else begin
+      $display("TEST OK: q final=%0h (coincide con referencia)", q);
+    end
+
+    // Reporte de cobertura (si tu simulador lo soporta)
+    $display("Cobertura (aprox.) completada.");
+    $finish;
+  end
+
+  // --- Checker de equivalencia ciclo a ciclo ---
+  always @(posedge clk) begin
+    if (!arst) begin
+      assert (q === q_ref)
+        else $error("Mismatch @%0t: q=%0h q_ref=%0h en=%0b", $time, q, q_ref, en);
+    end
+  end
+
+endmodule
