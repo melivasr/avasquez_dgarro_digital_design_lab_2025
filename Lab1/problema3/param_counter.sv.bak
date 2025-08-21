@@ -1,0 +1,21 @@
+// Contador parametrizable de N bits con reset asíncrono
+module param_counter #(
+    parameter int N = 6,                           // ancho (bits)
+    parameter logic [N-1:0] INIT = '0              // valor tras reset
+) (
+    input  logic             clk,                  // reloj
+    input  logic             arst,                 // reset asíncrono, activo en 1
+    input  logic             en,                   // enable (1 = incrementa)
+    output logic [N-1:0]     q                     // salida
+);
+
+    always_ff @(posedge clk or posedge arst) begin
+        if (arst) begin
+            q <= INIT;                             // reset inmediato (asíncrono)
+        end else if (en) begin
+            q <= q + 1'b1;                         // suma módulo 2^N
+        end
+        // si en=0, mantiene q
+    end
+
+endmodule

@@ -1,0 +1,65 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+
+entity full_subtractor_4bit is
+    Port (A    : in  std_logic_vector(3 downto 0);
+        B    : in  std_logic_vector(3 downto 0);
+        Cin  : in  std_logic; --Borrow inicial
+        S    : buffer std_logic_vector(3 downto 0);
+        Cout : out std_logic;  --Borrow final
+		  HEX0 : out std_logic_vector(6 downto 0));
+end full_subtractor_4bit;
+
+architecture Estructural of full_subtractor_4bit is
+
+    component full_subtractor
+        Port (A, B, Cin : in  std_logic; S, Cout   : out std_logic);
+    end component;
+	 
+    component hex_to_7seg
+        Port (hex : in std_logic_vector(3 downto 0);
+              seg : out std_logic_vector(6 downto 0));
+    end component;
+
+    signal borrow : std_logic_vector(2 downto 0);
+
+begin
+    --Bit 0 (menos significativo)
+    FS0: full_subtractor
+        port map (
+            A => A(0),
+            B => B(0),
+            Cin => Cin,
+            S => S(0),
+            Cout => borrow(0));
+
+    --Bit 1
+    FS1: full_subtractor
+        port map (
+            A => A(1),
+            B => B(1),
+            Cin => borrow(0),
+            S => S(1),
+            Cout => borrow(1));
+
+    --Bit 2
+    FS2: full_subtractor
+        port map (
+            A => A(2),
+            B => B(2),
+            Cin => borrow(1),
+            S => S(2),
+            Cout => borrow(2));
+
+    --Bit 3 más significativo)
+    FS3: full_subtractor
+        port map (
+            A => A(3),
+            B => B(3),
+            Cin => borrow(2),
+            S => S(3),
+            Cout => Cout);
+				
+	 HEX_DEC: hex_to_7seg port map(hex => S, seg => HEX0);
+	 
+end Estructural;

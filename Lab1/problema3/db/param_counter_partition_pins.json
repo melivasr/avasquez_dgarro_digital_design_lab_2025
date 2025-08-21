@@ -1,0 +1,105 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "seg0[0]",
+					"strict" : false
+				},
+				{
+					"name" : "seg0[1]",
+					"strict" : false
+				},
+				{
+					"name" : "seg0[2]",
+					"strict" : false
+				},
+				{
+					"name" : "seg0[3]",
+					"strict" : false
+				},
+				{
+					"name" : "seg0[4]",
+					"strict" : false
+				},
+				{
+					"name" : "seg0[5]",
+					"strict" : false
+				},
+				{
+					"name" : "seg0[6]",
+					"strict" : false
+				},
+				{
+					"name" : "seg1[0]",
+					"strict" : false
+				},
+				{
+					"name" : "seg1[1]",
+					"strict" : false
+				},
+				{
+					"name" : "seg1[2]",
+					"strict" : false
+				},
+				{
+					"name" : "seg1[3]",
+					"strict" : false
+				},
+				{
+					"name" : "seg1[4]",
+					"strict" : false
+				},
+				{
+					"name" : "seg1[5]",
+					"strict" : false
+				},
+				{
+					"name" : "seg1[6]",
+					"strict" : false
+				},
+				{
+					"name" : "sw_init[0]",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "reset_sw",
+					"strict" : false
+				},
+				{
+					"name" : "sw_init[1]",
+					"strict" : false
+				},
+				{
+					"name" : "sw_init[2]",
+					"strict" : false
+				},
+				{
+					"name" : "sw_init[3]",
+					"strict" : false
+				},
+				{
+					"name" : "load_btn",
+					"strict" : false
+				},
+				{
+					"name" : "inc_btn",
+					"strict" : false
+				},
+				{
+					"name" : "sw_init[4]",
+					"strict" : false
+				},
+				{
+					"name" : "sw_init[5]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

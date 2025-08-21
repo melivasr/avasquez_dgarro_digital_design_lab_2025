@@ -1,0 +1,65 @@
+# Reading pref.tcl
+# do full_subtractor_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab1/problema2/full_subtractor.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:55:04 on Aug 14,2025
+# vcom -reportprogress 300 -93 -work work C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab1/problema2/full_subtractor.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity full_subtractor
+# -- Compiling architecture Estructural of full_subtractor
+# End time: 14:55:04 on Aug 14,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab1/problema2/full_subtractor_4bit.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:55:04 on Aug 14,2025
+# vcom -reportprogress 300 -93 -work work C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab1/problema2/full_subtractor_4bit.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity full_subtractor_4bit
+# -- Compiling architecture Estructural of full_subtractor_4bit
+# End time: 14:55:05 on Aug 14,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# 
+# vcom -93 -work work {C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab1/problema2/full_subtractor_4bit_tb.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:55:05 on Aug 14,2025
+# vcom -reportprogress 300 -93 -work work C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab1/problema2/full_subtractor_4bit_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity full_subtractor_4bit_tb
+# -- Compiling architecture sim of full_subtractor_4bit_tb
+# End time: 14:55:05 on Aug 14,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclonev -L rtl_work -L work -voptargs="+acc"  full_subtractor_4bit_tb
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclonev -L rtl_work -L work -voptargs=""+acc"" full_subtractor_4bit_tb 
+# Start time: 14:55:05 on Aug 14,2025
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.full_subtractor_4bit_tb(sim)
+# Loading work.full_subtractor_4bit(estructural)
+# Loading work.full_subtractor(estructural)
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# End time: 15:01:48 on Aug 14,2025, Elapsed time: 0:06:43
+# Errors: 0, Warnings: 0

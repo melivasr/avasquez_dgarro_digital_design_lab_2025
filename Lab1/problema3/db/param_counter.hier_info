@@ -1,0 +1,66 @@
+|param_counter
+clk => clk.IN1
+reset_sw => reset_sw.IN1
+inc_btn => inc_ff1.DATAIN
+load_btn => load_ff1.DATAIN
+sw_init[0] => sw_init[0].IN1
+sw_init[1] => sw_init[1].IN1
+sw_init[2] => sw_init[2].IN1
+sw_init[3] => sw_init[3].IN1
+sw_init[4] => sw_init[4].IN1
+sw_init[5] => sw_init[5].IN1
+seg0[0] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+seg0[1] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+seg0[2] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+seg0[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+seg0[4] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+seg0[5] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+seg0[6] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+seg1[0] <= WideOr7.DB_MAX_OUTPUT_PORT_TYPE
+seg1[1] <= WideOr8.DB_MAX_OUTPUT_PORT_TYPE
+seg1[2] <= WideOr9.DB_MAX_OUTPUT_PORT_TYPE
+seg1[3] <= WideOr10.DB_MAX_OUTPUT_PORT_TYPE
+seg1[4] <= WideOr11.DB_MAX_OUTPUT_PORT_TYPE
+seg1[5] <= WideOr12.DB_MAX_OUTPUT_PORT_TYPE
+seg1[6] <= WideOr13.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|param_counter|counter_n:u_cnt
+clk => q[0]~reg0.CLK
+clk => q[1]~reg0.CLK
+clk => q[2]~reg0.CLK
+clk => q[3]~reg0.CLK
+clk => q[4]~reg0.CLK
+clk => q[5]~reg0.CLK
+arst => q[0]~reg0.ACLR
+arst => q[1]~reg0.ACLR
+arst => q[2]~reg0.ACLR
+arst => q[3]~reg0.ACLR
+arst => q[4]~reg0.ACLR
+arst => q[5]~reg0.ACLR
+en => q.OUTPUTSELECT
+en => q.OUTPUTSELECT
+en => q.OUTPUTSELECT
+en => q.OUTPUTSELECT
+en => q.OUTPUTSELECT
+en => q.OUTPUTSELECT
+load => q.OUTPUTSELECT
+load => q.OUTPUTSELECT
+load => q.OUTPUTSELECT
+load => q.OUTPUTSELECT
+load => q.OUTPUTSELECT
+load => q.OUTPUTSELECT
+d[0] => q.DATAB
+d[1] => q.DATAB
+d[2] => q.DATAB
+d[3] => q.DATAB
+d[4] => q.DATAB
+d[5] => q.DATAB
+q[0] <= q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= q[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[5] <= q[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

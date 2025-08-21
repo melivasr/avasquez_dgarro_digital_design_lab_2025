@@ -1,0 +1,40 @@
+`timescale 1ns/1ps
+
+module bin_gray_tb;
+
+    logic [3:0] bin;
+    logic [3:0] gray;
+
+    bin_gray uut (.bin(bin), .gray(gray));
+
+    initial begin
+        //Probamos 8 valores: 0,1,2,3,4,5,10,15
+        bin = 4'b0000; 
+		  #1; 
+		  $display("%b\t%b", bin, gray);
+        bin = 4'b0001; 
+		  #1; 
+		  $display("%b\t%b", bin, gray);
+        bin = 4'b0010; 
+		  #1; 
+		  $display("%b\t%b", bin, gray);
+        bin = 4'b0011; 
+		  #1; 
+		  $display("%b\t%b", bin, gray);
+        bin = 4'b0100; 
+		  #1; 
+		  $display("%b\t%b", bin, gray);
+        bin = 4'b0101; 
+		  #1; 
+		  $display("%b\t%b", bin, gray);
+        bin = 4'b1010; 
+		  #1; 
+		  $display("%b\t%b", bin, gray);
+        bin = 4'b1111; 
+		  #1; 
+		  $display("%b\t%b", bin, gray);
+
+        $finish;
+    end
+
+endmodule

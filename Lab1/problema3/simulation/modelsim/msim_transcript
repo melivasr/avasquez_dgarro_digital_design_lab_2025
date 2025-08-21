@@ -1,0 +1,59 @@
+# Reading pref.tcl
+# do param_counter_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -sv -work work +incdir+F:/Proyectos\ Quartos/avasquez_dgarro_digital_design_lab_2025/Lab1/problema3 {F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab1/problema3/counter_n.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:29:33 on Aug 19,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab1/problema3" F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab1/problema3/counter_n.sv 
+# -- Compiling module counter_n
+# 
+# Top level modules:
+# 	counter_n
+# End time: 23:29:33 on Aug 19,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -sv -work work +incdir+F:/Proyectos\ Quartos/avasquez_dgarro_digital_design_lab_2025/Lab1/problema3 {F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab1/problema3/tb_param_counter.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:29:33 on Aug 19,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab1/problema3" F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab1/problema3/tb_param_counter.sv 
+# -- Compiling module tb_param_counter
+# 
+# Top level modules:
+# 	tb_param_counter
+# End time: 23:29:33 on Aug 19,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  tb_param_counter
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" tb_param_counter 
+# Start time: 23:29:33 on Aug 19,2025
+# Loading sv_std.std
+# Loading work.tb_param_counter
+# Loading work.counter_n
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# Probando contador N=2...
+# Probando contador N=4...
+# Probando contador N=6...
+# OK N=2, valor final=3
+# OK N=4, valor final=7
+# OK N=6, valor final=9
+# ** Note: $finish    : F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab1/problema3/tb_param_counter.sv(56)
+#    Time: 115 ns  Iteration: 1  Instance: /tb_param_counter
+# 1
+# Break in Module tb_param_counter at F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab1/problema3/tb_param_counter.sv line 56
+# End time: 23:30:15 on Aug 19,2025, Elapsed time: 0:00:42
+# Errors: 0, Warnings: 0

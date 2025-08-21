@@ -1,0 +1,792 @@
+$date
+	Tue Aug 19 22:10:36 2025
+$end
+$version
+	ModelSim Version 2020.1
+$end
+$timescale
+	1ps
+$end
+
+$scope module tb_param_counter $end
+$var parameter 32 ! TCLK_NS $end
+$var parameter 2 " INIT2 $end
+$var parameter 4 # INIT4 $end
+$var parameter 6 $ INIT6 $end
+$var reg 1 % clk $end
+$var reg 1 & arst $end
+$var reg 1 ' en $end
+$var reg 1 ( load2 $end
+$var reg 1 ) load4 $end
+$var reg 1 * load6 $end
+$var reg 2 + d2 [1:0] $end
+$var reg 2 , q2 [1:0] $end
+$var reg 2 - q2_ref [1:0] $end
+$var reg 4 . d4 [3:0] $end
+$var reg 4 / q4 [3:0] $end
+$var reg 4 0 q4_ref [3:0] $end
+$var reg 6 1 d6 [5:0] $end
+$var reg 6 2 q6 [5:0] $end
+$var reg 6 3 q6_ref [5:0] $end
+
+$scope task async_reset_pulse $end
+$var integer 32 4 ns $end
+$upscope $end
+
+$scope task step $end
+$var integer 32 5 n $end
+$upscope $end
+
+$scope module dut2 $end
+$var parameter 32 6 N $end
+$var parameter 2 7 INIT $end
+$var wire 1 8 clk $end
+$var wire 1 9 arst $end
+$var wire 1 : en $end
+$var wire 1 ; load $end
+$var wire 1 < d [1] $end
+$var wire 1 = d [0] $end
+$var reg 2 > q [1:0] $end
+$upscope $end
+
+$scope module dut4 $end
+$var parameter 32 ? N $end
+$var parameter 4 @ INIT $end
+$var wire 1 A clk $end
+$var wire 1 B arst $end
+$var wire 1 C en $end
+$var wire 1 D load $end
+$var wire 1 E d [3] $end
+$var wire 1 F d [2] $end
+$var wire 1 G d [1] $end
+$var wire 1 H d [0] $end
+$var reg 4 I q [3:0] $end
+$upscope $end
+
+$scope module dut6 $end
+$var parameter 32 J N $end
+$var parameter 6 K INIT $end
+$var wire 1 L clk $end
+$var wire 1 M arst $end
+$var wire 1 N en $end
+$var wire 1 O load $end
+$var wire 1 P d [5] $end
+$var wire 1 Q d [4] $end
+$var wire 1 R d [3] $end
+$var wire 1 S d [2] $end
+$var wire 1 T d [1] $end
+$var wire 1 U d [0] $end
+$var reg 6 V q [5:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0%
+0&
+0'
+0(
+0)
+0*
+b0 +
+bx ,
+bx -
+b0 .
+bx /
+bx 0
+b0 1
+bx 2
+bx 3
+bx >
+bx I
+bx V
+b1010 !
+b1 "
+b1010 #
+b10001 $
+b10 6
+b1 7
+b100 ?
+b1010 @
+b110 J
+b10001 K
+b11 4
+b0 5
+08
+09
+0:
+0;
+0=
+0<
+0A
+0B
+0C
+0D
+0H
+0G
+0F
+0E
+0L
+0M
+0N
+0O
+0U
+0T
+0S
+0R
+0Q
+0P
+$end
+#3000
+1&
+1M
+1B
+19
+b1 >
+b1010 I
+b10001 V
+b1 -
+b1010 0
+b10001 3
+b10001 2
+b1010 /
+b1 ,
+#5000
+1%
+1L
+1A
+18
+#6000
+0&
+b10 5
+0M
+0B
+09
+#10000
+0%
+0L
+0A
+08
+#15000
+1%
+1L
+1A
+18
+#20000
+0%
+0L
+0A
+08
+#25000
+1%
+1L
+1A
+18
+b10 +
+b11 .
+b101010 1
+1(
+1)
+1*
+1T
+1R
+1P
+1H
+1G
+1<
+1;
+1D
+1O
+#30000
+0%
+0L
+0A
+08
+#35000
+1%
+1L
+1A
+18
+0(
+0)
+0*
+b1 5
+0;
+0D
+0O
+b10 >
+b11 I
+b101010 V
+b10 -
+b11 0
+b101010 3
+b101010 2
+b11 /
+b10 ,
+#40000
+0%
+0L
+0A
+08
+#45000
+1%
+1L
+1A
+18
+1'
+b101 5
+1N
+1C
+1:
+#50000
+0%
+0L
+0A
+08
+#55000
+1%
+1L
+1A
+18
+b11 >
+b100 I
+b101011 V
+b11 -
+b100 0
+b101011 3
+b101011 2
+b100 /
+b11 ,
+#60000
+0%
+0L
+0A
+08
+#65000
+1%
+1L
+1A
+18
+b0 >
+b101 I
+b101100 V
+b0 -
+b101 0
+b101100 3
+b101100 2
+b101 /
+b0 ,
+#70000
+0%
+0L
+0A
+08
+#75000
+1%
+1L
+1A
+18
+b1 >
+b110 I
+b101101 V
+b1 -
+b110 0
+b101101 3
+b101101 2
+b110 /
+b1 ,
+#80000
+0%
+0L
+0A
+08
+#85000
+1%
+1L
+1A
+18
+b10 >
+b111 I
+b101110 V
+b10 -
+b111 0
+b101110 3
+b101110 2
+b111 /
+b10 ,
+#90000
+0%
+0L
+0A
+08
+#95000
+1%
+1L
+1A
+18
+0'
+b10 5
+0N
+0C
+0:
+b11 >
+b1000 I
+b101111 V
+b11 -
+b1000 0
+b101111 3
+b101111 2
+b1000 /
+b11 ,
+#100000
+0%
+0L
+0A
+08
+#105000
+1%
+1L
+1A
+18
+#110000
+0%
+0L
+0A
+08
+#115000
+1%
+1L
+1A
+18
+b1 +
+b1111 .
+b111111 1
+1(
+1)
+1*
+1U
+1S
+1Q
+1F
+1E
+1=
+0<
+1;
+1D
+1O
+#120000
+0%
+0L
+0A
+08
+#125000
+1%
+1L
+1A
+18
+0(
+0)
+0*
+b1 5
+0;
+0D
+0O
+b1 >
+b1111 I
+b111111 V
+b1 -
+b1111 0
+b111111 3
+b111111 2
+b1111 /
+b1 ,
+#130000
+0%
+0L
+0A
+08
+#135000
+1%
+1L
+1A
+18
+1'
+b10 5
+1N
+1C
+1:
+#140000
+0%
+0L
+0A
+08
+#145000
+1%
+1L
+1A
+18
+b10 >
+b0 I
+b0 V
+b10 -
+b0 0
+b0 3
+b0 2
+b0 /
+b10 ,
+#150000
+0%
+0L
+0A
+08
+#155000
+1%
+1L
+1A
+18
+0'
+b1 5
+0N
+0C
+0:
+b11 >
+b1 I
+b1 V
+b11 -
+b1 0
+b1 3
+b1 2
+b1 /
+b11 ,
+#160000
+0%
+0L
+0A
+08
+#165000
+1%
+1L
+1A
+18
+b10 +
+b1100 .
+b100 1
+1(
+1)
+1*
+0U
+0T
+0R
+0Q
+0P
+0H
+0G
+0=
+1<
+1;
+1D
+1O
+#170000
+0%
+0L
+0A
+08
+#175000
+1%
+1L
+1A
+18
+0(
+0)
+0*
+1'
+0;
+0D
+0O
+1N
+1C
+1:
+b10 >
+b1100 I
+b100 V
+b10 -
+b1100 0
+b100 3
+b100 2
+b1100 /
+b10 ,
+#180000
+0%
+0L
+0A
+08
+#185000
+1%
+1L
+1A
+18
+b11 >
+b1101 I
+b101 V
+b11 -
+b1101 0
+b101 3
+b101 2
+b1101 /
+b11 ,
+#190000
+0%
+0L
+0A
+08
+#195000
+1%
+1L
+1A
+18
+0'
+0N
+0C
+0:
+b0 >
+b1110 I
+b110 V
+b0 -
+b1110 0
+b110 3
+b110 2
+b1110 /
+b0 ,
+#200000
+0%
+0L
+0A
+08
+#205000
+1%
+1L
+1A
+18
+1'
+b0 +
+b1010 .
+b110010 1
+1(
+1)
+1*
+1N
+1C
+1:
+1T
+0S
+1Q
+1P
+1G
+0F
+0<
+1;
+1D
+1O
+#210000
+0%
+0L
+0A
+08
+#215000
+1%
+1L
+1A
+18
+0(
+0)
+0*
+0;
+0D
+0O
+b1010 I
+b110010 V
+b1010 0
+b110010 3
+b110010 2
+b1010 /
+#220000
+0%
+0L
+0A
+08
+#225000
+1%
+1L
+1A
+18
+b1 >
+b1011 I
+b110011 V
+b1 -
+b1011 0
+b110011 3
+b110011 2
+b1011 /
+b1 ,
+#230000
+0%
+0L
+0A
+08
+#235000
+1%
+1L
+1A
+18
+b10 >
+b1100 I
+b110100 V
+b10 -
+b1100 0
+b110100 3
+b110100 2
+b1100 /
+b10 ,
+#240000
+0%
+0L
+0A
+08
+#245000
+1%
+1L
+1A
+18
+b11 >
+b1101 I
+b110101 V
+b11 -
+b1101 0
+b110101 3
+b110101 2
+b1101 /
+b11 ,
+#250000
+0%
+0L
+0A
+08
+#255000
+1%
+1L
+1A
+18
+b0 >
+b1110 I
+b110110 V
+b0 -
+b1110 0
+b110110 3
+b110110 2
+b1110 /
+b0 ,
+#260000
+0%
+0L
+0A
+08
+#265000
+1%
+1L
+1A
+18
+0'
+0N
+0C
+0:
+b1 >
+b1111 I
+b110111 V
+b1 -
+b1111 0
+b110111 3
+b110111 2
+b1111 /
+b1 ,
+#270000
+0%
+0L
+0A
+08
+#275000
+1%
+1L
+1A
+18
+#280000
+0%
+0L
+0A
+08
+#285000
+1%
+1L
+1A
+18
+#290000
+0%
+0L
+0A
+08
+#295000
+1%
+1L
+1A
+18
+1'
+1N
+1C
+1:
+#300000
+0%
+0L
+0A
+08
+#305000
+1%
+1L
+1A
+18
+b10 >
+b0 I
+b111000 V
+b10 -
+b0 0
+b111000 3
+b111000 2
+b0 /
+b10 ,
+#310000
+0%
+0L
+0A
+08
+#315000
+1%
+1L
+1A
+18
+b11 >
+b1 I
+b111001 V
+b11 -
+b1 0
+b111001 3
+b111001 2
+b1 /
+b11 ,
+#320000
+0%
+0L
+0A
+08
+#325000
+1%
+1L
+1A
+18

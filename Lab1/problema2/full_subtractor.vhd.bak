@@ -1,0 +1,31 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+
+entity is full_subtractor is 
+	port(B, A, Cin: in std_logic; Cout, S: out std_logic);
+	
+end full_subtractor
+
+architecture Estructural of full_subtractor is 
+
+	signal xor1_out, xor2_out: std_logic;
+   signal notB, and1_out, and2_out, and3_out: std_logic;
+   signal or1_out, or2_out: std_logic;
+	
+begin 
+	
+	xor1_out <= A xor B;
+	xor2_out <= xor1_out xor Cin;
+	S <= xor2_out;
+	
+	notB <= not B;
+	and1_out <= notB and A;
+	and2_out <= notB and Cin;
+	and3_out <= A and Cin;
+	
+	or1_out <= and1_out or and2_out;
+	or2_out <= or1_out or and3_out;
+	
+	Cout <= or2_out;
+	
+end Estructural 
