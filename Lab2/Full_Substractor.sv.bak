@@ -1,0 +1,16 @@
+module Full_Substractor (
+	input logic A
+	input logic B
+	input logic Cin
+	output logic Sub
+	output logic Cout
+);
+	
+	logic xor1;
+	
+	// S = Cin ^ (A ^ b)
+	XOR xora(.a(A), .b(B), .y(xor1));
+	
+	XOR xorb(.a(Cin), .b(xor1), .y(Sub));
+	
+	logic and1, and2, 

@@ -58,3 +58,5 @@ set_global_assignment -name SYSTEMVERILOG_FILE XOR.sv
 set_global_assignment -name SYSTEMVERILOG_FILE AND.sv
 set_global_assignment -name SYSTEMVERILOG_FILE OR.sv
 set_global_assignment -name SYSTEMVERILOG_FILE Full_Adder.sv
+set_global_assignment -name SYSTEMVERILOG_FILE Full_Substractor.sv
+set_global_assignment -name SYSTEMVERILOG_FILE NOT.sv
