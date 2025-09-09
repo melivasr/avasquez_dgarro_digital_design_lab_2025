@@ -22,7 +22,7 @@ module Alu_control(
 	
 	logic z_mod, n_mod, c_mod, v_mod;
 	
-   logic z_and, n_and, c_and, v_and;
+   logic z_and, n_and, c_and, v_and;	
 	
 	logic z_or, n_or, c_or, v_or;
 	

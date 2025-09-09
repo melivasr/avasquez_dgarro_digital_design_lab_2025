@@ -1,5 +1,5 @@
-Analysis & Elaboration report for ALU
-Tue Sep 09 02:36:24 2025
+Analysis & Synthesis report for ALU
+Tue Sep 09 14:29:48 2025
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -7,24 +7,33 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 ; Table of Contents ;
 ---------------------
   1. Legal Notice
-  2. Analysis & Elaboration Summary
-  3. Parallel Compilation
-  4. Analysis & Elaboration Settings
-  5. Port Connectivity Checks: "Alu_control:alu1|shift_right:shiftr"
-  6. Port Connectivity Checks: "Alu_control:alu1|shift_left:shiftl"
-  7. Port Connectivity Checks: "Alu_control:alu1|Full_subtractor4:suba|Full_Substractor:s0|OR_gate:or1"
-  8. Port Connectivity Checks: "Alu_control:alu1|Full_subtractor4:suba|Full_Substractor:s0|AND_gate:andb"
-  9. Port Connectivity Checks: "Alu_control:alu1|Full_subtractor4:suba|Full_Substractor:s0|AND_gate:anda"
- 10. Port Connectivity Checks: "Alu_control:alu1|Full_subtractor4:suba|Full_Substractor:s0|XOR_gate:xorb"
- 11. Port Connectivity Checks: "Alu_control:alu1|Full_subtractor4:suba|Full_Substractor:s0|XOR_gate:xora"
- 12. Port Connectivity Checks: "Alu_control:alu1|Full_subtractor4:suba"
- 13. Port Connectivity Checks: "Alu_control:alu1|Ripple_carry_adder4:suma|Full_Adder:a0|OR_gate:ora"
- 14. Port Connectivity Checks: "Alu_control:alu1|Ripple_carry_adder4:suma|Full_Adder:a0|AND_gate:andb"
- 15. Port Connectivity Checks: "Alu_control:alu1|Ripple_carry_adder4:suma|Full_Adder:a0|AND_gate:anda"
- 16. Port Connectivity Checks: "Alu_control:alu1|Ripple_carry_adder4:suma|Full_Adder:a0|XOR_gate:xorb"
- 17. Port Connectivity Checks: "Alu_control:alu1|Ripple_carry_adder4:suma|Full_Adder:a0|XOR_gate:xora"
- 18. Port Connectivity Checks: "Alu_control:alu1|Ripple_carry_adder4:suma"
- 19. Analysis & Elaboration Messages
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 10. Parameter Settings for Inferred Entity Instance: Alu_control:alu1|Division:diva|lpm_divide:Div0
+ 11. Parameter Settings for Inferred Entity Instance: Alu_control:alu1|Modulo:moda|lpm_divide:Mod0
+ 12. Port Connectivity Checks: "Alu_control:alu1|shift_right:shiftr"
+ 13. Port Connectivity Checks: "Alu_control:alu1|shift_left:shiftl"
+ 14. Port Connectivity Checks: "Alu_control:alu1|Full_subtractor4:suba|Full_Substractor:s0|OR_gate:or1"
+ 15. Port Connectivity Checks: "Alu_control:alu1|Full_subtractor4:suba|Full_Substractor:s0|AND_gate:andb"
+ 16. Port Connectivity Checks: "Alu_control:alu1|Full_subtractor4:suba|Full_Substractor:s0|AND_gate:anda"
+ 17. Port Connectivity Checks: "Alu_control:alu1|Full_subtractor4:suba|Full_Substractor:s0|XOR_gate:xorb"
+ 18. Port Connectivity Checks: "Alu_control:alu1|Full_subtractor4:suba|Full_Substractor:s0|XOR_gate:xora"
+ 19. Port Connectivity Checks: "Alu_control:alu1|Full_subtractor4:suba"
+ 20. Port Connectivity Checks: "Alu_control:alu1|Ripple_carry_adder4:suma|Full_Adder:a0|OR_gate:ora"
+ 21. Port Connectivity Checks: "Alu_control:alu1|Ripple_carry_adder4:suma|Full_Adder:a0|AND_gate:andb"
+ 22. Port Connectivity Checks: "Alu_control:alu1|Ripple_carry_adder4:suma|Full_Adder:a0|AND_gate:anda"
+ 23. Port Connectivity Checks: "Alu_control:alu1|Ripple_carry_adder4:suma|Full_Adder:a0|XOR_gate:xorb"
+ 24. Port Connectivity Checks: "Alu_control:alu1|Ripple_carry_adder4:suma|Full_Adder:a0|XOR_gate:xora"
+ 25. Port Connectivity Checks: "Alu_control:alu1|Ripple_carry_adder4:suma"
+ 26. Post-Synthesis Netlist Statistics for Top Partition
+ 27. Elapsed Time Per Partition
+ 28. Analysis & Synthesis Messages
 
 
 
@@ -48,42 +57,31 @@ https://fpgasoftware.intel.com/eula.
 
 
 
-+-----------------------------------------------------------------------------+
-; Analysis & Elaboration Summary                                              ;
-+-------------------------------+---------------------------------------------+
-; Analysis & Elaboration Status ; Successful - Tue Sep 09 02:36:24 2025       ;
-; Quartus Prime Version         ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
-; Revision Name                 ; ALU                                         ;
-; Top-level Entity Name         ; ALU                                         ;
-; Family                        ; Cyclone V                                   ;
-; Logic utilization (in ALMs)   ; N/A until Partition Merge                   ;
-; Total registers               ; N/A until Partition Merge                   ;
-; Total pins                    ; N/A until Partition Merge                   ;
-; Total virtual pins            ; N/A until Partition Merge                   ;
-; Total block memory bits       ; N/A until Partition Merge                   ;
-; Total PLLs                    ; N/A until Partition Merge                   ;
-; Total DLLs                    ; N/A until Partition Merge                   ;
-+-------------------------------+---------------------------------------------+
-
-
-+------------------------------------------+
-; Parallel Compilation                     ;
-+----------------------------+-------------+
-; Processors                 ; Number      ;
-+----------------------------+-------------+
-; Number detected on machine ; 12          ;
-; Maximum allowed            ; 12          ;
-;                            ;             ;
-; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
-;                            ;             ;
-; Usage by Processor         ; % Time Used ;
-;     Processor 1            ; 100.0%      ;
-+----------------------------+-------------+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++---------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Tue Sep 09 14:29:48 2025       ;
+; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
+; Revision Name                   ; ALU                                         ;
+; Top-level Entity Name           ; ALU                                         ;
+; Family                          ; Cyclone V                                   ;
+; Logic utilization (in ALMs)     ; N/A                                         ;
+; Total registers                 ; 0                                           ;
+; Total pins                      ; 24                                          ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 0                                           ;
+; Total DSP Blocks                ; 0                                           ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 0                                           ;
+; Total DLLs                      ; 0                                           ;
++---------------------------------+---------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Elaboration Settings                                                                                           ;
+; Analysis & Synthesis Settings                                                                                             ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
@@ -167,6 +165,191 @@ https://fpgasoftware.intel.com/eula.
 ; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
 ; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 12          ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                     ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                 ; Library ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------------------+---------+
+; XOR.sv                           ; yes             ; User SystemVerilog HDL File  ; F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/XOR.sv                     ;         ;
+; AND.sv                           ; yes             ; User SystemVerilog HDL File  ; F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/AND.sv                     ;         ;
+; OR.sv                            ; yes             ; User SystemVerilog HDL File  ; F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/OR.sv                      ;         ;
+; Full_Adder.sv                    ; yes             ; User SystemVerilog HDL File  ; F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv              ;         ;
+; Full_Substractor.sv              ; yes             ; User SystemVerilog HDL File  ; F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv        ;         ;
+; NOT.sv                           ; yes             ; User SystemVerilog HDL File  ; F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/NOT.sv                     ;         ;
+; Division.sv                      ; yes             ; User SystemVerilog HDL File  ; F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Division.sv                ;         ;
+; Ripple_carry_adder4.sv           ; yes             ; User SystemVerilog HDL File  ; F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Ripple_carry_adder4.sv     ;         ;
+; ALU.sv                           ; yes             ; User SystemVerilog HDL File  ; F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/ALU.sv                     ;         ;
+; Full_subtractor4.sv              ; yes             ; User SystemVerilog HDL File  ; F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_subtractor4.sv        ;         ;
+; shift_left.sv                    ; yes             ; User SystemVerilog HDL File  ; F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/shift_left.sv              ;         ;
+; shift_right.sv                   ; yes             ; User SystemVerilog HDL File  ; F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/shift_right.sv             ;         ;
+; Modulo.sv                        ; yes             ; User SystemVerilog HDL File  ; F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Modulo.sv                  ;         ;
+; 7seg_display.sv                  ; yes             ; User SystemVerilog HDL File  ; F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/7seg_display.sv            ;         ;
+; Alu_control.sv                   ; yes             ; User SystemVerilog HDL File  ; F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Alu_control.sv             ;         ;
+; lpm_divide.tdf                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_divide.tdf                        ;         ;
+; abs_divider.inc                  ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/abs_divider.inc                       ;         ;
+; sign_div_unsign.inc              ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sign_div_unsign.inc                   ;         ;
+; aglobal201.inc                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/aglobal201.inc                        ;         ;
+; db/lpm_divide_1am.tdf            ; yes             ; Auto-Generated Megafunction  ; F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/db/lpm_divide_1am.tdf      ;         ;
+; db/sign_div_unsign_7kh.tdf       ; yes             ; Auto-Generated Megafunction  ; F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/db/sign_div_unsign_7kh.tdf ;         ;
+; db/alt_u_div_kse.tdf             ; yes             ; Auto-Generated Megafunction  ; F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/db/alt_u_div_kse.tdf       ;         ;
+; db/lpm_divide_42m.tdf            ; yes             ; Auto-Generated Megafunction  ; F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/db/lpm_divide_42m.tdf      ;         ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------------------+---------+
+
+
++----------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary              ;
++---------------------------------------------+------------+
+; Resource                                    ; Usage      ;
++---------------------------------------------+------------+
+; Estimate of Logic utilization (ALMs needed) ; 63         ;
+;                                             ;            ;
+; Combinational ALUT usage for logic          ; 118        ;
+;     -- 7 input functions                    ; 0          ;
+;     -- 6 input functions                    ; 8          ;
+;     -- 5 input functions                    ; 44         ;
+;     -- 4 input functions                    ; 37         ;
+;     -- <=3 input functions                  ; 29         ;
+;                                             ;            ;
+; Dedicated logic registers                   ; 0          ;
+;                                             ;            ;
+; I/O pins                                    ; 24         ;
+;                                             ;            ;
+; Total DSP Blocks                            ; 0          ;
+;                                             ;            ;
+; Maximum fan-out node                        ; B[3]~input ;
+; Maximum fan-out                             ; 29         ;
+; Total fan-out                               ; 516        ;
+; Average fan-out                             ; 3.11       ;
++---------------------------------------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                              ;
++----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
+; Compilation Hierarchy Node                   ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                 ; Entity Name         ; Library Name ;
++----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
+; |ALU                                         ; 118 (0)             ; 0 (0)                     ; 0                 ; 0          ; 24   ; 0            ; |ALU                                                                                                                                ; ALU                 ; work         ;
+;    |Alu_control:alu1|                        ; 111 (52)            ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|Alu_control:alu1                                                                                                               ; Alu_control         ; work         ;
+;       |Division:diva|                        ; 22 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|Alu_control:alu1|Division:diva                                                                                                 ; Division            ; work         ;
+;          |lpm_divide:Div0|                   ; 22 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|Alu_control:alu1|Division:diva|lpm_divide:Div0                                                                                 ; lpm_divide          ; work         ;
+;             |lpm_divide_1am:auto_generated|  ; 22 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|Alu_control:alu1|Division:diva|lpm_divide:Div0|lpm_divide_1am:auto_generated                                                   ; lpm_divide_1am      ; work         ;
+;                |sign_div_unsign_7kh:divider| ; 22 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|Alu_control:alu1|Division:diva|lpm_divide:Div0|lpm_divide_1am:auto_generated|sign_div_unsign_7kh:divider                       ; sign_div_unsign_7kh ; work         ;
+;                   |alt_u_div_kse:divider|    ; 22 (22)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|Alu_control:alu1|Division:diva|lpm_divide:Div0|lpm_divide_1am:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider ; alt_u_div_kse       ; work         ;
+;       |Full_subtractor4:suba|                ; 3 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|Alu_control:alu1|Full_subtractor4:suba                                                                                         ; Full_subtractor4    ; work         ;
+;          |Full_Substractor:s2|               ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|Alu_control:alu1|Full_subtractor4:suba|Full_Substractor:s2                                                                     ; Full_Substractor    ; work         ;
+;             |OR_gate:or1|                    ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|Alu_control:alu1|Full_subtractor4:suba|Full_Substractor:s2|OR_gate:or1                                                         ; OR_gate             ; work         ;
+;             |XOR_gate:xorb|                  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|Alu_control:alu1|Full_subtractor4:suba|Full_Substractor:s2|XOR_gate:xorb                                                       ; XOR_gate            ; work         ;
+;          |Full_Substractor:s3|               ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|Alu_control:alu1|Full_subtractor4:suba|Full_Substractor:s3                                                                     ; Full_Substractor    ; work         ;
+;             |XOR_gate:xorb|                  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|Alu_control:alu1|Full_subtractor4:suba|Full_Substractor:s3|XOR_gate:xorb                                                       ; XOR_gate            ; work         ;
+;       |Modulo:moda|                          ; 25 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|Alu_control:alu1|Modulo:moda                                                                                                   ; Modulo              ; work         ;
+;          |lpm_divide:Mod0|                   ; 25 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|Alu_control:alu1|Modulo:moda|lpm_divide:Mod0                                                                                   ; lpm_divide          ; work         ;
+;             |lpm_divide_42m:auto_generated|  ; 25 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|Alu_control:alu1|Modulo:moda|lpm_divide:Mod0|lpm_divide_42m:auto_generated                                                     ; lpm_divide_42m      ; work         ;
+;                |sign_div_unsign_7kh:divider| ; 25 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|Alu_control:alu1|Modulo:moda|lpm_divide:Mod0|lpm_divide_42m:auto_generated|sign_div_unsign_7kh:divider                         ; sign_div_unsign_7kh ; work         ;
+;                   |alt_u_div_kse:divider|    ; 25 (25)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|Alu_control:alu1|Modulo:moda|lpm_divide:Mod0|lpm_divide_42m:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider   ; alt_u_div_kse       ; work         ;
+;       |Ripple_carry_adder4:suma|             ; 5 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|Alu_control:alu1|Ripple_carry_adder4:suma                                                                                      ; Ripple_carry_adder4 ; work         ;
+;          |Full_Adder:a0|                     ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|Alu_control:alu1|Ripple_carry_adder4:suma|Full_Adder:a0                                                                        ; Full_Adder          ; work         ;
+;             |AND_gate:anda|                  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|Alu_control:alu1|Ripple_carry_adder4:suma|Full_Adder:a0|AND_gate:anda                                                          ; AND_gate            ; work         ;
+;          |Full_Adder:a2|                     ; 3 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|Alu_control:alu1|Ripple_carry_adder4:suma|Full_Adder:a2                                                                        ; Full_Adder          ; work         ;
+;             |OR_gate:ora|                    ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|Alu_control:alu1|Ripple_carry_adder4:suma|Full_Adder:a2|OR_gate:ora                                                            ; OR_gate             ; work         ;
+;             |XOR_gate:xora|                  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|Alu_control:alu1|Ripple_carry_adder4:suma|Full_Adder:a2|XOR_gate:xora                                                          ; XOR_gate            ; work         ;
+;             |XOR_gate:xorb|                  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|Alu_control:alu1|Ripple_carry_adder4:suma|Full_Adder:a2|XOR_gate:xorb                                                          ; XOR_gate            ; work         ;
+;          |Full_Adder:a3|                     ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|Alu_control:alu1|Ripple_carry_adder4:suma|Full_Adder:a3                                                                        ; Full_Adder          ; work         ;
+;             |XOR_gate:xorb|                  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|Alu_control:alu1|Ripple_carry_adder4:suma|Full_Adder:a3|XOR_gate:xorb                                                          ; XOR_gate            ; work         ;
+;       |shift_left:shiftl|                    ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|Alu_control:alu1|shift_left:shiftl                                                                                             ; shift_left          ; work         ;
+;       |shift_right:shiftr|                   ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|Alu_control:alu1|shift_right:shiftr                                                                                            ; shift_right         ; work         ;
+;    |seg7_display:comb_7|                     ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|seg7_display:comb_7                                                                                                            ; seg7_display        ; work         ;
++----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                   ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                         ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------+
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |ALU|Alu_control:alu1|shift_left:shiftl|ShiftLeft0 ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |ALU|Alu_control:alu1|shift_left:shiftl|ShiftLeft0 ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |ALU|Alu_control:alu1|shift_left:shiftl|ShiftLeft0 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: Alu_control:alu1|Division:diva|lpm_divide:Div0 ;
++------------------------+----------------+-------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                  ;
++------------------------+----------------+-------------------------------------------------------+
+; LPM_WIDTHN             ; 4              ; Untyped                                               ;
+; LPM_WIDTHD             ; 4              ; Untyped                                               ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                               ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                               ;
+; LPM_PIPELINE           ; 0              ; Untyped                                               ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                               ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                               ;
+; CBXI_PARAMETER         ; lpm_divide_1am ; Untyped                                               ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                               ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                               ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                            ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                          ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                          ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                        ;
++------------------------+----------------+-------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: Alu_control:alu1|Modulo:moda|lpm_divide:Mod0 ;
++------------------------+----------------+-----------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                ;
++------------------------+----------------+-----------------------------------------------------+
+; LPM_WIDTHN             ; 4              ; Untyped                                             ;
+; LPM_WIDTHD             ; 4              ; Untyped                                             ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                             ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                             ;
+; LPM_PIPELINE           ; 0              ; Untyped                                             ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                             ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                             ;
+; CBXI_PARAMETER         ; lpm_divide_42m ; Untyped                                             ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                             ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                             ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                          ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                        ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                        ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                      ;
++------------------------+----------------+-----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -357,14 +540,50 @@ https://fpgasoftware.intel.com/eula.
 +------+--------+----------+----------------------------------------------------------------------------------------------------------+
 
 
-+---------------------------------+
-; Analysis & Elaboration Messages ;
-+---------------------------------+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_lcell_comb     ; 118                         ;
+;     arith             ; 12                          ;
+;         0 data inputs ; 4                           ;
+;         2 data inputs ; 2                           ;
+;         5 data inputs ; 6                           ;
+;     normal            ; 88                          ;
+;         2 data inputs ; 6                           ;
+;         3 data inputs ; 5                           ;
+;         4 data inputs ; 31                          ;
+;         5 data inputs ; 38                          ;
+;         6 data inputs ; 8                           ;
+;     shared            ; 18                          ;
+;         0 data inputs ; 6                           ;
+;         2 data inputs ; 6                           ;
+;         4 data inputs ; 6                           ;
+; boundary_port         ; 24                          ;
+;                       ;                             ;
+; Max LUT depth         ; 9.50                        ;
+; Average LUT depth     ; 7.29                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
 Info: *******************************************************************
-Info: Running Quartus Prime Analysis & Elaboration
+Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Tue Sep 09 02:36:18 2025
-Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ALU -c ALU --analysis_and_elaboration
+    Info: Processing started: Tue Sep 09 14:29:41 2025
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ALU -c ALU
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file xor.sv
@@ -399,11 +618,9 @@ Info (12021): Found 1 design units, including 1 entities, in source file 7seg_di
     Info (12023): Found entity 1: seg7_display File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/7seg_display.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file alu_control.sv
     Info (12023): Found entity 1: Alu_control File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Alu_control.sv Line: 1
-Critical Warning (10846): Verilog HDL Instantiation warning at ALU.sv(26): instance has no name File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/ALU.sv Line: 26
+Critical Warning (10846): Verilog HDL Instantiation warning at ALU.sv(15): instance has no name File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/ALU.sv Line: 15
 Info (12127): Elaborating entity "ALU" for the top level hierarchy
-Warning (10858): Verilog HDL warning at ALU.sv(12): object sw_val used but never assigned File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/ALU.sv Line: 12
-Warning (10030): Net "sw_val" at ALU.sv(12) has no driver or initial value, using a default initial value '0' File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/ALU.sv Line: 12
-Info (12128): Elaborating entity "Alu_control" for hierarchy "Alu_control:alu1" File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/ALU.sv Line: 24
+Info (12128): Elaborating entity "Alu_control" for hierarchy "Alu_control:alu1" File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/ALU.sv Line: 13
 Warning (10858): Verilog HDL warning at Alu_control.sv(13): object y_mult used but never assigned File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Alu_control.sv Line: 13
 Warning (10858): Verilog HDL warning at Alu_control.sv(19): object z_mult used but never assigned File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Alu_control.sv Line: 19
 Warning (10858): Verilog HDL warning at Alu_control.sv(19): object n_mult used but never assigned File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Alu_control.sv Line: 19
@@ -426,7 +643,7 @@ Info (12128): Elaborating entity "Division" for hierarchy "Alu_control:alu1|Divi
 Info (12128): Elaborating entity "Modulo" for hierarchy "Alu_control:alu1|Modulo:moda" File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Alu_control.sv Line: 45
 Info (12128): Elaborating entity "shift_left" for hierarchy "Alu_control:alu1|shift_left:shiftl" File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Alu_control.sv Line: 53
 Info (12128): Elaborating entity "shift_right" for hierarchy "Alu_control:alu1|shift_right:shiftr" File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Alu_control.sv Line: 55
-Info (12128): Elaborating entity "seg7_display" for hierarchy "seg7_display:comb_29" File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/ALU.sv Line: 26
+Info (12128): Elaborating entity "seg7_display" for hierarchy "seg7_display:comb_7" File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/ALU.sv Line: 15
 Warning (12010): Port "a" on the entity instantiation of "or1" is connected to a signal of width 1. The formal width of the signal in the module is 4.  The extra bits will be driven by GND. File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv Line: 30
 Warning (12010): Port "b" on the entity instantiation of "or1" is connected to a signal of width 1. The formal width of the signal in the module is 4.  The extra bits will be driven by GND. File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv Line: 30
 Warning (12030): Port "y" on the entity instantiation of "or1" is connected to a signal of width 1. The formal width of the signal in the module is 4.  The extra bits will be left dangling without any fan-out logic. File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv Line: 30
@@ -517,11 +734,43 @@ Warning (12030): Port "y" on the entity instantiation of "xorb" is connected to 
 Warning (12010): Port "a" on the entity instantiation of "xora" is connected to a signal of width 1. The formal width of the signal in the module is 4.  The extra bits will be driven by GND. File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 12
 Warning (12010): Port "b" on the entity instantiation of "xora" is connected to a signal of width 1. The formal width of the signal in the module is 4.  The extra bits will be driven by GND. File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 12
 Warning (12030): Port "y" on the entity instantiation of "xora" is connected to a signal of width 1. The formal width of the signal in the module is 4.  The extra bits will be left dangling without any fan-out logic. File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 12
+Info (278001): Inferred 2 megafunctions from design logic
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Alu_control:alu1|Division:diva|Div0" File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Division.sv Line: 11
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Alu_control:alu1|Modulo:moda|Mod0" File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Modulo.sv Line: 11
+Info (12130): Elaborated megafunction instantiation "Alu_control:alu1|Division:diva|lpm_divide:Div0" File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Division.sv Line: 11
+Info (12133): Instantiated megafunction "Alu_control:alu1|Division:diva|lpm_divide:Div0" with the following parameter: File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Division.sv Line: 11
+    Info (12134): Parameter "LPM_WIDTHN" = "4"
+    Info (12134): Parameter "LPM_WIDTHD" = "4"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_1am.tdf
+    Info (12023): Found entity 1: lpm_divide_1am File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/db/lpm_divide_1am.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_7kh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_7kh File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/db/sign_div_unsign_7kh.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_kse.tdf
+    Info (12023): Found entity 1: alt_u_div_kse File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/db/alt_u_div_kse.tdf Line: 23
+Info (12130): Elaborated megafunction instantiation "Alu_control:alu1|Modulo:moda|lpm_divide:Mod0" File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Modulo.sv Line: 11
+Info (12133): Instantiated megafunction "Alu_control:alu1|Modulo:moda|lpm_divide:Mod0" with the following parameter: File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Modulo.sv Line: 11
+    Info (12134): Parameter "LPM_WIDTHN" = "4"
+    Info (12134): Parameter "LPM_WIDTHD" = "4"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_42m.tdf
+    Info (12023): Found entity 1: lpm_divide_42m File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/db/lpm_divide_42m.tdf Line: 25
 Warning (12241): 14 hierarchies have connectivity warnings - see the Connectivity Checks report folder
-Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 105 warnings
-    Info: Peak virtual memory: 4767 megabytes
-    Info: Processing ended: Tue Sep 09 02:36:24 2025
-    Info: Elapsed time: 00:00:06
-    Info: Total CPU time (on all processors): 00:00:14
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 1 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "CLK" File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/ALU.sv Line: 2
+Info (21057): Implemented 142 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 13 input pins
+    Info (21059): Implemented 11 output pins
+    Info (21061): Implemented 118 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 105 warnings
+    Info: Peak virtual memory: 4846 megabytes
+    Info: Processing ended: Tue Sep 09 14:29:48 2025
+    Info: Elapsed time: 00:00:07
+    Info: Total CPU time (on all processors): 00:00:16
 
 
