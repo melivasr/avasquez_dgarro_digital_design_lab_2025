@@ -12,8 +12,8 @@ module AND_gate(
 	
 	//flags 
 	assign N = y[3];       //MSB
-	assign Z = (y == 4'd0) //y en cero
-	assign C = 1'b0        //Sin carry
-	assign V = 1'b0        //Sin Overflow
+	assign Z = (y == 4'd0); //y en cero
+	assign C = 1'b0;        //Sin carry
+	assign V = 1'b0;       //Sin Overflow
 	
 endmodule

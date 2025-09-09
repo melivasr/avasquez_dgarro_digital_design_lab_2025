@@ -1,4 +1,965 @@
-|Division
+|ALU
+A[0] => A[0].IN9
+A[1] => A[1].IN9
+A[2] => A[2].IN9
+A[3] => A[3].IN9
+B[0] => B[0].IN9
+B[1] => B[1].IN9
+B[2] => B[2].IN9
+B[3] => B[3].IN9
+op[0] => Equal0.IN3
+op[0] => Equal1.IN0
+op[0] => Equal2.IN1
+op[0] => Equal3.IN3
+op[0] => Equal4.IN1
+op[0] => Equal5.IN3
+op[0] => Equal6.IN2
+op[0] => Equal7.IN3
+op[0] => Equal8.IN1
+op[1] => Equal0.IN2
+op[1] => Equal1.IN3
+op[1] => Equal2.IN0
+op[1] => Equal3.IN2
+op[1] => Equal4.IN3
+op[1] => Equal5.IN1
+op[1] => Equal6.IN1
+op[1] => Equal7.IN2
+op[1] => Equal8.IN3
+op[2] => Equal0.IN1
+op[2] => Equal1.IN2
+op[2] => Equal2.IN3
+op[2] => Equal3.IN0
+op[2] => Equal4.IN0
+op[2] => Equal5.IN0
+op[2] => Equal6.IN0
+op[2] => Equal7.IN1
+op[2] => Equal8.IN2
+op[3] => Equal0.IN0
+op[3] => Equal1.IN1
+op[3] => Equal2.IN2
+op[3] => Equal3.IN1
+op[3] => Equal4.IN2
+op[3] => Equal5.IN2
+op[3] => Equal6.IN3
+op[3] => Equal7.IN0
+op[3] => Equal8.IN0
+Y[0] << Y.DB_MAX_OUTPUT_PORT_TYPE
+Y[1] << Y.DB_MAX_OUTPUT_PORT_TYPE
+Y[2] << Y.DB_MAX_OUTPUT_PORT_TYPE
+Y[3] << Y.DB_MAX_OUTPUT_PORT_TYPE
+N << N.DB_MAX_OUTPUT_PORT_TYPE
+Z << Z.DB_MAX_OUTPUT_PORT_TYPE
+C << C.DB_MAX_OUTPUT_PORT_TYPE
+V << V.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|Ripple_carry_adder4:suma
+A[0] => A[0].IN1
+A[1] => A[1].IN1
+A[2] => A[2].IN1
+A[3] => A[3].IN1
+B[0] => B[0].IN1
+B[1] => B[1].IN1
+B[2] => B[2].IN1
+B[3] => B[3].IN1
+Cin => Cin.IN1
+Sum[0] <= Full_Adder:a0.Sum
+Sum[1] <= Full_Adder:a1.Sum
+Sum[2] <= Full_Adder:a2.Sum
+Sum[3] <= Full_Adder:a3.Sum
+Cout <= Full_Adder:a3.Cout
+N <= Full_Adder:a3.Sum
+Z <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+C <= Full_Adder:a3.Cout
+V <= V.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|Ripple_carry_adder4:suma|Full_Adder:a0
+A => A.IN2
+B => B.IN2
+Cin => Cin.IN2
+Sum <= XOR_gate:xorb.y
+Cout <= OR_gate:ora.y
+
+
+|ALU|Ripple_carry_adder4:suma|Full_Adder:a0|XOR_gate:xora
+a[0] => y.IN0
+a[1] => y.IN0
+a[2] => y.IN0
+a[3] => y.IN0
+b[0] => y.IN1
+b[1] => y.IN1
+b[2] => y.IN1
+b[3] => y.IN1
+y[0] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[1] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[2] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[3] <= y.DB_MAX_OUTPUT_PORT_TYPE
+N <= y.DB_MAX_OUTPUT_PORT_TYPE
+Z <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+C <= <GND>
+V <= <GND>
+
+
+|ALU|Ripple_carry_adder4:suma|Full_Adder:a0|XOR_gate:xorb
+a[0] => y.IN0
+a[1] => y.IN0
+a[2] => y.IN0
+a[3] => y.IN0
+b[0] => y.IN1
+b[1] => y.IN1
+b[2] => y.IN1
+b[3] => y.IN1
+y[0] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[1] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[2] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[3] <= y.DB_MAX_OUTPUT_PORT_TYPE
+N <= y.DB_MAX_OUTPUT_PORT_TYPE
+Z <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+C <= <GND>
+V <= <GND>
+
+
+|ALU|Ripple_carry_adder4:suma|Full_Adder:a0|AND_gate:anda
+a[0] => y.IN0
+a[1] => y.IN0
+a[2] => y.IN0
+a[3] => y.IN0
+b[0] => y.IN1
+b[1] => y.IN1
+b[2] => y.IN1
+b[3] => y.IN1
+y[0] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[1] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[2] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[3] <= y.DB_MAX_OUTPUT_PORT_TYPE
+N <= y.DB_MAX_OUTPUT_PORT_TYPE
+Z <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+C <= <GND>
+V <= <GND>
+
+
+|ALU|Ripple_carry_adder4:suma|Full_Adder:a0|AND_gate:andb
+a[0] => y.IN0
+a[1] => y.IN0
+a[2] => y.IN0
+a[3] => y.IN0
+b[0] => y.IN1
+b[1] => y.IN1
+b[2] => y.IN1
+b[3] => y.IN1
+y[0] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[1] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[2] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[3] <= y.DB_MAX_OUTPUT_PORT_TYPE
+N <= y.DB_MAX_OUTPUT_PORT_TYPE
+Z <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+C <= <GND>
+V <= <GND>
+
+
+|ALU|Ripple_carry_adder4:suma|Full_Adder:a0|OR_gate:ora
+a[0] => y.IN0
+a[1] => y.IN0
+a[2] => y.IN0
+a[3] => y.IN0
+b[0] => y.IN1
+b[1] => y.IN1
+b[2] => y.IN1
+b[3] => y.IN1
+y[0] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[1] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[2] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[3] <= y.DB_MAX_OUTPUT_PORT_TYPE
+N <= y.DB_MAX_OUTPUT_PORT_TYPE
+Z <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+C <= <GND>
+V <= <GND>
+
+
+|ALU|Ripple_carry_adder4:suma|Full_Adder:a1
+A => A.IN2
+B => B.IN2
+Cin => Cin.IN2
+Sum <= XOR_gate:xorb.y
+Cout <= OR_gate:ora.y
+
+
+|ALU|Ripple_carry_adder4:suma|Full_Adder:a1|XOR_gate:xora
+a[0] => y.IN0
+a[1] => y.IN0
+a[2] => y.IN0
+a[3] => y.IN0
+b[0] => y.IN1
+b[1] => y.IN1
+b[2] => y.IN1
+b[3] => y.IN1
+y[0] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[1] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[2] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[3] <= y.DB_MAX_OUTPUT_PORT_TYPE
+N <= y.DB_MAX_OUTPUT_PORT_TYPE
+Z <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+C <= <GND>
+V <= <GND>
+
+
+|ALU|Ripple_carry_adder4:suma|Full_Adder:a1|XOR_gate:xorb
+a[0] => y.IN0
+a[1] => y.IN0
+a[2] => y.IN0
+a[3] => y.IN0
+b[0] => y.IN1
+b[1] => y.IN1
+b[2] => y.IN1
+b[3] => y.IN1
+y[0] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[1] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[2] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[3] <= y.DB_MAX_OUTPUT_PORT_TYPE
+N <= y.DB_MAX_OUTPUT_PORT_TYPE
+Z <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+C <= <GND>
+V <= <GND>
+
+
+|ALU|Ripple_carry_adder4:suma|Full_Adder:a1|AND_gate:anda
+a[0] => y.IN0
+a[1] => y.IN0
+a[2] => y.IN0
+a[3] => y.IN0
+b[0] => y.IN1
+b[1] => y.IN1
+b[2] => y.IN1
+b[3] => y.IN1
+y[0] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[1] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[2] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[3] <= y.DB_MAX_OUTPUT_PORT_TYPE
+N <= y.DB_MAX_OUTPUT_PORT_TYPE
+Z <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+C <= <GND>
+V <= <GND>
+
+
+|ALU|Ripple_carry_adder4:suma|Full_Adder:a1|AND_gate:andb
+a[0] => y.IN0
+a[1] => y.IN0
+a[2] => y.IN0
+a[3] => y.IN0
+b[0] => y.IN1
+b[1] => y.IN1
+b[2] => y.IN1
+b[3] => y.IN1
+y[0] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[1] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[2] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[3] <= y.DB_MAX_OUTPUT_PORT_TYPE
+N <= y.DB_MAX_OUTPUT_PORT_TYPE
+Z <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+C <= <GND>
+V <= <GND>
+
+
+|ALU|Ripple_carry_adder4:suma|Full_Adder:a1|OR_gate:ora
+a[0] => y.IN0
+a[1] => y.IN0
+a[2] => y.IN0
+a[3] => y.IN0
+b[0] => y.IN1
+b[1] => y.IN1
+b[2] => y.IN1
+b[3] => y.IN1
+y[0] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[1] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[2] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[3] <= y.DB_MAX_OUTPUT_PORT_TYPE
+N <= y.DB_MAX_OUTPUT_PORT_TYPE
+Z <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+C <= <GND>
+V <= <GND>
+
+
+|ALU|Ripple_carry_adder4:suma|Full_Adder:a2
+A => A.IN2
+B => B.IN2
+Cin => Cin.IN2
+Sum <= XOR_gate:xorb.y
+Cout <= OR_gate:ora.y
+
+
+|ALU|Ripple_carry_adder4:suma|Full_Adder:a2|XOR_gate:xora
+a[0] => y.IN0
+a[1] => y.IN0
+a[2] => y.IN0
+a[3] => y.IN0
+b[0] => y.IN1
+b[1] => y.IN1
+b[2] => y.IN1
+b[3] => y.IN1
+y[0] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[1] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[2] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[3] <= y.DB_MAX_OUTPUT_PORT_TYPE
+N <= y.DB_MAX_OUTPUT_PORT_TYPE
+Z <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+C <= <GND>
+V <= <GND>
+
+
+|ALU|Ripple_carry_adder4:suma|Full_Adder:a2|XOR_gate:xorb
+a[0] => y.IN0
+a[1] => y.IN0
+a[2] => y.IN0
+a[3] => y.IN0
+b[0] => y.IN1
+b[1] => y.IN1
+b[2] => y.IN1
+b[3] => y.IN1
+y[0] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[1] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[2] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[3] <= y.DB_MAX_OUTPUT_PORT_TYPE
+N <= y.DB_MAX_OUTPUT_PORT_TYPE
+Z <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+C <= <GND>
+V <= <GND>
+
+
+|ALU|Ripple_carry_adder4:suma|Full_Adder:a2|AND_gate:anda
+a[0] => y.IN0
+a[1] => y.IN0
+a[2] => y.IN0
+a[3] => y.IN0
+b[0] => y.IN1
+b[1] => y.IN1
+b[2] => y.IN1
+b[3] => y.IN1
+y[0] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[1] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[2] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[3] <= y.DB_MAX_OUTPUT_PORT_TYPE
+N <= y.DB_MAX_OUTPUT_PORT_TYPE
+Z <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+C <= <GND>
+V <= <GND>
+
+
+|ALU|Ripple_carry_adder4:suma|Full_Adder:a2|AND_gate:andb
+a[0] => y.IN0
+a[1] => y.IN0
+a[2] => y.IN0
+a[3] => y.IN0
+b[0] => y.IN1
+b[1] => y.IN1
+b[2] => y.IN1
+b[3] => y.IN1
+y[0] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[1] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[2] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[3] <= y.DB_MAX_OUTPUT_PORT_TYPE
+N <= y.DB_MAX_OUTPUT_PORT_TYPE
+Z <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+C <= <GND>
+V <= <GND>
+
+
+|ALU|Ripple_carry_adder4:suma|Full_Adder:a2|OR_gate:ora
+a[0] => y.IN0
+a[1] => y.IN0
+a[2] => y.IN0
+a[3] => y.IN0
+b[0] => y.IN1
+b[1] => y.IN1
+b[2] => y.IN1
+b[3] => y.IN1
+y[0] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[1] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[2] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[3] <= y.DB_MAX_OUTPUT_PORT_TYPE
+N <= y.DB_MAX_OUTPUT_PORT_TYPE
+Z <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+C <= <GND>
+V <= <GND>
+
+
+|ALU|Ripple_carry_adder4:suma|Full_Adder:a3
+A => A.IN2
+B => B.IN2
+Cin => Cin.IN2
+Sum <= XOR_gate:xorb.y
+Cout <= OR_gate:ora.y
+
+
+|ALU|Ripple_carry_adder4:suma|Full_Adder:a3|XOR_gate:xora
+a[0] => y.IN0
+a[1] => y.IN0
+a[2] => y.IN0
+a[3] => y.IN0
+b[0] => y.IN1
+b[1] => y.IN1
+b[2] => y.IN1
+b[3] => y.IN1
+y[0] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[1] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[2] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[3] <= y.DB_MAX_OUTPUT_PORT_TYPE
+N <= y.DB_MAX_OUTPUT_PORT_TYPE
+Z <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+C <= <GND>
+V <= <GND>
+
+
+|ALU|Ripple_carry_adder4:suma|Full_Adder:a3|XOR_gate:xorb
+a[0] => y.IN0
+a[1] => y.IN0
+a[2] => y.IN0
+a[3] => y.IN0
+b[0] => y.IN1
+b[1] => y.IN1
+b[2] => y.IN1
+b[3] => y.IN1
+y[0] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[1] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[2] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[3] <= y.DB_MAX_OUTPUT_PORT_TYPE
+N <= y.DB_MAX_OUTPUT_PORT_TYPE
+Z <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+C <= <GND>
+V <= <GND>
+
+
+|ALU|Ripple_carry_adder4:suma|Full_Adder:a3|AND_gate:anda
+a[0] => y.IN0
+a[1] => y.IN0
+a[2] => y.IN0
+a[3] => y.IN0
+b[0] => y.IN1
+b[1] => y.IN1
+b[2] => y.IN1
+b[3] => y.IN1
+y[0] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[1] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[2] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[3] <= y.DB_MAX_OUTPUT_PORT_TYPE
+N <= y.DB_MAX_OUTPUT_PORT_TYPE
+Z <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+C <= <GND>
+V <= <GND>
+
+
+|ALU|Ripple_carry_adder4:suma|Full_Adder:a3|AND_gate:andb
+a[0] => y.IN0
+a[1] => y.IN0
+a[2] => y.IN0
+a[3] => y.IN0
+b[0] => y.IN1
+b[1] => y.IN1
+b[2] => y.IN1
+b[3] => y.IN1
+y[0] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[1] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[2] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[3] <= y.DB_MAX_OUTPUT_PORT_TYPE
+N <= y.DB_MAX_OUTPUT_PORT_TYPE
+Z <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+C <= <GND>
+V <= <GND>
+
+
+|ALU|Ripple_carry_adder4:suma|Full_Adder:a3|OR_gate:ora
+a[0] => y.IN0
+a[1] => y.IN0
+a[2] => y.IN0
+a[3] => y.IN0
+b[0] => y.IN1
+b[1] => y.IN1
+b[2] => y.IN1
+b[3] => y.IN1
+y[0] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[1] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[2] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[3] <= y.DB_MAX_OUTPUT_PORT_TYPE
+N <= y.DB_MAX_OUTPUT_PORT_TYPE
+Z <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+C <= <GND>
+V <= <GND>
+
+
+|ALU|Full_subtractor4:suba
+A[0] => A[0].IN1
+A[1] => A[1].IN1
+A[2] => A[2].IN1
+A[3] => A[3].IN1
+B[0] => B[0].IN1
+B[1] => B[1].IN1
+B[2] => B[2].IN1
+B[3] => B[3].IN1
+Cin => Cin.IN1
+Sub[0] <= Full_Substractor:s0.Sub
+Sub[1] <= Full_Substractor:s1.Sub
+Sub[2] <= Full_Substractor:s2.Sub
+Sub[3] <= Full_Substractor:s3.Sub
+Cout <= Full_Substractor:s3.Cout
+N <= Full_Substractor:s3.Sub
+Z <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+C <= Full_Substractor:s3.Cout
+V <= V.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|Full_subtractor4:suba|Full_Substractor:s0
+A => A.IN2
+B => B.IN2
+Cin => Cin.IN2
+Sub <= XOR_gate:xorb.y
+Cout <= OR_gate:or1.y
+
+
+|ALU|Full_subtractor4:suba|Full_Substractor:s0|XOR_gate:xora
+a[0] => y.IN0
+a[1] => y.IN0
+a[2] => y.IN0
+a[3] => y.IN0
+b[0] => y.IN1
+b[1] => y.IN1
+b[2] => y.IN1
+b[3] => y.IN1
+y[0] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[1] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[2] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[3] <= y.DB_MAX_OUTPUT_PORT_TYPE
+N <= y.DB_MAX_OUTPUT_PORT_TYPE
+Z <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+C <= <GND>
+V <= <GND>
+
+
+|ALU|Full_subtractor4:suba|Full_Substractor:s0|XOR_gate:xorb
+a[0] => y.IN0
+a[1] => y.IN0
+a[2] => y.IN0
+a[3] => y.IN0
+b[0] => y.IN1
+b[1] => y.IN1
+b[2] => y.IN1
+b[3] => y.IN1
+y[0] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[1] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[2] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[3] <= y.DB_MAX_OUTPUT_PORT_TYPE
+N <= y.DB_MAX_OUTPUT_PORT_TYPE
+Z <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+C <= <GND>
+V <= <GND>
+
+
+|ALU|Full_subtractor4:suba|Full_Substractor:s0|NOT_gate:nota
+a => y.DATAIN
+y <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|Full_subtractor4:suba|Full_Substractor:s0|NOT_gate:notb
+a => y.DATAIN
+y <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|Full_subtractor4:suba|Full_Substractor:s0|AND_gate:anda
+a[0] => y.IN0
+a[1] => y.IN0
+a[2] => y.IN0
+a[3] => y.IN0
+b[0] => y.IN1
+b[1] => y.IN1
+b[2] => y.IN1
+b[3] => y.IN1
+y[0] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[1] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[2] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[3] <= y.DB_MAX_OUTPUT_PORT_TYPE
+N <= y.DB_MAX_OUTPUT_PORT_TYPE
+Z <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+C <= <GND>
+V <= <GND>
+
+
+|ALU|Full_subtractor4:suba|Full_Substractor:s0|AND_gate:andb
+a[0] => y.IN0
+a[1] => y.IN0
+a[2] => y.IN0
+a[3] => y.IN0
+b[0] => y.IN1
+b[1] => y.IN1
+b[2] => y.IN1
+b[3] => y.IN1
+y[0] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[1] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[2] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[3] <= y.DB_MAX_OUTPUT_PORT_TYPE
+N <= y.DB_MAX_OUTPUT_PORT_TYPE
+Z <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+C <= <GND>
+V <= <GND>
+
+
+|ALU|Full_subtractor4:suba|Full_Substractor:s0|OR_gate:or1
+a[0] => y.IN0
+a[1] => y.IN0
+a[2] => y.IN0
+a[3] => y.IN0
+b[0] => y.IN1
+b[1] => y.IN1
+b[2] => y.IN1
+b[3] => y.IN1
+y[0] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[1] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[2] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[3] <= y.DB_MAX_OUTPUT_PORT_TYPE
+N <= y.DB_MAX_OUTPUT_PORT_TYPE
+Z <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+C <= <GND>
+V <= <GND>
+
+
+|ALU|Full_subtractor4:suba|Full_Substractor:s1
+A => A.IN2
+B => B.IN2
+Cin => Cin.IN2
+Sub <= XOR_gate:xorb.y
+Cout <= OR_gate:or1.y
+
+
+|ALU|Full_subtractor4:suba|Full_Substractor:s1|XOR_gate:xora
+a[0] => y.IN0
+a[1] => y.IN0
+a[2] => y.IN0
+a[3] => y.IN0
+b[0] => y.IN1
+b[1] => y.IN1
+b[2] => y.IN1
+b[3] => y.IN1
+y[0] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[1] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[2] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[3] <= y.DB_MAX_OUTPUT_PORT_TYPE
+N <= y.DB_MAX_OUTPUT_PORT_TYPE
+Z <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+C <= <GND>
+V <= <GND>
+
+
+|ALU|Full_subtractor4:suba|Full_Substractor:s1|XOR_gate:xorb
+a[0] => y.IN0
+a[1] => y.IN0
+a[2] => y.IN0
+a[3] => y.IN0
+b[0] => y.IN1
+b[1] => y.IN1
+b[2] => y.IN1
+b[3] => y.IN1
+y[0] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[1] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[2] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[3] <= y.DB_MAX_OUTPUT_PORT_TYPE
+N <= y.DB_MAX_OUTPUT_PORT_TYPE
+Z <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+C <= <GND>
+V <= <GND>
+
+
+|ALU|Full_subtractor4:suba|Full_Substractor:s1|NOT_gate:nota
+a => y.DATAIN
+y <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|Full_subtractor4:suba|Full_Substractor:s1|NOT_gate:notb
+a => y.DATAIN
+y <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|Full_subtractor4:suba|Full_Substractor:s1|AND_gate:anda
+a[0] => y.IN0
+a[1] => y.IN0
+a[2] => y.IN0
+a[3] => y.IN0
+b[0] => y.IN1
+b[1] => y.IN1
+b[2] => y.IN1
+b[3] => y.IN1
+y[0] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[1] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[2] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[3] <= y.DB_MAX_OUTPUT_PORT_TYPE
+N <= y.DB_MAX_OUTPUT_PORT_TYPE
+Z <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+C <= <GND>
+V <= <GND>
+
+
+|ALU|Full_subtractor4:suba|Full_Substractor:s1|AND_gate:andb
+a[0] => y.IN0
+a[1] => y.IN0
+a[2] => y.IN0
+a[3] => y.IN0
+b[0] => y.IN1
+b[1] => y.IN1
+b[2] => y.IN1
+b[3] => y.IN1
+y[0] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[1] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[2] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[3] <= y.DB_MAX_OUTPUT_PORT_TYPE
+N <= y.DB_MAX_OUTPUT_PORT_TYPE
+Z <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+C <= <GND>
+V <= <GND>
+
+
+|ALU|Full_subtractor4:suba|Full_Substractor:s1|OR_gate:or1
+a[0] => y.IN0
+a[1] => y.IN0
+a[2] => y.IN0
+a[3] => y.IN0
+b[0] => y.IN1
+b[1] => y.IN1
+b[2] => y.IN1
+b[3] => y.IN1
+y[0] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[1] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[2] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[3] <= y.DB_MAX_OUTPUT_PORT_TYPE
+N <= y.DB_MAX_OUTPUT_PORT_TYPE
+Z <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+C <= <GND>
+V <= <GND>
+
+
+|ALU|Full_subtractor4:suba|Full_Substractor:s2
+A => A.IN2
+B => B.IN2
+Cin => Cin.IN2
+Sub <= XOR_gate:xorb.y
+Cout <= OR_gate:or1.y
+
+
+|ALU|Full_subtractor4:suba|Full_Substractor:s2|XOR_gate:xora
+a[0] => y.IN0
+a[1] => y.IN0
+a[2] => y.IN0
+a[3] => y.IN0
+b[0] => y.IN1
+b[1] => y.IN1
+b[2] => y.IN1
+b[3] => y.IN1
+y[0] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[1] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[2] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[3] <= y.DB_MAX_OUTPUT_PORT_TYPE
+N <= y.DB_MAX_OUTPUT_PORT_TYPE
+Z <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+C <= <GND>
+V <= <GND>
+
+
+|ALU|Full_subtractor4:suba|Full_Substractor:s2|XOR_gate:xorb
+a[0] => y.IN0
+a[1] => y.IN0
+a[2] => y.IN0
+a[3] => y.IN0
+b[0] => y.IN1
+b[1] => y.IN1
+b[2] => y.IN1
+b[3] => y.IN1
+y[0] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[1] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[2] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[3] <= y.DB_MAX_OUTPUT_PORT_TYPE
+N <= y.DB_MAX_OUTPUT_PORT_TYPE
+Z <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+C <= <GND>
+V <= <GND>
+
+
+|ALU|Full_subtractor4:suba|Full_Substractor:s2|NOT_gate:nota
+a => y.DATAIN
+y <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|Full_subtractor4:suba|Full_Substractor:s2|NOT_gate:notb
+a => y.DATAIN
+y <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|Full_subtractor4:suba|Full_Substractor:s2|AND_gate:anda
+a[0] => y.IN0
+a[1] => y.IN0
+a[2] => y.IN0
+a[3] => y.IN0
+b[0] => y.IN1
+b[1] => y.IN1
+b[2] => y.IN1
+b[3] => y.IN1
+y[0] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[1] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[2] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[3] <= y.DB_MAX_OUTPUT_PORT_TYPE
+N <= y.DB_MAX_OUTPUT_PORT_TYPE
+Z <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+C <= <GND>
+V <= <GND>
+
+
+|ALU|Full_subtractor4:suba|Full_Substractor:s2|AND_gate:andb
+a[0] => y.IN0
+a[1] => y.IN0
+a[2] => y.IN0
+a[3] => y.IN0
+b[0] => y.IN1
+b[1] => y.IN1
+b[2] => y.IN1
+b[3] => y.IN1
+y[0] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[1] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[2] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[3] <= y.DB_MAX_OUTPUT_PORT_TYPE
+N <= y.DB_MAX_OUTPUT_PORT_TYPE
+Z <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+C <= <GND>
+V <= <GND>
+
+
+|ALU|Full_subtractor4:suba|Full_Substractor:s2|OR_gate:or1
+a[0] => y.IN0
+a[1] => y.IN0
+a[2] => y.IN0
+a[3] => y.IN0
+b[0] => y.IN1
+b[1] => y.IN1
+b[2] => y.IN1
+b[3] => y.IN1
+y[0] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[1] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[2] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[3] <= y.DB_MAX_OUTPUT_PORT_TYPE
+N <= y.DB_MAX_OUTPUT_PORT_TYPE
+Z <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+C <= <GND>
+V <= <GND>
+
+
+|ALU|Full_subtractor4:suba|Full_Substractor:s3
+A => A.IN2
+B => B.IN2
+Cin => Cin.IN2
+Sub <= XOR_gate:xorb.y
+Cout <= OR_gate:or1.y
+
+
+|ALU|Full_subtractor4:suba|Full_Substractor:s3|XOR_gate:xora
+a[0] => y.IN0
+a[1] => y.IN0
+a[2] => y.IN0
+a[3] => y.IN0
+b[0] => y.IN1
+b[1] => y.IN1
+b[2] => y.IN1
+b[3] => y.IN1
+y[0] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[1] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[2] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[3] <= y.DB_MAX_OUTPUT_PORT_TYPE
+N <= y.DB_MAX_OUTPUT_PORT_TYPE
+Z <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+C <= <GND>
+V <= <GND>
+
+
+|ALU|Full_subtractor4:suba|Full_Substractor:s3|XOR_gate:xorb
+a[0] => y.IN0
+a[1] => y.IN0
+a[2] => y.IN0
+a[3] => y.IN0
+b[0] => y.IN1
+b[1] => y.IN1
+b[2] => y.IN1
+b[3] => y.IN1
+y[0] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[1] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[2] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[3] <= y.DB_MAX_OUTPUT_PORT_TYPE
+N <= y.DB_MAX_OUTPUT_PORT_TYPE
+Z <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+C <= <GND>
+V <= <GND>
+
+
+|ALU|Full_subtractor4:suba|Full_Substractor:s3|NOT_gate:nota
+a => y.DATAIN
+y <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|Full_subtractor4:suba|Full_Substractor:s3|NOT_gate:notb
+a => y.DATAIN
+y <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|Full_subtractor4:suba|Full_Substractor:s3|AND_gate:anda
+a[0] => y.IN0
+a[1] => y.IN0
+a[2] => y.IN0
+a[3] => y.IN0
+b[0] => y.IN1
+b[1] => y.IN1
+b[2] => y.IN1
+b[3] => y.IN1
+y[0] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[1] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[2] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[3] <= y.DB_MAX_OUTPUT_PORT_TYPE
+N <= y.DB_MAX_OUTPUT_PORT_TYPE
+Z <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+C <= <GND>
+V <= <GND>
+
+
+|ALU|Full_subtractor4:suba|Full_Substractor:s3|AND_gate:andb
+a[0] => y.IN0
+a[1] => y.IN0
+a[2] => y.IN0
+a[3] => y.IN0
+b[0] => y.IN1
+b[1] => y.IN1
+b[2] => y.IN1
+b[3] => y.IN1
+y[0] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[1] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[2] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[3] <= y.DB_MAX_OUTPUT_PORT_TYPE
+N <= y.DB_MAX_OUTPUT_PORT_TYPE
+Z <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+C <= <GND>
+V <= <GND>
+
+
+|ALU|Full_subtractor4:suba|Full_Substractor:s3|OR_gate:or1
+a[0] => y.IN0
+a[1] => y.IN0
+a[2] => y.IN0
+a[3] => y.IN0
+b[0] => y.IN1
+b[1] => y.IN1
+b[2] => y.IN1
+b[3] => y.IN1
+y[0] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[1] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[2] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[3] <= y.DB_MAX_OUTPUT_PORT_TYPE
+N <= y.DB_MAX_OUTPUT_PORT_TYPE
+Z <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+C <= <GND>
+V <= <GND>
+
+
+|ALU|Division:diva
 a[0] => Div0.IN3
 a[1] => Div0.IN2
 a[2] => Div0.IN1
@@ -11,5 +972,119 @@ y[0] <= Div0.DB_MAX_OUTPUT_PORT_TYPE
 y[1] <= Div0.DB_MAX_OUTPUT_PORT_TYPE
 y[2] <= Div0.DB_MAX_OUTPUT_PORT_TYPE
 y[3] <= Div0.DB_MAX_OUTPUT_PORT_TYPE
+N <= Div0.DB_MAX_OUTPUT_PORT_TYPE
+Z <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+C <= <GND>
+V <= <GND>
+
+
+|ALU|Modulo:moda
+a[0] => Mod0.IN3
+a[1] => Mod0.IN2
+a[2] => Mod0.IN1
+a[3] => Mod0.IN0
+b[0] => Mod0.IN7
+b[1] => Mod0.IN6
+b[2] => Mod0.IN5
+b[3] => Mod0.IN4
+y[0] <= Mod0.DB_MAX_OUTPUT_PORT_TYPE
+y[1] <= Mod0.DB_MAX_OUTPUT_PORT_TYPE
+y[2] <= Mod0.DB_MAX_OUTPUT_PORT_TYPE
+y[3] <= Mod0.DB_MAX_OUTPUT_PORT_TYPE
+N <= Mod0.DB_MAX_OUTPUT_PORT_TYPE
+Z <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+C <= <GND>
+V <= <GND>
+
+
+|ALU|AND_gate:anda
+a[0] => y.IN0
+a[1] => y.IN0
+a[2] => y.IN0
+a[3] => y.IN0
+b[0] => y.IN1
+b[1] => y.IN1
+b[2] => y.IN1
+b[3] => y.IN1
+y[0] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[1] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[2] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[3] <= y.DB_MAX_OUTPUT_PORT_TYPE
+N <= y.DB_MAX_OUTPUT_PORT_TYPE
+Z <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+C <= <GND>
+V <= <GND>
+
+
+|ALU|OR_gate:ora
+a[0] => y.IN0
+a[1] => y.IN0
+a[2] => y.IN0
+a[3] => y.IN0
+b[0] => y.IN1
+b[1] => y.IN1
+b[2] => y.IN1
+b[3] => y.IN1
+y[0] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[1] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[2] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[3] <= y.DB_MAX_OUTPUT_PORT_TYPE
+N <= y.DB_MAX_OUTPUT_PORT_TYPE
+Z <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+C <= <GND>
+V <= <GND>
+
+
+|ALU|XOR_gate:xora
+a[0] => y.IN0
+a[1] => y.IN0
+a[2] => y.IN0
+a[3] => y.IN0
+b[0] => y.IN1
+b[1] => y.IN1
+b[2] => y.IN1
+b[3] => y.IN1
+y[0] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[1] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[2] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[3] <= y.DB_MAX_OUTPUT_PORT_TYPE
+N <= y.DB_MAX_OUTPUT_PORT_TYPE
+Z <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+C <= <GND>
+V <= <GND>
+
+
+|ALU|shift_left:shiftl
+a[0] => ShiftLeft0.IN5
+a[1] => ShiftLeft0.IN4
+a[2] => ShiftLeft0.IN3
+a[3] => ShiftLeft0.IN2
+b[0] => ShiftLeft0.IN7
+b[1] => ShiftLeft0.IN6
+y[0] <= ShiftLeft0.DB_MAX_OUTPUT_PORT_TYPE
+y[1] <= ShiftLeft0.DB_MAX_OUTPUT_PORT_TYPE
+y[2] <= ShiftLeft0.DB_MAX_OUTPUT_PORT_TYPE
+y[3] <= ShiftLeft0.DB_MAX_OUTPUT_PORT_TYPE
+N <= ShiftLeft0.DB_MAX_OUTPUT_PORT_TYPE
+Z <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+C <= ShiftLeft0.DB_MAX_OUTPUT_PORT_TYPE
+V <= <GND>
+
+
+|ALU|shift_right:shiftr
+a[0] => ShiftRight0.IN5
+a[1] => ShiftRight0.IN4
+a[2] => ShiftRight0.IN3
+a[3] => ShiftRight0.IN2
+b[0] => ShiftRight0.IN7
+b[1] => ShiftRight0.IN6
+y[0] <= ShiftRight0.DB_MAX_OUTPUT_PORT_TYPE
+y[1] <= ShiftRight0.DB_MAX_OUTPUT_PORT_TYPE
+y[2] <= ShiftRight0.DB_MAX_OUTPUT_PORT_TYPE
+y[3] <= ShiftRight0.DB_MAX_OUTPUT_PORT_TYPE
+N <= ShiftRight0.DB_MAX_OUTPUT_PORT_TYPE
+Z <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+C <= ShiftRight0.DB_MAX_OUTPUT_PORT_TYPE
+V <= <GND>
 
 

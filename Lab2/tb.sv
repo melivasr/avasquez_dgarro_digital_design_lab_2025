@@ -1,40 +1,45 @@
 `timescale 1ns/1ps
+
 module tb;
 
-  // señales
-  logic [3:0] a, b;
-  logic [3:0] y;
+  logic [3:0] A, B;
+  logic [3:0] op;
+  logic [3:0] Y;
+  logic N,Z,C,V;
 
-  // instancia del DUT
-  Division dut (
-    .a(a),
-    .b(b),
-    .y(y)
+  // Instancia de la ALU
+  ALU dut (
+    .A(A), .B(B), .op(op),
+    .Y(Y), .N(N), .Z(Z), .C(C), .V(V)
   );
 
   initial begin
-    $display(" a   b  |  y (a/b esperado)");
-    $display("---------------------------");
+    $display("time | op | A | B |  Y  | N Z C V");
+    $display("---------------------------------");
 
-    // Caso 1: 8 / 2 = 4
-    a = 4'd8; b = 4'd2; #5;
-    $display("%2d  %2d |  %2d", a, b, y);
+    // Prueba con algunos valores fijos de A y B
+    A = 4'd5;  B = 4'd3; // 5 y 3 en decimal
+    for (int i = 0; i < 10; i++) begin
+      op = i; #5; // espera 5 ns
+      $display("%4t | %02d | %d | %d | %2d | %b %b %b %b",
+               $time, op, A, B, Y, N,Z,C,V);
+    end
 
-    // Caso 2: 7 / 3 = 2 (parte entera)
-    a = 4'd7; b = 4'd3; #5;
-    $display("%2d  %2d |  %2d", a, b, y);
+    // Cambiar valores de entrada
+    A = 4'd7;  B = 4'd2;
+    for (int i = 0; i < 10; i++) begin
+      op = i; #5;
+      $display("%4t | %02d | %d | %d | %2d | %b %b %b %b",
+               $time, op, A, B, Y, N,Z,C,V);
+    end
 
-    // Caso 3: 15 / 4 = 3
-    a = 4'd15; b = 4'd4; #5;
-    $display("%2d  %2d |  %2d", a, b, y);
-
-    // Caso 4: 9 / 5 = 1
-    a = 4'd9; b = 4'd5; #5;
-    $display("%2d  %2d |  %2d", a, b, y);
-
-    // Caso 5: 3 / 0 (indefinido → X o 0 según simulador)
-    a = 4'd3; b = 4'd0; #5;
-    $display("%2d  %2d |  %2d  <-- cuidado: división por cero", a, b, y);
+    // Otra combinación
+    A = 4'd8;  B = 4'd0; // caso especial para DIV/MOD
+    for (int i = 0; i < 10; i++) begin
+      op = i; #5;
+      $display("%4t | %02d | %d | %d | %2d | %b %b %b %b",
+               $time, op, A, B, Y, N,Z,C,V);
+    end
 
     $stop;
   end
