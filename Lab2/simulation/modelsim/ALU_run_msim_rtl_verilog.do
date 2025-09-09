@@ -18,6 +18,8 @@ vlog -sv -work work +incdir+F:/Proyectos\ Quartos/avasquez_dgarro_digital_design
 vlog -sv -work work +incdir+F:/Proyectos\ Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2 {F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/shift_left.sv}
 vlog -sv -work work +incdir+F:/Proyectos\ Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2 {F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/shift_right.sv}
 vlog -sv -work work +incdir+F:/Proyectos\ Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2 {F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Modulo.sv}
+vlog -sv -work work +incdir+F:/Proyectos\ Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2 {F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/7seg_display.sv}
+vlog -sv -work work +incdir+F:/Proyectos\ Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2 {F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Alu_control.sv}
 
 vlog -sv -work work +incdir+F:/Proyectos\ Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2 {F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/tb.sv}
 

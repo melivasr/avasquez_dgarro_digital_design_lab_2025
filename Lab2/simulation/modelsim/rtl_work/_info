@@ -11,24 +11,24 @@ cModel Technology
 Z0 dF:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/simulation/modelsim
 vALU
 Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
-Z2 !s110 1757404147
+Z2 !s110 1757406994
 !i10b 1
-!s100 ^]S@a]<Zem_Zk3_@82kJT3
+!s100 l<VhcWEQW4:GaIaVbn@Hl0
 Z3 !s11b Dg1SIo80bB@j0V0VzS_@n1
-I9]D^1BMJF_VoU@U4lN]E<0
+I`AWd9Bf=W^@CLMd0I<0c_3
 Z4 VDg1SIo80bB@j0V0VzS_@n1
 S1
 R0
-w1757402894
+w1757406976
 8F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/ALU.sv
 FF:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/ALU.sv
 !i122 8
-L0 1 169
+L0 1 30
 Z5 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z6 !s108 1757404147.000000
+Z6 !s108 1757406994.000000
 !s107 F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/ALU.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2|F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/ALU.sv|
 !i113 1
@@ -36,9 +36,36 @@ Z7 o-sv -work work
 Z8 !s92 -sv -work work {+incdir+F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2}
 Z9 tCvgOpt 0
 n@a@l@u
+vAlu_control
+R1
+R2
+!i10b 1
+!s100 oa^9Q=R7UJ;UfVV3?E5=Q3
+R3
+Ik6T?JIl70CgK2F1LSm6AX3
+R4
+S1
+R0
+w1757406929
+8F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Alu_control.sv
+FF:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Alu_control.sv
+!i122 14
+L0 1 165
+R5
+r1
+!s85 0
+31
+R6
+!s107 F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Alu_control.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2|F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Alu_control.sv|
+!i113 1
+R7
+R8
+R9
+n@alu_control
 vAND_gate
 R1
-Z10 !s110 1757404146
+Z10 !s110 1757406993
 !i10b 1
 !s100 aEJDUkJPda5fDAHK?7P:z2
 R3
@@ -55,7 +82,7 @@ R5
 r1
 !s85 0
 31
-Z13 !s108 1757404146.000000
+Z13 !s108 1757406993.000000
 !s107 F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/AND.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2|F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/AND.sv|
 !i113 1
@@ -65,7 +92,7 @@ R9
 n@a@n@d_gate
 vDivision
 R1
-R2
+R10
 !i10b 1
 !s100 h=h1VVz44B::^;M0T[db?3
 R3
@@ -82,7 +109,7 @@ R5
 r1
 !s85 0
 31
-R6
+R13
 !s107 F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Division.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2|F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Division.sv|
 !i113 1
@@ -92,7 +119,7 @@ R9
 n@division
 vFull_Adder
 R1
-R2
+R10
 !i10b 1
 !s100 1@_YP1@3EA]jMG;J>kD^Y1
 R3
@@ -109,7 +136,7 @@ R5
 r1
 !s85 0
 31
-R6
+R13
 !s107 F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2|F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv|
 !i113 1
@@ -119,7 +146,7 @@ R9
 n@full_@adder
 vFull_Substractor
 R1
-R2
+R10
 !i10b 1
 !s100 <2@5abTDjCoMXiZWWGAz33
 R3
@@ -136,7 +163,7 @@ R5
 r1
 !s85 0
 31
-R6
+R13
 !s107 F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2|F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv|
 !i113 1
@@ -200,7 +227,7 @@ R9
 n@modulo
 vNOT_gate
 R1
-R2
+R10
 !i10b 1
 !s100 H84;:R]a4SThc?SRNcGJc2
 R3
@@ -217,7 +244,7 @@ R5
 r1
 !s85 0
 31
-R6
+R13
 !s107 F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/NOT.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2|F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/NOT.sv|
 !i113 1
@@ -227,7 +254,7 @@ R9
 n@n@o@t_gate
 vOR_gate
 R1
-R2
+R10
 !i10b 1
 !s100 k0PJA>:NzJOj::ON;B3S23
 R3
@@ -244,7 +271,7 @@ R5
 r1
 !s85 0
 31
-R6
+R13
 !s107 F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/OR.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2|F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/OR.sv|
 !i113 1
@@ -271,7 +298,7 @@ R5
 r1
 !s85 0
 31
-R6
+R13
 !s107 F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Ripple_carry_adder4.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2|F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Ripple_carry_adder4.sv|
 !i113 1
@@ -279,6 +306,32 @@ R7
 R8
 R9
 n@ripple_carry_adder4
+vseg7_display
+R1
+R2
+!i10b 1
+!s100 8?nVk94`o^KMD@@KoPHEb2
+R3
+I7PlPV]jYcRNlmH`cTHhcA0
+R4
+S1
+R0
+w1757406954
+8F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/7seg_display.sv
+FF:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/7seg_display.sv
+!i122 13
+L0 1 64
+R5
+r1
+!s85 0
+31
+R6
+!s107 F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/7seg_display.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2|F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/7seg_display.sv|
+!i113 1
+R7
+R8
+R9
 vshift_left
 R1
 R2
@@ -333,7 +386,7 @@ R8
 R9
 vtb
 R1
-!s110 1757404148
+R2
 !i10b 1
 !s100 fhl4L8M=Uf?38MadS3f?^3
 R3
@@ -344,7 +397,7 @@ R0
 w1757402903
 8F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/tb.sv
 FF:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/tb.sv
-!i122 13
+!i122 15
 L0 3 45
 R5
 r1

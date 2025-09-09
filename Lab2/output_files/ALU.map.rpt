@@ -1,5 +1,5 @@
 Analysis & Elaboration report for ALU
-Tue Sep 09 01:48:58 2025
+Tue Sep 09 02:36:24 2025
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -10,20 +10,20 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
   2. Analysis & Elaboration Summary
   3. Parallel Compilation
   4. Analysis & Elaboration Settings
-  5. Port Connectivity Checks: "shift_right:shiftr"
-  6. Port Connectivity Checks: "shift_left:shiftl"
-  7. Port Connectivity Checks: "Full_subtractor4:suba|Full_Substractor:s0|OR_gate:or1"
-  8. Port Connectivity Checks: "Full_subtractor4:suba|Full_Substractor:s0|AND_gate:andb"
-  9. Port Connectivity Checks: "Full_subtractor4:suba|Full_Substractor:s0|AND_gate:anda"
- 10. Port Connectivity Checks: "Full_subtractor4:suba|Full_Substractor:s0|XOR_gate:xorb"
- 11. Port Connectivity Checks: "Full_subtractor4:suba|Full_Substractor:s0|XOR_gate:xora"
- 12. Port Connectivity Checks: "Full_subtractor4:suba"
- 13. Port Connectivity Checks: "Ripple_carry_adder4:suma|Full_Adder:a0|OR_gate:ora"
- 14. Port Connectivity Checks: "Ripple_carry_adder4:suma|Full_Adder:a0|AND_gate:andb"
- 15. Port Connectivity Checks: "Ripple_carry_adder4:suma|Full_Adder:a0|AND_gate:anda"
- 16. Port Connectivity Checks: "Ripple_carry_adder4:suma|Full_Adder:a0|XOR_gate:xorb"
- 17. Port Connectivity Checks: "Ripple_carry_adder4:suma|Full_Adder:a0|XOR_gate:xora"
- 18. Port Connectivity Checks: "Ripple_carry_adder4:suma"
+  5. Port Connectivity Checks: "Alu_control:alu1|shift_right:shiftr"
+  6. Port Connectivity Checks: "Alu_control:alu1|shift_left:shiftl"
+  7. Port Connectivity Checks: "Alu_control:alu1|Full_subtractor4:suba|Full_Substractor:s0|OR_gate:or1"
+  8. Port Connectivity Checks: "Alu_control:alu1|Full_subtractor4:suba|Full_Substractor:s0|AND_gate:andb"
+  9. Port Connectivity Checks: "Alu_control:alu1|Full_subtractor4:suba|Full_Substractor:s0|AND_gate:anda"
+ 10. Port Connectivity Checks: "Alu_control:alu1|Full_subtractor4:suba|Full_Substractor:s0|XOR_gate:xorb"
+ 11. Port Connectivity Checks: "Alu_control:alu1|Full_subtractor4:suba|Full_Substractor:s0|XOR_gate:xora"
+ 12. Port Connectivity Checks: "Alu_control:alu1|Full_subtractor4:suba"
+ 13. Port Connectivity Checks: "Alu_control:alu1|Ripple_carry_adder4:suma|Full_Adder:a0|OR_gate:ora"
+ 14. Port Connectivity Checks: "Alu_control:alu1|Ripple_carry_adder4:suma|Full_Adder:a0|AND_gate:andb"
+ 15. Port Connectivity Checks: "Alu_control:alu1|Ripple_carry_adder4:suma|Full_Adder:a0|AND_gate:anda"
+ 16. Port Connectivity Checks: "Alu_control:alu1|Ripple_carry_adder4:suma|Full_Adder:a0|XOR_gate:xorb"
+ 17. Port Connectivity Checks: "Alu_control:alu1|Ripple_carry_adder4:suma|Full_Adder:a0|XOR_gate:xora"
+ 18. Port Connectivity Checks: "Alu_control:alu1|Ripple_carry_adder4:suma"
  19. Analysis & Elaboration Messages
 
 
@@ -51,7 +51,7 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------------------------------------------------------+
 ; Analysis & Elaboration Summary                                              ;
 +-------------------------------+---------------------------------------------+
-; Analysis & Elaboration Status ; Successful - Tue Sep 09 01:48:58 2025       ;
+; Analysis & Elaboration Status ; Successful - Tue Sep 09 02:36:24 2025       ;
 ; Quartus Prime Version         ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                 ; ALU                                         ;
 ; Top-level Entity Name         ; ALU                                         ;
@@ -170,7 +170,7 @@ https://fpgasoftware.intel.com/eula.
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "shift_right:shiftr"                                                                                                                                                             ;
+; Port Connectivity Checks: "Alu_control:alu1|shift_right:shiftr"                                                                                                                                            ;
 +------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Port ; Type  ; Severity ; Details                                                                                                                                                                          ;
 +------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -179,7 +179,7 @@ https://fpgasoftware.intel.com/eula.
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "shift_left:shiftl"                                                                                                                                                              ;
+; Port Connectivity Checks: "Alu_control:alu1|shift_left:shiftl"                                                                                                                                             ;
 +------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Port ; Type  ; Severity ; Details                                                                                                                                                                          ;
 +------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -188,7 +188,7 @@ https://fpgasoftware.intel.com/eula.
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "Full_subtractor4:suba|Full_Substractor:s0|OR_gate:or1"                                                                                    ;
+; Port Connectivity Checks: "Alu_control:alu1|Full_subtractor4:suba|Full_Substractor:s0|OR_gate:or1"                                                                   ;
 +------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------+
 ; Port ; Type   ; Severity ; Details                                                                                                                                   ;
 +------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------+
@@ -203,7 +203,7 @@ https://fpgasoftware.intel.com/eula.
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "Full_subtractor4:suba|Full_Substractor:s0|AND_gate:andb"                                                                                  ;
+; Port Connectivity Checks: "Alu_control:alu1|Full_subtractor4:suba|Full_Substractor:s0|AND_gate:andb"                                                                 ;
 +------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------+
 ; Port ; Type   ; Severity ; Details                                                                                                                                   ;
 +------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------+
@@ -218,7 +218,7 @@ https://fpgasoftware.intel.com/eula.
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "Full_subtractor4:suba|Full_Substractor:s0|AND_gate:anda"                                                                                  ;
+; Port Connectivity Checks: "Alu_control:alu1|Full_subtractor4:suba|Full_Substractor:s0|AND_gate:anda"                                                                 ;
 +------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------+
 ; Port ; Type   ; Severity ; Details                                                                                                                                   ;
 +------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------+
@@ -233,7 +233,7 @@ https://fpgasoftware.intel.com/eula.
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "Full_subtractor4:suba|Full_Substractor:s0|XOR_gate:xorb"                                                                                  ;
+; Port Connectivity Checks: "Alu_control:alu1|Full_subtractor4:suba|Full_Substractor:s0|XOR_gate:xorb"                                                                 ;
 +------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------+
 ; Port ; Type   ; Severity ; Details                                                                                                                                   ;
 +------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------+
@@ -248,7 +248,7 @@ https://fpgasoftware.intel.com/eula.
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "Full_subtractor4:suba|Full_Substractor:s0|XOR_gate:xora"                                                                                  ;
+; Port Connectivity Checks: "Alu_control:alu1|Full_subtractor4:suba|Full_Substractor:s0|XOR_gate:xora"                                                                 ;
 +------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------+
 ; Port ; Type   ; Severity ; Details                                                                                                                                   ;
 +------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------+
@@ -263,7 +263,7 @@ https://fpgasoftware.intel.com/eula.
 
 
 +-------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "Full_subtractor4:suba"                                                                                   ;
+; Port Connectivity Checks: "Alu_control:alu1|Full_subtractor4:suba"                                                                  ;
 +------+--------+----------+----------------------------------------------------------------------------------------------------------+
 ; Port ; Type   ; Severity ; Details                                                                                                  ;
 +------+--------+----------+----------------------------------------------------------------------------------------------------------+
@@ -273,7 +273,7 @@ https://fpgasoftware.intel.com/eula.
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "Ripple_carry_adder4:suma|Full_Adder:a0|OR_gate:ora"                                                                                       ;
+; Port Connectivity Checks: "Alu_control:alu1|Ripple_carry_adder4:suma|Full_Adder:a0|OR_gate:ora"                                                                      ;
 +------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------+
 ; Port ; Type   ; Severity ; Details                                                                                                                                   ;
 +------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------+
@@ -288,7 +288,7 @@ https://fpgasoftware.intel.com/eula.
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "Ripple_carry_adder4:suma|Full_Adder:a0|AND_gate:andb"                                                                                     ;
+; Port Connectivity Checks: "Alu_control:alu1|Ripple_carry_adder4:suma|Full_Adder:a0|AND_gate:andb"                                                                    ;
 +------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------+
 ; Port ; Type   ; Severity ; Details                                                                                                                                   ;
 +------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------+
@@ -303,7 +303,7 @@ https://fpgasoftware.intel.com/eula.
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "Ripple_carry_adder4:suma|Full_Adder:a0|AND_gate:anda"                                                                                     ;
+; Port Connectivity Checks: "Alu_control:alu1|Ripple_carry_adder4:suma|Full_Adder:a0|AND_gate:anda"                                                                    ;
 +------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------+
 ; Port ; Type   ; Severity ; Details                                                                                                                                   ;
 +------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------+
@@ -318,7 +318,7 @@ https://fpgasoftware.intel.com/eula.
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "Ripple_carry_adder4:suma|Full_Adder:a0|XOR_gate:xorb"                                                                                     ;
+; Port Connectivity Checks: "Alu_control:alu1|Ripple_carry_adder4:suma|Full_Adder:a0|XOR_gate:xorb"                                                                    ;
 +------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------+
 ; Port ; Type   ; Severity ; Details                                                                                                                                   ;
 +------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------+
@@ -333,7 +333,7 @@ https://fpgasoftware.intel.com/eula.
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "Ripple_carry_adder4:suma|Full_Adder:a0|XOR_gate:xora"                                                                                     ;
+; Port Connectivity Checks: "Alu_control:alu1|Ripple_carry_adder4:suma|Full_Adder:a0|XOR_gate:xora"                                                                    ;
 +------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------+
 ; Port ; Type   ; Severity ; Details                                                                                                                                   ;
 +------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------+
@@ -348,7 +348,7 @@ https://fpgasoftware.intel.com/eula.
 
 
 +-------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "Ripple_carry_adder4:suma"                                                                                ;
+; Port Connectivity Checks: "Alu_control:alu1|Ripple_carry_adder4:suma"                                                               ;
 +------+--------+----------+----------------------------------------------------------------------------------------------------------+
 ; Port ; Type   ; Severity ; Details                                                                                                  ;
 +------+--------+----------+----------------------------------------------------------------------------------------------------------+
@@ -363,7 +363,7 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Tue Sep 09 01:48:51 2025
+    Info: Processing started: Tue Sep 09 02:36:18 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ALU -c ALU --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
@@ -395,29 +395,38 @@ Info (12021): Found 1 design units, including 1 entities, in source file shift_r
     Info (12023): Found entity 1: shift_right File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/shift_right.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file modulo.sv
     Info (12023): Found entity 1: Modulo File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Modulo.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file 7seg_display.sv
+    Info (12023): Found entity 1: seg7_display File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/7seg_display.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file alu_control.sv
+    Info (12023): Found entity 1: Alu_control File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Alu_control.sv Line: 1
+Critical Warning (10846): Verilog HDL Instantiation warning at ALU.sv(26): instance has no name File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/ALU.sv Line: 26
 Info (12127): Elaborating entity "ALU" for the top level hierarchy
-Warning (10858): Verilog HDL warning at ALU.sv(13): object y_mult used but never assigned File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/ALU.sv Line: 13
-Warning (10858): Verilog HDL warning at ALU.sv(19): object z_mult used but never assigned File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/ALU.sv Line: 19
-Warning (10858): Verilog HDL warning at ALU.sv(19): object n_mult used but never assigned File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/ALU.sv Line: 19
-Warning (10858): Verilog HDL warning at ALU.sv(19): object c_mult used but never assigned File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/ALU.sv Line: 19
-Warning (10858): Verilog HDL warning at ALU.sv(19): object v_mult used but never assigned File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/ALU.sv Line: 19
-Warning (10030): Net "y_mult" at ALU.sv(13) has no driver or initial value, using a default initial value '0' File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/ALU.sv Line: 13
-Warning (10030): Net "z_mult" at ALU.sv(19) has no driver or initial value, using a default initial value '0' File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/ALU.sv Line: 19
-Warning (10030): Net "n_mult" at ALU.sv(19) has no driver or initial value, using a default initial value '0' File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/ALU.sv Line: 19
-Warning (10030): Net "c_mult" at ALU.sv(19) has no driver or initial value, using a default initial value '0' File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/ALU.sv Line: 19
-Warning (10030): Net "v_mult" at ALU.sv(19) has no driver or initial value, using a default initial value '0' File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/ALU.sv Line: 19
-Info (12128): Elaborating entity "Ripple_carry_adder4" for hierarchy "Ripple_carry_adder4:suma" File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/ALU.sv Line: 37
-Info (12128): Elaborating entity "Full_Adder" for hierarchy "Ripple_carry_adder4:suma|Full_Adder:a0" File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Ripple_carry_adder4.sv Line: 15
-Info (12128): Elaborating entity "XOR_gate" for hierarchy "Ripple_carry_adder4:suma|Full_Adder:a0|XOR_gate:xora" File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 12
-Info (12128): Elaborating entity "AND_gate" for hierarchy "Ripple_carry_adder4:suma|Full_Adder:a0|AND_gate:anda" File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 22
-Info (12128): Elaborating entity "OR_gate" for hierarchy "Ripple_carry_adder4:suma|Full_Adder:a0|OR_gate:ora" File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 26
-Info (12128): Elaborating entity "Full_subtractor4" for hierarchy "Full_subtractor4:suba" File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/ALU.sv Line: 39
-Info (12128): Elaborating entity "Full_Substractor" for hierarchy "Full_subtractor4:suba|Full_Substractor:s0" File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_subtractor4.sv Line: 15
-Info (12128): Elaborating entity "NOT_gate" for hierarchy "Full_subtractor4:suba|Full_Substractor:s0|NOT_gate:nota" File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv Line: 21
-Info (12128): Elaborating entity "Division" for hierarchy "Division:diva" File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/ALU.sv Line: 43
-Info (12128): Elaborating entity "Modulo" for hierarchy "Modulo:moda" File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/ALU.sv Line: 45
-Info (12128): Elaborating entity "shift_left" for hierarchy "shift_left:shiftl" File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/ALU.sv Line: 53
-Info (12128): Elaborating entity "shift_right" for hierarchy "shift_right:shiftr" File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/ALU.sv Line: 55
+Warning (10858): Verilog HDL warning at ALU.sv(12): object sw_val used but never assigned File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/ALU.sv Line: 12
+Warning (10030): Net "sw_val" at ALU.sv(12) has no driver or initial value, using a default initial value '0' File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/ALU.sv Line: 12
+Info (12128): Elaborating entity "Alu_control" for hierarchy "Alu_control:alu1" File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/ALU.sv Line: 24
+Warning (10858): Verilog HDL warning at Alu_control.sv(13): object y_mult used but never assigned File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Alu_control.sv Line: 13
+Warning (10858): Verilog HDL warning at Alu_control.sv(19): object z_mult used but never assigned File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Alu_control.sv Line: 19
+Warning (10858): Verilog HDL warning at Alu_control.sv(19): object n_mult used but never assigned File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Alu_control.sv Line: 19
+Warning (10858): Verilog HDL warning at Alu_control.sv(19): object c_mult used but never assigned File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Alu_control.sv Line: 19
+Warning (10858): Verilog HDL warning at Alu_control.sv(19): object v_mult used but never assigned File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Alu_control.sv Line: 19
+Warning (10030): Net "y_mult" at Alu_control.sv(13) has no driver or initial value, using a default initial value '0' File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Alu_control.sv Line: 13
+Warning (10030): Net "z_mult" at Alu_control.sv(19) has no driver or initial value, using a default initial value '0' File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Alu_control.sv Line: 19
+Warning (10030): Net "n_mult" at Alu_control.sv(19) has no driver or initial value, using a default initial value '0' File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Alu_control.sv Line: 19
+Warning (10030): Net "c_mult" at Alu_control.sv(19) has no driver or initial value, using a default initial value '0' File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Alu_control.sv Line: 19
+Warning (10030): Net "v_mult" at Alu_control.sv(19) has no driver or initial value, using a default initial value '0' File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Alu_control.sv Line: 19
+Info (12128): Elaborating entity "Ripple_carry_adder4" for hierarchy "Alu_control:alu1|Ripple_carry_adder4:suma" File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Alu_control.sv Line: 37
+Info (12128): Elaborating entity "Full_Adder" for hierarchy "Alu_control:alu1|Ripple_carry_adder4:suma|Full_Adder:a0" File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Ripple_carry_adder4.sv Line: 15
+Info (12128): Elaborating entity "XOR_gate" for hierarchy "Alu_control:alu1|Ripple_carry_adder4:suma|Full_Adder:a0|XOR_gate:xora" File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 12
+Info (12128): Elaborating entity "AND_gate" for hierarchy "Alu_control:alu1|Ripple_carry_adder4:suma|Full_Adder:a0|AND_gate:anda" File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 22
+Info (12128): Elaborating entity "OR_gate" for hierarchy "Alu_control:alu1|Ripple_carry_adder4:suma|Full_Adder:a0|OR_gate:ora" File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 26
+Info (12128): Elaborating entity "Full_subtractor4" for hierarchy "Alu_control:alu1|Full_subtractor4:suba" File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Alu_control.sv Line: 39
+Info (12128): Elaborating entity "Full_Substractor" for hierarchy "Alu_control:alu1|Full_subtractor4:suba|Full_Substractor:s0" File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_subtractor4.sv Line: 15
+Info (12128): Elaborating entity "NOT_gate" for hierarchy "Alu_control:alu1|Full_subtractor4:suba|Full_Substractor:s0|NOT_gate:nota" File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv Line: 21
+Info (12128): Elaborating entity "Division" for hierarchy "Alu_control:alu1|Division:diva" File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Alu_control.sv Line: 43
+Info (12128): Elaborating entity "Modulo" for hierarchy "Alu_control:alu1|Modulo:moda" File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Alu_control.sv Line: 45
+Info (12128): Elaborating entity "shift_left" for hierarchy "Alu_control:alu1|shift_left:shiftl" File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Alu_control.sv Line: 53
+Info (12128): Elaborating entity "shift_right" for hierarchy "Alu_control:alu1|shift_right:shiftr" File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Alu_control.sv Line: 55
+Info (12128): Elaborating entity "seg7_display" for hierarchy "seg7_display:comb_29" File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/ALU.sv Line: 26
 Warning (12010): Port "a" on the entity instantiation of "or1" is connected to a signal of width 1. The formal width of the signal in the module is 4.  The extra bits will be driven by GND. File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv Line: 30
 Warning (12010): Port "b" on the entity instantiation of "or1" is connected to a signal of width 1. The formal width of the signal in the module is 4.  The extra bits will be driven by GND. File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv Line: 30
 Warning (12030): Port "y" on the entity instantiation of "or1" is connected to a signal of width 1. The formal width of the signal in the module is 4.  The extra bits will be left dangling without any fan-out logic. File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv Line: 30
@@ -509,10 +518,10 @@ Warning (12010): Port "a" on the entity instantiation of "xora" is connected to 
 Warning (12010): Port "b" on the entity instantiation of "xora" is connected to a signal of width 1. The formal width of the signal in the module is 4.  The extra bits will be driven by GND. File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 12
 Warning (12030): Port "y" on the entity instantiation of "xora" is connected to a signal of width 1. The formal width of the signal in the module is 4.  The extra bits will be left dangling without any fan-out logic. File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 12
 Warning (12241): 14 hierarchies have connectivity warnings - see the Connectivity Checks report folder
-Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 102 warnings
+Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 105 warnings
     Info: Peak virtual memory: 4767 megabytes
-    Info: Processing ended: Tue Sep 09 01:48:58 2025
-    Info: Elapsed time: 00:00:07
+    Info: Processing ended: Tue Sep 09 02:36:24 2025
+    Info: Elapsed time: 00:00:06
     Info: Total CPU time (on all processors): 00:00:14
 
 

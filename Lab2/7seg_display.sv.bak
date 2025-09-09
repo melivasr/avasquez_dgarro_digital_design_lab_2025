@@ -1,4 +1,4 @@
-module seg7_display (
+module 7seg_display (
     input  logic [3:0] Y,
     output logic [6:0] seg  // (a, b, c, d, e, f, g)
 );
