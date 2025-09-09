@@ -1,0 +1,24 @@
+module tb;
+  logic [3:0] A, B;
+  logic Bin;
+  logic [3:0] Sub;
+  logic Bout;
+
+  Full_subtractor4 dut (.A(A), .B(B), .Bin(Bin), .Sub(Sub), .Bout(Bout));
+
+  initial begin
+    // Ejemplo: 9 - 3 = 6
+    A = 4'd9; B = 4'd3; Bin = 1'b0;
+    #10;
+
+    // Ejemplo: 5 - 7 = -2 (en 4 bits = 1110)
+    A = 4'd5; B = 4'd7; Bin = 1'b0;
+    #10;
+
+    // Ejemplo con borrow inicial
+    A = 4'd8; B = 4'd1; Bin = 1'b1; // en realidad 8 - 1 - 1 = 6
+    #10;
+
+    $stop;
+  end
+endmodule
