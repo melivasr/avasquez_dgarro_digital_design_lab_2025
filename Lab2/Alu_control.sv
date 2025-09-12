@@ -38,7 +38,7 @@ module Alu_control(
 	
 	Full_subtractor4 suba (.A(A), .B(B), .Cin(1'b0), .Sub(y_sub), .N(n_sub), .Z(z_sub), .C(c_sub), .V(v_sub));
 	
-	//Multiplicacion multi (.A(A), .B(B), .Y(y_mult), .N(n_mult), .Z(z_mult), .C(c_mult), .V(v_mult));
+	Multiplicacion multi (.A(A), .B(B), .P(y_mult), .N(n_mult), .Z(z_mult), .C(c_mult), .V(v_mult));
 	
 	Division diva (.a(A), .b(B), .y(y_div), .N(n_div), .Z(z_div), .C(c_div), .V(v_div));
 	

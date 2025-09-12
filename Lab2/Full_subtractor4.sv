@@ -1,8 +1,9 @@
-module Full_subtractor4(
-	input logic [3:0] A,
-	input logic [3:0] B, 
+module Full_subtractor4
+	#(parameter width = 4)(
+	input logic [width-1:0] A,
+	input logic [width-1:0] B, 
 	input logic Cin,
-	output logic [3:0] Sub,
+	output logic [width-1:0] Sub,
 	output logic Cout,
 	output logic N,
    output logic Z,

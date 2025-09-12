@@ -4,71 +4,35 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "seg[0]",
+					"name" : "P[0]",
 					"strict" : false
 				},
 				{
-					"name" : "seg[1]",
+					"name" : "P[1]",
 					"strict" : false
 				},
 				{
-					"name" : "seg[2]",
+					"name" : "P[2]",
 					"strict" : false
 				},
 				{
-					"name" : "seg[3]",
+					"name" : "P[3]",
 					"strict" : false
 				},
 				{
-					"name" : "seg[4]",
+					"name" : "N",
 					"strict" : false
 				},
 				{
-					"name" : "seg[5]",
+					"name" : "Z",
 					"strict" : false
 				},
 				{
-					"name" : "seg[6]",
+					"name" : "C",
 					"strict" : false
 				},
 				{
-					"name" : "led_flags[0]",
-					"strict" : false
-				},
-				{
-					"name" : "led_flags[1]",
-					"strict" : false
-				},
-				{
-					"name" : "led_flags[2]",
-					"strict" : false
-				},
-				{
-					"name" : "led_flags[3]",
-					"strict" : false
-				},
-				{
-					"name" : "op[3]",
-					"strict" : false
-				},
-				{
-					"name" : "op[0]",
-					"strict" : false
-				},
-				{
-					"name" : "op[1]",
-					"strict" : false
-				},
-				{
-					"name" : "op[2]",
-					"strict" : false
-				},
-				{
-					"name" : "A[1]",
-					"strict" : false
-				},
-				{
-					"name" : "B[3]",
+					"name" : "V",
 					"strict" : false
 				},
 				{
@@ -80,7 +44,15 @@
 					"strict" : false
 				},
 				{
+					"name" : "A[1]",
+					"strict" : false
+				},
+				{
 					"name" : "B[1]",
+					"strict" : false
+				},
+				{
+					"name" : "B[2]",
 					"strict" : false
 				},
 				{
@@ -88,11 +60,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "A[3]",
+					"name" : "B[3]",
 					"strict" : false
 				},
 				{
-					"name" : "B[2]",
+					"name" : "A[3]",
 					"strict" : false
 				}
 			]

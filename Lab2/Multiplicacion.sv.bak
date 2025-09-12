@@ -1,0 +1,11 @@
+module Multiplicacion(
+	input logic [3:0] A,
+	input logic [3:0] B,
+	output logic [3:0] Mul,
+	output logic N,
+   output logic Z,
+   output logic C,
+   output logic V
+);
+	
+	

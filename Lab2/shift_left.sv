@@ -1,17 +1,18 @@
-module shift_left(
-	input logic [3:0]a,
-	input logic [1:0]b,    //desplazamiento
-	output logic [3:0]y,
+module shift_left
+	#(parameter width = 4)(
+	input logic [width-1:0]a,
+	input logic [width-1:0]b,    //desplazamiento
+	output logic [width-1:0]y,
 	output logic N,
    output logic Z,
    output logic C,
    output logic V
 );				
-	logic [4:0] temp;
+	logic [width-1:0] temp;
 	
 	assign temp = {a, 1'b0} << b;
 	
-	assign y = temp[4:1];
+	assign y = temp[width-1:1];
 	
    assign N    = y[3];                // MSB
    assign Z    = (y == 4'd0);         // Si todos son 0

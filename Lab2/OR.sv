@@ -1,7 +1,8 @@
-module OR_gate(
-	input logic  [3:0]a,
-	input logic  [3:0]b,
-	output logic [3:0]y,
+module OR_gate
+	#(parameter width = 4)(
+	input logic  [width-1:0]a,
+	input logic  [width-1:0]b,
+	output logic [width-1:0]y,
 	output logic N,
    output logic Z,
    output logic C,

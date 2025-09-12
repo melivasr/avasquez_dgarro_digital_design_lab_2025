@@ -1,0 +1,40 @@
+module ALU2 
+	#(parameter N = 4)(
+    input  logic clk,
+    input  logic rst,
+    input  logic [N-1:0] A, B,
+    input  logic [3:0] op,
+    output logic [N-1:0] Y
+);
+    logic [N-1:0] regA, regB;
+    logic [N-1:0] aluO;
+    
+    // Registro de entrada
+    always_ff @(posedge clk or posedge rst) begin
+        if (rst) begin
+            regA <= '0;
+            regB <= '0;
+        end else begin
+            regA <= A;
+            regB <= B;
+        end
+    end
+    
+    // ALU
+    Alu_control #(.N(N)) alu_inst (
+        .A(regA),
+        .B(regB),
+        .op(op),
+        .Y(aluO)
+        // Flags opcionales
+    );
+
+    // Registro de salida
+    always_ff @(posedge clk or posedge rst) begin
+        if (rst)
+            Y <= '0;
+        else
+            Y <= aluO;
+    end
+	 
+endmodule

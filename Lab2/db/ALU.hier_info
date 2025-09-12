@@ -1,75 +1,95 @@
-|ALU
-CLK => ~NO_FANOUT~
-A[0] => A[0].IN1
-A[1] => A[1].IN1
-A[2] => A[2].IN1
-A[3] => A[3].IN1
-B[0] => B[0].IN1
-B[1] => B[1].IN1
-B[2] => B[2].IN1
-B[3] => B[3].IN1
-op[0] => _.IN1
-op[1] => _.IN1
-op[2] => _.IN1
-op[3] => _.IN1
-seg[0] <= seg7_display:comb_7.seg
-seg[1] <= seg7_display:comb_7.seg
-seg[2] <= seg7_display:comb_7.seg
-seg[3] <= seg7_display:comb_7.seg
-seg[4] <= seg7_display:comb_7.seg
-seg[5] <= seg7_display:comb_7.seg
-seg[6] <= seg7_display:comb_7.seg
-led_flags[0] <= Alu_control:alu1.N
-led_flags[1] <= Alu_control:alu1.Z
-led_flags[2] <= Alu_control:alu1.C
-led_flags[3] <= Alu_control:alu1.V
+|ALU2
+clk => Y[0]~reg0.CLK
+clk => Y[1]~reg0.CLK
+clk => Y[2]~reg0.CLK
+clk => Y[3]~reg0.CLK
+clk => regB[0].CLK
+clk => regB[1].CLK
+clk => regB[2].CLK
+clk => regB[3].CLK
+clk => regA[0].CLK
+clk => regA[1].CLK
+clk => regA[2].CLK
+clk => regA[3].CLK
+reset => Y[0]~reg0.ACLR
+reset => Y[1]~reg0.ACLR
+reset => Y[2]~reg0.ACLR
+reset => Y[3]~reg0.ACLR
+reset => regB[0].ACLR
+reset => regB[1].ACLR
+reset => regB[2].ACLR
+reset => regB[3].ACLR
+reset => regA[0].ACLR
+reset => regA[1].ACLR
+reset => regA[2].ACLR
+reset => regA[3].ACLR
+A[0] => regA[0].DATAIN
+A[1] => regA[1].DATAIN
+A[2] => regA[2].DATAIN
+A[3] => regA[3].DATAIN
+B[0] => regB[0].DATAIN
+B[1] => regB[1].DATAIN
+B[2] => regB[2].DATAIN
+B[3] => regB[3].DATAIN
+op[0] => op[0].IN1
+op[1] => op[1].IN1
+op[2] => op[2].IN1
+op[3] => op[3].IN1
+Y[0] <= Y[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Y[1] <= Y[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Y[2] <= Y[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Y[3] <= Y[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ALU|Alu_control:alu1
-A[0] => A[0].IN9
-A[1] => A[1].IN9
-A[2] => A[2].IN9
-A[3] => A[3].IN9
-B[0] => B[0].IN9
-B[1] => B[1].IN9
-B[2] => B[2].IN9
-B[3] => B[3].IN9
+|ALU2|Alu_control2:alu_inst
+A[0] => A[0].IN10
+A[1] => A[1].IN10
+A[2] => A[2].IN10
+A[3] => A[3].IN10
+B[0] => B[0].IN10
+B[1] => B[1].IN10
+B[2] => B[2].IN10
+B[3] => B[3].IN10
 op[0] => Equal0.IN3
 op[0] => Equal1.IN0
-op[0] => Equal2.IN1
-op[0] => Equal3.IN3
-op[0] => Equal4.IN1
-op[0] => Equal5.IN3
-op[0] => Equal6.IN2
-op[0] => Equal7.IN3
-op[0] => Equal8.IN1
+op[0] => Equal2.IN3
+op[0] => Equal3.IN1
+op[0] => Equal4.IN3
+op[0] => Equal5.IN1
+op[0] => Equal6.IN3
+op[0] => Equal7.IN2
+op[0] => Equal8.IN3
+op[0] => Equal9.IN1
 op[1] => Equal0.IN2
 op[1] => Equal1.IN3
 op[1] => Equal2.IN0
-op[1] => Equal3.IN2
-op[1] => Equal4.IN3
-op[1] => Equal5.IN1
+op[1] => Equal3.IN0
+op[1] => Equal4.IN2
+op[1] => Equal5.IN3
 op[1] => Equal6.IN1
-op[1] => Equal7.IN2
-op[1] => Equal8.IN3
+op[1] => Equal7.IN1
+op[1] => Equal8.IN2
+op[1] => Equal9.IN3
 op[2] => Equal0.IN1
 op[2] => Equal1.IN2
-op[2] => Equal2.IN3
-op[2] => Equal3.IN0
+op[2] => Equal2.IN2
+op[2] => Equal3.IN3
 op[2] => Equal4.IN0
 op[2] => Equal5.IN0
 op[2] => Equal6.IN0
-op[2] => Equal7.IN1
-op[2] => Equal8.IN2
+op[2] => Equal7.IN0
+op[2] => Equal8.IN1
+op[2] => Equal9.IN2
 op[3] => Equal0.IN0
 op[3] => Equal1.IN1
-op[3] => Equal2.IN2
-op[3] => Equal3.IN1
-op[3] => Equal4.IN2
+op[3] => Equal2.IN1
+op[3] => Equal3.IN2
+op[3] => Equal4.IN1
 op[3] => Equal5.IN2
-op[3] => Equal6.IN3
-op[3] => Equal7.IN0
+op[3] => Equal6.IN2
+op[3] => Equal7.IN3
 op[3] => Equal8.IN0
+op[3] => Equal9.IN0
 Y[0] <= Y.DB_MAX_OUTPUT_PORT_TYPE
 Y[1] <= Y.DB_MAX_OUTPUT_PORT_TYPE
 Y[2] <= Y.DB_MAX_OUTPUT_PORT_TYPE
@@ -80,7 +100,7 @@ C <= C.DB_MAX_OUTPUT_PORT_TYPE
 V <= V.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ALU|Alu_control:alu1|Ripple_carry_adder4:suma
+|ALU2|Alu_control2:alu_inst|Ripple_carry_adder4:suma
 A[0] => A[0].IN1
 A[1] => A[1].IN1
 A[2] => A[2].IN1
@@ -101,7 +121,7 @@ C <= Full_Adder:a3.Cout
 V <= V.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ALU|Alu_control:alu1|Ripple_carry_adder4:suma|Full_Adder:a0
+|ALU2|Alu_control2:alu_inst|Ripple_carry_adder4:suma|Full_Adder:a0
 A => A.IN2
 B => B.IN2
 Cin => Cin.IN2
@@ -109,7 +129,7 @@ Sum <= XOR_gate:xorb.y
 Cout <= OR_gate:ora.y
 
 
-|ALU|Alu_control:alu1|Ripple_carry_adder4:suma|Full_Adder:a0|XOR_gate:xora
+|ALU2|Alu_control2:alu_inst|Ripple_carry_adder4:suma|Full_Adder:a0|XOR_gate:xora
 a[0] => y.IN0
 a[1] => y.IN0
 a[2] => y.IN0
@@ -128,7 +148,7 @@ C <= <GND>
 V <= <GND>
 
 
-|ALU|Alu_control:alu1|Ripple_carry_adder4:suma|Full_Adder:a0|XOR_gate:xorb
+|ALU2|Alu_control2:alu_inst|Ripple_carry_adder4:suma|Full_Adder:a0|XOR_gate:xorb
 a[0] => y.IN0
 a[1] => y.IN0
 a[2] => y.IN0
@@ -147,7 +167,7 @@ C <= <GND>
 V <= <GND>
 
 
-|ALU|Alu_control:alu1|Ripple_carry_adder4:suma|Full_Adder:a0|AND_gate:anda
+|ALU2|Alu_control2:alu_inst|Ripple_carry_adder4:suma|Full_Adder:a0|AND_gate:anda
 a[0] => y.IN0
 a[1] => y.IN0
 a[2] => y.IN0
@@ -166,7 +186,7 @@ C <= <GND>
 V <= <GND>
 
 
-|ALU|Alu_control:alu1|Ripple_carry_adder4:suma|Full_Adder:a0|AND_gate:andb
+|ALU2|Alu_control2:alu_inst|Ripple_carry_adder4:suma|Full_Adder:a0|AND_gate:andb
 a[0] => y.IN0
 a[1] => y.IN0
 a[2] => y.IN0
@@ -185,7 +205,7 @@ C <= <GND>
 V <= <GND>
 
 
-|ALU|Alu_control:alu1|Ripple_carry_adder4:suma|Full_Adder:a0|OR_gate:ora
+|ALU2|Alu_control2:alu_inst|Ripple_carry_adder4:suma|Full_Adder:a0|OR_gate:ora
 a[0] => y.IN0
 a[1] => y.IN0
 a[2] => y.IN0
@@ -204,7 +224,7 @@ C <= <GND>
 V <= <GND>
 
 
-|ALU|Alu_control:alu1|Ripple_carry_adder4:suma|Full_Adder:a1
+|ALU2|Alu_control2:alu_inst|Ripple_carry_adder4:suma|Full_Adder:a1
 A => A.IN2
 B => B.IN2
 Cin => Cin.IN2
@@ -212,7 +232,7 @@ Sum <= XOR_gate:xorb.y
 Cout <= OR_gate:ora.y
 
 
-|ALU|Alu_control:alu1|Ripple_carry_adder4:suma|Full_Adder:a1|XOR_gate:xora
+|ALU2|Alu_control2:alu_inst|Ripple_carry_adder4:suma|Full_Adder:a1|XOR_gate:xora
 a[0] => y.IN0
 a[1] => y.IN0
 a[2] => y.IN0
@@ -231,7 +251,7 @@ C <= <GND>
 V <= <GND>
 
 
-|ALU|Alu_control:alu1|Ripple_carry_adder4:suma|Full_Adder:a1|XOR_gate:xorb
+|ALU2|Alu_control2:alu_inst|Ripple_carry_adder4:suma|Full_Adder:a1|XOR_gate:xorb
 a[0] => y.IN0
 a[1] => y.IN0
 a[2] => y.IN0
@@ -250,7 +270,7 @@ C <= <GND>
 V <= <GND>
 
 
-|ALU|Alu_control:alu1|Ripple_carry_adder4:suma|Full_Adder:a1|AND_gate:anda
+|ALU2|Alu_control2:alu_inst|Ripple_carry_adder4:suma|Full_Adder:a1|AND_gate:anda
 a[0] => y.IN0
 a[1] => y.IN0
 a[2] => y.IN0
@@ -269,7 +289,7 @@ C <= <GND>
 V <= <GND>
 
 
-|ALU|Alu_control:alu1|Ripple_carry_adder4:suma|Full_Adder:a1|AND_gate:andb
+|ALU2|Alu_control2:alu_inst|Ripple_carry_adder4:suma|Full_Adder:a1|AND_gate:andb
 a[0] => y.IN0
 a[1] => y.IN0
 a[2] => y.IN0
@@ -288,7 +308,7 @@ C <= <GND>
 V <= <GND>
 
 
-|ALU|Alu_control:alu1|Ripple_carry_adder4:suma|Full_Adder:a1|OR_gate:ora
+|ALU2|Alu_control2:alu_inst|Ripple_carry_adder4:suma|Full_Adder:a1|OR_gate:ora
 a[0] => y.IN0
 a[1] => y.IN0
 a[2] => y.IN0
@@ -307,7 +327,7 @@ C <= <GND>
 V <= <GND>
 
 
-|ALU|Alu_control:alu1|Ripple_carry_adder4:suma|Full_Adder:a2
+|ALU2|Alu_control2:alu_inst|Ripple_carry_adder4:suma|Full_Adder:a2
 A => A.IN2
 B => B.IN2
 Cin => Cin.IN2
@@ -315,7 +335,7 @@ Sum <= XOR_gate:xorb.y
 Cout <= OR_gate:ora.y
 
 
-|ALU|Alu_control:alu1|Ripple_carry_adder4:suma|Full_Adder:a2|XOR_gate:xora
+|ALU2|Alu_control2:alu_inst|Ripple_carry_adder4:suma|Full_Adder:a2|XOR_gate:xora
 a[0] => y.IN0
 a[1] => y.IN0
 a[2] => y.IN0
@@ -334,7 +354,7 @@ C <= <GND>
 V <= <GND>
 
 
-|ALU|Alu_control:alu1|Ripple_carry_adder4:suma|Full_Adder:a2|XOR_gate:xorb
+|ALU2|Alu_control2:alu_inst|Ripple_carry_adder4:suma|Full_Adder:a2|XOR_gate:xorb
 a[0] => y.IN0
 a[1] => y.IN0
 a[2] => y.IN0
@@ -353,7 +373,7 @@ C <= <GND>
 V <= <GND>
 
 
-|ALU|Alu_control:alu1|Ripple_carry_adder4:suma|Full_Adder:a2|AND_gate:anda
+|ALU2|Alu_control2:alu_inst|Ripple_carry_adder4:suma|Full_Adder:a2|AND_gate:anda
 a[0] => y.IN0
 a[1] => y.IN0
 a[2] => y.IN0
@@ -372,7 +392,7 @@ C <= <GND>
 V <= <GND>
 
 
-|ALU|Alu_control:alu1|Ripple_carry_adder4:suma|Full_Adder:a2|AND_gate:andb
+|ALU2|Alu_control2:alu_inst|Ripple_carry_adder4:suma|Full_Adder:a2|AND_gate:andb
 a[0] => y.IN0
 a[1] => y.IN0
 a[2] => y.IN0
@@ -391,7 +411,7 @@ C <= <GND>
 V <= <GND>
 
 
-|ALU|Alu_control:alu1|Ripple_carry_adder4:suma|Full_Adder:a2|OR_gate:ora
+|ALU2|Alu_control2:alu_inst|Ripple_carry_adder4:suma|Full_Adder:a2|OR_gate:ora
 a[0] => y.IN0
 a[1] => y.IN0
 a[2] => y.IN0
@@ -410,7 +430,7 @@ C <= <GND>
 V <= <GND>
 
 
-|ALU|Alu_control:alu1|Ripple_carry_adder4:suma|Full_Adder:a3
+|ALU2|Alu_control2:alu_inst|Ripple_carry_adder4:suma|Full_Adder:a3
 A => A.IN2
 B => B.IN2
 Cin => Cin.IN2
@@ -418,7 +438,7 @@ Sum <= XOR_gate:xorb.y
 Cout <= OR_gate:ora.y
 
 
-|ALU|Alu_control:alu1|Ripple_carry_adder4:suma|Full_Adder:a3|XOR_gate:xora
+|ALU2|Alu_control2:alu_inst|Ripple_carry_adder4:suma|Full_Adder:a3|XOR_gate:xora
 a[0] => y.IN0
 a[1] => y.IN0
 a[2] => y.IN0
@@ -437,7 +457,7 @@ C <= <GND>
 V <= <GND>
 
 
-|ALU|Alu_control:alu1|Ripple_carry_adder4:suma|Full_Adder:a3|XOR_gate:xorb
+|ALU2|Alu_control2:alu_inst|Ripple_carry_adder4:suma|Full_Adder:a3|XOR_gate:xorb
 a[0] => y.IN0
 a[1] => y.IN0
 a[2] => y.IN0
@@ -456,7 +476,7 @@ C <= <GND>
 V <= <GND>
 
 
-|ALU|Alu_control:alu1|Ripple_carry_adder4:suma|Full_Adder:a3|AND_gate:anda
+|ALU2|Alu_control2:alu_inst|Ripple_carry_adder4:suma|Full_Adder:a3|AND_gate:anda
 a[0] => y.IN0
 a[1] => y.IN0
 a[2] => y.IN0
@@ -475,7 +495,7 @@ C <= <GND>
 V <= <GND>
 
 
-|ALU|Alu_control:alu1|Ripple_carry_adder4:suma|Full_Adder:a3|AND_gate:andb
+|ALU2|Alu_control2:alu_inst|Ripple_carry_adder4:suma|Full_Adder:a3|AND_gate:andb
 a[0] => y.IN0
 a[1] => y.IN0
 a[2] => y.IN0
@@ -494,7 +514,7 @@ C <= <GND>
 V <= <GND>
 
 
-|ALU|Alu_control:alu1|Ripple_carry_adder4:suma|Full_Adder:a3|OR_gate:ora
+|ALU2|Alu_control2:alu_inst|Ripple_carry_adder4:suma|Full_Adder:a3|OR_gate:ora
 a[0] => y.IN0
 a[1] => y.IN0
 a[2] => y.IN0
@@ -513,7 +533,7 @@ C <= <GND>
 V <= <GND>
 
 
-|ALU|Alu_control:alu1|Full_subtractor4:suba
+|ALU2|Alu_control2:alu_inst|Full_subtractor4:suba
 A[0] => A[0].IN1
 A[1] => A[1].IN1
 A[2] => A[2].IN1
@@ -534,7 +554,7 @@ C <= Full_Substractor:s3.Cout
 V <= V.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ALU|Alu_control:alu1|Full_subtractor4:suba|Full_Substractor:s0
+|ALU2|Alu_control2:alu_inst|Full_subtractor4:suba|Full_Substractor:s0
 A => A.IN2
 B => B.IN2
 Cin => Cin.IN2
@@ -542,7 +562,7 @@ Sub <= XOR_gate:xorb.y
 Cout <= OR_gate:or1.y
 
 
-|ALU|Alu_control:alu1|Full_subtractor4:suba|Full_Substractor:s0|XOR_gate:xora
+|ALU2|Alu_control2:alu_inst|Full_subtractor4:suba|Full_Substractor:s0|XOR_gate:xora
 a[0] => y.IN0
 a[1] => y.IN0
 a[2] => y.IN0
@@ -561,7 +581,7 @@ C <= <GND>
 V <= <GND>
 
 
-|ALU|Alu_control:alu1|Full_subtractor4:suba|Full_Substractor:s0|XOR_gate:xorb
+|ALU2|Alu_control2:alu_inst|Full_subtractor4:suba|Full_Substractor:s0|XOR_gate:xorb
 a[0] => y.IN0
 a[1] => y.IN0
 a[2] => y.IN0
@@ -580,17 +600,17 @@ C <= <GND>
 V <= <GND>
 
 
-|ALU|Alu_control:alu1|Full_subtractor4:suba|Full_Substractor:s0|NOT_gate:nota
+|ALU2|Alu_control2:alu_inst|Full_subtractor4:suba|Full_Substractor:s0|NOT_gate:nota
 a => y.DATAIN
 y <= a.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ALU|Alu_control:alu1|Full_subtractor4:suba|Full_Substractor:s0|NOT_gate:notb
+|ALU2|Alu_control2:alu_inst|Full_subtractor4:suba|Full_Substractor:s0|NOT_gate:notb
 a => y.DATAIN
 y <= a.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ALU|Alu_control:alu1|Full_subtractor4:suba|Full_Substractor:s0|AND_gate:anda
+|ALU2|Alu_control2:alu_inst|Full_subtractor4:suba|Full_Substractor:s0|AND_gate:anda
 a[0] => y.IN0
 a[1] => y.IN0
 a[2] => y.IN0
@@ -609,7 +629,7 @@ C <= <GND>
 V <= <GND>
 
 
-|ALU|Alu_control:alu1|Full_subtractor4:suba|Full_Substractor:s0|AND_gate:andb
+|ALU2|Alu_control2:alu_inst|Full_subtractor4:suba|Full_Substractor:s0|AND_gate:andb
 a[0] => y.IN0
 a[1] => y.IN0
 a[2] => y.IN0
@@ -628,7 +648,7 @@ C <= <GND>
 V <= <GND>
 
 
-|ALU|Alu_control:alu1|Full_subtractor4:suba|Full_Substractor:s0|OR_gate:or1
+|ALU2|Alu_control2:alu_inst|Full_subtractor4:suba|Full_Substractor:s0|OR_gate:or1
 a[0] => y.IN0
 a[1] => y.IN0
 a[2] => y.IN0
@@ -647,7 +667,7 @@ C <= <GND>
 V <= <GND>
 
 
-|ALU|Alu_control:alu1|Full_subtractor4:suba|Full_Substractor:s1
+|ALU2|Alu_control2:alu_inst|Full_subtractor4:suba|Full_Substractor:s1
 A => A.IN2
 B => B.IN2
 Cin => Cin.IN2
@@ -655,7 +675,7 @@ Sub <= XOR_gate:xorb.y
 Cout <= OR_gate:or1.y
 
 
-|ALU|Alu_control:alu1|Full_subtractor4:suba|Full_Substractor:s1|XOR_gate:xora
+|ALU2|Alu_control2:alu_inst|Full_subtractor4:suba|Full_Substractor:s1|XOR_gate:xora
 a[0] => y.IN0
 a[1] => y.IN0
 a[2] => y.IN0
@@ -674,7 +694,7 @@ C <= <GND>
 V <= <GND>
 
 
-|ALU|Alu_control:alu1|Full_subtractor4:suba|Full_Substractor:s1|XOR_gate:xorb
+|ALU2|Alu_control2:alu_inst|Full_subtractor4:suba|Full_Substractor:s1|XOR_gate:xorb
 a[0] => y.IN0
 a[1] => y.IN0
 a[2] => y.IN0
@@ -693,17 +713,17 @@ C <= <GND>
 V <= <GND>
 
 
-|ALU|Alu_control:alu1|Full_subtractor4:suba|Full_Substractor:s1|NOT_gate:nota
+|ALU2|Alu_control2:alu_inst|Full_subtractor4:suba|Full_Substractor:s1|NOT_gate:nota
 a => y.DATAIN
 y <= a.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ALU|Alu_control:alu1|Full_subtractor4:suba|Full_Substractor:s1|NOT_gate:notb
+|ALU2|Alu_control2:alu_inst|Full_subtractor4:suba|Full_Substractor:s1|NOT_gate:notb
 a => y.DATAIN
 y <= a.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ALU|Alu_control:alu1|Full_subtractor4:suba|Full_Substractor:s1|AND_gate:anda
+|ALU2|Alu_control2:alu_inst|Full_subtractor4:suba|Full_Substractor:s1|AND_gate:anda
 a[0] => y.IN0
 a[1] => y.IN0
 a[2] => y.IN0
@@ -722,7 +742,7 @@ C <= <GND>
 V <= <GND>
 
 
-|ALU|Alu_control:alu1|Full_subtractor4:suba|Full_Substractor:s1|AND_gate:andb
+|ALU2|Alu_control2:alu_inst|Full_subtractor4:suba|Full_Substractor:s1|AND_gate:andb
 a[0] => y.IN0
 a[1] => y.IN0
 a[2] => y.IN0
@@ -741,7 +761,7 @@ C <= <GND>
 V <= <GND>
 
 
-|ALU|Alu_control:alu1|Full_subtractor4:suba|Full_Substractor:s1|OR_gate:or1
+|ALU2|Alu_control2:alu_inst|Full_subtractor4:suba|Full_Substractor:s1|OR_gate:or1
 a[0] => y.IN0
 a[1] => y.IN0
 a[2] => y.IN0
@@ -760,7 +780,7 @@ C <= <GND>
 V <= <GND>
 
 
-|ALU|Alu_control:alu1|Full_subtractor4:suba|Full_Substractor:s2
+|ALU2|Alu_control2:alu_inst|Full_subtractor4:suba|Full_Substractor:s2
 A => A.IN2
 B => B.IN2
 Cin => Cin.IN2
@@ -768,7 +788,7 @@ Sub <= XOR_gate:xorb.y
 Cout <= OR_gate:or1.y
 
 
-|ALU|Alu_control:alu1|Full_subtractor4:suba|Full_Substractor:s2|XOR_gate:xora
+|ALU2|Alu_control2:alu_inst|Full_subtractor4:suba|Full_Substractor:s2|XOR_gate:xora
 a[0] => y.IN0
 a[1] => y.IN0
 a[2] => y.IN0
@@ -787,7 +807,7 @@ C <= <GND>
 V <= <GND>
 
 
-|ALU|Alu_control:alu1|Full_subtractor4:suba|Full_Substractor:s2|XOR_gate:xorb
+|ALU2|Alu_control2:alu_inst|Full_subtractor4:suba|Full_Substractor:s2|XOR_gate:xorb
 a[0] => y.IN0
 a[1] => y.IN0
 a[2] => y.IN0
@@ -806,17 +826,17 @@ C <= <GND>
 V <= <GND>
 
 
-|ALU|Alu_control:alu1|Full_subtractor4:suba|Full_Substractor:s2|NOT_gate:nota
+|ALU2|Alu_control2:alu_inst|Full_subtractor4:suba|Full_Substractor:s2|NOT_gate:nota
 a => y.DATAIN
 y <= a.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ALU|Alu_control:alu1|Full_subtractor4:suba|Full_Substractor:s2|NOT_gate:notb
+|ALU2|Alu_control2:alu_inst|Full_subtractor4:suba|Full_Substractor:s2|NOT_gate:notb
 a => y.DATAIN
 y <= a.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ALU|Alu_control:alu1|Full_subtractor4:suba|Full_Substractor:s2|AND_gate:anda
+|ALU2|Alu_control2:alu_inst|Full_subtractor4:suba|Full_Substractor:s2|AND_gate:anda
 a[0] => y.IN0
 a[1] => y.IN0
 a[2] => y.IN0
@@ -835,7 +855,7 @@ C <= <GND>
 V <= <GND>
 
 
-|ALU|Alu_control:alu1|Full_subtractor4:suba|Full_Substractor:s2|AND_gate:andb
+|ALU2|Alu_control2:alu_inst|Full_subtractor4:suba|Full_Substractor:s2|AND_gate:andb
 a[0] => y.IN0
 a[1] => y.IN0
 a[2] => y.IN0
@@ -854,7 +874,7 @@ C <= <GND>
 V <= <GND>
 
 
-|ALU|Alu_control:alu1|Full_subtractor4:suba|Full_Substractor:s2|OR_gate:or1
+|ALU2|Alu_control2:alu_inst|Full_subtractor4:suba|Full_Substractor:s2|OR_gate:or1
 a[0] => y.IN0
 a[1] => y.IN0
 a[2] => y.IN0
@@ -873,7 +893,7 @@ C <= <GND>
 V <= <GND>
 
 
-|ALU|Alu_control:alu1|Full_subtractor4:suba|Full_Substractor:s3
+|ALU2|Alu_control2:alu_inst|Full_subtractor4:suba|Full_Substractor:s3
 A => A.IN2
 B => B.IN2
 Cin => Cin.IN2
@@ -881,7 +901,7 @@ Sub <= XOR_gate:xorb.y
 Cout <= OR_gate:or1.y
 
 
-|ALU|Alu_control:alu1|Full_subtractor4:suba|Full_Substractor:s3|XOR_gate:xora
+|ALU2|Alu_control2:alu_inst|Full_subtractor4:suba|Full_Substractor:s3|XOR_gate:xora
 a[0] => y.IN0
 a[1] => y.IN0
 a[2] => y.IN0
@@ -900,7 +920,7 @@ C <= <GND>
 V <= <GND>
 
 
-|ALU|Alu_control:alu1|Full_subtractor4:suba|Full_Substractor:s3|XOR_gate:xorb
+|ALU2|Alu_control2:alu_inst|Full_subtractor4:suba|Full_Substractor:s3|XOR_gate:xorb
 a[0] => y.IN0
 a[1] => y.IN0
 a[2] => y.IN0
@@ -919,17 +939,17 @@ C <= <GND>
 V <= <GND>
 
 
-|ALU|Alu_control:alu1|Full_subtractor4:suba|Full_Substractor:s3|NOT_gate:nota
+|ALU2|Alu_control2:alu_inst|Full_subtractor4:suba|Full_Substractor:s3|NOT_gate:nota
 a => y.DATAIN
 y <= a.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ALU|Alu_control:alu1|Full_subtractor4:suba|Full_Substractor:s3|NOT_gate:notb
+|ALU2|Alu_control2:alu_inst|Full_subtractor4:suba|Full_Substractor:s3|NOT_gate:notb
 a => y.DATAIN
 y <= a.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ALU|Alu_control:alu1|Full_subtractor4:suba|Full_Substractor:s3|AND_gate:anda
+|ALU2|Alu_control2:alu_inst|Full_subtractor4:suba|Full_Substractor:s3|AND_gate:anda
 a[0] => y.IN0
 a[1] => y.IN0
 a[2] => y.IN0
@@ -948,7 +968,7 @@ C <= <GND>
 V <= <GND>
 
 
-|ALU|Alu_control:alu1|Full_subtractor4:suba|Full_Substractor:s3|AND_gate:andb
+|ALU2|Alu_control2:alu_inst|Full_subtractor4:suba|Full_Substractor:s3|AND_gate:andb
 a[0] => y.IN0
 a[1] => y.IN0
 a[2] => y.IN0
@@ -967,7 +987,7 @@ C <= <GND>
 V <= <GND>
 
 
-|ALU|Alu_control:alu1|Full_subtractor4:suba|Full_Substractor:s3|OR_gate:or1
+|ALU2|Alu_control2:alu_inst|Full_subtractor4:suba|Full_Substractor:s3|OR_gate:or1
 a[0] => y.IN0
 a[1] => y.IN0
 a[2] => y.IN0
@@ -986,7 +1006,834 @@ C <= <GND>
 V <= <GND>
 
 
-|ALU|Alu_control:alu1|Division:diva
+|ALU2|Alu_control2:alu_inst|Multiplicacion:multi
+A[0] => A[0].IN4
+A[1] => A[1].IN3
+A[2] => A[2].IN2
+A[3] => A[3].IN1
+B[0] => B[0].IN4
+B[1] => B[1].IN3
+B[2] => B[2].IN2
+B[3] => B[3].IN1
+P[0] <= AND_gate:and0.y
+P[1] <= Full_Adder:fa1.Sum
+P[2] <= Full_Adder:fa3.Sum
+P[3] <= Full_Adder:fa6.Sum
+N <= Full_Adder:fa6.Sum
+Z <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+C <= Full_Adder:fa6.Cout
+V <= V.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU2|Alu_control2:alu_inst|Multiplicacion:multi|AND_gate:and0
+a[0] => y.IN0
+a[1] => y.IN0
+a[2] => y.IN0
+a[3] => y.IN0
+b[0] => y.IN1
+b[1] => y.IN1
+b[2] => y.IN1
+b[3] => y.IN1
+y[0] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[1] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[2] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[3] <= y.DB_MAX_OUTPUT_PORT_TYPE
+N <= y.DB_MAX_OUTPUT_PORT_TYPE
+Z <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+C <= <GND>
+V <= <GND>
+
+
+|ALU2|Alu_control2:alu_inst|Multiplicacion:multi|AND_gate:and1
+a[0] => y.IN0
+a[1] => y.IN0
+a[2] => y.IN0
+a[3] => y.IN0
+b[0] => y.IN1
+b[1] => y.IN1
+b[2] => y.IN1
+b[3] => y.IN1
+y[0] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[1] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[2] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[3] <= y.DB_MAX_OUTPUT_PORT_TYPE
+N <= y.DB_MAX_OUTPUT_PORT_TYPE
+Z <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+C <= <GND>
+V <= <GND>
+
+
+|ALU2|Alu_control2:alu_inst|Multiplicacion:multi|AND_gate:and2
+a[0] => y.IN0
+a[1] => y.IN0
+a[2] => y.IN0
+a[3] => y.IN0
+b[0] => y.IN1
+b[1] => y.IN1
+b[2] => y.IN1
+b[3] => y.IN1
+y[0] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[1] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[2] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[3] <= y.DB_MAX_OUTPUT_PORT_TYPE
+N <= y.DB_MAX_OUTPUT_PORT_TYPE
+Z <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+C <= <GND>
+V <= <GND>
+
+
+|ALU2|Alu_control2:alu_inst|Multiplicacion:multi|AND_gate:and3
+a[0] => y.IN0
+a[1] => y.IN0
+a[2] => y.IN0
+a[3] => y.IN0
+b[0] => y.IN1
+b[1] => y.IN1
+b[2] => y.IN1
+b[3] => y.IN1
+y[0] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[1] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[2] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[3] <= y.DB_MAX_OUTPUT_PORT_TYPE
+N <= y.DB_MAX_OUTPUT_PORT_TYPE
+Z <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+C <= <GND>
+V <= <GND>
+
+
+|ALU2|Alu_control2:alu_inst|Multiplicacion:multi|AND_gate:and4
+a[0] => y.IN0
+a[1] => y.IN0
+a[2] => y.IN0
+a[3] => y.IN0
+b[0] => y.IN1
+b[1] => y.IN1
+b[2] => y.IN1
+b[3] => y.IN1
+y[0] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[1] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[2] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[3] <= y.DB_MAX_OUTPUT_PORT_TYPE
+N <= y.DB_MAX_OUTPUT_PORT_TYPE
+Z <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+C <= <GND>
+V <= <GND>
+
+
+|ALU2|Alu_control2:alu_inst|Multiplicacion:multi|AND_gate:and5
+a[0] => y.IN0
+a[1] => y.IN0
+a[2] => y.IN0
+a[3] => y.IN0
+b[0] => y.IN1
+b[1] => y.IN1
+b[2] => y.IN1
+b[3] => y.IN1
+y[0] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[1] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[2] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[3] <= y.DB_MAX_OUTPUT_PORT_TYPE
+N <= y.DB_MAX_OUTPUT_PORT_TYPE
+Z <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+C <= <GND>
+V <= <GND>
+
+
+|ALU2|Alu_control2:alu_inst|Multiplicacion:multi|AND_gate:and6
+a[0] => y.IN0
+a[1] => y.IN0
+a[2] => y.IN0
+a[3] => y.IN0
+b[0] => y.IN1
+b[1] => y.IN1
+b[2] => y.IN1
+b[3] => y.IN1
+y[0] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[1] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[2] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[3] <= y.DB_MAX_OUTPUT_PORT_TYPE
+N <= y.DB_MAX_OUTPUT_PORT_TYPE
+Z <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+C <= <GND>
+V <= <GND>
+
+
+|ALU2|Alu_control2:alu_inst|Multiplicacion:multi|AND_gate:and7
+a[0] => y.IN0
+a[1] => y.IN0
+a[2] => y.IN0
+a[3] => y.IN0
+b[0] => y.IN1
+b[1] => y.IN1
+b[2] => y.IN1
+b[3] => y.IN1
+y[0] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[1] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[2] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[3] <= y.DB_MAX_OUTPUT_PORT_TYPE
+N <= y.DB_MAX_OUTPUT_PORT_TYPE
+Z <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+C <= <GND>
+V <= <GND>
+
+
+|ALU2|Alu_control2:alu_inst|Multiplicacion:multi|AND_gate:and8
+a[0] => y.IN0
+a[1] => y.IN0
+a[2] => y.IN0
+a[3] => y.IN0
+b[0] => y.IN1
+b[1] => y.IN1
+b[2] => y.IN1
+b[3] => y.IN1
+y[0] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[1] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[2] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[3] <= y.DB_MAX_OUTPUT_PORT_TYPE
+N <= y.DB_MAX_OUTPUT_PORT_TYPE
+Z <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+C <= <GND>
+V <= <GND>
+
+
+|ALU2|Alu_control2:alu_inst|Multiplicacion:multi|AND_gate:and9
+a[0] => y.IN0
+a[1] => y.IN0
+a[2] => y.IN0
+a[3] => y.IN0
+b[0] => y.IN1
+b[1] => y.IN1
+b[2] => y.IN1
+b[3] => y.IN1
+y[0] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[1] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[2] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[3] <= y.DB_MAX_OUTPUT_PORT_TYPE
+N <= y.DB_MAX_OUTPUT_PORT_TYPE
+Z <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+C <= <GND>
+V <= <GND>
+
+
+|ALU2|Alu_control2:alu_inst|Multiplicacion:multi|Full_Adder:fa1
+A => A.IN2
+B => B.IN2
+Cin => Cin.IN2
+Sum <= XOR_gate:xorb.y
+Cout <= OR_gate:ora.y
+
+
+|ALU2|Alu_control2:alu_inst|Multiplicacion:multi|Full_Adder:fa1|XOR_gate:xora
+a[0] => y.IN0
+a[1] => y.IN0
+a[2] => y.IN0
+a[3] => y.IN0
+b[0] => y.IN1
+b[1] => y.IN1
+b[2] => y.IN1
+b[3] => y.IN1
+y[0] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[1] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[2] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[3] <= y.DB_MAX_OUTPUT_PORT_TYPE
+N <= y.DB_MAX_OUTPUT_PORT_TYPE
+Z <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+C <= <GND>
+V <= <GND>
+
+
+|ALU2|Alu_control2:alu_inst|Multiplicacion:multi|Full_Adder:fa1|XOR_gate:xorb
+a[0] => y.IN0
+a[1] => y.IN0
+a[2] => y.IN0
+a[3] => y.IN0
+b[0] => y.IN1
+b[1] => y.IN1
+b[2] => y.IN1
+b[3] => y.IN1
+y[0] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[1] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[2] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[3] <= y.DB_MAX_OUTPUT_PORT_TYPE
+N <= y.DB_MAX_OUTPUT_PORT_TYPE
+Z <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+C <= <GND>
+V <= <GND>
+
+
+|ALU2|Alu_control2:alu_inst|Multiplicacion:multi|Full_Adder:fa1|AND_gate:anda
+a[0] => y.IN0
+a[1] => y.IN0
+a[2] => y.IN0
+a[3] => y.IN0
+b[0] => y.IN1
+b[1] => y.IN1
+b[2] => y.IN1
+b[3] => y.IN1
+y[0] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[1] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[2] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[3] <= y.DB_MAX_OUTPUT_PORT_TYPE
+N <= y.DB_MAX_OUTPUT_PORT_TYPE
+Z <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+C <= <GND>
+V <= <GND>
+
+
+|ALU2|Alu_control2:alu_inst|Multiplicacion:multi|Full_Adder:fa1|AND_gate:andb
+a[0] => y.IN0
+a[1] => y.IN0
+a[2] => y.IN0
+a[3] => y.IN0
+b[0] => y.IN1
+b[1] => y.IN1
+b[2] => y.IN1
+b[3] => y.IN1
+y[0] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[1] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[2] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[3] <= y.DB_MAX_OUTPUT_PORT_TYPE
+N <= y.DB_MAX_OUTPUT_PORT_TYPE
+Z <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+C <= <GND>
+V <= <GND>
+
+
+|ALU2|Alu_control2:alu_inst|Multiplicacion:multi|Full_Adder:fa1|OR_gate:ora
+a[0] => y.IN0
+a[1] => y.IN0
+a[2] => y.IN0
+a[3] => y.IN0
+b[0] => y.IN1
+b[1] => y.IN1
+b[2] => y.IN1
+b[3] => y.IN1
+y[0] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[1] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[2] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[3] <= y.DB_MAX_OUTPUT_PORT_TYPE
+N <= y.DB_MAX_OUTPUT_PORT_TYPE
+Z <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+C <= <GND>
+V <= <GND>
+
+
+|ALU2|Alu_control2:alu_inst|Multiplicacion:multi|Full_Adder:fa2
+A => A.IN2
+B => B.IN2
+Cin => Cin.IN2
+Sum <= XOR_gate:xorb.y
+Cout <= OR_gate:ora.y
+
+
+|ALU2|Alu_control2:alu_inst|Multiplicacion:multi|Full_Adder:fa2|XOR_gate:xora
+a[0] => y.IN0
+a[1] => y.IN0
+a[2] => y.IN0
+a[3] => y.IN0
+b[0] => y.IN1
+b[1] => y.IN1
+b[2] => y.IN1
+b[3] => y.IN1
+y[0] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[1] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[2] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[3] <= y.DB_MAX_OUTPUT_PORT_TYPE
+N <= y.DB_MAX_OUTPUT_PORT_TYPE
+Z <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+C <= <GND>
+V <= <GND>
+
+
+|ALU2|Alu_control2:alu_inst|Multiplicacion:multi|Full_Adder:fa2|XOR_gate:xorb
+a[0] => y.IN0
+a[1] => y.IN0
+a[2] => y.IN0
+a[3] => y.IN0
+b[0] => y.IN1
+b[1] => y.IN1
+b[2] => y.IN1
+b[3] => y.IN1
+y[0] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[1] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[2] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[3] <= y.DB_MAX_OUTPUT_PORT_TYPE
+N <= y.DB_MAX_OUTPUT_PORT_TYPE
+Z <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+C <= <GND>
+V <= <GND>
+
+
+|ALU2|Alu_control2:alu_inst|Multiplicacion:multi|Full_Adder:fa2|AND_gate:anda
+a[0] => y.IN0
+a[1] => y.IN0
+a[2] => y.IN0
+a[3] => y.IN0
+b[0] => y.IN1
+b[1] => y.IN1
+b[2] => y.IN1
+b[3] => y.IN1
+y[0] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[1] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[2] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[3] <= y.DB_MAX_OUTPUT_PORT_TYPE
+N <= y.DB_MAX_OUTPUT_PORT_TYPE
+Z <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+C <= <GND>
+V <= <GND>
+
+
+|ALU2|Alu_control2:alu_inst|Multiplicacion:multi|Full_Adder:fa2|AND_gate:andb
+a[0] => y.IN0
+a[1] => y.IN0
+a[2] => y.IN0
+a[3] => y.IN0
+b[0] => y.IN1
+b[1] => y.IN1
+b[2] => y.IN1
+b[3] => y.IN1
+y[0] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[1] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[2] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[3] <= y.DB_MAX_OUTPUT_PORT_TYPE
+N <= y.DB_MAX_OUTPUT_PORT_TYPE
+Z <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+C <= <GND>
+V <= <GND>
+
+
+|ALU2|Alu_control2:alu_inst|Multiplicacion:multi|Full_Adder:fa2|OR_gate:ora
+a[0] => y.IN0
+a[1] => y.IN0
+a[2] => y.IN0
+a[3] => y.IN0
+b[0] => y.IN1
+b[1] => y.IN1
+b[2] => y.IN1
+b[3] => y.IN1
+y[0] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[1] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[2] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[3] <= y.DB_MAX_OUTPUT_PORT_TYPE
+N <= y.DB_MAX_OUTPUT_PORT_TYPE
+Z <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+C <= <GND>
+V <= <GND>
+
+
+|ALU2|Alu_control2:alu_inst|Multiplicacion:multi|Full_Adder:fa3
+A => A.IN2
+B => B.IN2
+Cin => Cin.IN2
+Sum <= XOR_gate:xorb.y
+Cout <= OR_gate:ora.y
+
+
+|ALU2|Alu_control2:alu_inst|Multiplicacion:multi|Full_Adder:fa3|XOR_gate:xora
+a[0] => y.IN0
+a[1] => y.IN0
+a[2] => y.IN0
+a[3] => y.IN0
+b[0] => y.IN1
+b[1] => y.IN1
+b[2] => y.IN1
+b[3] => y.IN1
+y[0] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[1] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[2] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[3] <= y.DB_MAX_OUTPUT_PORT_TYPE
+N <= y.DB_MAX_OUTPUT_PORT_TYPE
+Z <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+C <= <GND>
+V <= <GND>
+
+
+|ALU2|Alu_control2:alu_inst|Multiplicacion:multi|Full_Adder:fa3|XOR_gate:xorb
+a[0] => y.IN0
+a[1] => y.IN0
+a[2] => y.IN0
+a[3] => y.IN0
+b[0] => y.IN1
+b[1] => y.IN1
+b[2] => y.IN1
+b[3] => y.IN1
+y[0] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[1] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[2] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[3] <= y.DB_MAX_OUTPUT_PORT_TYPE
+N <= y.DB_MAX_OUTPUT_PORT_TYPE
+Z <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+C <= <GND>
+V <= <GND>
+
+
+|ALU2|Alu_control2:alu_inst|Multiplicacion:multi|Full_Adder:fa3|AND_gate:anda
+a[0] => y.IN0
+a[1] => y.IN0
+a[2] => y.IN0
+a[3] => y.IN0
+b[0] => y.IN1
+b[1] => y.IN1
+b[2] => y.IN1
+b[3] => y.IN1
+y[0] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[1] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[2] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[3] <= y.DB_MAX_OUTPUT_PORT_TYPE
+N <= y.DB_MAX_OUTPUT_PORT_TYPE
+Z <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+C <= <GND>
+V <= <GND>
+
+
+|ALU2|Alu_control2:alu_inst|Multiplicacion:multi|Full_Adder:fa3|AND_gate:andb
+a[0] => y.IN0
+a[1] => y.IN0
+a[2] => y.IN0
+a[3] => y.IN0
+b[0] => y.IN1
+b[1] => y.IN1
+b[2] => y.IN1
+b[3] => y.IN1
+y[0] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[1] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[2] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[3] <= y.DB_MAX_OUTPUT_PORT_TYPE
+N <= y.DB_MAX_OUTPUT_PORT_TYPE
+Z <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+C <= <GND>
+V <= <GND>
+
+
+|ALU2|Alu_control2:alu_inst|Multiplicacion:multi|Full_Adder:fa3|OR_gate:ora
+a[0] => y.IN0
+a[1] => y.IN0
+a[2] => y.IN0
+a[3] => y.IN0
+b[0] => y.IN1
+b[1] => y.IN1
+b[2] => y.IN1
+b[3] => y.IN1
+y[0] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[1] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[2] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[3] <= y.DB_MAX_OUTPUT_PORT_TYPE
+N <= y.DB_MAX_OUTPUT_PORT_TYPE
+Z <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+C <= <GND>
+V <= <GND>
+
+
+|ALU2|Alu_control2:alu_inst|Multiplicacion:multi|Full_Adder:fa4
+A => A.IN2
+B => B.IN2
+Cin => Cin.IN2
+Sum <= XOR_gate:xorb.y
+Cout <= OR_gate:ora.y
+
+
+|ALU2|Alu_control2:alu_inst|Multiplicacion:multi|Full_Adder:fa4|XOR_gate:xora
+a[0] => y.IN0
+a[1] => y.IN0
+a[2] => y.IN0
+a[3] => y.IN0
+b[0] => y.IN1
+b[1] => y.IN1
+b[2] => y.IN1
+b[3] => y.IN1
+y[0] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[1] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[2] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[3] <= y.DB_MAX_OUTPUT_PORT_TYPE
+N <= y.DB_MAX_OUTPUT_PORT_TYPE
+Z <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+C <= <GND>
+V <= <GND>
+
+
+|ALU2|Alu_control2:alu_inst|Multiplicacion:multi|Full_Adder:fa4|XOR_gate:xorb
+a[0] => y.IN0
+a[1] => y.IN0
+a[2] => y.IN0
+a[3] => y.IN0
+b[0] => y.IN1
+b[1] => y.IN1
+b[2] => y.IN1
+b[3] => y.IN1
+y[0] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[1] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[2] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[3] <= y.DB_MAX_OUTPUT_PORT_TYPE
+N <= y.DB_MAX_OUTPUT_PORT_TYPE
+Z <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+C <= <GND>
+V <= <GND>
+
+
+|ALU2|Alu_control2:alu_inst|Multiplicacion:multi|Full_Adder:fa4|AND_gate:anda
+a[0] => y.IN0
+a[1] => y.IN0
+a[2] => y.IN0
+a[3] => y.IN0
+b[0] => y.IN1
+b[1] => y.IN1
+b[2] => y.IN1
+b[3] => y.IN1
+y[0] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[1] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[2] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[3] <= y.DB_MAX_OUTPUT_PORT_TYPE
+N <= y.DB_MAX_OUTPUT_PORT_TYPE
+Z <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+C <= <GND>
+V <= <GND>
+
+
+|ALU2|Alu_control2:alu_inst|Multiplicacion:multi|Full_Adder:fa4|AND_gate:andb
+a[0] => y.IN0
+a[1] => y.IN0
+a[2] => y.IN0
+a[3] => y.IN0
+b[0] => y.IN1
+b[1] => y.IN1
+b[2] => y.IN1
+b[3] => y.IN1
+y[0] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[1] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[2] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[3] <= y.DB_MAX_OUTPUT_PORT_TYPE
+N <= y.DB_MAX_OUTPUT_PORT_TYPE
+Z <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+C <= <GND>
+V <= <GND>
+
+
+|ALU2|Alu_control2:alu_inst|Multiplicacion:multi|Full_Adder:fa4|OR_gate:ora
+a[0] => y.IN0
+a[1] => y.IN0
+a[2] => y.IN0
+a[3] => y.IN0
+b[0] => y.IN1
+b[1] => y.IN1
+b[2] => y.IN1
+b[3] => y.IN1
+y[0] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[1] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[2] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[3] <= y.DB_MAX_OUTPUT_PORT_TYPE
+N <= y.DB_MAX_OUTPUT_PORT_TYPE
+Z <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+C <= <GND>
+V <= <GND>
+
+
+|ALU2|Alu_control2:alu_inst|Multiplicacion:multi|Full_Adder:fa5
+A => A.IN2
+B => B.IN2
+Cin => Cin.IN2
+Sum <= XOR_gate:xorb.y
+Cout <= OR_gate:ora.y
+
+
+|ALU2|Alu_control2:alu_inst|Multiplicacion:multi|Full_Adder:fa5|XOR_gate:xora
+a[0] => y.IN0
+a[1] => y.IN0
+a[2] => y.IN0
+a[3] => y.IN0
+b[0] => y.IN1
+b[1] => y.IN1
+b[2] => y.IN1
+b[3] => y.IN1
+y[0] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[1] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[2] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[3] <= y.DB_MAX_OUTPUT_PORT_TYPE
+N <= y.DB_MAX_OUTPUT_PORT_TYPE
+Z <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+C <= <GND>
+V <= <GND>
+
+
+|ALU2|Alu_control2:alu_inst|Multiplicacion:multi|Full_Adder:fa5|XOR_gate:xorb
+a[0] => y.IN0
+a[1] => y.IN0
+a[2] => y.IN0
+a[3] => y.IN0
+b[0] => y.IN1
+b[1] => y.IN1
+b[2] => y.IN1
+b[3] => y.IN1
+y[0] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[1] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[2] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[3] <= y.DB_MAX_OUTPUT_PORT_TYPE
+N <= y.DB_MAX_OUTPUT_PORT_TYPE
+Z <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+C <= <GND>
+V <= <GND>
+
+
+|ALU2|Alu_control2:alu_inst|Multiplicacion:multi|Full_Adder:fa5|AND_gate:anda
+a[0] => y.IN0
+a[1] => y.IN0
+a[2] => y.IN0
+a[3] => y.IN0
+b[0] => y.IN1
+b[1] => y.IN1
+b[2] => y.IN1
+b[3] => y.IN1
+y[0] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[1] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[2] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[3] <= y.DB_MAX_OUTPUT_PORT_TYPE
+N <= y.DB_MAX_OUTPUT_PORT_TYPE
+Z <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+C <= <GND>
+V <= <GND>
+
+
+|ALU2|Alu_control2:alu_inst|Multiplicacion:multi|Full_Adder:fa5|AND_gate:andb
+a[0] => y.IN0
+a[1] => y.IN0
+a[2] => y.IN0
+a[3] => y.IN0
+b[0] => y.IN1
+b[1] => y.IN1
+b[2] => y.IN1
+b[3] => y.IN1
+y[0] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[1] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[2] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[3] <= y.DB_MAX_OUTPUT_PORT_TYPE
+N <= y.DB_MAX_OUTPUT_PORT_TYPE
+Z <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+C <= <GND>
+V <= <GND>
+
+
+|ALU2|Alu_control2:alu_inst|Multiplicacion:multi|Full_Adder:fa5|OR_gate:ora
+a[0] => y.IN0
+a[1] => y.IN0
+a[2] => y.IN0
+a[3] => y.IN0
+b[0] => y.IN1
+b[1] => y.IN1
+b[2] => y.IN1
+b[3] => y.IN1
+y[0] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[1] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[2] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[3] <= y.DB_MAX_OUTPUT_PORT_TYPE
+N <= y.DB_MAX_OUTPUT_PORT_TYPE
+Z <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+C <= <GND>
+V <= <GND>
+
+
+|ALU2|Alu_control2:alu_inst|Multiplicacion:multi|Full_Adder:fa6
+A => A.IN2
+B => B.IN2
+Cin => Cin.IN2
+Sum <= XOR_gate:xorb.y
+Cout <= OR_gate:ora.y
+
+
+|ALU2|Alu_control2:alu_inst|Multiplicacion:multi|Full_Adder:fa6|XOR_gate:xora
+a[0] => y.IN0
+a[1] => y.IN0
+a[2] => y.IN0
+a[3] => y.IN0
+b[0] => y.IN1
+b[1] => y.IN1
+b[2] => y.IN1
+b[3] => y.IN1
+y[0] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[1] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[2] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[3] <= y.DB_MAX_OUTPUT_PORT_TYPE
+N <= y.DB_MAX_OUTPUT_PORT_TYPE
+Z <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+C <= <GND>
+V <= <GND>
+
+
+|ALU2|Alu_control2:alu_inst|Multiplicacion:multi|Full_Adder:fa6|XOR_gate:xorb
+a[0] => y.IN0
+a[1] => y.IN0
+a[2] => y.IN0
+a[3] => y.IN0
+b[0] => y.IN1
+b[1] => y.IN1
+b[2] => y.IN1
+b[3] => y.IN1
+y[0] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[1] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[2] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[3] <= y.DB_MAX_OUTPUT_PORT_TYPE
+N <= y.DB_MAX_OUTPUT_PORT_TYPE
+Z <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+C <= <GND>
+V <= <GND>
+
+
+|ALU2|Alu_control2:alu_inst|Multiplicacion:multi|Full_Adder:fa6|AND_gate:anda
+a[0] => y.IN0
+a[1] => y.IN0
+a[2] => y.IN0
+a[3] => y.IN0
+b[0] => y.IN1
+b[1] => y.IN1
+b[2] => y.IN1
+b[3] => y.IN1
+y[0] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[1] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[2] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[3] <= y.DB_MAX_OUTPUT_PORT_TYPE
+N <= y.DB_MAX_OUTPUT_PORT_TYPE
+Z <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+C <= <GND>
+V <= <GND>
+
+
+|ALU2|Alu_control2:alu_inst|Multiplicacion:multi|Full_Adder:fa6|AND_gate:andb
+a[0] => y.IN0
+a[1] => y.IN0
+a[2] => y.IN0
+a[3] => y.IN0
+b[0] => y.IN1
+b[1] => y.IN1
+b[2] => y.IN1
+b[3] => y.IN1
+y[0] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[1] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[2] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[3] <= y.DB_MAX_OUTPUT_PORT_TYPE
+N <= y.DB_MAX_OUTPUT_PORT_TYPE
+Z <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+C <= <GND>
+V <= <GND>
+
+
+|ALU2|Alu_control2:alu_inst|Multiplicacion:multi|Full_Adder:fa6|OR_gate:ora
+a[0] => y.IN0
+a[1] => y.IN0
+a[2] => y.IN0
+a[3] => y.IN0
+b[0] => y.IN1
+b[1] => y.IN1
+b[2] => y.IN1
+b[3] => y.IN1
+y[0] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[1] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[2] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[3] <= y.DB_MAX_OUTPUT_PORT_TYPE
+N <= y.DB_MAX_OUTPUT_PORT_TYPE
+Z <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+C <= <GND>
+V <= <GND>
+
+
+|ALU2|Alu_control2:alu_inst|Division:diva
 a[0] => Div0.IN3
 a[1] => Div0.IN2
 a[2] => Div0.IN1
@@ -1005,7 +1852,7 @@ C <= <GND>
 V <= <GND>
 
 
-|ALU|Alu_control:alu1|Modulo:moda
+|ALU2|Alu_control2:alu_inst|Modulo:moda
 a[0] => Mod0.IN3
 a[1] => Mod0.IN2
 a[2] => Mod0.IN1
@@ -1024,7 +1871,7 @@ C <= <GND>
 V <= <GND>
 
 
-|ALU|Alu_control:alu1|AND_gate:anda
+|ALU2|Alu_control2:alu_inst|AND_gate:anda
 a[0] => y.IN0
 a[1] => y.IN0
 a[2] => y.IN0
@@ -1043,7 +1890,7 @@ C <= <GND>
 V <= <GND>
 
 
-|ALU|Alu_control:alu1|OR_gate:ora
+|ALU2|Alu_control2:alu_inst|OR_gate:ora
 a[0] => y.IN0
 a[1] => y.IN0
 a[2] => y.IN0
@@ -1062,7 +1909,7 @@ C <= <GND>
 V <= <GND>
 
 
-|ALU|Alu_control:alu1|XOR_gate:xora
+|ALU2|Alu_control2:alu_inst|XOR_gate:xora
 a[0] => y.IN0
 a[1] => y.IN0
 a[2] => y.IN0
@@ -1081,88 +1928,41 @@ C <= <GND>
 V <= <GND>
 
 
-|ALU|Alu_control:alu1|shift_left:shiftl
+|ALU2|Alu_control2:alu_inst|shift_left:shiftl
 a[0] => ShiftLeft0.IN5
 a[1] => ShiftLeft0.IN4
 a[2] => ShiftLeft0.IN3
 a[3] => ShiftLeft0.IN2
-b[0] => ShiftLeft0.IN7
-b[1] => ShiftLeft0.IN6
+b[0] => ShiftLeft0.IN9
+b[1] => ShiftLeft0.IN8
+b[2] => ShiftLeft0.IN7
+b[3] => ShiftLeft0.IN6
 y[0] <= ShiftLeft0.DB_MAX_OUTPUT_PORT_TYPE
 y[1] <= ShiftLeft0.DB_MAX_OUTPUT_PORT_TYPE
 y[2] <= ShiftLeft0.DB_MAX_OUTPUT_PORT_TYPE
-y[3] <= ShiftLeft0.DB_MAX_OUTPUT_PORT_TYPE
-N <= ShiftLeft0.DB_MAX_OUTPUT_PORT_TYPE
+y[3] <= <GND>
+N <= <GND>
 Z <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
 C <= ShiftLeft0.DB_MAX_OUTPUT_PORT_TYPE
 V <= <GND>
 
 
-|ALU|Alu_control:alu1|shift_right:shiftr
+|ALU2|Alu_control2:alu_inst|shift_right:shiftr
 a[0] => ShiftRight0.IN5
 a[1] => ShiftRight0.IN4
 a[2] => ShiftRight0.IN3
 a[3] => ShiftRight0.IN2
-b[0] => ShiftRight0.IN7
-b[1] => ShiftRight0.IN6
+b[0] => ShiftRight0.IN9
+b[1] => ShiftRight0.IN8
+b[2] => ShiftRight0.IN7
+b[3] => ShiftRight0.IN6
 y[0] <= ShiftRight0.DB_MAX_OUTPUT_PORT_TYPE
 y[1] <= ShiftRight0.DB_MAX_OUTPUT_PORT_TYPE
 y[2] <= ShiftRight0.DB_MAX_OUTPUT_PORT_TYPE
-y[3] <= ShiftRight0.DB_MAX_OUTPUT_PORT_TYPE
-N <= ShiftRight0.DB_MAX_OUTPUT_PORT_TYPE
+y[3] <= <GND>
+N <= <GND>
 Z <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
 C <= ShiftRight0.DB_MAX_OUTPUT_PORT_TYPE
 V <= <GND>
-
-
-|ALU|seg7_display:comb_7
-Y[0] => a.IN1
-Y[0] => a.IN1
-Y[0] => a.IN1
-Y[0] => b.IN1
-Y[0] => b.IN1
-Y[0] => d.IN1
-Y[0] => e.IN0
-Y[0] => e.IN1
-Y[0] => f.IN1
-Y[0] => f.IN1
-Y[0] => g.IN1
-Y[0] => a.IN1
-Y[0] => b.IN1
-Y[0] => b.IN1
-Y[0] => c.IN1
-Y[0] => d.IN1
-Y[0] => g.IN1
-Y[1] => a.IN1
-Y[1] => b.IN0
-Y[1] => b.IN0
-Y[1] => c.IN1
-Y[1] => c.IN1
-Y[1] => f.IN0
-Y[1] => g.IN1
-Y[1] => a.IN1
-Y[1] => a.IN1
-Y[1] => a.IN1
-Y[1] => e.IN0
-Y[2] => a.IN0
-Y[2] => a.IN0
-Y[2] => b.IN1
-Y[2] => a.IN0
-Y[2] => a.IN0
-Y[2] => e.IN1
-Y[3] => a.IN1
-Y[3] => a.IN1
-Y[3] => b.IN1
-Y[3] => a.IN1
-Y[3] => a.IN1
-Y[3] => e.IN1
-Y[3] => f.IN1
-seg[0] <= g.DB_MAX_OUTPUT_PORT_TYPE
-seg[1] <= f.DB_MAX_OUTPUT_PORT_TYPE
-seg[2] <= e.DB_MAX_OUTPUT_PORT_TYPE
-seg[3] <= d.DB_MAX_OUTPUT_PORT_TYPE
-seg[4] <= c.DB_MAX_OUTPUT_PORT_TYPE
-seg[5] <= b.DB_MAX_OUTPUT_PORT_TYPE
-seg[6] <= a.DB_MAX_OUTPUT_PORT_TYPE
 
 

@@ -12,173 +12,174 @@
 # 
 # vlog -sv -work work +incdir+F:/Proyectos\ Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2 {F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/XOR.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 02:36:33 on Sep 09,2025
+# Start time: 02:53:48 on Sep 12,2025
 # vlog -reportprogress 300 -sv -work work "+incdir+F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2" F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/XOR.sv 
 # -- Compiling module XOR_gate
 # 
 # Top level modules:
 # 	XOR_gate
-# End time: 02:36:33 on Sep 09,2025, Elapsed time: 0:00:00
+# End time: 02:53:49 on Sep 12,2025, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+F:/Proyectos\ Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2 {F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/AND.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 02:36:33 on Sep 09,2025
+# Start time: 02:53:49 on Sep 12,2025
 # vlog -reportprogress 300 -sv -work work "+incdir+F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2" F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/AND.sv 
 # -- Compiling module AND_gate
 # 
 # Top level modules:
 # 	AND_gate
-# End time: 02:36:33 on Sep 09,2025, Elapsed time: 0:00:00
+# End time: 02:53:49 on Sep 12,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+F:/Proyectos\ Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2 {F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/OR.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 02:36:33 on Sep 09,2025
+# Start time: 02:53:49 on Sep 12,2025
 # vlog -reportprogress 300 -sv -work work "+incdir+F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2" F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/OR.sv 
 # -- Compiling module OR_gate
 # 
 # Top level modules:
 # 	OR_gate
-# End time: 02:36:33 on Sep 09,2025, Elapsed time: 0:00:00
+# End time: 02:53:49 on Sep 12,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+F:/Proyectos\ Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2 {F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 02:36:33 on Sep 09,2025
+# Start time: 02:53:49 on Sep 12,2025
 # vlog -reportprogress 300 -sv -work work "+incdir+F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2" F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv 
 # -- Compiling module Full_Adder
 # 
 # Top level modules:
 # 	Full_Adder
-# End time: 02:36:33 on Sep 09,2025, Elapsed time: 0:00:00
+# End time: 02:53:49 on Sep 12,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+F:/Proyectos\ Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2 {F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 02:36:33 on Sep 09,2025
+# Start time: 02:53:49 on Sep 12,2025
 # vlog -reportprogress 300 -sv -work work "+incdir+F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2" F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv 
 # -- Compiling module Full_Substractor
 # 
 # Top level modules:
 # 	Full_Substractor
-# End time: 02:36:33 on Sep 09,2025, Elapsed time: 0:00:00
+# End time: 02:53:49 on Sep 12,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+F:/Proyectos\ Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2 {F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/NOT.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 02:36:33 on Sep 09,2025
+# Start time: 02:53:49 on Sep 12,2025
 # vlog -reportprogress 300 -sv -work work "+incdir+F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2" F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/NOT.sv 
 # -- Compiling module NOT_gate
 # 
 # Top level modules:
 # 	NOT_gate
-# End time: 02:36:33 on Sep 09,2025, Elapsed time: 0:00:00
+# End time: 02:53:49 on Sep 12,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+F:/Proyectos\ Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2 {F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Division.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 02:36:33 on Sep 09,2025
+# Start time: 02:53:49 on Sep 12,2025
 # vlog -reportprogress 300 -sv -work work "+incdir+F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2" F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Division.sv 
 # -- Compiling module Division
 # 
 # Top level modules:
 # 	Division
-# End time: 02:36:33 on Sep 09,2025, Elapsed time: 0:00:00
+# End time: 02:53:49 on Sep 12,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+F:/Proyectos\ Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2 {F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Ripple_carry_adder4.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 02:36:33 on Sep 09,2025
+# Start time: 02:53:49 on Sep 12,2025
 # vlog -reportprogress 300 -sv -work work "+incdir+F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2" F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Ripple_carry_adder4.sv 
 # -- Compiling module Ripple_carry_adder4
 # 
 # Top level modules:
 # 	Ripple_carry_adder4
-# End time: 02:36:34 on Sep 09,2025, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+F:/Proyectos\ Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2 {F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/ALU.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 02:36:34 on Sep 09,2025
-# vlog -reportprogress 300 -sv -work work "+incdir+F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2" F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/ALU.sv 
-# -- Compiling module ALU
-# 
-# Top level modules:
-# 	ALU
-# End time: 02:36:34 on Sep 09,2025, Elapsed time: 0:00:00
+# End time: 02:53:49 on Sep 12,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+F:/Proyectos\ Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2 {F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_subtractor4.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 02:36:34 on Sep 09,2025
+# Start time: 02:53:49 on Sep 12,2025
 # vlog -reportprogress 300 -sv -work work "+incdir+F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2" F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_subtractor4.sv 
 # -- Compiling module Full_subtractor4
 # 
 # Top level modules:
 # 	Full_subtractor4
-# End time: 02:36:34 on Sep 09,2025, Elapsed time: 0:00:00
+# End time: 02:53:50 on Sep 12,2025, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+F:/Proyectos\ Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2 {F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/shift_left.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 02:36:34 on Sep 09,2025
+# Start time: 02:53:50 on Sep 12,2025
 # vlog -reportprogress 300 -sv -work work "+incdir+F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2" F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/shift_left.sv 
 # -- Compiling module shift_left
 # 
 # Top level modules:
 # 	shift_left
-# End time: 02:36:34 on Sep 09,2025, Elapsed time: 0:00:00
+# End time: 02:53:50 on Sep 12,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+F:/Proyectos\ Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2 {F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/shift_right.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 02:36:34 on Sep 09,2025
+# Start time: 02:53:50 on Sep 12,2025
 # vlog -reportprogress 300 -sv -work work "+incdir+F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2" F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/shift_right.sv 
 # -- Compiling module shift_right
 # 
 # Top level modules:
 # 	shift_right
-# End time: 02:36:34 on Sep 09,2025, Elapsed time: 0:00:00
+# End time: 02:53:50 on Sep 12,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+F:/Proyectos\ Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2 {F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Modulo.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 02:36:34 on Sep 09,2025
+# Start time: 02:53:50 on Sep 12,2025
 # vlog -reportprogress 300 -sv -work work "+incdir+F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2" F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Modulo.sv 
 # -- Compiling module Modulo
 # 
 # Top level modules:
 # 	Modulo
-# End time: 02:36:34 on Sep 09,2025, Elapsed time: 0:00:00
+# End time: 02:53:50 on Sep 12,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+F:/Proyectos\ Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2 {F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/7seg_display.sv}
+# vlog -sv -work work +incdir+F:/Proyectos\ Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2 {F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Multiplicacion.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 02:36:34 on Sep 09,2025
-# vlog -reportprogress 300 -sv -work work "+incdir+F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2" F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/7seg_display.sv 
-# -- Compiling module seg7_display
+# Start time: 02:53:50 on Sep 12,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2" F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Multiplicacion.sv 
+# -- Compiling module Multiplicacion
 # 
 # Top level modules:
-# 	seg7_display
-# End time: 02:36:34 on Sep 09,2025, Elapsed time: 0:00:00
+# 	Multiplicacion
+# End time: 02:53:50 on Sep 12,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+F:/Proyectos\ Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2 {F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Alu_control.sv}
+# vlog -sv -work work +incdir+F:/Proyectos\ Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2 {F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Alu_control2.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 02:36:34 on Sep 09,2025
-# vlog -reportprogress 300 -sv -work work "+incdir+F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2" F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Alu_control.sv 
-# -- Compiling module Alu_control
+# Start time: 02:53:50 on Sep 12,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2" F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Alu_control2.sv 
+# -- Compiling module Alu_control2
 # 
 # Top level modules:
-# 	Alu_control
-# End time: 02:36:34 on Sep 09,2025, Elapsed time: 0:00:00
+# 	Alu_control2
+# End time: 02:53:50 on Sep 12,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# 
-# vlog -sv -work work +incdir+F:/Proyectos\ Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2 {F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/tb.sv}
+# vlog -sv -work work +incdir+F:/Proyectos\ Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2 {F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/ALU2.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 02:36:34 on Sep 09,2025
-# vlog -reportprogress 300 -sv -work work "+incdir+F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2" F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/tb.sv 
-# -- Compiling module tb
+# Start time: 02:53:50 on Sep 12,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2" F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/ALU2.sv 
+# -- Compiling module ALU2
 # 
 # Top level modules:
-# 	tb
-# End time: 02:36:34 on Sep 09,2025, Elapsed time: 0:00:00
+# 	ALU2
+# End time: 02:53:50 on Sep 12,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
-# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  tb
-# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" tb 
-# Start time: 02:36:34 on Sep 09,2025
+# vlog -sv -work work +incdir+F:/Proyectos\ Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2 {F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/tb2.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 02:53:50 on Sep 12,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2" F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/tb2.sv 
+# -- Compiling module tb2
+# ** Warning: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/tb2.sv(29): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# 
+# Top level modules:
+# 	tb2
+# End time: 02:53:50 on Sep 12,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  tb2
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" tb2 
+# Start time: 02:53:50 on Sep 12,2025
 # Loading sv_std.std
-# Loading work.tb
-# Loading work.ALU
-# Loading work.Alu_control
+# Loading work.tb2
+# Loading work.ALU2
+# Loading work.Alu_control2
 # Loading work.Ripple_carry_adder4
 # Loading work.Full_Adder
 # Loading work.XOR_gate
@@ -187,15 +188,16 @@
 # Loading work.Full_subtractor4
 # Loading work.Full_Substractor
 # Loading work.NOT_gate
+# Loading work.Multiplicacion
 # Loading work.Division
 # Loading work.Modulo
 # Loading work.shift_left
 # Loading work.shift_right
-# ** Error: (vsim-3037) Missing instance name in instantiation of 'seg7_display'.
-#    Time: 0 ps  Iteration: 0  Instance: /tb/dut File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/ALU.sv Line: 26
+# ** Error (suppressible): (vsim-3006) Too many inherited module instance parameters.
+#    Time: 0 ps  Iteration: 0  Instance: /tb2/dut/alu_inst File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Alu_control2.sv Line: 44
 # Error loading design
 # Error: Error loading design
 #        Pausing macro execution
 # MACRO ./ALU_run_msim_rtl_verilog.do PAUSED at line 26
-# End time: 02:36:48 on Sep 09,2025, Elapsed time: 0:00:14
+# End time: 02:53:56 on Sep 12,2025, Elapsed time: 0:00:06
 # Errors: 1, Warnings: 0

@@ -16,47 +16,15 @@
 <TH>Output only Bidir</TH>
 </TR>
 <TR >
-<TD >comb_7</TD>
-<TD >4</TD>
-<TD >0</TD>
-<TD >0</TD>
-<TD >0</TD>
-<TD >7</TD>
-<TD >0</TD>
-<TD >0</TD>
-<TD >0</TD>
-<TD >0</TD>
-<TD >0</TD>
-<TD >0</TD>
-<TD >0</TD>
-<TD >0</TD>
-</TR>
-<TR >
-<TD >alu1|shiftr</TD>
-<TD >6</TD>
-<TD >1</TD>
-<TD >0</TD>
-<TD >1</TD>
+<TD >alu_inst|shiftr</TD>
 <TD >8</TD>
-<TD >1</TD>
-<TD >1</TD>
-<TD >1</TD>
+<TD >3</TD>
 <TD >0</TD>
-<TD >0</TD>
-<TD >0</TD>
-<TD >0</TD>
-<TD >0</TD>
-</TR>
-<TR >
-<TD >alu1|shiftl</TD>
-<TD >6</TD>
-<TD >1</TD>
-<TD >0</TD>
-<TD >1</TD>
+<TD >3</TD>
 <TD >8</TD>
-<TD >1</TD>
-<TD >1</TD>
-<TD >1</TD>
+<TD >3</TD>
+<TD >3</TD>
+<TD >3</TD>
 <TD >0</TD>
 <TD >0</TD>
 <TD >0</TD>
@@ -64,7 +32,23 @@
 <TD >0</TD>
 </TR>
 <TR >
-<TD >alu1|xora</TD>
+<TD >alu_inst|shiftl</TD>
+<TD >8</TD>
+<TD >3</TD>
+<TD >0</TD>
+<TD >3</TD>
+<TD >8</TD>
+<TD >3</TD>
+<TD >3</TD>
+<TD >3</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+</TR>
+<TR >
+<TD >alu_inst|xora</TD>
 <TD >8</TD>
 <TD >2</TD>
 <TD >0</TD>
@@ -80,7 +64,7 @@
 <TD >0</TD>
 </TR>
 <TR >
-<TD >alu1|ora</TD>
+<TD >alu_inst|ora</TD>
 <TD >8</TD>
 <TD >2</TD>
 <TD >0</TD>
@@ -96,7 +80,7 @@
 <TD >0</TD>
 </TR>
 <TR >
-<TD >alu1|anda</TD>
+<TD >alu_inst|anda</TD>
 <TD >8</TD>
 <TD >2</TD>
 <TD >0</TD>
@@ -112,7 +96,7 @@
 <TD >0</TD>
 </TR>
 <TR >
-<TD >alu1|moda</TD>
+<TD >alu_inst|moda</TD>
 <TD >8</TD>
 <TD >2</TD>
 <TD >0</TD>
@@ -128,7 +112,7 @@
 <TD >0</TD>
 </TR>
 <TR >
-<TD >alu1|diva</TD>
+<TD >alu_inst|diva</TD>
 <TD >8</TD>
 <TD >2</TD>
 <TD >0</TD>
@@ -144,7 +128,7 @@
 <TD >0</TD>
 </TR>
 <TR >
-<TD >alu1|suba|s3|or1</TD>
+<TD >alu_inst|multi|fa6|ora</TD>
 <TD >8</TD>
 <TD >9</TD>
 <TD >0</TD>
@@ -160,7 +144,7 @@
 <TD >0</TD>
 </TR>
 <TR >
-<TD >alu1|suba|s3|andb</TD>
+<TD >alu_inst|multi|fa6|andb</TD>
 <TD >8</TD>
 <TD >9</TD>
 <TD >0</TD>
@@ -176,7 +160,7 @@
 <TD >0</TD>
 </TR>
 <TR >
-<TD >alu1|suba|s3|anda</TD>
+<TD >alu_inst|multi|fa6|anda</TD>
 <TD >8</TD>
 <TD >9</TD>
 <TD >0</TD>
@@ -192,39 +176,7 @@
 <TD >0</TD>
 </TR>
 <TR >
-<TD >alu1|suba|s3|notb</TD>
-<TD >1</TD>
-<TD >0</TD>
-<TD >0</TD>
-<TD >0</TD>
-<TD >1</TD>
-<TD >0</TD>
-<TD >0</TD>
-<TD >0</TD>
-<TD >0</TD>
-<TD >0</TD>
-<TD >0</TD>
-<TD >0</TD>
-<TD >0</TD>
-</TR>
-<TR >
-<TD >alu1|suba|s3|nota</TD>
-<TD >1</TD>
-<TD >0</TD>
-<TD >0</TD>
-<TD >0</TD>
-<TD >1</TD>
-<TD >0</TD>
-<TD >0</TD>
-<TD >0</TD>
-<TD >0</TD>
-<TD >0</TD>
-<TD >0</TD>
-<TD >0</TD>
-<TD >0</TD>
-</TR>
-<TR >
-<TD >alu1|suba|s3|xorb</TD>
+<TD >alu_inst|multi|fa6|xorb</TD>
 <TD >8</TD>
 <TD >9</TD>
 <TD >0</TD>
@@ -240,7 +192,7 @@
 <TD >0</TD>
 </TR>
 <TR >
-<TD >alu1|suba|s3|xora</TD>
+<TD >alu_inst|multi|fa6|xora</TD>
 <TD >8</TD>
 <TD >9</TD>
 <TD >0</TD>
@@ -256,7 +208,103 @@
 <TD >0</TD>
 </TR>
 <TR >
-<TD >alu1|suba|s3</TD>
+<TD >alu_inst|multi|fa6</TD>
+<TD >3</TD>
+<TD >1</TD>
+<TD >0</TD>
+<TD >1</TD>
+<TD >2</TD>
+<TD >1</TD>
+<TD >1</TD>
+<TD >1</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+</TR>
+<TR >
+<TD >alu_inst|multi|fa5|ora</TD>
+<TD >8</TD>
+<TD >9</TD>
+<TD >0</TD>
+<TD >9</TD>
+<TD >4</TD>
+<TD >9</TD>
+<TD >9</TD>
+<TD >9</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+</TR>
+<TR >
+<TD >alu_inst|multi|fa5|andb</TD>
+<TD >8</TD>
+<TD >9</TD>
+<TD >0</TD>
+<TD >9</TD>
+<TD >4</TD>
+<TD >9</TD>
+<TD >9</TD>
+<TD >9</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+</TR>
+<TR >
+<TD >alu_inst|multi|fa5|anda</TD>
+<TD >8</TD>
+<TD >9</TD>
+<TD >0</TD>
+<TD >9</TD>
+<TD >4</TD>
+<TD >9</TD>
+<TD >9</TD>
+<TD >9</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+</TR>
+<TR >
+<TD >alu_inst|multi|fa5|xorb</TD>
+<TD >8</TD>
+<TD >9</TD>
+<TD >0</TD>
+<TD >9</TD>
+<TD >4</TD>
+<TD >9</TD>
+<TD >9</TD>
+<TD >9</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+</TR>
+<TR >
+<TD >alu_inst|multi|fa5|xora</TD>
+<TD >8</TD>
+<TD >9</TD>
+<TD >0</TD>
+<TD >9</TD>
+<TD >4</TD>
+<TD >9</TD>
+<TD >9</TD>
+<TD >9</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+</TR>
+<TR >
+<TD >alu_inst|multi|fa5</TD>
 <TD >3</TD>
 <TD >0</TD>
 <TD >0</TD>
@@ -272,7 +320,7 @@
 <TD >0</TD>
 </TR>
 <TR >
-<TD >alu1|suba|s2|or1</TD>
+<TD >alu_inst|multi|fa4|ora</TD>
 <TD >8</TD>
 <TD >9</TD>
 <TD >0</TD>
@@ -288,7 +336,7 @@
 <TD >0</TD>
 </TR>
 <TR >
-<TD >alu1|suba|s2|andb</TD>
+<TD >alu_inst|multi|fa4|andb</TD>
 <TD >8</TD>
 <TD >9</TD>
 <TD >0</TD>
@@ -304,7 +352,7 @@
 <TD >0</TD>
 </TR>
 <TR >
-<TD >alu1|suba|s2|anda</TD>
+<TD >alu_inst|multi|fa4|anda</TD>
 <TD >8</TD>
 <TD >9</TD>
 <TD >0</TD>
@@ -320,39 +368,7 @@
 <TD >0</TD>
 </TR>
 <TR >
-<TD >alu1|suba|s2|notb</TD>
-<TD >1</TD>
-<TD >0</TD>
-<TD >0</TD>
-<TD >0</TD>
-<TD >1</TD>
-<TD >0</TD>
-<TD >0</TD>
-<TD >0</TD>
-<TD >0</TD>
-<TD >0</TD>
-<TD >0</TD>
-<TD >0</TD>
-<TD >0</TD>
-</TR>
-<TR >
-<TD >alu1|suba|s2|nota</TD>
-<TD >1</TD>
-<TD >0</TD>
-<TD >0</TD>
-<TD >0</TD>
-<TD >1</TD>
-<TD >0</TD>
-<TD >0</TD>
-<TD >0</TD>
-<TD >0</TD>
-<TD >0</TD>
-<TD >0</TD>
-<TD >0</TD>
-<TD >0</TD>
-</TR>
-<TR >
-<TD >alu1|suba|s2|xorb</TD>
+<TD >alu_inst|multi|fa4|xorb</TD>
 <TD >8</TD>
 <TD >9</TD>
 <TD >0</TD>
@@ -368,7 +384,7 @@
 <TD >0</TD>
 </TR>
 <TR >
-<TD >alu1|suba|s2|xora</TD>
+<TD >alu_inst|multi|fa4|xora</TD>
 <TD >8</TD>
 <TD >9</TD>
 <TD >0</TD>
@@ -384,7 +400,7 @@
 <TD >0</TD>
 </TR>
 <TR >
-<TD >alu1|suba|s2</TD>
+<TD >alu_inst|multi|fa4</TD>
 <TD >3</TD>
 <TD >0</TD>
 <TD >0</TD>
@@ -400,7 +416,7 @@
 <TD >0</TD>
 </TR>
 <TR >
-<TD >alu1|suba|s1|or1</TD>
+<TD >alu_inst|multi|fa3|ora</TD>
 <TD >8</TD>
 <TD >9</TD>
 <TD >0</TD>
@@ -416,7 +432,7 @@
 <TD >0</TD>
 </TR>
 <TR >
-<TD >alu1|suba|s1|andb</TD>
+<TD >alu_inst|multi|fa3|andb</TD>
 <TD >8</TD>
 <TD >9</TD>
 <TD >0</TD>
@@ -432,7 +448,7 @@
 <TD >0</TD>
 </TR>
 <TR >
-<TD >alu1|suba|s1|anda</TD>
+<TD >alu_inst|multi|fa3|anda</TD>
 <TD >8</TD>
 <TD >9</TD>
 <TD >0</TD>
@@ -448,39 +464,55 @@
 <TD >0</TD>
 </TR>
 <TR >
-<TD >alu1|suba|s1|notb</TD>
+<TD >alu_inst|multi|fa3|xorb</TD>
+<TD >8</TD>
+<TD >9</TD>
+<TD >0</TD>
+<TD >9</TD>
+<TD >4</TD>
+<TD >9</TD>
+<TD >9</TD>
+<TD >9</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+</TR>
+<TR >
+<TD >alu_inst|multi|fa3|xora</TD>
+<TD >8</TD>
+<TD >9</TD>
+<TD >0</TD>
+<TD >9</TD>
+<TD >4</TD>
+<TD >9</TD>
+<TD >9</TD>
+<TD >9</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+</TR>
+<TR >
+<TD >alu_inst|multi|fa3</TD>
+<TD >3</TD>
+<TD >1</TD>
+<TD >0</TD>
+<TD >1</TD>
+<TD >2</TD>
+<TD >1</TD>
+<TD >1</TD>
 <TD >1</TD>
 <TD >0</TD>
 <TD >0</TD>
 <TD >0</TD>
-<TD >1</TD>
-<TD >0</TD>
-<TD >0</TD>
-<TD >0</TD>
-<TD >0</TD>
-<TD >0</TD>
-<TD >0</TD>
 <TD >0</TD>
 <TD >0</TD>
 </TR>
 <TR >
-<TD >alu1|suba|s1|nota</TD>
-<TD >1</TD>
-<TD >0</TD>
-<TD >0</TD>
-<TD >0</TD>
-<TD >1</TD>
-<TD >0</TD>
-<TD >0</TD>
-<TD >0</TD>
-<TD >0</TD>
-<TD >0</TD>
-<TD >0</TD>
-<TD >0</TD>
-<TD >0</TD>
-</TR>
-<TR >
-<TD >alu1|suba|s1|xorb</TD>
+<TD >alu_inst|multi|fa2|ora</TD>
 <TD >8</TD>
 <TD >9</TD>
 <TD >0</TD>
@@ -496,7 +528,7 @@
 <TD >0</TD>
 </TR>
 <TR >
-<TD >alu1|suba|s1|xora</TD>
+<TD >alu_inst|multi|fa2|andb</TD>
 <TD >8</TD>
 <TD >9</TD>
 <TD >0</TD>
@@ -512,7 +544,55 @@
 <TD >0</TD>
 </TR>
 <TR >
-<TD >alu1|suba|s1</TD>
+<TD >alu_inst|multi|fa2|anda</TD>
+<TD >8</TD>
+<TD >9</TD>
+<TD >0</TD>
+<TD >9</TD>
+<TD >4</TD>
+<TD >9</TD>
+<TD >9</TD>
+<TD >9</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+</TR>
+<TR >
+<TD >alu_inst|multi|fa2|xorb</TD>
+<TD >8</TD>
+<TD >9</TD>
+<TD >0</TD>
+<TD >9</TD>
+<TD >4</TD>
+<TD >9</TD>
+<TD >9</TD>
+<TD >9</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+</TR>
+<TR >
+<TD >alu_inst|multi|fa2|xora</TD>
+<TD >8</TD>
+<TD >9</TD>
+<TD >0</TD>
+<TD >9</TD>
+<TD >4</TD>
+<TD >9</TD>
+<TD >9</TD>
+<TD >9</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+</TR>
+<TR >
+<TD >alu_inst|multi|fa2</TD>
 <TD >3</TD>
 <TD >0</TD>
 <TD >0</TD>
@@ -528,7 +608,7 @@
 <TD >0</TD>
 </TR>
 <TR >
-<TD >alu1|suba|s0|or1</TD>
+<TD >alu_inst|multi|fa1|ora</TD>
 <TD >8</TD>
 <TD >9</TD>
 <TD >0</TD>
@@ -544,7 +624,7 @@
 <TD >0</TD>
 </TR>
 <TR >
-<TD >alu1|suba|s0|andb</TD>
+<TD >alu_inst|multi|fa1|andb</TD>
 <TD >8</TD>
 <TD >9</TD>
 <TD >0</TD>
@@ -560,7 +640,7 @@
 <TD >0</TD>
 </TR>
 <TR >
-<TD >alu1|suba|s0|anda</TD>
+<TD >alu_inst|multi|fa1|anda</TD>
 <TD >8</TD>
 <TD >9</TD>
 <TD >0</TD>
@@ -576,7 +656,279 @@
 <TD >0</TD>
 </TR>
 <TR >
-<TD >alu1|suba|s0|notb</TD>
+<TD >alu_inst|multi|fa1|xorb</TD>
+<TD >8</TD>
+<TD >9</TD>
+<TD >0</TD>
+<TD >9</TD>
+<TD >4</TD>
+<TD >9</TD>
+<TD >9</TD>
+<TD >9</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+</TR>
+<TR >
+<TD >alu_inst|multi|fa1|xora</TD>
+<TD >8</TD>
+<TD >9</TD>
+<TD >0</TD>
+<TD >9</TD>
+<TD >4</TD>
+<TD >9</TD>
+<TD >9</TD>
+<TD >9</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+</TR>
+<TR >
+<TD >alu_inst|multi|fa1</TD>
+<TD >3</TD>
+<TD >1</TD>
+<TD >0</TD>
+<TD >1</TD>
+<TD >2</TD>
+<TD >1</TD>
+<TD >1</TD>
+<TD >1</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+</TR>
+<TR >
+<TD >alu_inst|multi|and9</TD>
+<TD >8</TD>
+<TD >9</TD>
+<TD >0</TD>
+<TD >9</TD>
+<TD >4</TD>
+<TD >9</TD>
+<TD >9</TD>
+<TD >9</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+</TR>
+<TR >
+<TD >alu_inst|multi|and8</TD>
+<TD >8</TD>
+<TD >9</TD>
+<TD >0</TD>
+<TD >9</TD>
+<TD >4</TD>
+<TD >9</TD>
+<TD >9</TD>
+<TD >9</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+</TR>
+<TR >
+<TD >alu_inst|multi|and7</TD>
+<TD >8</TD>
+<TD >9</TD>
+<TD >0</TD>
+<TD >9</TD>
+<TD >4</TD>
+<TD >9</TD>
+<TD >9</TD>
+<TD >9</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+</TR>
+<TR >
+<TD >alu_inst|multi|and6</TD>
+<TD >8</TD>
+<TD >9</TD>
+<TD >0</TD>
+<TD >9</TD>
+<TD >4</TD>
+<TD >9</TD>
+<TD >9</TD>
+<TD >9</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+</TR>
+<TR >
+<TD >alu_inst|multi|and5</TD>
+<TD >8</TD>
+<TD >9</TD>
+<TD >0</TD>
+<TD >9</TD>
+<TD >4</TD>
+<TD >9</TD>
+<TD >9</TD>
+<TD >9</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+</TR>
+<TR >
+<TD >alu_inst|multi|and4</TD>
+<TD >8</TD>
+<TD >9</TD>
+<TD >0</TD>
+<TD >9</TD>
+<TD >4</TD>
+<TD >9</TD>
+<TD >9</TD>
+<TD >9</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+</TR>
+<TR >
+<TD >alu_inst|multi|and3</TD>
+<TD >8</TD>
+<TD >9</TD>
+<TD >0</TD>
+<TD >9</TD>
+<TD >4</TD>
+<TD >9</TD>
+<TD >9</TD>
+<TD >9</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+</TR>
+<TR >
+<TD >alu_inst|multi|and2</TD>
+<TD >8</TD>
+<TD >9</TD>
+<TD >0</TD>
+<TD >9</TD>
+<TD >4</TD>
+<TD >9</TD>
+<TD >9</TD>
+<TD >9</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+</TR>
+<TR >
+<TD >alu_inst|multi|and1</TD>
+<TD >8</TD>
+<TD >9</TD>
+<TD >0</TD>
+<TD >9</TD>
+<TD >4</TD>
+<TD >9</TD>
+<TD >9</TD>
+<TD >9</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+</TR>
+<TR >
+<TD >alu_inst|multi|and0</TD>
+<TD >8</TD>
+<TD >9</TD>
+<TD >0</TD>
+<TD >9</TD>
+<TD >4</TD>
+<TD >9</TD>
+<TD >9</TD>
+<TD >9</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+</TR>
+<TR >
+<TD >alu_inst|multi</TD>
+<TD >8</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >8</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+</TR>
+<TR >
+<TD >alu_inst|suba|s3|or1</TD>
+<TD >8</TD>
+<TD >9</TD>
+<TD >0</TD>
+<TD >9</TD>
+<TD >4</TD>
+<TD >9</TD>
+<TD >9</TD>
+<TD >9</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+</TR>
+<TR >
+<TD >alu_inst|suba|s3|andb</TD>
+<TD >8</TD>
+<TD >9</TD>
+<TD >0</TD>
+<TD >9</TD>
+<TD >4</TD>
+<TD >9</TD>
+<TD >9</TD>
+<TD >9</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+</TR>
+<TR >
+<TD >alu_inst|suba|s3|anda</TD>
+<TD >8</TD>
+<TD >9</TD>
+<TD >0</TD>
+<TD >9</TD>
+<TD >4</TD>
+<TD >9</TD>
+<TD >9</TD>
+<TD >9</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+</TR>
+<TR >
+<TD >alu_inst|suba|s3|notb</TD>
 <TD >1</TD>
 <TD >0</TD>
 <TD >0</TD>
@@ -592,7 +944,7 @@
 <TD >0</TD>
 </TR>
 <TR >
-<TD >alu1|suba|s0|nota</TD>
+<TD >alu_inst|suba|s3|nota</TD>
 <TD >1</TD>
 <TD >0</TD>
 <TD >0</TD>
@@ -608,7 +960,7 @@
 <TD >0</TD>
 </TR>
 <TR >
-<TD >alu1|suba|s0|xorb</TD>
+<TD >alu_inst|suba|s3|xorb</TD>
 <TD >8</TD>
 <TD >9</TD>
 <TD >0</TD>
@@ -624,7 +976,7 @@
 <TD >0</TD>
 </TR>
 <TR >
-<TD >alu1|suba|s0|xora</TD>
+<TD >alu_inst|suba|s3|xora</TD>
 <TD >8</TD>
 <TD >9</TD>
 <TD >0</TD>
@@ -640,7 +992,7 @@
 <TD >0</TD>
 </TR>
 <TR >
-<TD >alu1|suba|s0</TD>
+<TD >alu_inst|suba|s3</TD>
 <TD >3</TD>
 <TD >0</TD>
 <TD >0</TD>
@@ -656,23 +1008,7 @@
 <TD >0</TD>
 </TR>
 <TR >
-<TD >alu1|suba</TD>
-<TD >9</TD>
-<TD >1</TD>
-<TD >0</TD>
-<TD >1</TD>
-<TD >8</TD>
-<TD >1</TD>
-<TD >1</TD>
-<TD >1</TD>
-<TD >0</TD>
-<TD >0</TD>
-<TD >0</TD>
-<TD >0</TD>
-<TD >0</TD>
-</TR>
-<TR >
-<TD >alu1|suma|a3|ora</TD>
+<TD >alu_inst|suba|s2|or1</TD>
 <TD >8</TD>
 <TD >9</TD>
 <TD >0</TD>
@@ -688,7 +1024,7 @@
 <TD >0</TD>
 </TR>
 <TR >
-<TD >alu1|suma|a3|andb</TD>
+<TD >alu_inst|suba|s2|andb</TD>
 <TD >8</TD>
 <TD >9</TD>
 <TD >0</TD>
@@ -704,7 +1040,7 @@
 <TD >0</TD>
 </TR>
 <TR >
-<TD >alu1|suma|a3|anda</TD>
+<TD >alu_inst|suba|s2|anda</TD>
 <TD >8</TD>
 <TD >9</TD>
 <TD >0</TD>
@@ -720,7 +1056,39 @@
 <TD >0</TD>
 </TR>
 <TR >
-<TD >alu1|suma|a3|xorb</TD>
+<TD >alu_inst|suba|s2|notb</TD>
+<TD >1</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >1</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+</TR>
+<TR >
+<TD >alu_inst|suba|s2|nota</TD>
+<TD >1</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >1</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+</TR>
+<TR >
+<TD >alu_inst|suba|s2|xorb</TD>
 <TD >8</TD>
 <TD >9</TD>
 <TD >0</TD>
@@ -736,7 +1104,7 @@
 <TD >0</TD>
 </TR>
 <TR >
-<TD >alu1|suma|a3|xora</TD>
+<TD >alu_inst|suba|s2|xora</TD>
 <TD >8</TD>
 <TD >9</TD>
 <TD >0</TD>
@@ -752,7 +1120,7 @@
 <TD >0</TD>
 </TR>
 <TR >
-<TD >alu1|suma|a3</TD>
+<TD >alu_inst|suba|s2</TD>
 <TD >3</TD>
 <TD >0</TD>
 <TD >0</TD>
@@ -768,7 +1136,7 @@
 <TD >0</TD>
 </TR>
 <TR >
-<TD >alu1|suma|a2|ora</TD>
+<TD >alu_inst|suba|s1|or1</TD>
 <TD >8</TD>
 <TD >9</TD>
 <TD >0</TD>
@@ -784,7 +1152,7 @@
 <TD >0</TD>
 </TR>
 <TR >
-<TD >alu1|suma|a2|andb</TD>
+<TD >alu_inst|suba|s1|andb</TD>
 <TD >8</TD>
 <TD >9</TD>
 <TD >0</TD>
@@ -800,7 +1168,7 @@
 <TD >0</TD>
 </TR>
 <TR >
-<TD >alu1|suma|a2|anda</TD>
+<TD >alu_inst|suba|s1|anda</TD>
 <TD >8</TD>
 <TD >9</TD>
 <TD >0</TD>
@@ -816,7 +1184,39 @@
 <TD >0</TD>
 </TR>
 <TR >
-<TD >alu1|suma|a2|xorb</TD>
+<TD >alu_inst|suba|s1|notb</TD>
+<TD >1</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >1</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+</TR>
+<TR >
+<TD >alu_inst|suba|s1|nota</TD>
+<TD >1</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >1</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+</TR>
+<TR >
+<TD >alu_inst|suba|s1|xorb</TD>
 <TD >8</TD>
 <TD >9</TD>
 <TD >0</TD>
@@ -832,7 +1232,7 @@
 <TD >0</TD>
 </TR>
 <TR >
-<TD >alu1|suma|a2|xora</TD>
+<TD >alu_inst|suba|s1|xora</TD>
 <TD >8</TD>
 <TD >9</TD>
 <TD >0</TD>
@@ -848,7 +1248,7 @@
 <TD >0</TD>
 </TR>
 <TR >
-<TD >alu1|suma|a2</TD>
+<TD >alu_inst|suba|s1</TD>
 <TD >3</TD>
 <TD >0</TD>
 <TD >0</TD>
@@ -864,7 +1264,7 @@
 <TD >0</TD>
 </TR>
 <TR >
-<TD >alu1|suma|a1|ora</TD>
+<TD >alu_inst|suba|s0|or1</TD>
 <TD >8</TD>
 <TD >9</TD>
 <TD >0</TD>
@@ -880,7 +1280,7 @@
 <TD >0</TD>
 </TR>
 <TR >
-<TD >alu1|suma|a1|andb</TD>
+<TD >alu_inst|suba|s0|andb</TD>
 <TD >8</TD>
 <TD >9</TD>
 <TD >0</TD>
@@ -896,7 +1296,7 @@
 <TD >0</TD>
 </TR>
 <TR >
-<TD >alu1|suma|a1|anda</TD>
+<TD >alu_inst|suba|s0|anda</TD>
 <TD >8</TD>
 <TD >9</TD>
 <TD >0</TD>
@@ -912,7 +1312,39 @@
 <TD >0</TD>
 </TR>
 <TR >
-<TD >alu1|suma|a1|xorb</TD>
+<TD >alu_inst|suba|s0|notb</TD>
+<TD >1</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >1</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+</TR>
+<TR >
+<TD >alu_inst|suba|s0|nota</TD>
+<TD >1</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >1</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+</TR>
+<TR >
+<TD >alu_inst|suba|s0|xorb</TD>
 <TD >8</TD>
 <TD >9</TD>
 <TD >0</TD>
@@ -928,7 +1360,7 @@
 <TD >0</TD>
 </TR>
 <TR >
-<TD >alu1|suma|a1|xora</TD>
+<TD >alu_inst|suba|s0|xora</TD>
 <TD >8</TD>
 <TD >9</TD>
 <TD >0</TD>
@@ -944,7 +1376,7 @@
 <TD >0</TD>
 </TR>
 <TR >
-<TD >alu1|suma|a1</TD>
+<TD >alu_inst|suba|s0</TD>
 <TD >3</TD>
 <TD >0</TD>
 <TD >0</TD>
@@ -960,7 +1392,23 @@
 <TD >0</TD>
 </TR>
 <TR >
-<TD >alu1|suma|a0|ora</TD>
+<TD >alu_inst|suba</TD>
+<TD >9</TD>
+<TD >1</TD>
+<TD >0</TD>
+<TD >1</TD>
+<TD >8</TD>
+<TD >1</TD>
+<TD >1</TD>
+<TD >1</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+</TR>
+<TR >
+<TD >alu_inst|suma|a3|ora</TD>
 <TD >8</TD>
 <TD >9</TD>
 <TD >0</TD>
@@ -976,7 +1424,7 @@
 <TD >0</TD>
 </TR>
 <TR >
-<TD >alu1|suma|a0|andb</TD>
+<TD >alu_inst|suma|a3|andb</TD>
 <TD >8</TD>
 <TD >9</TD>
 <TD >0</TD>
@@ -992,7 +1440,7 @@
 <TD >0</TD>
 </TR>
 <TR >
-<TD >alu1|suma|a0|anda</TD>
+<TD >alu_inst|suma|a3|anda</TD>
 <TD >8</TD>
 <TD >9</TD>
 <TD >0</TD>
@@ -1008,7 +1456,7 @@
 <TD >0</TD>
 </TR>
 <TR >
-<TD >alu1|suma|a0|xorb</TD>
+<TD >alu_inst|suma|a3|xorb</TD>
 <TD >8</TD>
 <TD >9</TD>
 <TD >0</TD>
@@ -1024,7 +1472,7 @@
 <TD >0</TD>
 </TR>
 <TR >
-<TD >alu1|suma|a0|xora</TD>
+<TD >alu_inst|suma|a3|xora</TD>
 <TD >8</TD>
 <TD >9</TD>
 <TD >0</TD>
@@ -1040,7 +1488,7 @@
 <TD >0</TD>
 </TR>
 <TR >
-<TD >alu1|suma|a0</TD>
+<TD >alu_inst|suma|a3</TD>
 <TD >3</TD>
 <TD >0</TD>
 <TD >0</TD>
@@ -1056,7 +1504,295 @@
 <TD >0</TD>
 </TR>
 <TR >
-<TD >alu1|suma</TD>
+<TD >alu_inst|suma|a2|ora</TD>
+<TD >8</TD>
+<TD >9</TD>
+<TD >0</TD>
+<TD >9</TD>
+<TD >4</TD>
+<TD >9</TD>
+<TD >9</TD>
+<TD >9</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+</TR>
+<TR >
+<TD >alu_inst|suma|a2|andb</TD>
+<TD >8</TD>
+<TD >9</TD>
+<TD >0</TD>
+<TD >9</TD>
+<TD >4</TD>
+<TD >9</TD>
+<TD >9</TD>
+<TD >9</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+</TR>
+<TR >
+<TD >alu_inst|suma|a2|anda</TD>
+<TD >8</TD>
+<TD >9</TD>
+<TD >0</TD>
+<TD >9</TD>
+<TD >4</TD>
+<TD >9</TD>
+<TD >9</TD>
+<TD >9</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+</TR>
+<TR >
+<TD >alu_inst|suma|a2|xorb</TD>
+<TD >8</TD>
+<TD >9</TD>
+<TD >0</TD>
+<TD >9</TD>
+<TD >4</TD>
+<TD >9</TD>
+<TD >9</TD>
+<TD >9</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+</TR>
+<TR >
+<TD >alu_inst|suma|a2|xora</TD>
+<TD >8</TD>
+<TD >9</TD>
+<TD >0</TD>
+<TD >9</TD>
+<TD >4</TD>
+<TD >9</TD>
+<TD >9</TD>
+<TD >9</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+</TR>
+<TR >
+<TD >alu_inst|suma|a2</TD>
+<TD >3</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >2</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+</TR>
+<TR >
+<TD >alu_inst|suma|a1|ora</TD>
+<TD >8</TD>
+<TD >9</TD>
+<TD >0</TD>
+<TD >9</TD>
+<TD >4</TD>
+<TD >9</TD>
+<TD >9</TD>
+<TD >9</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+</TR>
+<TR >
+<TD >alu_inst|suma|a1|andb</TD>
+<TD >8</TD>
+<TD >9</TD>
+<TD >0</TD>
+<TD >9</TD>
+<TD >4</TD>
+<TD >9</TD>
+<TD >9</TD>
+<TD >9</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+</TR>
+<TR >
+<TD >alu_inst|suma|a1|anda</TD>
+<TD >8</TD>
+<TD >9</TD>
+<TD >0</TD>
+<TD >9</TD>
+<TD >4</TD>
+<TD >9</TD>
+<TD >9</TD>
+<TD >9</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+</TR>
+<TR >
+<TD >alu_inst|suma|a1|xorb</TD>
+<TD >8</TD>
+<TD >9</TD>
+<TD >0</TD>
+<TD >9</TD>
+<TD >4</TD>
+<TD >9</TD>
+<TD >9</TD>
+<TD >9</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+</TR>
+<TR >
+<TD >alu_inst|suma|a1|xora</TD>
+<TD >8</TD>
+<TD >9</TD>
+<TD >0</TD>
+<TD >9</TD>
+<TD >4</TD>
+<TD >9</TD>
+<TD >9</TD>
+<TD >9</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+</TR>
+<TR >
+<TD >alu_inst|suma|a1</TD>
+<TD >3</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >2</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+</TR>
+<TR >
+<TD >alu_inst|suma|a0|ora</TD>
+<TD >8</TD>
+<TD >9</TD>
+<TD >0</TD>
+<TD >9</TD>
+<TD >4</TD>
+<TD >9</TD>
+<TD >9</TD>
+<TD >9</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+</TR>
+<TR >
+<TD >alu_inst|suma|a0|andb</TD>
+<TD >8</TD>
+<TD >9</TD>
+<TD >0</TD>
+<TD >9</TD>
+<TD >4</TD>
+<TD >9</TD>
+<TD >9</TD>
+<TD >9</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+</TR>
+<TR >
+<TD >alu_inst|suma|a0|anda</TD>
+<TD >8</TD>
+<TD >9</TD>
+<TD >0</TD>
+<TD >9</TD>
+<TD >4</TD>
+<TD >9</TD>
+<TD >9</TD>
+<TD >9</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+</TR>
+<TR >
+<TD >alu_inst|suma|a0|xorb</TD>
+<TD >8</TD>
+<TD >9</TD>
+<TD >0</TD>
+<TD >9</TD>
+<TD >4</TD>
+<TD >9</TD>
+<TD >9</TD>
+<TD >9</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+</TR>
+<TR >
+<TD >alu_inst|suma|a0|xora</TD>
+<TD >8</TD>
+<TD >9</TD>
+<TD >0</TD>
+<TD >9</TD>
+<TD >4</TD>
+<TD >9</TD>
+<TD >9</TD>
+<TD >9</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+</TR>
+<TR >
+<TD >alu_inst|suma|a0</TD>
+<TD >3</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >2</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+<TD >0</TD>
+</TR>
+<TR >
+<TD >alu_inst|suma</TD>
 <TD >9</TD>
 <TD >1</TD>
 <TD >0</TD>
@@ -1072,12 +1808,12 @@
 <TD >0</TD>
 </TR>
 <TR >
-<TD >alu1</TD>
+<TD >alu_inst</TD>
 <TD >12</TD>
 <TD >0</TD>
 <TD >0</TD>
 <TD >0</TD>
-<TD >8</TD>
+<TD >4</TD>
 <TD >0</TD>
 <TD >0</TD>
 <TD >0</TD>

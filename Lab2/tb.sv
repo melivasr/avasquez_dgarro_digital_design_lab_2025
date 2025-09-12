@@ -2,46 +2,118 @@
 
 module tb;
 
-  logic [3:0] A, B;
+  logic [3:0] A;
+  logic [3:0] B;
   logic [3:0] op;
   logic [3:0] Y;
-  logic N,Z,C,V;
+  logic N, Z, C, V;
 
-  // Instancia de la ALU
-  ALU dut (
-    .A(A), .B(B), .op(op),
-    .Y(Y), .N(N), .Z(Z), .C(C), .V(V)
-  );
+  Alu_control alu1 (.A(A), .B(B), .op(op), .Y(Y), .N(N), .Z(Z), .C(C), .V(V));
 
   initial begin
-    $display("time | op | A | B |  Y  | N Z C V");
-    $display("---------------------------------");
 
-    // Prueba con algunos valores fijos de A y B
-    A = 4'd5;  B = 4'd3; // 5 y 3 en decimal
-    for (int i = 0; i < 10; i++) begin
-      op = i; #5; // espera 5 ns
-      $display("%4t | %02d | %d | %d | %2d | %b %b %b %b",
-               $time, op, A, B, Y, N,Z,C,V);
-    end
+    // Probamos algunos valores
+    A = 4'b0101;
+	 B = 4'b0011;
 
-    // Cambiar valores de entrada
-    A = 4'd7;  B = 4'd2;
-    for (int i = 0; i < 10; i++) begin
-      op = i; #5;
-      $display("%4t | %02d | %d | %d | %2d | %b %b %b %b",
-               $time, op, A, B, Y, N,Z,C,V);
-    end
+    // Suma
+    op = 4'b0000;
+	 #1;
+    $display("%2d  %2d  %b | %2d   %b %b %b %b" , A, B, op, Y, N, Z, C, V);
 
-    // Otra combinación
-    A = 4'd8;  B = 4'd0; // caso especial para DIV/MOD
-    for (int i = 0; i < 10; i++) begin
-      op = i; #5;
-      $display("%4t | %02d | %d | %d | %2d | %b %b %b %b",
-               $time, op, A, B, Y, N,Z,C,V);
-    end
+    // Resta
+    op = 4'b0001; 
+	 #1;
+    $display("%2d  %2d  %b | %2d   %b %b %b %b", A, B, op, Y, N, Z, C, V);
+	 
+	 // Multiplicación
+    op = 4'b0010; 
+	 #1;
+    $display("%2d  %2d  %b | %2d   %b %b %b %b", A, B, op, Y, N, Z, C, V);
 
-    $stop;
+    // División
+    op = 4'b0011; 
+	 #1;
+    $display("%2d  %2d  %b | %2d   %b %b %b %b", A, B, op, Y, N, Z, C, V);
+
+    // AND
+    op = 4'b0101; 
+	 #1;
+    $display("%2d  %2d  %b | %2d   %b %b %b %b", A, B, op, Y, N, Z, C, V);
+
+    // OR
+    op = 4'b0110; 
+	 #1;
+    $display("%2d  %2d  %b | %2d   %b %b %b %b", A, B, op, Y, N, Z, C, V);
+
+    // XOR
+    op = 4'b0111; 
+	 #1;
+    $display("%2d  %2d  %b | %2d   %b %b %b %b", A, B, op, Y, N, Z, C, V);
+
+    // Shift left
+    op = 4'b1000; 
+	 #1;
+    $display("%2d  %2d  %b | %2d   %b %b %b %b", A, B, op, Y, N, Z, C, V);
+
+    // Shift right
+    op = 4'b1001; 
+	 #1;
+    $display("%2d  %2d  %b | %2d   %b %b %b %b", A, B, op, Y, N, Z, C, V);
+	 
+	 
+	 
+	 
+	 // Probamos otros algunos valores
+    A = 4'b0110;
+	 B = 4'b1010;
+
+    // Suma
+    op = 4'b0000;
+	 #1;
+    $display("%2d  %2d  %b | %2d   %b %b %b %b", A, B, op, Y, N, Z, C, V);
+
+    // Resta
+    op = 4'b0001; 
+	 #1;
+    $display("%2d  %2d  %b | %2d   %b %b %b %b", A, B, op, Y, N, Z, C, V);
+	 
+	 // Multiplicación
+    op = 4'b0010; 
+	 #1;
+    $display("%2d  %2d  %b | %2d   %b %b %b %b", A, B, op, Y, N, Z, C, V);
+
+    // División
+    op = 4'b0011; 
+	 #1;
+    $display("%2d  %2d  %b | %2d   %b %b %b %b", A, B, op, Y, N, Z, C, V);
+
+    // AND
+    op = 4'b0101; 
+	 #1;
+    $display("%2d  %2d  %b | %2d   %b %b %b %b", A, B, op, Y, N, Z, C, V);
+
+    // OR
+    op = 4'b0110; 
+	 #1;
+    $display("%2d  %2d  %b | %2d   %b %b %b %b", A, B, op, Y, N, Z, C, V);
+
+    // XOR
+    op = 4'b0111; 
+	 #1;
+    $display("%2d  %2d  %b | %2d   %b %b %b %b", A, B, op, Y, N, Z, C, V);
+
+    // Shift left
+    op = 4'b1000; 
+	 #1;
+    $display("%2d  %2d  %b | %2d   %b %b %b %b", A, B, op, Y, N, Z, C, V);
+
+    // Shift right
+    op = 4'b1001; 
+	 #1;
+    $display("%2d  %2d  %b | %2d   %b %b %b %b", A, B, op, Y, N, Z, C, V);
+
+    $finish;
   end
 
 endmodule

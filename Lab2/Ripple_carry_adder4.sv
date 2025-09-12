@@ -1,8 +1,9 @@
-module Ripple_carry_adder4(
-	input logic [3:0] A,
-	input logic [3:0] B, 
+module Ripple_carry_adder4
+	#(parameter width = 4)(
+	input logic [width-1:0] A,
+	input logic [width-1:0] B, 
 	input logic Cin,
-	output logic [3:0] Sum,
+	output logic [width-1:0] Sum,
 	output logic Cout,
 	output logic N,
    output logic Z,
