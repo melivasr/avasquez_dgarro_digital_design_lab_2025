@@ -19,47 +19,38 @@ module tb;
     // Suma
     op = 4'b0000;
 	 #1;
-    $display("%2d  %2d  %b | %2d   %b %b %b %b" , A, B, op, Y, N, Z, C, V);
 
     // Resta
     op = 4'b0001; 
 	 #1;
-    $display("%2d  %2d  %b | %2d   %b %b %b %b", A, B, op, Y, N, Z, C, V);
 	 
 	 // Multiplicación
     op = 4'b0010; 
 	 #1;
-    $display("%2d  %2d  %b | %2d   %b %b %b %b", A, B, op, Y, N, Z, C, V);
 
     // División
     op = 4'b0011; 
 	 #1;
-    $display("%2d  %2d  %b | %2d   %b %b %b %b", A, B, op, Y, N, Z, C, V);
 
     // AND
     op = 4'b0101; 
 	 #1;
-    $display("%2d  %2d  %b | %2d   %b %b %b %b", A, B, op, Y, N, Z, C, V);
 
     // OR
     op = 4'b0110; 
 	 #1;
-    $display("%2d  %2d  %b | %2d   %b %b %b %b", A, B, op, Y, N, Z, C, V);
 
     // XOR
     op = 4'b0111; 
 	 #1;
-    $display("%2d  %2d  %b | %2d   %b %b %b %b", A, B, op, Y, N, Z, C, V);
 
     // Shift left
     op = 4'b1000; 
 	 #1;
-    $display("%2d  %2d  %b | %2d   %b %b %b %b", A, B, op, Y, N, Z, C, V);
 
     // Shift right
     op = 4'b1001; 
 	 #1;
-    $display("%2d  %2d  %b | %2d   %b %b %b %b", A, B, op, Y, N, Z, C, V);
 	 
 	 
 	 
@@ -71,47 +62,38 @@ module tb;
     // Suma
     op = 4'b0000;
 	 #1;
-    $display("%2d  %2d  %b | %2d   %b %b %b %b", A, B, op, Y, N, Z, C, V);
 
     // Resta
     op = 4'b0001; 
 	 #1;
-    $display("%2d  %2d  %b | %2d   %b %b %b %b", A, B, op, Y, N, Z, C, V);
 	 
 	 // Multiplicación
     op = 4'b0010; 
 	 #1;
-    $display("%2d  %2d  %b | %2d   %b %b %b %b", A, B, op, Y, N, Z, C, V);
 
     // División
     op = 4'b0011; 
 	 #1;
-    $display("%2d  %2d  %b | %2d   %b %b %b %b", A, B, op, Y, N, Z, C, V);
 
     // AND
     op = 4'b0101; 
 	 #1;
-    $display("%2d  %2d  %b | %2d   %b %b %b %b", A, B, op, Y, N, Z, C, V);
 
     // OR
     op = 4'b0110; 
 	 #1;
-    $display("%2d  %2d  %b | %2d   %b %b %b %b", A, B, op, Y, N, Z, C, V);
 
     // XOR
     op = 4'b0111; 
 	 #1;
-    $display("%2d  %2d  %b | %2d   %b %b %b %b", A, B, op, Y, N, Z, C, V);
 
     // Shift left
     op = 4'b1000; 
 	 #1;
-    $display("%2d  %2d  %b | %2d   %b %b %b %b", A, B, op, Y, N, Z, C, V);
 
     // Shift right
     op = 4'b1001; 
 	 #1;
-    $display("%2d  %2d  %b | %2d   %b %b %b %b", A, B, op, Y, N, Z, C, V);
 
     $finish;
   end

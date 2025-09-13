@@ -104,12 +104,15 @@ set_location_assignment PIN_AB28 -to B[0]
 set_global_assignment -name SYSTEMVERILOG_FILE Multiplicacion.sv
 set_global_assignment -name SYSTEMVERILOG_FILE Alu_control2.sv
 set_global_assignment -name SYSTEMVERILOG_FILE tb2.sv
-set_global_assignment -name EDA_TEST_BENCH_FILE tb.sv -section_id tb
 set_global_assignment -name EDA_TEST_BENCH_NAME tb2 -section_id eda_simulation
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id tb2
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME tb2 -section_id tb2
-set_global_assignment -name EDA_TEST_BENCH_FILE tb2.sv -section_id tb2
 set_global_assignment -name SYSTEMVERILOG_FILE ALU2.sv
+set_global_assignment -name SYSTEMVERILOG_FILE Ripple_carry_adder32.sv
+set_global_assignment -name SYSTEMVERILOG_FILE Full_substractor32.sv
+set_global_assignment -name SYSTEMVERILOG_FILE Multiplicacion32.sv
+set_global_assignment -name EDA_TEST_BENCH_FILE tb.sv -section_id tb
+set_global_assignment -name EDA_TEST_BENCH_FILE tb2.sv -section_id tb2
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top

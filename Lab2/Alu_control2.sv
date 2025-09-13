@@ -1,20 +1,17 @@
-module Alu_control2
-	 #(parameter width = 4)(
-    input  logic [width-1:0] A,
-    input  logic [width-1:0] B,
+module Alu_control2(
+    input  logic [31:0] A,
+    input  logic [31:0] B,
     input  logic [3:0] op,
-    output logic [width-1:0] Y,
+    output logic [31:0] Y,
     output logic N,
     output logic Z,
     output logic C,
     output logic V
 );
 
-    // Salidas individuales de cada módulo (todas con "width" bits)
-    logic [width-1:0] y_sum, y_sub, y_mult, y_div, y_mod;
-    logic [width-1:0] y_and, y_or, y_xor, y_shiftl, y_shiftr;
+    // Salidas individuales de cada módulo
+    logic [31:0] y_sum, y_sub, y_mult, y_div, y_mod, y_and, y_or, y_xor, y_shiftl, y_shiftr;
 
-    // Flags
     logic z_sum, n_sum, c_sum, v_sum;
 	 
     logic z_sub, n_sub, c_sub, v_sub;
@@ -36,26 +33,27 @@ module Alu_control2
     logic z_shiftr, n_shiftr, c_shiftr, v_shiftr;
 	 
 
-    // Instancias (deben aceptar width como parámetro también)
-    Ripple_carry_adder4 #(width) suma (.A(A), .B(B), .Cin(1'b0), .Sum(y_sum), .N(n_sum), .Z(z_sum), .C(c_sum), .V(v_sum));
+    // Se instancia todo
+	 
+    Ripple_carry_adder32 suma (.A(A), .B(B), .Cin(1'b0), .Sum(y_sum), .N(n_sum), .Z(z_sum), .C(c_sum), .V(v_sum));
 
-    Full_subtractor4 #(width) suba (.A(A), .B(B), .Cin(1'b0), .Sub(y_sub), .N(n_sub), .Z(z_sub), .C(c_sub), .V(v_sub));
+    Full_subtractor32 suba (.A(A), .B(B), .Cin(1'b0), .Sub(y_sub), .N(n_sub), .Z(z_sub), .C(c_sub), .V(v_sub));
 
-    Multiplicacion #(width) multi (.A(A), .B(B), .P(y_mult), .N(n_mult), .Z(z_mult), .C(c_mult), .V(v_mult));
+    Multiplicacion32 multi (.A(A), .B(B), .P(y_mult), .N(n_mult), .Z(z_mult), .C(c_mult), .V(v_mult));
 
-    Division #(width) diva (.a(A), .b(B), .y(y_div), .N(n_div), .Z(z_div), .C(c_div), .V(v_div));
+    Division #(31) diva (.a(A), .b(B), .y(y_div), .N(n_div), .Z(z_div), .C(c_div), .V(v_div));
 
-    Modulo #(width) moda (.a(A), .b(B), .y(y_mod), .N(n_mod), .Z(z_mod), .C(c_mod), .V(v_mod));
+    Modulo #(31) moda (.a(A), .b(B), .y(y_mod), .N(n_mod), .Z(z_mod), .C(c_mod), .V(v_mod));
 
-    AND_gate #(width) anda (.a(A), .b(B), .y(y_and), .N(n_and), .Z(z_and), .C(c_and), .V(v_and));
+    AND_gate #(31) anda (.a(A), .b(B), .y(y_and), .N(n_and), .Z(z_and), .C(c_and), .V(v_and));
 
-    OR_gate #(width) ora (.a(A), .b(B), .y(y_or), .N(n_or), .Z(z_or), .C(c_or), .V(v_or));
+    OR_gate #(31) ora (.a(A), .b(B), .y(y_or), .N(n_or), .Z(z_or), .C(c_or), .V(v_or));
 
-    XOR_gate #(width) xora (.a(A), .b(B), .y(y_xor), .N(n_xor), .Z(z_xor), .C(c_xor), .V(v_xor));
+    XOR_gate #(31) xora (.a(A), .b(B), .y(y_xor), .N(n_xor), .Z(z_xor), .C(c_xor), .V(v_xor));
 
-    shift_left #(width) shiftl (.a(A), .b(B), .y(y_shiftl), .N(n_shiftl), .Z(z_shiftl), .C(c_shiftl), .V(v_shiftl));
+    shift_left #(31) shiftl (.a(A), .b(B), .y(y_shiftl), .N(n_shiftl), .Z(z_shiftl), .C(c_shiftl), .V(v_shiftl));
 
-    shift_right #(width) shiftr (.a(A), .b(B), .y(y_shiftr), .N(n_shiftr), .Z(z_shiftr), .C(c_shiftr), .V(v_shiftr));
+    shift_right #(31) shiftr (.a(A), .b(B), .y(y_shiftr), .N(n_shiftr), .Z(z_shiftr), .C(c_shiftr), .V(v_shiftr));
 
     // Selectores
     logic sel_sum, sel_sub, sel_mult, sel_div, sel_mod, sel_and, sel_or, sel_xor, sel_shiftl, sel_shiftr;
@@ -74,7 +72,7 @@ module Alu_control2
     // Selección de Y con un loop
     genvar i;
     generate
-      for (i = 0; i < width; i++) begin: loop
+      for (i = 0; i < 32; i++) begin: loop
         assign Y[i] =
              (y_sum[i] & sel_sum)    |
              (y_sub[i] & sel_sub)    |
