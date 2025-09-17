@@ -27,8 +27,8 @@ module tb2;
 	 
 
     // Probamos algunos valores
-    A = 32'd0;
-	 B = 32'd1;
+    A = 32'd2730;
+	 B = 32'd341;
 	 
 	 @(posedge clk);
 	

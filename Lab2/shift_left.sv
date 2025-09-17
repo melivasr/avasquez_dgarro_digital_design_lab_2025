@@ -8,15 +8,15 @@ module shift_left
    output logic C,
    output logic V
 );				
-	logic [width-1:0] temp;
+	logic [width:0] temp;
 	
-	assign temp = {a, 1'b0} << b;
+	assign temp = {1'b0, a} << b;
 	
-	assign y = temp[width-1:1];
+	assign y = temp[width-1:0];
 	
-   assign N    = y[3];                // MSB
+   assign N    = y[width-1];                // MSB
    assign Z    = (y == 4'd0);         // Si todos son 0
-	assign C    = temp[0];             // último bit que salió a la izquierda
+	assign C    = temp[width];             // último bit que salió a la izquierda
    assign V    = 1'b0;                // no tiene 
 	
 	
