@@ -1,0 +1,1182 @@
+# Reading pref.tcl
+# do ALU_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -sv -work work +incdir+F:/Proyectos\ Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2 {F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/XOR.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:51:26 on Sep 17,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2" F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/XOR.sv 
+# -- Compiling module XOR_gate
+# 
+# Top level modules:
+# 	XOR_gate
+# End time: 01:51:26 on Sep 17,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+F:/Proyectos\ Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2 {F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/AND.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:51:26 on Sep 17,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2" F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/AND.sv 
+# -- Compiling module AND_gate
+# 
+# Top level modules:
+# 	AND_gate
+# End time: 01:51:26 on Sep 17,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+F:/Proyectos\ Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2 {F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/OR.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:51:27 on Sep 17,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2" F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/OR.sv 
+# -- Compiling module OR_gate
+# 
+# Top level modules:
+# 	OR_gate
+# End time: 01:51:27 on Sep 17,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+F:/Proyectos\ Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2 {F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:51:27 on Sep 17,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2" F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv 
+# -- Compiling module Full_Adder
+# 
+# Top level modules:
+# 	Full_Adder
+# End time: 01:51:27 on Sep 17,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+F:/Proyectos\ Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2 {F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:51:27 on Sep 17,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2" F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv 
+# -- Compiling module Full_Substractor
+# 
+# Top level modules:
+# 	Full_Substractor
+# End time: 01:51:27 on Sep 17,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+F:/Proyectos\ Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2 {F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/NOT.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:51:27 on Sep 17,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2" F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/NOT.sv 
+# -- Compiling module NOT_gate
+# 
+# Top level modules:
+# 	NOT_gate
+# End time: 01:51:27 on Sep 17,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+F:/Proyectos\ Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2 {F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Division.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:51:27 on Sep 17,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2" F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Division.sv 
+# -- Compiling module Division
+# 
+# Top level modules:
+# 	Division
+# End time: 01:51:27 on Sep 17,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+F:/Proyectos\ Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2 {F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Ripple_carry_adder4.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:51:27 on Sep 17,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2" F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Ripple_carry_adder4.sv 
+# -- Compiling module Ripple_carry_adder4
+# 
+# Top level modules:
+# 	Ripple_carry_adder4
+# End time: 01:51:27 on Sep 17,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+F:/Proyectos\ Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2 {F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/ALU.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:51:27 on Sep 17,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2" F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/ALU.sv 
+# -- Compiling module ALU
+# 
+# Top level modules:
+# 	ALU
+# End time: 01:51:27 on Sep 17,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+F:/Proyectos\ Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2 {F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_subtractor4.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:51:27 on Sep 17,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2" F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_subtractor4.sv 
+# -- Compiling module Full_subtractor4
+# 
+# Top level modules:
+# 	Full_subtractor4
+# End time: 01:51:27 on Sep 17,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+F:/Proyectos\ Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2 {F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/shift_left.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:51:27 on Sep 17,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2" F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/shift_left.sv 
+# -- Compiling module shift_left
+# 
+# Top level modules:
+# 	shift_left
+# End time: 01:51:27 on Sep 17,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+F:/Proyectos\ Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2 {F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/shift_right.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:51:27 on Sep 17,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2" F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/shift_right.sv 
+# -- Compiling module shift_right
+# 
+# Top level modules:
+# 	shift_right
+# End time: 01:51:27 on Sep 17,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+F:/Proyectos\ Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2 {F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Modulo.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:51:27 on Sep 17,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2" F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Modulo.sv 
+# -- Compiling module Modulo
+# 
+# Top level modules:
+# 	Modulo
+# End time: 01:51:28 on Sep 17,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+F:/Proyectos\ Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2 {F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/7seg_display.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:51:28 on Sep 17,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2" F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/7seg_display.sv 
+# -- Compiling module seg7_display
+# 
+# Top level modules:
+# 	seg7_display
+# End time: 01:51:28 on Sep 17,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+F:/Proyectos\ Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2 {F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Alu_control.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:51:28 on Sep 17,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2" F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Alu_control.sv 
+# -- Compiling module Alu_control
+# 
+# Top level modules:
+# 	Alu_control
+# End time: 01:51:28 on Sep 17,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+F:/Proyectos\ Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2 {F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Multiplicacion.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:51:28 on Sep 17,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2" F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Multiplicacion.sv 
+# -- Compiling module Multiplicacion
+# 
+# Top level modules:
+# 	Multiplicacion
+# End time: 01:51:28 on Sep 17,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -sv -work work +incdir+F:/Proyectos\ Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2 {F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/tb.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:51:28 on Sep 17,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2" F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/tb.sv 
+# -- Compiling module tb
+# 
+# Top level modules:
+# 	tb
+# End time: 01:51:28 on Sep 17,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  tb
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" tb 
+# Start time: 01:51:28 on Sep 17,2025
+# Loading sv_std.std
+# Loading work.tb
+# Loading work.Alu_control
+# Loading work.Ripple_carry_adder4
+# Loading work.Full_Adder
+# Loading work.XOR_gate
+# Loading work.AND_gate
+# Loading work.OR_gate
+# Loading work.Full_subtractor4
+# Loading work.Full_Substractor
+# Loading work.NOT_gate
+# Loading work.Multiplicacion
+# Loading work.Division
+# Loading work.Modulo
+# Loading work.shift_left
+# Loading work.shift_right
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'suma'.  Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/suma File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Alu_control.sv Line: 37
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Alu_control.sv(37): [TFMPC] - Missing connection for port 'Cout'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'xora'.  Expected 7, found 3.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/suma/a0/xora File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 12
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'a'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/XOR.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/suma/a0/xora File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 12
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'b'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/XOR.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/suma/a0/xora File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 12
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'y'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/XOR.sv(5).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/suma/a0/xora File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 12
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(12): [TFMPC] - Missing connection for port 'N'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(12): [TFMPC] - Missing connection for port 'Z'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(12): [TFMPC] - Missing connection for port 'C'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(12): [TFMPC] - Missing connection for port 'V'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'xorb'.  Expected 7, found 3.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/suma/a0/xorb File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 14
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'a'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/XOR.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/suma/a0/xorb File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 14
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'b'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/XOR.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/suma/a0/xorb File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 14
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'y'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/XOR.sv(5).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/suma/a0/xorb File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 14
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(14): [TFMPC] - Missing connection for port 'N'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(14): [TFMPC] - Missing connection for port 'Z'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(14): [TFMPC] - Missing connection for port 'C'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(14): [TFMPC] - Missing connection for port 'V'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'anda'.  Expected 7, found 3.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/suma/a0/anda File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 22
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'a'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/AND.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/suma/a0/anda File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 22
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'b'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/AND.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/suma/a0/anda File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 22
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'y'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/AND.sv(5).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/suma/a0/anda File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 22
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(22): [TFMPC] - Missing connection for port 'N'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(22): [TFMPC] - Missing connection for port 'Z'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(22): [TFMPC] - Missing connection for port 'C'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(22): [TFMPC] - Missing connection for port 'V'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'andb'.  Expected 7, found 3.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/suma/a0/andb File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 24
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'a'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/AND.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/suma/a0/andb File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 24
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'b'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/AND.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/suma/a0/andb File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 24
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'y'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/AND.sv(5).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/suma/a0/andb File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 24
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(24): [TFMPC] - Missing connection for port 'N'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(24): [TFMPC] - Missing connection for port 'Z'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(24): [TFMPC] - Missing connection for port 'C'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(24): [TFMPC] - Missing connection for port 'V'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'ora'.  Expected 7, found 3.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/suma/a0/ora File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 26
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'a'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/OR.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/suma/a0/ora File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 26
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'b'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/OR.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/suma/a0/ora File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 26
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'y'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/OR.sv(5).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/suma/a0/ora File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 26
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(26): [TFMPC] - Missing connection for port 'N'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(26): [TFMPC] - Missing connection for port 'Z'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(26): [TFMPC] - Missing connection for port 'C'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(26): [TFMPC] - Missing connection for port 'V'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'xora'.  Expected 7, found 3.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/suma/a1/xora File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 12
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'a'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/XOR.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/suma/a1/xora File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 12
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'b'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/XOR.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/suma/a1/xora File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 12
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'y'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/XOR.sv(5).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/suma/a1/xora File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 12
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(12): [TFMPC] - Missing connection for port 'N'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(12): [TFMPC] - Missing connection for port 'Z'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(12): [TFMPC] - Missing connection for port 'C'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(12): [TFMPC] - Missing connection for port 'V'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'xorb'.  Expected 7, found 3.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/suma/a1/xorb File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 14
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'a'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/XOR.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/suma/a1/xorb File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 14
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'b'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/XOR.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/suma/a1/xorb File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 14
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'y'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/XOR.sv(5).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/suma/a1/xorb File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 14
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(14): [TFMPC] - Missing connection for port 'N'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(14): [TFMPC] - Missing connection for port 'Z'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(14): [TFMPC] - Missing connection for port 'C'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(14): [TFMPC] - Missing connection for port 'V'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'anda'.  Expected 7, found 3.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/suma/a1/anda File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 22
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'a'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/AND.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/suma/a1/anda File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 22
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'b'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/AND.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/suma/a1/anda File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 22
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'y'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/AND.sv(5).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/suma/a1/anda File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 22
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(22): [TFMPC] - Missing connection for port 'N'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(22): [TFMPC] - Missing connection for port 'Z'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(22): [TFMPC] - Missing connection for port 'C'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(22): [TFMPC] - Missing connection for port 'V'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'andb'.  Expected 7, found 3.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/suma/a1/andb File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 24
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'a'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/AND.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/suma/a1/andb File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 24
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'b'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/AND.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/suma/a1/andb File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 24
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'y'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/AND.sv(5).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/suma/a1/andb File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 24
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(24): [TFMPC] - Missing connection for port 'N'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(24): [TFMPC] - Missing connection for port 'Z'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(24): [TFMPC] - Missing connection for port 'C'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(24): [TFMPC] - Missing connection for port 'V'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'ora'.  Expected 7, found 3.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/suma/a1/ora File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 26
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'a'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/OR.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/suma/a1/ora File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 26
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'b'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/OR.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/suma/a1/ora File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 26
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'y'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/OR.sv(5).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/suma/a1/ora File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 26
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(26): [TFMPC] - Missing connection for port 'N'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(26): [TFMPC] - Missing connection for port 'Z'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(26): [TFMPC] - Missing connection for port 'C'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(26): [TFMPC] - Missing connection for port 'V'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'xora'.  Expected 7, found 3.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/suma/a2/xora File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 12
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'a'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/XOR.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/suma/a2/xora File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 12
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'b'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/XOR.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/suma/a2/xora File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 12
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'y'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/XOR.sv(5).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/suma/a2/xora File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 12
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(12): [TFMPC] - Missing connection for port 'N'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(12): [TFMPC] - Missing connection for port 'Z'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(12): [TFMPC] - Missing connection for port 'C'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(12): [TFMPC] - Missing connection for port 'V'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'xorb'.  Expected 7, found 3.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/suma/a2/xorb File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 14
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'a'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/XOR.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/suma/a2/xorb File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 14
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'b'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/XOR.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/suma/a2/xorb File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 14
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'y'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/XOR.sv(5).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/suma/a2/xorb File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 14
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(14): [TFMPC] - Missing connection for port 'N'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(14): [TFMPC] - Missing connection for port 'Z'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(14): [TFMPC] - Missing connection for port 'C'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(14): [TFMPC] - Missing connection for port 'V'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'anda'.  Expected 7, found 3.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/suma/a2/anda File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 22
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'a'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/AND.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/suma/a2/anda File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 22
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'b'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/AND.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/suma/a2/anda File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 22
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'y'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/AND.sv(5).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/suma/a2/anda File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 22
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(22): [TFMPC] - Missing connection for port 'N'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(22): [TFMPC] - Missing connection for port 'Z'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(22): [TFMPC] - Missing connection for port 'C'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(22): [TFMPC] - Missing connection for port 'V'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'andb'.  Expected 7, found 3.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/suma/a2/andb File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 24
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'a'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/AND.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/suma/a2/andb File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 24
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'b'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/AND.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/suma/a2/andb File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 24
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'y'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/AND.sv(5).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/suma/a2/andb File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 24
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(24): [TFMPC] - Missing connection for port 'N'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(24): [TFMPC] - Missing connection for port 'Z'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(24): [TFMPC] - Missing connection for port 'C'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(24): [TFMPC] - Missing connection for port 'V'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'ora'.  Expected 7, found 3.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/suma/a2/ora File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 26
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'a'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/OR.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/suma/a2/ora File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 26
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'b'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/OR.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/suma/a2/ora File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 26
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'y'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/OR.sv(5).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/suma/a2/ora File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 26
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(26): [TFMPC] - Missing connection for port 'N'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(26): [TFMPC] - Missing connection for port 'Z'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(26): [TFMPC] - Missing connection for port 'C'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(26): [TFMPC] - Missing connection for port 'V'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'xora'.  Expected 7, found 3.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/suma/a3/xora File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 12
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'a'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/XOR.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/suma/a3/xora File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 12
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'b'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/XOR.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/suma/a3/xora File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 12
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'y'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/XOR.sv(5).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/suma/a3/xora File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 12
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(12): [TFMPC] - Missing connection for port 'N'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(12): [TFMPC] - Missing connection for port 'Z'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(12): [TFMPC] - Missing connection for port 'C'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(12): [TFMPC] - Missing connection for port 'V'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'xorb'.  Expected 7, found 3.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/suma/a3/xorb File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 14
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'a'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/XOR.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/suma/a3/xorb File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 14
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'b'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/XOR.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/suma/a3/xorb File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 14
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'y'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/XOR.sv(5).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/suma/a3/xorb File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 14
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(14): [TFMPC] - Missing connection for port 'N'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(14): [TFMPC] - Missing connection for port 'Z'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(14): [TFMPC] - Missing connection for port 'C'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(14): [TFMPC] - Missing connection for port 'V'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'anda'.  Expected 7, found 3.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/suma/a3/anda File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 22
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'a'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/AND.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/suma/a3/anda File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 22
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'b'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/AND.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/suma/a3/anda File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 22
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'y'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/AND.sv(5).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/suma/a3/anda File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 22
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(22): [TFMPC] - Missing connection for port 'N'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(22): [TFMPC] - Missing connection for port 'Z'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(22): [TFMPC] - Missing connection for port 'C'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(22): [TFMPC] - Missing connection for port 'V'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'andb'.  Expected 7, found 3.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/suma/a3/andb File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 24
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'a'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/AND.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/suma/a3/andb File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 24
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'b'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/AND.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/suma/a3/andb File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 24
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'y'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/AND.sv(5).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/suma/a3/andb File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 24
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(24): [TFMPC] - Missing connection for port 'N'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(24): [TFMPC] - Missing connection for port 'Z'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(24): [TFMPC] - Missing connection for port 'C'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(24): [TFMPC] - Missing connection for port 'V'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'ora'.  Expected 7, found 3.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/suma/a3/ora File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 26
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'a'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/OR.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/suma/a3/ora File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 26
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'b'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/OR.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/suma/a3/ora File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 26
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'y'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/OR.sv(5).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/suma/a3/ora File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 26
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(26): [TFMPC] - Missing connection for port 'N'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(26): [TFMPC] - Missing connection for port 'Z'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(26): [TFMPC] - Missing connection for port 'C'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(26): [TFMPC] - Missing connection for port 'V'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'suba'.  Expected 9, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/suba File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Alu_control.sv Line: 39
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Alu_control.sv(39): [TFMPC] - Missing connection for port 'Cout'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'xora'.  Expected 7, found 3.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/suba/s0/xora File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv Line: 12
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'a'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/XOR.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/suba/s0/xora File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv Line: 12
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'b'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/XOR.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/suba/s0/xora File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv Line: 12
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'y'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/XOR.sv(5).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/suba/s0/xora File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv Line: 12
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv(12): [TFMPC] - Missing connection for port 'N'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv(12): [TFMPC] - Missing connection for port 'Z'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv(12): [TFMPC] - Missing connection for port 'C'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv(12): [TFMPC] - Missing connection for port 'V'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'xorb'.  Expected 7, found 3.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/suba/s0/xorb File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv Line: 14
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'a'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/XOR.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/suba/s0/xorb File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv Line: 14
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'b'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/XOR.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/suba/s0/xorb File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv Line: 14
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'y'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/XOR.sv(5).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/suba/s0/xorb File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv Line: 14
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv(14): [TFMPC] - Missing connection for port 'N'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv(14): [TFMPC] - Missing connection for port 'Z'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv(14): [TFMPC] - Missing connection for port 'C'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv(14): [TFMPC] - Missing connection for port 'V'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'anda'.  Expected 7, found 3.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/suba/s0/anda File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv Line: 26
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'a'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/AND.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/suba/s0/anda File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv Line: 26
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'b'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/AND.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/suba/s0/anda File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv Line: 26
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'y'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/AND.sv(5).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/suba/s0/anda File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv Line: 26
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv(26): [TFMPC] - Missing connection for port 'N'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv(26): [TFMPC] - Missing connection for port 'Z'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv(26): [TFMPC] - Missing connection for port 'C'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv(26): [TFMPC] - Missing connection for port 'V'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'andb'.  Expected 7, found 3.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/suba/s0/andb File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv Line: 28
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'a'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/AND.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/suba/s0/andb File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv Line: 28
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'b'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/AND.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/suba/s0/andb File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv Line: 28
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'y'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/AND.sv(5).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/suba/s0/andb File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv Line: 28
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv(28): [TFMPC] - Missing connection for port 'N'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv(28): [TFMPC] - Missing connection for port 'Z'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv(28): [TFMPC] - Missing connection for port 'C'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv(28): [TFMPC] - Missing connection for port 'V'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'or1'.  Expected 7, found 3.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/suba/s0/or1 File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv Line: 30
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'a'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/OR.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/suba/s0/or1 File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv Line: 30
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'b'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/OR.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/suba/s0/or1 File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv Line: 30
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'y'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/OR.sv(5).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/suba/s0/or1 File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv Line: 30
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv(30): [TFMPC] - Missing connection for port 'N'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv(30): [TFMPC] - Missing connection for port 'Z'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv(30): [TFMPC] - Missing connection for port 'C'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv(30): [TFMPC] - Missing connection for port 'V'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'xora'.  Expected 7, found 3.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/suba/s1/xora File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv Line: 12
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'a'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/XOR.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/suba/s1/xora File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv Line: 12
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'b'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/XOR.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/suba/s1/xora File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv Line: 12
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'y'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/XOR.sv(5).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/suba/s1/xora File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv Line: 12
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv(12): [TFMPC] - Missing connection for port 'N'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv(12): [TFMPC] - Missing connection for port 'Z'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv(12): [TFMPC] - Missing connection for port 'C'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv(12): [TFMPC] - Missing connection for port 'V'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'xorb'.  Expected 7, found 3.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/suba/s1/xorb File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv Line: 14
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'a'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/XOR.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/suba/s1/xorb File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv Line: 14
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'b'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/XOR.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/suba/s1/xorb File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv Line: 14
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'y'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/XOR.sv(5).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/suba/s1/xorb File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv Line: 14
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv(14): [TFMPC] - Missing connection for port 'N'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv(14): [TFMPC] - Missing connection for port 'Z'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv(14): [TFMPC] - Missing connection for port 'C'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv(14): [TFMPC] - Missing connection for port 'V'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'anda'.  Expected 7, found 3.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/suba/s1/anda File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv Line: 26
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'a'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/AND.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/suba/s1/anda File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv Line: 26
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'b'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/AND.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/suba/s1/anda File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv Line: 26
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'y'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/AND.sv(5).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/suba/s1/anda File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv Line: 26
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv(26): [TFMPC] - Missing connection for port 'N'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv(26): [TFMPC] - Missing connection for port 'Z'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv(26): [TFMPC] - Missing connection for port 'C'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv(26): [TFMPC] - Missing connection for port 'V'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'andb'.  Expected 7, found 3.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/suba/s1/andb File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv Line: 28
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'a'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/AND.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/suba/s1/andb File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv Line: 28
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'b'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/AND.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/suba/s1/andb File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv Line: 28
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'y'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/AND.sv(5).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/suba/s1/andb File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv Line: 28
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv(28): [TFMPC] - Missing connection for port 'N'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv(28): [TFMPC] - Missing connection for port 'Z'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv(28): [TFMPC] - Missing connection for port 'C'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv(28): [TFMPC] - Missing connection for port 'V'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'or1'.  Expected 7, found 3.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/suba/s1/or1 File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv Line: 30
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'a'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/OR.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/suba/s1/or1 File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv Line: 30
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'b'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/OR.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/suba/s1/or1 File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv Line: 30
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'y'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/OR.sv(5).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/suba/s1/or1 File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv Line: 30
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv(30): [TFMPC] - Missing connection for port 'N'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv(30): [TFMPC] - Missing connection for port 'Z'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv(30): [TFMPC] - Missing connection for port 'C'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv(30): [TFMPC] - Missing connection for port 'V'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'xora'.  Expected 7, found 3.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/suba/s2/xora File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv Line: 12
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'a'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/XOR.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/suba/s2/xora File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv Line: 12
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'b'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/XOR.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/suba/s2/xora File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv Line: 12
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'y'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/XOR.sv(5).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/suba/s2/xora File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv Line: 12
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv(12): [TFMPC] - Missing connection for port 'N'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv(12): [TFMPC] - Missing connection for port 'Z'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv(12): [TFMPC] - Missing connection for port 'C'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv(12): [TFMPC] - Missing connection for port 'V'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'xorb'.  Expected 7, found 3.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/suba/s2/xorb File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv Line: 14
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'a'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/XOR.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/suba/s2/xorb File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv Line: 14
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'b'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/XOR.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/suba/s2/xorb File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv Line: 14
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'y'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/XOR.sv(5).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/suba/s2/xorb File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv Line: 14
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv(14): [TFMPC] - Missing connection for port 'N'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv(14): [TFMPC] - Missing connection for port 'Z'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv(14): [TFMPC] - Missing connection for port 'C'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv(14): [TFMPC] - Missing connection for port 'V'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'anda'.  Expected 7, found 3.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/suba/s2/anda File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv Line: 26
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'a'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/AND.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/suba/s2/anda File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv Line: 26
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'b'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/AND.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/suba/s2/anda File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv Line: 26
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'y'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/AND.sv(5).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/suba/s2/anda File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv Line: 26
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv(26): [TFMPC] - Missing connection for port 'N'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv(26): [TFMPC] - Missing connection for port 'Z'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv(26): [TFMPC] - Missing connection for port 'C'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv(26): [TFMPC] - Missing connection for port 'V'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'andb'.  Expected 7, found 3.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/suba/s2/andb File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv Line: 28
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'a'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/AND.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/suba/s2/andb File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv Line: 28
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'b'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/AND.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/suba/s2/andb File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv Line: 28
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'y'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/AND.sv(5).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/suba/s2/andb File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv Line: 28
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv(28): [TFMPC] - Missing connection for port 'N'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv(28): [TFMPC] - Missing connection for port 'Z'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv(28): [TFMPC] - Missing connection for port 'C'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv(28): [TFMPC] - Missing connection for port 'V'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'or1'.  Expected 7, found 3.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/suba/s2/or1 File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv Line: 30
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'a'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/OR.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/suba/s2/or1 File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv Line: 30
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'b'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/OR.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/suba/s2/or1 File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv Line: 30
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'y'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/OR.sv(5).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/suba/s2/or1 File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv Line: 30
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv(30): [TFMPC] - Missing connection for port 'N'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv(30): [TFMPC] - Missing connection for port 'Z'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv(30): [TFMPC] - Missing connection for port 'C'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv(30): [TFMPC] - Missing connection for port 'V'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'xora'.  Expected 7, found 3.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/suba/s3/xora File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv Line: 12
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'a'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/XOR.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/suba/s3/xora File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv Line: 12
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'b'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/XOR.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/suba/s3/xora File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv Line: 12
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'y'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/XOR.sv(5).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/suba/s3/xora File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv Line: 12
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv(12): [TFMPC] - Missing connection for port 'N'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv(12): [TFMPC] - Missing connection for port 'Z'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv(12): [TFMPC] - Missing connection for port 'C'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv(12): [TFMPC] - Missing connection for port 'V'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'xorb'.  Expected 7, found 3.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/suba/s3/xorb File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv Line: 14
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'a'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/XOR.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/suba/s3/xorb File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv Line: 14
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'b'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/XOR.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/suba/s3/xorb File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv Line: 14
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'y'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/XOR.sv(5).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/suba/s3/xorb File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv Line: 14
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv(14): [TFMPC] - Missing connection for port 'N'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv(14): [TFMPC] - Missing connection for port 'Z'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv(14): [TFMPC] - Missing connection for port 'C'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv(14): [TFMPC] - Missing connection for port 'V'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'anda'.  Expected 7, found 3.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/suba/s3/anda File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv Line: 26
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'a'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/AND.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/suba/s3/anda File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv Line: 26
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'b'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/AND.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/suba/s3/anda File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv Line: 26
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'y'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/AND.sv(5).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/suba/s3/anda File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv Line: 26
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv(26): [TFMPC] - Missing connection for port 'N'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv(26): [TFMPC] - Missing connection for port 'Z'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv(26): [TFMPC] - Missing connection for port 'C'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv(26): [TFMPC] - Missing connection for port 'V'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'andb'.  Expected 7, found 3.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/suba/s3/andb File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv Line: 28
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'a'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/AND.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/suba/s3/andb File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv Line: 28
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'b'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/AND.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/suba/s3/andb File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv Line: 28
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'y'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/AND.sv(5).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/suba/s3/andb File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv Line: 28
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv(28): [TFMPC] - Missing connection for port 'N'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv(28): [TFMPC] - Missing connection for port 'Z'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv(28): [TFMPC] - Missing connection for port 'C'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv(28): [TFMPC] - Missing connection for port 'V'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'or1'.  Expected 7, found 3.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/suba/s3/or1 File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv Line: 30
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'a'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/OR.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/suba/s3/or1 File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv Line: 30
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'b'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/OR.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/suba/s3/or1 File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv Line: 30
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'y'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/OR.sv(5).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/suba/s3/or1 File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv Line: 30
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv(30): [TFMPC] - Missing connection for port 'N'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv(30): [TFMPC] - Missing connection for port 'Z'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv(30): [TFMPC] - Missing connection for port 'C'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Substractor.sv(30): [TFMPC] - Missing connection for port 'V'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'and0'.  Expected 7, found 3.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/multi/and0 File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Multiplicacion.sv Line: 16
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'a'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/AND.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/multi/and0 File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Multiplicacion.sv Line: 16
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'b'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/AND.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/multi/and0 File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Multiplicacion.sv Line: 16
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'y'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/AND.sv(5).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/multi/and0 File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Multiplicacion.sv Line: 16
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Multiplicacion.sv(16): [TFMPC] - Missing connection for port 'N'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Multiplicacion.sv(16): [TFMPC] - Missing connection for port 'Z'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Multiplicacion.sv(16): [TFMPC] - Missing connection for port 'C'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Multiplicacion.sv(16): [TFMPC] - Missing connection for port 'V'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'and1'.  Expected 7, found 3.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/multi/and1 File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Multiplicacion.sv Line: 19
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'a'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/AND.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/multi/and1 File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Multiplicacion.sv Line: 19
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'b'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/AND.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/multi/and1 File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Multiplicacion.sv Line: 19
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'y'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/AND.sv(5).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/multi/and1 File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Multiplicacion.sv Line: 19
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Multiplicacion.sv(19): [TFMPC] - Missing connection for port 'N'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Multiplicacion.sv(19): [TFMPC] - Missing connection for port 'Z'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Multiplicacion.sv(19): [TFMPC] - Missing connection for port 'C'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Multiplicacion.sv(19): [TFMPC] - Missing connection for port 'V'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'and2'.  Expected 7, found 3.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/multi/and2 File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Multiplicacion.sv Line: 20
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'a'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/AND.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/multi/and2 File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Multiplicacion.sv Line: 20
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'b'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/AND.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/multi/and2 File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Multiplicacion.sv Line: 20
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'y'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/AND.sv(5).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/multi/and2 File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Multiplicacion.sv Line: 20
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Multiplicacion.sv(20): [TFMPC] - Missing connection for port 'N'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Multiplicacion.sv(20): [TFMPC] - Missing connection for port 'Z'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Multiplicacion.sv(20): [TFMPC] - Missing connection for port 'C'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Multiplicacion.sv(20): [TFMPC] - Missing connection for port 'V'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'and3'.  Expected 7, found 3.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/multi/and3 File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Multiplicacion.sv Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'a'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/AND.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/multi/and3 File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Multiplicacion.sv Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'b'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/AND.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/multi/and3 File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Multiplicacion.sv Line: 23
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'y'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/AND.sv(5).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/multi/and3 File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Multiplicacion.sv Line: 23
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Multiplicacion.sv(23): [TFMPC] - Missing connection for port 'N'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Multiplicacion.sv(23): [TFMPC] - Missing connection for port 'Z'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Multiplicacion.sv(23): [TFMPC] - Missing connection for port 'C'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Multiplicacion.sv(23): [TFMPC] - Missing connection for port 'V'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'and4'.  Expected 7, found 3.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/multi/and4 File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Multiplicacion.sv Line: 24
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'a'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/AND.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/multi/and4 File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Multiplicacion.sv Line: 24
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'b'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/AND.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/multi/and4 File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Multiplicacion.sv Line: 24
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'y'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/AND.sv(5).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/multi/and4 File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Multiplicacion.sv Line: 24
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Multiplicacion.sv(24): [TFMPC] - Missing connection for port 'N'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Multiplicacion.sv(24): [TFMPC] - Missing connection for port 'Z'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Multiplicacion.sv(24): [TFMPC] - Missing connection for port 'C'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Multiplicacion.sv(24): [TFMPC] - Missing connection for port 'V'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'and5'.  Expected 7, found 3.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/multi/and5 File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Multiplicacion.sv Line: 25
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'a'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/AND.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/multi/and5 File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Multiplicacion.sv Line: 25
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'b'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/AND.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/multi/and5 File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Multiplicacion.sv Line: 25
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'y'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/AND.sv(5).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/multi/and5 File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Multiplicacion.sv Line: 25
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Multiplicacion.sv(25): [TFMPC] - Missing connection for port 'N'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Multiplicacion.sv(25): [TFMPC] - Missing connection for port 'Z'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Multiplicacion.sv(25): [TFMPC] - Missing connection for port 'C'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Multiplicacion.sv(25): [TFMPC] - Missing connection for port 'V'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'and6'.  Expected 7, found 3.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/multi/and6 File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Multiplicacion.sv Line: 28
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'a'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/AND.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/multi/and6 File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Multiplicacion.sv Line: 28
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'b'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/AND.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/multi/and6 File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Multiplicacion.sv Line: 28
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'y'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/AND.sv(5).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/multi/and6 File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Multiplicacion.sv Line: 28
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Multiplicacion.sv(28): [TFMPC] - Missing connection for port 'N'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Multiplicacion.sv(28): [TFMPC] - Missing connection for port 'Z'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Multiplicacion.sv(28): [TFMPC] - Missing connection for port 'C'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Multiplicacion.sv(28): [TFMPC] - Missing connection for port 'V'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'and7'.  Expected 7, found 3.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/multi/and7 File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Multiplicacion.sv Line: 29
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'a'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/AND.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/multi/and7 File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Multiplicacion.sv Line: 29
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'b'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/AND.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/multi/and7 File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Multiplicacion.sv Line: 29
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'y'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/AND.sv(5).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/multi/and7 File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Multiplicacion.sv Line: 29
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Multiplicacion.sv(29): [TFMPC] - Missing connection for port 'N'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Multiplicacion.sv(29): [TFMPC] - Missing connection for port 'Z'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Multiplicacion.sv(29): [TFMPC] - Missing connection for port 'C'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Multiplicacion.sv(29): [TFMPC] - Missing connection for port 'V'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'and8'.  Expected 7, found 3.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/multi/and8 File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Multiplicacion.sv Line: 30
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'a'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/AND.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/multi/and8 File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Multiplicacion.sv Line: 30
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'b'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/AND.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/multi/and8 File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Multiplicacion.sv Line: 30
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'y'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/AND.sv(5).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/multi/and8 File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Multiplicacion.sv Line: 30
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Multiplicacion.sv(30): [TFMPC] - Missing connection for port 'N'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Multiplicacion.sv(30): [TFMPC] - Missing connection for port 'Z'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Multiplicacion.sv(30): [TFMPC] - Missing connection for port 'C'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Multiplicacion.sv(30): [TFMPC] - Missing connection for port 'V'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'and9'.  Expected 7, found 3.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/multi/and9 File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Multiplicacion.sv Line: 31
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'a'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/AND.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/multi/and9 File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Multiplicacion.sv Line: 31
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'b'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/AND.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/multi/and9 File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Multiplicacion.sv Line: 31
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'y'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/AND.sv(5).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/multi/and9 File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Multiplicacion.sv Line: 31
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Multiplicacion.sv(31): [TFMPC] - Missing connection for port 'N'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Multiplicacion.sv(31): [TFMPC] - Missing connection for port 'Z'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Multiplicacion.sv(31): [TFMPC] - Missing connection for port 'C'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Multiplicacion.sv(31): [TFMPC] - Missing connection for port 'V'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'xora'.  Expected 7, found 3.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/multi/fa1/xora File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 12
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'a'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/XOR.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/multi/fa1/xora File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 12
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'b'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/XOR.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/multi/fa1/xora File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 12
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'y'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/XOR.sv(5).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/multi/fa1/xora File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 12
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(12): [TFMPC] - Missing connection for port 'N'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(12): [TFMPC] - Missing connection for port 'Z'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(12): [TFMPC] - Missing connection for port 'C'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(12): [TFMPC] - Missing connection for port 'V'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'xorb'.  Expected 7, found 3.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/multi/fa1/xorb File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 14
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'a'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/XOR.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/multi/fa1/xorb File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 14
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'b'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/XOR.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/multi/fa1/xorb File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 14
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'y'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/XOR.sv(5).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/multi/fa1/xorb File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 14
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(14): [TFMPC] - Missing connection for port 'N'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(14): [TFMPC] - Missing connection for port 'Z'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(14): [TFMPC] - Missing connection for port 'C'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(14): [TFMPC] - Missing connection for port 'V'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'anda'.  Expected 7, found 3.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/multi/fa1/anda File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 22
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'a'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/AND.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/multi/fa1/anda File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 22
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'b'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/AND.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/multi/fa1/anda File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 22
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'y'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/AND.sv(5).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/multi/fa1/anda File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 22
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(22): [TFMPC] - Missing connection for port 'N'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(22): [TFMPC] - Missing connection for port 'Z'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(22): [TFMPC] - Missing connection for port 'C'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(22): [TFMPC] - Missing connection for port 'V'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'andb'.  Expected 7, found 3.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/multi/fa1/andb File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 24
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'a'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/AND.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/multi/fa1/andb File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 24
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'b'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/AND.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/multi/fa1/andb File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 24
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'y'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/AND.sv(5).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/multi/fa1/andb File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 24
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(24): [TFMPC] - Missing connection for port 'N'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(24): [TFMPC] - Missing connection for port 'Z'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(24): [TFMPC] - Missing connection for port 'C'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(24): [TFMPC] - Missing connection for port 'V'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'ora'.  Expected 7, found 3.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/multi/fa1/ora File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 26
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'a'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/OR.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/multi/fa1/ora File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 26
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'b'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/OR.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/multi/fa1/ora File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 26
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'y'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/OR.sv(5).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/multi/fa1/ora File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 26
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(26): [TFMPC] - Missing connection for port 'N'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(26): [TFMPC] - Missing connection for port 'Z'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(26): [TFMPC] - Missing connection for port 'C'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(26): [TFMPC] - Missing connection for port 'V'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'xora'.  Expected 7, found 3.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/multi/fa2/xora File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 12
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'a'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/XOR.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/multi/fa2/xora File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 12
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'b'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/XOR.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/multi/fa2/xora File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 12
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'y'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/XOR.sv(5).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/multi/fa2/xora File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 12
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(12): [TFMPC] - Missing connection for port 'N'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(12): [TFMPC] - Missing connection for port 'Z'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(12): [TFMPC] - Missing connection for port 'C'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(12): [TFMPC] - Missing connection for port 'V'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'xorb'.  Expected 7, found 3.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/multi/fa2/xorb File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 14
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'a'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/XOR.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/multi/fa2/xorb File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 14
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'b'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/XOR.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/multi/fa2/xorb File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 14
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'y'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/XOR.sv(5).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/multi/fa2/xorb File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 14
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(14): [TFMPC] - Missing connection for port 'N'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(14): [TFMPC] - Missing connection for port 'Z'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(14): [TFMPC] - Missing connection for port 'C'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(14): [TFMPC] - Missing connection for port 'V'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'anda'.  Expected 7, found 3.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/multi/fa2/anda File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 22
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'a'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/AND.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/multi/fa2/anda File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 22
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'b'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/AND.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/multi/fa2/anda File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 22
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'y'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/AND.sv(5).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/multi/fa2/anda File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 22
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(22): [TFMPC] - Missing connection for port 'N'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(22): [TFMPC] - Missing connection for port 'Z'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(22): [TFMPC] - Missing connection for port 'C'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(22): [TFMPC] - Missing connection for port 'V'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'andb'.  Expected 7, found 3.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/multi/fa2/andb File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 24
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'a'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/AND.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/multi/fa2/andb File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 24
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'b'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/AND.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/multi/fa2/andb File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 24
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'y'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/AND.sv(5).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/multi/fa2/andb File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 24
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(24): [TFMPC] - Missing connection for port 'N'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(24): [TFMPC] - Missing connection for port 'Z'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(24): [TFMPC] - Missing connection for port 'C'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(24): [TFMPC] - Missing connection for port 'V'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'ora'.  Expected 7, found 3.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/multi/fa2/ora File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 26
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'a'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/OR.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/multi/fa2/ora File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 26
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'b'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/OR.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/multi/fa2/ora File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 26
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'y'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/OR.sv(5).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/multi/fa2/ora File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 26
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(26): [TFMPC] - Missing connection for port 'N'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(26): [TFMPC] - Missing connection for port 'Z'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(26): [TFMPC] - Missing connection for port 'C'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(26): [TFMPC] - Missing connection for port 'V'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'xora'.  Expected 7, found 3.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/multi/fa3/xora File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 12
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'a'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/XOR.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/multi/fa3/xora File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 12
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'b'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/XOR.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/multi/fa3/xora File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 12
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'y'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/XOR.sv(5).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/multi/fa3/xora File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 12
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(12): [TFMPC] - Missing connection for port 'N'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(12): [TFMPC] - Missing connection for port 'Z'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(12): [TFMPC] - Missing connection for port 'C'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(12): [TFMPC] - Missing connection for port 'V'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'xorb'.  Expected 7, found 3.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/multi/fa3/xorb File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 14
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'a'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/XOR.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/multi/fa3/xorb File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 14
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'b'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/XOR.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/multi/fa3/xorb File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 14
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'y'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/XOR.sv(5).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/multi/fa3/xorb File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 14
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(14): [TFMPC] - Missing connection for port 'N'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(14): [TFMPC] - Missing connection for port 'Z'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(14): [TFMPC] - Missing connection for port 'C'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(14): [TFMPC] - Missing connection for port 'V'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'anda'.  Expected 7, found 3.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/multi/fa3/anda File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 22
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'a'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/AND.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/multi/fa3/anda File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 22
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'b'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/AND.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/multi/fa3/anda File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 22
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'y'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/AND.sv(5).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/multi/fa3/anda File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 22
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(22): [TFMPC] - Missing connection for port 'N'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(22): [TFMPC] - Missing connection for port 'Z'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(22): [TFMPC] - Missing connection for port 'C'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(22): [TFMPC] - Missing connection for port 'V'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'andb'.  Expected 7, found 3.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/multi/fa3/andb File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 24
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'a'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/AND.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/multi/fa3/andb File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 24
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'b'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/AND.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/multi/fa3/andb File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 24
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'y'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/AND.sv(5).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/multi/fa3/andb File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 24
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(24): [TFMPC] - Missing connection for port 'N'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(24): [TFMPC] - Missing connection for port 'Z'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(24): [TFMPC] - Missing connection for port 'C'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(24): [TFMPC] - Missing connection for port 'V'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'ora'.  Expected 7, found 3.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/multi/fa3/ora File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 26
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'a'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/OR.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/multi/fa3/ora File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 26
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'b'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/OR.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/multi/fa3/ora File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 26
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'y'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/OR.sv(5).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/multi/fa3/ora File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 26
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(26): [TFMPC] - Missing connection for port 'N'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(26): [TFMPC] - Missing connection for port 'Z'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(26): [TFMPC] - Missing connection for port 'C'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(26): [TFMPC] - Missing connection for port 'V'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'xora'.  Expected 7, found 3.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/multi/fa4/xora File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 12
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'a'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/XOR.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/multi/fa4/xora File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 12
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'b'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/XOR.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/multi/fa4/xora File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 12
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'y'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/XOR.sv(5).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/multi/fa4/xora File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 12
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(12): [TFMPC] - Missing connection for port 'N'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(12): [TFMPC] - Missing connection for port 'Z'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(12): [TFMPC] - Missing connection for port 'C'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(12): [TFMPC] - Missing connection for port 'V'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'xorb'.  Expected 7, found 3.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/multi/fa4/xorb File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 14
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'a'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/XOR.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/multi/fa4/xorb File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 14
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'b'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/XOR.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/multi/fa4/xorb File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 14
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'y'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/XOR.sv(5).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/multi/fa4/xorb File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 14
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(14): [TFMPC] - Missing connection for port 'N'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(14): [TFMPC] - Missing connection for port 'Z'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(14): [TFMPC] - Missing connection for port 'C'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(14): [TFMPC] - Missing connection for port 'V'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'anda'.  Expected 7, found 3.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/multi/fa4/anda File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 22
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'a'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/AND.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/multi/fa4/anda File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 22
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'b'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/AND.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/multi/fa4/anda File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 22
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'y'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/AND.sv(5).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/multi/fa4/anda File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 22
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(22): [TFMPC] - Missing connection for port 'N'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(22): [TFMPC] - Missing connection for port 'Z'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(22): [TFMPC] - Missing connection for port 'C'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(22): [TFMPC] - Missing connection for port 'V'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'andb'.  Expected 7, found 3.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/multi/fa4/andb File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 24
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'a'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/AND.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/multi/fa4/andb File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 24
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'b'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/AND.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/multi/fa4/andb File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 24
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'y'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/AND.sv(5).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/multi/fa4/andb File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 24
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(24): [TFMPC] - Missing connection for port 'N'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(24): [TFMPC] - Missing connection for port 'Z'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(24): [TFMPC] - Missing connection for port 'C'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(24): [TFMPC] - Missing connection for port 'V'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'ora'.  Expected 7, found 3.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/multi/fa4/ora File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 26
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'a'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/OR.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/multi/fa4/ora File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 26
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'b'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/OR.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/multi/fa4/ora File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 26
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'y'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/OR.sv(5).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/multi/fa4/ora File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 26
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(26): [TFMPC] - Missing connection for port 'N'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(26): [TFMPC] - Missing connection for port 'Z'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(26): [TFMPC] - Missing connection for port 'C'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(26): [TFMPC] - Missing connection for port 'V'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'xora'.  Expected 7, found 3.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/multi/fa5/xora File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 12
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'a'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/XOR.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/multi/fa5/xora File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 12
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'b'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/XOR.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/multi/fa5/xora File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 12
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'y'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/XOR.sv(5).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/multi/fa5/xora File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 12
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(12): [TFMPC] - Missing connection for port 'N'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(12): [TFMPC] - Missing connection for port 'Z'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(12): [TFMPC] - Missing connection for port 'C'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(12): [TFMPC] - Missing connection for port 'V'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'xorb'.  Expected 7, found 3.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/multi/fa5/xorb File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 14
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'a'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/XOR.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/multi/fa5/xorb File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 14
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'b'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/XOR.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/multi/fa5/xorb File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 14
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'y'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/XOR.sv(5).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/multi/fa5/xorb File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 14
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(14): [TFMPC] - Missing connection for port 'N'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(14): [TFMPC] - Missing connection for port 'Z'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(14): [TFMPC] - Missing connection for port 'C'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(14): [TFMPC] - Missing connection for port 'V'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'anda'.  Expected 7, found 3.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/multi/fa5/anda File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 22
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'a'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/AND.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/multi/fa5/anda File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 22
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'b'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/AND.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/multi/fa5/anda File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 22
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'y'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/AND.sv(5).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/multi/fa5/anda File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 22
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(22): [TFMPC] - Missing connection for port 'N'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(22): [TFMPC] - Missing connection for port 'Z'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(22): [TFMPC] - Missing connection for port 'C'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(22): [TFMPC] - Missing connection for port 'V'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'andb'.  Expected 7, found 3.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/multi/fa5/andb File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 24
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'a'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/AND.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/multi/fa5/andb File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 24
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'b'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/AND.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/multi/fa5/andb File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 24
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'y'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/AND.sv(5).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/multi/fa5/andb File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 24
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(24): [TFMPC] - Missing connection for port 'N'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(24): [TFMPC] - Missing connection for port 'Z'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(24): [TFMPC] - Missing connection for port 'C'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(24): [TFMPC] - Missing connection for port 'V'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'ora'.  Expected 7, found 3.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/multi/fa5/ora File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 26
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'a'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/OR.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/multi/fa5/ora File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 26
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'b'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/OR.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/multi/fa5/ora File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 26
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'y'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/OR.sv(5).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/multi/fa5/ora File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 26
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(26): [TFMPC] - Missing connection for port 'N'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(26): [TFMPC] - Missing connection for port 'Z'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(26): [TFMPC] - Missing connection for port 'C'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(26): [TFMPC] - Missing connection for port 'V'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'xora'.  Expected 7, found 3.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/multi/fa6/xora File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 12
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'a'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/XOR.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/multi/fa6/xora File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 12
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'b'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/XOR.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/multi/fa6/xora File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 12
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'y'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/XOR.sv(5).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/multi/fa6/xora File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 12
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(12): [TFMPC] - Missing connection for port 'N'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(12): [TFMPC] - Missing connection for port 'Z'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(12): [TFMPC] - Missing connection for port 'C'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(12): [TFMPC] - Missing connection for port 'V'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'xorb'.  Expected 7, found 3.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/multi/fa6/xorb File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 14
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'a'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/XOR.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/multi/fa6/xorb File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 14
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'b'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/XOR.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/multi/fa6/xorb File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 14
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'y'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/XOR.sv(5).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/multi/fa6/xorb File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 14
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(14): [TFMPC] - Missing connection for port 'N'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(14): [TFMPC] - Missing connection for port 'Z'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(14): [TFMPC] - Missing connection for port 'C'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(14): [TFMPC] - Missing connection for port 'V'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'anda'.  Expected 7, found 3.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/multi/fa6/anda File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 22
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'a'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/AND.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/multi/fa6/anda File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 22
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'b'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/AND.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/multi/fa6/anda File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 22
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'y'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/AND.sv(5).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/multi/fa6/anda File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 22
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(22): [TFMPC] - Missing connection for port 'N'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(22): [TFMPC] - Missing connection for port 'Z'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(22): [TFMPC] - Missing connection for port 'C'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(22): [TFMPC] - Missing connection for port 'V'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'andb'.  Expected 7, found 3.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/multi/fa6/andb File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 24
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'a'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/AND.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/multi/fa6/andb File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 24
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'b'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/AND.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/multi/fa6/andb File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 24
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'y'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/AND.sv(5).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/multi/fa6/andb File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 24
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(24): [TFMPC] - Missing connection for port 'N'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(24): [TFMPC] - Missing connection for port 'Z'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(24): [TFMPC] - Missing connection for port 'C'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(24): [TFMPC] - Missing connection for port 'V'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'ora'.  Expected 7, found 3.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/multi/fa6/ora File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 26
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'a'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/OR.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/multi/fa6/ora File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 26
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'b'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/OR.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/multi/fa6/ora File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 26
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'y'. The port definition is at: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/OR.sv(5).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/alu1/multi/fa6/ora File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv Line: 26
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(26): [TFMPC] - Missing connection for port 'N'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(26): [TFMPC] - Missing connection for port 'Z'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(26): [TFMPC] - Missing connection for port 'C'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_Adder.sv(26): [TFMPC] - Missing connection for port 'V'.
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# ** Note: $finish    : F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/tb.sv(98)
+#    Time: 18 ns  Iteration: 0  Instance: /tb
+# 1
+# Break in Module tb at F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/tb.sv line 98
+# End time: 01:52:32 on Sep 17,2025, Elapsed time: 0:01:04
+# Errors: 0, Warnings: 644

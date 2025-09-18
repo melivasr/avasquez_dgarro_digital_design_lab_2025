@@ -1,0 +1,2 @@
+Info (10281): Verilog HDL Declaration information at Ripple_carry_adder32.sv(9): object "C" differs only in case from object "c" in the same scope File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Ripple_carry_adder32.sv Line: 9
+Info (10281): Verilog HDL Declaration information at Full_substractor32.sv(9): object "C" differs only in case from object "c" in the same scope File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab2/Full_substractor32.sv Line: 9
