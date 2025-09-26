@@ -3,6 +3,7 @@ Este repositorio contiene el desarrollo de los laboratorios del curso **CE3201 �
 ## Contenido
 - **Laboratorio 1:** Introducción a los lenguajes de descripción de hardware (SystemVerilog y VHDL).
 - **Laboratorio 2:** Lógica Combinacional y Aritmética.
+- **Laboratorio 3:** Lógica Secuencial y Controladores.
 - Se incluirán los siguientes laboratorios conforme avancen en el curso.  
 
 ## Estudiantes
