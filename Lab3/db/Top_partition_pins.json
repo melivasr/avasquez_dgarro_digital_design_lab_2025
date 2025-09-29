@@ -1,0 +1,121 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "clr_timers",
+					"strict" : false
+				},
+				{
+					"name" : "clr_score",
+					"strict" : false
+				},
+				{
+					"name" : "init_board",
+					"strict" : false
+				},
+				{
+					"name" : "random_enable",
+					"strict" : false
+				},
+				{
+					"name" : "board_write",
+					"strict" : false
+				},
+				{
+					"name" : "start_timer",
+					"strict" : false
+				},
+				{
+					"name" : "show_7seg",
+					"strict" : false
+				},
+				{
+					"name" : "scan_buttons",
+					"strict" : false
+				},
+				{
+					"name" : "random_pick",
+					"strict" : false
+				},
+				{
+					"name" : "flip_sel_card",
+					"strict" : false
+				},
+				{
+					"name" : "store_sel_card",
+					"strict" : false
+				},
+				{
+					"name" : "compare_enable",
+					"strict" : false
+				},
+				{
+					"name" : "lock_pair",
+					"strict" : false
+				},
+				{
+					"name" : "inc_score",
+					"strict" : false
+				},
+				{
+					"name" : "short_delay",
+					"strict" : false
+				},
+				{
+					"name" : "hide_cards",
+					"strict" : false
+				},
+				{
+					"name" : "display_winner",
+					"strict" : false
+				},
+				{
+					"name" : "player",
+					"strict" : false
+				},
+				{
+					"name" : "sel_count[0]",
+					"strict" : false
+				},
+				{
+					"name" : "sel_count[1]",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "rst",
+					"strict" : false
+				},
+				{
+					"name" : "shuffle_done",
+					"strict" : false
+				},
+				{
+					"name" : "all_pairs",
+					"strict" : false
+				},
+				{
+					"name" : "t15s_expired",
+					"strict" : false
+				},
+				{
+					"name" : "btn_valid",
+					"strict" : false
+				},
+				{
+					"name" : "delay_done",
+					"strict" : false
+				},
+				{
+					"name" : "match",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
