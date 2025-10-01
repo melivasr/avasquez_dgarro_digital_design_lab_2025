@@ -1,18 +1,16 @@
 module time_counter(
-    input logic clk,
-    input logic reset,
-    input logic tick,  // Señal de segundo
+    input  logic clk,
+    input  logic reset,
+    input  logic tick,
     output logic [5:0] seconds
 );
-always @(posedge clk or posedge reset) begin
-    if (reset) begin
-        seconds <= 0;
-    end else if (tick) begin
-        if (seconds == 15) begin
-            seconds <= 0;
-        end else begin
-            seconds <= seconds + 1;
+    always_ff @(posedge clk or posedge reset) begin
+        if (reset) begin
+            seconds <= 6'd15; // iniciar en 15
+        end else if (tick) begin
+            if (seconds == 6'd0) seconds <= 6'd15;
+            else
+					seconds <= seconds - 6'd1;
         end
     end
-end
 endmodule
