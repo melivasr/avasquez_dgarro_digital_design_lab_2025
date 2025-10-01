@@ -1,31 +1,17 @@
-Analysis & Synthesis report for Top
-Wed Oct 01 00:47:56 2025
-Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+Analysis & Elaboration report for Top
+Wed Oct 01 01:16:10 2025
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
 ---------------------
 ; Table of Contents ;
 ---------------------
   1. Legal Notice
-  2. Analysis & Synthesis Summary
-  3. Analysis & Synthesis Settings
-  4. Parallel Compilation
-  5. Analysis & Synthesis Source Files Read
-  6. Analysis & Synthesis Resource Usage Summary
-  7. Analysis & Synthesis Resource Utilization by Entity
-  8. Analysis & Synthesis DSP Block Usage Summary
-  9. General Register Statistics
- 10. Inverted Register Statistics
- 11. Multiplexer Restructuring Statistics (Restructuring Performed)
- 12. Parameter Settings for Inferred Entity Instance: videoGen:videoGen_inst|lpm_divide:Mod1
- 13. Parameter Settings for Inferred Entity Instance: videoGen:videoGen_inst|lpm_divide:Mod0
- 14. Parameter Settings for Inferred Entity Instance: videoGen:videoGen_inst|lpm_divide:Div0
- 15. Parameter Settings for Inferred Entity Instance: videoGen:videoGen_inst|lpm_divide:Div1
- 16. Port Connectivity Checks: "timer15_7seg:u_turn_timer|seven_segment_display:u7_tens"
- 17. Post-Synthesis Netlist Statistics for Top Partition
- 18. Elapsed Time Per Partition
- 19. Analysis & Synthesis Messages
- 20. Analysis & Synthesis Suppressed Messages
+  2. Analysis & Elaboration Summary
+  3. Parallel Compilation
+  4. Analysis & Elaboration Settings
+  5. Analysis & Elaboration Messages
+  6. Analysis & Elaboration Suppressed Messages
 
 
 
@@ -49,36 +35,47 @@ https://fpgasoftware.intel.com/eula.
 
 
 
-+-------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                  ;
-+---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Wed Oct 01 00:47:56 2025       ;
-; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
-; Revision Name                   ; Top                                         ;
-; Top-level Entity Name           ; vga                                         ;
-; Family                          ; Cyclone V                                   ;
-; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 54                                          ;
-; Total pins                      ; 45                                          ;
-; Total virtual pins              ; 0                                           ;
-; Total block memory bits         ; 0                                           ;
-; Total DSP Blocks                ; 4                                           ;
-; Total HSSI RX PCSs              ; 0                                           ;
-; Total HSSI PMA RX Deserializers ; 0                                           ;
-; Total HSSI TX PCSs              ; 0                                           ;
-; Total HSSI PMA TX Serializers   ; 0                                           ;
-; Total PLLs                      ; 0                                           ;
-; Total DLLs                      ; 0                                           ;
-+---------------------------------+---------------------------------------------+
++-----------------------------------------------------------------------------+
+; Analysis & Elaboration Summary                                              ;
++-------------------------------+---------------------------------------------+
+; Analysis & Elaboration Status ; Successful - Wed Oct 01 01:16:10 2025       ;
+; Quartus Prime Version         ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
+; Revision Name                 ; Top                                         ;
+; Top-level Entity Name         ; controladora_FSM                            ;
+; Family                        ; Cyclone V                                   ;
+; Logic utilization (in ALMs)   ; N/A until Partition Merge                   ;
+; Total registers               ; N/A until Partition Merge                   ;
+; Total pins                    ; N/A until Partition Merge                   ;
+; Total virtual pins            ; N/A until Partition Merge                   ;
+; Total block memory bits       ; N/A until Partition Merge                   ;
+; Total PLLs                    ; N/A until Partition Merge                   ;
+; Total DLLs                    ; N/A until Partition Merge                   ;
++-------------------------------+---------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 12          ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Settings                                                                                             ;
+; Analysis & Elaboration Settings                                                                                           ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                          ; 5CSXFC6D6F31C6     ;                    ;
-; Top-level entity name                                                           ; vga                ; Top                ;
+; Top-level entity name                                                           ; controladora_FSM   ; Top                ;
 ; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
 ; Use smart compilation                                                           ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
@@ -159,430 +156,53 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 
 
-+------------------------------------------+
-; Parallel Compilation                     ;
-+----------------------------+-------------+
-; Processors                 ; Number      ;
-+----------------------------+-------------+
-; Number detected on machine ; 8           ;
-; Maximum allowed            ; 8           ;
-;                            ;             ;
-; Average used               ; 1.00        ;
-; Maximum used               ; 8           ;
-;                            ;             ;
-; Usage by Processor         ; % Time Used ;
-;     Processor 1            ; 100.0%      ;
-;     Processors 2-8         ;   0.0%      ;
-+----------------------------+-------------+
-
-
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                ;
-+----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                            ; Library ;
-+----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------------------------------+---------+
-; vgaController.sv                 ; yes             ; User SystemVerilog HDL File  ; C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/vgaController.sv           ;         ;
-; pll.sv                           ; yes             ; User SystemVerilog HDL File  ; C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/pll.sv                     ;         ;
-; seven_segment_display.sv         ; yes             ; User SystemVerilog HDL File  ; C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/seven_segment_display.sv   ;         ;
-; vga.sv                           ; yes             ; User SystemVerilog HDL File  ; C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/vga.sv                     ;         ;
-; videoGen.sv                      ; yes             ; User SystemVerilog HDL File  ; C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/videoGen.sv                ;         ;
-; time_counter.sv                  ; yes             ; User SystemVerilog HDL File  ; C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/time_counter.sv            ;         ;
-; timer15_7seg.sv                  ; yes             ; User SystemVerilog HDL File  ; C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/timer15_7seg.sv            ;         ;
-; lpm_divide.tdf                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_divide.tdf                                   ;         ;
-; abs_divider.inc                  ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/abs_divider.inc                                  ;         ;
-; sign_div_unsign.inc              ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sign_div_unsign.inc                              ;         ;
-; aglobal201.inc                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/aglobal201.inc                                   ;         ;
-; db/lpm_divide_k3m.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/db/lpm_divide_k3m.tdf      ;         ;
-; db/sign_div_unsign_nlh.tdf       ; yes             ; Auto-Generated Megafunction  ; C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/db/sign_div_unsign_nlh.tdf ;         ;
-; db/alt_u_div_kve.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/db/alt_u_div_kve.tdf       ;         ;
-; db/lpm_divide_l3m.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/db/lpm_divide_l3m.tdf      ;         ;
-; db/sign_div_unsign_olh.tdf       ; yes             ; Auto-Generated Megafunction  ; C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/db/sign_div_unsign_olh.tdf ;         ;
-; db/alt_u_div_mve.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/db/alt_u_div_mve.tdf       ;         ;
-; db/lpm_divide_ibm.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/db/lpm_divide_ibm.tdf      ;         ;
-; db/lpm_divide_hbm.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/db/lpm_divide_hbm.tdf      ;         ;
-+----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------------------------------+---------+
-
-
-+------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                                  ;
-+---------------------------------------------+--------------------------------+
-; Resource                                    ; Usage                          ;
-+---------------------------------------------+--------------------------------+
-; Estimate of Logic utilization (ALMs needed) ; 358                            ;
-;                                             ;                                ;
-; Combinational ALUT usage for logic          ; 653                            ;
-;     -- 7 input functions                    ; 2                              ;
-;     -- 6 input functions                    ; 61                             ;
-;     -- 5 input functions                    ; 56                             ;
-;     -- 4 input functions                    ; 74                             ;
-;     -- <=3 input functions                  ; 460                            ;
-;                                             ;                                ;
-; Dedicated logic registers                   ; 54                             ;
-;                                             ;                                ;
-; I/O pins                                    ; 45                             ;
-;                                             ;                                ;
-; Total DSP Blocks                            ; 4                              ;
-;                                             ;                                ;
-; Maximum fan-out node                        ; videoGen:videoGen_inst|Mult4~8 ;
-; Maximum fan-out                             ; 44                             ;
-; Total fan-out                               ; 2406                           ;
-; Average fan-out                             ; 3.00                           ;
-+---------------------------------------------+--------------------------------+
-
-
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                     ;
-+-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------+-----------------------+--------------+
-; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                         ; Entity Name           ; Library Name ;
-+-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------+-----------------------+--------------+
-; |vga                                      ; 653 (0)             ; 54 (0)                    ; 0                 ; 4          ; 45   ; 0            ; |vga                                                                                                                        ; vga                   ; work         ;
-;    |pll:vgapll|                           ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|pll:vgapll                                                                                                             ; pll                   ; work         ;
-;    |timer15_7seg:u_turn_timer|            ; 48 (35)             ; 33 (27)                   ; 0                 ; 0          ; 0    ; 0            ; |vga|timer15_7seg:u_turn_timer                                                                                              ; timer15_7seg          ; work         ;
-;       |seven_segment_display:u7_ones|     ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|timer15_7seg:u_turn_timer|seven_segment_display:u7_ones                                                                ; seven_segment_display ; work         ;
-;       |time_counter:u_time|               ; 6 (6)               ; 6 (6)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|timer15_7seg:u_turn_timer|time_counter:u_time                                                                          ; time_counter          ; work         ;
-;    |vgaController:vgaCont|                ; 29 (29)             ; 20 (20)                   ; 0                 ; 0          ; 0    ; 0            ; |vga|vgaController:vgaCont                                                                                                  ; vgaController         ; work         ;
-;    |videoGen:videoGen_inst|               ; 575 (337)           ; 0 (0)                     ; 0                 ; 4          ; 0    ; 0            ; |vga|videoGen:videoGen_inst                                                                                                 ; videoGen              ; work         ;
-;       |lpm_divide:Div0|                   ; 49 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|videoGen:videoGen_inst|lpm_divide:Div0                                                                                 ; lpm_divide            ; work         ;
-;          |lpm_divide_ibm:auto_generated|  ; 49 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|videoGen:videoGen_inst|lpm_divide:Div0|lpm_divide_ibm:auto_generated                                                   ; lpm_divide_ibm        ; work         ;
-;             |sign_div_unsign_olh:divider| ; 49 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|videoGen:videoGen_inst|lpm_divide:Div0|lpm_divide_ibm:auto_generated|sign_div_unsign_olh:divider                       ; sign_div_unsign_olh   ; work         ;
-;                |alt_u_div_mve:divider|    ; 49 (49)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|videoGen:videoGen_inst|lpm_divide:Div0|lpm_divide_ibm:auto_generated|sign_div_unsign_olh:divider|alt_u_div_mve:divider ; alt_u_div_mve         ; work         ;
-;       |lpm_divide:Div1|                   ; 60 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|videoGen:videoGen_inst|lpm_divide:Div1                                                                                 ; lpm_divide            ; work         ;
-;          |lpm_divide_hbm:auto_generated|  ; 60 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|videoGen:videoGen_inst|lpm_divide:Div1|lpm_divide_hbm:auto_generated                                                   ; lpm_divide_hbm        ; work         ;
-;             |sign_div_unsign_nlh:divider| ; 60 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|videoGen:videoGen_inst|lpm_divide:Div1|lpm_divide_hbm:auto_generated|sign_div_unsign_nlh:divider                       ; sign_div_unsign_nlh   ; work         ;
-;                |alt_u_div_kve:divider|    ; 60 (60)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|videoGen:videoGen_inst|lpm_divide:Div1|lpm_divide_hbm:auto_generated|sign_div_unsign_nlh:divider|alt_u_div_kve:divider ; alt_u_div_kve         ; work         ;
-;       |lpm_divide:Mod0|                   ; 59 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|videoGen:videoGen_inst|lpm_divide:Mod0                                                                                 ; lpm_divide            ; work         ;
-;          |lpm_divide_l3m:auto_generated|  ; 59 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|videoGen:videoGen_inst|lpm_divide:Mod0|lpm_divide_l3m:auto_generated                                                   ; lpm_divide_l3m        ; work         ;
-;             |sign_div_unsign_olh:divider| ; 59 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|videoGen:videoGen_inst|lpm_divide:Mod0|lpm_divide_l3m:auto_generated|sign_div_unsign_olh:divider                       ; sign_div_unsign_olh   ; work         ;
-;                |alt_u_div_mve:divider|    ; 59 (59)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|videoGen:videoGen_inst|lpm_divide:Mod0|lpm_divide_l3m:auto_generated|sign_div_unsign_olh:divider|alt_u_div_mve:divider ; alt_u_div_mve         ; work         ;
-;       |lpm_divide:Mod1|                   ; 70 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|videoGen:videoGen_inst|lpm_divide:Mod1                                                                                 ; lpm_divide            ; work         ;
-;          |lpm_divide_k3m:auto_generated|  ; 70 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|videoGen:videoGen_inst|lpm_divide:Mod1|lpm_divide_k3m:auto_generated                                                   ; lpm_divide_k3m        ; work         ;
-;             |sign_div_unsign_nlh:divider| ; 70 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|videoGen:videoGen_inst|lpm_divide:Mod1|lpm_divide_k3m:auto_generated|sign_div_unsign_nlh:divider                       ; sign_div_unsign_nlh   ; work         ;
-;                |alt_u_div_kve:divider|    ; 70 (70)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|videoGen:videoGen_inst|lpm_divide:Mod1|lpm_divide_k3m:auto_generated|sign_div_unsign_nlh:divider|alt_u_div_kve:divider ; alt_u_div_kve         ; work         ;
-+-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------+-----------------------+--------------+
-Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-+----------------------------------------------+
-; Analysis & Synthesis DSP Block Usage Summary ;
-+-------------------------------+--------------+
-; Statistic                     ; Number Used  ;
-+-------------------------------+--------------+
-; Two Independent 18x18         ; 3            ;
-; Sum of two 18x18              ; 1            ;
-; Total number of DSP blocks    ; 4            ;
-;                               ;              ;
-; Fixed Point Signed Multiplier ; 5            ;
-+-------------------------------+--------------+
-
-
-+------------------------------------------------------+
-; General Register Statistics                          ;
-+----------------------------------------------+-------+
-; Statistic                                    ; Value ;
-+----------------------------------------------+-------+
-; Total registers                              ; 54    ;
-; Number of registers using Synchronous Clear  ; 46    ;
-; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 33    ;
-; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 15    ;
-; Number of registers using Preset             ; 0     ;
-+----------------------------------------------+-------+
-
-
-+--------------------------------------------------------------------+
-; Inverted Register Statistics                                       ;
-+----------------------------------------------------------+---------+
-; Inverted Register                                        ; Fan out ;
-+----------------------------------------------------------+---------+
-; timer15_7seg:u_turn_timer|time_counter:u_time|seconds[3] ; 7       ;
-; timer15_7seg:u_turn_timer|time_counter:u_time|seconds[2] ; 8       ;
-; timer15_7seg:u_turn_timer|time_counter:u_time|seconds[1] ; 9       ;
-; timer15_7seg:u_turn_timer|time_counter:u_time|seconds[0] ; 13      ;
-; Total number of inverted registers = 4                   ;         ;
-+----------------------------------------------------------+---------+
-
-
-+------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                 ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output       ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------+
-; 9:1                ; 8 bits    ; 48 LEs        ; 48 LEs               ; 0 LEs                  ; No         ; |vga|videoGen:videoGen_inst|r[2] ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------+
-
-
-+-----------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: videoGen:videoGen_inst|lpm_divide:Mod1 ;
-+------------------------+----------------+-----------------------------------------------+
-; Parameter Name         ; Value          ; Type                                          ;
-+------------------------+----------------+-----------------------------------------------+
-; LPM_WIDTHN             ; 10             ; Untyped                                       ;
-; LPM_WIDTHD             ; 7              ; Untyped                                       ;
-; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                       ;
-; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                       ;
-; LPM_PIPELINE           ; 0              ; Untyped                                       ;
-; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                       ;
-; MAXIMIZE_SPEED         ; 5              ; Untyped                                       ;
-; CBXI_PARAMETER         ; lpm_divide_k3m ; Untyped                                       ;
-; CARRY_CHAIN            ; MANUAL         ; Untyped                                       ;
-; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                       ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                    ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                  ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                  ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                ;
-+------------------------+----------------+-----------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: videoGen:videoGen_inst|lpm_divide:Mod0 ;
-+------------------------+----------------+-----------------------------------------------+
-; Parameter Name         ; Value          ; Type                                          ;
-+------------------------+----------------+-----------------------------------------------+
-; LPM_WIDTHN             ; 10             ; Untyped                                       ;
-; LPM_WIDTHD             ; 8              ; Untyped                                       ;
-; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                       ;
-; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                       ;
-; LPM_PIPELINE           ; 0              ; Untyped                                       ;
-; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                       ;
-; MAXIMIZE_SPEED         ; 5              ; Untyped                                       ;
-; CBXI_PARAMETER         ; lpm_divide_l3m ; Untyped                                       ;
-; CARRY_CHAIN            ; MANUAL         ; Untyped                                       ;
-; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                       ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                    ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                  ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                  ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                ;
-+------------------------+----------------+-----------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: videoGen:videoGen_inst|lpm_divide:Div0 ;
-+------------------------+----------------+-----------------------------------------------+
-; Parameter Name         ; Value          ; Type                                          ;
-+------------------------+----------------+-----------------------------------------------+
-; LPM_WIDTHN             ; 10             ; Untyped                                       ;
-; LPM_WIDTHD             ; 8              ; Untyped                                       ;
-; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                       ;
-; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                       ;
-; LPM_PIPELINE           ; 0              ; Untyped                                       ;
-; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                       ;
-; MAXIMIZE_SPEED         ; 5              ; Untyped                                       ;
-; CBXI_PARAMETER         ; lpm_divide_ibm ; Untyped                                       ;
-; CARRY_CHAIN            ; MANUAL         ; Untyped                                       ;
-; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                       ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                    ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                  ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                  ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                ;
-+------------------------+----------------+-----------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: videoGen:videoGen_inst|lpm_divide:Div1 ;
-+------------------------+----------------+-----------------------------------------------+
-; Parameter Name         ; Value          ; Type                                          ;
-+------------------------+----------------+-----------------------------------------------+
-; LPM_WIDTHN             ; 10             ; Untyped                                       ;
-; LPM_WIDTHD             ; 7              ; Untyped                                       ;
-; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                       ;
-; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                       ;
-; LPM_PIPELINE           ; 0              ; Untyped                                       ;
-; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                       ;
-; MAXIMIZE_SPEED         ; 5              ; Untyped                                       ;
-; CBXI_PARAMETER         ; lpm_divide_hbm ; Untyped                                       ;
-; CARRY_CHAIN            ; MANUAL         ; Untyped                                       ;
-; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                       ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                    ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                  ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                  ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                ;
-+------------------------+----------------+-----------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "timer15_7seg:u_turn_timer|seven_segment_display:u7_tens" ;
-+-----------+-------+----------+------------------------------------------------------+
-; Port      ; Type  ; Severity ; Details                                              ;
-+-----------+-------+----------+------------------------------------------------------+
-; num[3..1] ; Input ; Info     ; Stuck at GND                                         ;
-+-----------+-------+----------+------------------------------------------------------+
-
-
-+-----------------------------------------------------+
-; Post-Synthesis Netlist Statistics for Top Partition ;
-+-----------------------+-----------------------------+
-; Type                  ; Count                       ;
-+-----------------------+-----------------------------+
-; arriav_ff             ; 54                          ;
-;     CLR               ; 2                           ;
-;     CLR SCLR          ; 26                          ;
-;     ENA CLR           ; 5                           ;
-;     ENA SCLR          ; 10                          ;
-;     SCLR              ; 10                          ;
-;     plain             ; 1                           ;
-; arriav_lcell_comb     ; 661                         ;
-;     arith             ; 335                         ;
-;         0 data inputs ; 28                          ;
-;         1 data inputs ; 134                         ;
-;         2 data inputs ; 76                          ;
-;         3 data inputs ; 50                          ;
-;         4 data inputs ; 39                          ;
-;         5 data inputs ; 8                           ;
-;     extend            ; 2                           ;
-;         7 data inputs ; 2                           ;
-;     normal            ; 290                         ;
-;         0 data inputs ; 2                           ;
-;         1 data inputs ; 8                           ;
-;         2 data inputs ; 78                          ;
-;         3 data inputs ; 58                          ;
-;         4 data inputs ; 35                          ;
-;         5 data inputs ; 48                          ;
-;         6 data inputs ; 61                          ;
-;     shared            ; 34                          ;
-;         0 data inputs ; 4                           ;
-;         1 data inputs ; 30                          ;
-; arriav_mac            ; 4                           ;
-; boundary_port         ; 45                          ;
-;                       ;                             ;
-; Max LUT depth         ; 16.70                       ;
-; Average LUT depth     ; 12.02                       ;
-+-----------------------+-----------------------------+
-
-
-+-------------------------------+
-; Elapsed Time Per Partition    ;
-+----------------+--------------+
-; Partition Name ; Elapsed Time ;
-+----------------+--------------+
-; Top            ; 00:00:00     ;
-+----------------+--------------+
-
-
-+-------------------------------+
-; Analysis & Synthesis Messages ;
-+-------------------------------+
++---------------------------------+
+; Analysis & Elaboration Messages ;
++---------------------------------+
 Info: *******************************************************************
-Info: Running Quartus Prime Analysis & Synthesis
-    Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Wed Oct 01 00:47:49 2025
-Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Top -c Top
+Info: Running Quartus Prime Analysis & Elaboration
+    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+    Info: Processing started: Wed Oct 01 01:16:03 2025
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Top -c Top --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
+Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file controladora_fsm.sv
-    Info (12023): Found entity 1: controladora_FSM File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/controladora_FSM.sv Line: 1
+    Info (12023): Found entity 1: controladora_FSM File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab3/controladora_FSM.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file tb.sv
-    Info (12023): Found entity 1: tb File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/tb.sv Line: 3
+    Info (12023): Found entity 1: tb File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab3/tb.sv Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file clock_divider.sv
-    Info (12023): Found entity 1: clock_divider File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/clock_divider.sv Line: 1
+    Info (12023): Found entity 1: clock_divider File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab3/clock_divider.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file vgacontroller.sv
-    Info (12023): Found entity 1: vgaController File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/vgaController.sv Line: 1
+    Info (12023): Found entity 1: vgaController File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab3/vgaController.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file pll.sv
-    Info (12023): Found entity 1: pll File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/pll.sv Line: 1
+    Info (12023): Found entity 1: pll File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab3/pll.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file seven_segment_display.sv
-    Info (12023): Found entity 1: seven_segment_display File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/seven_segment_display.sv Line: 1
+    Info (12023): Found entity 1: seven_segment_display File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab3/seven_segment_display.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file vga.sv
-    Info (12023): Found entity 1: vga File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/vga.sv Line: 1
+    Info (12023): Found entity 1: vga File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab3/vga.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file random.sv
-    Info (12023): Found entity 1: random File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/random.sv Line: 1
+    Info (12023): Found entity 1: random File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab3/random.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file videogen.sv
-    Info (12023): Found entity 1: videoGen File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/videoGen.sv Line: 1
+    Info (12023): Found entity 1: videoGen File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab3/videoGen.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file time_counter.sv
-    Info (12023): Found entity 1: time_counter File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/time_counter.sv Line: 1
+    Info (12023): Found entity 1: time_counter File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab3/time_counter.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file timer15_7seg.sv
-    Info (12023): Found entity 1: timer15_7seg File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/timer15_7seg.sv Line: 1
-Info (12127): Elaborating entity "vga" for the top level hierarchy
-Info (12128): Elaborating entity "pll" for hierarchy "pll:vgapll" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/vga.sv Line: 13
-Info (12128): Elaborating entity "vgaController" for hierarchy "vgaController:vgaCont" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/vga.sv Line: 20
-Warning (10230): Verilog HDL assignment warning at vgaController.sv(22): truncated value with size 32 to match size of target (10) File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/vgaController.sv Line: 22
-Warning (10230): Verilog HDL assignment warning at vgaController.sv(24): truncated value with size 32 to match size of target (10) File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/vgaController.sv Line: 24
-Info (12128): Elaborating entity "videoGen" for hierarchy "videoGen:videoGen_inst" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/vga.sv Line: 25
-Warning (10230): Verilog HDL assignment warning at videoGen.sv(11): truncated value with size 32 to match size of target (2) File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/videoGen.sv Line: 11
-Warning (10230): Verilog HDL assignment warning at videoGen.sv(12): truncated value with size 32 to match size of target (2) File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/videoGen.sv Line: 12
-Warning (10230): Verilog HDL assignment warning at videoGen.sv(13): truncated value with size 32 to match size of target (9) File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/videoGen.sv Line: 13
-Warning (10230): Verilog HDL assignment warning at videoGen.sv(14): truncated value with size 32 to match size of target (7) File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/videoGen.sv Line: 14
-Warning (10230): Verilog HDL assignment warning at videoGen.sv(17): truncated value with size 32 to match size of target (3) File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/videoGen.sv Line: 17
-Warning (10230): Verilog HDL assignment warning at videoGen.sv(26): truncated value with size 32 to match size of target (11) File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/videoGen.sv Line: 26
-Warning (10230): Verilog HDL assignment warning at videoGen.sv(27): truncated value with size 32 to match size of target (11) File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/videoGen.sv Line: 27
-Warning (10230): Verilog HDL assignment warning at videoGen.sv(71): truncated value with size 32 to match size of target (11) File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/videoGen.sv Line: 71
-Warning (10230): Verilog HDL assignment warning at videoGen.sv(72): truncated value with size 32 to match size of target (11) File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/videoGen.sv Line: 72
-Warning (10230): Verilog HDL assignment warning at videoGen.sv(73): truncated value with size 32 to match size of target (11) File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/videoGen.sv Line: 73
-Info (12128): Elaborating entity "timer15_7seg" for hierarchy "timer15_7seg:u_turn_timer" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/vga.sv Line: 31
-Warning (10230): Verilog HDL assignment warning at timer15_7seg.sv(38): truncated value with size 6 to match size of target (4) File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/timer15_7seg.sv Line: 38
-Info (12128): Elaborating entity "time_counter" for hierarchy "timer15_7seg:u_turn_timer|time_counter:u_time" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/timer15_7seg.sv Line: 33
-Info (12128): Elaborating entity "seven_segment_display" for hierarchy "timer15_7seg:u_turn_timer|seven_segment_display:u7_tens" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/timer15_7seg.sv Line: 40
-Info (278001): Inferred 4 megafunctions from design logic
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "videoGen:videoGen_inst|Mod1" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/videoGen.sv Line: 14
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "videoGen:videoGen_inst|Mod0" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/videoGen.sv Line: 13
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "videoGen:videoGen_inst|Div0" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/videoGen.sv Line: 11
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "videoGen:videoGen_inst|Div1" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/videoGen.sv Line: 12
-Info (12130): Elaborated megafunction instantiation "videoGen:videoGen_inst|lpm_divide:Mod1" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/videoGen.sv Line: 14
-Info (12133): Instantiated megafunction "videoGen:videoGen_inst|lpm_divide:Mod1" with the following parameter: File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/videoGen.sv Line: 14
-    Info (12134): Parameter "LPM_WIDTHN" = "10"
-    Info (12134): Parameter "LPM_WIDTHD" = "7"
-    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
-    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
-Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_k3m.tdf
-    Info (12023): Found entity 1: lpm_divide_k3m File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/db/lpm_divide_k3m.tdf Line: 25
-Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_nlh.tdf
-    Info (12023): Found entity 1: sign_div_unsign_nlh File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/db/sign_div_unsign_nlh.tdf Line: 25
-Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_kve.tdf
-    Info (12023): Found entity 1: alt_u_div_kve File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/db/alt_u_div_kve.tdf Line: 23
-Info (12130): Elaborated megafunction instantiation "videoGen:videoGen_inst|lpm_divide:Mod0" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/videoGen.sv Line: 13
-Info (12133): Instantiated megafunction "videoGen:videoGen_inst|lpm_divide:Mod0" with the following parameter: File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/videoGen.sv Line: 13
-    Info (12134): Parameter "LPM_WIDTHN" = "10"
-    Info (12134): Parameter "LPM_WIDTHD" = "8"
-    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
-    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
-Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_l3m.tdf
-    Info (12023): Found entity 1: lpm_divide_l3m File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/db/lpm_divide_l3m.tdf Line: 25
-Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_olh.tdf
-    Info (12023): Found entity 1: sign_div_unsign_olh File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/db/sign_div_unsign_olh.tdf Line: 25
-Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_mve.tdf
-    Info (12023): Found entity 1: alt_u_div_mve File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/db/alt_u_div_mve.tdf Line: 23
-Info (12130): Elaborated megafunction instantiation "videoGen:videoGen_inst|lpm_divide:Div0" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/videoGen.sv Line: 11
-Info (12133): Instantiated megafunction "videoGen:videoGen_inst|lpm_divide:Div0" with the following parameter: File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/videoGen.sv Line: 11
-    Info (12134): Parameter "LPM_WIDTHN" = "10"
-    Info (12134): Parameter "LPM_WIDTHD" = "8"
-    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
-    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
-Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_ibm.tdf
-    Info (12023): Found entity 1: lpm_divide_ibm File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/db/lpm_divide_ibm.tdf Line: 25
-Info (12130): Elaborated megafunction instantiation "videoGen:videoGen_inst|lpm_divide:Div1" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/videoGen.sv Line: 12
-Info (12133): Instantiated megafunction "videoGen:videoGen_inst|lpm_divide:Div1" with the following parameter: File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/videoGen.sv Line: 12
-    Info (12134): Parameter "LPM_WIDTHN" = "10"
-    Info (12134): Parameter "LPM_WIDTHD" = "7"
-    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
-    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
-Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_hbm.tdf
-    Info (12023): Found entity 1: lpm_divide_hbm File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/db/lpm_divide_hbm.tdf Line: 25
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "seg_tens[1]" is stuck at GND File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/vga.sv Line: 8
-    Warning (13410): Pin "seg_tens[2]" is stuck at GND File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/vga.sv Line: 8
-    Warning (13410): Pin "seg_tens[6]" is stuck at VCC File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/vga.sv Line: 8
-Info (286030): Timing-Driven Synthesis is running
-Info (144001): Generated suppressed messages file C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/output_files/Top.map.smsg
-Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
-    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 703 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 2 input pins
-    Info (21059): Implemented 43 output pins
-    Info (21061): Implemented 654 logic cells
-    Info (21062): Implemented 4 DSP elements
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 18 warnings
-    Info: Peak virtual memory: 4886 megabytes
-    Info: Processing ended: Wed Oct 01 00:47:56 2025
+    Info (12023): Found entity 1: timer15_7seg File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab3/timer15_7seg.sv Line: 1
+Info (12127): Elaborating entity "controladora_FSM" for the top level hierarchy
+Warning (10230): Verilog HDL assignment warning at controladora_FSM.sv(69): truncated value with size 32 to match size of target (2) File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab3/controladora_FSM.sv Line: 69
+Warning (10230): Verilog HDL assignment warning at controladora_FSM.sv(70): truncated value with size 32 to match size of target (2) File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab3/controladora_FSM.sv Line: 70
+Info (10264): Verilog HDL Case Statement information at controladora_FSM.sv(67): all case item expressions in this case statement are onehot File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab3/controladora_FSM.sv Line: 67
+Info (144001): Generated suppressed messages file F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab3/output_files/Top.map.smsg
+Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 3 warnings
+    Info: Peak virtual memory: 4767 megabytes
+    Info: Processing ended: Wed Oct 01 01:16:10 2025
     Info: Elapsed time: 00:00:07
-    Info: Total CPU time (on all processors): 00:00:11
+    Info: Total CPU time (on all processors): 00:00:15
 
 
-+------------------------------------------+
-; Analysis & Synthesis Suppressed Messages ;
-+------------------------------------------+
-The suppressed messages can be found in C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/output_files/Top.map.smsg.
++--------------------------------------------+
+; Analysis & Elaboration Suppressed Messages ;
++--------------------------------------------+
+The suppressed messages can be found in F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab3/output_files/Top.map.smsg.
 
 

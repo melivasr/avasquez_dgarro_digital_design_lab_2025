@@ -58,6 +58,7 @@ module controladora_FSM (
 		if(rst) begin
 			state = RESET_INIT;
 			sel_count_reg = 2'b00;
+			player_reg = 0;
 		end
 		
 		else begin 

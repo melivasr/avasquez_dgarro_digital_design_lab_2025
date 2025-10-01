@@ -12,29 +12,29 @@
 # 
 # vlog -sv -work work +incdir+F:/Proyectos\ Quartos/avasquez_dgarro_digital_design_lab_2025/Lab3 {F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab3/controladora_FSM.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 01:12:43 on Sep 29,2025
+# Start time: 01:16:18 on Oct 01,2025
 # vlog -reportprogress 300 -sv -work work "+incdir+F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab3" F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab3/controladora_FSM.sv 
 # -- Compiling module controladora_FSM
 # 
 # Top level modules:
 # 	controladora_FSM
-# End time: 01:12:43 on Sep 29,2025, Elapsed time: 0:00:00
+# End time: 01:16:18 on Oct 01,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vlog -sv -work work +incdir+F:/Proyectos\ Quartos/avasquez_dgarro_digital_design_lab_2025/Lab3 {F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab3/tb.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 01:12:44 on Sep 29,2025
+# Start time: 01:16:18 on Oct 01,2025
 # vlog -reportprogress 300 -sv -work work "+incdir+F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab3" F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab3/tb.sv 
 # -- Compiling module tb
 # 
 # Top level modules:
 # 	tb
-# End time: 01:12:44 on Sep 29,2025, Elapsed time: 0:00:00
+# End time: 01:16:18 on Oct 01,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  tb
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" tb 
-# Start time: 01:12:44 on Sep 29,2025
+# Start time: 01:16:19 on Oct 01,2025
 # Loading sv_std.std
 # Loading work.tb
 # Loading work.controladora_FSM
@@ -45,30 +45,9 @@
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run -all
-# === Reset ===
-# T=0 state=0 sel_count=0 player=x clr_timers=1 start_timer=0 scan_buttons=0 compare=0 match=0
-# === Shuffle Done ===
-# T=15000 state=1 sel_count=0 player=x clr_timers=0 start_timer=0 scan_buttons=0 compare=0 match=0
-# === Jugada Válida ===
-# T=25000 state=2 sel_count=0 player=x clr_timers=0 start_timer=1 scan_buttons=0 compare=0 match=0
-# T=35000 state=3 sel_count=0 player=x clr_timers=0 start_timer=0 scan_buttons=1 compare=0 match=0
-# T=55000 state=4 sel_count=1 player=x clr_timers=0 start_timer=0 scan_buttons=0 compare=0 match=0
-# === Match ===
-# T=65000 state=3 sel_count=1 player=x clr_timers=0 start_timer=0 scan_buttons=1 compare=0 match=1
-# T=75000 state=3 sel_count=1 player=x clr_timers=0 start_timer=0 scan_buttons=1 compare=0 match=0
-# === Tiempo Agotado -> Auto Pick ===
-# T=95000 state=5 sel_count=2 player=x clr_timers=0 start_timer=0 scan_buttons=0 compare=0 match=0
-# T=105000 state=6 sel_count=2 player=x clr_timers=0 start_timer=0 scan_buttons=0 compare=1 match=0
-# === Unmatch ===
-# T=115000 state=8 sel_count=2 player=x clr_timers=0 start_timer=0 scan_buttons=0 compare=0 match=0
-# === Todas las parejas encontradas ===
-# T=135000 state=9 sel_count=2 player=x clr_timers=0 start_timer=0 scan_buttons=0 compare=0 match=1
-# === Fin de simulación ===
-# T=145000 state=2 sel_count=0 player=x clr_timers=0 start_timer=1 scan_buttons=0 compare=0 match=0
-# T=155000 state=3 sel_count=0 player=x clr_timers=0 start_timer=0 scan_buttons=1 compare=0 match=0
-# ** Note: $finish    : F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab3/tb.sv(134)
-#    Time: 245 ns  Iteration: 1  Instance: /tb
+# ** Note: $finish    : F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab3/tb.sv(115)
+#    Time: 2300 ns  Iteration: 0  Instance: /tb
 # 1
-# Break in Module tb at F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab3/tb.sv line 134
-# End time: 01:15:41 on Sep 29,2025, Elapsed time: 0:02:57
+# Break in Module tb at F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab3/tb.sv line 115
+# End time: 01:18:11 on Oct 01,2025, Elapsed time: 0:01:52
 # Errors: 0, Warnings: 0
