@@ -4,115 +4,123 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "clr_timers",
+					"name" : "vgaclk",
 					"strict" : false
 				},
 				{
-					"name" : "clr_score",
+					"name" : "hsync",
 					"strict" : false
 				},
 				{
-					"name" : "init_board",
+					"name" : "vsync",
 					"strict" : false
 				},
 				{
-					"name" : "random_enable",
+					"name" : "sync_b",
 					"strict" : false
 				},
 				{
-					"name" : "board_write",
+					"name" : "blank_b",
 					"strict" : false
 				},
 				{
-					"name" : "start_timer",
+					"name" : "r[0]",
 					"strict" : false
 				},
 				{
-					"name" : "show_7seg",
+					"name" : "r[1]",
 					"strict" : false
 				},
 				{
-					"name" : "scan_buttons",
+					"name" : "r[2]",
 					"strict" : false
 				},
 				{
-					"name" : "random_pick",
+					"name" : "r[3]",
 					"strict" : false
 				},
 				{
-					"name" : "flip_sel_card",
+					"name" : "r[4]",
 					"strict" : false
 				},
 				{
-					"name" : "store_sel_card",
+					"name" : "r[5]",
 					"strict" : false
 				},
 				{
-					"name" : "compare_enable",
+					"name" : "r[6]",
 					"strict" : false
 				},
 				{
-					"name" : "lock_pair",
+					"name" : "r[7]",
 					"strict" : false
 				},
 				{
-					"name" : "inc_score",
+					"name" : "g[0]",
 					"strict" : false
 				},
 				{
-					"name" : "short_delay",
+					"name" : "g[1]",
 					"strict" : false
 				},
 				{
-					"name" : "hide_cards",
+					"name" : "g[2]",
 					"strict" : false
 				},
 				{
-					"name" : "display_winner",
+					"name" : "g[3]",
 					"strict" : false
 				},
 				{
-					"name" : "player",
+					"name" : "g[4]",
 					"strict" : false
 				},
 				{
-					"name" : "sel_count[0]",
+					"name" : "g[5]",
 					"strict" : false
 				},
 				{
-					"name" : "sel_count[1]",
+					"name" : "g[6]",
+					"strict" : false
+				},
+				{
+					"name" : "g[7]",
+					"strict" : false
+				},
+				{
+					"name" : "b[0]",
+					"strict" : false
+				},
+				{
+					"name" : "b[1]",
+					"strict" : false
+				},
+				{
+					"name" : "b[2]",
+					"strict" : false
+				},
+				{
+					"name" : "b[3]",
+					"strict" : false
+				},
+				{
+					"name" : "b[4]",
+					"strict" : false
+				},
+				{
+					"name" : "b[5]",
+					"strict" : false
+				},
+				{
+					"name" : "b[6]",
+					"strict" : false
+				},
+				{
+					"name" : "b[7]",
 					"strict" : false
 				},
 				{
 					"name" : "clk",
-					"strict" : false
-				},
-				{
-					"name" : "rst",
-					"strict" : false
-				},
-				{
-					"name" : "shuffle_done",
-					"strict" : false
-				},
-				{
-					"name" : "all_pairs",
-					"strict" : false
-				},
-				{
-					"name" : "t15s_expired",
-					"strict" : false
-				},
-				{
-					"name" : "btn_valid",
-					"strict" : false
-				},
-				{
-					"name" : "delay_done",
-					"strict" : false
-				},
-				{
-					"name" : "match",
 					"strict" : false
 				}
 			]

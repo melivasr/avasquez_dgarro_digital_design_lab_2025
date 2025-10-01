@@ -1,1 +1,1 @@
-Info (10281): Verilog HDL Declaration information at controladora_FSM.sv(7): object "match" differs only in case from object "MATCH" in the same scope File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab3/controladora_FSM.sv Line: 7
+Info (10281): Verilog HDL Declaration information at controladora_FSM.sv(7): object "match" differs only in case from object "MATCH" in the same scope File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/controladora_FSM.sv Line: 7
