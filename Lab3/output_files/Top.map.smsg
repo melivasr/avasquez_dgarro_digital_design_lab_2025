@@ -1,6 +1,2 @@
-<<<<<<< Updated upstream
-Info (10281): Verilog HDL Declaration information at controladora_FSM.sv(7): object "match" differs only in case from object "MATCH" in the same scope File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab3/controladora_FSM.sv Line: 7
-Warning (10268): Verilog HDL information at random.sv(7): always construct contains both blocking and non-blocking assignments File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab3/random.sv Line: 7
-=======
 Info (10281): Verilog HDL Declaration information at controladora_FSM.sv(7): object "match" differs only in case from object "MATCH" in the same scope File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/controladora_FSM.sv Line: 7
->>>>>>> Stashed changes
+Warning (10268): Verilog HDL information at random.sv(17): always construct contains both blocking and non-blocking assignments File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/random.sv Line: 17

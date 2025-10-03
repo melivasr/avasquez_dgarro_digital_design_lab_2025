@@ -1,9 +1,11 @@
 module videoGen (
     input  logic [9:0] x,
     input  logic [9:0] y,
+    input  logic [3:0] board [0:15],
+    input  logic [1:0] sel_row,   
+    input  logic [1:0] sel_col,  
     output logic [7:0] r, g, b
 );
-
     localparam int SCREEN_W   = 640;
     localparam int SCREEN_H   = 480;
     localparam int GRID_COLS  = 4;
@@ -26,6 +28,7 @@ module videoGen (
     localparam logic [7:0] TABLE_B = 8'd20;
 
     wire signed [10:0] rx = $signed({1'b0,x}) - $signed(MARGIN_X);
+    wire signed [10:1] dummy_unused = 0; 
     wire signed [10:0] ry = $signed({1'b0,y}) - $signed(MARGIN_Y);
 
     localparam int CELL_W = CARD_W + GAP_X;
@@ -52,11 +55,15 @@ module videoGen (
     wire [1:0] col = col_cell;
     wire [1:0] row = row_cell;
 
-    wire [2:0] pair_id = ((row * GRID_COLS) + col) % 8;
+    wire [5:0] idx = row * GRID_COLS + col; 
+    wire [2:0] pair_id = board[idx][2:0];
 
+    // --- borde y selección
     wire in_border = in_card &&
                      ((lx < BORDER) || (lx >= CARD_W - BORDER) ||
                       (ly < BORDER) || (ly >= CARD_H - BORDER));
+
+    wire is_selected_cell = in_card && (row == sel_row) && (col == sel_col);
 
     localparam int CX = CARD_W/2;
     localparam int CY = CARD_H/2;
@@ -79,7 +86,6 @@ module videoGen (
     localparam int TRI_BOT  = (CARD_H*85)/100;
 
     wire [21:0] r2 = dx*dx + dy*dy;
-
     wire in_circle  = (r2 < (R_CIRC*R_CIRC));
 
     wire in_triangle =
@@ -88,7 +94,6 @@ module videoGen (
         (lx <= (CX + (ly - TRI_TOP)));
 
     wire in_crossX = (abs11(dx - dy) <= THICK) || (abs11(dx + dy) <= THICK);
-
     wire in_diamond = (abs11(dx) + abs11(dy)) < R_DIAM;
 
     wire in_plus =
@@ -119,7 +124,7 @@ module videoGen (
     wire in_heart = ( (r2L < (H_R*H_R)) || (r2R < (H_R*H_R)) || in_heart_lower );
 
     wire in_symbol_raw =
-        (pair_id==3'd0) ? n_heart         :
+        (pair_id==3'd0) ? in_heart         :
         (pair_id==3'd1) ? in_triangle     :
         (pair_id==3'd2) ? in_crossX       :
         (pair_id==3'd3) ? in_diamond      :
@@ -130,6 +135,7 @@ module videoGen (
 
     wire in_symbol = in_card && !in_border && in_symbol_raw;
 
+    // Colores por símbolo
     logic [7:0] cr, cg, cb;
     always_comb begin
         unique case (pair_id)
@@ -144,15 +150,21 @@ module videoGen (
         endcase
     end
 
+    // Borde: normal vs seleccionado
     logic [7:0] br, bg, bb;
     always_comb begin
         if (in_border) begin
-            br = 8'd35;  bg = 8'd35;  bb = 8'd35;
+            if (is_selected_cell) begin
+                br = 8'd255; bg = 8'd230; bb = 8'd0;   // borde seleccionado 
+            end else begin
+                br = 8'd35;  bg = 8'd35;  bb = 8'd35;  // borde normal
+            end
         end else begin
-            br = 8'd235; bg = 8'd235; bb = 8'd235;
+            br = 8'd235; bg = 8'd235; bb = 8'd235;     // relleno carta
         end
     end
 
+    // Salida final
     always_comb begin
         if (in_symbol) begin
             r = cr; g = cg; b = cb;

@@ -7,7 +7,7 @@ module timer15_7seg(
     output logic [6:0] seg_ones
 );
 
-    localparam int unsigned CLK_HZ  = 1000;
+    localparam int unsigned CLK_HZ  = 50_000_000;
     localparam int unsigned DIV_MAX = CLK_HZ - 1;
 
     logic [$clog2(CLK_HZ)-1:0] div_cnt;

@@ -1,0 +1,73 @@
+
+module btn_debounced_pulse #(
+    parameter int unsigned CLK_HZ     = 50_000_000,
+    parameter int unsigned SAMPLE_HZ  = 1000,         
+    parameter int unsigned STABLE_MS  = 10           
+)(
+    input  logic clk,
+    input  logic rst,
+    input  logic btn_n,         // activo-bajo desde el pin
+    output logic pulse          // pulso 1 ciclo por presión
+);
+    // --- Sincronización a clk
+    logic b_sync0, b_sync1;
+    always_ff @(posedge clk or posedge rst) begin
+        if (rst) begin
+            b_sync0 <= 1'b1;
+            b_sync1 <= 1'b1;
+        end else begin
+            b_sync0 <= btn_n;
+            b_sync1 <= b_sync0;
+        end
+    end
+
+    localparam int unsigned DIV = (CLK_HZ / SAMPLE_HZ);
+    logic [$clog2(DIV)-1:0] divcnt;
+    logic sample_tick;
+
+    always_ff @(posedge clk or posedge rst) begin
+        if (rst) begin
+            divcnt     <= '0;
+            sample_tick<= 1'b0;
+        end else begin
+            if (divcnt == DIV-1) begin
+                divcnt      <= '0;
+                sample_tick <= 1'b1;
+            end else begin
+                divcnt      <= divcnt + 1'b1;
+                sample_tick <= 1'b0;
+            end
+        end
+    end
+
+  
+    localparam int unsigned STABLE_TICKS = STABLE_MS;
+    logic debounced;        
+    logic last_sampled;
+    logic [$clog2(STABLE_TICKS+1)-1:0] stabcnt;
+
+    always_ff @(posedge clk or posedge rst) begin
+        if (rst) begin
+            last_sampled <= 1'b1;
+            stabcnt      <= '0;
+            debounced    <= 1'b1;
+        end else if (sample_tick) begin
+            if (b_sync1 == last_sampled) begin
+                if (stabcnt < STABLE_TICKS) stabcnt <= stabcnt + 1'b1;
+                if (stabcnt == STABLE_TICKS-1) debounced <= b_sync1; // estable tras N ms
+            end else begin
+                last_sampled <= b_sync1;
+                stabcnt      <= '0;
+            end
+        end
+    end
+
+    // transicion 1->0
+    logic debounced_d;
+    always_ff @(posedge clk or posedge rst) begin
+        if (rst) debounced_d <= 1'b1;
+        else     debounced_d <= debounced;
+    end
+
+    assign pulse = (debounced_d == 1'b1) && (debounced == 1'b0);
+endmodule

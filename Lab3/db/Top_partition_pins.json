@@ -164,11 +164,35 @@
 					"strict" : false
 				},
 				{
+					"name" : "sel_count[0]",
+					"strict" : false
+				},
+				{
+					"name" : "sel_count[1]",
+					"strict" : false
+				},
+				{
 					"name" : "clk",
 					"strict" : false
 				},
 				{
 					"name" : "reset",
+					"strict" : false
+				},
+				{
+					"name" : "btn_right_n",
+					"strict" : false
+				},
+				{
+					"name" : "btn_left_n",
+					"strict" : false
+				},
+				{
+					"name" : "btn_down_n",
+					"strict" : false
+				},
+				{
+					"name" : "btn_up_n",
 					"strict" : false
 				}
 			]
