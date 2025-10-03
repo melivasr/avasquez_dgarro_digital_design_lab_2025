@@ -1,20 +1,14 @@
 module random(
-    input clk, rst, input reg[2:0] seed,
-    output [2:0] rnd 
+    input  logic clk, rst,
+    input  logic [3:0] init,
+    output logic [3:0] rnd
 );
-
-	wire feedback;
-	reg[2:0] data;
-
-	assign feedback = ~(rnd[2] ^ rnd[1]);
-
-	always @(negedge clk, negedge rst) begin
-		if (!rst)
-			data = seed;
-		else
-			data = {rnd[1:0],feedback};
-	end
-
-	assign rnd = data;
-
+    logic feedback;
+    always_ff @(posedge clk or posedge rst) begin
+        if (rst) rnd <= init;
+        else begin
+            feedback = ~(rnd[3] ^ rnd[2]);
+            rnd <= {rnd[2:0], feedback};
+        end
+    end
 endmodule

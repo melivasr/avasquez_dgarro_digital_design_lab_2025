@@ -1,0 +1,52 @@
+module shuffle(
+    input  logic clk,
+    input  logic rst,
+    input  logic start,       // Señal de la FSM para iniciar el shuffle
+    input  logic [3:0] seed,  // Semilla inicial
+    output logic done,        // Indica que terminó de barajar
+    output logic [3:0] board [0:15] // Tablero barajado
+);
+
+    logic [3:0] rnd;
+    logic [4:0] idx;   // índice hasta 16
+    integer i, j;
+
+    // Instancia del LFSR
+    random rng(.clk(clk), .rst(rst), .seed(seed), .rnd(rnd));
+
+    typedef enum logic [1:0] {IDLE, INIT, SHUFFLE, FINISH} state_t;
+    state_t state;
+
+    always_ff @(posedge clk or posedge rst) begin
+        if (rst) begin
+            state <= IDLE;
+            done  <= 0;
+        end else begin
+            case (state)
+                IDLE: if (start) state <= INIT;
+
+                INIT: begin
+                    // Llenar con 2 copias de cada símbolo
+                    for (i = 0; i < 16; i++)
+                        board[i] <= i/2;
+                    j <= 0;
+                    state <= SHUFFLE;
+                end
+
+                SHUFFLE: begin
+                    // Intercambiar posiciones pseudoaleatorias
+                    idx = rnd % 16;  
+                    {board[j], board[idx]} <= {board[idx], board[j]};
+                    j <= j + 1;
+
+                    if (j == 15) state <= FINISH;
+                end
+
+                FINISH: begin
+                    done <= 1;
+                    state <= IDLE; // volver a esperar
+                end
+            endcase
+        end
+    end
+endmodule

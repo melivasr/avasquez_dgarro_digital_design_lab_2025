@@ -12,16 +12,30 @@ module vga(
 );
     logic [9:0] x, y;
 	 
-	 // Señales para la FSM
-	 logic clr_timers, start_timer, t15s_expired;
-    logic clr_score, init_board, random_enable, board_write;
-    logic show_7seg, scan_buttons, random_pick, flip_sel_card;
-    logic store_sel_card, compare_enable, lock_pair, inc_score;
-    logic short_delay, hide_cards, display_winner;
-
+	 // Señales de la FSM
+	 logic clr_timers;
+	 logic start_timer;
+	 logic t15s_expired;
+    logic clr_score;
+	 logic init_board;
+	 logic random_enable;
+	 logic board_write;
+    logic show_7seg;
+	 logic scan_buttons;
+	 logic random_pick;
+	 logic flip_sel_card;
+    logic store_sel_card;
+	 logic compare_enable;
+	 logic lock_pair;
+	 logic inc_score;
+    logic short_delay;
+	 logic hide_cards;
+	 logic display_winner;
+	 logic shuffle_done;
+	 logic [3:0] board [0:15];   // Del shuffle
+	 
 	 
 	 //Instanciaciones
-
     pll vgapll(.inclk0(clk), .c0(vgaclk));
 
     vgaController vgaCont(
@@ -36,11 +50,11 @@ module vga(
         .r(r), .g(g), .b(b)
     );
 	 
-	 
+
 	 controladora_FSM fsm (
         .clk(clk),
         .rst(reset),
-        .shuffle_done(1'b0),
+        .shuffle_done(shuffle_done),
         .btn_valid(1'b0),
         .match(1'b0),
         .all_pairs(1'b0),
@@ -77,5 +91,14 @@ module vga(
         .seg_tens(seg_tens),
         .seg_ones(seg_ones)
     );
+	 
+	 shuffle shh (
+		.clk(clk),
+		.rst(reset),
+		.start(random_enable),
+		.init(4'b1011),        // Valor inicial
+		.done(shuffle_done),
+		.board(board)
+	);
 
 endmodule
