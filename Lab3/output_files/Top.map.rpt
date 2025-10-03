@@ -1,5 +1,5 @@
 Analysis & Elaboration report for Top
-Wed Oct 01 01:16:10 2025
+Fri Oct 03 00:44:35 2025
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -10,8 +10,10 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
   2. Analysis & Elaboration Summary
   3. Parallel Compilation
   4. Analysis & Elaboration Settings
-  5. Analysis & Elaboration Messages
-  6. Analysis & Elaboration Suppressed Messages
+  5. Port Connectivity Checks: "timer15_7seg:u_turn_timer|seven_segment_display:u7_tens"
+  6. Port Connectivity Checks: "controladora_FSM:fsm"
+  7. Analysis & Elaboration Messages
+  8. Analysis & Elaboration Suppressed Messages
 
 
 
@@ -38,10 +40,10 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------------------------------------------------------+
 ; Analysis & Elaboration Summary                                              ;
 +-------------------------------+---------------------------------------------+
-; Analysis & Elaboration Status ; Successful - Wed Oct 01 01:16:10 2025       ;
+; Analysis & Elaboration Status ; Successful - Fri Oct 03 00:44:35 2025       ;
 ; Quartus Prime Version         ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                 ; Top                                         ;
-; Top-level Entity Name         ; controladora_FSM                            ;
+; Top-level Entity Name         ; vga                                         ;
 ; Family                        ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)   ; N/A until Partition Merge                   ;
 ; Total registers               ; N/A until Partition Merge                   ;
@@ -75,7 +77,7 @@ https://fpgasoftware.intel.com/eula.
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                          ; 5CSXFC6D6F31C6     ;                    ;
-; Top-level entity name                                                           ; controladora_FSM   ; Top                ;
+; Top-level entity name                                                           ; vga                ; Top                ;
 ; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
 ; Use smart compilation                                                           ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
@@ -156,13 +158,50 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 
 
++-------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "timer15_7seg:u_turn_timer|seven_segment_display:u7_tens" ;
++-----------+-------+----------+------------------------------------------------------+
+; Port      ; Type  ; Severity ; Details                                              ;
++-----------+-------+----------+------------------------------------------------------+
+; num[3..1] ; Input ; Info     ; Stuck at GND                                         ;
++-----------+-------+----------+------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "controladora_FSM:fsm"                                                                         ;
++----------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port           ; Type   ; Severity ; Details                                                                             ;
++----------------+--------+----------+-------------------------------------------------------------------------------------+
+; shuffle_done   ; Input  ; Info     ; Stuck at GND                                                                        ;
+; btn_valid      ; Input  ; Info     ; Stuck at GND                                                                        ;
+; match          ; Input  ; Info     ; Stuck at GND                                                                        ;
+; all_pairs      ; Input  ; Info     ; Stuck at GND                                                                        ;
+; delay_done     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; clr_score      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; init_board     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; random_enable  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; board_write    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; show_7seg      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; scan_buttons   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; random_pick    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; flip_sel_card  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; store_sel_card ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; compare_enable ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; lock_pair      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; inc_score      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; short_delay    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; hide_cards     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; display_winner ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
 +---------------------------------+
 ; Analysis & Elaboration Messages ;
 +---------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Wed Oct 01 01:16:03 2025
+    Info: Processing started: Fri Oct 03 00:44:29 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Top -c Top --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
@@ -188,16 +227,37 @@ Info (12021): Found 1 design units, including 1 entities, in source file time_co
     Info (12023): Found entity 1: time_counter File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab3/time_counter.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file timer15_7seg.sv
     Info (12023): Found entity 1: timer15_7seg File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab3/timer15_7seg.sv Line: 1
-Info (12127): Elaborating entity "controladora_FSM" for the top level hierarchy
+Info (12127): Elaborating entity "vga" for the top level hierarchy
+Info (12128): Elaborating entity "pll" for hierarchy "pll:vgapll" File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab3/vga.sv Line: 25
+Info (12128): Elaborating entity "vgaController" for hierarchy "vgaController:vgaCont" File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab3/vga.sv Line: 32
+Warning (10230): Verilog HDL assignment warning at vgaController.sv(22): truncated value with size 32 to match size of target (10) File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab3/vgaController.sv Line: 22
+Warning (10230): Verilog HDL assignment warning at vgaController.sv(24): truncated value with size 32 to match size of target (10) File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab3/vgaController.sv Line: 24
+Info (12128): Elaborating entity "videoGen" for hierarchy "videoGen:videoGen_inst" File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab3/vga.sv Line: 37
+Warning (10230): Verilog HDL assignment warning at videoGen.sv(11): truncated value with size 32 to match size of target (2) File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab3/videoGen.sv Line: 11
+Warning (10230): Verilog HDL assignment warning at videoGen.sv(12): truncated value with size 32 to match size of target (2) File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab3/videoGen.sv Line: 12
+Warning (10230): Verilog HDL assignment warning at videoGen.sv(13): truncated value with size 32 to match size of target (9) File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab3/videoGen.sv Line: 13
+Warning (10230): Verilog HDL assignment warning at videoGen.sv(14): truncated value with size 32 to match size of target (7) File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab3/videoGen.sv Line: 14
+Warning (10230): Verilog HDL assignment warning at videoGen.sv(17): truncated value with size 32 to match size of target (3) File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab3/videoGen.sv Line: 17
+Warning (10230): Verilog HDL assignment warning at videoGen.sv(26): truncated value with size 32 to match size of target (11) File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab3/videoGen.sv Line: 26
+Warning (10230): Verilog HDL assignment warning at videoGen.sv(27): truncated value with size 32 to match size of target (11) File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab3/videoGen.sv Line: 27
+Warning (10230): Verilog HDL assignment warning at videoGen.sv(71): truncated value with size 32 to match size of target (11) File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab3/videoGen.sv Line: 71
+Warning (10230): Verilog HDL assignment warning at videoGen.sv(72): truncated value with size 32 to match size of target (11) File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab3/videoGen.sv Line: 72
+Warning (10230): Verilog HDL assignment warning at videoGen.sv(73): truncated value with size 32 to match size of target (11) File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab3/videoGen.sv Line: 73
+Info (12128): Elaborating entity "controladora_FSM" for hierarchy "controladora_FSM:fsm" File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab3/vga.sv Line: 69
 Warning (10230): Verilog HDL assignment warning at controladora_FSM.sv(69): truncated value with size 32 to match size of target (2) File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab3/controladora_FSM.sv Line: 69
 Warning (10230): Verilog HDL assignment warning at controladora_FSM.sv(70): truncated value with size 32 to match size of target (2) File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab3/controladora_FSM.sv Line: 70
 Info (10264): Verilog HDL Case Statement information at controladora_FSM.sv(67): all case item expressions in this case statement are onehot File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab3/controladora_FSM.sv Line: 67
+Info (12128): Elaborating entity "timer15_7seg" for hierarchy "timer15_7seg:u_turn_timer" File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab3/vga.sv Line: 79
+Warning (10230): Verilog HDL assignment warning at timer15_7seg.sv(41): truncated value with size 6 to match size of target (4) File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab3/timer15_7seg.sv Line: 41
+Info (12128): Elaborating entity "time_counter" for hierarchy "timer15_7seg:u_turn_timer|time_counter:u_time" File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab3/timer15_7seg.sv Line: 36
+Warning (10230): Verilog HDL assignment warning at time_counter.sv(19): truncated value with size 32 to match size of target (6) File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab3/time_counter.sv Line: 19
+Info (12128): Elaborating entity "seven_segment_display" for hierarchy "timer15_7seg:u_turn_timer|seven_segment_display:u7_tens" File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab3/timer15_7seg.sv Line: 43
 Info (144001): Generated suppressed messages file F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab3/output_files/Top.map.smsg
-Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 3 warnings
+Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 17 warnings
     Info: Peak virtual memory: 4767 megabytes
-    Info: Processing ended: Wed Oct 01 01:16:10 2025
-    Info: Elapsed time: 00:00:07
-    Info: Total CPU time (on all processors): 00:00:15
+    Info: Processing ended: Fri Oct 03 00:44:35 2025
+    Info: Elapsed time: 00:00:06
+    Info: Total CPU time (on all processors): 00:00:14
 
 
 +--------------------------------------------+

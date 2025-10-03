@@ -117,8 +117,10 @@ module controladora_FSM (
 				show_7seg = 1;
 			end
 			
-			WAIT_SELECTION:
+			WAIT_SELECTION: begin
+				start_timer = 1;
 				scan_buttons = 1;
+			end
 			
 			REVEAL: begin 
 				flip_sel_card = 1;
@@ -217,4 +219,4 @@ module controladora_FSM (
 		endcase
 	end
 				
-endmodule		
+endmodule

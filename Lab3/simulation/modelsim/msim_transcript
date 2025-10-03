@@ -12,32 +12,93 @@
 # 
 # vlog -sv -work work +incdir+F:/Proyectos\ Quartos/avasquez_dgarro_digital_design_lab_2025/Lab3 {F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab3/controladora_FSM.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 01:16:18 on Oct 01,2025
+# Start time: 00:42:35 on Oct 03,2025
 # vlog -reportprogress 300 -sv -work work "+incdir+F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab3" F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab3/controladora_FSM.sv 
 # -- Compiling module controladora_FSM
 # 
 # Top level modules:
 # 	controladora_FSM
-# End time: 01:16:18 on Oct 01,2025, Elapsed time: 0:00:00
+# End time: 00:42:35 on Oct 03,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+F:/Proyectos\ Quartos/avasquez_dgarro_digital_design_lab_2025/Lab3 {F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab3/seven_segment_display.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 00:42:35 on Oct 03,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab3" F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab3/seven_segment_display.sv 
+# -- Compiling module seven_segment_display
+# 
+# Top level modules:
+# 	seven_segment_display
+# End time: 00:42:35 on Oct 03,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+F:/Proyectos\ Quartos/avasquez_dgarro_digital_design_lab_2025/Lab3 {F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab3/vga.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 00:42:36 on Oct 03,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab3" F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab3/vga.sv 
+# -- Compiling module vga
+# 
+# Top level modules:
+# 	vga
+# End time: 00:42:36 on Oct 03,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+F:/Proyectos\ Quartos/avasquez_dgarro_digital_design_lab_2025/Lab3 {F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab3/time_counter.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 00:42:36 on Oct 03,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab3" F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab3/time_counter.sv 
+# -- Compiling module time_counter
+# 
+# Top level modules:
+# 	time_counter
+# End time: 00:42:36 on Oct 03,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+F:/Proyectos\ Quartos/avasquez_dgarro_digital_design_lab_2025/Lab3 {F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab3/timer15_7seg.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 00:42:36 on Oct 03,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab3" F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab3/timer15_7seg.sv 
+# -- Compiling module timer15_7seg
+# 
+# Top level modules:
+# 	timer15_7seg
+# End time: 00:42:36 on Oct 03,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vlog -sv -work work +incdir+F:/Proyectos\ Quartos/avasquez_dgarro_digital_design_lab_2025/Lab3 {F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab3/tb.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 01:16:18 on Oct 01,2025
+# Start time: 00:42:36 on Oct 03,2025
 # vlog -reportprogress 300 -sv -work work "+incdir+F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab3" F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab3/tb.sv 
 # -- Compiling module tb
 # 
 # Top level modules:
 # 	tb
-# End time: 01:16:18 on Oct 01,2025, Elapsed time: 0:00:00
+# End time: 00:42:36 on Oct 03,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  tb
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" tb 
-# Start time: 01:16:19 on Oct 01,2025
+# Start time: 00:42:36 on Oct 03,2025
 # Loading sv_std.std
 # Loading work.tb
+# Loading work.vga
 # Loading work.controladora_FSM
+# Loading work.timer15_7seg
+# Loading work.time_counter
+# Loading work.seven_segment_display
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'fsm'.  Expected 27, found 12.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/dut/fsm File: F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab3/vga.sv Line: 20
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab3/vga.sv(20): [TFMPC] - Missing connection for port 'clr_score'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab3/vga.sv(20): [TFMPC] - Missing connection for port 'init_board'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab3/vga.sv(20): [TFMPC] - Missing connection for port 'random_enable'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab3/vga.sv(20): [TFMPC] - Missing connection for port 'board_write'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab3/vga.sv(20): [TFMPC] - Missing connection for port 'show_7seg'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab3/vga.sv(20): [TFMPC] - Missing connection for port 'scan_buttons'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab3/vga.sv(20): [TFMPC] - Missing connection for port 'random_pick'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab3/vga.sv(20): [TFMPC] - Missing connection for port 'flip_sel_card'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab3/vga.sv(20): [TFMPC] - Missing connection for port 'store_sel_card'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab3/vga.sv(20): [TFMPC] - Missing connection for port 'compare_enable'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab3/vga.sv(20): [TFMPC] - Missing connection for port 'lock_pair'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab3/vga.sv(20): [TFMPC] - Missing connection for port 'inc_score'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab3/vga.sv(20): [TFMPC] - Missing connection for port 'short_delay'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab3/vga.sv(20): [TFMPC] - Missing connection for port 'hide_cards'.
+# ** Warning: (vsim-3722) F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab3/vga.sv(20): [TFMPC] - Missing connection for port 'display_winner'.
 # 
 # add wave *
 # view structure
@@ -45,9 +106,29 @@
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run -all
-# ** Note: $finish    : F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab3/tb.sv(115)
-#    Time: 2300 ns  Iteration: 0  Instance: /tb
-# 1
-# Break in Module tb at F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab3/tb.sv line 115
-# End time: 01:18:11 on Oct 01,2025, Elapsed time: 0:01:52
-# Errors: 0, Warnings: 0
+# t=0 | player=0 | sel_count=0 | seconds=12118 | expired=0 | start_timer=0
+# t=170000 | player=0 | sel_count=0 | seconds=12118 | expired=0 | start_timer=1
+# t=390000 | player=0 | sel_count=1 | seconds=12118 | expired=0 | start_timer=0
+# t=410000 | player=0 | sel_count=1 | seconds=12118 | expired=0 | start_timer=1
+# t=20070000 | player=0 | sel_count=1 | seconds=12125 | expired=0 | start_timer=1
+# t=40070000 | player=0 | sel_count=1 | seconds=12148 | expired=0 | start_timer=1
+# t=60070000 | player=0 | sel_count=1 | seconds=12136 | expired=0 | start_timer=1
+# t=80070000 | player=0 | sel_count=1 | seconds=121121 | expired=0 | start_timer=1
+# t=100070000 | player=0 | sel_count=1 | seconds=12164 | expired=0 | start_timer=1
+# t=120070000 | player=0 | sel_count=1 | seconds=6416 | expired=0 | start_timer=1
+# t=140070000 | player=0 | sel_count=1 | seconds=640 | expired=0 | start_timer=1
+# t=160070000 | player=0 | sel_count=1 | seconds=64120 | expired=0 | start_timer=1
+# t=180070000 | player=0 | sel_count=1 | seconds=642 | expired=0 | start_timer=1
+# t=200070000 | player=0 | sel_count=1 | seconds=6418 | expired=0 | start_timer=1
+# t=220070000 | player=0 | sel_count=1 | seconds=6425 | expired=0 | start_timer=1
+# t=240070000 | player=0 | sel_count=1 | seconds=6448 | expired=0 | start_timer=1
+# t=260070000 | player=0 | sel_count=1 | seconds=6436 | expired=0 | start_timer=1
+# t=280070000 | player=0 | sel_count=1 | seconds=64121 | expired=0 | start_timer=1
+# t=300070000 | player=0 | sel_count=1 | seconds=6464 | expired=0 | start_timer=1
+# t=320070000 | player=0 | sel_count=1 | seconds=12118 | expired=1 | start_timer=1
+# t=320090000 | player=0 | sel_count=2 | seconds=12118 | expired=0 | start_timer=0
+# ** Note: $stop    : F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab3/tb.sv(61)
+#    Time: 506060 ns  Iteration: 0  Instance: /tb
+# Break in Module tb at F:/Proyectos Quartos/avasquez_dgarro_digital_design_lab_2025/Lab3/tb.sv line 61
+# End time: 00:43:28 on Oct 03,2025, Elapsed time: 0:00:52
+# Errors: 0, Warnings: 16

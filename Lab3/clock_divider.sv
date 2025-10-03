@@ -3,7 +3,7 @@ module clock_divider(
     input logic reset,
     output logic tick  // Pulso cada segundo
 );
-    localparam int COUNT_MAX = 50_000_000;  
+    localparam int COUNT_MAX = 1000;  
     int count = 0;
 
     always_ff @(posedge clk or posedge reset) begin

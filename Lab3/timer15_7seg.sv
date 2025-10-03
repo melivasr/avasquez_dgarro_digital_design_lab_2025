@@ -1,10 +1,13 @@
 module timer15_7seg(
     input  logic clk,
     input  logic reset,
+	 input  logic start,    // start_timer en la FSM
+	 output logic expired,
     output logic [6:0] seg_tens,
     output logic [6:0] seg_ones
 );
-    localparam int unsigned CLK_HZ  = 50_000_000;
+
+    localparam int unsigned CLK_HZ  = 1000;
     localparam int unsigned DIV_MAX = CLK_HZ - 1;
 
     logic [$clog2(CLK_HZ)-1:0] div_cnt;
@@ -29,8 +32,8 @@ module timer15_7seg(
     //Contador
     logic [5:0] seconds;
     time_counter u_time (
-        .clk(clk), .reset(reset), .tick(tick_1hz), .seconds(seconds)
-    );
+        .clk(clk), .reset(reset), .tick(tick_1hz), .start(start), .expired(expired),  .seconds(seconds)
+		  );
 
     //Dos digitos
     logic [3:0] tens, ones;
