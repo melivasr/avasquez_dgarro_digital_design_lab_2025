@@ -39,11 +39,7 @@
 
 set_global_assignment -name FAMILY "Cyclone V"
 set_global_assignment -name DEVICE 5CSXFC6D6F31C6
-<<<<<<< Updated upstream
-set_global_assignment -name TOP_LEVEL_ENTITY shuffle
-=======
 set_global_assignment -name TOP_LEVEL_ENTITY vga
->>>>>>> Stashed changes
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 20.1.1
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "22:03:42  SEPTEMBER 28, 2025"
 set_global_assignment -name LAST_QUARTUS_VERSION "20.1.1 Lite Edition"
@@ -122,7 +118,62 @@ set_location_assignment PIN_AD17 -to seg_tens[3]
 set_location_assignment PIN_AE18 -to seg_tens[4]
 set_location_assignment PIN_AE17 -to seg_tens[5]
 set_location_assignment PIN_V17 -to seg_tens[6]
-set_global_assignment -name SYSTEMVERILOG_FILE shuffle.sv
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -entity controladora_FSM -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -entity controladora_FSM -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -entity controladora_FSM -section_id Top
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to clk -entity controladora_FSM
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to hsync -entity controladora_FSM
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to vsync -entity controladora_FSM
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to vgaclk -entity controladora_FSM
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to r[0] -entity controladora_FSM
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to sync_b -entity controladora_FSM
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to blank_b -entity controladora_FSM
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to b[7] -entity controladora_FSM
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to b[6] -entity controladora_FSM
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to b[5] -entity controladora_FSM
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to b[4] -entity controladora_FSM
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to b[3] -entity controladora_FSM
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to b[2] -entity controladora_FSM
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to b[1] -entity controladora_FSM
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to b[0] -entity controladora_FSM
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to b -entity controladora_FSM
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to g[7] -entity controladora_FSM
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to g[6] -entity controladora_FSM
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to g[5] -entity controladora_FSM
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to g[4] -entity controladora_FSM
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to g[3] -entity controladora_FSM
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to g[2] -entity controladora_FSM
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to g[1] -entity controladora_FSM
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to g[0] -entity controladora_FSM
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to g -entity controladora_FSM
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to r[7] -entity controladora_FSM
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to r[6] -entity controladora_FSM
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to r[5] -entity controladora_FSM
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to r[4] -entity controladora_FSM
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to r[3] -entity controladora_FSM
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to r[2] -entity controladora_FSM
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to r[1] -entity controladora_FSM
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to r -entity controladora_FSM
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to reset -entity controladora_FSM
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seg_ones[0] -entity controladora_FSM
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seg_ones[1] -entity controladora_FSM
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seg_ones[2] -entity controladora_FSM
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seg_ones[3] -entity controladora_FSM
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seg_ones[4] -entity controladora_FSM
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seg_ones[5] -entity controladora_FSM
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seg_ones[6] -entity controladora_FSM
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seg_ones -entity controladora_FSM
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seg_tens[6] -entity controladora_FSM
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seg_tens[5] -entity controladora_FSM
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seg_tens[4] -entity controladora_FSM
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seg_tens[3] -entity controladora_FSM
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seg_tens[2] -entity controladora_FSM
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seg_tens[1] -entity controladora_FSM
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seg_tens[0] -entity controladora_FSM
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seg_tens -entity controladora_FSM
+set_global_assignment -name LAST_QUARTUS_VERSION "20.1.0 Lite Edition"
+set_global_assignment -name TOP_LEVEL_ENTITY controladora_FSM
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -entity controladora_FSM -section_id Top
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
