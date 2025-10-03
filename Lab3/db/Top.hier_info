@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 |shuffle
 clk => clk.IN1
 rst => rst.IN1
@@ -90,5 +91,228 @@ rnd[0] <= rnd[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 rnd[1] <= rnd[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 rnd[2] <= rnd[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 rnd[3] <= rnd[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+=======
+|vga
+clk => clk.IN2
+reset => reset.IN1
+vgaclk << vgaclk.DB_MAX_OUTPUT_PORT_TYPE
+hsync << vgaController:vgaCont.hsync
+vsync << vgaController:vgaCont.vsync
+sync_b << vgaController:vgaCont.sync_b
+blank_b << vgaController:vgaCont.blank_b
+r[0] << videoGen:videoGen_inst.r
+r[1] << videoGen:videoGen_inst.r
+r[2] << videoGen:videoGen_inst.r
+r[3] << videoGen:videoGen_inst.r
+r[4] << videoGen:videoGen_inst.r
+r[5] << videoGen:videoGen_inst.r
+r[6] << videoGen:videoGen_inst.r
+r[7] << videoGen:videoGen_inst.r
+g[0] << videoGen:videoGen_inst.g
+g[1] << videoGen:videoGen_inst.g
+g[2] << videoGen:videoGen_inst.g
+g[3] << videoGen:videoGen_inst.g
+g[4] << videoGen:videoGen_inst.g
+g[5] << videoGen:videoGen_inst.g
+g[6] << videoGen:videoGen_inst.g
+g[7] << videoGen:videoGen_inst.g
+b[0] << videoGen:videoGen_inst.b
+b[1] << videoGen:videoGen_inst.b
+b[2] << videoGen:videoGen_inst.b
+b[3] << videoGen:videoGen_inst.b
+b[4] << videoGen:videoGen_inst.b
+b[5] << videoGen:videoGen_inst.b
+b[6] << videoGen:videoGen_inst.b
+b[7] << videoGen:videoGen_inst.b
+seg_tens[0] << timer15_7seg:u_turn_timer.seg_tens
+seg_tens[1] << timer15_7seg:u_turn_timer.seg_tens
+seg_tens[2] << timer15_7seg:u_turn_timer.seg_tens
+seg_tens[3] << timer15_7seg:u_turn_timer.seg_tens
+seg_tens[4] << timer15_7seg:u_turn_timer.seg_tens
+seg_tens[5] << timer15_7seg:u_turn_timer.seg_tens
+seg_tens[6] << timer15_7seg:u_turn_timer.seg_tens
+seg_ones[0] << timer15_7seg:u_turn_timer.seg_ones
+seg_ones[1] << timer15_7seg:u_turn_timer.seg_ones
+seg_ones[2] << timer15_7seg:u_turn_timer.seg_ones
+seg_ones[3] << timer15_7seg:u_turn_timer.seg_ones
+seg_ones[4] << timer15_7seg:u_turn_timer.seg_ones
+seg_ones[5] << timer15_7seg:u_turn_timer.seg_ones
+seg_ones[6] << timer15_7seg:u_turn_timer.seg_ones
+
+
+|vga|pll:vgapll
+inclk0 => toggle.CLK
+c0 <= toggle.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vga|vgaController:vgaCont
+vgaclk => y[0]~reg0.CLK
+vgaclk => y[1]~reg0.CLK
+vgaclk => y[2]~reg0.CLK
+vgaclk => y[3]~reg0.CLK
+vgaclk => y[4]~reg0.CLK
+vgaclk => y[5]~reg0.CLK
+vgaclk => y[6]~reg0.CLK
+vgaclk => y[7]~reg0.CLK
+vgaclk => y[8]~reg0.CLK
+vgaclk => y[9]~reg0.CLK
+vgaclk => x[0]~reg0.CLK
+vgaclk => x[1]~reg0.CLK
+vgaclk => x[2]~reg0.CLK
+vgaclk => x[3]~reg0.CLK
+vgaclk => x[4]~reg0.CLK
+vgaclk => x[5]~reg0.CLK
+vgaclk => x[6]~reg0.CLK
+vgaclk => x[7]~reg0.CLK
+vgaclk => x[8]~reg0.CLK
+vgaclk => x[9]~reg0.CLK
+hsync <= hsync.DB_MAX_OUTPUT_PORT_TYPE
+vsync <= vsync.DB_MAX_OUTPUT_PORT_TYPE
+sync_b <= sync_b.DB_MAX_OUTPUT_PORT_TYPE
+blank_b <= blank_b.DB_MAX_OUTPUT_PORT_TYPE
+x[0] <= x[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+x[1] <= x[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+x[2] <= x[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+x[3] <= x[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+x[4] <= x[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+x[5] <= x[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+x[6] <= x[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+x[7] <= x[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+x[8] <= x[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+x[9] <= x[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+y[0] <= y[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+y[1] <= y[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+y[2] <= y[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+y[3] <= y[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+y[4] <= y[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+y[5] <= y[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+y[6] <= y[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+y[7] <= y[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+y[8] <= y[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+y[9] <= y[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vga|videoGen:videoGen_inst
+x[0] => LessThan0.IN64
+x[0] => LessThan2.IN64
+x[0] => rx_u[0].DATAA
+x[1] => Add0.IN18
+x[2] => Add0.IN17
+x[3] => Add0.IN16
+x[4] => Add0.IN15
+x[5] => Add0.IN14
+x[6] => Add0.IN13
+x[7] => Add0.IN12
+x[8] => Add0.IN11
+x[9] => Add0.IN10
+y[0] => Add1.IN20
+y[1] => Add1.IN19
+y[2] => Add1.IN18
+y[3] => Add1.IN17
+y[4] => Add1.IN16
+y[5] => Add1.IN15
+y[6] => Add1.IN14
+y[7] => Add1.IN13
+y[8] => Add1.IN12
+y[9] => Add1.IN11
+r[0] <= r.DB_MAX_OUTPUT_PORT_TYPE
+r[1] <= r.DB_MAX_OUTPUT_PORT_TYPE
+r[2] <= r.DB_MAX_OUTPUT_PORT_TYPE
+r[3] <= r.DB_MAX_OUTPUT_PORT_TYPE
+r[4] <= r.DB_MAX_OUTPUT_PORT_TYPE
+r[5] <= r.DB_MAX_OUTPUT_PORT_TYPE
+r[6] <= r.DB_MAX_OUTPUT_PORT_TYPE
+r[7] <= r.DB_MAX_OUTPUT_PORT_TYPE
+g[0] <= g.DB_MAX_OUTPUT_PORT_TYPE
+g[1] <= in_symbol.DB_MAX_OUTPUT_PORT_TYPE
+g[2] <= g.DB_MAX_OUTPUT_PORT_TYPE
+g[3] <= g.DB_MAX_OUTPUT_PORT_TYPE
+g[4] <= g.DB_MAX_OUTPUT_PORT_TYPE
+g[5] <= g.DB_MAX_OUTPUT_PORT_TYPE
+g[6] <= g.DB_MAX_OUTPUT_PORT_TYPE
+g[7] <= g.DB_MAX_OUTPUT_PORT_TYPE
+b[0] <= b.DB_MAX_OUTPUT_PORT_TYPE
+b[1] <= b.DB_MAX_OUTPUT_PORT_TYPE
+b[2] <= b.DB_MAX_OUTPUT_PORT_TYPE
+b[3] <= b.DB_MAX_OUTPUT_PORT_TYPE
+b[4] <= b.DB_MAX_OUTPUT_PORT_TYPE
+b[5] <= b.DB_MAX_OUTPUT_PORT_TYPE
+b[6] <= b.DB_MAX_OUTPUT_PORT_TYPE
+b[7] <= b.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vga|timer15_7seg:u_turn_timer
+clk => clk.IN1
+reset => reset.IN1
+seg_tens[0] <= seven_segment_display:u7_tens.seg
+seg_tens[1] <= seven_segment_display:u7_tens.seg
+seg_tens[2] <= seven_segment_display:u7_tens.seg
+seg_tens[3] <= seven_segment_display:u7_tens.seg
+seg_tens[4] <= seven_segment_display:u7_tens.seg
+seg_tens[5] <= seven_segment_display:u7_tens.seg
+seg_tens[6] <= seven_segment_display:u7_tens.seg
+seg_ones[0] <= seven_segment_display:u7_ones.seg
+seg_ones[1] <= seven_segment_display:u7_ones.seg
+seg_ones[2] <= seven_segment_display:u7_ones.seg
+seg_ones[3] <= seven_segment_display:u7_ones.seg
+seg_ones[4] <= seven_segment_display:u7_ones.seg
+seg_ones[5] <= seven_segment_display:u7_ones.seg
+seg_ones[6] <= seven_segment_display:u7_ones.seg
+
+
+|vga|timer15_7seg:u_turn_timer|time_counter:u_time
+clk => seconds[0]~reg0.CLK
+clk => seconds[1]~reg0.CLK
+clk => seconds[2]~reg0.CLK
+clk => seconds[3]~reg0.CLK
+clk => seconds[4]~reg0.CLK
+clk => seconds[5]~reg0.CLK
+reset => seconds[0]~reg0.PRESET
+reset => seconds[1]~reg0.PRESET
+reset => seconds[2]~reg0.PRESET
+reset => seconds[3]~reg0.PRESET
+reset => seconds[4]~reg0.ACLR
+reset => seconds[5]~reg0.ACLR
+tick => seconds[5]~reg0.ENA
+tick => seconds[4]~reg0.ENA
+tick => seconds[3]~reg0.ENA
+tick => seconds[2]~reg0.ENA
+tick => seconds[1]~reg0.ENA
+tick => seconds[0]~reg0.ENA
+seconds[0] <= seconds[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+seconds[1] <= seconds[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+seconds[2] <= seconds[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+seconds[3] <= seconds[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+seconds[4] <= seconds[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+seconds[5] <= seconds[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vga|timer15_7seg:u_turn_timer|seven_segment_display:u7_tens
+num[0] => Decoder0.IN3
+num[1] => Decoder0.IN2
+num[2] => Decoder0.IN1
+num[3] => Decoder0.IN0
+seg[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+seg[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+seg[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+seg[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+seg[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+seg[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+seg[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vga|timer15_7seg:u_turn_timer|seven_segment_display:u7_ones
+num[0] => Decoder0.IN3
+num[1] => Decoder0.IN2
+num[2] => Decoder0.IN1
+num[3] => Decoder0.IN0
+seg[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+seg[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+seg[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+seg[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+seg[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+seg[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+seg[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+>>>>>>> Stashed changes
 
 
