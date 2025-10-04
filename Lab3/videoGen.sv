@@ -2,8 +2,9 @@ module videoGen (
     input  logic [9:0] x,
     input  logic [9:0] y,
     input  logic [3:0] board [0:15],
-    input  logic [1:0] sel_row,   
-    input  logic [1:0] sel_col,  
+    input  logic [1:0] sel_row,
+    input  logic [1:0] sel_col,
+    input  logic [15:0] reveal_mask,
     output logic [7:0] r, g, b
 );
     localparam int SCREEN_W   = 640;
@@ -23,13 +24,23 @@ module videoGen (
     localparam int MARGIN_X = (SCREEN_W - TOTAL_W)/2;
     localparam int MARGIN_Y = (SCREEN_H - TOTAL_H)/2;
 
+    // mesa
     localparam logic [7:0] TABLE_R = 8'd20;
     localparam logic [7:0] TABLE_G = 8'd90;
     localparam logic [7:0] TABLE_B = 8'd20;
 
-    wire signed [10:0] rx = $signed({1'b0,x}) - $signed(MARGIN_X);
-    wire signed [10:1] dummy_unused = 0; 
-    wire signed [10:0] ry = $signed({1'b0,y}) - $signed(MARGIN_Y);
+    // dorso
+    localparam logic [7:0] BACK_R = 8'd50;
+    localparam logic [7:0] BACK_G = 8'd50;
+    localparam logic [7:0] BACK_B = 8'd140;
+
+    
+    localparam signed [10:0] MX  = MARGIN_X;
+    localparam signed [10:0] MY  = MARGIN_Y;
+
+    // coords relativas
+    wire signed [10:0] rx = $signed({1'b0,x}) - MX;
+    wire signed [10:0] ry = $signed({1'b0,y}) - MY;
 
     localparam int CELL_W = CARD_W + GAP_X;
     localparam int CELL_H = CARD_H + GAP_Y;
@@ -58,7 +69,10 @@ module videoGen (
     wire [5:0] idx = row * GRID_COLS + col; 
     wire [2:0] pair_id = board[idx][2:0];
 
-    // --- borde y selección
+    // ¿está revelada esta carta?
+    wire revealed = reveal_mask[idx];
+
+    // borde y selección
     wire in_border = in_card &&
                      ((lx < BORDER) || (lx >= CARD_W - BORDER) ||
                       (ly < BORDER) || (ly >= CARD_H - BORDER));
@@ -68,8 +82,9 @@ module videoGen (
     localparam int CX = CARD_W/2;
     localparam int CY = CARD_H/2;
 
-    wire signed [10:0] dx = $signed({1'b0,lx}) - $signed(CX);
-    wire signed [10:0] dy = $signed({1'b0,ly}) - $signed(CY);
+    // también fijamos ancho/signed para centros y offsets
+    localparam signed [10:0] CX11 = CX;
+    localparam signed [10:0] CY11 = CY;
 
     function automatic [10:0] abs11(input signed [10:0] v);
         abs11 = (v < 0) ? -v : v;
@@ -84,6 +99,10 @@ module videoGen (
 
     localparam int TRI_TOP  = (CARD_H*20)/100;
     localparam int TRI_BOT  = (CARD_H*85)/100;
+
+    // distancias al centro
+    wire signed [10:0] dx = $signed({1'b0,lx}) - CX11;
+    wire signed [10:0] dy = $signed({1'b0,ly}) - CY11;
 
     wire [21:0] r2 = dx*dx + dy*dy;
     wire in_circle  = (r2 < (R_CIRC*R_CIRC));
@@ -109,19 +128,25 @@ module videoGen (
         (lx >= (CX - (TRI_BOT - ly))) &&
         (lx <= (CX + (TRI_BOT - ly)));
 
+    // offsets para el corazón (todo con ancho fijo)
     localparam int H_OFF_X = (CARD_W*18)/100;
     localparam int H_OFF_Y = (CARD_H*10)/100;
-    localparam int H_R     = (MIN_SIDE*22)/100;
-    wire signed [10:0] dxL = $signed({1'b0,lx}) - $signed(CX - H_OFF_X);
-    wire signed [10:0] dxR = $signed({1'b0,lx}) - $signed(CX + H_OFF_X);
-    wire signed [10:0] dyH = $signed({1'b0,ly}) - $signed(CY - H_OFF_Y);
+    localparam int H_R_INT = (MIN_SIDE*22)/100;
+    localparam signed [10:0] CXm = CX - H_OFF_X; // centro izquierdo
+    localparam signed [10:0] CXp = CX + H_OFF_X; // centro derecho
+    localparam signed [10:0] CYm = CY - H_OFF_Y; // centro vertical
+
+    wire signed [10:0] dxL = $signed({1'b0,lx}) - CXm;
+    wire signed [10:0] dxR = $signed({1'b0,lx}) - CXp;
+    wire signed [10:0] dyH = $signed({1'b0,ly}) - CYm;
+
     wire [21:0] r2L = dxL*dxL + dyH*dyH;
     wire [21:0] r2R = dxR*dxR + dyH*dyH;
 
     localparam int HEART_DIAM = (MIN_SIDE*37)/100;
     wire in_heart_lower = (ly >= CY - 2) &&
                           ((abs11(dx) + (ly - (CY - 2))) < HEART_DIAM);
-    wire in_heart = ( (r2L < (H_R*H_R)) || (r2R < (H_R*H_R)) || in_heart_lower );
+    wire in_heart = ( (r2L < (H_R_INT*H_R_INT)) || (r2R < (H_R_INT*H_R_INT)) || in_heart_lower );
 
     wire in_symbol_raw =
         (pair_id==3'd0) ? in_heart         :
@@ -133,7 +158,8 @@ module videoGen (
         (pair_id==3'd6) ? in_triangle_inv :
                           in_circle;
 
-    wire in_symbol = in_card && !in_border && in_symbol_raw;
+    // SOLO dibuja símbolo si la carta está revelada
+    wire in_symbol = revealed && in_card && !in_border && in_symbol_raw;
 
     // Colores por símbolo
     logic [7:0] cr, cg, cb;
@@ -150,28 +176,32 @@ module videoGen (
         endcase
     end
 
-    // Borde: normal vs seleccionado
-    logic [7:0] br, bg, bb;
+    // Borde/relleno según estado
+    logic [7:0] rr, gg, bb;
     always_comb begin
-        if (in_border) begin
-            if (is_selected_cell) begin
-                br = 8'd255; bg = 8'd230; bb = 8'd0;   // borde seleccionado 
+        if (in_symbol) begin
+            rr = cr; gg = cg; bb = cb;                 // símbolo
+        end else if (in_card) begin
+            if (in_border) begin
+                if (is_selected_cell) begin
+                    rr=8'd255; gg=8'd230; bb=8'd0;     // borde seleccionado
+                end else begin
+                    rr=8'd35;  gg=8'd35;  bb=8'd35;    // borde normal
+                end
             end else begin
-                br = 8'd35;  bg = 8'd35;  bb = 8'd35;  // borde normal
+                // dorso si oculta, carta clara si revelada
+                if (revealed) begin
+                    rr=8'd235; gg=8'd235; bb=8'd235;   // cara hacia arriba
+                end else begin
+                    rr=BACK_R; gg=BACK_G; bb=BACK_B;   // dorso
+                end
             end
         end else begin
-            br = 8'd235; bg = 8'd235; bb = 8'd235;     // relleno carta
+            rr = TABLE_R; gg = TABLE_G; bb = TABLE_B;  // mesa
         end
     end
 
-    // Salida final
     always_comb begin
-        if (in_symbol) begin
-            r = cr; g = cg; b = cb;
-        end else if (in_card) begin
-            r = br; g = bg; b = bb;
-        end else begin
-            r = TABLE_R; g = TABLE_G; b = TABLE_B;
-        end
+        r = rr; g = gg; b = bb;
     end
 endmodule

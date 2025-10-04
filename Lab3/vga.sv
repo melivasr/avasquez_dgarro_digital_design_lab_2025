@@ -5,6 +5,7 @@ module vga(
     input  logic btn_down_n,
     input  logic btn_left_n,
     input  logic btn_right_n,
+	 input  logic sw_flip,
 
     output logic vgaclk,
     output logic hsync, vsync,
@@ -13,7 +14,11 @@ module vga(
     output logic [6:0] seg_tens, 
     output logic [6:0] seg_ones, 
     output logic player,
-    output logic [1:0] sel_count
+    output logic [1:0] sel_count,
+	 output logic [6:0] seg_score_p0, // puntaje jugador 0
+    output logic [6:0] seg_score_p1, // puntaje jugador 1
+	 output logic [6:0] seg_player
+	 
 );
     logic [9:0] x, y;
 
@@ -24,6 +29,9 @@ module vga(
     logic lock_pair, inc_score, short_delay, hide_cards, display_winner;
     logic shuffle_done;
     logic [3:0] board [0:15];
+	 logic [3:0] score_p0, score_p1;
+	 
+	 logic [15:0] reveal_mask;
 
     // Reloj VGA
     pll vgapll(.inclk0(clk), .c0(vgaclk));
@@ -59,13 +67,22 @@ module vga(
         .sel_col(sel_col),
         .sel_idx(sel_idx)
     );
+	  
 
+    flip_control u_flip (
+        .clk(clk),
+        .rst(reset),
+        .sw_flip(sw_flip),     
+        .sel_idx(sel_idx),
+        .reveal_mask(reveal_mask)
+    );
     
     videoGen videoGen_inst (
         .x(x), .y(y),
         .board(board),
         .sel_row(sel_row),
         .sel_col(sel_col),
+		  .reveal_mask(reveal_mask), 
         .r(r), .g(g), .b(b)
     );
 
@@ -119,5 +136,41 @@ module vga(
         .done(shuffle_done),
         .board(board)
     );
+	 
+
+		score_manager_two u_scores (
+			 .clk        (clk),
+			 .rst        (reset),
+			 .clr_scores (clr_score),   
+			 .inc_score  (inc_score),   // pulso en estado S_MATCH_LOCK
+			 .player     (player),      // de la FSM (0/1)
+			 .score_p0   (score_p0),
+			 .score_p1   (score_p1)
+		);
+
+		seven_segment_display disp_p0 (
+			 .num(score_p0),
+			 .seg(seg_score_p0)
+		);
+
+		seven_segment_display disp_p1 (
+			 .num(score_p1),
+			 .seg(seg_score_p1)
+		);
+		
+
+		// Display para "jugador actual" 
+
+		logic [3:0] player_num;
+		always_comb begin
+			 // player = 0  muestra "1", player = 1  muestra "2"
+			 player_num = (player == 1'b0) ? 4'd1 : 4'd2;
+		end
+
+		seven_segment_display disp_player (
+			 .num(player_num),
+			 .seg(seg_player) 
+		);
+
 
 endmodule

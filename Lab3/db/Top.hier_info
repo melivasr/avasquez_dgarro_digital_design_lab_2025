@@ -1,10 +1,11 @@
 |vga
-clk => clk.IN8
-reset => reset.IN6
+clk => clk.IN10
+reset => reset.IN8
 btn_up_n => btn_up_n.IN1
 btn_down_n => btn_down_n.IN1
 btn_left_n => btn_left_n.IN1
 btn_right_n => btn_right_n.IN1
+sw_flip => sw_flip.IN1
 vgaclk << vgaclk.DB_MAX_OUTPUT_PORT_TYPE
 hsync << vgaController:vgaCont.hsync
 vsync << vgaController:vgaCont.vsync
@@ -48,9 +49,30 @@ seg_ones[3] << timer15_7seg:u_turn_timer.seg_ones
 seg_ones[4] << timer15_7seg:u_turn_timer.seg_ones
 seg_ones[5] << timer15_7seg:u_turn_timer.seg_ones
 seg_ones[6] << timer15_7seg:u_turn_timer.seg_ones
-player << controladora_FSM:fsm.player
+player << player.DB_MAX_OUTPUT_PORT_TYPE
 sel_count[0] << controladora_FSM:fsm.sel_count
 sel_count[1] << controladora_FSM:fsm.sel_count
+seg_score_p0[0] << seven_segment_display:disp_p0.seg
+seg_score_p0[1] << seven_segment_display:disp_p0.seg
+seg_score_p0[2] << seven_segment_display:disp_p0.seg
+seg_score_p0[3] << seven_segment_display:disp_p0.seg
+seg_score_p0[4] << seven_segment_display:disp_p0.seg
+seg_score_p0[5] << seven_segment_display:disp_p0.seg
+seg_score_p0[6] << seven_segment_display:disp_p0.seg
+seg_score_p1[0] << seven_segment_display:disp_p1.seg
+seg_score_p1[1] << seven_segment_display:disp_p1.seg
+seg_score_p1[2] << seven_segment_display:disp_p1.seg
+seg_score_p1[3] << seven_segment_display:disp_p1.seg
+seg_score_p1[4] << seven_segment_display:disp_p1.seg
+seg_score_p1[5] << seven_segment_display:disp_p1.seg
+seg_score_p1[6] << seven_segment_display:disp_p1.seg
+seg_player[0] << seven_segment_display:disp_player.seg
+seg_player[1] << seven_segment_display:disp_player.seg
+seg_player[2] << seven_segment_display:disp_player.seg
+seg_player[3] << seven_segment_display:disp_player.seg
+seg_player[4] << seven_segment_display:disp_player.seg
+seg_player[5] << seven_segment_display:disp_player.seg
+seg_player[6] << seven_segment_display:disp_player.seg
 
 
 |vga|pll:vgapll
@@ -366,6 +388,42 @@ sel_idx[4] <= <GND>
 sel_idx[5] <= <GND>
 
 
+|vga|flip_control:u_flip
+clk => sw_sync1.CLK
+clk => sw_sync0.CLK
+rst => sw_sync1.ACLR
+rst => sw_sync0.ACLR
+sw_flip => sw_sync0.DATAIN
+sel_idx[0] => LessThan0.IN12
+sel_idx[0] => Decoder0.IN3
+sel_idx[1] => LessThan0.IN11
+sel_idx[1] => Decoder0.IN2
+sel_idx[2] => LessThan0.IN10
+sel_idx[2] => Decoder0.IN1
+sel_idx[3] => LessThan0.IN9
+sel_idx[3] => Decoder0.IN0
+sel_idx[4] => LessThan0.IN8
+sel_idx[4] => LessThan1.IN4
+sel_idx[5] => LessThan0.IN7
+sel_idx[5] => LessThan1.IN3
+reveal_mask[0] <= reveal_mask.DB_MAX_OUTPUT_PORT_TYPE
+reveal_mask[1] <= reveal_mask.DB_MAX_OUTPUT_PORT_TYPE
+reveal_mask[2] <= reveal_mask.DB_MAX_OUTPUT_PORT_TYPE
+reveal_mask[3] <= reveal_mask.DB_MAX_OUTPUT_PORT_TYPE
+reveal_mask[4] <= reveal_mask.DB_MAX_OUTPUT_PORT_TYPE
+reveal_mask[5] <= reveal_mask.DB_MAX_OUTPUT_PORT_TYPE
+reveal_mask[6] <= reveal_mask.DB_MAX_OUTPUT_PORT_TYPE
+reveal_mask[7] <= reveal_mask.DB_MAX_OUTPUT_PORT_TYPE
+reveal_mask[8] <= reveal_mask.DB_MAX_OUTPUT_PORT_TYPE
+reveal_mask[9] <= reveal_mask.DB_MAX_OUTPUT_PORT_TYPE
+reveal_mask[10] <= reveal_mask.DB_MAX_OUTPUT_PORT_TYPE
+reveal_mask[11] <= reveal_mask.DB_MAX_OUTPUT_PORT_TYPE
+reveal_mask[12] <= reveal_mask.DB_MAX_OUTPUT_PORT_TYPE
+reveal_mask[13] <= reveal_mask.DB_MAX_OUTPUT_PORT_TYPE
+reveal_mask[14] <= reveal_mask.DB_MAX_OUTPUT_PORT_TYPE
+reveal_mask[15] <= reveal_mask.DB_MAX_OUTPUT_PORT_TYPE
+
+
 |vga|videoGen:videoGen_inst
 x[0] => LessThan0.IN64
 x[0] => LessThan2.IN64
@@ -457,30 +515,46 @@ sel_row[0] => Equal0.IN1
 sel_row[1] => Equal0.IN0
 sel_col[0] => Equal1.IN1
 sel_col[1] => Equal1.IN0
-r[0] <= r.DB_MAX_OUTPUT_PORT_TYPE
-r[1] <= r.DB_MAX_OUTPUT_PORT_TYPE
-r[2] <= r.DB_MAX_OUTPUT_PORT_TYPE
-r[3] <= r.DB_MAX_OUTPUT_PORT_TYPE
-r[4] <= r.DB_MAX_OUTPUT_PORT_TYPE
-r[5] <= r.DB_MAX_OUTPUT_PORT_TYPE
-r[6] <= r.DB_MAX_OUTPUT_PORT_TYPE
-r[7] <= r.DB_MAX_OUTPUT_PORT_TYPE
-g[0] <= g.DB_MAX_OUTPUT_PORT_TYPE
+reveal_mask[0] => Mux3.IN15
+reveal_mask[1] => Mux3.IN14
+reveal_mask[2] => Mux3.IN13
+reveal_mask[3] => Mux3.IN12
+reveal_mask[4] => Mux3.IN11
+reveal_mask[5] => Mux3.IN10
+reveal_mask[6] => Mux3.IN9
+reveal_mask[7] => Mux3.IN8
+reveal_mask[8] => Mux3.IN7
+reveal_mask[9] => Mux3.IN6
+reveal_mask[10] => Mux3.IN5
+reveal_mask[11] => Mux3.IN4
+reveal_mask[12] => Mux3.IN3
+reveal_mask[13] => Mux3.IN2
+reveal_mask[14] => Mux3.IN1
+reveal_mask[15] => Mux3.IN0
+r[0] <= rr.DB_MAX_OUTPUT_PORT_TYPE
+r[1] <= rr.DB_MAX_OUTPUT_PORT_TYPE
+r[2] <= rr.DB_MAX_OUTPUT_PORT_TYPE
+r[3] <= rr.DB_MAX_OUTPUT_PORT_TYPE
+r[4] <= rr.DB_MAX_OUTPUT_PORT_TYPE
+r[5] <= rr.DB_MAX_OUTPUT_PORT_TYPE
+r[6] <= rr.DB_MAX_OUTPUT_PORT_TYPE
+r[7] <= rr.DB_MAX_OUTPUT_PORT_TYPE
+g[0] <= gg.DB_MAX_OUTPUT_PORT_TYPE
 g[1] <= in_symbol.DB_MAX_OUTPUT_PORT_TYPE
-g[2] <= g.DB_MAX_OUTPUT_PORT_TYPE
-g[3] <= g.DB_MAX_OUTPUT_PORT_TYPE
-g[4] <= g.DB_MAX_OUTPUT_PORT_TYPE
-g[5] <= g.DB_MAX_OUTPUT_PORT_TYPE
-g[6] <= g.DB_MAX_OUTPUT_PORT_TYPE
-g[7] <= g.DB_MAX_OUTPUT_PORT_TYPE
-b[0] <= b.DB_MAX_OUTPUT_PORT_TYPE
-b[1] <= b.DB_MAX_OUTPUT_PORT_TYPE
-b[2] <= b.DB_MAX_OUTPUT_PORT_TYPE
-b[3] <= b.DB_MAX_OUTPUT_PORT_TYPE
-b[4] <= b.DB_MAX_OUTPUT_PORT_TYPE
-b[5] <= b.DB_MAX_OUTPUT_PORT_TYPE
-b[6] <= b.DB_MAX_OUTPUT_PORT_TYPE
-b[7] <= b.DB_MAX_OUTPUT_PORT_TYPE
+g[2] <= gg.DB_MAX_OUTPUT_PORT_TYPE
+g[3] <= gg.DB_MAX_OUTPUT_PORT_TYPE
+g[4] <= gg.DB_MAX_OUTPUT_PORT_TYPE
+g[5] <= gg.DB_MAX_OUTPUT_PORT_TYPE
+g[6] <= gg.DB_MAX_OUTPUT_PORT_TYPE
+g[7] <= gg.DB_MAX_OUTPUT_PORT_TYPE
+b[0] <= bb.DB_MAX_OUTPUT_PORT_TYPE
+b[1] <= bb.DB_MAX_OUTPUT_PORT_TYPE
+b[2] <= bb.DB_MAX_OUTPUT_PORT_TYPE
+b[3] <= bb.DB_MAX_OUTPUT_PORT_TYPE
+b[4] <= bb.DB_MAX_OUTPUT_PORT_TYPE
+b[5] <= bb.DB_MAX_OUTPUT_PORT_TYPE
+b[6] <= bb.DB_MAX_OUTPUT_PORT_TYPE
+b[7] <= bb.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |vga|controladora_FSM:fsm
@@ -864,5 +938,98 @@ rnd[4] <= rnd[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 rnd[5] <= rnd[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 rnd[6] <= rnd[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 rnd[7] <= rnd[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vga|score_manager_two:u_scores
+clk => score_p1[0]~reg0.CLK
+clk => score_p1[1]~reg0.CLK
+clk => score_p1[2]~reg0.CLK
+clk => score_p1[3]~reg0.CLK
+clk => score_p0[0]~reg0.CLK
+clk => score_p0[1]~reg0.CLK
+clk => score_p0[2]~reg0.CLK
+clk => score_p0[3]~reg0.CLK
+rst => score_p1[0]~reg0.ACLR
+rst => score_p1[1]~reg0.ACLR
+rst => score_p1[2]~reg0.ACLR
+rst => score_p1[3]~reg0.ACLR
+rst => score_p0[0]~reg0.ACLR
+rst => score_p0[1]~reg0.ACLR
+rst => score_p0[2]~reg0.ACLR
+rst => score_p0[3]~reg0.ACLR
+clr_scores => score_p0.OUTPUTSELECT
+clr_scores => score_p0.OUTPUTSELECT
+clr_scores => score_p0.OUTPUTSELECT
+clr_scores => score_p0.OUTPUTSELECT
+clr_scores => score_p1.OUTPUTSELECT
+clr_scores => score_p1.OUTPUTSELECT
+clr_scores => score_p1.OUTPUTSELECT
+clr_scores => score_p1.OUTPUTSELECT
+inc_score => score_p0.OUTPUTSELECT
+inc_score => score_p0.OUTPUTSELECT
+inc_score => score_p0.OUTPUTSELECT
+inc_score => score_p0.OUTPUTSELECT
+inc_score => score_p1.OUTPUTSELECT
+inc_score => score_p1.OUTPUTSELECT
+inc_score => score_p1.OUTPUTSELECT
+inc_score => score_p1.OUTPUTSELECT
+player => score_p0.OUTPUTSELECT
+player => score_p0.OUTPUTSELECT
+player => score_p0.OUTPUTSELECT
+player => score_p0.OUTPUTSELECT
+player => score_p1.OUTPUTSELECT
+player => score_p1.OUTPUTSELECT
+player => score_p1.OUTPUTSELECT
+player => score_p1.OUTPUTSELECT
+score_p0[0] <= score_p0[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+score_p0[1] <= score_p0[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+score_p0[2] <= score_p0[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+score_p0[3] <= score_p0[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+score_p1[0] <= score_p1[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+score_p1[1] <= score_p1[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+score_p1[2] <= score_p1[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+score_p1[3] <= score_p1[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vga|seven_segment_display:disp_p0
+num[0] => Decoder0.IN3
+num[1] => Decoder0.IN2
+num[2] => Decoder0.IN1
+num[3] => Decoder0.IN0
+seg[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+seg[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+seg[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+seg[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+seg[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+seg[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+seg[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vga|seven_segment_display:disp_p1
+num[0] => Decoder0.IN3
+num[1] => Decoder0.IN2
+num[2] => Decoder0.IN1
+num[3] => Decoder0.IN0
+seg[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+seg[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+seg[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+seg[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+seg[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+seg[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+seg[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vga|seven_segment_display:disp_player
+num[0] => Decoder0.IN3
+num[1] => Decoder0.IN2
+num[2] => Decoder0.IN1
+num[3] => Decoder0.IN0
+seg[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+seg[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+seg[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+seg[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+seg[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+seg[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+seg[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
 
 

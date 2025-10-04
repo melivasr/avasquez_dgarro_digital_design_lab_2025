@@ -1,0 +1,20 @@
+module flip_control (
+    input  logic clk,
+    input  logic rst,
+    input  logic flip_pulse,     //
+    input  logic [5:0] sel_idx,  // 0..15 
+    output logic [15:0] reveal_mask
+);
+    always_ff @(posedge clk or posedge rst) begin
+        if (rst) begin
+            reveal_mask <= 16'h0000; // todas ocultas por defecto
+        end else begin
+            if (flip_pulse) begin
+                if (sel_idx < 6'd16) begin
+                    // toggle bit de la carta seleccionada
+                    reveal_mask[sel_idx] <= ~reveal_mask[sel_idx];
+                end
+            end
+        end
+    end
+endmodule

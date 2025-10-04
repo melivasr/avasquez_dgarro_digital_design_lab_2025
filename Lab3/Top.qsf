@@ -182,4 +182,54 @@ set_location_assignment PIN_AK4 -to btn_left_n
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to btn_left_n
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to btn_down_n
 set_location_assignment PIN_AA14 -to btn_down_n
+set_global_assignment -name SYSTEMVERILOG_FILE automatic.sv
+set_global_assignment -name SYSTEMVERILOG_FILE score_manager_two.sv
+set_location_assignment PIN_AD21 -to seg_score_p0[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seg_score_p0[0]
+set_location_assignment PIN_AG22 -to seg_score_p0[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seg_score_p0[1]
+set_location_assignment PIN_AE22 -to seg_score_p0[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seg_score_p0[2]
+set_location_assignment PIN_AE23 -to seg_score_p0[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seg_score_p0[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seg_score_p0[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seg_score_p0[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seg_score_p0[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seg_score_p0
+set_location_assignment PIN_AG23 -to seg_score_p0[4]
+set_location_assignment PIN_AF23 -to seg_score_p0[5]
+set_location_assignment PIN_AH22 -to seg_score_p0[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seg_score_p1[0]
+set_location_assignment PIN_AF21 -to seg_score_p1[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seg_score_p1[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seg_score_p1[2]
+set_location_assignment PIN_AG21 -to seg_score_p1[1]
+set_location_assignment PIN_AF20 -to seg_score_p1[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seg_score_p1[3]
+set_location_assignment PIN_AG20 -to seg_score_p1[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seg_score_p1[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seg_score_p1[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seg_score_p1[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seg_score_p1
+set_location_assignment PIN_AE19 -to seg_score_p1[4]
+set_location_assignment PIN_AF19 -to seg_score_p1[5]
+set_location_assignment PIN_AB21 -to seg_score_p1[6]
+set_location_assignment PIN_AA21 -to seg_player[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seg_player[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seg_player[1]
+set_location_assignment PIN_AB17 -to seg_player[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seg_player[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seg_player[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seg_player[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seg_player[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seg_player[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seg_player
+set_location_assignment PIN_AA18 -to seg_player[2]
+set_location_assignment PIN_Y17 -to seg_player[3]
+set_location_assignment PIN_Y18 -to seg_player[4]
+set_location_assignment PIN_AF18 -to seg_player[5]
+set_location_assignment PIN_W16 -to seg_player[6]
+set_global_assignment -name SYSTEMVERILOG_FILE flip_control.sv
+set_location_assignment PIN_Y27 -to sw_flip
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to sw_flip
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
