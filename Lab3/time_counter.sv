@@ -13,7 +13,7 @@ module time_counter(
             expired <= 0;
         end else if (start && tick) begin
             if (seconds == 0) begin
-                seconds <= 6'd15;   // recarga
+                seconds <= 6'd15;   
                 expired <= 1;       // pulso
             end else begin
                 seconds <= seconds - 1;

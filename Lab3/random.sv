@@ -7,7 +7,7 @@ module random(
     logic fb;
     logic [15:0] free_counter;
 
-    // contador libre
+    // contador 
     always_ff @(posedge clk or posedge rst) begin
         if (rst) free_counter <= 16'h1;
         else     free_counter <= free_counter + 16'd1;

@@ -32,7 +32,7 @@ module tb;
 	logic player;
 	logic [1:0] sel_count;
 
-	// Instancia del DUT
+	// Instancia FSM
 	controladora_FSM dut (
 		.clk(clk),
 		.rst(rst),
@@ -67,7 +67,7 @@ module tb;
 	initial clk = 0;
 	always #10 clk = ~clk;
 
-	// Secuencia de estímulos
+
 	initial begin
 		// Reset
 		rst = 1;
@@ -80,12 +80,12 @@ module tb;
 		#100;
 		rst = 0;
 
-		// S0 -> S1, (lo hace solo)
+		// S0 -> S1
 
 		// S1 -> S2
 		#200 shuffle_done = 1; #40 shuffle_done = 0;
 
-		// S2 -> S3, (lo hace solo)
+		// S2 -> S3
 		
 		// S3 -> S4 (con btn_valid)
 		#200 btn_valid = 1; #40 btn_valid = 0;

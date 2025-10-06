@@ -164,11 +164,91 @@
 					"strict" : false
 				},
 				{
+					"name" : "player",
+					"strict" : false
+				},
+				{
 					"name" : "sel_count[0]",
 					"strict" : false
 				},
 				{
 					"name" : "sel_count[1]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_score_p0[0]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_score_p0[1]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_score_p0[2]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_score_p0[3]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_score_p0[4]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_score_p0[5]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_score_p0[6]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_score_p1[0]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_score_p1[1]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_score_p1[2]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_score_p1[3]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_score_p1[4]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_score_p1[5]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_score_p1[6]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_player[0]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_player[2]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_player[3]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_player[4]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_player[6]",
 					"strict" : false
 				},
 				{

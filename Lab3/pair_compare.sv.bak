@@ -1,0 +1,21 @@
+module pair_compare(
+    input  logic clk,
+    input  logic rst,
+    input  logic compare_enable,   // desde FSM (estado EVALUATE_PAIR)
+    input  logic [1:0] sel_count,  // debe ser 2 para habilitar comparación
+    input  logic [3:0] first_val,
+    input  logic [3:0] second_val,
+    output logic       match       // pulso 1 ciclo cuando hay match
+);
+    // Emitimos "match" 1 ciclo justo cuando compare_enable y hay dos cartas
+    always_ff @(posedge clk or posedge rst) begin
+        if (rst) begin
+            match <= 1'b0;
+        end else begin
+            if (compare_enable && (sel_count == 2'd2))
+                match <= (first_val[2:0] == second_val[2:0]); // 3 bits de pair_id
+            else
+                match <= 1'b0;
+        end
+    end
+endmodule

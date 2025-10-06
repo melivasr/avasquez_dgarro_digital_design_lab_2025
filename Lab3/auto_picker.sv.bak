@@ -1,0 +1,94 @@
+module auto_picker(
+    input  logic       clk,
+    input  logic       rst,
+    input  logic       start,          // random_pick de la FSM (alto en AUTO_PICK)
+    input  logic [15:0] reveal_mask,   // cartas visibles (temp o bloqueadas)
+    input  logic [15:0] locked_mask,   // cartas bloqueadas 
+    input  logic [1:0]  sel_count,     // cuántas cartas lleva (0..2)
+    output logic [5:0]  pick_idx,      // índice elegido
+    output logic        pick_pulse     // pulso de 1 clk para "seleccionar"
+);
+    // temp = reveladas pero no bloqueadas
+    wire [15:0] temp_mask = reveal_mask & ~locked_mask;
+
+    logic [7:0] rnd;
+    random u_rng(.clk(clk), .rst(rst), .seed(8'h3C), .rnd(rnd));
+
+
+    typedef enum logic [1:0] {IDLE, SEARCH, FIRE} pstate_t;
+    pstate_t ps, ns;
+
+    logic [4:0] base;     // punto de inicio (0..15)
+    logic [4:0] probe;    // puntero de búsqueda (0..15 + wrap)
+    logic [1:0] emitted;  // cuántos picks ya emitimos bajo este start
+
+    // válido si no está bloqueada ni ya temporal
+    wire valid_here = (probe < 16) && !locked_mask[probe[3:0]] && !temp_mask[probe[3:0]];
+
+    // flanco de start para reiniciar conteo
+    logic start_d;
+    always_ff @(posedge clk or posedge rst) begin
+        if (rst) start_d <= 1'b0;
+        else     start_d <= start;
+    end
+    wire start_rise = start & ~start_d;
+
+    // Secuencial principal
+    always_ff @(posedge clk or posedge rst) begin
+        if (rst) begin
+            ps <= IDLE;
+            probe <= 5'd0;
+            base  <= 5'd0;
+            pick_idx <= 6'd0;
+            pick_pulse <= 1'b0;
+            emitted <= 2'd0;
+        end else begin
+            ps <= ns;
+            pick_pulse <= 1'b0;
+
+            if (start_rise) begin
+                // arranca búsqueda para este AUTO_PICK
+                emitted <= 2'd0;
+                base    <= rnd[4:0] % 5'd16;
+                probe   <= rnd[4:0] % 5'd16;
+            end
+
+            case (ps)
+                IDLE: begin
+                    if (start) begin
+                        // si faltan picks (2 - sel_count)
+                        if (emitted < (2 - sel_count)) ns <= SEARCH;
+                    end
+                end
+
+                SEARCH: begin
+                    if (valid_here) begin
+                        pick_idx   <= {1'b0,probe[3:0]}; // 0..15
+                        ns         <= FIRE;
+                    end else begin
+                        // avanza circularmente
+                        probe <= (probe == 5'd15) ? 5'd0 : (probe + 5'd1);
+                        ns    <= SEARCH;
+                    end
+                end
+
+                FIRE: begin
+                    pick_pulse <= 1'b1;   // 1 ciclo
+                    emitted    <= emitted + 2'd1;
+               
+                    probe <= (probe + 5'd3) & 5'd15; 
+                    ns    <= IDLE;
+                end
+            endcase
+        end
+    end
+
+    always_comb begin
+        ns = ps;
+        unique case (ps)
+            IDLE:   if (start && (emitted < (2 - sel_count))) ns = SEARCH;
+            SEARCH: ; // se queda hasta encontrar válido
+            FIRE:   ns = IDLE;
+        endcase
+    end
+endmodule

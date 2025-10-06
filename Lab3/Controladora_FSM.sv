@@ -1,7 +1,7 @@
 module controladora_FSM (
 	input logic clk,
 	input logic rst,
-	input logic shuffle_done,   // Indica si las cartas tan barajadas
+	input logic shuffle_done,   // Dice si las cartas tan barajadas
 	input logic btn_valid,      // Señala que la jugada ingresada es válida
 	input logic t15s_expired,   // Tiempo se agotó 15s
 	input logic match,          // comparación de cartas
@@ -54,28 +54,28 @@ module controladora_FSM (
 	
 	
 	//  Actualiza el estado cada rst o clk
-	always_ff @(posedge clk or posedge rst) begin
-		if(rst) begin
-			state = RESET_INIT;
-			sel_count_reg = 2'b00;
-			player_reg = 0;
-		end
-		
-		else begin 
-			state = next_state;
-			
-			case (state)
-				TURN_START: sel_count_reg = 0;
-				REVEAL: sel_count_reg = sel_count_reg + 1;
-				AUTO_PICK: sel_count_reg = sel_count_reg + 1;
-				default: sel_count_reg = sel_count_reg;
-			endcase
-			
-			// cambio de jugador
-        if (state == HIDE_PAIR)
-            player_reg = ~player_reg;
-		end
-	end
+	 always_ff @(posedge clk or posedge rst) begin
+		  if (rst) begin
+			  state         <= RESET_INIT;
+			  sel_count_reg <= 2'b00;
+			  player_reg    <= 1'b0;
+		  end else begin
+			  // avanza de estado 
+			  state <= next_state;
+
+			  // actualiza sel_count_reg según el estado ACTUAL 
+			   unique case (state)
+					TURN_START: sel_count_reg <= 2'd0;
+					REVEAL:     sel_count_reg <= sel_count_reg + 2'd1;
+					AUTO_PICK:  sel_count_reg <= sel_count_reg + 2'd1;
+					default:    sel_count_reg <= sel_count_reg; 
+			   endcase
+
+			  // CAMBIO DE JUGADOR en UNMATCH cuando termina el delay
+			   if (state == UNMATCH && delay_done)
+					player_reg <= ~player_reg;
+		  end
+	 end
 			
 	// Cambio de outputs 
 	always_comb begin 
@@ -115,6 +115,7 @@ module controladora_FSM (
 			TURN_START: begin
 				start_timer = 1;
 				show_7seg = 1;
+				clr_timers = 1;
 			end
 			
 			WAIT_SELECTION: begin

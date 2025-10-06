@@ -5,6 +5,7 @@ module videoGen (
     input  logic [1:0] sel_row,
     input  logic [1:0] sel_col,
     input  logic [15:0] reveal_mask,
+	 input  logic [15:0] locked_mask,
     output logic [7:0] r, g, b
 );
     localparam int SCREEN_W   = 640;
@@ -69,8 +70,10 @@ module videoGen (
     wire [5:0] idx = row * GRID_COLS + col; 
     wire [2:0] pair_id = board[idx][2:0];
 
-    // ¿está revelada esta carta?
+    
     wire revealed = reveal_mask[idx];
+	 wire locked   = locked_mask[idx];                
+    wire temp_sel = reveal_mask[idx] & ~locked;  
 
     // borde y selección
     wire in_border = in_card &&
