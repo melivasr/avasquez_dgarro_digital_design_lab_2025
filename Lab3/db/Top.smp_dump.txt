@@ -13,12 +13,6 @@ state.UNMATCH 0 0 1 0 0 0 0 0 0 0 1
 state.HIDE_PAIR 0 1 0 0 0 0 0 0 0 0 1 
 state.GAME_OVER 1 0 0 0 0 0 0 0 0 0 1 
 
-State Machine - |vga|selection_manager:u_selman|count
-Name count.00 count.10 count.01 
-count.00 0 0 0 
-count.01 1 0 1 
-count.10 1 1 0 
-
 State Machine - |vga|auto_picker:u_autopick|ps
 Name ps.IDLE ps.FIRE ps.SEARCH 
 ps.IDLE 0 0 0 

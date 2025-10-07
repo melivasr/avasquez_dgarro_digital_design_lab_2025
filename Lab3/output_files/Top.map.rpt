@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Top
-Sun Oct 05 21:21:04 2025
+Tue Oct 07 14:38:06 2025
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -15,13 +15,13 @@ Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Analysis & Synthesis DSP Block Usage Summary
   9. State Machine - |vga|controladora_FSM:fsm|state
- 10. State Machine - |vga|selection_manager:u_selman|count
- 11. State Machine - |vga|auto_picker:u_autopick|ps
- 12. Registers Removed During Synthesis
- 13. General Register Statistics
- 14. Inverted Register Statistics
- 15. Multiplexer Restructuring Statistics (Restructuring Performed)
- 16. Parameter Settings for User Entity Instance: cursor_4x4:u_cursor
+ 10. State Machine - |vga|auto_picker:u_autopick|ps
+ 11. Registers Removed During Synthesis
+ 12. General Register Statistics
+ 13. Inverted Register Statistics
+ 14. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 15. Parameter Settings for User Entity Instance: cursor_4x4:u_cursor
+ 16. Parameter Settings for User Entity Instance: select_pulse:u_selpulse
  17. Parameter Settings for User Entity Instance: delay_timer:u_delay
  18. Parameter Settings for Inferred Entity Instance: videoGen:videoGen_inst|lpm_divide:Mod0
  19. Parameter Settings for Inferred Entity Instance: videoGen:videoGen_inst|lpm_divide:Mod1
@@ -66,13 +66,13 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Sun Oct 05 21:21:04 2025       ;
+; Analysis & Synthesis Status     ; Successful - Tue Oct 07 14:38:06 2025       ;
 ; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                   ; Top                                         ;
 ; Top-level Entity Name           ; vga                                         ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 310                                         ;
+; Total registers                 ; 353                                         ;
 ; Total pins                      ; 74                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
@@ -186,11 +186,12 @@ https://fpgasoftware.intel.com/eula.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.0%      ;
+;     Processor 2            ;   0.1%      ;
 ;     Processor 3            ;   0.0%      ;
 ;     Processor 4            ;   0.0%      ;
 ;     Processor 5            ;   0.0%      ;
-;     Processors 6-8         ;   0.0%      ;
+;     Processor 6            ;   0.0%      ;
+;     Processors 7-8         ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -236,25 +237,25 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimate of Logic utilization (ALMs needed) ; 740       ;
+; Estimate of Logic utilization (ALMs needed) ; 779       ;
 ;                                             ;           ;
-; Combinational ALUT usage for logic          ; 1286      ;
+; Combinational ALUT usage for logic          ; 1342      ;
 ;     -- 7 input functions                    ; 12        ;
-;     -- 6 input functions                    ; 179       ;
-;     -- 5 input functions                    ; 169       ;
-;     -- 4 input functions                    ; 258       ;
-;     -- <=3 input functions                  ; 668       ;
+;     -- 6 input functions                    ; 200       ;
+;     -- 5 input functions                    ; 156       ;
+;     -- 4 input functions                    ; 275       ;
+;     -- <=3 input functions                  ; 699       ;
 ;                                             ;           ;
-; Dedicated logic registers                   ; 310       ;
+; Dedicated logic registers                   ; 353       ;
 ;                                             ;           ;
 ; I/O pins                                    ; 74        ;
 ;                                             ;           ;
 ; Total DSP Blocks                            ; 4         ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 290       ;
-; Total fan-out                               ; 6114      ;
-; Average fan-out                             ; 3.50      ;
+; Maximum fan-out                             ; 333       ;
+; Total fan-out                               ; 6513      ;
+; Average fan-out                             ; 3.53      ;
 +---------------------------------------------+-----------+
 
 
@@ -263,21 +264,21 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------+-----------------------+--------------+
 ; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                         ; Entity Name           ; Library Name ;
 +-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------+-----------------------+--------------+
-; |vga                                      ; 1286 (5)            ; 310 (0)                   ; 0                 ; 4          ; 74   ; 0            ; |vga                                                                                                                        ; vga                   ; work         ;
-;    |auto_picker:u_autopick|               ; 66 (37)             ; 31 (15)                   ; 0                 ; 0          ; 0    ; 0            ; |vga|auto_picker:u_autopick                                                                                                 ; auto_picker           ; work         ;
+; |vga                                      ; 1342 (5)            ; 353 (0)                   ; 0                 ; 4          ; 74   ; 0            ; |vga                                                                                                                        ; vga                   ; work         ;
+;    |auto_picker:u_autopick|               ; 60 (31)             ; 31 (15)                   ; 0                 ; 0          ; 0    ; 0            ; |vga|auto_picker:u_autopick                                                                                                 ; auto_picker           ; work         ;
 ;       |random:u_rng|                      ; 29 (29)             ; 16 (16)                   ; 0                 ; 0          ; 0    ; 0            ; |vga|auto_picker:u_autopick|random:u_rng                                                                                    ; random                ; work         ;
 ;    |btn_debounced_pulse:db_down|          ; 30 (30)             ; 26 (26)                   ; 0                 ; 0          ; 0    ; 0            ; |vga|btn_debounced_pulse:db_down                                                                                            ; btn_debounced_pulse   ; work         ;
 ;    |btn_debounced_pulse:db_left|          ; 10 (10)             ; 9 (9)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|btn_debounced_pulse:db_left                                                                                            ; btn_debounced_pulse   ; work         ;
 ;    |btn_debounced_pulse:db_right|         ; 10 (10)             ; 9 (9)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|btn_debounced_pulse:db_right                                                                                           ; btn_debounced_pulse   ; work         ;
 ;    |btn_debounced_pulse:db_up|            ; 10 (10)             ; 9 (9)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|btn_debounced_pulse:db_up                                                                                              ; btn_debounced_pulse   ; work         ;
-;    |controladora_FSM:fsm|                 ; 21 (21)             ; 13 (13)                   ; 0                 ; 0          ; 0    ; 0            ; |vga|controladora_FSM:fsm                                                                                                   ; controladora_FSM      ; work         ;
+;    |controladora_FSM:fsm|                 ; 18 (18)             ; 11 (11)                   ; 0                 ; 0          ; 0    ; 0            ; |vga|controladora_FSM:fsm                                                                                                   ; controladora_FSM      ; work         ;
 ;    |cursor_4x4:u_cursor|                  ; 6 (6)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|cursor_4x4:u_cursor                                                                                                    ; cursor_4x4            ; work         ;
 ;    |delay_timer:u_delay|                  ; 41 (41)             ; 34 (34)                   ; 0                 ; 0          ; 0    ; 0            ; |vga|delay_timer:u_delay                                                                                                    ; delay_timer           ; work         ;
 ;    |pair_compare:u_cmp|                   ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|pair_compare:u_cmp                                                                                                     ; pair_compare          ; work         ;
 ;    |pll:vgapll|                           ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|pll:vgapll                                                                                                             ; pll                   ; work         ;
 ;    |score_manager_two:u_scores|           ; 10 (10)             ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|score_manager_two:u_scores                                                                                             ; score_manager_two     ; work         ;
-;    |select_pulse:u_selpulse|              ; 0 (0)               ; 3 (3)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|select_pulse:u_selpulse                                                                                                ; select_pulse          ; work         ;
-;    |selection_manager:u_selman|           ; 86 (86)             ; 41 (41)                   ; 0                 ; 0          ; 0    ; 0            ; |vga|selection_manager:u_selman                                                                                             ; selection_manager     ; work         ;
+;    |select_pulse:u_selpulse|              ; 54 (54)             ; 45 (45)                   ; 0                 ; 0          ; 0    ; 0            ; |vga|select_pulse:u_selpulse                                                                                                ; select_pulse          ; work         ;
+;    |selection_manager:u_selman|           ; 97 (97)             ; 44 (44)                   ; 0                 ; 0          ; 0    ; 0            ; |vga|selection_manager:u_selman                                                                                             ; selection_manager     ; work         ;
 ;    |seven_segment_display:disp_p0|        ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|seven_segment_display:disp_p0                                                                                          ; seven_segment_display ; work         ;
 ;    |seven_segment_display:disp_p1|        ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|seven_segment_display:disp_p1                                                                                          ; seven_segment_display ; work         ;
 ;    |shuffle:shh|                          ; 251 (149)           ; 68 (60)                   ; 0                 ; 0          ; 0    ; 0            ; |vga|shuffle:shh                                                                                                            ; shuffle               ; work         ;
@@ -345,18 +346,6 @@ Encoding Type:  One-Hot
 
 
 Encoding Type:  One-Hot
-+-------------------------------------------------------+
-; State Machine - |vga|selection_manager:u_selman|count ;
-+----------+----------+----------+----------------------+
-; Name     ; count.00 ; count.10 ; count.01             ;
-+----------+----------+----------+----------------------+
-; count.00 ; 0        ; 0        ; 0                    ;
-; count.01 ; 1        ; 0        ; 1                    ;
-; count.10 ; 1        ; 1        ; 0                    ;
-+----------+----------+----------+----------------------+
-
-
-Encoding Type:  One-Hot
 +------------------------------------------------+
 ; State Machine - |vga|auto_picker:u_autopick|ps ;
 +-----------+---------+---------+----------------+
@@ -374,6 +363,7 @@ Encoding Type:  One-Hot
 ; Register name                                           ; Reason for Removal                                               ;
 +---------------------------------------------------------+------------------------------------------------------------------+
 ; auto_picker:u_autopick|pick_idx[4,5]                    ; Stuck at GND due to stuck port data_in                           ;
+; selection_manager:u_selman|sel_a[4]                     ; Merged with selection_manager:u_selman|sel_a[5]                  ;
 ; btn_debounced_pulse:db_left|sample_tick                 ; Merged with btn_debounced_pulse:db_down|sample_tick              ;
 ; btn_debounced_pulse:db_right|sample_tick                ; Merged with btn_debounced_pulse:db_down|sample_tick              ;
 ; btn_debounced_pulse:db_up|sample_tick                   ; Merged with btn_debounced_pulse:db_down|sample_tick              ;
@@ -441,6 +431,7 @@ Encoding Type:  One-Hot
 ; shuffle:shh|random:rng|free_counter[10]                 ; Merged with auto_picker:u_autopick|random:u_rng|free_counter[10] ;
 ; shuffle:shh|random:rng|free_counter[9]                  ; Merged with auto_picker:u_autopick|random:u_rng|free_counter[9]  ;
 ; shuffle:shh|random:rng|free_counter[8]                  ; Merged with auto_picker:u_autopick|random:u_rng|free_counter[8]  ;
+; selection_manager:u_selman|sel_a[5]                     ; Stuck at GND due to stuck port data_in                           ;
 ; controladora_FSM:fsm|state~4                            ; Lost fanout                                                      ;
 ; controladora_FSM:fsm|state~5                            ; Lost fanout                                                      ;
 ; controladora_FSM:fsm|state~6                            ; Lost fanout                                                      ;
@@ -448,7 +439,7 @@ Encoding Type:  One-Hot
 ; controladora_FSM:fsm|state.GAME_OVER                    ; Stuck at GND due to stuck port data_in                           ;
 ; auto_picker:u_autopick|random:u_rng|free_counter[8..15] ; Lost fanout                                                      ;
 ; auto_picker:u_autopick|probe[4]                         ; Stuck at GND due to stuck port data_in                           ;
-; Total Number of Removed Registers = 83                  ;                                                                  ;
+; Total Number of Removed Registers = 85                  ;                                                                  ;
 +---------------------------------------------------------+------------------------------------------------------------------+
 
 
@@ -457,12 +448,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 310   ;
-; Number of registers using Synchronous Clear  ; 154   ;
-; Number of registers using Synchronous Load   ; 40    ;
-; Number of registers using Asynchronous Clear ; 237   ;
+; Total registers                              ; 353   ;
+; Number of registers using Synchronous Clear  ; 192   ;
+; Number of registers using Synchronous Load   ; 42    ;
+; Number of registers using Asynchronous Clear ; 280   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 129   ;
+; Number of registers using Clock Enable       ; 171   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -492,12 +483,13 @@ Encoding Type:  One-Hot
 ; btn_debounced_pulse:db_down|last_sampled                 ; 7       ;
 ; btn_debounced_pulse:db_up|b_sync1                        ; 7       ;
 ; btn_debounced_pulse:db_up|last_sampled                   ; 7       ;
+; select_pulse:u_selpulse|lo_stable                        ; 1       ;
 ; auto_picker:u_autopick|random:u_rng|free_counter[0]      ; 6       ;
 ; btn_debounced_pulse:db_right|b_sync0                     ; 1       ;
 ; btn_debounced_pulse:db_left|b_sync0                      ; 1       ;
 ; btn_debounced_pulse:db_down|b_sync0                      ; 1       ;
 ; btn_debounced_pulse:db_up|b_sync0                        ; 1       ;
-; Total number of inverted registers = 25                  ;         ;
+; Total number of inverted registers = 26                  ;         ;
 +----------------------------------------------------------+---------+
 
 
@@ -506,47 +498,51 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                   ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------+
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |vga|auto_picker:u_autopick|emitted[0]       ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |vga|delay_timer:u_delay|cnt[18]             ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |vga|delay_timer:u_delay|cnt[8]              ;
 ; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |vga|btn_debounced_pulse:db_up|stabcnt[0]    ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |vga|btn_debounced_pulse:db_down|stabcnt[2]  ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |vga|btn_debounced_pulse:db_down|stabcnt[3]  ;
 ; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |vga|btn_debounced_pulse:db_left|stabcnt[0]  ;
 ; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |vga|btn_debounced_pulse:db_right|stabcnt[2] ;
-; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; Yes        ; |vga|shuffle:shh|j[1]                        ;
+; 3:1                ; 19 bits   ; 38 LEs        ; 0 LEs                ; 38 LEs                 ; Yes        ; |vga|select_pulse:u_selpulse|cnt_hi[3]       ;
+; 3:1                ; 19 bits   ; 38 LEs        ; 0 LEs                ; 38 LEs                 ; Yes        ; |vga|select_pulse:u_selpulse|cnt_lo[3]       ;
+; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; Yes        ; |vga|shuffle:shh|j[2]                        ;
 ; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |vga|score_manager_two:u_scores|score_p0[2]  ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |vga|score_manager_two:u_scores|score_p1[1]  ;
-; 5:1                ; 3 bits    ; 9 LEs         ; 6 LEs                ; 3 LEs                  ; Yes        ; |vga|shuffle:shh|board[15][1]                ;
-; 5:1                ; 3 bits    ; 9 LEs         ; 6 LEs                ; 3 LEs                  ; Yes        ; |vga|shuffle:shh|board[14][2]                ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |vga|score_manager_two:u_scores|score_p1[3]  ;
+; 5:1                ; 3 bits    ; 9 LEs         ; 6 LEs                ; 3 LEs                  ; Yes        ; |vga|shuffle:shh|board[15][0]                ;
+; 5:1                ; 3 bits    ; 9 LEs         ; 6 LEs                ; 3 LEs                  ; Yes        ; |vga|shuffle:shh|board[14][0]                ;
 ; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |vga|shuffle:shh|board[13][1]                ;
 ; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |vga|shuffle:shh|board[12][2]                ;
-; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |vga|shuffle:shh|board[11][2]                ;
-; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |vga|shuffle:shh|board[10][2]                ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |vga|shuffle:shh|board[11][0]                ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |vga|shuffle:shh|board[10][0]                ;
 ; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |vga|shuffle:shh|board[9][1]                 ;
 ; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |vga|shuffle:shh|board[8][1]                 ;
 ; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |vga|shuffle:shh|board[7][1]                 ;
-; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |vga|shuffle:shh|board[6][1]                 ;
-; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |vga|shuffle:shh|board[5][0]                 ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |vga|shuffle:shh|board[6][0]                 ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |vga|shuffle:shh|board[5][2]                 ;
 ; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |vga|shuffle:shh|board[4][0]                 ;
 ; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |vga|shuffle:shh|board[3][1]                 ;
 ; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |vga|shuffle:shh|board[2][1]                 ;
-; 5:1                ; 3 bits    ; 9 LEs         ; 6 LEs                ; 3 LEs                  ; Yes        ; |vga|shuffle:shh|board[1][0]                 ;
-; 5:1                ; 3 bits    ; 9 LEs         ; 6 LEs                ; 3 LEs                  ; Yes        ; |vga|shuffle:shh|board[0][1]                 ;
-; 5:1                ; 3 bits    ; 9 LEs         ; 6 LEs                ; 3 LEs                  ; Yes        ; |vga|selection_manager:u_selman|val_a[0]     ;
+; 5:1                ; 3 bits    ; 9 LEs         ; 6 LEs                ; 3 LEs                  ; Yes        ; |vga|shuffle:shh|board[1][1]                 ;
+; 5:1                ; 3 bits    ; 9 LEs         ; 6 LEs                ; 3 LEs                  ; Yes        ; |vga|shuffle:shh|board[0][0]                 ;
+; 5:1                ; 7 bits    ; 21 LEs        ; 14 LEs               ; 7 LEs                  ; Yes        ; |vga|selection_manager:u_selman|sel_a[1]     ;
 ; 5:1                ; 3 bits    ; 9 LEs         ; 6 LEs                ; 3 LEs                  ; Yes        ; |vga|selection_manager:u_selman|val_b[2]     ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |vga|auto_picker:u_autopick|emitted[0]       ;
 ; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |vga|auto_picker:u_autopick|probe[3]         ;
 ; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |vga|cursor_4x4:u_cursor|sel_idx[3]          ;
 ; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |vga|cursor_4x4:u_cursor|sel_col[1]          ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |vga|videoGen:videoGen_inst|b[6]             ;
+; 7:1                ; 2 bits    ; 8 LEs         ; 6 LEs                ; 2 LEs                  ; Yes        ; |vga|selection_manager:u_selman|count[0]     ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |vga|videoGen:videoGen_inst|r[2]             ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |vga|auto_picker:u_autopick|ns               ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |vga|auto_picker:u_autopick|ps               ;
 ; 16:1               ; 4 bits    ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; No         ; |vga|videoGen:videoGen_inst|Mux2             ;
-; 9:1                ; 7 bits    ; 42 LEs        ; 42 LEs               ; 0 LEs                  ; No         ; |vga|videoGen:videoGen_inst|r[7]             ;
+; 9:1                ; 7 bits    ; 42 LEs        ; 42 LEs               ; 0 LEs                  ; No         ; |vga|videoGen:videoGen_inst|g[4]             ;
 ; 16:1               ; 5 bits    ; 50 LEs        ; 50 LEs               ; 0 LEs                  ; No         ; |vga|selection_manager:u_selman|Mux0         ;
 ; 16:1               ; 2 bits    ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; No         ; |vga|auto_picker:u_autopick|Mux0             ;
-; 16:1               ; 3 bits    ; 30 LEs        ; 30 LEs               ; 0 LEs                  ; No         ; |vga|shuffle:shh|Mux2                        ;
+; 16:1               ; 3 bits    ; 30 LEs        ; 30 LEs               ; 0 LEs                  ; No         ; |vga|shuffle:shh|Mux3                        ;
 ; 16:1               ; 3 bits    ; 30 LEs        ; 30 LEs               ; 0 LEs                  ; No         ; |vga|shuffle:shh|Mux7                        ;
 ; 10:1               ; 2 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |vga|videoGen:videoGen_inst|g[6]             ;
-; 7:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |vga|selection_manager:u_selman|count        ;
-; 13:1               ; 4 bits    ; 32 LEs        ; 20 LEs               ; 12 LEs                 ; No         ; |vga|controladora_FSM:fsm|Selector2          ;
-; 14:1               ; 2 bits    ; 18 LEs        ; 6 LEs                ; 12 LEs                 ; No         ; |vga|controladora_FSM:fsm|Selector10         ;
+; 13:1               ; 4 bits    ; 32 LEs        ; 20 LEs               ; 12 LEs                 ; No         ; |vga|controladora_FSM:fsm|Selector9          ;
+; 14:1               ; 2 bits    ; 18 LEs        ; 6 LEs                ; 12 LEs                 ; No         ; |vga|controladora_FSM:fsm|Selector7          ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------+
 
 
@@ -558,6 +554,17 @@ Encoding Type:  One-Hot
 ; GRID_COLS      ; 4     ; Signed Integer                          ;
 ; GRID_ROWS      ; 4     ; Signed Integer                          ;
 +----------------+-------+-----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: select_pulse:u_selpulse ;
++----------------+----------+------------------------------------------+
+; Parameter Name ; Value    ; Type                                     ;
++----------------+----------+------------------------------------------+
+; CLK_HZ         ; 50000000 ; Signed Integer                           ;
+; DEBOUNCE_MS    ; 8        ; Signed Integer                           ;
++----------------+----------+------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -735,7 +742,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; board_write    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 ; show_7seg      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 ; display_winner ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; sel_count      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 +----------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
@@ -775,35 +781,36 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 310                         ;
-;     CLR               ; 94                          ;
+; arriav_ff             ; 353                         ;
+;     CLR               ; 95                          ;
 ;     CLR SCLR          ; 60                          ;
 ;     CLR SCLR SLD      ; 16                          ;
 ;     ENA               ; 4                           ;
-;     ENA CLR           ; 33                          ;
-;     ENA CLR SCLR      ; 34                          ;
+;     ENA CLR           ; 37                          ;
+;     ENA CLR SCLR      ; 70                          ;
+;     ENA CLR SCLR SLD  ; 2                           ;
 ;     ENA SCLR          ; 34                          ;
 ;     ENA SLD           ; 24                          ;
 ;     SCLR              ; 10                          ;
 ;     plain             ; 1                           ;
-; arriav_lcell_comb     ; 1295                        ;
-;     arith             ; 494                         ;
+; arriav_lcell_comb     ; 1351                        ;
+;     arith             ; 532                         ;
 ;         0 data inputs ; 55                          ;
-;         1 data inputs ; 163                         ;
+;         1 data inputs ; 201                         ;
 ;         2 data inputs ; 118                         ;
 ;         3 data inputs ; 50                          ;
 ;         4 data inputs ; 78                          ;
 ;         5 data inputs ; 30                          ;
 ;     extend            ; 12                          ;
 ;         7 data inputs ; 12                          ;
-;     normal            ; 780                         ;
+;     normal            ; 798                         ;
 ;         0 data inputs ; 2                           ;
 ;         1 data inputs ; 17                          ;
-;         2 data inputs ; 98                          ;
-;         3 data inputs ; 168                         ;
-;         4 data inputs ; 177                         ;
-;         5 data inputs ; 139                         ;
-;         6 data inputs ; 179                         ;
+;         2 data inputs ; 94                          ;
+;         3 data inputs ; 165                         ;
+;         4 data inputs ; 194                         ;
+;         5 data inputs ; 126                         ;
+;         6 data inputs ; 200                         ;
 ;     shared            ; 9                           ;
 ;         0 data inputs ; 3                           ;
 ;         2 data inputs ; 3                           ;
@@ -812,7 +819,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; boundary_port         ; 74                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 24.30                       ;
-; Average LUT depth     ; 11.45                       ;
+; Average LUT depth     ; 10.90                       ;
 +-----------------------+-----------------------------+
 
 
@@ -821,7 +828,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:03     ;
 +----------------+--------------+
 
 
@@ -831,7 +838,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Sun Oct 05 21:20:57 2025
+    Info: Processing started: Tue Oct 07 14:37:54 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Top -c Top
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
@@ -877,24 +884,24 @@ Info (12021): Found 1 design units, including 1 entities, in source file delay_t
 Info (12021): Found 1 design units, including 1 entities, in source file auto_picker.sv
     Info (12023): Found entity 1: auto_picker File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/auto_picker.sv Line: 1
 Info (12127): Elaborating entity "vga" for the top level hierarchy
-Info (12128): Elaborating entity "pll" for hierarchy "pll:vgapll" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/vga.sv Line: 25
-Info (12128): Elaborating entity "vgaController" for hierarchy "vgaController:vgaCont" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/vga.sv Line: 32
+Info (12128): Elaborating entity "pll" for hierarchy "pll:vgapll" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/vga.sv Line: 26
+Info (12128): Elaborating entity "vgaController" for hierarchy "vgaController:vgaCont" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/vga.sv Line: 33
 Warning (10230): Verilog HDL assignment warning at vgaController.sv(22): truncated value with size 32 to match size of target (10) File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/vgaController.sv Line: 22
 Warning (10230): Verilog HDL assignment warning at vgaController.sv(24): truncated value with size 32 to match size of target (10) File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/vgaController.sv Line: 24
-Info (12128): Elaborating entity "btn_debounced_pulse" for hierarchy "btn_debounced_pulse:db_up" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/vga.sv Line: 37
-Info (12128): Elaborating entity "cursor_4x4" for hierarchy "cursor_4x4:u_cursor" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/vga.sv Line: 57
+Info (12128): Elaborating entity "btn_debounced_pulse" for hierarchy "btn_debounced_pulse:db_up" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/vga.sv Line: 38
+Info (12128): Elaborating entity "cursor_4x4" for hierarchy "cursor_4x4:u_cursor" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/vga.sv Line: 58
 Warning (10230): Verilog HDL assignment warning at cursor_4x4.sv(27): truncated value with size 32 to match size of target (2) File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/cursor_4x4.sv Line: 27
 Warning (10230): Verilog HDL assignment warning at cursor_4x4.sv(30): truncated value with size 32 to match size of target (2) File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/cursor_4x4.sv Line: 30
 Warning (10230): Verilog HDL assignment warning at cursor_4x4.sv(33): truncated value with size 32 to match size of target (2) File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/cursor_4x4.sv Line: 33
 Warning (10230): Verilog HDL assignment warning at cursor_4x4.sv(36): truncated value with size 32 to match size of target (2) File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/cursor_4x4.sv Line: 36
 Warning (10230): Verilog HDL assignment warning at cursor_4x4.sv(42): truncated value with size 32 to match size of target (6) File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/cursor_4x4.sv Line: 42
-Info (12128): Elaborating entity "select_pulse" for hierarchy "select_pulse:u_selpulse" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/vga.sv Line: 76
-Info (12128): Elaborating entity "auto_picker" for hierarchy "auto_picker:u_autopick" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/vga.sv Line: 100
+Info (12128): Elaborating entity "select_pulse" for hierarchy "select_pulse:u_selpulse" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/vga.sv Line: 77
+Info (12128): Elaborating entity "auto_picker" for hierarchy "auto_picker:u_autopick" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/vga.sv Line: 101
 Info (12128): Elaborating entity "random" for hierarchy "auto_picker:u_autopick|random:u_rng" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/auto_picker.sv Line: 17
 Info (12128): Elaborating entity "selection_manager" for hierarchy "selection_manager:u_selman" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/vga.sv Line: 127
-Info (12128): Elaborating entity "pair_compare" for hierarchy "pair_compare:u_cmp" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/vga.sv Line: 138
-Info (12128): Elaborating entity "delay_timer" for hierarchy "delay_timer:u_delay" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/vga.sv Line: 147
-Info (12128): Elaborating entity "videoGen" for hierarchy "videoGen:videoGen_inst" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/vga.sv Line: 158
+Info (12128): Elaborating entity "pair_compare" for hierarchy "pair_compare:u_cmp" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/vga.sv Line: 137
+Info (12128): Elaborating entity "delay_timer" for hierarchy "delay_timer:u_delay" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/vga.sv Line: 145
+Info (12128): Elaborating entity "videoGen" for hierarchy "videoGen:videoGen_inst" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/vga.sv Line: 156
 Warning (10230): Verilog HDL assignment warning at videoGen.sv(39): truncated value with size 32 to match size of target (11) File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/videoGen.sv Line: 39
 Warning (10230): Verilog HDL assignment warning at videoGen.sv(40): truncated value with size 32 to match size of target (11) File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/videoGen.sv Line: 40
 Warning (10230): Verilog HDL assignment warning at videoGen.sv(89): truncated value with size 32 to match size of target (11) File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/videoGen.sv Line: 89
@@ -908,16 +915,15 @@ Warning (10230): Verilog HDL assignment warning at videoGen.sv(56): truncated va
 Warning (10230): Verilog HDL assignment warning at videoGen.sv(57): truncated value with size 32 to match size of target (10) File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/videoGen.sv Line: 57
 Warning (10230): Verilog HDL assignment warning at videoGen.sv(58): truncated value with size 32 to match size of target (10) File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/videoGen.sv Line: 58
 Warning (10230): Verilog HDL assignment warning at videoGen.sv(70): truncated value with size 32 to match size of target (6) File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/videoGen.sv Line: 70
-Info (12128): Elaborating entity "controladora_FSM" for hierarchy "controladora_FSM:fsm" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/vga.sv Line: 195
-Info (10264): Verilog HDL Case Statement information at controladora_FSM.sv(67): all case item expressions in this case statement are onehot File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/controladora_FSM.sv Line: 67
-Info (12128): Elaborating entity "timer15_7seg" for hierarchy "timer15_7seg:u_turn_timer" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/vga.sv Line: 208
+Info (12128): Elaborating entity "controladora_FSM" for hierarchy "controladora_FSM:fsm" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/vga.sv Line: 190
+Info (12128): Elaborating entity "timer15_7seg" for hierarchy "timer15_7seg:u_turn_timer" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/vga.sv Line: 202
 Warning (10230): Verilog HDL assignment warning at timer15_7seg.sv(41): truncated value with size 6 to match size of target (4) File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/timer15_7seg.sv Line: 41
 Info (12128): Elaborating entity "time_counter" for hierarchy "timer15_7seg:u_turn_timer|time_counter:u_time" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/timer15_7seg.sv Line: 36
 Warning (10230): Verilog HDL assignment warning at time_counter.sv(19): truncated value with size 32 to match size of target (6) File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/time_counter.sv Line: 19
 Info (12128): Elaborating entity "seven_segment_display" for hierarchy "timer15_7seg:u_turn_timer|seven_segment_display:u7_tens" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/timer15_7seg.sv Line: 43
-Info (12128): Elaborating entity "shuffle" for hierarchy "shuffle:shh" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/vga.sv Line: 219
+Info (12128): Elaborating entity "shuffle" for hierarchy "shuffle:shh" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/vga.sv Line: 213
 Warning (10230): Verilog HDL assignment warning at shuffle.sv(52): truncated value with size 8 to match size of target (4) File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/shuffle.sv Line: 52
-Info (12128): Elaborating entity "score_manager_two" for hierarchy "score_manager_two:u_scores" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/vga.sv Line: 230
+Info (12128): Elaborating entity "score_manager_two" for hierarchy "score_manager_two:u_scores" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/vga.sv Line: 224
 Info (278001): Inferred 5 megafunctions from design logic
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "videoGen:videoGen_inst|Mod0" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/videoGen.sv Line: 57
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "videoGen:videoGen_inst|Mod1" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/videoGen.sv Line: 58
@@ -996,16 +1002,16 @@ Info (17049): 12 registers lost all their fanouts during netlist optimizations.
 Info (144001): Generated suppressed messages file C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/output_files/Top.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 1394 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 1450 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 7 input pins
     Info (21059): Implemented 67 output pins
-    Info (21061): Implemented 1316 logic cells
+    Info (21061): Implemented 1372 logic cells
     Info (21062): Implemented 4 DSP elements
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 47 warnings
-    Info: Peak virtual memory: 4891 megabytes
-    Info: Processing ended: Sun Oct 05 21:21:04 2025
-    Info: Elapsed time: 00:00:07
-    Info: Total CPU time (on all processors): 00:00:12
+    Info: Peak virtual memory: 4892 megabytes
+    Info: Processing ended: Tue Oct 07 14:38:06 2025
+    Info: Elapsed time: 00:00:12
+    Info: Total CPU time (on all processors): 00:00:19
 
 
 +------------------------------------------+

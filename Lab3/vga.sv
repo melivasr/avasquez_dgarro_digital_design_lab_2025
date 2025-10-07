@@ -17,9 +17,10 @@ module vga(
     output logic [1:0] sel_count,           
     output logic [6:0] seg_score_p0,        // puntaje jugador 1
     output logic [6:0] seg_score_p1,        // puntaje jugador 2
-    output logic [6:0] seg_player
+    output logic [6:0] seg_player           // jugador actual
 );
-    // Reloj VGA 
+
+    // ---------------- Reloj VGA y coordenadas ----------------
     logic [9:0] x, y;
 
     pll vgapll(.inclk0(clk), .c0(vgaclk));
@@ -31,7 +32,7 @@ module vga(
         .x(x), .y(y)
     );
 
-    // Debounce de botones de cursor
+    // ---------------- Debounce de botones de cursor ----------------
     logic p_up, p_down, p_left, p_right;
 
     btn_debounced_pulse db_up    (.clk(clk), .rst(reset), .btn_n(btn_up_n),    .pulse(p_up));
@@ -39,7 +40,7 @@ module vga(
     btn_debounced_pulse db_left  (.clk(clk), .rst(reset), .btn_n(btn_left_n),  .pulse(p_left));
     btn_debounced_pulse db_right (.clk(clk), .rst(reset), .btn_n(btn_right_n), .pulse(p_right));
 
-    //  Cursor 4x4
+    // ---------------- Cursor 4x4 ----------------
     logic [1:0] sel_row, sel_col;
     logic [5:0] sel_idx;
 
@@ -56,18 +57,18 @@ module vga(
         .sel_idx(sel_idx)
     );
 
-    //  Señales de la FSM 
+    // ---------------- Señales de la FSM ----------------
     logic clr_timers, start_timer, init_board, t15s_expired;
     logic clr_score, random_enable, board_write, show_7seg, scan_buttons;
     logic random_pick, flip_sel_card, store_sel_card, compare_enable;
     logic lock_pair, inc_score, short_delay, hide_cards, display_winner;
     logic shuffle_done;
 
-    // Board y puntajes
+    // ---------------- Tablero y puntajes ----------------
     logic [3:0] board [0:15];
     logic [3:0] score_p0, score_p1;
 
-    // Pulso de selección desde el switch/botón
+    // ---------------- Pulso de selección (usuario) ----------------
     logic sel_pulse;
     select_pulse u_selpulse(
         .clk(clk), .rst(reset),
@@ -75,70 +76,67 @@ module vga(
         .sel_pulse(sel_pulse)
     );
 
-    // Administra selecciones, máscara y pares bloqueados
+    // ---------------- Selección / Comparación / Retardo ----------------
     logic [15:0] reveal_mask;
     logic [15:0] locked_mask;
-    logic [1:0]  sel_count_sm;   
+    logic [1:0]  sel_count_sm;    // real del selection_manager
     logic        btn_valid_sm;
     logic [5:0]  first_idx, second_idx;
     logic [3:0]  first_val, second_val;
     logic [3:0]  pairs_done;
-	 
-	 
-	 logic [5:0] auto_idx;
-	 logic       auto_pulse;
 
-	 auto_picker u_autopick (
-		 .clk        (clk),
-		 .rst        (reset),
-		 .start      (random_pick),        
-		 .reveal_mask(reveal_mask),
-		 .locked_mask(locked_mask),
-		 .sel_count  (sel_count_sm),
-		 .pick_idx   (auto_idx),
-		 .pick_pulse (auto_pulse)
-	 );
+    // --- AUTO PICK ---
+    logic [5:0] auto_idx;
+    logic       auto_pulse;
 
-	// Mux de fuente de selección
-	 wire [5:0] sel_idx_mux   = (random_pick) ? auto_idx : sel_idx;
-	 wire       sel_pulse_mux = sel_pulse | auto_pulse;
+    auto_picker u_autopick (
+        .clk        (clk),
+        .rst        (reset),
+        .start      (random_pick),        
+        .reveal_mask(reveal_mask),
+        .locked_mask(locked_mask),
+        .sel_count  (sel_count_sm),
+        .pick_idx   (auto_idx),
+        .pick_pulse (auto_pulse)
+    );
 
-	  selection_manager u_selman (
-		 .clk(clk), .rst(reset),
-		 .sel_idx(sel_idx_mux),
-		 .sel_pulse(sel_pulse_mux),
-		 .select_enable(scan_buttons | random_pick),  
+    // Mux de fuente de selección (usuario vs autopick)
+	wire [5:0] sel_idx_mux   = (random_pick) ? auto_idx   : sel_idx;
+	wire sel_pulse_mux = (random_pick) ? auto_pulse : sel_pulse;
 
-		 .flip_sel_card   (flip_sel_card),
-		 .store_sel_card  (store_sel_card),
-		 .hide_cards      (hide_cards),
-		 .lock_pair       (lock_pair),
-		 .clr_all         (init_board),
-		 .board           (board),
-		 .reveal_mask     (reveal_mask),
-		 .locked_mask     (locked_mask),
-		 .sel_count       (sel_count_sm),
-		 .btn_valid       (btn_valid_sm),
-		 .first_idx       (first_idx),
-		 .second_idx      (second_idx),
-		 .first_val       (first_val),
-		 .second_val      (second_val),
-		 .pairs_done      (pairs_done)
-	  );
-
+		selection_manager u_selman (
+		  .clk(clk), .rst(reset),
+		  .sel_idx(sel_idx_mux),
+		  .sel_pulse(sel_pulse_mux),
+		  .select_enable( (scan_buttons && !random_pick) || random_pick ), 
+        .flip_sel_card   (flip_sel_card),
+        .store_sel_card  (store_sel_card),
+        .hide_cards      (hide_cards),
+        .lock_pair       (lock_pair),
+        .clr_all         (init_board),
+        .board           (board),
+        .reveal_mask     (reveal_mask),
+        .locked_mask     (locked_mask),
+        .sel_count       (sel_count_sm),
+        .btn_valid       (btn_valid_sm),
+        .first_idx       (first_idx),
+        .second_idx      (second_idx),
+        .first_val       (first_val),
+        .second_val      (second_val),
+        .pairs_done      (pairs_done)
+    );
 
     // Comparación bajo control de la FSM
-	 logic match_w;
-	 pair_compare u_cmp(
-		  .compare_enable(compare_enable),
-		  .sel_count     (sel_count_sm),
-		  .first_val     (first_val),
-		  .second_val    (second_val),
-		  .match         (match_w)
-	 );
+    logic match_w;
+    pair_compare u_cmp(
+        .compare_enable(compare_enable),
+        .sel_count     (sel_count_sm),
+        .first_val     (first_val),
+        .second_val    (second_val),
+        .match         (match_w)
+    );
 
-
-    // Retardo corto para UNMATCH - delay_done
+    // Retardo corto para UNMATCH delay_done
     logic delay_done_w;
     delay_timer #(.CLK_HZ(50_000_000), .MS(700)) u_delay (
         .clk(clk), .rst(reset),
@@ -146,25 +144,23 @@ module vga(
         .done_pulse(delay_done_w)
     );
 
-    // VideoGen
-	 videoGen videoGen_inst (
-		 .x(x), .y(y),
-		 .board(board),
-		 .sel_row(sel_row),
-		 .sel_col(sel_col),
-		 .reveal_mask(reveal_mask),
-		 .locked_mask(locked_mask), 
-		 .r(r), .g(g), .b(b)
-	 );
-    // FSM
-    logic [1:0] fsm_sel_count;  
+    // ---------------- VideoGen ----------------
+    videoGen videoGen_inst (
+        .x(x), .y(y),
+        .board(board),
+        .sel_row(sel_row),
+        .sel_col(sel_col),
+        .reveal_mask(reveal_mask),
+        .locked_mask(locked_mask), 
+        .r(r), .g(g), .b(b)
+    );
 
+    // ---------------- FSM principal ----------------
     controladora_FSM fsm (
         .clk(clk),
         .rst(reset),
         .shuffle_done(shuffle_done),
 
-    
         .btn_valid(btn_valid_sm),
         .match(match_w),
         .all_pairs(pairs_done == 4'd8),   // 8 pares
@@ -190,24 +186,22 @@ module vga(
         .hide_cards(hide_cards),
         .display_winner(display_winner),
         .player(player),
-
-        .sel_count(fsm_sel_count)
+        .sel_count(sel_count_sm)
     );
 
-  
     assign sel_count = sel_count_sm;
 
-    //  Temporizador de turno (15 s)
+    // ---------------- Temporizador de turno (15 s) ----------------
     timer15_7seg u_turn_timer (
         .clk     (clk),
         .reset   (clr_timers),   // limpia/reinicia contador
-        .start   (start_timer),  
+        .start   (start_timer),  // FSM lo asserta en TURN_START/WAIT_SELECTION
         .expired (t15s_expired),
         .seg_tens(seg_tens),
         .seg_ones(seg_ones)
     );
 
-    // Barajado 
+    // ---------------- Barajado / tablero ----------------
     shuffle shh (
         .clk(clk),
         .rst(reset),
@@ -218,7 +212,7 @@ module vga(
         .board(board)
     );
 
-    //Puntajes y displays 
+    // ---------------- Puntajes y displays ----------------
     score_manager_two u_scores (
         .clk        (clk),
         .rst        (reset),
@@ -229,17 +223,10 @@ module vga(
         .score_p1   (score_p1)
     );
 
-    seven_segment_display disp_p0 (
-        .num(score_p0),
-        .seg(seg_score_p0)
-    );
+    seven_segment_display disp_p0 (.num(score_p0), .seg(seg_score_p0));
+    seven_segment_display disp_p1 (.num(score_p1), .seg(seg_score_p1));
 
-    seven_segment_display disp_p1 (
-        .num(score_p1),
-        .seg(seg_score_p1)
-    );
-
-    // Display para "jugador actual" 
+    // Display para "jugador actual" (1 ó 2)
     logic [3:0] player_num;
     always_comb begin
         player_num = (player == 1'b0) ? 4'd1 : 4'd2;

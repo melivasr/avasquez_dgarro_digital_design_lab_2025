@@ -260,10 +260,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "sw_flip",
-					"strict" : false
-				},
-				{
 					"name" : "btn_right_n",
 					"strict" : false
 				},
@@ -277,6 +273,10 @@
 				},
 				{
 					"name" : "btn_up_n",
+					"strict" : false
+				},
+				{
+					"name" : "sw_flip",
 					"strict" : false
 				}
 			]
