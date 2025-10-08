@@ -5,9 +5,17 @@ module videoGen (
     input  logic [1:0] sel_row,
     input  logic [1:0] sel_col,
     input  logic [15:0] reveal_mask,
-	 input  logic [15:0] locked_mask,
+    input  logic [15:0] locked_mask,
+
+    // overlay de ganador
+    input  logic        display_winner,
+    input  logic        tie,
+    input  logic [1:0]  winner_num,
+
     output logic [7:0] r, g, b
 );
+
+    // pantalla y tablero
     localparam int SCREEN_W   = 640;
     localparam int SCREEN_H   = 480;
     localparam int GRID_COLS  = 4;
@@ -19,27 +27,25 @@ module videoGen (
     localparam int GAP_Y  = 10;
     localparam int BORDER = 3;
 
-    localparam int TOTAL_W = GRID_COLS*CARD_W + (GRID_COLS-1)*GAP_X; 
-    localparam int TOTAL_H = GRID_ROWS*CARD_H + (GRID_ROWS-1)*GAP_Y; 
+    localparam int TOTAL_W = GRID_COLS*CARD_W + (GRID_COLS-1)*GAP_X;
+    localparam int TOTAL_H = GRID_ROWS*CARD_H + (GRID_ROWS-1)*GAP_Y;
 
     localparam int MARGIN_X = (SCREEN_W - TOTAL_W)/2;
     localparam int MARGIN_Y = (SCREEN_H - TOTAL_H)/2;
 
-    // mesa
+    // colores base
     localparam logic [7:0] TABLE_R = 8'd20;
     localparam logic [7:0] TABLE_G = 8'd90;
     localparam logic [7:0] TABLE_B = 8'd20;
 
-    // dorso
     localparam logic [7:0] BACK_R = 8'd50;
     localparam logic [7:0] BACK_G = 8'd50;
     localparam logic [7:0] BACK_B = 8'd140;
 
-    
+    // coordenadas relativas al tablero
     localparam signed [10:0] MX  = MARGIN_X;
     localparam signed [10:0] MY  = MARGIN_Y;
 
-    // coords relativas
     wire signed [10:0] rx = $signed({1'b0,x}) - MX;
     wire signed [10:0] ry = $signed({1'b0,y}) - MY;
 
@@ -67,13 +73,11 @@ module videoGen (
     wire [1:0] col = col_cell;
     wire [1:0] row = row_cell;
 
-    wire [5:0] idx = row * GRID_COLS + col; 
+    wire [5:0] idx = row * GRID_COLS + col;
     wire [2:0] pair_id = board[idx][2:0];
 
-    
     wire revealed = reveal_mask[idx];
-	 wire locked   = locked_mask[idx];                
-    wire temp_sel = reveal_mask[idx] & ~locked;  
+    wire locked   = locked_mask[idx];
 
     // borde y selección
     wire in_border = in_card &&
@@ -82,10 +86,10 @@ module videoGen (
 
     wire is_selected_cell = in_card && (row == sel_row) && (col == sel_col);
 
+    // geometría de símbolos
     localparam int CX = CARD_W/2;
     localparam int CY = CARD_H/2;
 
-    // también fijamos ancho/signed para centros y offsets
     localparam signed [10:0] CX11 = CX;
     localparam signed [10:0] CY11 = CY;
 
@@ -103,7 +107,6 @@ module videoGen (
     localparam int TRI_TOP  = (CARD_H*20)/100;
     localparam int TRI_BOT  = (CARD_H*85)/100;
 
-    // distancias al centro
     wire signed [10:0] dx = $signed({1'b0,lx}) - CX11;
     wire signed [10:0] dy = $signed({1'b0,ly}) - CY11;
 
@@ -131,13 +134,13 @@ module videoGen (
         (lx >= (CX - (TRI_BOT - ly))) &&
         (lx <= (CX + (TRI_BOT - ly)));
 
-    // offsets para el corazón (todo con ancho fijo)
+    // corazón
     localparam int H_OFF_X = (CARD_W*18)/100;
     localparam int H_OFF_Y = (CARD_H*10)/100;
     localparam int H_R_INT = (MIN_SIDE*22)/100;
-    localparam signed [10:0] CXm = CX - H_OFF_X; // centro izquierdo
-    localparam signed [10:0] CXp = CX + H_OFF_X; // centro derecho
-    localparam signed [10:0] CYm = CY - H_OFF_Y; // centro vertical
+    localparam signed [10:0] CXm = CX - H_OFF_X;
+    localparam signed [10:0] CXp = CX + H_OFF_X;
+    localparam signed [10:0] CYm = CY - H_OFF_Y;
 
     wire signed [10:0] dxL = $signed({1'b0,lx}) - CXm;
     wire signed [10:0] dxR = $signed({1'b0,lx}) - CXp;
@@ -161,10 +164,9 @@ module videoGen (
         (pair_id==3'd6) ? in_triangle_inv :
                           in_circle;
 
-    // SOLO dibuja símbolo si la carta está revelada
     wire in_symbol = revealed && in_card && !in_border && in_symbol_raw;
 
-    // Colores por símbolo
+    // color por símbolo
     logic [7:0] cr, cg, cb;
     always_comb begin
         unique case (pair_id)
@@ -179,28 +181,198 @@ module videoGen (
         endcase
     end
 
-    // Borde/relleno según estado
+    // fuente 3×5 en mayúsculas
+    localparam int FONT_W   = 3;
+    localparam int FONT_H   = 5;
+    localparam int SCALE    = 6;
+    localparam int CHAR_W   = FONT_W*SCALE;
+    localparam int CHAR_H   = FONT_H*SCALE;
+    // más espacio entre letras
+    localparam int CHAR_SP  = SCALE*2;
+    localparam int MAX_CHARS = 12;
+
+    function automatic logic [2:0] font3x5_row (input byte ch, input int row);
+        case (ch)
+            "W": case (row)
+					  0: font3x5_row = 3'b101;
+					  1: font3x5_row = 3'b101;
+					  2: font3x5_row = 3'b111; 
+					  3: font3x5_row = 3'b111; 
+					  4: font3x5_row = 3'b101;
+             default: font3x5_row = 3'b000; endcase
+            "I": case (row)
+                 0: font3x5_row=3'b111;
+                 1: font3x5_row=3'b010;
+                 2: font3x5_row=3'b010;
+                 3: font3x5_row=3'b010;
+                 4: font3x5_row=3'b111;
+                 default: font3x5_row=3'b000; endcase
+				"N": case (row)
+					  0: font3x5_row = 3'b110; 
+					  1: font3x5_row = 3'b111; 
+					  2: font3x5_row = 3'b111;
+					  3: font3x5_row = 3'b101; 
+					  4: font3x5_row = 3'b101; 
+					  default: font3x5_row = 3'b000; endcase
+            "E": case (row)
+                 0: font3x5_row=3'b111;
+                 1: font3x5_row=3'b110;
+                 2: font3x5_row=3'b111;
+                 3: font3x5_row=3'b110;
+                 4: font3x5_row=3'b111;
+                 default: font3x5_row=3'b000; endcase
+            "R": case (row)
+                 0: font3x5_row=3'b110;
+                 1: font3x5_row=3'b101;
+                 2: font3x5_row=3'b110;
+                 3: font3x5_row=3'b101;
+                 4: font3x5_row=3'b101;
+                 default: font3x5_row=3'b000; endcase
+            "J": case (row)
+                 0: font3x5_row=3'b111;
+                 1: font3x5_row=3'b001;
+                 2: font3x5_row=3'b001;
+                 3: font3x5_row=3'b101;
+                 4: font3x5_row=3'b010;
+                 default: font3x5_row=3'b000; endcase
+            "O": case (row)
+                 0: font3x5_row=3'b111;
+                 1: font3x5_row=3'b101;
+                 2: font3x5_row=3'b101;
+                 3: font3x5_row=3'b101;
+                 4: font3x5_row=3'b111;
+                 default: font3x5_row=3'b000; endcase
+            "1": case (row)
+                 0: font3x5_row=3'b010;
+                 1: font3x5_row=3'b110;
+                 2: font3x5_row=3'b010;
+                 3: font3x5_row=3'b010;
+                 4: font3x5_row=3'b111;
+                 default: font3x5_row=3'b000; endcase
+            "2": case (row)
+                 0: font3x5_row=3'b111;
+                 1: font3x5_row=3'b001;
+                 2: font3x5_row=3'b111;
+                 3: font3x5_row=3'b100;
+                 4: font3x5_row=3'b111;
+                 default: font3x5_row=3'b000; endcase
+            " ": font3x5_row = 3'b000;
+            default: font3x5_row = 3'b000;
+        endcase
+    endfunction
+
+    function automatic logic font_pixel_on(
+        input byte ch,
+        input int  px,
+        input int  py
+    );
+        int col = px / SCALE; // 0..2
+        int row = py / SCALE; // 0..4
+        logic [2:0] rowbits = font3x5_row(ch, row);
+        font_pixel_on = rowbits[2 - col];
+    endfunction
+
+    // texto del overlay
+    byte text_buf [0:MAX_CHARS-1];
+    int  text_len;
+
+    always_comb begin
+        for (int i=0;i<MAX_CHARS;i++) text_buf[i] = " ";
+        text_len = 0;
+
+        if (display_winner) begin
+            if (tie) begin
+                text_buf[0]="N"; text_buf[1]="O"; text_buf[2]=" ";
+                text_buf[3]="W"; text_buf[4]="I"; text_buf[5]="N";
+                text_buf[6]="N"; text_buf[7]="E"; text_buf[8]="R";
+                text_len = 9;
+            end else begin
+                text_buf[0]="W"; text_buf[1]="I"; text_buf[2]="N";
+                text_buf[3]="N"; text_buf[4]="E"; text_buf[5]="R";
+                text_buf[6]=" "; text_buf[7]="J";
+                text_buf[8]=(winner_num==2) ? "2" : "1";
+                text_len = 9;
+            end
+        end
+    end
+
+    // caja del texto 
+    integer TEXT_W_PIX, TEXT_H_PIX, TEXT_X0, TEXT_Y0;
+    always_comb begin
+        TEXT_W_PIX = (text_len>0) ? (text_len*CHAR_W + (text_len-1)*CHAR_SP) : 0;
+        TEXT_H_PIX = (text_len>0) ? CHAR_H : 0;
+        TEXT_X0    = (SCREEN_W - TEXT_W_PIX)/2;
+        TEXT_Y0    = (SCREEN_H - TEXT_H_PIX)/2;
+    end
+
+    // mapeo de (x,y) carácter y píxel dentro del carácter
+    logic   inside_text_box, txt_on;
+    integer ch_idx, px_in_char, py_in_char;
+    integer x_rel, y_rel, char_block, char_x0;
+
+    always_comb begin
+        inside_text_box = 1'b0;
+        txt_on          = 1'b0;
+        ch_idx = 0; px_in_char = 0; py_in_char = 0;
+        x_rel = 0; y_rel = 0; char_block = 0; char_x0 = 0;
+
+        if (display_winner && text_len>0) begin
+            if (x>=TEXT_X0 && x<TEXT_X0+TEXT_W_PIX &&
+                y>=TEXT_Y0 && y<TEXT_Y0+TEXT_H_PIX) begin
+
+                inside_text_box = 1'b1;
+
+                x_rel = x - TEXT_X0;
+                y_rel = y - TEXT_Y0;
+
+                char_block = CHAR_W + CHAR_SP;
+                ch_idx = x_rel / char_block;
+                if (ch_idx >= text_len) ch_idx = text_len-1;
+
+                char_x0    = ch_idx*char_block;
+                px_in_char = x_rel - char_x0;  // 0 .. CHAR_W+CHAR_SP-1
+                py_in_char = y_rel;
+            
+                if (px_in_char < CHAR_W)
+                    txt_on = font_pixel_on(text_buf[ch_idx], px_in_char, py_in_char);
+                else
+                    txt_on = 1'b0;
+            end
+        end
+    end
+
+    // composición de color
+    localparam [7:0] C_BLACK = 8'h00;
+    localparam [7:0] C_WHITE = 8'hFF;
+
     logic [7:0] rr, gg, bb;
     always_comb begin
-        if (in_symbol) begin
-            rr = cr; gg = cg; bb = cb;                 // símbolo
-        end else if (in_card) begin
-            if (in_border) begin
-                if (is_selected_cell) begin
-                    rr=8'd255; gg=8'd230; bb=8'd0;     // borde seleccionado
-                end else begin
-                    rr=8'd35;  gg=8'd35;  bb=8'd35;    // borde normal
-                end
+        if (display_winner && text_len>0) begin
+            if (inside_text_box && txt_on) begin
+                rr = C_WHITE; gg = C_WHITE; bb = C_WHITE;
             end else begin
-                // dorso si oculta, carta clara si revelada
-                if (revealed) begin
-                    rr=8'd235; gg=8'd235; bb=8'd235;   // cara hacia arriba
-                end else begin
-                    rr=BACK_R; gg=BACK_G; bb=BACK_B;   // dorso
-                end
+                rr = C_BLACK; gg = C_BLACK; bb = C_BLACK;
             end
         end else begin
-            rr = TABLE_R; gg = TABLE_G; bb = TABLE_B;  // mesa
+            rr = TABLE_R; gg = TABLE_G; bb = TABLE_B;
+
+            if (in_symbol) begin
+                rr = cr; gg = cg; bb = cb;
+            end else if (in_card) begin
+                if (in_border) begin
+                    if (is_selected_cell) begin
+                        rr=8'd255; gg=8'd230; bb=8'd0;
+                    end else begin
+                        rr=8'd35;  gg=8'd35;  bb=8'd35;
+                    end
+                end else begin
+                    if (revealed) begin
+                        rr=8'd235; gg=8'd235; bb=8'd235;
+                    end else begin
+                        rr=BACK_R; gg=BACK_G; bb=BACK_B;
+                    end
+                end
+            end
         end
     end
 

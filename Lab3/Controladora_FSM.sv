@@ -30,17 +30,17 @@ module controladora_FSM (
 );
 
     typedef enum logic [3:0] {
-        RESET_INIT    = 4'b0000,
-        SHUFFLE       = 4'b0001,
-        TURN_START    = 4'b0010,
-        WAIT_SELECTION= 4'b0011,
-        REVEAL        = 4'b0100,
-        AUTO_PICK     = 4'b0101,
-        EVALUATE_PAIR = 4'b0110,
-        MATCH         = 4'b0111,
-        UNMATCH       = 4'b1000,
-        HIDE_PAIR     = 4'b1001,
-        GAME_OVER     = 4'b1010
+        RESET_INIT   = 4'b0000,
+		  SHUFFLE = 4'b0010,
+        TURN_START    = 4'b0011,
+        WAIT_SELECTION= 4'b0100,
+        REVEAL        = 4'b0101,
+        AUTO_PICK     = 4'b0110,
+        EVALUATE_PAIR = 4'b0111,
+        MATCH         = 4'b1000,
+        UNMATCH       = 4'b1001,
+        HIDE_PAIR     = 4'b1010,
+        GAME_OVER     = 4'b1011
     } state_type;
 
     state_type state, next_state;
@@ -88,11 +88,14 @@ module controladora_FSM (
                 clr_timers = 1;
                 clr_score  = 1;
                 init_board = 1;
+					 short_delay = 1;
+					 
             end
 
             SHUFFLE: begin
                 random_enable = 1;
                 board_write   = 1;
+				 
             end
 
             TURN_START: begin
@@ -100,6 +103,7 @@ module controladora_FSM (
                 clr_timers = 1;
                 start_timer= 1;
                 show_7seg  = 1;
+					 
             end
 
             WAIT_SELECTION: begin
@@ -137,6 +141,8 @@ module controladora_FSM (
 
             GAME_OVER: begin
                 display_winner = 1;
+					 clr_timers     = 1;
+					 show_7seg  = 0;
             end
         endcase
     end
@@ -147,10 +153,10 @@ module controladora_FSM (
         unique case (state)
             RESET_INIT:
                 next_state = SHUFFLE;
-
+					 
             SHUFFLE:
                 if (shuffle_done) next_state = TURN_START;
-
+					 
             TURN_START:
                 next_state = WAIT_SELECTION;
 

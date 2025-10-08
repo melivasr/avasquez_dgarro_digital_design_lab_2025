@@ -14,7 +14,8 @@ state.HIDE_PAIR 0 1 0 0 0 0 0 0 0 0 1
 state.GAME_OVER 1 0 0 0 0 0 0 0 0 0 1 
 
 State Machine - |vga|auto_picker:u_autopick|ps
-Name ps.IDLE ps.FIRE ps.SEARCH 
-ps.IDLE 0 0 0 
-ps.SEARCH 1 0 1 
-ps.FIRE 1 1 0 
+Name ps.WAIT ps.PICK ps.SCAN ps.IDLE 
+ps.IDLE 0 0 0 0 
+ps.SCAN 0 0 1 1 
+ps.PICK 0 1 0 1 
+ps.WAIT 1 0 0 1 

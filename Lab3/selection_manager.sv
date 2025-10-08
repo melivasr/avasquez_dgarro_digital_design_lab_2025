@@ -61,8 +61,11 @@ module selection_manager(
                     !temp_mask[sel_idx] &&
                     (count < 2);
 
+    // Latch de solicitud
+    logic sel_req;
+
     // Pulso válido proviene del flanco + del switch filtrado
-    wire valid_pulse = sel_pulse && can_pick;
+    wire valid_pulse = sel_req && can_pick;
 
     // máscara visible = bloqueadas OR temporales
     assign reveal_mask = locked_mask | temp_mask;
@@ -77,6 +80,7 @@ module selection_manager(
             sel_a <= 6'd0; sel_b <= 6'd0;
             val_a <= 4'd0; val_b <= 4'd0;
             count <= 2'd0;
+            sel_req <= 1'b0;
         end else begin
             if (clr_all) begin
                 temp_mask   <= 16'h0000;
@@ -84,10 +88,13 @@ module selection_manager(
                 sel_a <= 6'd0; sel_b <= 6'd0;
                 val_a <= 4'd0; val_b <= 4'd0;
                 count <= 2'd0;
+                sel_req <= 1'b0; // también limpiar la solicitud
             end else begin
-                // Selección del usuario (con switch).
+                // Selección del usuario.
                 if (valid_pulse) begin
-                    
+                    // consumir solicitud latcheada
+                    sel_req <= 1'b0;
+
                     if (!(count == 2'd1 && sel_idx == sel_a)) begin
                         temp_mask[sel_idx] <= 1'b1;
 
@@ -109,6 +116,7 @@ module selection_manager(
                     sel_a <= 6'd0; sel_b <= 6'd0;
                     val_a <= 4'd0; val_b <= 4'd0;
                     count <= 2'd0;
+                    sel_req <= 1'b0; 
                 end
 
                 // Acertó el par bloquear y limpiar temporales
@@ -118,7 +126,11 @@ module selection_manager(
                     sel_a <= 6'd0; sel_b <= 6'd0;
                     val_a <= 4'd0; val_b <= 4'd0;
                     count <= 2'd0;
+                    sel_req <= 1'b0; 
                 end
+
+                // capturo cualquier pulso del switch
+                if (sel_pulse) sel_req <= 1'b1;
             end
         end
     end

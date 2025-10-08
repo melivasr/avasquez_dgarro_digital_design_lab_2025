@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Top
-Tue Oct 07 14:38:06 2025
+Tue Oct 07 19:58:08 2025
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -20,26 +20,34 @@ Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
  12. General Register Statistics
  13. Inverted Register Statistics
  14. Multiplexer Restructuring Statistics (Restructuring Performed)
- 15. Parameter Settings for User Entity Instance: cursor_4x4:u_cursor
- 16. Parameter Settings for User Entity Instance: select_pulse:u_selpulse
- 17. Parameter Settings for User Entity Instance: delay_timer:u_delay
- 18. Parameter Settings for Inferred Entity Instance: videoGen:videoGen_inst|lpm_divide:Mod0
- 19. Parameter Settings for Inferred Entity Instance: videoGen:videoGen_inst|lpm_divide:Mod1
- 20. Parameter Settings for Inferred Entity Instance: videoGen:videoGen_inst|lpm_divide:Div1
- 21. Parameter Settings for Inferred Entity Instance: videoGen:videoGen_inst|lpm_divide:Div0
- 22. Parameter Settings for Inferred Entity Instance: shuffle:shh|lpm_divide:Mod0
- 23. Port Connectivity Checks: "seven_segment_display:disp_player"
- 24. Port Connectivity Checks: "shuffle:shh|random:rng"
- 25. Port Connectivity Checks: "shuffle:shh"
- 26. Port Connectivity Checks: "timer15_7seg:u_turn_timer|seven_segment_display:u7_tens"
- 27. Port Connectivity Checks: "controladora_FSM:fsm"
- 28. Port Connectivity Checks: "selection_manager:u_selman"
- 29. Port Connectivity Checks: "auto_picker:u_autopick|random:u_rng"
- 30. Port Connectivity Checks: "cursor_4x4:u_cursor"
- 31. Post-Synthesis Netlist Statistics for Top Partition
- 32. Elapsed Time Per Partition
- 33. Analysis & Synthesis Messages
- 34. Analysis & Synthesis Suppressed Messages
+ 15. Parameter Settings for User Entity Instance: switch_debounced:u_rst
+ 16. Parameter Settings for User Entity Instance: cursor_4x4:u_cursor
+ 17. Parameter Settings for User Entity Instance: switch_debounced:u_flip
+ 18. Parameter Settings for User Entity Instance: auto_picker:u_autopick
+ 19. Parameter Settings for User Entity Instance: delay_timer:u_delay
+ 20. Parameter Settings for Inferred Entity Instance: videoGen:videoGen_inst|lpm_divide:Mod0
+ 21. Parameter Settings for Inferred Entity Instance: videoGen:videoGen_inst|lpm_divide:Mod1
+ 22. Parameter Settings for Inferred Entity Instance: videoGen:videoGen_inst|lpm_divide:Div1
+ 23. Parameter Settings for Inferred Entity Instance: videoGen:videoGen_inst|lpm_divide:Div0
+ 24. Parameter Settings for Inferred Entity Instance: videoGen:videoGen_inst|lpm_divide:Div4
+ 25. Parameter Settings for Inferred Entity Instance: videoGen:videoGen_inst|lpm_divide:Div2
+ 26. Parameter Settings for Inferred Entity Instance: videoGen:videoGen_inst|lpm_divide:Div2_rtl_0
+ 27. Parameter Settings for Inferred Entity Instance: videoGen:videoGen_inst|lpm_divide:Div3
+ 28. Parameter Settings for Inferred Entity Instance: shuffle:shh|lpm_divide:Mod0
+ 29. Port Connectivity Checks: "seven_segment_display:disp_player"
+ 30. Port Connectivity Checks: "shuffle:shh|random:rng"
+ 31. Port Connectivity Checks: "shuffle:shh"
+ 32. Port Connectivity Checks: "timer15_7seg:u_turn_timer|seven_segment_display:u7_tens"
+ 33. Port Connectivity Checks: "controladora_FSM:fsm"
+ 34. Port Connectivity Checks: "selection_manager:u_selman"
+ 35. Port Connectivity Checks: "auto_picker:u_autopick|random:u_rng"
+ 36. Port Connectivity Checks: "switch_debounced:u_flip"
+ 37. Port Connectivity Checks: "cursor_4x4:u_cursor"
+ 38. Port Connectivity Checks: "switch_debounced:u_rst"
+ 39. Post-Synthesis Netlist Statistics for Top Partition
+ 40. Elapsed Time Per Partition
+ 41. Analysis & Synthesis Messages
+ 42. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -66,13 +74,13 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Tue Oct 07 14:38:06 2025       ;
+; Analysis & Synthesis Status     ; Successful - Tue Oct 07 19:58:08 2025       ;
 ; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                   ; Top                                         ;
 ; Top-level Entity Name           ; vga                                         ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 353                                         ;
+; Total registers                 ; 424                                         ;
 ; Total pins                      ; 74                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
@@ -186,7 +194,7 @@ https://fpgasoftware.intel.com/eula.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.1%      ;
+;     Processor 2            ;   0.0%      ;
 ;     Processor 3            ;   0.0%      ;
 ;     Processor 4            ;   0.0%      ;
 ;     Processor 5            ;   0.0%      ;
@@ -213,11 +221,12 @@ https://fpgasoftware.intel.com/eula.
 ; btn_debounced_pulse.sv           ; yes             ; User SystemVerilog HDL File  ; C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/btn_debounced_pulse.sv     ;         ;
 ; cursor_4x4.sv                    ; yes             ; User SystemVerilog HDL File  ; C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/cursor_4x4.sv              ;         ;
 ; score_manager_two.sv             ; yes             ; User SystemVerilog HDL File  ; C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/score_manager_two.sv       ;         ;
-; select_pulse.sv                  ; yes             ; User SystemVerilog HDL File  ; C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/select_pulse.sv            ;         ;
 ; selection_manager.sv             ; yes             ; User SystemVerilog HDL File  ; C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/selection_manager.sv       ;         ;
 ; pair_compare.sv                  ; yes             ; User SystemVerilog HDL File  ; C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/pair_compare.sv            ;         ;
 ; delay_timer.sv                   ; yes             ; User SystemVerilog HDL File  ; C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/delay_timer.sv             ;         ;
 ; auto_picker.sv                   ; yes             ; User SystemVerilog HDL File  ; C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/auto_picker.sv             ;         ;
+; winner_logic.sv                  ; yes             ; User SystemVerilog HDL File  ; C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/winner_logic.sv            ;         ;
+; switch_debounced.sv              ; yes             ; User SystemVerilog HDL File  ; C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/switch_debounced.sv        ;         ;
 ; lpm_divide.tdf                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_divide.tdf                                   ;         ;
 ; abs_divider.inc                  ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/abs_divider.inc                                  ;         ;
 ; sign_div_unsign.inc              ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sign_div_unsign.inc                              ;         ;
@@ -226,6 +235,15 @@ https://fpgasoftware.intel.com/eula.
 ; db/sign_div_unsign_nlh.tdf       ; yes             ; Auto-Generated Megafunction  ; C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/db/sign_div_unsign_nlh.tdf ;         ;
 ; db/alt_u_div_kve.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/db/alt_u_div_kve.tdf       ;         ;
 ; db/lpm_divide_hbm.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/db/lpm_divide_hbm.tdf      ;         ;
+; db/lpm_divide_apo.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/db/lpm_divide_apo.tdf      ;         ;
+; db/abs_divider_jbg.tdf           ; yes             ; Auto-Generated Megafunction  ; C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/db/abs_divider_jbg.tdf     ;         ;
+; db/alt_u_div_nve.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/db/alt_u_div_nve.tdf       ;         ;
+; db/lpm_abs_jn9.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/db/lpm_abs_jn9.tdf         ;         ;
+; db/lpm_abs_4p9.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/db/lpm_abs_4p9.tdf         ;         ;
+; db/lpm_divide_cpo.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/db/lpm_divide_cpo.tdf      ;         ;
+; db/abs_divider_lbg.tdf           ; yes             ; Auto-Generated Megafunction  ; C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/db/abs_divider_lbg.tdf     ;         ;
+; db/alt_u_div_qve.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/db/alt_u_div_qve.tdf       ;         ;
+; db/lpm_abs_ln9.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/db/lpm_abs_ln9.tdf         ;         ;
 ; db/lpm_divide_a2m.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/db/lpm_divide_a2m.tdf      ;         ;
 ; db/sign_div_unsign_dkh.tdf       ; yes             ; Auto-Generated Megafunction  ; C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/db/sign_div_unsign_dkh.tdf ;         ;
 ; db/alt_u_div_0te.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/db/alt_u_div_0te.tdf       ;         ;
@@ -237,78 +255,100 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimate of Logic utilization (ALMs needed) ; 779       ;
+; Estimate of Logic utilization (ALMs needed) ; 1397      ;
 ;                                             ;           ;
-; Combinational ALUT usage for logic          ; 1342      ;
-;     -- 7 input functions                    ; 12        ;
-;     -- 6 input functions                    ; 200       ;
-;     -- 5 input functions                    ; 156       ;
-;     -- 4 input functions                    ; 275       ;
-;     -- <=3 input functions                  ; 699       ;
+; Combinational ALUT usage for logic          ; 2545      ;
+;     -- 7 input functions                    ; 13        ;
+;     -- 6 input functions                    ; 232       ;
+;     -- 5 input functions                    ; 226       ;
+;     -- 4 input functions                    ; 513       ;
+;     -- <=3 input functions                  ; 1561      ;
 ;                                             ;           ;
-; Dedicated logic registers                   ; 353       ;
+; Dedicated logic registers                   ; 424       ;
 ;                                             ;           ;
 ; I/O pins                                    ; 74        ;
 ;                                             ;           ;
 ; Total DSP Blocks                            ; 4         ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 333       ;
-; Total fan-out                               ; 6513      ;
-; Average fan-out                             ; 3.53      ;
+; Maximum fan-out                             ; 404       ;
+; Total fan-out                               ; 10321     ;
+; Average fan-out                             ; 3.31      ;
 +---------------------------------------------+-----------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                     ;
-+-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------+-----------------------+--------------+
-; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                         ; Entity Name           ; Library Name ;
-+-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------+-----------------------+--------------+
-; |vga                                      ; 1342 (5)            ; 353 (0)                   ; 0                 ; 4          ; 74   ; 0            ; |vga                                                                                                                        ; vga                   ; work         ;
-;    |auto_picker:u_autopick|               ; 60 (31)             ; 31 (15)                   ; 0                 ; 0          ; 0    ; 0            ; |vga|auto_picker:u_autopick                                                                                                 ; auto_picker           ; work         ;
-;       |random:u_rng|                      ; 29 (29)             ; 16 (16)                   ; 0                 ; 0          ; 0    ; 0            ; |vga|auto_picker:u_autopick|random:u_rng                                                                                    ; random                ; work         ;
-;    |btn_debounced_pulse:db_down|          ; 30 (30)             ; 26 (26)                   ; 0                 ; 0          ; 0    ; 0            ; |vga|btn_debounced_pulse:db_down                                                                                            ; btn_debounced_pulse   ; work         ;
-;    |btn_debounced_pulse:db_left|          ; 10 (10)             ; 9 (9)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|btn_debounced_pulse:db_left                                                                                            ; btn_debounced_pulse   ; work         ;
-;    |btn_debounced_pulse:db_right|         ; 10 (10)             ; 9 (9)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|btn_debounced_pulse:db_right                                                                                           ; btn_debounced_pulse   ; work         ;
-;    |btn_debounced_pulse:db_up|            ; 10 (10)             ; 9 (9)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|btn_debounced_pulse:db_up                                                                                              ; btn_debounced_pulse   ; work         ;
-;    |controladora_FSM:fsm|                 ; 18 (18)             ; 11 (11)                   ; 0                 ; 0          ; 0    ; 0            ; |vga|controladora_FSM:fsm                                                                                                   ; controladora_FSM      ; work         ;
-;    |cursor_4x4:u_cursor|                  ; 6 (6)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|cursor_4x4:u_cursor                                                                                                    ; cursor_4x4            ; work         ;
-;    |delay_timer:u_delay|                  ; 41 (41)             ; 34 (34)                   ; 0                 ; 0          ; 0    ; 0            ; |vga|delay_timer:u_delay                                                                                                    ; delay_timer           ; work         ;
-;    |pair_compare:u_cmp|                   ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|pair_compare:u_cmp                                                                                                     ; pair_compare          ; work         ;
-;    |pll:vgapll|                           ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|pll:vgapll                                                                                                             ; pll                   ; work         ;
-;    |score_manager_two:u_scores|           ; 10 (10)             ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|score_manager_two:u_scores                                                                                             ; score_manager_two     ; work         ;
-;    |select_pulse:u_selpulse|              ; 54 (54)             ; 45 (45)                   ; 0                 ; 0          ; 0    ; 0            ; |vga|select_pulse:u_selpulse                                                                                                ; select_pulse          ; work         ;
-;    |selection_manager:u_selman|           ; 97 (97)             ; 44 (44)                   ; 0                 ; 0          ; 0    ; 0            ; |vga|selection_manager:u_selman                                                                                             ; selection_manager     ; work         ;
-;    |seven_segment_display:disp_p0|        ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|seven_segment_display:disp_p0                                                                                          ; seven_segment_display ; work         ;
-;    |seven_segment_display:disp_p1|        ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|seven_segment_display:disp_p1                                                                                          ; seven_segment_display ; work         ;
-;    |shuffle:shh|                          ; 251 (149)           ; 68 (60)                   ; 0                 ; 0          ; 0    ; 0            ; |vga|shuffle:shh                                                                                                            ; shuffle               ; work         ;
-;       |lpm_divide:Mod0|                   ; 77 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|shuffle:shh|lpm_divide:Mod0                                                                                            ; lpm_divide            ; work         ;
-;          |lpm_divide_a2m:auto_generated|  ; 77 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|shuffle:shh|lpm_divide:Mod0|lpm_divide_a2m:auto_generated                                                              ; lpm_divide_a2m        ; work         ;
-;             |sign_div_unsign_dkh:divider| ; 77 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|shuffle:shh|lpm_divide:Mod0|lpm_divide_a2m:auto_generated|sign_div_unsign_dkh:divider                                  ; sign_div_unsign_dkh   ; work         ;
-;                |alt_u_div_0te:divider|    ; 77 (77)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|shuffle:shh|lpm_divide:Mod0|lpm_divide_a2m:auto_generated|sign_div_unsign_dkh:divider|alt_u_div_0te:divider            ; alt_u_div_0te         ; work         ;
-;       |random:rng|                        ; 25 (25)             ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|shuffle:shh|random:rng                                                                                                 ; random                ; work         ;
-;    |timer15_7seg:u_turn_timer|            ; 51 (35)             ; 34 (27)                   ; 0                 ; 0          ; 0    ; 0            ; |vga|timer15_7seg:u_turn_timer                                                                                              ; timer15_7seg          ; work         ;
-;       |seven_segment_display:u7_ones|     ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|timer15_7seg:u_turn_timer|seven_segment_display:u7_ones                                                                ; seven_segment_display ; work         ;
-;       |time_counter:u_time|               ; 9 (9)               ; 7 (7)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|timer15_7seg:u_turn_timer|time_counter:u_time                                                                          ; time_counter          ; work         ;
-;    |vgaController:vgaCont|                ; 29 (29)             ; 20 (20)                   ; 0                 ; 0          ; 0    ; 0            ; |vga|vgaController:vgaCont                                                                                                  ; vgaController         ; work         ;
-;    |videoGen:videoGen_inst|               ; 643 (399)           ; 0 (0)                     ; 0                 ; 4          ; 0    ; 0            ; |vga|videoGen:videoGen_inst                                                                                                 ; videoGen              ; work         ;
-;       |lpm_divide:Div0|                   ; 57 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|videoGen:videoGen_inst|lpm_divide:Div0                                                                                 ; lpm_divide            ; work         ;
-;          |lpm_divide_hbm:auto_generated|  ; 57 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|videoGen:videoGen_inst|lpm_divide:Div0|lpm_divide_hbm:auto_generated                                                   ; lpm_divide_hbm        ; work         ;
-;             |sign_div_unsign_nlh:divider| ; 57 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|videoGen:videoGen_inst|lpm_divide:Div0|lpm_divide_hbm:auto_generated|sign_div_unsign_nlh:divider                       ; sign_div_unsign_nlh   ; work         ;
-;                |alt_u_div_kve:divider|    ; 57 (57)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|videoGen:videoGen_inst|lpm_divide:Div0|lpm_divide_hbm:auto_generated|sign_div_unsign_nlh:divider|alt_u_div_kve:divider ; alt_u_div_kve         ; work         ;
-;       |lpm_divide:Div1|                   ; 57 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|videoGen:videoGen_inst|lpm_divide:Div1                                                                                 ; lpm_divide            ; work         ;
-;          |lpm_divide_hbm:auto_generated|  ; 57 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|videoGen:videoGen_inst|lpm_divide:Div1|lpm_divide_hbm:auto_generated                                                   ; lpm_divide_hbm        ; work         ;
-;             |sign_div_unsign_nlh:divider| ; 57 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|videoGen:videoGen_inst|lpm_divide:Div1|lpm_divide_hbm:auto_generated|sign_div_unsign_nlh:divider                       ; sign_div_unsign_nlh   ; work         ;
-;                |alt_u_div_kve:divider|    ; 57 (57)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|videoGen:videoGen_inst|lpm_divide:Div1|lpm_divide_hbm:auto_generated|sign_div_unsign_nlh:divider|alt_u_div_kve:divider ; alt_u_div_kve         ; work         ;
-;       |lpm_divide:Mod0|                   ; 64 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|videoGen:videoGen_inst|lpm_divide:Mod0                                                                                 ; lpm_divide            ; work         ;
-;          |lpm_divide_k3m:auto_generated|  ; 64 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|videoGen:videoGen_inst|lpm_divide:Mod0|lpm_divide_k3m:auto_generated                                                   ; lpm_divide_k3m        ; work         ;
-;             |sign_div_unsign_nlh:divider| ; 64 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|videoGen:videoGen_inst|lpm_divide:Mod0|lpm_divide_k3m:auto_generated|sign_div_unsign_nlh:divider                       ; sign_div_unsign_nlh   ; work         ;
-;                |alt_u_div_kve:divider|    ; 64 (64)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|videoGen:videoGen_inst|lpm_divide:Mod0|lpm_divide_k3m:auto_generated|sign_div_unsign_nlh:divider|alt_u_div_kve:divider ; alt_u_div_kve         ; work         ;
-;       |lpm_divide:Mod1|                   ; 66 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|videoGen:videoGen_inst|lpm_divide:Mod1                                                                                 ; lpm_divide            ; work         ;
-;          |lpm_divide_k3m:auto_generated|  ; 66 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|videoGen:videoGen_inst|lpm_divide:Mod1|lpm_divide_k3m:auto_generated                                                   ; lpm_divide_k3m        ; work         ;
-;             |sign_div_unsign_nlh:divider| ; 66 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|videoGen:videoGen_inst|lpm_divide:Mod1|lpm_divide_k3m:auto_generated|sign_div_unsign_nlh:divider                       ; sign_div_unsign_nlh   ; work         ;
-;                |alt_u_div_kve:divider|    ; 66 (66)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|videoGen:videoGen_inst|lpm_divide:Mod1|lpm_divide_k3m:auto_generated|sign_div_unsign_nlh:divider|alt_u_div_kve:divider ; alt_u_div_kve         ; work         ;
-+-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------+-----------------------+--------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                        ;
++-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------+-----------------------+--------------+
+; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                            ; Entity Name           ; Library Name ;
++-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------+-----------------------+--------------+
+; |vga                                      ; 2545 (5)            ; 424 (0)                   ; 0                 ; 4          ; 74   ; 0            ; |vga                                                                                                                           ; vga                   ; work         ;
+;    |auto_picker:u_autopick|               ; 122 (94)            ; 78 (62)                   ; 0                 ; 0          ; 0    ; 0            ; |vga|auto_picker:u_autopick                                                                                                    ; auto_picker           ; work         ;
+;       |random:u_rng|                      ; 28 (28)             ; 16 (16)                   ; 0                 ; 0          ; 0    ; 0            ; |vga|auto_picker:u_autopick|random:u_rng                                                                                       ; random                ; work         ;
+;    |btn_debounced_pulse:db_down|          ; 30 (30)             ; 26 (26)                   ; 0                 ; 0          ; 0    ; 0            ; |vga|btn_debounced_pulse:db_down                                                                                               ; btn_debounced_pulse   ; work         ;
+;    |btn_debounced_pulse:db_left|          ; 10 (10)             ; 9 (9)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|btn_debounced_pulse:db_left                                                                                               ; btn_debounced_pulse   ; work         ;
+;    |btn_debounced_pulse:db_right|         ; 10 (10)             ; 9 (9)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|btn_debounced_pulse:db_right                                                                                              ; btn_debounced_pulse   ; work         ;
+;    |btn_debounced_pulse:db_up|            ; 10 (10)             ; 9 (9)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|btn_debounced_pulse:db_up                                                                                                 ; btn_debounced_pulse   ; work         ;
+;    |controladora_FSM:fsm|                 ; 20 (20)             ; 12 (12)                   ; 0                 ; 0          ; 0    ; 0            ; |vga|controladora_FSM:fsm                                                                                                      ; controladora_FSM      ; work         ;
+;    |cursor_4x4:u_cursor|                  ; 6 (6)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|cursor_4x4:u_cursor                                                                                                       ; cursor_4x4            ; work         ;
+;    |delay_timer:u_delay|                  ; 35 (35)             ; 29 (29)                   ; 0                 ; 0          ; 0    ; 0            ; |vga|delay_timer:u_delay                                                                                                       ; delay_timer           ; work         ;
+;    |pair_compare:u_cmp|                   ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|pair_compare:u_cmp                                                                                                        ; pair_compare          ; work         ;
+;    |pll:vgapll|                           ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|pll:vgapll                                                                                                                ; pll                   ; work         ;
+;    |score_manager_two:u_scores|           ; 10 (10)             ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|score_manager_two:u_scores                                                                                                ; score_manager_two     ; work         ;
+;    |selection_manager:u_selman|           ; 116 (116)           ; 45 (45)                   ; 0                 ; 0          ; 0    ; 0            ; |vga|selection_manager:u_selman                                                                                                ; selection_manager     ; work         ;
+;    |seven_segment_display:disp_p0|        ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|seven_segment_display:disp_p0                                                                                             ; seven_segment_display ; work         ;
+;    |seven_segment_display:disp_p1|        ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|seven_segment_display:disp_p1                                                                                             ; seven_segment_display ; work         ;
+;    |shuffle:shh|                          ; 250 (149)           ; 68 (60)                   ; 0                 ; 0          ; 0    ; 0            ; |vga|shuffle:shh                                                                                                               ; shuffle               ; work         ;
+;       |lpm_divide:Mod0|                   ; 77 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|shuffle:shh|lpm_divide:Mod0                                                                                               ; lpm_divide            ; work         ;
+;          |lpm_divide_a2m:auto_generated|  ; 77 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|shuffle:shh|lpm_divide:Mod0|lpm_divide_a2m:auto_generated                                                                 ; lpm_divide_a2m        ; work         ;
+;             |sign_div_unsign_dkh:divider| ; 77 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|shuffle:shh|lpm_divide:Mod0|lpm_divide_a2m:auto_generated|sign_div_unsign_dkh:divider                                     ; sign_div_unsign_dkh   ; work         ;
+;                |alt_u_div_0te:divider|    ; 77 (77)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|shuffle:shh|lpm_divide:Mod0|lpm_divide_a2m:auto_generated|sign_div_unsign_dkh:divider|alt_u_div_0te:divider               ; alt_u_div_0te         ; work         ;
+;       |random:rng|                        ; 24 (24)             ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|shuffle:shh|random:rng                                                                                                    ; random                ; work         ;
+;    |switch_debounced:u_flip|              ; 61 (61)             ; 48 (48)                   ; 0                 ; 0          ; 0    ; 0            ; |vga|switch_debounced:u_flip                                                                                                   ; switch_debounced      ; work         ;
+;    |switch_debounced:u_rst|               ; 30 (30)             ; 24 (24)                   ; 0                 ; 0          ; 0    ; 0            ; |vga|switch_debounced:u_rst                                                                                                    ; switch_debounced      ; work         ;
+;    |timer15_7seg:u_turn_timer|            ; 51 (35)             ; 34 (27)                   ; 0                 ; 0          ; 0    ; 0            ; |vga|timer15_7seg:u_turn_timer                                                                                                 ; timer15_7seg          ; work         ;
+;       |seven_segment_display:u7_ones|     ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|timer15_7seg:u_turn_timer|seven_segment_display:u7_ones                                                                   ; seven_segment_display ; work         ;
+;       |time_counter:u_time|               ; 9 (9)               ; 7 (7)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|timer15_7seg:u_turn_timer|time_counter:u_time                                                                             ; time_counter          ; work         ;
+;    |vgaController:vgaCont|                ; 29 (29)             ; 20 (20)                   ; 0                 ; 0          ; 0    ; 0            ; |vga|vgaController:vgaCont                                                                                                     ; vgaController         ; work         ;
+;    |videoGen:videoGen_inst|               ; 1729 (613)          ; 0 (0)                     ; 0                 ; 4          ; 0    ; 0            ; |vga|videoGen:videoGen_inst                                                                                                    ; videoGen              ; work         ;
+;       |lpm_divide:Div0|                   ; 57 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|videoGen:videoGen_inst|lpm_divide:Div0                                                                                    ; lpm_divide            ; work         ;
+;          |lpm_divide_hbm:auto_generated|  ; 57 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|videoGen:videoGen_inst|lpm_divide:Div0|lpm_divide_hbm:auto_generated                                                      ; lpm_divide_hbm        ; work         ;
+;             |sign_div_unsign_nlh:divider| ; 57 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|videoGen:videoGen_inst|lpm_divide:Div0|lpm_divide_hbm:auto_generated|sign_div_unsign_nlh:divider                          ; sign_div_unsign_nlh   ; work         ;
+;                |alt_u_div_kve:divider|    ; 57 (57)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|videoGen:videoGen_inst|lpm_divide:Div0|lpm_divide_hbm:auto_generated|sign_div_unsign_nlh:divider|alt_u_div_kve:divider    ; alt_u_div_kve         ; work         ;
+;       |lpm_divide:Div1|                   ; 57 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|videoGen:videoGen_inst|lpm_divide:Div1                                                                                    ; lpm_divide            ; work         ;
+;          |lpm_divide_hbm:auto_generated|  ; 57 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|videoGen:videoGen_inst|lpm_divide:Div1|lpm_divide_hbm:auto_generated                                                      ; lpm_divide_hbm        ; work         ;
+;             |sign_div_unsign_nlh:divider| ; 57 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|videoGen:videoGen_inst|lpm_divide:Div1|lpm_divide_hbm:auto_generated|sign_div_unsign_nlh:divider                          ; sign_div_unsign_nlh   ; work         ;
+;                |alt_u_div_kve:divider|    ; 57 (57)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|videoGen:videoGen_inst|lpm_divide:Div1|lpm_divide_hbm:auto_generated|sign_div_unsign_nlh:divider|alt_u_div_kve:divider    ; alt_u_div_kve         ; work         ;
+;       |lpm_divide:Div2_rtl_0|             ; 167 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|videoGen:videoGen_inst|lpm_divide:Div2_rtl_0                                                                              ; lpm_divide            ; work         ;
+;          |lpm_divide_cpo:auto_generated|  ; 167 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|videoGen:videoGen_inst|lpm_divide:Div2_rtl_0|lpm_divide_cpo:auto_generated                                                ; lpm_divide_cpo        ; work         ;
+;             |abs_divider_lbg:divider|     ; 167 (4)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|videoGen:videoGen_inst|lpm_divide:Div2_rtl_0|lpm_divide_cpo:auto_generated|abs_divider_lbg:divider                        ; abs_divider_lbg       ; work         ;
+;                |alt_u_div_qve:divider|    ; 151 (151)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|videoGen:videoGen_inst|lpm_divide:Div2_rtl_0|lpm_divide_cpo:auto_generated|abs_divider_lbg:divider|alt_u_div_qve:divider  ; alt_u_div_qve         ; work         ;
+;                |lpm_abs_4p9:my_abs_num|   ; 12 (12)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|videoGen:videoGen_inst|lpm_divide:Div2_rtl_0|lpm_divide_cpo:auto_generated|abs_divider_lbg:divider|lpm_abs_4p9:my_abs_num ; lpm_abs_4p9           ; work         ;
+;       |lpm_divide:Div2|                   ; 187 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|videoGen:videoGen_inst|lpm_divide:Div2                                                                                    ; lpm_divide            ; work         ;
+;          |lpm_divide_cpo:auto_generated|  ; 187 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|videoGen:videoGen_inst|lpm_divide:Div2|lpm_divide_cpo:auto_generated                                                      ; lpm_divide_cpo        ; work         ;
+;             |abs_divider_lbg:divider|     ; 187 (24)            ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|videoGen:videoGen_inst|lpm_divide:Div2|lpm_divide_cpo:auto_generated|abs_divider_lbg:divider                              ; abs_divider_lbg       ; work         ;
+;                |alt_u_div_qve:divider|    ; 151 (151)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|videoGen:videoGen_inst|lpm_divide:Div2|lpm_divide_cpo:auto_generated|abs_divider_lbg:divider|alt_u_div_qve:divider        ; alt_u_div_qve         ; work         ;
+;                |lpm_abs_4p9:my_abs_num|   ; 12 (12)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|videoGen:videoGen_inst|lpm_divide:Div2|lpm_divide_cpo:auto_generated|abs_divider_lbg:divider|lpm_abs_4p9:my_abs_num       ; lpm_abs_4p9           ; work         ;
+;       |lpm_divide:Div3|                   ; 382 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|videoGen:videoGen_inst|lpm_divide:Div3                                                                                    ; lpm_divide            ; work         ;
+;          |lpm_divide_apo:auto_generated|  ; 382 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|videoGen:videoGen_inst|lpm_divide:Div3|lpm_divide_apo:auto_generated                                                      ; lpm_divide_apo        ; work         ;
+;             |abs_divider_jbg:divider|     ; 382 (2)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|videoGen:videoGen_inst|lpm_divide:Div3|lpm_divide_apo:auto_generated|abs_divider_jbg:divider                              ; abs_divider_jbg       ; work         ;
+;                |alt_u_div_nve:divider|    ; 348 (348)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|videoGen:videoGen_inst|lpm_divide:Div3|lpm_divide_apo:auto_generated|abs_divider_jbg:divider|alt_u_div_nve:divider        ; alt_u_div_nve         ; work         ;
+;                |lpm_abs_4p9:my_abs_num|   ; 32 (32)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|videoGen:videoGen_inst|lpm_divide:Div3|lpm_divide_apo:auto_generated|abs_divider_jbg:divider|lpm_abs_4p9:my_abs_num       ; lpm_abs_4p9           ; work         ;
+;       |lpm_divide:Div4|                   ; 136 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|videoGen:videoGen_inst|lpm_divide:Div4                                                                                    ; lpm_divide            ; work         ;
+;          |lpm_divide_apo:auto_generated|  ; 136 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|videoGen:videoGen_inst|lpm_divide:Div4|lpm_divide_apo:auto_generated                                                      ; lpm_divide_apo        ; work         ;
+;             |abs_divider_jbg:divider|     ; 136 (14)            ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|videoGen:videoGen_inst|lpm_divide:Div4|lpm_divide_apo:auto_generated|abs_divider_jbg:divider                              ; abs_divider_jbg       ; work         ;
+;                |alt_u_div_nve:divider|    ; 110 (110)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|videoGen:videoGen_inst|lpm_divide:Div4|lpm_divide_apo:auto_generated|abs_divider_jbg:divider|alt_u_div_nve:divider        ; alt_u_div_nve         ; work         ;
+;                |lpm_abs_4p9:my_abs_num|   ; 12 (12)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|videoGen:videoGen_inst|lpm_divide:Div4|lpm_divide_apo:auto_generated|abs_divider_jbg:divider|lpm_abs_4p9:my_abs_num       ; lpm_abs_4p9           ; work         ;
+;       |lpm_divide:Mod0|                   ; 64 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|videoGen:videoGen_inst|lpm_divide:Mod0                                                                                    ; lpm_divide            ; work         ;
+;          |lpm_divide_k3m:auto_generated|  ; 64 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|videoGen:videoGen_inst|lpm_divide:Mod0|lpm_divide_k3m:auto_generated                                                      ; lpm_divide_k3m        ; work         ;
+;             |sign_div_unsign_nlh:divider| ; 64 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|videoGen:videoGen_inst|lpm_divide:Mod0|lpm_divide_k3m:auto_generated|sign_div_unsign_nlh:divider                          ; sign_div_unsign_nlh   ; work         ;
+;                |alt_u_div_kve:divider|    ; 64 (64)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|videoGen:videoGen_inst|lpm_divide:Mod0|lpm_divide_k3m:auto_generated|sign_div_unsign_nlh:divider|alt_u_div_kve:divider    ; alt_u_div_kve         ; work         ;
+;       |lpm_divide:Mod1|                   ; 66 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|videoGen:videoGen_inst|lpm_divide:Mod1                                                                                    ; lpm_divide            ; work         ;
+;          |lpm_divide_k3m:auto_generated|  ; 66 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|videoGen:videoGen_inst|lpm_divide:Mod1|lpm_divide_k3m:auto_generated                                                      ; lpm_divide_k3m        ; work         ;
+;             |sign_div_unsign_nlh:divider| ; 66 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|videoGen:videoGen_inst|lpm_divide:Mod1|lpm_divide_k3m:auto_generated|sign_div_unsign_nlh:divider                          ; sign_div_unsign_nlh   ; work         ;
+;                |alt_u_div_kve:divider|    ; 66 (66)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|videoGen:videoGen_inst|lpm_divide:Mod1|lpm_divide_k3m:auto_generated|sign_div_unsign_nlh:divider|alt_u_div_kve:divider    ; alt_u_div_kve         ; work         ;
+;    |winner_logic:u_winner|                ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|winner_logic:u_winner                                                                                                     ; winner_logic          ; work         ;
++-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------+-----------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -346,15 +386,16 @@ Encoding Type:  One-Hot
 
 
 Encoding Type:  One-Hot
-+------------------------------------------------+
-; State Machine - |vga|auto_picker:u_autopick|ps ;
-+-----------+---------+---------+----------------+
-; Name      ; ps.IDLE ; ps.FIRE ; ps.SEARCH      ;
-+-----------+---------+---------+----------------+
-; ps.IDLE   ; 0       ; 0       ; 0              ;
-; ps.SEARCH ; 1       ; 0       ; 1              ;
-; ps.FIRE   ; 1       ; 1       ; 0              ;
-+-----------+---------+---------+----------------+
++-------------------------------------------------+
+; State Machine - |vga|auto_picker:u_autopick|ps  ;
++---------+---------+---------+---------+---------+
+; Name    ; ps.WAIT ; ps.PICK ; ps.SCAN ; ps.IDLE ;
++---------+---------+---------+---------+---------+
+; ps.IDLE ; 0       ; 0       ; 0       ; 0       ;
+; ps.SCAN ; 0       ; 0       ; 1       ; 1       ;
+; ps.PICK ; 0       ; 1       ; 0       ; 1       ;
+; ps.WAIT ; 1       ; 0       ; 0       ; 1       ;
++---------+---------+---------+---------+---------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------+
@@ -436,9 +477,9 @@ Encoding Type:  One-Hot
 ; controladora_FSM:fsm|state~5                            ; Lost fanout                                                      ;
 ; controladora_FSM:fsm|state~6                            ; Lost fanout                                                      ;
 ; controladora_FSM:fsm|state~7                            ; Lost fanout                                                      ;
-; controladora_FSM:fsm|state.GAME_OVER                    ; Stuck at GND due to stuck port data_in                           ;
+; auto_picker:u_autopick|ps~4                             ; Lost fanout                                                      ;
+; auto_picker:u_autopick|ps~5                             ; Lost fanout                                                      ;
 ; auto_picker:u_autopick|random:u_rng|free_counter[8..15] ; Lost fanout                                                      ;
-; auto_picker:u_autopick|probe[4]                         ; Stuck at GND due to stuck port data_in                           ;
 ; Total Number of Removed Registers = 85                  ;                                                                  ;
 +---------------------------------------------------------+------------------------------------------------------------------+
 
@@ -448,12 +489,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 353   ;
-; Number of registers using Synchronous Clear  ; 192   ;
+; Total registers                              ; 424   ;
+; Number of registers using Synchronous Clear  ; 257   ;
 ; Number of registers using Synchronous Load   ; 42    ;
-; Number of registers using Asynchronous Clear ; 280   ;
+; Number of registers using Asynchronous Clear ; 327   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 171   ;
+; Number of registers using Clock Enable       ; 149   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -463,33 +504,32 @@ Encoding Type:  One-Hot
 +----------------------------------------------------------+---------+
 ; Inverted Register                                        ; Fan out ;
 +----------------------------------------------------------+---------+
-; timer15_7seg:u_turn_timer|time_counter:u_time|seconds[3] ; 8       ;
-; timer15_7seg:u_turn_timer|time_counter:u_time|seconds[2] ; 9       ;
+; timer15_7seg:u_turn_timer|time_counter:u_time|seconds[3] ; 6       ;
+; timer15_7seg:u_turn_timer|time_counter:u_time|seconds[2] ; 8       ;
 ; timer15_7seg:u_turn_timer|time_counter:u_time|seconds[1] ; 10      ;
 ; timer15_7seg:u_turn_timer|time_counter:u_time|seconds[0] ; 14      ;
-; btn_debounced_pulse:db_right|debounced_d                 ; 2       ;
-; btn_debounced_pulse:db_right|debounced                   ; 4       ;
-; btn_debounced_pulse:db_left|debounced_d                  ; 1       ;
-; btn_debounced_pulse:db_left|debounced                    ; 3       ;
 ; btn_debounced_pulse:db_down|debounced_d                  ; 2       ;
 ; btn_debounced_pulse:db_down|debounced                    ; 4       ;
 ; btn_debounced_pulse:db_up|debounced_d                    ; 1       ;
 ; btn_debounced_pulse:db_up|debounced                      ; 3       ;
-; btn_debounced_pulse:db_right|b_sync1                     ; 7       ;
-; btn_debounced_pulse:db_right|last_sampled                ; 7       ;
-; btn_debounced_pulse:db_left|b_sync1                      ; 7       ;
-; btn_debounced_pulse:db_left|last_sampled                 ; 7       ;
+; btn_debounced_pulse:db_right|debounced_d                 ; 2       ;
+; btn_debounced_pulse:db_right|debounced                   ; 4       ;
+; btn_debounced_pulse:db_left|debounced_d                  ; 1       ;
+; btn_debounced_pulse:db_left|debounced                    ; 3       ;
 ; btn_debounced_pulse:db_down|b_sync1                      ; 7       ;
 ; btn_debounced_pulse:db_down|last_sampled                 ; 7       ;
 ; btn_debounced_pulse:db_up|b_sync1                        ; 7       ;
 ; btn_debounced_pulse:db_up|last_sampled                   ; 7       ;
-; select_pulse:u_selpulse|lo_stable                        ; 1       ;
-; auto_picker:u_autopick|random:u_rng|free_counter[0]      ; 6       ;
-; btn_debounced_pulse:db_right|b_sync0                     ; 1       ;
-; btn_debounced_pulse:db_left|b_sync0                      ; 1       ;
+; btn_debounced_pulse:db_right|b_sync1                     ; 7       ;
+; btn_debounced_pulse:db_right|last_sampled                ; 7       ;
+; btn_debounced_pulse:db_left|b_sync1                      ; 7       ;
+; btn_debounced_pulse:db_left|last_sampled                 ; 7       ;
 ; btn_debounced_pulse:db_down|b_sync0                      ; 1       ;
 ; btn_debounced_pulse:db_up|b_sync0                        ; 1       ;
-; Total number of inverted registers = 26                  ;         ;
+; btn_debounced_pulse:db_right|b_sync0                     ; 1       ;
+; btn_debounced_pulse:db_left|b_sync0                      ; 1       ;
+; auto_picker:u_autopick|random:u_rng|free_counter[0]      ; 6       ;
+; Total number of inverted registers = 25                  ;         ;
 +----------------------------------------------------------+---------+
 
 
@@ -498,24 +538,28 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                   ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------+
-; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |vga|delay_timer:u_delay|cnt[8]              ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |vga|btn_debounced_pulse:db_up|stabcnt[0]    ;
+; 3:1                ; 22 bits   ; 44 LEs        ; 0 LEs                ; 44 LEs                 ; Yes        ; |vga|auto_picker:u_autopick|wait_cnt[10]     ;
+; 3:1                ; 21 bits   ; 42 LEs        ; 0 LEs                ; 42 LEs                 ; Yes        ; |vga|auto_picker:u_autopick|step_cnt[17]     ;
+; 3:1                ; 26 bits   ; 52 LEs        ; 0 LEs                ; 52 LEs                 ; Yes        ; |vga|delay_timer:u_delay|cnt[6]              ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |vga|btn_debounced_pulse:db_up|stabcnt[3]    ;
 ; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |vga|btn_debounced_pulse:db_down|stabcnt[3]  ;
 ; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |vga|btn_debounced_pulse:db_left|stabcnt[0]  ;
 ; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |vga|btn_debounced_pulse:db_right|stabcnt[2] ;
-; 3:1                ; 19 bits   ; 38 LEs        ; 0 LEs                ; 38 LEs                 ; Yes        ; |vga|select_pulse:u_selpulse|cnt_hi[3]       ;
-; 3:1                ; 19 bits   ; 38 LEs        ; 0 LEs                ; 38 LEs                 ; Yes        ; |vga|select_pulse:u_selpulse|cnt_lo[3]       ;
+; 3:1                ; 22 bits   ; 44 LEs        ; 0 LEs                ; 44 LEs                 ; Yes        ; |vga|switch_debounced:u_flip|hold_cnt[5]     ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |vga|auto_picker:u_autopick|emitted[1]       ;
 ; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; Yes        ; |vga|shuffle:shh|j[2]                        ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |vga|score_manager_two:u_scores|score_p0[2]  ;
+; 4:1                ; 21 bits   ; 42 LEs        ; 0 LEs                ; 42 LEs                 ; Yes        ; |vga|switch_debounced:u_rst|cnt_db[14]       ;
+; 4:1                ; 20 bits   ; 40 LEs        ; 0 LEs                ; 40 LEs                 ; Yes        ; |vga|switch_debounced:u_flip|cnt_db[14]      ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |vga|score_manager_two:u_scores|score_p0[3]  ;
 ; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |vga|score_manager_two:u_scores|score_p1[3]  ;
-; 5:1                ; 3 bits    ; 9 LEs         ; 6 LEs                ; 3 LEs                  ; Yes        ; |vga|shuffle:shh|board[15][0]                ;
-; 5:1                ; 3 bits    ; 9 LEs         ; 6 LEs                ; 3 LEs                  ; Yes        ; |vga|shuffle:shh|board[14][0]                ;
+; 5:1                ; 3 bits    ; 9 LEs         ; 6 LEs                ; 3 LEs                  ; Yes        ; |vga|shuffle:shh|board[15][1]                ;
+; 5:1                ; 3 bits    ; 9 LEs         ; 6 LEs                ; 3 LEs                  ; Yes        ; |vga|shuffle:shh|board[14][1]                ;
 ; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |vga|shuffle:shh|board[13][1]                ;
-; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |vga|shuffle:shh|board[12][2]                ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |vga|shuffle:shh|board[12][1]                ;
 ; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |vga|shuffle:shh|board[11][0]                ;
 ; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |vga|shuffle:shh|board[10][0]                ;
-; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |vga|shuffle:shh|board[9][1]                 ;
-; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |vga|shuffle:shh|board[8][1]                 ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |vga|shuffle:shh|board[9][0]                 ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |vga|shuffle:shh|board[8][0]                 ;
 ; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |vga|shuffle:shh|board[7][1]                 ;
 ; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |vga|shuffle:shh|board[6][0]                 ;
 ; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |vga|shuffle:shh|board[5][2]                 ;
@@ -523,27 +567,40 @@ Encoding Type:  One-Hot
 ; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |vga|shuffle:shh|board[3][1]                 ;
 ; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |vga|shuffle:shh|board[2][1]                 ;
 ; 5:1                ; 3 bits    ; 9 LEs         ; 6 LEs                ; 3 LEs                  ; Yes        ; |vga|shuffle:shh|board[1][1]                 ;
-; 5:1                ; 3 bits    ; 9 LEs         ; 6 LEs                ; 3 LEs                  ; Yes        ; |vga|shuffle:shh|board[0][0]                 ;
-; 5:1                ; 7 bits    ; 21 LEs        ; 14 LEs               ; 7 LEs                  ; Yes        ; |vga|selection_manager:u_selman|sel_a[1]     ;
-; 5:1                ; 3 bits    ; 9 LEs         ; 6 LEs                ; 3 LEs                  ; Yes        ; |vga|selection_manager:u_selman|val_b[2]     ;
-; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |vga|auto_picker:u_autopick|emitted[0]       ;
-; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |vga|auto_picker:u_autopick|probe[3]         ;
+; 5:1                ; 3 bits    ; 9 LEs         ; 6 LEs                ; 3 LEs                  ; Yes        ; |vga|shuffle:shh|board[0][1]                 ;
+; 5:1                ; 7 bits    ; 21 LEs        ; 14 LEs               ; 7 LEs                  ; Yes        ; |vga|selection_manager:u_selman|val_a[2]     ;
+; 5:1                ; 3 bits    ; 9 LEs         ; 6 LEs                ; 3 LEs                  ; Yes        ; |vga|selection_manager:u_selman|val_b[0]     ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |vga|auto_picker:u_autopick|probe[0]         ;
 ; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |vga|cursor_4x4:u_cursor|sel_idx[3]          ;
-; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |vga|cursor_4x4:u_cursor|sel_col[1]          ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |vga|cursor_4x4:u_cursor|sel_col[0]          ;
 ; 7:1                ; 2 bits    ; 8 LEs         ; 6 LEs                ; 2 LEs                  ; Yes        ; |vga|selection_manager:u_selman|count[0]     ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |vga|videoGen:videoGen_inst|r[2]             ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |vga|auto_picker:u_autopick|ns               ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |vga|auto_picker:u_autopick|ps               ;
-; 16:1               ; 4 bits    ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; No         ; |vga|videoGen:videoGen_inst|Mux2             ;
-; 9:1                ; 7 bits    ; 42 LEs        ; 42 LEs               ; 0 LEs                  ; No         ; |vga|videoGen:videoGen_inst|g[4]             ;
-; 16:1               ; 5 bits    ; 50 LEs        ; 50 LEs               ; 0 LEs                  ; No         ; |vga|selection_manager:u_selman|Mux0         ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |vga|videoGen:videoGen_inst|r[1]             ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |vga|videoGen:videoGen_inst|b[7]             ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |vga|winner_logic:u_winner|winner_num[1]     ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |vga|videoGen:videoGen_inst|g[2]             ;
+; 16:1               ; 4 bits    ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; No         ; |vga|videoGen:videoGen_inst|Mux0             ;
+; 16:1               ; 5 bits    ; 50 LEs        ; 50 LEs               ; 0 LEs                  ; No         ; |vga|selection_manager:u_selman|Mux1         ;
 ; 16:1               ; 2 bits    ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; No         ; |vga|auto_picker:u_autopick|Mux0             ;
-; 16:1               ; 3 bits    ; 30 LEs        ; 30 LEs               ; 0 LEs                  ; No         ; |vga|shuffle:shh|Mux3                        ;
-; 16:1               ; 3 bits    ; 30 LEs        ; 30 LEs               ; 0 LEs                  ; No         ; |vga|shuffle:shh|Mux7                        ;
-; 10:1               ; 2 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |vga|videoGen:videoGen_inst|g[6]             ;
-; 13:1               ; 4 bits    ; 32 LEs        ; 20 LEs               ; 12 LEs                 ; No         ; |vga|controladora_FSM:fsm|Selector9          ;
+; 16:1               ; 3 bits    ; 30 LEs        ; 30 LEs               ; 0 LEs                  ; No         ; |vga|shuffle:shh|Mux1                        ;
+; 16:1               ; 3 bits    ; 30 LEs        ; 30 LEs               ; 0 LEs                  ; No         ; |vga|shuffle:shh|Mux5                        ;
+; 10:1               ; 7 bits    ; 42 LEs        ; 42 LEs               ; 0 LEs                  ; No         ; |vga|videoGen:videoGen_inst|g[4]             ;
+; 11:1               ; 2 bits    ; 14 LEs        ; 12 LEs               ; 2 LEs                  ; No         ; |vga|videoGen:videoGen_inst|g[3]             ;
+; 13:1               ; 4 bits    ; 32 LEs        ; 20 LEs               ; 12 LEs                 ; No         ; |vga|controladora_FSM:fsm|Selector4          ;
 ; 14:1               ; 2 bits    ; 18 LEs        ; 6 LEs                ; 12 LEs                 ; No         ; |vga|controladora_FSM:fsm|Selector7          ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------+
+
+
++---------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: switch_debounced:u_rst ;
++----------------+----------+-----------------------------------------+
+; Parameter Name ; Value    ; Type                                    ;
++----------------+----------+-----------------------------------------+
+; CLK_HZ         ; 50000000 ; Signed Integer                          ;
+; DEBOUNCE_MS    ; 30       ; Signed Integer                          ;
+; HOLD_MS        ; 80       ; Signed Integer                          ;
+; ACTIVE_HIGH    ; 1        ; Signed Integer                          ;
++----------------+----------+-----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +------------------------------------------------------------------+
@@ -558,13 +615,26 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +----------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: select_pulse:u_selpulse ;
+; Parameter Settings for User Entity Instance: switch_debounced:u_flip ;
 +----------------+----------+------------------------------------------+
 ; Parameter Name ; Value    ; Type                                     ;
 +----------------+----------+------------------------------------------+
 ; CLK_HZ         ; 50000000 ; Signed Integer                           ;
-; DEBOUNCE_MS    ; 8        ; Signed Integer                           ;
+; DEBOUNCE_MS    ; 20       ; Signed Integer                           ;
+; HOLD_MS        ; 80       ; Signed Integer                           ;
+; ACTIVE_HIGH    ; 1        ; Signed Integer                           ;
 +----------------+----------+------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: auto_picker:u_autopick ;
++----------------+---------+------------------------------------------+
+; Parameter Name ; Value   ; Type                                     ;
++----------------+---------+------------------------------------------+
+; STEP_CYCLES    ; 2000000 ; Signed Integer                           ;
+; WAIT_CYCLES    ; 3000000 ; Signed Integer                           ;
++----------------+---------+------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -671,6 +741,98 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++-----------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: videoGen:videoGen_inst|lpm_divide:Div4 ;
++------------------------+----------------+-----------------------------------------------+
+; Parameter Name         ; Value          ; Type                                          ;
++------------------------+----------------+-----------------------------------------------+
+; LPM_WIDTHN             ; 32             ; Untyped                                       ;
+; LPM_WIDTHD             ; 4              ; Untyped                                       ;
+; LPM_NREPRESENTATION    ; SIGNED         ; Untyped                                       ;
+; LPM_DREPRESENTATION    ; SIGNED         ; Untyped                                       ;
+; LPM_PIPELINE           ; 0              ; Untyped                                       ;
+; LPM_REMAINDERPOSITIVE  ; FALSE          ; Untyped                                       ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                       ;
+; CBXI_PARAMETER         ; lpm_divide_apo ; Untyped                                       ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                       ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                       ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                    ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                  ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                  ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                ;
++------------------------+----------------+-----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: videoGen:videoGen_inst|lpm_divide:Div2 ;
++------------------------+----------------+-----------------------------------------------+
+; Parameter Name         ; Value          ; Type                                          ;
++------------------------+----------------+-----------------------------------------------+
+; LPM_WIDTHN             ; 32             ; Untyped                                       ;
+; LPM_WIDTHD             ; 6              ; Untyped                                       ;
+; LPM_NREPRESENTATION    ; SIGNED         ; Untyped                                       ;
+; LPM_DREPRESENTATION    ; SIGNED         ; Untyped                                       ;
+; LPM_PIPELINE           ; 0              ; Untyped                                       ;
+; LPM_REMAINDERPOSITIVE  ; FALSE          ; Untyped                                       ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                       ;
+; CBXI_PARAMETER         ; lpm_divide_cpo ; Untyped                                       ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                       ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                       ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                    ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                  ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                  ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                ;
++------------------------+----------------+-----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: videoGen:videoGen_inst|lpm_divide:Div2_rtl_0 ;
++------------------------+----------------+-----------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                ;
++------------------------+----------------+-----------------------------------------------------+
+; LPM_WIDTHN             ; 32             ; Untyped                                             ;
+; LPM_WIDTHD             ; 6              ; Untyped                                             ;
+; LPM_NREPRESENTATION    ; SIGNED         ; Untyped                                             ;
+; LPM_DREPRESENTATION    ; SIGNED         ; Untyped                                             ;
+; LPM_PIPELINE           ; 0              ; Untyped                                             ;
+; LPM_REMAINDERPOSITIVE  ; FALSE          ; Untyped                                             ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                             ;
+; CBXI_PARAMETER         ; lpm_divide_cpo ; Untyped                                             ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                             ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                             ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                          ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                        ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                        ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                      ;
++------------------------+----------------+-----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: videoGen:videoGen_inst|lpm_divide:Div3 ;
++------------------------+----------------+-----------------------------------------------+
+; Parameter Name         ; Value          ; Type                                          ;
++------------------------+----------------+-----------------------------------------------+
+; LPM_WIDTHN             ; 32             ; Untyped                                       ;
+; LPM_WIDTHD             ; 4              ; Untyped                                       ;
+; LPM_NREPRESENTATION    ; SIGNED         ; Untyped                                       ;
+; LPM_DREPRESENTATION    ; SIGNED         ; Untyped                                       ;
+; LPM_PIPELINE           ; 0              ; Untyped                                       ;
+; LPM_REMAINDERPOSITIVE  ; FALSE          ; Untyped                                       ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                       ;
+; CBXI_PARAMETER         ; lpm_divide_apo ; Untyped                                       ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                       ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                       ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                    ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                  ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                  ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                ;
++------------------------+----------------+-----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +------------------------------------------------------------------------------+
 ; Parameter Settings for Inferred Entity Instance: shuffle:shh|lpm_divide:Mod0 ;
 +------------------------+----------------+------------------------------------+
@@ -734,15 +896,14 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------+-------+----------+------------------------------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "controladora_FSM:fsm"                                                                         ;
-+----------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port           ; Type   ; Severity ; Details                                                                             ;
-+----------------+--------+----------+-------------------------------------------------------------------------------------+
-; board_write    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; show_7seg      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; display_winner ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+----------------+--------+----------+-------------------------------------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "controladora_FSM:fsm"                                                                      ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port        ; Type   ; Severity ; Details                                                                             ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
+; board_write ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; show_7seg   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------+
@@ -767,6 +928,15 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
++-----------------------------------------------------+
+; Port Connectivity Checks: "switch_debounced:u_flip" ;
++-------+--------+----------+-------------------------+
+; Port  ; Type   ; Severity ; Details                 ;
++-------+--------+----------+-------------------------+
+; level ; Output ; Info     ; Explicitly unconnected  ;
++-------+--------+----------+-------------------------+
+
+
 +-------------------------------------------------+
 ; Port Connectivity Checks: "cursor_4x4:u_cursor" ;
 +--------+-------+----------+---------------------+
@@ -776,50 +946,62 @@ Note: In order to hide this table in the UI and the text report file, please set
 +--------+-------+----------+---------------------+
 
 
++------------------------------------------------------------+
+; Port Connectivity Checks: "switch_debounced:u_rst"         ;
++---------------+--------+----------+------------------------+
+; Port          ; Type   ; Severity ; Details                ;
++---------------+--------+----------+------------------------+
+; rst           ; Input  ; Info     ; Stuck at GND           ;
+; posedge_pulse ; Output ; Info     ; Explicitly unconnected ;
++---------------+--------+----------+------------------------+
+
+
 +-----------------------------------------------------+
 ; Post-Synthesis Netlist Statistics for Top Partition ;
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 353                         ;
-;     CLR               ; 95                          ;
-;     CLR SCLR          ; 60                          ;
+; arriav_ff             ; 424                         ;
+;     CLR               ; 98                          ;
+;     CLR SCLR          ; 126                         ;
 ;     CLR SCLR SLD      ; 16                          ;
 ;     ENA               ; 4                           ;
 ;     ENA CLR           ; 37                          ;
-;     ENA CLR SCLR      ; 70                          ;
+;     ENA CLR SCLR      ; 48                          ;
 ;     ENA CLR SCLR SLD  ; 2                           ;
 ;     ENA SCLR          ; 34                          ;
 ;     ENA SLD           ; 24                          ;
-;     SCLR              ; 10                          ;
-;     plain             ; 1                           ;
-; arriav_lcell_comb     ; 1351                        ;
-;     arith             ; 532                         ;
-;         0 data inputs ; 55                          ;
-;         1 data inputs ; 201                         ;
-;         2 data inputs ; 118                         ;
-;         3 data inputs ; 50                          ;
-;         4 data inputs ; 78                          ;
-;         5 data inputs ; 30                          ;
-;     extend            ; 12                          ;
-;         7 data inputs ; 12                          ;
-;     normal            ; 798                         ;
+;     SCLR              ; 31                          ;
+;     plain             ; 4                           ;
+; arriav_lcell_comb     ; 2552                        ;
+;     arith             ; 1162                        ;
+;         0 data inputs ; 177                         ;
+;         1 data inputs ; 355                         ;
+;         2 data inputs ; 193                         ;
+;         3 data inputs ; 176                         ;
+;         4 data inputs ; 221                         ;
+;         5 data inputs ; 40                          ;
+;     extend            ; 13                          ;
+;         7 data inputs ; 13                          ;
+;     normal            ; 1285                        ;
 ;         0 data inputs ; 2                           ;
-;         1 data inputs ; 17                          ;
-;         2 data inputs ; 94                          ;
-;         3 data inputs ; 165                         ;
-;         4 data inputs ; 194                         ;
-;         5 data inputs ; 126                         ;
-;         6 data inputs ; 200                         ;
-;     shared            ; 9                           ;
-;         0 data inputs ; 3                           ;
-;         2 data inputs ; 3                           ;
-;         4 data inputs ; 3                           ;
+;         1 data inputs ; 15                          ;
+;         2 data inputs ; 357                         ;
+;         3 data inputs ; 206                         ;
+;         4 data inputs ; 287                         ;
+;         5 data inputs ; 186                         ;
+;         6 data inputs ; 232                         ;
+;     shared            ; 92                          ;
+;         0 data inputs ; 18                          ;
+;         1 data inputs ; 26                          ;
+;         2 data inputs ; 41                          ;
+;         3 data inputs ; 2                           ;
+;         4 data inputs ; 5                           ;
 ; arriav_mac            ; 4                           ;
 ; boundary_port         ; 74                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 24.30                       ;
-; Average LUT depth     ; 10.90                       ;
+; Max LUT depth         ; 80.70                       ;
+; Average LUT depth     ; 33.08                       ;
 +-----------------------+-----------------------------+
 
 
@@ -828,7 +1010,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:03     ;
+; Top            ; 00:00:02     ;
 +----------------+--------------+
 
 
@@ -838,7 +1020,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Tue Oct 07 14:37:54 2025
+    Info: Processing started: Tue Oct 07 19:57:59 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Top -c Top
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
@@ -870,11 +1052,8 @@ Info (12021): Found 1 design units, including 1 entities, in source file btn_deb
     Info (12023): Found entity 1: btn_debounced_pulse File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/btn_debounced_pulse.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file cursor_4x4.sv
     Info (12023): Found entity 1: cursor_4x4 File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/cursor_4x4.sv Line: 1
-Info (12021): Found 0 design units, including 0 entities, in source file automatic.sv
 Info (12021): Found 1 design units, including 1 entities, in source file score_manager_two.sv
     Info (12023): Found entity 1: score_manager_two File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/score_manager_two.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file select_pulse.sv
-    Info (12023): Found entity 1: select_pulse File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/select_pulse.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file selection_manager.sv
     Info (12023): Found entity 1: selection_manager File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/selection_manager.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file pair_compare.sv
@@ -883,55 +1062,74 @@ Info (12021): Found 1 design units, including 1 entities, in source file delay_t
     Info (12023): Found entity 1: delay_timer File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/delay_timer.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file auto_picker.sv
     Info (12023): Found entity 1: auto_picker File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/auto_picker.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file winner_logic.sv
+    Info (12023): Found entity 1: winner_logic File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/winner_logic.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file switch_debounced.sv
+    Info (12023): Found entity 1: switch_debounced File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/switch_debounced.sv Line: 1
 Info (12127): Elaborating entity "vga" for the top level hierarchy
-Info (12128): Elaborating entity "pll" for hierarchy "pll:vgapll" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/vga.sv Line: 26
-Info (12128): Elaborating entity "vgaController" for hierarchy "vgaController:vgaCont" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/vga.sv Line: 33
+Info (12128): Elaborating entity "pll" for hierarchy "pll:vgapll" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/vga.sv Line: 24
+Info (12128): Elaborating entity "vgaController" for hierarchy "vgaController:vgaCont" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/vga.sv Line: 30
 Warning (10230): Verilog HDL assignment warning at vgaController.sv(22): truncated value with size 32 to match size of target (10) File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/vgaController.sv Line: 22
 Warning (10230): Verilog HDL assignment warning at vgaController.sv(24): truncated value with size 32 to match size of target (10) File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/vgaController.sv Line: 24
-Info (12128): Elaborating entity "btn_debounced_pulse" for hierarchy "btn_debounced_pulse:db_up" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/vga.sv Line: 38
-Info (12128): Elaborating entity "cursor_4x4" for hierarchy "cursor_4x4:u_cursor" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/vga.sv Line: 58
+Info (12128): Elaborating entity "switch_debounced" for hierarchy "switch_debounced:u_rst" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/vga.sv Line: 39
+Info (12128): Elaborating entity "btn_debounced_pulse" for hierarchy "btn_debounced_pulse:db_up" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/vga.sv Line: 43
+Info (12128): Elaborating entity "cursor_4x4" for hierarchy "cursor_4x4:u_cursor" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/vga.sv Line: 62
 Warning (10230): Verilog HDL assignment warning at cursor_4x4.sv(27): truncated value with size 32 to match size of target (2) File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/cursor_4x4.sv Line: 27
 Warning (10230): Verilog HDL assignment warning at cursor_4x4.sv(30): truncated value with size 32 to match size of target (2) File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/cursor_4x4.sv Line: 30
 Warning (10230): Verilog HDL assignment warning at cursor_4x4.sv(33): truncated value with size 32 to match size of target (2) File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/cursor_4x4.sv Line: 33
 Warning (10230): Verilog HDL assignment warning at cursor_4x4.sv(36): truncated value with size 32 to match size of target (2) File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/cursor_4x4.sv Line: 36
 Warning (10230): Verilog HDL assignment warning at cursor_4x4.sv(42): truncated value with size 32 to match size of target (6) File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/cursor_4x4.sv Line: 42
-Info (12128): Elaborating entity "select_pulse" for hierarchy "select_pulse:u_selpulse" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/vga.sv Line: 77
-Info (12128): Elaborating entity "auto_picker" for hierarchy "auto_picker:u_autopick" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/vga.sv Line: 101
-Info (12128): Elaborating entity "random" for hierarchy "auto_picker:u_autopick|random:u_rng" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/auto_picker.sv Line: 17
-Info (12128): Elaborating entity "selection_manager" for hierarchy "selection_manager:u_selman" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/vga.sv Line: 127
-Info (12128): Elaborating entity "pair_compare" for hierarchy "pair_compare:u_cmp" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/vga.sv Line: 137
-Info (12128): Elaborating entity "delay_timer" for hierarchy "delay_timer:u_delay" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/vga.sv Line: 145
-Info (12128): Elaborating entity "videoGen" for hierarchy "videoGen:videoGen_inst" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/vga.sv Line: 156
-Warning (10230): Verilog HDL assignment warning at videoGen.sv(39): truncated value with size 32 to match size of target (11) File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/videoGen.sv Line: 39
-Warning (10230): Verilog HDL assignment warning at videoGen.sv(40): truncated value with size 32 to match size of target (11) File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/videoGen.sv Line: 40
-Warning (10230): Verilog HDL assignment warning at videoGen.sv(89): truncated value with size 32 to match size of target (11) File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/videoGen.sv Line: 89
-Warning (10230): Verilog HDL assignment warning at videoGen.sv(90): truncated value with size 32 to match size of target (11) File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/videoGen.sv Line: 90
-Warning (10230): Verilog HDL assignment warning at videoGen.sv(138): truncated value with size 32 to match size of target (11) File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/videoGen.sv Line: 138
-Warning (10230): Verilog HDL assignment warning at videoGen.sv(139): truncated value with size 32 to match size of target (11) File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/videoGen.sv Line: 139
-Warning (10230): Verilog HDL assignment warning at videoGen.sv(140): truncated value with size 32 to match size of target (11) File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/videoGen.sv Line: 140
-Warning (10036): Verilog HDL or VHDL warning at videoGen.sv(76): object "temp_sel" assigned a value but never read File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/videoGen.sv Line: 76
-Warning (10230): Verilog HDL assignment warning at videoGen.sv(55): truncated value with size 32 to match size of target (2) File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/videoGen.sv Line: 55
-Warning (10230): Verilog HDL assignment warning at videoGen.sv(56): truncated value with size 32 to match size of target (2) File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/videoGen.sv Line: 56
-Warning (10230): Verilog HDL assignment warning at videoGen.sv(57): truncated value with size 32 to match size of target (10) File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/videoGen.sv Line: 57
-Warning (10230): Verilog HDL assignment warning at videoGen.sv(58): truncated value with size 32 to match size of target (10) File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/videoGen.sv Line: 58
-Warning (10230): Verilog HDL assignment warning at videoGen.sv(70): truncated value with size 32 to match size of target (6) File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/videoGen.sv Line: 70
-Info (12128): Elaborating entity "controladora_FSM" for hierarchy "controladora_FSM:fsm" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/vga.sv Line: 190
-Info (12128): Elaborating entity "timer15_7seg" for hierarchy "timer15_7seg:u_turn_timer" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/vga.sv Line: 202
+Info (12128): Elaborating entity "switch_debounced" for hierarchy "switch_debounced:u_flip" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/vga.sv Line: 87
+Info (12128): Elaborating entity "winner_logic" for hierarchy "winner_logic:u_winner" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/vga.sv Line: 111
+Info (12128): Elaborating entity "auto_picker" for hierarchy "auto_picker:u_autopick" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/vga.sv Line: 122
+Info (12128): Elaborating entity "random" for hierarchy "auto_picker:u_autopick|random:u_rng" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/auto_picker.sv Line: 20
+Info (12128): Elaborating entity "selection_manager" for hierarchy "selection_manager:u_selman" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/vga.sv Line: 148
+Info (12128): Elaborating entity "pair_compare" for hierarchy "pair_compare:u_cmp" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/vga.sv Line: 158
+Info (12128): Elaborating entity "delay_timer" for hierarchy "delay_timer:u_delay" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/vga.sv Line: 166
+Info (12128): Elaborating entity "videoGen" for hierarchy "videoGen:videoGen_inst" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/vga.sv Line: 180
+Warning (10230): Verilog HDL assignment warning at videoGen.sv(46): truncated value with size 32 to match size of target (11) File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/videoGen.sv Line: 46
+Warning (10230): Verilog HDL assignment warning at videoGen.sv(47): truncated value with size 32 to match size of target (11) File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/videoGen.sv Line: 47
+Warning (10230): Verilog HDL assignment warning at videoGen.sv(93): truncated value with size 32 to match size of target (11) File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/videoGen.sv Line: 93
+Warning (10230): Verilog HDL assignment warning at videoGen.sv(94): truncated value with size 32 to match size of target (11) File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/videoGen.sv Line: 94
+Warning (10230): Verilog HDL assignment warning at videoGen.sv(141): truncated value with size 32 to match size of target (11) File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/videoGen.sv Line: 141
+Warning (10230): Verilog HDL assignment warning at videoGen.sv(142): truncated value with size 32 to match size of target (11) File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/videoGen.sv Line: 142
+Warning (10230): Verilog HDL assignment warning at videoGen.sv(143): truncated value with size 32 to match size of target (11) File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/videoGen.sv Line: 143
+Warning (10036): Verilog HDL or VHDL warning at videoGen.sv(80): object "locked" assigned a value but never read File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/videoGen.sv Line: 80
+Warning (10230): Verilog HDL assignment warning at videoGen.sv(61): truncated value with size 32 to match size of target (2) File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/videoGen.sv Line: 61
+Warning (10230): Verilog HDL assignment warning at videoGen.sv(62): truncated value with size 32 to match size of target (2) File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/videoGen.sv Line: 62
+Warning (10230): Verilog HDL assignment warning at videoGen.sv(63): truncated value with size 32 to match size of target (10) File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/videoGen.sv Line: 63
+Warning (10230): Verilog HDL assignment warning at videoGen.sv(64): truncated value with size 32 to match size of target (10) File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/videoGen.sv Line: 64
+Warning (10230): Verilog HDL assignment warning at videoGen.sv(76): truncated value with size 32 to match size of target (6) File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/videoGen.sv Line: 76
+Warning (10762): Verilog HDL Case Statement warning at videoGen.sv(196): can't check case statement for completeness because the case expression has too many possible states File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/videoGen.sv Line: 196
+Warning (10762): Verilog HDL Case Statement warning at videoGen.sv(203): can't check case statement for completeness because the case expression has too many possible states File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/videoGen.sv Line: 203
+Warning (10762): Verilog HDL Case Statement warning at videoGen.sv(210): can't check case statement for completeness because the case expression has too many possible states File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/videoGen.sv Line: 210
+Warning (10762): Verilog HDL Case Statement warning at videoGen.sv(217): can't check case statement for completeness because the case expression has too many possible states File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/videoGen.sv Line: 217
+Warning (10762): Verilog HDL Case Statement warning at videoGen.sv(224): can't check case statement for completeness because the case expression has too many possible states File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/videoGen.sv Line: 224
+Warning (10762): Verilog HDL Case Statement warning at videoGen.sv(231): can't check case statement for completeness because the case expression has too many possible states File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/videoGen.sv Line: 231
+Warning (10762): Verilog HDL Case Statement warning at videoGen.sv(238): can't check case statement for completeness because the case expression has too many possible states File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/videoGen.sv Line: 238
+Warning (10762): Verilog HDL Case Statement warning at videoGen.sv(245): can't check case statement for completeness because the case expression has too many possible states File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/videoGen.sv Line: 245
+Warning (10762): Verilog HDL Case Statement warning at videoGen.sv(252): can't check case statement for completeness because the case expression has too many possible states File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/videoGen.sv Line: 252
+Info (12128): Elaborating entity "controladora_FSM" for hierarchy "controladora_FSM:fsm" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/vga.sv Line: 213
+Info (12128): Elaborating entity "timer15_7seg" for hierarchy "timer15_7seg:u_turn_timer" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/vga.sv Line: 225
 Warning (10230): Verilog HDL assignment warning at timer15_7seg.sv(41): truncated value with size 6 to match size of target (4) File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/timer15_7seg.sv Line: 41
 Info (12128): Elaborating entity "time_counter" for hierarchy "timer15_7seg:u_turn_timer|time_counter:u_time" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/timer15_7seg.sv Line: 36
 Warning (10230): Verilog HDL assignment warning at time_counter.sv(19): truncated value with size 32 to match size of target (6) File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/time_counter.sv Line: 19
 Info (12128): Elaborating entity "seven_segment_display" for hierarchy "timer15_7seg:u_turn_timer|seven_segment_display:u7_tens" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/timer15_7seg.sv Line: 43
-Info (12128): Elaborating entity "shuffle" for hierarchy "shuffle:shh" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/vga.sv Line: 213
+Info (12128): Elaborating entity "shuffle" for hierarchy "shuffle:shh" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/vga.sv Line: 236
 Warning (10230): Verilog HDL assignment warning at shuffle.sv(52): truncated value with size 8 to match size of target (4) File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/shuffle.sv Line: 52
-Info (12128): Elaborating entity "score_manager_two" for hierarchy "score_manager_two:u_scores" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/vga.sv Line: 224
-Info (278001): Inferred 5 megafunctions from design logic
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "videoGen:videoGen_inst|Mod0" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/videoGen.sv Line: 57
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "videoGen:videoGen_inst|Mod1" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/videoGen.sv Line: 58
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "videoGen:videoGen_inst|Div1" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/videoGen.sv Line: 56
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "videoGen:videoGen_inst|Div0" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/videoGen.sv Line: 55
+Info (12128): Elaborating entity "score_manager_two" for hierarchy "score_manager_two:u_scores" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/vga.sv Line: 247
+Info (278001): Inferred 9 megafunctions from design logic
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "videoGen:videoGen_inst|Mod0" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/videoGen.sv Line: 63
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "videoGen:videoGen_inst|Mod1" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/videoGen.sv Line: 64
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "videoGen:videoGen_inst|Div1" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/videoGen.sv Line: 62
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "videoGen:videoGen_inst|Div0" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/videoGen.sv Line: 61
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "videoGen:videoGen_inst|Div4" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/videoGen.sv Line: 270
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "videoGen:videoGen_inst|Div2" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/videoGen.sv Line: 329
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "videoGen:videoGen_inst|Div2~0" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/videoGen.sv Line: 329
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "videoGen:videoGen_inst|Div3" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/videoGen.sv Line: 269
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "shuffle:shh|Mod0" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/shuffle.sv Line: 52
-Info (12130): Elaborated megafunction instantiation "videoGen:videoGen_inst|lpm_divide:Mod0" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/videoGen.sv Line: 57
-Info (12133): Instantiated megafunction "videoGen:videoGen_inst|lpm_divide:Mod0" with the following parameter: File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/videoGen.sv Line: 57
+Info (12130): Elaborated megafunction instantiation "videoGen:videoGen_inst|lpm_divide:Mod0" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/videoGen.sv Line: 63
+Info (12133): Instantiated megafunction "videoGen:videoGen_inst|lpm_divide:Mod0" with the following parameter: File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/videoGen.sv Line: 63
     Info (12134): Parameter "LPM_WIDTHN" = "10"
     Info (12134): Parameter "LPM_WIDTHD" = "7"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
@@ -942,26 +1140,72 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/sign
     Info (12023): Found entity 1: sign_div_unsign_nlh File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/db/sign_div_unsign_nlh.tdf Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_kve.tdf
     Info (12023): Found entity 1: alt_u_div_kve File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/db/alt_u_div_kve.tdf Line: 23
-Info (12130): Elaborated megafunction instantiation "videoGen:videoGen_inst|lpm_divide:Mod1" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/videoGen.sv Line: 58
-Info (12133): Instantiated megafunction "videoGen:videoGen_inst|lpm_divide:Mod1" with the following parameter: File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/videoGen.sv Line: 58
+Info (12130): Elaborated megafunction instantiation "videoGen:videoGen_inst|lpm_divide:Mod1" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/videoGen.sv Line: 64
+Info (12133): Instantiated megafunction "videoGen:videoGen_inst|lpm_divide:Mod1" with the following parameter: File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/videoGen.sv Line: 64
     Info (12134): Parameter "LPM_WIDTHN" = "10"
     Info (12134): Parameter "LPM_WIDTHD" = "7"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
-Info (12130): Elaborated megafunction instantiation "videoGen:videoGen_inst|lpm_divide:Div1" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/videoGen.sv Line: 56
-Info (12133): Instantiated megafunction "videoGen:videoGen_inst|lpm_divide:Div1" with the following parameter: File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/videoGen.sv Line: 56
+Info (12130): Elaborated megafunction instantiation "videoGen:videoGen_inst|lpm_divide:Div1" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/videoGen.sv Line: 62
+Info (12133): Instantiated megafunction "videoGen:videoGen_inst|lpm_divide:Div1" with the following parameter: File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/videoGen.sv Line: 62
     Info (12134): Parameter "LPM_WIDTHN" = "10"
     Info (12134): Parameter "LPM_WIDTHD" = "7"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_hbm.tdf
     Info (12023): Found entity 1: lpm_divide_hbm File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/db/lpm_divide_hbm.tdf Line: 25
-Info (12130): Elaborated megafunction instantiation "videoGen:videoGen_inst|lpm_divide:Div0" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/videoGen.sv Line: 55
-Info (12133): Instantiated megafunction "videoGen:videoGen_inst|lpm_divide:Div0" with the following parameter: File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/videoGen.sv Line: 55
+Info (12130): Elaborated megafunction instantiation "videoGen:videoGen_inst|lpm_divide:Div0" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/videoGen.sv Line: 61
+Info (12133): Instantiated megafunction "videoGen:videoGen_inst|lpm_divide:Div0" with the following parameter: File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/videoGen.sv Line: 61
     Info (12134): Parameter "LPM_WIDTHN" = "10"
     Info (12134): Parameter "LPM_WIDTHD" = "7"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12130): Elaborated megafunction instantiation "videoGen:videoGen_inst|lpm_divide:Div4" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/videoGen.sv Line: 270
+Info (12133): Instantiated megafunction "videoGen:videoGen_inst|lpm_divide:Div4" with the following parameter: File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/videoGen.sv Line: 270
+    Info (12134): Parameter "LPM_WIDTHN" = "32"
+    Info (12134): Parameter "LPM_WIDTHD" = "4"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "LPM_HINT" = "LPM_REMAINDERPOSITIVE=FALSE"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_apo.tdf
+    Info (12023): Found entity 1: lpm_divide_apo File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/db/lpm_divide_apo.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/abs_divider_jbg.tdf
+    Info (12023): Found entity 1: abs_divider_jbg File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/db/abs_divider_jbg.tdf Line: 29
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_nve.tdf
+    Info (12023): Found entity 1: alt_u_div_nve File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/db/alt_u_div_nve.tdf Line: 23
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_abs_jn9.tdf
+    Info (12023): Found entity 1: lpm_abs_jn9 File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/db/lpm_abs_jn9.tdf Line: 23
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_abs_4p9.tdf
+    Info (12023): Found entity 1: lpm_abs_4p9 File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/db/lpm_abs_4p9.tdf Line: 23
+Info (12130): Elaborated megafunction instantiation "videoGen:videoGen_inst|lpm_divide:Div2" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/videoGen.sv Line: 329
+Info (12133): Instantiated megafunction "videoGen:videoGen_inst|lpm_divide:Div2" with the following parameter: File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/videoGen.sv Line: 329
+    Info (12134): Parameter "LPM_WIDTHN" = "32"
+    Info (12134): Parameter "LPM_WIDTHD" = "6"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "LPM_HINT" = "LPM_REMAINDERPOSITIVE=FALSE"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_cpo.tdf
+    Info (12023): Found entity 1: lpm_divide_cpo File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/db/lpm_divide_cpo.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/abs_divider_lbg.tdf
+    Info (12023): Found entity 1: abs_divider_lbg File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/db/abs_divider_lbg.tdf Line: 29
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_qve.tdf
+    Info (12023): Found entity 1: alt_u_div_qve File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/db/alt_u_div_qve.tdf Line: 23
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_abs_ln9.tdf
+    Info (12023): Found entity 1: lpm_abs_ln9 File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/db/lpm_abs_ln9.tdf Line: 23
+Info (12130): Elaborated megafunction instantiation "videoGen:videoGen_inst|lpm_divide:Div2_rtl_0"
+Info (12133): Instantiated megafunction "videoGen:videoGen_inst|lpm_divide:Div2_rtl_0" with the following parameter:
+    Info (12134): Parameter "LPM_WIDTHN" = "32"
+    Info (12134): Parameter "LPM_WIDTHD" = "6"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "LPM_HINT" = "LPM_REMAINDERPOSITIVE=FALSE"
+Info (12130): Elaborated megafunction instantiation "videoGen:videoGen_inst|lpm_divide:Div3" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/videoGen.sv Line: 269
+Info (12133): Instantiated megafunction "videoGen:videoGen_inst|lpm_divide:Div3" with the following parameter: File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/videoGen.sv Line: 269
+    Info (12134): Parameter "LPM_WIDTHN" = "32"
+    Info (12134): Parameter "LPM_WIDTHD" = "4"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "LPM_HINT" = "LPM_REMAINDERPOSITIVE=FALSE"
 Info (12130): Elaborated megafunction instantiation "shuffle:shh|lpm_divide:Mod0" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/shuffle.sv Line: 52
 Info (12133): Instantiated megafunction "shuffle:shh|lpm_divide:Mod0" with the following parameter: File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/shuffle.sv Line: 52
     Info (12134): Parameter "LPM_WIDTHN" = "8"
@@ -998,20 +1242,20 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "seg_player[1]" is stuck at GND File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/vga.sv Line: 21
     Warning (13410): Pin "seg_player[5]" is stuck at VCC File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/vga.sv Line: 21
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 12 registers lost all their fanouts during netlist optimizations.
+Info (17049): 14 registers lost all their fanouts during netlist optimizations.
 Info (144001): Generated suppressed messages file C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/Lab3/output_files/Top.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 1450 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 2655 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 7 input pins
     Info (21059): Implemented 67 output pins
-    Info (21061): Implemented 1372 logic cells
+    Info (21061): Implemented 2577 logic cells
     Info (21062): Implemented 4 DSP elements
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 47 warnings
-    Info: Peak virtual memory: 4892 megabytes
-    Info: Processing ended: Tue Oct 07 14:38:06 2025
-    Info: Elapsed time: 00:00:12
-    Info: Total CPU time (on all processors): 00:00:19
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 56 warnings
+    Info: Peak virtual memory: 4908 megabytes
+    Info: Processing ended: Tue Oct 07 19:58:08 2025
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:15
 
 
 +------------------------------------------+

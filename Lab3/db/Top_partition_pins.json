@@ -260,19 +260,19 @@
 					"strict" : false
 				},
 				{
-					"name" : "btn_right_n",
-					"strict" : false
-				},
-				{
-					"name" : "btn_left_n",
-					"strict" : false
-				},
-				{
 					"name" : "btn_down_n",
 					"strict" : false
 				},
 				{
 					"name" : "btn_up_n",
+					"strict" : false
+				},
+				{
+					"name" : "btn_right_n",
+					"strict" : false
+				},
+				{
+					"name" : "btn_left_n",
 					"strict" : false
 				},
 				{

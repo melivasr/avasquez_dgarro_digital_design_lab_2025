@@ -1,6 +1,6 @@
 module select_pulse #(
     parameter int CLK_HZ      = 50_000_000,
-    parameter int DEBOUNCE_MS = 8
+    parameter int DEBOUNCE_MS = 12
 )(
     input  logic clk,
     input  logic rst,
