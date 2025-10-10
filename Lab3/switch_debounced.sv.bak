@@ -1,0 +1,67 @@
+module switch_debounced #(
+    parameter int CLK_HZ       = 50_000_000,
+    parameter int DEBOUNCE_MS  = 12,     // 10–20 ms típico
+    parameter bit ACTIVE_HIGH  = 1'b1    // 1: sw_in=1 es activo, 0: activo-bajo
+)(
+    input  logic clk,
+    input  logic rst,
+    input  logic sw_in,          // señal cruda del pin
+    output logic level,          // nivel estable (ya debounced), con misma polaridad de "activo"
+    output logic posedge_pulse   // 1 clk en flanco + (activo) estable, con "arming" (sin pulso al power-up)
+);
+    // ----------------- Sincronizador -----------------
+    logic s0, s1;
+    always_ff @(posedge clk or posedge rst) begin
+        if (rst) begin s0 <= 1'b0; s1 <= 1'b0; end
+        else begin s0 <= sw_in; s1 <= s0; end
+    end
+
+    // Normalizar a "activo=1" según polaridad
+    wire active_sample = (ACTIVE_HIGH) ? s1 : ~s1;
+
+    // ----------------- Debounce por tiempo estable -----------------
+    localparam int THRESH = (CLK_HZ/1000) * DEBOUNCE_MS;
+    localparam int CW     = (THRESH > 0) ? $clog2(THRESH+1) : 1;
+
+    logic [CW-1:0] cnt;
+    logic stable_active;   // nivel activo ya debounced (1=activo, 0=inactivo)
+
+    always_ff @(posedge clk or posedge rst) begin
+        if (rst) begin
+            cnt           <= '0;
+            stable_active <= 1'b0;   // arranca INACTIVO -> evita disparo de arranque
+        end else begin
+            if (active_sample == stable_active) begin
+                cnt <= '0;  // no hay intento de cambio
+            end else begin
+                if (cnt == THRESH[CW-1:0]) begin
+                    stable_active <= active_sample; // acepto el cambio
+                    cnt           <= '0;
+                end else begin
+                    cnt <= cnt + {{(CW-1){1'b0}},1'b1};
+                end
+            end
+        end
+    end
+
+    assign level = stable_active;
+    logic prev, armed;
+    always_ff @(posedge clk or posedge rst) begin
+        if (rst) begin
+            prev            <= 1'b0;   // nivel previo inactivo
+            armed           <= 1'b0;   // no armado al inicio → sin pulso fantasma
+            posedge_pulse   <= 1'b0;
+        end else begin
+            posedge_pulse <= 1'b0;
+
+            // me armo cuando el nivel pasó por INACTIVO estable
+            if (!stable_active) armed <= 1'b1;
+
+            // flanco + de ACTIVO sólo si estoy "armado"
+            if (armed && stable_active && !prev)
+                posedge_pulse <= 1'b1;
+
+            prev <= stable_active;
+        end
+    end
+endmodule

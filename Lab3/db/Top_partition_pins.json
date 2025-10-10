@@ -1,0 +1,285 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "vgaclk",
+					"strict" : false
+				},
+				{
+					"name" : "hsync",
+					"strict" : false
+				},
+				{
+					"name" : "vsync",
+					"strict" : false
+				},
+				{
+					"name" : "sync_b",
+					"strict" : false
+				},
+				{
+					"name" : "blank_b",
+					"strict" : false
+				},
+				{
+					"name" : "r[0]",
+					"strict" : false
+				},
+				{
+					"name" : "r[1]",
+					"strict" : false
+				},
+				{
+					"name" : "r[2]",
+					"strict" : false
+				},
+				{
+					"name" : "r[3]",
+					"strict" : false
+				},
+				{
+					"name" : "r[4]",
+					"strict" : false
+				},
+				{
+					"name" : "r[5]",
+					"strict" : false
+				},
+				{
+					"name" : "r[6]",
+					"strict" : false
+				},
+				{
+					"name" : "r[7]",
+					"strict" : false
+				},
+				{
+					"name" : "g[0]",
+					"strict" : false
+				},
+				{
+					"name" : "g[1]",
+					"strict" : false
+				},
+				{
+					"name" : "g[2]",
+					"strict" : false
+				},
+				{
+					"name" : "g[3]",
+					"strict" : false
+				},
+				{
+					"name" : "g[4]",
+					"strict" : false
+				},
+				{
+					"name" : "g[5]",
+					"strict" : false
+				},
+				{
+					"name" : "g[6]",
+					"strict" : false
+				},
+				{
+					"name" : "g[7]",
+					"strict" : false
+				},
+				{
+					"name" : "b[0]",
+					"strict" : false
+				},
+				{
+					"name" : "b[1]",
+					"strict" : false
+				},
+				{
+					"name" : "b[2]",
+					"strict" : false
+				},
+				{
+					"name" : "b[3]",
+					"strict" : false
+				},
+				{
+					"name" : "b[4]",
+					"strict" : false
+				},
+				{
+					"name" : "b[5]",
+					"strict" : false
+				},
+				{
+					"name" : "b[6]",
+					"strict" : false
+				},
+				{
+					"name" : "b[7]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_tens[0]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_tens[3]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_tens[4]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_tens[5]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_ones[0]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_ones[1]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_ones[2]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_ones[3]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_ones[4]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_ones[5]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_ones[6]",
+					"strict" : false
+				},
+				{
+					"name" : "player",
+					"strict" : false
+				},
+				{
+					"name" : "sel_count[0]",
+					"strict" : false
+				},
+				{
+					"name" : "sel_count[1]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_score_p0[0]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_score_p0[1]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_score_p0[2]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_score_p0[3]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_score_p0[4]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_score_p0[5]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_score_p0[6]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_score_p1[0]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_score_p1[1]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_score_p1[2]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_score_p1[3]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_score_p1[4]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_score_p1[5]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_score_p1[6]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_player[0]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_player[2]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_player[3]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_player[4]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_player[6]",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "reset",
+					"strict" : false
+				},
+				{
+					"name" : "btn_down_n",
+					"strict" : false
+				},
+				{
+					"name" : "btn_up_n",
+					"strict" : false
+				},
+				{
+					"name" : "btn_right_n",
+					"strict" : false
+				},
+				{
+					"name" : "btn_left_n",
+					"strict" : false
+				},
+				{
+					"name" : "sw_flip",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,34 @@
+module delay_timer #(
+    parameter int unsigned CLK_HZ = 50_000_000,
+    parameter int unsigned MS     = 700  // 700 ms 
+)(
+    input  logic clk,
+    input  logic rst,
+    input  logic start,       // short_delay desde la FSM
+    output logic done_pulse   // 1 ciclo, delay_done hacia la FSM
+);
+    localparam int unsigned TARGET = (CLK_HZ/1000)*MS;
+    logic        running;
+    logic [31:0] cnt;
+
+    always_ff @(posedge clk or posedge rst) begin
+        if (rst) begin
+            running   <= 1'b0;
+            cnt       <= 32'd0;
+            done_pulse<= 1'b0;
+        end else begin
+            done_pulse <= 1'b0;
+            if (start && !running) begin
+                running <= 1'b1;
+                cnt     <= 32'd0;
+            end else if (running) begin
+                if (cnt >= TARGET) begin
+                    running   <= 1'b0;
+                    done_pulse<= 1'b1;
+                end else begin
+                    cnt <= cnt + 32'd1;
+                end
+            end
+        end
+    end
+endmodule

@@ -1,0 +1,21 @@
+
+State Machine - |vga|controladora_FSM:fsm|state
+Name state.GAME_OVER state.HIDE_PAIR state.UNMATCH state.MATCH state.EVALUATE_PAIR state.AUTO_PICK state.REVEAL state.WAIT_SELECTION state.TURN_START state.SHUFFLE state.RESET_INIT 
+state.RESET_INIT 0 0 0 0 0 0 0 0 0 0 0 
+state.SHUFFLE 0 0 0 0 0 0 0 0 0 1 1 
+state.TURN_START 0 0 0 0 0 0 0 0 1 0 1 
+state.WAIT_SELECTION 0 0 0 0 0 0 0 1 0 0 1 
+state.REVEAL 0 0 0 0 0 0 1 0 0 0 1 
+state.AUTO_PICK 0 0 0 0 0 1 0 0 0 0 1 
+state.EVALUATE_PAIR 0 0 0 0 1 0 0 0 0 0 1 
+state.MATCH 0 0 0 1 0 0 0 0 0 0 1 
+state.UNMATCH 0 0 1 0 0 0 0 0 0 0 1 
+state.HIDE_PAIR 0 1 0 0 0 0 0 0 0 0 1 
+state.GAME_OVER 1 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |vga|auto_picker:u_autopick|ps
+Name ps.WAIT ps.PICK ps.SCAN ps.IDLE 
+ps.IDLE 0 0 0 0 
+ps.SCAN 0 0 1 1 
+ps.PICK 0 1 0 1 
+ps.WAIT 1 0 0 1 
