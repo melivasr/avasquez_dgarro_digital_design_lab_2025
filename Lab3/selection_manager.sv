@@ -64,7 +64,7 @@ module selection_manager(
     // Latch de solicitud
     logic sel_req;
 
-    // Pulso válido proviene del flanco + del switch filtrado
+    // Pulso válido proviene del flanco + del switch 
     wire valid_pulse = sel_req && can_pick;
 
     // máscara visible = bloqueadas OR temporales

@@ -1,5 +1,5 @@
 Timing Analyzer report for Top
-Tue Oct 07 19:59:36 2025
+Fri Oct 10 10:14:31 2025
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -102,18 +102,18 @@ https://fpgasoftware.intel.com/eula.
 ; Number detected on machine ; 8           ;
 ; Maximum allowed            ; 8           ;
 ;                            ;             ;
-; Average used               ; 1.90        ;
+; Average used               ; 1.72        ;
 ; Maximum used               ; 8           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;  13.7%      ;
-;     Processor 3            ;  13.5%      ;
-;     Processor 4            ;  13.3%      ;
-;     Processor 5            ;  12.4%      ;
-;     Processor 6            ;  12.4%      ;
-;     Processor 7            ;  12.3%      ;
-;     Processor 8            ;  12.3%      ;
+;     Processor 2            ;  11.3%      ;
+;     Processor 3            ;  11.0%      ;
+;     Processor 4            ;  10.6%      ;
+;     Processor 5            ;   9.7%      ;
+;     Processor 6            ;   9.7%      ;
+;     Processor 7            ;   9.7%      ;
+;     Processor 8            ;   9.7%      ;
 +----------------------------+-------------+
 
 
@@ -133,8 +133,8 @@ https://fpgasoftware.intel.com/eula.
 +------------+-----------------+-------------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name        ; Note ;
 +------------+-----------------+-------------------+------+
-; 71.18 MHz  ; 71.18 MHz       ; clk               ;      ;
-; 288.85 MHz ; 288.85 MHz      ; pll:vgapll|toggle ;      ;
+; 72.49 MHz  ; 72.49 MHz       ; clk               ;      ;
+; 320.72 MHz ; 320.72 MHz      ; pll:vgapll|toggle ;      ;
 +------------+-----------------+-------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -150,9 +150,9 @@ HTML report is unavailable in plain text report export.
 +--------------------------------------+---------+---------------+
 ; Clock                                ; Slack   ; End Point TNS ;
 +--------------------------------------+---------+---------------+
-; clk                                  ; -13.049 ; -1515.474     ;
-; switch_debounced:u_rst|stable_active ; -4.981  ; -44.658       ;
-; pll:vgapll|toggle                    ; -2.462  ; -61.250       ;
+; clk                                  ; -12.795 ; -1504.412     ;
+; switch_debounced:u_rst|stable_active ; -4.812  ; -48.628       ;
+; pll:vgapll|toggle                    ; -2.118  ; -56.496       ;
 +--------------------------------------+---------+---------------+
 
 
@@ -161,9 +161,9 @@ HTML report is unavailable in plain text report export.
 +--------------------------------------+-------+---------------+
 ; Clock                                ; Slack ; End Point TNS ;
 +--------------------------------------+-------+---------------+
-; clk                                  ; 0.337 ; 0.000         ;
-; pll:vgapll|toggle                    ; 0.726 ; 0.000         ;
-; switch_debounced:u_rst|stable_active ; 2.482 ; 0.000         ;
+; clk                                  ; 0.361 ; 0.000         ;
+; pll:vgapll|toggle                    ; 0.711 ; 0.000         ;
+; switch_debounced:u_rst|stable_active ; 2.971 ; 0.000         ;
 +--------------------------------------+-------+---------------+
 
 
@@ -172,7 +172,7 @@ HTML report is unavailable in plain text report export.
 +-------+--------+-----------------------+
 ; Clock ; Slack  ; End Point TNS         ;
 +-------+--------+-----------------------+
-; clk   ; -3.165 ; -1003.743             ;
+; clk   ; -2.951 ; -1017.881             ;
 +-------+--------+-----------------------+
 
 
@@ -181,7 +181,7 @@ HTML report is unavailable in plain text report export.
 +-------+-------+-----------------------+
 ; Clock ; Slack ; End Point TNS         ;
 +-------+-------+-----------------------+
-; clk   ; 0.613 ; 0.000                 ;
+; clk   ; 0.872 ; 0.000                 ;
 +-------+-------+-----------------------+
 
 
@@ -190,9 +190,9 @@ HTML report is unavailable in plain text report export.
 +--------------------------------------+--------+---------------+
 ; Clock                                ; Slack  ; End Point TNS ;
 +--------------------------------------+--------+---------------+
-; clk                                  ; -0.394 ; -303.640      ;
-; pll:vgapll|toggle                    ; -0.394 ; -13.970       ;
-; switch_debounced:u_rst|stable_active ; 0.237  ; 0.000         ;
+; clk                                  ; -0.394 ; -310.404      ;
+; pll:vgapll|toggle                    ; -0.394 ; -14.922       ;
+; switch_debounced:u_rst|stable_active ; 0.346  ; 0.000         ;
 +--------------------------------------+--------+---------------+
 
 
@@ -208,8 +208,8 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +------------+-----------------+-------------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name        ; Note ;
 +------------+-----------------+-------------------+------+
-; 68.86 MHz  ; 68.86 MHz       ; clk               ;      ;
-; 304.14 MHz ; 304.14 MHz      ; pll:vgapll|toggle ;      ;
+; 70.1 MHz   ; 70.1 MHz        ; clk               ;      ;
+; 316.46 MHz ; 316.46 MHz      ; pll:vgapll|toggle ;      ;
 +------------+-----------------+-------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -219,9 +219,9 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +--------------------------------------+---------+---------------+
 ; Clock                                ; Slack   ; End Point TNS ;
 +--------------------------------------+---------+---------------+
-; clk                                  ; -13.523 ; -1474.153     ;
-; switch_debounced:u_rst|stable_active ; -5.033  ; -45.602       ;
-; pll:vgapll|toggle                    ; -2.288  ; -57.721       ;
+; clk                                  ; -13.266 ; -1458.422     ;
+; switch_debounced:u_rst|stable_active ; -4.871  ; -49.615       ;
+; pll:vgapll|toggle                    ; -2.160  ; -55.262       ;
 +--------------------------------------+---------+---------------+
 
 
@@ -230,9 +230,9 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +--------------------------------------+-------+---------------+
 ; Clock                                ; Slack ; End Point TNS ;
 +--------------------------------------+-------+---------------+
-; clk                                  ; 0.314 ; 0.000         ;
-; pll:vgapll|toggle                    ; 0.717 ; 0.000         ;
-; switch_debounced:u_rst|stable_active ; 2.594 ; 0.000         ;
+; clk                                  ; 0.340 ; 0.000         ;
+; pll:vgapll|toggle                    ; 0.710 ; 0.000         ;
+; switch_debounced:u_rst|stable_active ; 2.993 ; 0.000         ;
 +--------------------------------------+-------+---------------+
 
 
@@ -241,7 +241,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-------+--------+----------------------+
 ; Clock ; Slack  ; End Point TNS        ;
 +-------+--------+----------------------+
-; clk   ; -2.791 ; -885.803             ;
+; clk   ; -2.586 ; -892.737             ;
 +-------+--------+----------------------+
 
 
@@ -250,7 +250,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-------+-------+----------------------+
 ; Clock ; Slack ; End Point TNS        ;
 +-------+-------+----------------------+
-; clk   ; 0.310 ; 0.000                ;
+; clk   ; 0.503 ; 0.000                ;
 +-------+-------+----------------------+
 
 
@@ -259,9 +259,9 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +--------------------------------------+--------+---------------+
 ; Clock                                ; Slack  ; End Point TNS ;
 +--------------------------------------+--------+---------------+
-; clk                                  ; -0.394 ; -275.805      ;
-; pll:vgapll|toggle                    ; -0.394 ; -13.790       ;
-; switch_debounced:u_rst|stable_active ; 0.276  ; 0.000         ;
+; clk                                  ; -0.394 ; -282.351      ;
+; pll:vgapll|toggle                    ; -0.394 ; -14.887       ;
+; switch_debounced:u_rst|stable_active ; 0.347  ; 0.000         ;
 +--------------------------------------+--------+---------------+
 
 
@@ -277,9 +277,9 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +--------------------------------------+--------+---------------+
 ; Clock                                ; Slack  ; End Point TNS ;
 +--------------------------------------+--------+---------------+
-; clk                                  ; -6.349 ; -793.272      ;
-; switch_debounced:u_rst|stable_active ; -2.487 ; -20.045       ;
-; pll:vgapll|toggle                    ; -1.141 ; -27.116       ;
+; clk                                  ; -6.161 ; -764.750      ;
+; switch_debounced:u_rst|stable_active ; -2.358 ; -22.673       ;
+; pll:vgapll|toggle                    ; -0.920 ; -23.667       ;
 +--------------------------------------+--------+---------------+
 
 
@@ -288,9 +288,9 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +--------------------------------------+-------+---------------+
 ; Clock                                ; Slack ; End Point TNS ;
 +--------------------------------------+-------+---------------+
-; clk                                  ; 0.176 ; 0.000         ;
-; pll:vgapll|toggle                    ; 0.366 ; 0.000         ;
-; switch_debounced:u_rst|stable_active ; 1.340 ; 0.000         ;
+; clk                                  ; 0.178 ; 0.000         ;
+; pll:vgapll|toggle                    ; 0.371 ; 0.000         ;
+; switch_debounced:u_rst|stable_active ; 1.741 ; 0.000         ;
 +--------------------------------------+-------+---------------+
 
 
@@ -299,7 +299,7 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +-------+--------+-----------------------+
 ; Clock ; Slack  ; End Point TNS         ;
 +-------+--------+-----------------------+
-; clk   ; -2.641 ; -822.318              ;
+; clk   ; -2.450 ; -828.042              ;
 +-------+--------+-----------------------+
 
 
@@ -308,7 +308,7 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +-------+-------+-----------------------+
 ; Clock ; Slack ; End Point TNS         ;
 +-------+-------+-----------------------+
-; clk   ; 0.502 ; 0.000                 ;
+; clk   ; 0.566 ; 0.000                 ;
 +-------+-------+-----------------------+
 
 
@@ -317,9 +317,9 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +--------------------------------------+--------+---------------+
 ; Clock                                ; Slack  ; End Point TNS ;
 +--------------------------------------+--------+---------------+
-; clk                                  ; -0.401 ; -200.615      ;
-; pll:vgapll|toggle                    ; 0.123  ; 0.000         ;
-; switch_debounced:u_rst|stable_active ; 0.266  ; 0.000         ;
+; clk                                  ; -0.401 ; -204.674      ;
+; pll:vgapll|toggle                    ; 0.113  ; 0.000         ;
+; switch_debounced:u_rst|stable_active ; 0.384  ; 0.000         ;
 +--------------------------------------+--------+---------------+
 
 
@@ -335,9 +335,9 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +--------------------------------------+--------+---------------+
 ; Clock                                ; Slack  ; End Point TNS ;
 +--------------------------------------+--------+---------------+
-; clk                                  ; -5.960 ; -667.561      ;
-; switch_debounced:u_rst|stable_active ; -2.350 ; -19.461       ;
-; pll:vgapll|toggle                    ; -0.950 ; -22.784       ;
+; clk                                  ; -5.845 ; -643.735      ;
+; switch_debounced:u_rst|stable_active ; -2.237 ; -21.816       ;
+; pll:vgapll|toggle                    ; -0.769 ; -19.846       ;
 +--------------------------------------+--------+---------------+
 
 
@@ -346,9 +346,9 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +--------------------------------------+-------+---------------+
 ; Clock                                ; Slack ; End Point TNS ;
 +--------------------------------------+-------+---------------+
-; clk                                  ; 0.169 ; 0.000         ;
-; pll:vgapll|toggle                    ; 0.335 ; 0.000         ;
-; switch_debounced:u_rst|stable_active ; 1.385 ; 0.000         ;
+; clk                                  ; 0.167 ; 0.000         ;
+; pll:vgapll|toggle                    ; 0.339 ; 0.000         ;
+; switch_debounced:u_rst|stable_active ; 1.703 ; 0.000         ;
 +--------------------------------------+-------+---------------+
 
 
@@ -357,7 +357,7 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +-------+--------+----------------------+
 ; Clock ; Slack  ; End Point TNS        ;
 +-------+--------+----------------------+
-; clk   ; -2.088 ; -644.478             ;
+; clk   ; -1.918 ; -643.072             ;
 +-------+--------+----------------------+
 
 
@@ -366,7 +366,7 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +-------+-------+----------------------+
 ; Clock ; Slack ; End Point TNS        ;
 +-------+-------+----------------------+
-; clk   ; 0.452 ; 0.000                ;
+; clk   ; 0.507 ; 0.000                ;
 +-------+-------+----------------------+
 
 
@@ -375,9 +375,9 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +--------------------------------------+--------+---------------+
 ; Clock                                ; Slack  ; End Point TNS ;
 +--------------------------------------+--------+---------------+
-; clk                                  ; -0.438 ; -240.465      ;
-; pll:vgapll|toggle                    ; 0.133  ; 0.000         ;
-; switch_debounced:u_rst|stable_active ; 0.324  ; 0.000         ;
+; clk                                  ; -0.438 ; -245.083      ;
+; pll:vgapll|toggle                    ; 0.131  ; 0.000         ;
+; switch_debounced:u_rst|stable_active ; 0.401  ; 0.000         ;
 +--------------------------------------+--------+---------------+
 
 
@@ -393,14 +393,14 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +---------------------------------------+-----------+-------+-----------+---------+---------------------+
 ; Clock                                 ; Setup     ; Hold  ; Recovery  ; Removal ; Minimum Pulse Width ;
 +---------------------------------------+-----------+-------+-----------+---------+---------------------+
-; Worst-case Slack                      ; -13.523   ; 0.169 ; -3.165    ; 0.310   ; -0.438              ;
-;  clk                                  ; -13.523   ; 0.169 ; -3.165    ; 0.310   ; -0.438              ;
-;  pll:vgapll|toggle                    ; -2.462    ; 0.335 ; N/A       ; N/A     ; -0.394              ;
-;  switch_debounced:u_rst|stable_active ; -5.033    ; 1.340 ; N/A       ; N/A     ; 0.237               ;
-; Design-wide TNS                       ; -1621.382 ; 0.0   ; -1003.743 ; 0.0     ; -317.61             ;
-;  clk                                  ; -1515.474 ; 0.000 ; -1003.743 ; 0.000   ; -303.640            ;
-;  pll:vgapll|toggle                    ; -61.250   ; 0.000 ; N/A       ; N/A     ; -13.970             ;
-;  switch_debounced:u_rst|stable_active ; -45.602   ; 0.000 ; N/A       ; N/A     ; 0.000               ;
+; Worst-case Slack                      ; -13.266   ; 0.167 ; -2.951    ; 0.503   ; -0.438              ;
+;  clk                                  ; -13.266   ; 0.167 ; -2.951    ; 0.503   ; -0.438              ;
+;  pll:vgapll|toggle                    ; -2.160    ; 0.339 ; N/A       ; N/A     ; -0.394              ;
+;  switch_debounced:u_rst|stable_active ; -4.871    ; 1.703 ; N/A       ; N/A     ; 0.346               ;
+; Design-wide TNS                       ; -1609.536 ; 0.0   ; -1017.881 ; 0.0     ; -325.326            ;
+;  clk                                  ; -1504.412 ; 0.000 ; -1017.881 ; 0.000   ; -310.404            ;
+;  pll:vgapll|toggle                    ; -56.496   ; 0.000 ; N/A       ; N/A     ; -14.922             ;
+;  switch_debounced:u_rst|stable_active ; -49.615   ; 0.000 ; N/A       ; N/A     ; 0.000               ;
 +---------------------------------------+-----------+-------+-----------+---------+---------------------+
 
 
@@ -542,9 +542,9 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 ; seg_ones[4]     ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 3.35e-07 V                   ; 3.14 V              ; -0.258 V            ; 0.13 V                               ; 0.399 V                              ; 4.27e-10 s                  ; 1.5e-10 s                   ; Yes                        ; No                         ; 3.08 V                      ; 3.35e-07 V                  ; 3.14 V             ; -0.258 V           ; 0.13 V                              ; 0.399 V                             ; 4.27e-10 s                 ; 1.5e-10 s                  ; Yes                       ; No                        ;
 ; seg_ones[5]     ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 3.35e-07 V                   ; 3.14 V              ; -0.258 V            ; 0.13 V                               ; 0.399 V                              ; 4.27e-10 s                  ; 1.5e-10 s                   ; Yes                        ; No                         ; 3.08 V                      ; 3.35e-07 V                  ; 3.14 V             ; -0.258 V           ; 0.13 V                              ; 0.399 V                             ; 4.27e-10 s                 ; 1.5e-10 s                  ; Yes                       ; No                        ;
 ; seg_ones[6]     ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 3.35e-07 V                   ; 3.14 V              ; -0.257 V            ; 0.13 V                               ; 0.399 V                              ; 4.27e-10 s                  ; 1.5e-10 s                   ; Yes                        ; No                         ; 3.08 V                      ; 3.35e-07 V                  ; 3.14 V             ; -0.257 V           ; 0.13 V                              ; 0.399 V                             ; 4.27e-10 s                 ; 1.5e-10 s                  ; Yes                       ; No                        ;
-; player          ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.52e-07 V                   ; 2.42 V              ; -0.0568 V           ; 0.173 V                              ; 0.113 V                              ; 4.5e-10 s                   ; 4.35e-10 s                  ; No                         ; No                         ; 2.32 V                      ; 3.52e-07 V                  ; 2.42 V             ; -0.0568 V          ; 0.173 V                             ; 0.113 V                             ; 4.5e-10 s                  ; 4.35e-10 s                 ; No                        ; No                        ;
-; sel_count[0]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.07e-07 V                   ; 2.36 V              ; -0.0231 V           ; 0.14 V                               ; 0.089 V                              ; 4.52e-10 s                  ; 4.35e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.07e-07 V                  ; 2.36 V             ; -0.0231 V          ; 0.14 V                              ; 0.089 V                             ; 4.52e-10 s                 ; 4.35e-10 s                 ; No                        ; Yes                       ;
-; sel_count[1]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.52e-07 V                   ; 2.42 V              ; -0.0568 V           ; 0.173 V                              ; 0.113 V                              ; 4.5e-10 s                   ; 4.35e-10 s                  ; No                         ; No                         ; 2.32 V                      ; 3.52e-07 V                  ; 2.42 V             ; -0.0568 V          ; 0.173 V                             ; 0.113 V                             ; 4.5e-10 s                  ; 4.35e-10 s                 ; No                        ; No                        ;
+; player          ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.07e-07 V                   ; 2.36 V              ; -0.0231 V           ; 0.14 V                               ; 0.089 V                              ; 4.52e-10 s                  ; 4.35e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.07e-07 V                  ; 2.36 V             ; -0.0231 V          ; 0.14 V                              ; 0.089 V                             ; 4.52e-10 s                 ; 4.35e-10 s                 ; No                        ; Yes                       ;
+; sel_count[0]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.52e-07 V                   ; 2.42 V              ; -0.0557 V           ; 0.175 V                              ; 0.114 V                              ; 4.5e-10 s                   ; 4.35e-10 s                  ; No                         ; No                         ; 2.32 V                      ; 3.52e-07 V                  ; 2.42 V             ; -0.0557 V          ; 0.175 V                             ; 0.114 V                             ; 4.5e-10 s                  ; 4.35e-10 s                 ; No                        ; No                        ;
+; sel_count[1]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.07e-07 V                   ; 2.36 V              ; -0.0231 V           ; 0.14 V                               ; 0.089 V                              ; 4.52e-10 s                  ; 4.35e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.07e-07 V                  ; 2.36 V             ; -0.0231 V          ; 0.14 V                              ; 0.089 V                             ; 4.52e-10 s                 ; 4.35e-10 s                 ; No                        ; Yes                       ;
 ; seg_score_p0[0] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 2.62e-07 V                   ; 3.1 V               ; -0.153 V            ; 0.035 V                              ; 0.31 V                               ; 4.23e-10 s                  ; 1.59e-10 s                  ; Yes                        ; No                         ; 3.08 V                      ; 2.62e-07 V                  ; 3.1 V              ; -0.153 V           ; 0.035 V                             ; 0.31 V                              ; 4.23e-10 s                 ; 1.59e-10 s                 ; Yes                       ; No                        ;
 ; seg_score_p0[1] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 3.35e-07 V                   ; 3.14 V              ; -0.258 V            ; 0.13 V                               ; 0.399 V                              ; 4.27e-10 s                  ; 1.5e-10 s                   ; Yes                        ; No                         ; 3.08 V                      ; 3.35e-07 V                  ; 3.14 V             ; -0.258 V           ; 0.13 V                              ; 0.399 V                             ; 4.27e-10 s                 ; 1.5e-10 s                  ; Yes                       ; No                        ;
 ; seg_score_p0[2] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 3.5e-07 V                    ; 3.14 V              ; -0.195 V            ; 0.158 V                              ; 0.394 V                              ; 4.46e-10 s                  ; 1.64e-10 s                  ; Yes                        ; No                         ; 3.08 V                      ; 3.5e-07 V                   ; 3.14 V             ; -0.195 V           ; 0.158 V                             ; 0.394 V                             ; 4.46e-10 s                 ; 1.64e-10 s                 ; Yes                       ; No                        ;
@@ -617,9 +617,9 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 ; seg_ones[4]     ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 3.19e-05 V                   ; 3.1 V               ; -0.133 V            ; 0.025 V                              ; 0.169 V                              ; 4.92e-10 s                  ; 3.13e-10 s                  ; Yes                        ; No                         ; 3.08 V                      ; 3.19e-05 V                  ; 3.1 V              ; -0.133 V           ; 0.025 V                             ; 0.169 V                             ; 4.92e-10 s                 ; 3.13e-10 s                 ; Yes                       ; No                        ;
 ; seg_ones[5]     ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 3.19e-05 V                   ; 3.1 V               ; -0.133 V            ; 0.025 V                              ; 0.169 V                              ; 4.92e-10 s                  ; 3.13e-10 s                  ; Yes                        ; No                         ; 3.08 V                      ; 3.19e-05 V                  ; 3.1 V              ; -0.133 V           ; 0.025 V                             ; 0.169 V                             ; 4.92e-10 s                 ; 3.13e-10 s                 ; Yes                       ; No                        ;
 ; seg_ones[6]     ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 3.19e-05 V                   ; 3.1 V               ; -0.136 V            ; 0.025 V                              ; 0.167 V                              ; 4.92e-10 s                  ; 3.12e-10 s                  ; Yes                        ; No                         ; 3.08 V                      ; 3.19e-05 V                  ; 3.1 V              ; -0.136 V           ; 0.025 V                             ; 0.167 V                             ; 4.92e-10 s                 ; 3.12e-10 s                 ; Yes                       ; No                        ;
-; player          ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.88e-05 V                   ; 2.39 V              ; -0.0374 V           ; 0.189 V                              ; 0.158 V                              ; 4.66e-10 s                  ; 4.67e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.88e-05 V                  ; 2.39 V             ; -0.0374 V          ; 0.189 V                             ; 0.158 V                             ; 4.66e-10 s                 ; 4.67e-10 s                 ; No                        ; Yes                       ;
-; sel_count[0]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.49e-05 V                   ; 2.34 V              ; -0.0118 V           ; 0.182 V                              ; 0.051 V                              ; 4.81e-10 s                  ; 4.83e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 3.49e-05 V                  ; 2.34 V             ; -0.0118 V          ; 0.182 V                             ; 0.051 V                             ; 4.81e-10 s                 ; 4.83e-10 s                 ; Yes                       ; Yes                       ;
-; sel_count[1]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.88e-05 V                   ; 2.39 V              ; -0.0374 V           ; 0.189 V                              ; 0.158 V                              ; 4.66e-10 s                  ; 4.67e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.88e-05 V                  ; 2.39 V             ; -0.0374 V          ; 0.189 V                             ; 0.158 V                             ; 4.66e-10 s                 ; 4.67e-10 s                 ; No                        ; Yes                       ;
+; player          ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.49e-05 V                   ; 2.34 V              ; -0.0118 V           ; 0.182 V                              ; 0.051 V                              ; 4.81e-10 s                  ; 4.83e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 3.49e-05 V                  ; 2.34 V             ; -0.0118 V          ; 0.182 V                             ; 0.051 V                             ; 4.81e-10 s                 ; 4.83e-10 s                 ; Yes                       ; Yes                       ;
+; sel_count[0]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.88e-05 V                   ; 2.39 V              ; -0.037 V            ; 0.188 V                              ; 0.158 V                              ; 4.67e-10 s                  ; 4.67e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.88e-05 V                  ; 2.39 V             ; -0.037 V           ; 0.188 V                             ; 0.158 V                             ; 4.67e-10 s                 ; 4.67e-10 s                 ; No                        ; Yes                       ;
+; sel_count[1]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.49e-05 V                   ; 2.34 V              ; -0.0118 V           ; 0.182 V                              ; 0.051 V                              ; 4.81e-10 s                  ; 4.83e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 3.49e-05 V                  ; 2.34 V             ; -0.0118 V          ; 0.182 V                             ; 0.051 V                             ; 4.81e-10 s                 ; 4.83e-10 s                 ; Yes                       ; Yes                       ;
 ; seg_score_p0[0] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 2.61e-05 V                   ; 3.09 V              ; -0.0638 V           ; 0.034 V                              ; 0.099 V                              ; 5.12e-10 s                  ; 2.97e-10 s                  ; Yes                        ; Yes                        ; 3.08 V                      ; 2.61e-05 V                  ; 3.09 V             ; -0.0638 V          ; 0.034 V                             ; 0.099 V                             ; 5.12e-10 s                 ; 2.97e-10 s                 ; Yes                       ; Yes                       ;
 ; seg_score_p0[1] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 3.19e-05 V                   ; 3.1 V               ; -0.133 V            ; 0.025 V                              ; 0.169 V                              ; 4.92e-10 s                  ; 3.13e-10 s                  ; Yes                        ; No                         ; 3.08 V                      ; 3.19e-05 V                  ; 3.1 V              ; -0.133 V           ; 0.025 V                             ; 0.169 V                             ; 4.92e-10 s                 ; 3.13e-10 s                 ; Yes                       ; No                        ;
 ; seg_score_p0[2] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 3.32e-05 V                   ; 3.09 V              ; -0.11 V             ; 0.031 V                              ; 0.155 V                              ; 5.43e-10 s                  ; 3.14e-10 s                  ; Yes                        ; Yes                        ; 3.08 V                      ; 3.32e-05 V                  ; 3.09 V             ; -0.11 V            ; 0.031 V                             ; 0.155 V                             ; 5.43e-10 s                 ; 3.14e-10 s                 ; Yes                       ; Yes                       ;
@@ -692,9 +692,9 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 ; seg_ones[4]     ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.63 V                       ; 4.72e-06 V                   ; 3.7 V               ; -0.49 V             ; 0.117 V                              ; 0.622 V                              ; 3.84e-10 s                  ; 1.48e-10 s                  ; Yes                        ; No                         ; 3.63 V                      ; 4.72e-06 V                  ; 3.7 V              ; -0.49 V            ; 0.117 V                             ; 0.622 V                             ; 3.84e-10 s                 ; 1.48e-10 s                 ; Yes                       ; No                        ;
 ; seg_ones[5]     ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.63 V                       ; 4.72e-06 V                   ; 3.7 V               ; -0.49 V             ; 0.117 V                              ; 0.622 V                              ; 3.84e-10 s                  ; 1.48e-10 s                  ; Yes                        ; No                         ; 3.63 V                      ; 4.72e-06 V                  ; 3.7 V              ; -0.49 V            ; 0.117 V                             ; 0.622 V                             ; 3.84e-10 s                 ; 1.48e-10 s                 ; Yes                       ; No                        ;
 ; seg_ones[6]     ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.63 V                       ; 4.72e-06 V                   ; 3.7 V               ; -0.49 V             ; 0.117 V                              ; 0.621 V                              ; 3.84e-10 s                  ; 1.48e-10 s                  ; Yes                        ; No                         ; 3.63 V                      ; 4.72e-06 V                  ; 3.7 V              ; -0.49 V            ; 0.117 V                             ; 0.621 V                             ; 3.84e-10 s                 ; 1.48e-10 s                 ; Yes                       ; No                        ;
-; player          ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.14e-06 V                   ; 2.91 V              ; -0.119 V            ; 0.326 V                              ; 0.298 V                              ; 2.74e-10 s                  ; 2.8e-10 s                   ; No                         ; No                         ; 2.75 V                      ; 4.14e-06 V                  ; 2.91 V             ; -0.119 V           ; 0.326 V                             ; 0.298 V                             ; 2.74e-10 s                 ; 2.8e-10 s                  ; No                        ; No                        ;
-; sel_count[0]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 3.54e-06 V                   ; 2.81 V              ; -0.0578 V           ; 0.303 V                              ; 0.28 V                               ; 2.93e-10 s                  ; 3.01e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 3.54e-06 V                  ; 2.81 V             ; -0.0578 V          ; 0.303 V                             ; 0.28 V                              ; 2.93e-10 s                 ; 3.01e-10 s                 ; No                        ; No                        ;
-; sel_count[1]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.14e-06 V                   ; 2.91 V              ; -0.119 V            ; 0.326 V                              ; 0.298 V                              ; 2.74e-10 s                  ; 2.8e-10 s                   ; No                         ; No                         ; 2.75 V                      ; 4.14e-06 V                  ; 2.91 V             ; -0.119 V           ; 0.326 V                             ; 0.298 V                             ; 2.74e-10 s                 ; 2.8e-10 s                  ; No                        ; No                        ;
+; player          ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 3.54e-06 V                   ; 2.81 V              ; -0.0578 V           ; 0.303 V                              ; 0.28 V                               ; 2.93e-10 s                  ; 3.01e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 3.54e-06 V                  ; 2.81 V             ; -0.0578 V          ; 0.303 V                             ; 0.28 V                              ; 2.93e-10 s                 ; 3.01e-10 s                 ; No                        ; No                        ;
+; sel_count[0]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.14e-06 V                   ; 2.91 V              ; -0.121 V            ; 0.326 V                              ; 0.297 V                              ; 2.74e-10 s                  ; 2.8e-10 s                   ; No                         ; No                         ; 2.75 V                      ; 4.14e-06 V                  ; 2.91 V             ; -0.121 V           ; 0.326 V                             ; 0.297 V                             ; 2.74e-10 s                 ; 2.8e-10 s                  ; No                        ; No                        ;
+; sel_count[1]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 3.54e-06 V                   ; 2.81 V              ; -0.0578 V           ; 0.303 V                              ; 0.28 V                               ; 2.93e-10 s                  ; 3.01e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 3.54e-06 V                  ; 2.81 V             ; -0.0578 V          ; 0.303 V                             ; 0.28 V                              ; 2.93e-10 s                 ; 3.01e-10 s                 ; No                        ; No                        ;
 ; seg_score_p0[0] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.63 V                       ; 3.63e-06 V                   ; 3.64 V              ; -0.326 V            ; 0.091 V                              ; 0.479 V                              ; 3.83e-10 s                  ; 1.5e-10 s                   ; Yes                        ; No                         ; 3.63 V                      ; 3.63e-06 V                  ; 3.64 V             ; -0.326 V           ; 0.091 V                             ; 0.479 V                             ; 3.83e-10 s                 ; 1.5e-10 s                  ; Yes                       ; No                        ;
 ; seg_score_p0[1] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.63 V                       ; 4.72e-06 V                   ; 3.7 V               ; -0.49 V             ; 0.117 V                              ; 0.622 V                              ; 3.84e-10 s                  ; 1.48e-10 s                  ; Yes                        ; No                         ; 3.63 V                      ; 4.72e-06 V                  ; 3.7 V              ; -0.49 V            ; 0.117 V                             ; 0.622 V                             ; 3.84e-10 s                 ; 1.48e-10 s                 ; Yes                       ; No                        ;
 ; seg_score_p0[2] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.63 V                       ; 4.94e-06 V                   ; 3.69 V              ; -0.414 V            ; 0.134 V                              ; 0.585 V                              ; 4.19e-10 s                  ; 1.53e-10 s                  ; Yes                        ; No                         ; 3.63 V                      ; 4.94e-06 V                  ; 3.69 V             ; -0.414 V           ; 0.134 V                             ; 0.585 V                             ; 4.19e-10 s                 ; 1.53e-10 s                 ; Yes                       ; No                        ;
@@ -767,9 +767,9 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 ; seg_ones[4]     ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.63 V                       ; 0.000229 V                   ; 3.65 V              ; -0.316 V            ; 0.041 V                              ; 0.53 V                               ; 4.29e-10 s                  ; 1.87e-10 s                  ; Yes                        ; No                         ; 3.63 V                      ; 0.000229 V                  ; 3.65 V             ; -0.316 V           ; 0.041 V                             ; 0.53 V                              ; 4.29e-10 s                 ; 1.87e-10 s                 ; Yes                       ; No                        ;
 ; seg_ones[5]     ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.63 V                       ; 0.000229 V                   ; 3.65 V              ; -0.316 V            ; 0.041 V                              ; 0.53 V                               ; 4.29e-10 s                  ; 1.87e-10 s                  ; Yes                        ; No                         ; 3.63 V                      ; 0.000229 V                  ; 3.65 V             ; -0.316 V           ; 0.041 V                             ; 0.53 V                              ; 4.29e-10 s                 ; 1.87e-10 s                 ; Yes                       ; No                        ;
 ; seg_ones[6]     ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.63 V                       ; 0.000229 V                   ; 3.65 V              ; -0.319 V            ; 0.041 V                              ; 0.528 V                              ; 4.29e-10 s                  ; 1.87e-10 s                  ; Yes                        ; No                         ; 3.63 V                      ; 0.000229 V                  ; 3.65 V             ; -0.319 V           ; 0.041 V                             ; 0.528 V                             ; 4.29e-10 s                 ; 1.87e-10 s                 ; Yes                       ; No                        ;
-; player          ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000242 V                   ; 2.86 V              ; -0.0805 V           ; 0.358 V                              ; 0.156 V                              ; 3.01e-10 s                  ; 4.34e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000242 V                  ; 2.86 V             ; -0.0805 V          ; 0.358 V                             ; 0.156 V                             ; 3.01e-10 s                 ; 4.34e-10 s                 ; No                        ; No                        ;
-; sel_count[0]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000213 V                   ; 2.79 V              ; -0.0324 V           ; 0.139 V                              ; 0.119 V                              ; 4.42e-10 s                  ; 4.33e-10 s                  ; No                         ; Yes                        ; 2.75 V                      ; 0.000213 V                  ; 2.79 V             ; -0.0324 V          ; 0.139 V                             ; 0.119 V                             ; 4.42e-10 s                 ; 4.33e-10 s                 ; No                        ; Yes                       ;
-; sel_count[1]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000242 V                   ; 2.86 V              ; -0.0805 V           ; 0.358 V                              ; 0.156 V                              ; 3.01e-10 s                  ; 4.34e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000242 V                  ; 2.86 V             ; -0.0805 V          ; 0.358 V                             ; 0.156 V                             ; 3.01e-10 s                 ; 4.34e-10 s                 ; No                        ; No                        ;
+; player          ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000213 V                   ; 2.79 V              ; -0.0324 V           ; 0.139 V                              ; 0.119 V                              ; 4.42e-10 s                  ; 4.33e-10 s                  ; No                         ; Yes                        ; 2.75 V                      ; 0.000213 V                  ; 2.79 V             ; -0.0324 V          ; 0.139 V                             ; 0.119 V                             ; 4.42e-10 s                 ; 4.33e-10 s                 ; No                        ; Yes                       ;
+; sel_count[0]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000242 V                   ; 2.86 V              ; -0.0814 V           ; 0.36 V                               ; 0.156 V                              ; 3e-10 s                     ; 4.34e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000242 V                  ; 2.86 V             ; -0.0814 V          ; 0.36 V                              ; 0.156 V                             ; 3e-10 s                    ; 4.34e-10 s                 ; No                        ; No                        ;
+; sel_count[1]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000213 V                   ; 2.79 V              ; -0.0324 V           ; 0.139 V                              ; 0.119 V                              ; 4.42e-10 s                  ; 4.33e-10 s                  ; No                         ; Yes                        ; 2.75 V                      ; 0.000213 V                  ; 2.79 V             ; -0.0324 V          ; 0.139 V                             ; 0.119 V                             ; 4.42e-10 s                 ; 4.33e-10 s                 ; No                        ; Yes                       ;
 ; seg_score_p0[0] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.63 V                       ; 0.000184 V                   ; 3.64 V              ; -0.19 V             ; 0.019 V                              ; 0.425 V                              ; 4.44e-10 s                  ; 1.91e-10 s                  ; Yes                        ; No                         ; 3.63 V                      ; 0.000184 V                  ; 3.64 V             ; -0.19 V            ; 0.019 V                             ; 0.425 V                             ; 4.44e-10 s                 ; 1.91e-10 s                 ; Yes                       ; No                        ;
 ; seg_score_p0[1] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.63 V                       ; 0.000229 V                   ; 3.65 V              ; -0.316 V            ; 0.041 V                              ; 0.53 V                               ; 4.29e-10 s                  ; 1.87e-10 s                  ; Yes                        ; No                         ; 3.63 V                      ; 0.000229 V                  ; 3.65 V             ; -0.316 V           ; 0.041 V                             ; 0.53 V                              ; 4.29e-10 s                 ; 1.87e-10 s                 ; Yes                       ; No                        ;
 ; seg_score_p0[2] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.63 V                       ; 0.000238 V                   ; 3.64 V              ; -0.254 V            ; 0.052 V                              ; 0.543 V                              ; 4.59e-10 s                  ; 1.96e-10 s                  ; Yes                        ; No                         ; 3.63 V                      ; 0.000238 V                  ; 3.64 V             ; -0.254 V           ; 0.052 V                             ; 0.543 V                             ; 4.59e-10 s                 ; 1.96e-10 s                 ; Yes                       ; No                        ;
@@ -799,10 +799,10 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +--------------------------------------+--------------------------------------+----------+----------+----------+----------+
 ; From Clock                           ; To Clock                             ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +--------------------------------------+--------------------------------------+----------+----------+----------+----------+
-; clk                                  ; clk                                  ; 67781815 ; 0        ; 0        ; 0        ;
+; clk                                  ; clk                                  ; 67782485 ; 0        ; 0        ; 0        ;
 ; pll:vgapll|toggle                    ; clk                                  ; 1        ; 1        ; 0        ; 0        ;
 ; switch_debounced:u_rst|stable_active ; clk                                  ; 8451560  ; 16903060 ; 0        ; 0        ;
-; pll:vgapll|toggle                    ; pll:vgapll|toggle                    ; 540      ; 0        ; 0        ; 0        ;
+; pll:vgapll|toggle                    ; pll:vgapll|toggle                    ; 592      ; 0        ; 0        ; 0        ;
 ; clk                                  ; switch_debounced:u_rst|stable_active ; 0        ; 0        ; 12       ; 0        ;
 +--------------------------------------+--------------------------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
@@ -813,10 +813,10 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +--------------------------------------+--------------------------------------+----------+----------+----------+----------+
 ; From Clock                           ; To Clock                             ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +--------------------------------------+--------------------------------------+----------+----------+----------+----------+
-; clk                                  ; clk                                  ; 67781815 ; 0        ; 0        ; 0        ;
+; clk                                  ; clk                                  ; 67782485 ; 0        ; 0        ; 0        ;
 ; pll:vgapll|toggle                    ; clk                                  ; 1        ; 1        ; 0        ; 0        ;
 ; switch_debounced:u_rst|stable_active ; clk                                  ; 8451560  ; 16903060 ; 0        ; 0        ;
-; pll:vgapll|toggle                    ; pll:vgapll|toggle                    ; 540      ; 0        ; 0        ; 0        ;
+; pll:vgapll|toggle                    ; pll:vgapll|toggle                    ; 592      ; 0        ; 0        ; 0        ;
 ; clk                                  ; switch_debounced:u_rst|stable_active ; 0        ; 0        ; 12       ; 0        ;
 +--------------------------------------+--------------------------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
@@ -827,8 +827,8 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +--------------------------------------+----------+----------+----------+----------+----------+
 ; From Clock                           ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +--------------------------------------+----------+----------+----------+----------+----------+
-; clk                                  ; clk      ; 114      ; 0        ; 0        ; 0        ;
-; switch_debounced:u_rst|stable_active ; clk      ; 346      ; 346      ; 0        ; 0        ;
+; clk                                  ; clk      ; 123      ; 0        ; 0        ; 0        ;
+; switch_debounced:u_rst|stable_active ; clk      ; 353      ; 353      ; 0        ; 0        ;
 +--------------------------------------+----------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -838,8 +838,8 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +--------------------------------------+----------+----------+----------+----------+----------+
 ; From Clock                           ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +--------------------------------------+----------+----------+----------+----------+----------+
-; clk                                  ; clk      ; 114      ; 0        ; 0        ; 0        ;
-; switch_debounced:u_rst|stable_active ; clk      ; 346      ; 346      ; 0        ; 0        ;
+; clk                                  ; clk      ; 123      ; 0        ; 0        ; 0        ;
+; switch_debounced:u_rst|stable_active ; clk      ; 353      ; 353      ; 0        ; 0        ;
 +--------------------------------------+----------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -866,7 +866,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; Unconstrained Input Ports       ; 6     ; 6    ;
 ; Unconstrained Input Port Paths  ; 6     ; 6    ;
 ; Unconstrained Output Ports      ; 62    ; 62   ;
-; Unconstrained Output Port Paths ; 2963  ; 2963 ;
+; Unconstrained Output Port Paths ; 3028  ; 3028 ;
 +---------------------------------+-------+------+
 
 
@@ -1055,7 +1055,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Tue Oct 07 19:59:31 2025
+    Info: Processing started: Fri Oct 10 10:14:22 2025
 Info: Command: quartus_sta Top -c Top
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -1075,32 +1075,32 @@ Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1100mV 85C Model
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -13.049
+Info (332146): Worst-case setup slack is -12.795
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):   -13.049           -1515.474 clk 
-    Info (332119):    -4.981             -44.658 switch_debounced:u_rst|stable_active 
-    Info (332119):    -2.462             -61.250 pll:vgapll|toggle 
-Info (332146): Worst-case hold slack is 0.337
+    Info (332119):   -12.795           -1504.412 clk 
+    Info (332119):    -4.812             -48.628 switch_debounced:u_rst|stable_active 
+    Info (332119):    -2.118             -56.496 pll:vgapll|toggle 
+Info (332146): Worst-case hold slack is 0.361
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.337               0.000 clk 
-    Info (332119):     0.726               0.000 pll:vgapll|toggle 
-    Info (332119):     2.482               0.000 switch_debounced:u_rst|stable_active 
-Info (332146): Worst-case recovery slack is -3.165
+    Info (332119):     0.361               0.000 clk 
+    Info (332119):     0.711               0.000 pll:vgapll|toggle 
+    Info (332119):     2.971               0.000 switch_debounced:u_rst|stable_active 
+Info (332146): Worst-case recovery slack is -2.951
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.165           -1003.743 clk 
-Info (332146): Worst-case removal slack is 0.613
+    Info (332119):    -2.951           -1017.881 clk 
+Info (332146): Worst-case removal slack is 0.872
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.613               0.000 clk 
+    Info (332119):     0.872               0.000 clk 
 Info (332146): Worst-case minimum pulse width slack is -0.394
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.394            -303.640 clk 
-    Info (332119):    -0.394             -13.970 pll:vgapll|toggle 
-    Info (332119):     0.237               0.000 switch_debounced:u_rst|stable_active 
+    Info (332119):    -0.394            -310.404 clk 
+    Info (332119):    -0.394             -14.922 pll:vgapll|toggle 
+    Info (332119):     0.346               0.000 switch_debounced:u_rst|stable_active 
 Info (332114): Report Metastability: Found 6 synchronizer chains.
     Info (332114): Design MTBF is not calculated because the design doesn't meet its timing requirements.
 Info: Analyzing Slow 1100mV 0C Model
@@ -1109,32 +1109,32 @@ Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -13.523
+Info (332146): Worst-case setup slack is -13.266
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):   -13.523           -1474.153 clk 
-    Info (332119):    -5.033             -45.602 switch_debounced:u_rst|stable_active 
-    Info (332119):    -2.288             -57.721 pll:vgapll|toggle 
-Info (332146): Worst-case hold slack is 0.314
+    Info (332119):   -13.266           -1458.422 clk 
+    Info (332119):    -4.871             -49.615 switch_debounced:u_rst|stable_active 
+    Info (332119):    -2.160             -55.262 pll:vgapll|toggle 
+Info (332146): Worst-case hold slack is 0.340
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.314               0.000 clk 
-    Info (332119):     0.717               0.000 pll:vgapll|toggle 
-    Info (332119):     2.594               0.000 switch_debounced:u_rst|stable_active 
-Info (332146): Worst-case recovery slack is -2.791
+    Info (332119):     0.340               0.000 clk 
+    Info (332119):     0.710               0.000 pll:vgapll|toggle 
+    Info (332119):     2.993               0.000 switch_debounced:u_rst|stable_active 
+Info (332146): Worst-case recovery slack is -2.586
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.791            -885.803 clk 
-Info (332146): Worst-case removal slack is 0.310
+    Info (332119):    -2.586            -892.737 clk 
+Info (332146): Worst-case removal slack is 0.503
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.310               0.000 clk 
+    Info (332119):     0.503               0.000 clk 
 Info (332146): Worst-case minimum pulse width slack is -0.394
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.394            -275.805 clk 
-    Info (332119):    -0.394             -13.790 pll:vgapll|toggle 
-    Info (332119):     0.276               0.000 switch_debounced:u_rst|stable_active 
+    Info (332119):    -0.394            -282.351 clk 
+    Info (332119):    -0.394             -14.887 pll:vgapll|toggle 
+    Info (332119):     0.347               0.000 switch_debounced:u_rst|stable_active 
 Info (332114): Report Metastability: Found 6 synchronizer chains.
     Info (332114): Design MTBF is not calculated because the design doesn't meet its timing requirements.
 Info: Analyzing Fast 1100mV 85C Model
@@ -1143,72 +1143,72 @@ Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -6.349
+Info (332146): Worst-case setup slack is -6.161
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -6.349            -793.272 clk 
-    Info (332119):    -2.487             -20.045 switch_debounced:u_rst|stable_active 
-    Info (332119):    -1.141             -27.116 pll:vgapll|toggle 
-Info (332146): Worst-case hold slack is 0.176
+    Info (332119):    -6.161            -764.750 clk 
+    Info (332119):    -2.358             -22.673 switch_debounced:u_rst|stable_active 
+    Info (332119):    -0.920             -23.667 pll:vgapll|toggle 
+Info (332146): Worst-case hold slack is 0.178
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.176               0.000 clk 
-    Info (332119):     0.366               0.000 pll:vgapll|toggle 
-    Info (332119):     1.340               0.000 switch_debounced:u_rst|stable_active 
-Info (332146): Worst-case recovery slack is -2.641
+    Info (332119):     0.178               0.000 clk 
+    Info (332119):     0.371               0.000 pll:vgapll|toggle 
+    Info (332119):     1.741               0.000 switch_debounced:u_rst|stable_active 
+Info (332146): Worst-case recovery slack is -2.450
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.641            -822.318 clk 
-Info (332146): Worst-case removal slack is 0.502
+    Info (332119):    -2.450            -828.042 clk 
+Info (332146): Worst-case removal slack is 0.566
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.502               0.000 clk 
+    Info (332119):     0.566               0.000 clk 
 Info (332146): Worst-case minimum pulse width slack is -0.401
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.401            -200.615 clk 
-    Info (332119):     0.123               0.000 pll:vgapll|toggle 
-    Info (332119):     0.266               0.000 switch_debounced:u_rst|stable_active 
+    Info (332119):    -0.401            -204.674 clk 
+    Info (332119):     0.113               0.000 pll:vgapll|toggle 
+    Info (332119):     0.384               0.000 switch_debounced:u_rst|stable_active 
 Info (332114): Report Metastability: Found 6 synchronizer chains.
     Info (332114): Design MTBF is not calculated because the design doesn't meet its timing requirements.
 Info: Analyzing Fast 1100mV 0C Model
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -5.960
+Info (332146): Worst-case setup slack is -5.845
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -5.960            -667.561 clk 
-    Info (332119):    -2.350             -19.461 switch_debounced:u_rst|stable_active 
-    Info (332119):    -0.950             -22.784 pll:vgapll|toggle 
-Info (332146): Worst-case hold slack is 0.169
+    Info (332119):    -5.845            -643.735 clk 
+    Info (332119):    -2.237             -21.816 switch_debounced:u_rst|stable_active 
+    Info (332119):    -0.769             -19.846 pll:vgapll|toggle 
+Info (332146): Worst-case hold slack is 0.167
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.169               0.000 clk 
-    Info (332119):     0.335               0.000 pll:vgapll|toggle 
-    Info (332119):     1.385               0.000 switch_debounced:u_rst|stable_active 
-Info (332146): Worst-case recovery slack is -2.088
+    Info (332119):     0.167               0.000 clk 
+    Info (332119):     0.339               0.000 pll:vgapll|toggle 
+    Info (332119):     1.703               0.000 switch_debounced:u_rst|stable_active 
+Info (332146): Worst-case recovery slack is -1.918
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.088            -644.478 clk 
-Info (332146): Worst-case removal slack is 0.452
+    Info (332119):    -1.918            -643.072 clk 
+Info (332146): Worst-case removal slack is 0.507
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.452               0.000 clk 
+    Info (332119):     0.507               0.000 clk 
 Info (332146): Worst-case minimum pulse width slack is -0.438
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.438            -240.465 clk 
-    Info (332119):     0.133               0.000 pll:vgapll|toggle 
-    Info (332119):     0.324               0.000 switch_debounced:u_rst|stable_active 
+    Info (332119):    -0.438            -245.083 clk 
+    Info (332119):     0.131               0.000 pll:vgapll|toggle 
+    Info (332119):     0.401               0.000 switch_debounced:u_rst|stable_active 
 Info (332114): Report Metastability: Found 6 synchronizer chains.
     Info (332114): Design MTBF is not calculated because the design doesn't meet its timing requirements.
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 7 warnings
-    Info: Peak virtual memory: 5230 megabytes
-    Info: Processing ended: Tue Oct 07 19:59:36 2025
-    Info: Elapsed time: 00:00:05
-    Info: Total CPU time (on all processors): 00:00:07
+    Info: Peak virtual memory: 5229 megabytes
+    Info: Processing ended: Fri Oct 10 10:14:31 2025
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:11
 
 

@@ -15,7 +15,6 @@ module auto_picker #(
     // cartas temporales (reveladas pero no bloqueadas)
     wire [15:0] temp_mask = reveal_mask & ~locked_mask;
 
-    // RNG
     logic [7:0] rnd;
     random u_rng(.clk(clk), .rst(rst), .seed(8'h3C), .rnd(rnd));
 
@@ -24,7 +23,7 @@ module auto_picker #(
     pstate_t ps, ns;
 
     logic [4:0] probe;      // 0..15
-    logic [1:0] emitted;    // picks hechos en esta ráfaga (0..2)
+    logic [1:0] emitted;    
 
     // flancos de start
     logic start_d;

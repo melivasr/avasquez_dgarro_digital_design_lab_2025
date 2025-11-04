@@ -117,123 +117,123 @@ set_location_assignment PIN_AE18 -to seg_tens[4]
 set_location_assignment PIN_AE17 -to seg_tens[5]
 set_location_assignment PIN_V17 -to seg_tens[6]
 set_global_assignment -name LAST_QUARTUS_VERSION "20.1.0 Lite Edition"
-set_global_assignment -name TOP_LEVEL_ENTITY vga
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -entity vga -section_id Top
-set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -entity vga -section_id Top
-set_global_assignment -name PARTITION_COLOR 16764057 -entity vga -section_id Top
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to clk -entity vga
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to hsync -entity vga
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to vsync -entity vga
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to vgaclk -entity vga
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to r[0] -entity vga
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to sync_b -entity vga
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to blank_b -entity vga
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to b[7] -entity vga
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to b[6] -entity vga
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to b[5] -entity vga
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to b[4] -entity vga
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to b[3] -entity vga
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to b[2] -entity vga
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to b[1] -entity vga
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to b[0] -entity vga
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to b -entity vga
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to g[7] -entity vga
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to g[6] -entity vga
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to g[5] -entity vga
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to g[4] -entity vga
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to g[3] -entity vga
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to g[2] -entity vga
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to g[1] -entity vga
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to g[0] -entity vga
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to g -entity vga
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to r[7] -entity vga
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to r[6] -entity vga
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to r[5] -entity vga
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to r[4] -entity vga
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to r[3] -entity vga
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to r[2] -entity vga
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to r[1] -entity vga
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to r -entity vga
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to reset -entity vga
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seg_ones[0] -entity vga
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seg_ones[1] -entity vga
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seg_ones[2] -entity vga
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seg_ones[3] -entity vga
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seg_ones[4] -entity vga
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seg_ones[5] -entity vga
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seg_ones[6] -entity vga
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seg_ones -entity vga
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seg_tens[6] -entity vga
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seg_tens[5] -entity vga
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seg_tens[4] -entity vga
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seg_tens[3] -entity vga
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seg_tens[2] -entity vga
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seg_tens[1] -entity vga
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seg_tens[0] -entity vga
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seg_tens -entity vga
+set_global_assignment -name TOP_LEVEL_ENTITY time_counter
 set_global_assignment -name SYSTEMVERILOG_FILE shuffle.sv
 set_global_assignment -name SYSTEMVERILOG_FILE btn_debounced_pulse.sv
 set_global_assignment -name SYSTEMVERILOG_FILE cursor_4x4.sv
 set_location_assignment PIN_AA15 -to btn_up_n
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to btn_up_n
 set_location_assignment PIN_AJ4 -to btn_right_n
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to btn_right_n
 set_location_assignment PIN_AK4 -to btn_left_n
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to btn_left_n
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to btn_down_n
 set_location_assignment PIN_AA14 -to btn_down_n
 set_global_assignment -name SYSTEMVERILOG_FILE score_manager_two.sv
 set_location_assignment PIN_AD21 -to seg_score_p0[0]
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seg_score_p0[0]
 set_location_assignment PIN_AG22 -to seg_score_p0[1]
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seg_score_p0[1]
 set_location_assignment PIN_AE22 -to seg_score_p0[2]
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seg_score_p0[2]
 set_location_assignment PIN_AE23 -to seg_score_p0[3]
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seg_score_p0[3]
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seg_score_p0[4]
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seg_score_p0[5]
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seg_score_p0[6]
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seg_score_p0
 set_location_assignment PIN_AG23 -to seg_score_p0[4]
 set_location_assignment PIN_AF23 -to seg_score_p0[5]
 set_location_assignment PIN_AH22 -to seg_score_p0[6]
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seg_score_p1[0]
 set_location_assignment PIN_AF21 -to seg_score_p1[0]
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seg_score_p1[1]
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seg_score_p1[2]
 set_location_assignment PIN_AG21 -to seg_score_p1[1]
 set_location_assignment PIN_AF20 -to seg_score_p1[2]
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seg_score_p1[3]
 set_location_assignment PIN_AG20 -to seg_score_p1[3]
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seg_score_p1[4]
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seg_score_p1[6]
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seg_score_p1[5]
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seg_score_p1
 set_location_assignment PIN_AE19 -to seg_score_p1[4]
 set_location_assignment PIN_AF19 -to seg_score_p1[5]
 set_location_assignment PIN_AB21 -to seg_score_p1[6]
 set_location_assignment PIN_AA21 -to seg_player[0]
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seg_player[0]
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seg_player[1]
 set_location_assignment PIN_AB17 -to seg_player[1]
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seg_player[2]
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seg_player[3]
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seg_player[4]
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seg_player[5]
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seg_player[6]
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seg_player
 set_location_assignment PIN_AA18 -to seg_player[2]
 set_location_assignment PIN_Y17 -to seg_player[3]
 set_location_assignment PIN_Y18 -to seg_player[4]
 set_location_assignment PIN_AF18 -to seg_player[5]
 set_location_assignment PIN_W16 -to seg_player[6]
-set_location_assignment PIN_AB30 -to sw_flip
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to sw_flip
+set_location_assignment PIN_Y27 -to sw_flip
 set_global_assignment -name SYSTEMVERILOG_FILE selection_manager.sv
 set_global_assignment -name SYSTEMVERILOG_FILE pair_compare.sv
 set_global_assignment -name SYSTEMVERILOG_FILE delay_timer.sv
 set_global_assignment -name SYSTEMVERILOG_FILE auto_picker.sv
 set_global_assignment -name SYSTEMVERILOG_FILE winner_logic.sv
 set_global_assignment -name SYSTEMVERILOG_FILE switch_debounced.sv
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to clk
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to hsync
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to vsync
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to vgaclk
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to r[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to sync_b
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to blank_b
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to b[7]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to b[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to b[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to b[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to b[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to b[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to b[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to b[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to b
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to g[7]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to g[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to g[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to g[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to g[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to g[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to g[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to g[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to g
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to r[7]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to r[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to r[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to r[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to r[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to r[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to r[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to r
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to reset
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seg_ones[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seg_ones[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seg_ones[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seg_ones[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seg_ones[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seg_ones[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seg_ones[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seg_ones
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seg_tens[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seg_tens[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seg_tens[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seg_tens[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seg_tens[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seg_tens[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seg_tens[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seg_tens
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to btn_up_n
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to btn_right_n
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to btn_left_n
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to btn_down_n
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seg_score_p0[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seg_score_p0[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seg_score_p0[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seg_score_p0[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seg_score_p0[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seg_score_p0[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seg_score_p0[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seg_score_p0
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seg_score_p1[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seg_score_p1[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seg_score_p1[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seg_score_p1[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seg_score_p1[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seg_score_p1[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seg_score_p1[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seg_score_p1
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seg_player[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seg_player[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seg_player[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seg_player[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seg_player[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seg_player[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seg_player[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to seg_player
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to sw_flip
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
