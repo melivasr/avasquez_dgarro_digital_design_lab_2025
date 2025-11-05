@@ -1,4 +1,4 @@
-//Half - subtractor -----------
+//Half-subtractor
 module half_subtractor (
     input bit a,
     input bit b,
@@ -10,7 +10,7 @@ module half_subtractor (
 endmodule
 
 
-//Full - subtractor -----------
+//Full-subtractor
 module full_subtractor (
     input bit a,
     input bit b,
@@ -25,7 +25,7 @@ module full_subtractor (
 endmodule
 
 
-//Nbit - subtractor -----------
+//Nbit-subtractor
 module subtractor_n_bit #(parameter N = 4)(
     input [N-1:0] a,
     input [N-1:0] b,

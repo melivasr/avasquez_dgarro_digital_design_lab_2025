@@ -7,5 +7,5 @@
 	 if(reset) 
 		q<=0;
 	 else 
-	 q<=d;
+		q<=d;
  endmodule

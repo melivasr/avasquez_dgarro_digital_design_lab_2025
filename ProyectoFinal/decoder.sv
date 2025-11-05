@@ -12,10 +12,9 @@
  //MainDecoder
  always_comb
 	 casex(Op)
-		//Data-processingimmediate
+		//Data-processing immediate
 		 2'b00:if(Funct[5]) controls = 10'b0000101001;
-		 
-		 //Data-processingregister
+		 //Data-processing register
 			else controls=10'b0000001001;
 		 //LDR
 		 2'b01:if(Funct[0]) controls=10'b0001111000;
@@ -32,7 +31,7 @@ assign{RegSrc,ImmSrc,ALUSrc,MemtoReg,
 	 
  //ALUDecoder
  always_comb
-	 if(ALUOp)begin //whichDPInstr?
+	 if(ALUOp)begin //which DP Instr?
 	 case(Funct[4:1])
 		 4'b0100: ALUControl=2'b00; //ADD
 		 4'b0010: ALUControl=2'b01; //SUB
@@ -40,13 +39,13 @@ assign{RegSrc,ImmSrc,ALUSrc,MemtoReg,
 		 4'b1100: ALUControl=2'b11; //ORR
 		 default: ALUControl=2'bx; //unimplemented
 	 endcase
-	 //update flags if Sbitisset(C&Vonlyforarith)
-	 FlagW[1] =Funct[0];
+	 //update flags if S bit is set (C & V only for arith)
+	 FlagW[1] =Funct[0]; 
 	 FlagW[0] =Funct[0]&
 	 (ALUControl==2'b00|ALUControl==2'b01);
 	 end else begin
-	 ALUControl=2'b00; //addfornon-DPinstructions
-	 FlagW =2'b00; //don'tupdateFlags
+	 ALUControl=2'b00; //add for non-DP instructions
+	 FlagW =2'b00; //don't update Flags
 	end
 	
  //PCLogic

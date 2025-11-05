@@ -1,0 +1,766 @@
+# Reading pref.tcl
+# do ProyectoFinal_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal {C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/ram.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:39:11 on Nov 05,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal" C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/ram.v 
+# -- Compiling module ram
+# 
+# Top level modules:
+# 	ram
+# End time: 13:39:11 on Nov 05,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal {C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/rom.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:39:11 on Nov 05,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal" C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/rom.v 
+# -- Compiling module rom
+# 
+# Top level modules:
+# 	rom
+# End time: 13:39:11 on Nov 05,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal {C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/adder_n_bit.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:39:11 on Nov 05,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal" C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/adder_n_bit.sv 
+# -- Compiling module half_adder
+# -- Compiling module full_adder
+# -- Compiling module adder_n_bit
+# 
+# Top level modules:
+# 	adder_n_bit
+# End time: 13:39:11 on Nov 05,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal {C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/alu.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:39:11 on Nov 05,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal" C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/alu.sv 
+# -- Compiling module alu
+# 
+# Top level modules:
+# 	alu
+# End time: 13:39:11 on Nov 05,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal {C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/arm.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:39:11 on Nov 05,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal" C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/arm.sv 
+# -- Compiling module arm
+# 
+# Top level modules:
+# 	arm
+# End time: 13:39:11 on Nov 05,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal {C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/condcheck.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:39:11 on Nov 05,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal" C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/condcheck.sv 
+# -- Compiling module condcheck
+# 
+# Top level modules:
+# 	condcheck
+# End time: 13:39:11 on Nov 05,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal {C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/condlogic.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:39:11 on Nov 05,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal" C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/condlogic.sv 
+# -- Compiling module condlogic
+# 
+# Top level modules:
+# 	condlogic
+# End time: 13:39:12 on Nov 05,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal {C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/controller.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:39:12 on Nov 05,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal" C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/controller.sv 
+# -- Compiling module controller
+# 
+# Top level modules:
+# 	controller
+# End time: 13:39:12 on Nov 05,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal {C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/datapath.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:39:12 on Nov 05,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal" C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/datapath.sv 
+# -- Compiling module datapath
+# 
+# Top level modules:
+# 	datapath
+# End time: 13:39:12 on Nov 05,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal {C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/decoder.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:39:12 on Nov 05,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal" C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/decoder.sv 
+# -- Compiling module decoder
+# 
+# Top level modules:
+# 	decoder
+# End time: 13:39:12 on Nov 05,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal {C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/extend.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:39:12 on Nov 05,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal" C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/extend.sv 
+# -- Compiling module extend
+# 
+# Top level modules:
+# 	extend
+# End time: 13:39:12 on Nov 05,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal {C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/flopenr.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:39:12 on Nov 05,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal" C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/flopenr.sv 
+# -- Compiling module flopenr
+# 
+# Top level modules:
+# 	flopenr
+# End time: 13:39:12 on Nov 05,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal {C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/flopr.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:39:12 on Nov 05,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal" C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/flopr.sv 
+# -- Compiling module flopr
+# 
+# Top level modules:
+# 	flopr
+# End time: 13:39:12 on Nov 05,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal {C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/mux2.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:39:12 on Nov 05,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal" C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/mux2.sv 
+# -- Compiling module mux2
+# 
+# Top level modules:
+# 	mux2
+# End time: 13:39:12 on Nov 05,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal {C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/regfile.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:39:12 on Nov 05,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal" C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/regfile.sv 
+# -- Compiling module regfile
+# 
+# Top level modules:
+# 	regfile
+# End time: 13:39:12 on Nov 05,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal {C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/subtractor_n_bit.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:39:12 on Nov 05,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal" C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/subtractor_n_bit.sv 
+# -- Compiling module half_subtractor
+# -- Compiling module full_subtractor
+# -- Compiling module subtractor_n_bit
+# 
+# Top level modules:
+# 	subtractor_n_bit
+# End time: 13:39:12 on Nov 05,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal {C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/top.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:39:12 on Nov 05,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal" C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/top.sv 
+# -- Compiling module top
+# 
+# Top level modules:
+# 	top
+# End time: 13:39:12 on Nov 05,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -sv -work work +incdir+C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal {C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/top_tb.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:39:13 on Nov 05,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal" C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/top_tb.sv 
+# -- Compiling module top_tb
+# 
+# Top level modules:
+# 	top_tb
+# End time: 13:39:13 on Nov 05,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  top_tb
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" top_tb 
+# Start time: 13:39:13 on Nov 05,2025
+# Loading sv_std.std
+# Loading work.top_tb
+# Loading work.arm
+# Loading work.controller
+# Loading work.decoder
+# Loading work.condlogic
+# Loading work.flopenr
+# Loading work.condcheck
+# Loading work.datapath
+# Loading work.mux2
+# Loading work.flopr
+# Loading work.adder_n_bit
+# Loading work.regfile
+# Loading work.extend
+# Loading work.alu
+# Loading work.subtractor_n_bit
+# Loading work.rom
+# Loading altera_mf_ver.altsyncram
+# Loading work.ram
+# Loading work.full_adder
+# Loading work.half_adder
+# Loading work.full_subtractor
+# Loading work.half_subtractor
+# Loading altera_mf_ver.altsyncram_body
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'pcadd1'.  Expected 4, found 3.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb/arm_inst/dp/pcadd1 File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/datapath.sv Line: 22
+# ** Warning: (vsim-3722) C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/datapath.sv(22): [TFMPC] - Missing connection for port 'cout'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'pcadd2'.  Expected 4, found 3.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb/arm_inst/dp/pcadd2 File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/datapath.sv Line: 23
+# ** Warning: (vsim-3722) C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/datapath.sv(23): [TFMPC] - Missing connection for port 'cout'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'alu'.  Expected 10, found 5.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb/arm_inst/dp/alu File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/datapath.sv Line: 36
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'A'. The port definition is at: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/alu.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb/arm_inst/dp/alu File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/datapath.sv Line: 36
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'B'. The port definition is at: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/alu.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb/arm_inst/dp/alu File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/datapath.sv Line: 36
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'result'. The port definition is at: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/alu.sv(5).
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb/arm_inst/dp/alu File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/datapath.sv Line: 36
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (4) for port 'N'. The port definition is at: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/alu.sv(6).
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb/arm_inst/dp/alu File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/datapath.sv Line: 36
+# ** Warning: (vsim-3722) C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/datapath.sv(36): [TFMPC] - Missing connection for port 'Z'.
+# ** Warning: (vsim-3722) C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/datapath.sv(36): [TFMPC] - Missing connection for port 'C'.
+# ** Warning: (vsim-3722) C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/datapath.sv(36): [TFMPC] - Missing connection for port 'V'.
+# ** Warning: (vsim-3722) C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/datapath.sv(36): [TFMPC] - Missing connection for port 'seg1'.
+# ** Warning: (vsim-3722) C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/datapath.sv(36): [TFMPC] - Missing connection for port 'seg2'.
+# ** Warning: (vsim-3015) [PCDPC] - Port size (6) does not match connection size (9) for port 'address'. The port definition is at: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/rom.v(41).
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb/imem File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/top_tb.sv Line: 29
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# ARM Processor Test
+# PC=0000 | Instr=e24f000c | MW=0 | Addr=000c | WD=xxxxxxxx | RD=xxxxxxxx
+# PC=0004 | Instr=e24f000c | MW=0 | Addr=0000 | WD=xxxxxxxx | RD=xxxxxxxx
+# PC=0008 | Instr=e24f000c | MW=0 | Addr=0004 | WD=xxxxxxxx | RD=00000000
+# PC=000c | Instr=e2801005 | MW=0 | Addr=0009 | WD=xxxxxxxx | RD=00000000
+# PC=0010 | Instr=e5801000 | MW=1 | Addr=0004 | WD=00000009 | RD=00000000
+# PC=0014 | Instr=e5902000 | MW=0 | Addr=0004 | WD=00000004 | RD=00000000
+# PC=0018 | Instr=e2523008 | MW=0 | Addr=0008 | WD=xxxxxxxx | RD=00000009
+# PC=001c | Instr=0a000001 | MW=0 | Addr=0008 | WD=00000009 | RD=00000009
+# PC=0020 | Instr=e2811001 | MW=0 | Addr=000a | WD=00000009 | RD=00000000
+# PC=0024 | Instr=ea000000 | MW=0 | Addr=000c | WD=00000004 | RD=00000000
+# PC=000c | Instr=e3a0402a | MW=0 | Addr=000X | WD=xxxxxxxx | RD=00000000
+# PC=0010 | Instr=e5801004 | MW=1 | Addr=0008 | WD=0000000a | RD=00000000
+# PC=0014 | Instr=e5902000 | MW=0 | Addr=0004 | WD=00000004 | RD=xxxxxxxx
+# PC=0018 | Instr=e2523008 | MW=0 | Addr=0008 | WD=xxxxxxxx | RD=0000000a
+# PC=001c | Instr=0a000001 | MW=0 | Addr=0008 | WD=0000000a | RD=00000009
+# PC=0020 | Instr=e2811001 | MW=0 | Addr=000b | WD=0000000a | RD=0000000a
+# PC=0024 | Instr=ea000000 | MW=0 | Addr=000c | WD=00000004 | RD=0000000a
+# PC=000c | Instr=e3a0402a | MW=0 | Addr=000X | WD=xxxxxxxx | RD=0000000a
+# PC=0010 | Instr=e5801004 | MW=1 | Addr=0008 | WD=0000000b | RD=00000000
+# PC=0014 | Instr=e5902000 | MW=0 | Addr=0004 | WD=00000004 | RD=xxxxxxxx
+# PC=0018 | Instr=e2523008 | MW=0 | Addr=0008 | WD=xxxxxxxx | RD=0000000b
+# PC=001c | Instr=0a000001 | MW=0 | Addr=0008 | WD=0000000b | RD=00000009
+# PC=0020 | Instr=e2811001 | MW=0 | Addr=000c | WD=0000000b | RD=0000000b
+# PC=0024 | Instr=ea000000 | MW=0 | Addr=000c | WD=00000004 | RD=0000000b
+# PC=000c | Instr=e3a0402a | MW=0 | Addr=000X | WD=xxxxxxxx | RD=00000000
+# PC=0010 | Instr=e5801004 | MW=1 | Addr=0008 | WD=0000000c | RD=00000000
+# PC=0014 | Instr=e5902000 | MW=0 | Addr=0004 | WD=00000004 | RD=xxxxxxxx
+# PC=0018 | Instr=e2523008 | MW=0 | Addr=0008 | WD=xxxxxxxx | RD=0000000c
+# PC=001c | Instr=0a000001 | MW=0 | Addr=0008 | WD=0000000c | RD=00000009
+# PC=0020 | Instr=e2811001 | MW=0 | Addr=000d | WD=0000000c | RD=0000000c
+# PC=0024 | Instr=ea000000 | MW=0 | Addr=000c | WD=00000004 | RD=0000000c
+# PC=000c | Instr=e3a0402a | MW=0 | Addr=000X | WD=xxxxxxxx | RD=00000000
+# PC=0010 | Instr=e5801004 | MW=1 | Addr=0008 | WD=0000000d | RD=00000000
+# PC=0014 | Instr=e5902000 | MW=0 | Addr=0004 | WD=00000004 | RD=xxxxxxxx
+# PC=0018 | Instr=e2523008 | MW=0 | Addr=0008 | WD=xxxxxxxx | RD=0000000d
+# PC=001c | Instr=0a000001 | MW=0 | Addr=0008 | WD=0000000d | RD=00000009
+# PC=0020 | Instr=e2811001 | MW=0 | Addr=000e | WD=0000000d | RD=0000000d
+# PC=0024 | Instr=ea000000 | MW=0 | Addr=000c | WD=00000004 | RD=0000000d
+# PC=000c | Instr=e3a0402a | MW=0 | Addr=000X | WD=xxxxxxxx | RD=00000000
+# PC=0010 | Instr=e5801004 | MW=1 | Addr=0008 | WD=0000000e | RD=00000000
+# PC=0014 | Instr=e5902000 | MW=0 | Addr=0004 | WD=00000004 | RD=xxxxxxxx
+# PC=0018 | Instr=e2523008 | MW=0 | Addr=0008 | WD=xxxxxxxx | RD=0000000e
+# PC=001c | Instr=0a000001 | MW=0 | Addr=0008 | WD=0000000e | RD=00000009
+# PC=0020 | Instr=e2811001 | MW=0 | Addr=000f | WD=0000000e | RD=0000000e
+# PC=0024 | Instr=ea000000 | MW=0 | Addr=000c | WD=00000004 | RD=0000000e
+# PC=000c | Instr=e3a0402a | MW=0 | Addr=000X | WD=xxxxxxxx | RD=00000000
+# PC=0010 | Instr=e5801004 | MW=1 | Addr=0008 | WD=0000000f | RD=00000000
+# PC=0014 | Instr=e5902000 | MW=0 | Addr=0004 | WD=00000004 | RD=xxxxxxxx
+# PC=0018 | Instr=e2523008 | MW=0 | Addr=0008 | WD=xxxxxxxx | RD=0000000f
+# PC=001c | Instr=0a000001 | MW=0 | Addr=0008 | WD=0000000f | RD=00000009
+# PC=0020 | Instr=e2811001 | MW=0 | Addr=0000 | WD=0000000f | RD=0000000f
+# PC=0024 | Instr=ea000000 | MW=0 | Addr=000c | WD=00000004 | RD=0000000f
+# PC=000c | Instr=e3a0402a | MW=0 | Addr=000X | WD=xxxxxxxx | RD=00000000
+# PC=0010 | Instr=e5801004 | MW=1 | Addr=0008 | WD=00000000 | RD=00000000
+# PC=0014 | Instr=e5902000 | MW=0 | Addr=0004 | WD=00000004 | RD=xxxxxxxx
+# PC=0018 | Instr=e2523008 | MW=0 | Addr=0008 | WD=xxxxxxxx | RD=00000000
+# PC=001c | Instr=0a000001 | MW=0 | Addr=0008 | WD=00000000 | RD=00000009
+# PC=0020 | Instr=e2811001 | MW=0 | Addr=0001 | WD=00000000 | RD=00000000
+# PC=0024 | Instr=ea000000 | MW=0 | Addr=000c | WD=00000004 | RD=00000000
+# PC=000c | Instr=e3a0402a | MW=0 | Addr=000X | WD=xxxxxxxx | RD=00000000
+# PC=0010 | Instr=e5801004 | MW=1 | Addr=0008 | WD=00000001 | RD=00000000
+# PC=0014 | Instr=e5902000 | MW=0 | Addr=0004 | WD=00000004 | RD=xxxxxxxx
+# PC=0018 | Instr=e2523008 | MW=0 | Addr=0008 | WD=xxxxxxxx | RD=00000001
+# PC=001c | Instr=0a000001 | MW=0 | Addr=0008 | WD=00000001 | RD=00000009
+# PC=0020 | Instr=e2811001 | MW=0 | Addr=0002 | WD=00000001 | RD=00000001
+# PC=0024 | Instr=ea000000 | MW=0 | Addr=000c | WD=00000004 | RD=00000001
+# PC=000c | Instr=e3a0402a | MW=0 | Addr=000X | WD=xxxxxxxx | RD=00000000
+# PC=0010 | Instr=e5801004 | MW=1 | Addr=0008 | WD=00000002 | RD=00000000
+# PC=0014 | Instr=e5902000 | MW=0 | Addr=0004 | WD=00000004 | RD=xxxxxxxx
+# PC=0018 | Instr=e2523008 | MW=0 | Addr=0008 | WD=xxxxxxxx | RD=00000002
+# PC=001c | Instr=0a000001 | MW=0 | Addr=0008 | WD=00000002 | RD=00000009
+# PC=0020 | Instr=e2811001 | MW=0 | Addr=0003 | WD=00000002 | RD=00000002
+# PC=0024 | Instr=ea000000 | MW=0 | Addr=000c | WD=00000004 | RD=00000002
+# PC=000c | Instr=e3a0402a | MW=0 | Addr=000X | WD=xxxxxxxx | RD=00000000
+# PC=0010 | Instr=e5801004 | MW=1 | Addr=0008 | WD=00000003 | RD=00000000
+# PC=0014 | Instr=e5902000 | MW=0 | Addr=0004 | WD=00000004 | RD=xxxxxxxx
+# PC=0018 | Instr=e2523008 | MW=0 | Addr=0008 | WD=xxxxxxxx | RD=00000003
+# PC=001c | Instr=0a000001 | MW=0 | Addr=0008 | WD=00000003 | RD=00000009
+# PC=0020 | Instr=e2811001 | MW=0 | Addr=0004 | WD=00000003 | RD=00000003
+# PC=0024 | Instr=ea000000 | MW=0 | Addr=000c | WD=00000004 | RD=00000003
+# PC=000c | Instr=e3a0402a | MW=0 | Addr=000X | WD=xxxxxxxx | RD=00000009
+# PC=0010 | Instr=e5801004 | MW=1 | Addr=0008 | WD=00000004 | RD=00000000
+# PC=0014 | Instr=e5902000 | MW=0 | Addr=0004 | WD=00000004 | RD=xxxxxxxx
+# PC=0018 | Instr=e2523008 | MW=0 | Addr=0008 | WD=xxxxxxxx | RD=00000004
+# PC=001c | Instr=0a000001 | MW=0 | Addr=0008 | WD=00000004 | RD=00000009
+# PC=0020 | Instr=e2811001 | MW=0 | Addr=0005 | WD=00000004 | RD=00000004
+# PC=0024 | Instr=ea000000 | MW=0 | Addr=000c | WD=00000004 | RD=00000004
+# PC=000c | Instr=e3a0402a | MW=0 | Addr=000X | WD=xxxxxxxx | RD=00000009
+# PC=0010 | Instr=e5801004 | MW=1 | Addr=0008 | WD=00000005 | RD=00000000
+# PC=0014 | Instr=e5902000 | MW=0 | Addr=0004 | WD=00000004 | RD=xxxxxxxx
+# PC=0018 | Instr=e2523008 | MW=0 | Addr=0008 | WD=xxxxxxxx | RD=00000005
+# PC=001c | Instr=0a000001 | MW=0 | Addr=0008 | WD=00000005 | RD=00000009
+# PC=0020 | Instr=e2811001 | MW=0 | Addr=0006 | WD=00000005 | RD=00000005
+# PC=0024 | Instr=ea000000 | MW=0 | Addr=000c | WD=00000004 | RD=00000005
+# PC=000c | Instr=e3a0402a | MW=0 | Addr=000X | WD=xxxxxxxx | RD=00000009
+# PC=0010 | Instr=e5801004 | MW=1 | Addr=0008 | WD=00000006 | RD=00000000
+# PC=0014 | Instr=e5902000 | MW=0 | Addr=0004 | WD=00000004 | RD=xxxxxxxx
+# PC=0018 | Instr=e2523008 | MW=0 | Addr=0008 | WD=xxxxxxxx | RD=00000006
+# PC=001c | Instr=0a000001 | MW=0 | Addr=0008 | WD=00000006 | RD=00000009
+# PC=0020 | Instr=e2811001 | MW=0 | Addr=0007 | WD=00000006 | RD=00000006
+# PC=0024 | Instr=ea000000 | MW=0 | Addr=000c | WD=00000004 | RD=00000006
+# PC=000c | Instr=e3a0402a | MW=0 | Addr=000X | WD=xxxxxxxx | RD=00000009
+# PC=0010 | Instr=e5801004 | MW=1 | Addr=0008 | WD=00000007 | RD=00000000
+# PC=0014 | Instr=e5902000 | MW=0 | Addr=0004 | WD=00000004 | RD=xxxxxxxx
+# PC=0018 | Instr=e2523008 | MW=0 | Addr=0008 | WD=xxxxxxxx | RD=00000007
+# PC=001c | Instr=0a000001 | MW=0 | Addr=0008 | WD=00000007 | RD=00000009
+# PC=0020 | Instr=e2811001 | MW=0 | Addr=0008 | WD=00000007 | RD=00000007
+# PC=0024 | Instr=ea000000 | MW=0 | Addr=000c | WD=00000004 | RD=00000007
+# PC=000c | Instr=e3a0402a | MW=0 | Addr=000X | WD=xxxxxxxx | RD=00000007
+# PC=0010 | Instr=e5801004 | MW=1 | Addr=0008 | WD=00000008 | RD=00000000
+# PC=0014 | Instr=e5902000 | MW=0 | Addr=0004 | WD=00000004 | RD=xxxxxxxx
+# PC=0018 | Instr=e2523008 | MW=0 | Addr=0008 | WD=xxxxxxxx | RD=00000008
+# PC=001c | Instr=0a000001 | MW=0 | Addr=0008 | WD=00000008 | RD=00000009
+# PC=0020 | Instr=e2811001 | MW=0 | Addr=0009 | WD=00000008 | RD=00000008
+# PC=0024 | Instr=ea000000 | MW=0 | Addr=000c | WD=00000004 | RD=00000008
+# PC=000c | Instr=e3a0402a | MW=0 | Addr=000X | WD=xxxxxxxx | RD=00000008
+# PC=0010 | Instr=e5801004 | MW=1 | Addr=0008 | WD=00000009 | RD=00000000
+# PC=0014 | Instr=e5902000 | MW=0 | Addr=0004 | WD=00000004 | RD=xxxxxxxx
+# PC=0018 | Instr=e2523008 | MW=0 | Addr=0008 | WD=xxxxxxxx | RD=00000009
+# PC=001c | Instr=0a000001 | MW=0 | Addr=0008 | WD=00000009 | RD=00000009
+# PC=0020 | Instr=e2811001 | MW=0 | Addr=000a | WD=00000009 | RD=00000009
+# PC=0024 | Instr=ea000000 | MW=0 | Addr=000c | WD=00000004 | RD=00000009
+# PC=000c | Instr=e3a0402a | MW=0 | Addr=000X | WD=xxxxxxxx | RD=00000009
+# PC=0010 | Instr=e5801004 | MW=1 | Addr=0008 | WD=0000000a | RD=00000000
+# PC=0014 | Instr=e5902000 | MW=0 | Addr=0004 | WD=00000004 | RD=xxxxxxxx
+# PC=0018 | Instr=e2523008 | MW=0 | Addr=0008 | WD=xxxxxxxx | RD=0000000a
+# PC=001c | Instr=0a000001 | MW=0 | Addr=0008 | WD=0000000a | RD=00000009
+# PC=0020 | Instr=e2811001 | MW=0 | Addr=000b | WD=0000000a | RD=0000000a
+# PC=0024 | Instr=ea000000 | MW=0 | Addr=000c | WD=00000004 | RD=0000000a
+# PC=000c | Instr=e3a0402a | MW=0 | Addr=000X | WD=xxxxxxxx | RD=0000000a
+# PC=0010 | Instr=e5801004 | MW=1 | Addr=0008 | WD=0000000b | RD=00000000
+# PC=0014 | Instr=e5902000 | MW=0 | Addr=0004 | WD=00000004 | RD=xxxxxxxx
+# PC=0018 | Instr=e2523008 | MW=0 | Addr=0008 | WD=xxxxxxxx | RD=0000000b
+# PC=001c | Instr=0a000001 | MW=0 | Addr=0008 | WD=0000000b | RD=00000009
+# PC=0020 | Instr=e2811001 | MW=0 | Addr=000c | WD=0000000b | RD=0000000b
+# PC=0024 | Instr=ea000000 | MW=0 | Addr=000c | WD=00000004 | RD=0000000b
+# PC=000c | Instr=e3a0402a | MW=0 | Addr=000X | WD=xxxxxxxx | RD=00000000
+# PC=0010 | Instr=e5801004 | MW=1 | Addr=0008 | WD=0000000c | RD=00000000
+# PC=0014 | Instr=e5902000 | MW=0 | Addr=0004 | WD=00000004 | RD=xxxxxxxx
+# PC=0018 | Instr=e2523008 | MW=0 | Addr=0008 | WD=xxxxxxxx | RD=0000000c
+# PC=001c | Instr=0a000001 | MW=0 | Addr=0008 | WD=0000000c | RD=00000009
+# PC=0020 | Instr=e2811001 | MW=0 | Addr=000d | WD=0000000c | RD=0000000c
+# PC=0024 | Instr=ea000000 | MW=0 | Addr=000c | WD=00000004 | RD=0000000c
+# PC=000c | Instr=e3a0402a | MW=0 | Addr=000X | WD=xxxxxxxx | RD=00000000
+# PC=0010 | Instr=e5801004 | MW=1 | Addr=0008 | WD=0000000d | RD=00000000
+# PC=0014 | Instr=e5902000 | MW=0 | Addr=0004 | WD=00000004 | RD=xxxxxxxx
+# PC=0018 | Instr=e2523008 | MW=0 | Addr=0008 | WD=xxxxxxxx | RD=0000000d
+# PC=001c | Instr=0a000001 | MW=0 | Addr=0008 | WD=0000000d | RD=00000009
+# PC=0020 | Instr=e2811001 | MW=0 | Addr=000e | WD=0000000d | RD=0000000d
+# PC=0024 | Instr=ea000000 | MW=0 | Addr=000c | WD=00000004 | RD=0000000d
+# PC=000c | Instr=e3a0402a | MW=0 | Addr=000X | WD=xxxxxxxx | RD=00000000
+# PC=0010 | Instr=e5801004 | MW=1 | Addr=0008 | WD=0000000e | RD=00000000
+# PC=0014 | Instr=e5902000 | MW=0 | Addr=0004 | WD=00000004 | RD=xxxxxxxx
+# PC=0018 | Instr=e2523008 | MW=0 | Addr=0008 | WD=xxxxxxxx | RD=0000000e
+# PC=001c | Instr=0a000001 | MW=0 | Addr=0008 | WD=0000000e | RD=00000009
+# PC=0020 | Instr=e2811001 | MW=0 | Addr=000f | WD=0000000e | RD=0000000e
+# PC=0024 | Instr=ea000000 | MW=0 | Addr=000c | WD=00000004 | RD=0000000e
+# PC=000c | Instr=e3a0402a | MW=0 | Addr=000X | WD=xxxxxxxx | RD=00000000
+# PC=0010 | Instr=e5801004 | MW=1 | Addr=0008 | WD=0000000f | RD=00000000
+# PC=0014 | Instr=e5902000 | MW=0 | Addr=0004 | WD=00000004 | RD=xxxxxxxx
+# PC=0018 | Instr=e2523008 | MW=0 | Addr=0008 | WD=xxxxxxxx | RD=0000000f
+# PC=001c | Instr=0a000001 | MW=0 | Addr=0008 | WD=0000000f | RD=00000009
+# PC=0020 | Instr=e2811001 | MW=0 | Addr=0000 | WD=0000000f | RD=0000000f
+# PC=0024 | Instr=ea000000 | MW=0 | Addr=000c | WD=00000004 | RD=0000000f
+# PC=000c | Instr=e3a0402a | MW=0 | Addr=000X | WD=xxxxxxxx | RD=00000000
+# PC=0010 | Instr=e5801004 | MW=1 | Addr=0008 | WD=00000000 | RD=00000000
+# PC=0014 | Instr=e5902000 | MW=0 | Addr=0004 | WD=00000004 | RD=xxxxxxxx
+# PC=0018 | Instr=e2523008 | MW=0 | Addr=0008 | WD=xxxxxxxx | RD=00000000
+# PC=001c | Instr=0a000001 | MW=0 | Addr=0008 | WD=00000000 | RD=00000009
+# PC=0020 | Instr=e2811001 | MW=0 | Addr=0001 | WD=00000000 | RD=00000000
+# PC=0024 | Instr=ea000000 | MW=0 | Addr=000c | WD=00000004 | RD=00000000
+# PC=000c | Instr=e3a0402a | MW=0 | Addr=000X | WD=xxxxxxxx | RD=00000000
+# PC=0010 | Instr=e5801004 | MW=1 | Addr=0008 | WD=00000001 | RD=00000000
+# PC=0014 | Instr=e5902000 | MW=0 | Addr=0004 | WD=00000004 | RD=xxxxxxxx
+# PC=0018 | Instr=e2523008 | MW=0 | Addr=0008 | WD=xxxxxxxx | RD=00000001
+# PC=001c | Instr=0a000001 | MW=0 | Addr=0008 | WD=00000001 | RD=00000009
+# PC=0020 | Instr=e2811001 | MW=0 | Addr=0002 | WD=00000001 | RD=00000001
+# PC=0024 | Instr=ea000000 | MW=0 | Addr=000c | WD=00000004 | RD=00000001
+# PC=000c | Instr=e3a0402a | MW=0 | Addr=000X | WD=xxxxxxxx | RD=00000000
+# PC=0010 | Instr=e5801004 | MW=1 | Addr=0008 | WD=00000002 | RD=00000000
+# PC=0014 | Instr=e5902000 | MW=0 | Addr=0004 | WD=00000004 | RD=xxxxxxxx
+# PC=0018 | Instr=e2523008 | MW=0 | Addr=0008 | WD=xxxxxxxx | RD=00000002
+# PC=001c | Instr=0a000001 | MW=0 | Addr=0008 | WD=00000002 | RD=00000009
+# PC=0020 | Instr=e2811001 | MW=0 | Addr=0003 | WD=00000002 | RD=00000002
+# PC=0024 | Instr=ea000000 | MW=0 | Addr=000c | WD=00000004 | RD=00000002
+# PC=000c | Instr=e3a0402a | MW=0 | Addr=000X | WD=xxxxxxxx | RD=00000000
+# PC=0010 | Instr=e5801004 | MW=1 | Addr=0008 | WD=00000003 | RD=00000000
+# PC=0014 | Instr=e5902000 | MW=0 | Addr=0004 | WD=00000004 | RD=xxxxxxxx
+# PC=0018 | Instr=e2523008 | MW=0 | Addr=0008 | WD=xxxxxxxx | RD=00000003
+# PC=001c | Instr=0a000001 | MW=0 | Addr=0008 | WD=00000003 | RD=00000009
+# PC=0020 | Instr=e2811001 | MW=0 | Addr=0004 | WD=00000003 | RD=00000003
+# PC=0024 | Instr=ea000000 | MW=0 | Addr=000c | WD=00000004 | RD=00000003
+# PC=000c | Instr=e3a0402a | MW=0 | Addr=000X | WD=xxxxxxxx | RD=00000009
+# PC=0010 | Instr=e5801004 | MW=1 | Addr=0008 | WD=00000004 | RD=00000000
+# PC=0014 | Instr=e5902000 | MW=0 | Addr=0004 | WD=00000004 | RD=xxxxxxxx
+# PC=0018 | Instr=e2523008 | MW=0 | Addr=0008 | WD=xxxxxxxx | RD=00000004
+# PC=001c | Instr=0a000001 | MW=0 | Addr=0008 | WD=00000004 | RD=00000009
+# PC=0020 | Instr=e2811001 | MW=0 | Addr=0005 | WD=00000004 | RD=00000004
+# PC=0024 | Instr=ea000000 | MW=0 | Addr=000c | WD=00000004 | RD=00000004
+# PC=000c | Instr=e3a0402a | MW=0 | Addr=000X | WD=xxxxxxxx | RD=00000009
+# PC=0010 | Instr=e5801004 | MW=1 | Addr=0008 | WD=00000005 | RD=00000000
+# PC=0014 | Instr=e5902000 | MW=0 | Addr=0004 | WD=00000004 | RD=xxxxxxxx
+# PC=0018 | Instr=e2523008 | MW=0 | Addr=0008 | WD=xxxxxxxx | RD=00000005
+# PC=001c | Instr=0a000001 | MW=0 | Addr=0008 | WD=00000005 | RD=00000009
+# PC=0020 | Instr=e2811001 | MW=0 | Addr=0006 | WD=00000005 | RD=00000005
+# PC=0024 | Instr=ea000000 | MW=0 | Addr=000c | WD=00000004 | RD=00000005
+# PC=000c | Instr=e3a0402a | MW=0 | Addr=000X | WD=xxxxxxxx | RD=00000009
+# PC=0010 | Instr=e5801004 | MW=1 | Addr=0008 | WD=00000006 | RD=00000000
+# PC=0014 | Instr=e5902000 | MW=0 | Addr=0004 | WD=00000004 | RD=xxxxxxxx
+# PC=0018 | Instr=e2523008 | MW=0 | Addr=0008 | WD=xxxxxxxx | RD=00000006
+# PC=001c | Instr=0a000001 | MW=0 | Addr=0008 | WD=00000006 | RD=00000009
+# PC=0020 | Instr=e2811001 | MW=0 | Addr=0007 | WD=00000006 | RD=00000006
+# PC=0024 | Instr=ea000000 | MW=0 | Addr=000c | WD=00000004 | RD=00000006
+# PC=000c | Instr=e3a0402a | MW=0 | Addr=000X | WD=xxxxxxxx | RD=00000009
+# PC=0010 | Instr=e5801004 | MW=1 | Addr=0008 | WD=00000007 | RD=00000000
+# PC=0014 | Instr=e5902000 | MW=0 | Addr=0004 | WD=00000004 | RD=xxxxxxxx
+# PC=0018 | Instr=e2523008 | MW=0 | Addr=0008 | WD=xxxxxxxx | RD=00000007
+# PC=001c | Instr=0a000001 | MW=0 | Addr=0008 | WD=00000007 | RD=00000009
+# PC=0020 | Instr=e2811001 | MW=0 | Addr=0008 | WD=00000007 | RD=00000007
+# PC=0024 | Instr=ea000000 | MW=0 | Addr=000c | WD=00000004 | RD=00000007
+# PC=000c | Instr=e3a0402a | MW=0 | Addr=000X | WD=xxxxxxxx | RD=00000007
+# PC=0010 | Instr=e5801004 | MW=1 | Addr=0008 | WD=00000008 | RD=00000000
+# PC=0014 | Instr=e5902000 | MW=0 | Addr=0004 | WD=00000004 | RD=xxxxxxxx
+# PC=0018 | Instr=e2523008 | MW=0 | Addr=0008 | WD=xxxxxxxx | RD=00000008
+# PC=001c | Instr=0a000001 | MW=0 | Addr=0008 | WD=00000008 | RD=00000009
+# PC=0020 | Instr=e2811001 | MW=0 | Addr=0009 | WD=00000008 | RD=00000008
+# PC=0024 | Instr=ea000000 | MW=0 | Addr=000c | WD=00000004 | RD=00000008
+# PC=000c | Instr=e3a0402a | MW=0 | Addr=000X | WD=xxxxxxxx | RD=00000008
+# PC=0010 | Instr=e5801004 | MW=1 | Addr=0008 | WD=00000009 | RD=00000000
+# PC=0014 | Instr=e5902000 | MW=0 | Addr=0004 | WD=00000004 | RD=xxxxxxxx
+# PC=0018 | Instr=e2523008 | MW=0 | Addr=0008 | WD=xxxxxxxx | RD=00000009
+# PC=001c | Instr=0a000001 | MW=0 | Addr=0008 | WD=00000009 | RD=00000009
+# PC=0020 | Instr=e2811001 | MW=0 | Addr=000a | WD=00000009 | RD=00000009
+# PC=0024 | Instr=ea000000 | MW=0 | Addr=000c | WD=00000004 | RD=00000009
+# PC=000c | Instr=e3a0402a | MW=0 | Addr=000X | WD=xxxxxxxx | RD=00000009
+# PC=0010 | Instr=e5801004 | MW=1 | Addr=0008 | WD=0000000a | RD=00000000
+# PC=0014 | Instr=e5902000 | MW=0 | Addr=0004 | WD=00000004 | RD=xxxxxxxx
+# PC=0018 | Instr=e2523008 | MW=0 | Addr=0008 | WD=xxxxxxxx | RD=0000000a
+# PC=001c | Instr=0a000001 | MW=0 | Addr=0008 | WD=0000000a | RD=00000009
+# PC=0020 | Instr=e2811001 | MW=0 | Addr=000b | WD=0000000a | RD=0000000a
+# PC=0024 | Instr=ea000000 | MW=0 | Addr=000c | WD=00000004 | RD=0000000a
+# PC=000c | Instr=e3a0402a | MW=0 | Addr=000X | WD=xxxxxxxx | RD=0000000a
+# PC=0010 | Instr=e5801004 | MW=1 | Addr=0008 | WD=0000000b | RD=00000000
+# PC=0014 | Instr=e5902000 | MW=0 | Addr=0004 | WD=00000004 | RD=xxxxxxxx
+# PC=0018 | Instr=e2523008 | MW=0 | Addr=0008 | WD=xxxxxxxx | RD=0000000b
+# PC=001c | Instr=0a000001 | MW=0 | Addr=0008 | WD=0000000b | RD=00000009
+# PC=0020 | Instr=e2811001 | MW=0 | Addr=000c | WD=0000000b | RD=0000000b
+# PC=0024 | Instr=ea000000 | MW=0 | Addr=000c | WD=00000004 | RD=0000000b
+# PC=000c | Instr=e3a0402a | MW=0 | Addr=000X | WD=xxxxxxxx | RD=00000000
+# PC=0010 | Instr=e5801004 | MW=1 | Addr=0008 | WD=0000000c | RD=00000000
+# PC=0014 | Instr=e5902000 | MW=0 | Addr=0004 | WD=00000004 | RD=xxxxxxxx
+# PC=0018 | Instr=e2523008 | MW=0 | Addr=0008 | WD=xxxxxxxx | RD=0000000c
+# PC=001c | Instr=0a000001 | MW=0 | Addr=0008 | WD=0000000c | RD=00000009
+# PC=0020 | Instr=e2811001 | MW=0 | Addr=000d | WD=0000000c | RD=0000000c
+# PC=0024 | Instr=ea000000 | MW=0 | Addr=000c | WD=00000004 | RD=0000000c
+# PC=000c | Instr=e3a0402a | MW=0 | Addr=000X | WD=xxxxxxxx | RD=00000000
+# PC=0010 | Instr=e5801004 | MW=1 | Addr=0008 | WD=0000000d | RD=00000000
+# PC=0014 | Instr=e5902000 | MW=0 | Addr=0004 | WD=00000004 | RD=xxxxxxxx
+# PC=0018 | Instr=e2523008 | MW=0 | Addr=0008 | WD=xxxxxxxx | RD=0000000d
+# PC=001c | Instr=0a000001 | MW=0 | Addr=0008 | WD=0000000d | RD=00000009
+# PC=0020 | Instr=e2811001 | MW=0 | Addr=000e | WD=0000000d | RD=0000000d
+# PC=0024 | Instr=ea000000 | MW=0 | Addr=000c | WD=00000004 | RD=0000000d
+# PC=000c | Instr=e3a0402a | MW=0 | Addr=000X | WD=xxxxxxxx | RD=00000000
+# PC=0010 | Instr=e5801004 | MW=1 | Addr=0008 | WD=0000000e | RD=00000000
+# PC=0014 | Instr=e5902000 | MW=0 | Addr=0004 | WD=00000004 | RD=xxxxxxxx
+# PC=0018 | Instr=e2523008 | MW=0 | Addr=0008 | WD=xxxxxxxx | RD=0000000e
+# PC=001c | Instr=0a000001 | MW=0 | Addr=0008 | WD=0000000e | RD=00000009
+# PC=0020 | Instr=e2811001 | MW=0 | Addr=000f | WD=0000000e | RD=0000000e
+# PC=0024 | Instr=ea000000 | MW=0 | Addr=000c | WD=00000004 | RD=0000000e
+# PC=000c | Instr=e3a0402a | MW=0 | Addr=000X | WD=xxxxxxxx | RD=00000000
+# PC=0010 | Instr=e5801004 | MW=1 | Addr=0008 | WD=0000000f | RD=00000000
+# PC=0014 | Instr=e5902000 | MW=0 | Addr=0004 | WD=00000004 | RD=xxxxxxxx
+# PC=0018 | Instr=e2523008 | MW=0 | Addr=0008 | WD=xxxxxxxx | RD=0000000f
+# PC=001c | Instr=0a000001 | MW=0 | Addr=0008 | WD=0000000f | RD=00000009
+# PC=0020 | Instr=e2811001 | MW=0 | Addr=0000 | WD=0000000f | RD=0000000f
+# PC=0024 | Instr=ea000000 | MW=0 | Addr=000c | WD=00000004 | RD=0000000f
+# PC=000c | Instr=e3a0402a | MW=0 | Addr=000X | WD=xxxxxxxx | RD=00000000
+# PC=0010 | Instr=e5801004 | MW=1 | Addr=0008 | WD=00000000 | RD=00000000
+# PC=0014 | Instr=e5902000 | MW=0 | Addr=0004 | WD=00000004 | RD=xxxxxxxx
+# PC=0018 | Instr=e2523008 | MW=0 | Addr=0008 | WD=xxxxxxxx | RD=00000000
+# PC=001c | Instr=0a000001 | MW=0 | Addr=0008 | WD=00000000 | RD=00000009
+# PC=0020 | Instr=e2811001 | MW=0 | Addr=0001 | WD=00000000 | RD=00000000
+# PC=0024 | Instr=ea000000 | MW=0 | Addr=000c | WD=00000004 | RD=00000000
+# PC=000c | Instr=e3a0402a | MW=0 | Addr=000X | WD=xxxxxxxx | RD=00000000
+# PC=0010 | Instr=e5801004 | MW=1 | Addr=0008 | WD=00000001 | RD=00000000
+# PC=0014 | Instr=e5902000 | MW=0 | Addr=0004 | WD=00000004 | RD=xxxxxxxx
+# PC=0018 | Instr=e2523008 | MW=0 | Addr=0008 | WD=xxxxxxxx | RD=00000001
+# PC=001c | Instr=0a000001 | MW=0 | Addr=0008 | WD=00000001 | RD=00000009
+# PC=0020 | Instr=e2811001 | MW=0 | Addr=0002 | WD=00000001 | RD=00000001
+# PC=0024 | Instr=ea000000 | MW=0 | Addr=000c | WD=00000004 | RD=00000001
+# PC=000c | Instr=e3a0402a | MW=0 | Addr=000X | WD=xxxxxxxx | RD=00000000
+# PC=0010 | Instr=e5801004 | MW=1 | Addr=0008 | WD=00000002 | RD=00000000
+# PC=0014 | Instr=e5902000 | MW=0 | Addr=0004 | WD=00000004 | RD=xxxxxxxx
+# PC=0018 | Instr=e2523008 | MW=0 | Addr=0008 | WD=xxxxxxxx | RD=00000002
+# PC=001c | Instr=0a000001 | MW=0 | Addr=0008 | WD=00000002 | RD=00000009
+# PC=0020 | Instr=e2811001 | MW=0 | Addr=0003 | WD=00000002 | RD=00000002
+# PC=0024 | Instr=ea000000 | MW=0 | Addr=000c | WD=00000004 | RD=00000002
+# PC=000c | Instr=e3a0402a | MW=0 | Addr=000X | WD=xxxxxxxx | RD=00000000
+# PC=0010 | Instr=e5801004 | MW=1 | Addr=0008 | WD=00000003 | RD=00000000
+# PC=0014 | Instr=e5902000 | MW=0 | Addr=0004 | WD=00000004 | RD=xxxxxxxx
+# PC=0018 | Instr=e2523008 | MW=0 | Addr=0008 | WD=xxxxxxxx | RD=00000003
+# PC=001c | Instr=0a000001 | MW=0 | Addr=0008 | WD=00000003 | RD=00000009
+# PC=0020 | Instr=e2811001 | MW=0 | Addr=0004 | WD=00000003 | RD=00000003
+# PC=0024 | Instr=ea000000 | MW=0 | Addr=000c | WD=00000004 | RD=00000003
+# PC=000c | Instr=e3a0402a | MW=0 | Addr=000X | WD=xxxxxxxx | RD=00000009
+# PC=0010 | Instr=e5801004 | MW=1 | Addr=0008 | WD=00000004 | RD=00000000
+# PC=0014 | Instr=e5902000 | MW=0 | Addr=0004 | WD=00000004 | RD=xxxxxxxx
+# PC=0018 | Instr=e2523008 | MW=0 | Addr=0008 | WD=xxxxxxxx | RD=00000004
+# PC=001c | Instr=0a000001 | MW=0 | Addr=0008 | WD=00000004 | RD=00000009
+# PC=0020 | Instr=e2811001 | MW=0 | Addr=0005 | WD=00000004 | RD=00000004
+# PC=0024 | Instr=ea000000 | MW=0 | Addr=000c | WD=00000004 | RD=00000004
+# PC=000c | Instr=e3a0402a | MW=0 | Addr=000X | WD=xxxxxxxx | RD=00000009
+# PC=0010 | Instr=e5801004 | MW=1 | Addr=0008 | WD=00000005 | RD=00000000
+# PC=0014 | Instr=e5902000 | MW=0 | Addr=0004 | WD=00000004 | RD=xxxxxxxx
+# PC=0018 | Instr=e2523008 | MW=0 | Addr=0008 | WD=xxxxxxxx | RD=00000005
+# PC=001c | Instr=0a000001 | MW=0 | Addr=0008 | WD=00000005 | RD=00000009
+# PC=0020 | Instr=e2811001 | MW=0 | Addr=0006 | WD=00000005 | RD=00000005
+# PC=0024 | Instr=ea000000 | MW=0 | Addr=000c | WD=00000004 | RD=00000005
+# PC=000c | Instr=e3a0402a | MW=0 | Addr=000X | WD=xxxxxxxx | RD=00000009
+# PC=0010 | Instr=e5801004 | MW=1 | Addr=0008 | WD=00000006 | RD=00000000
+# PC=0014 | Instr=e5902000 | MW=0 | Addr=0004 | WD=00000004 | RD=xxxxxxxx
+# PC=0018 | Instr=e2523008 | MW=0 | Addr=0008 | WD=xxxxxxxx | RD=00000006
+# PC=001c | Instr=0a000001 | MW=0 | Addr=0008 | WD=00000006 | RD=00000009
+# PC=0020 | Instr=e2811001 | MW=0 | Addr=0007 | WD=00000006 | RD=00000006
+# PC=0024 | Instr=ea000000 | MW=0 | Addr=000c | WD=00000004 | RD=00000006
+# PC=000c | Instr=e3a0402a | MW=0 | Addr=000X | WD=xxxxxxxx | RD=00000009
+# PC=0010 | Instr=e5801004 | MW=1 | Addr=0008 | WD=00000007 | RD=00000000
+# PC=0014 | Instr=e5902000 | MW=0 | Addr=0004 | WD=00000004 | RD=xxxxxxxx
+# PC=0018 | Instr=e2523008 | MW=0 | Addr=0008 | WD=xxxxxxxx | RD=00000007
+# PC=001c | Instr=0a000001 | MW=0 | Addr=0008 | WD=00000007 | RD=00000009
+# PC=0020 | Instr=e2811001 | MW=0 | Addr=0008 | WD=00000007 | RD=00000007
+# PC=0024 | Instr=ea000000 | MW=0 | Addr=000c | WD=00000004 | RD=00000007
+# PC=000c | Instr=e3a0402a | MW=0 | Addr=000X | WD=xxxxxxxx | RD=00000007
+# PC=0010 | Instr=e5801004 | MW=1 | Addr=0008 | WD=00000008 | RD=00000000
+# PC=0014 | Instr=e5902000 | MW=0 | Addr=0004 | WD=00000004 | RD=xxxxxxxx
+# PC=0018 | Instr=e2523008 | MW=0 | Addr=0008 | WD=xxxxxxxx | RD=00000008
+# PC=001c | Instr=0a000001 | MW=0 | Addr=0008 | WD=00000008 | RD=00000009
+# PC=0020 | Instr=e2811001 | MW=0 | Addr=0009 | WD=00000008 | RD=00000008
+# PC=0024 | Instr=ea000000 | MW=0 | Addr=000c | WD=00000004 | RD=00000008
+# PC=000c | Instr=e3a0402a | MW=0 | Addr=000X | WD=xxxxxxxx | RD=00000008
+# PC=0010 | Instr=e5801004 | MW=1 | Addr=0008 | WD=00000009 | RD=00000000
+# PC=0014 | Instr=e5902000 | MW=0 | Addr=0004 | WD=00000004 | RD=xxxxxxxx
+# PC=0018 | Instr=e2523008 | MW=0 | Addr=0008 | WD=xxxxxxxx | RD=00000009
+# PC=001c | Instr=0a000001 | MW=0 | Addr=0008 | WD=00000009 | RD=00000009
+# PC=0020 | Instr=e2811001 | MW=0 | Addr=000a | WD=00000009 | RD=00000009
+# PC=0024 | Instr=ea000000 | MW=0 | Addr=000c | WD=00000004 | RD=00000009
+# PC=000c | Instr=e3a0402a | MW=0 | Addr=000X | WD=xxxxxxxx | RD=00000009
+# PC=0010 | Instr=e5801004 | MW=1 | Addr=0008 | WD=0000000a | RD=00000000
+# PC=0014 | Instr=e5902000 | MW=0 | Addr=0004 | WD=00000004 | RD=xxxxxxxx
+# PC=0018 | Instr=e2523008 | MW=0 | Addr=0008 | WD=xxxxxxxx | RD=0000000a
+# PC=001c | Instr=0a000001 | MW=0 | Addr=0008 | WD=0000000a | RD=00000009
+# PC=0020 | Instr=e2811001 | MW=0 | Addr=000b | WD=0000000a | RD=0000000a
+# PC=0024 | Instr=ea000000 | MW=0 | Addr=000c | WD=00000004 | RD=0000000a
+# PC=000c | Instr=e3a0402a | MW=0 | Addr=000X | WD=xxxxxxxx | RD=0000000a
+# PC=0010 | Instr=e5801004 | MW=1 | Addr=0008 | WD=0000000b | RD=00000000
+# PC=0014 | Instr=e5902000 | MW=0 | Addr=0004 | WD=00000004 | RD=xxxxxxxx
+# PC=0018 | Instr=e2523008 | MW=0 | Addr=0008 | WD=xxxxxxxx | RD=0000000b
+# PC=001c | Instr=0a000001 | MW=0 | Addr=0008 | WD=0000000b | RD=00000009
+# PC=0020 | Instr=e2811001 | MW=0 | Addr=000c | WD=0000000b | RD=0000000b
+# PC=0024 | Instr=ea000000 | MW=0 | Addr=000c | WD=00000004 | RD=0000000b
+# PC=000c | Instr=e3a0402a | MW=0 | Addr=000X | WD=xxxxxxxx | RD=00000000
+# PC=0010 | Instr=e5801004 | MW=1 | Addr=0008 | WD=0000000c | RD=00000000
+# PC=0014 | Instr=e5902000 | MW=0 | Addr=0004 | WD=00000004 | RD=xxxxxxxx
+# PC=0018 | Instr=e2523008 | MW=0 | Addr=0008 | WD=xxxxxxxx | RD=0000000c
+# PC=001c | Instr=0a000001 | MW=0 | Addr=0008 | WD=0000000c | RD=00000009
+# PC=0020 | Instr=e2811001 | MW=0 | Addr=000d | WD=0000000c | RD=0000000c
+# PC=0024 | Instr=ea000000 | MW=0 | Addr=000c | WD=00000004 | RD=0000000c
+# PC=000c | Instr=e3a0402a | MW=0 | Addr=000X | WD=xxxxxxxx | RD=00000000
+# PC=0010 | Instr=e5801004 | MW=1 | Addr=0008 | WD=0000000d | RD=00000000
+# PC=0014 | Instr=e5902000 | MW=0 | Addr=0004 | WD=00000004 | RD=xxxxxxxx
+# PC=0018 | Instr=e2523008 | MW=0 | Addr=0008 | WD=xxxxxxxx | RD=0000000d
+# PC=001c | Instr=0a000001 | MW=0 | Addr=0008 | WD=0000000d | RD=00000009
+# PC=0020 | Instr=e2811001 | MW=0 | Addr=000e | WD=0000000d | RD=0000000d
+# PC=0024 | Instr=ea000000 | MW=0 | Addr=000c | WD=00000004 | RD=0000000d
+# PC=000c | Instr=e3a0402a | MW=0 | Addr=000X | WD=xxxxxxxx | RD=00000000
+# PC=0010 | Instr=e5801004 | MW=1 | Addr=0008 | WD=0000000e | RD=00000000
+# PC=0014 | Instr=e5902000 | MW=0 | Addr=0004 | WD=00000004 | RD=xxxxxxxx
+# PC=0018 | Instr=e2523008 | MW=0 | Addr=0008 | WD=xxxxxxxx | RD=0000000e
+# PC=001c | Instr=0a000001 | MW=0 | Addr=0008 | WD=0000000e | RD=00000009
+# PC=0020 | Instr=e2811001 | MW=0 | Addr=000f | WD=0000000e | RD=0000000e
+# PC=0024 | Instr=ea000000 | MW=0 | Addr=000c | WD=00000004 | RD=0000000e
+# PC=000c | Instr=e3a0402a | MW=0 | Addr=000X | WD=xxxxxxxx | RD=00000000
+# PC=0010 | Instr=e5801004 | MW=1 | Addr=0008 | WD=0000000f | RD=00000000
+# PC=0014 | Instr=e5902000 | MW=0 | Addr=0004 | WD=00000004 | RD=xxxxxxxx
+# PC=0018 | Instr=e2523008 | MW=0 | Addr=0008 | WD=xxxxxxxx | RD=0000000f
+# PC=001c | Instr=0a000001 | MW=0 | Addr=0008 | WD=0000000f | RD=00000009
+# PC=0020 | Instr=e2811001 | MW=0 | Addr=0000 | WD=0000000f | RD=0000000f
+# PC=0024 | Instr=ea000000 | MW=0 | Addr=000c | WD=00000004 | RD=0000000f
+# PC=000c | Instr=e3a0402a | MW=0 | Addr=000X | WD=xxxxxxxx | RD=00000000
+# PC=0010 | Instr=e5801004 | MW=1 | Addr=0008 | WD=00000000 | RD=00000000
+# PC=0014 | Instr=e5902000 | MW=0 | Addr=0004 | WD=00000004 | RD=xxxxxxxx
+# PC=0018 | Instr=e2523008 | MW=0 | Addr=0008 | WD=xxxxxxxx | RD=00000000
+# PC=001c | Instr=0a000001 | MW=0 | Addr=0008 | WD=00000000 | RD=00000009
+# PC=0020 | Instr=e2811001 | MW=0 | Addr=0001 | WD=00000000 | RD=00000000
+# PC=0024 | Instr=ea000000 | MW=0 | Addr=000c | WD=00000004 | RD=00000000
+# PC=000c | Instr=e3a0402a | MW=0 | Addr=000X | WD=xxxxxxxx | RD=00000000
+# PC=0010 | Instr=e5801004 | MW=1 | Addr=0008 | WD=00000001 | RD=00000000
+# PC=0014 | Instr=e5902000 | MW=0 | Addr=0004 | WD=00000004 | RD=xxxxxxxx
+# PC=0018 | Instr=e2523008 | MW=0 | Addr=0008 | WD=xxxxxxxx | RD=00000001
+# PC=001c | Instr=0a000001 | MW=0 | Addr=0008 | WD=00000001 | RD=00000009
+# PC=0020 | Instr=e2811001 | MW=0 | Addr=0002 | WD=00000001 | RD=00000001
+# PC=0024 | Instr=ea000000 | MW=0 | Addr=000c | WD=00000004 | RD=00000001
+# PC=000c | Instr=e3a0402a | MW=0 | Addr=000X | WD=xxxxxxxx | RD=00000000
+# PC=0010 | Instr=e5801004 | MW=1 | Addr=0008 | WD=00000002 | RD=00000000
+# PC=0014 | Instr=e5902000 | MW=0 | Addr=0004 | WD=00000004 | RD=xxxxxxxx
+# PC=0018 | Instr=e2523008 | MW=0 | Addr=0008 | WD=xxxxxxxx | RD=00000002
+# PC=001c | Instr=0a000001 | MW=0 | Addr=0008 | WD=00000002 | RD=00000009
+# PC=0020 | Instr=e2811001 | MW=0 | Addr=0003 | WD=00000002 | RD=00000002
+# PC=0024 | Instr=ea000000 | MW=0 | Addr=000c | WD=00000004 | RD=00000002
+# PC=000c | Instr=e3a0402a | MW=0 | Addr=000X | WD=xxxxxxxx | RD=00000000
+# PC=0010 | Instr=e5801004 | MW=1 | Addr=0008 | WD=00000003 | RD=00000000
+# PC=0014 | Instr=e5902000 | MW=0 | Addr=0004 | WD=00000004 | RD=xxxxxxxx
+# PC=0018 | Instr=e2523008 | MW=0 | Addr=0008 | WD=xxxxxxxx | RD=00000003
+# PC=001c | Instr=0a000001 | MW=0 | Addr=0008 | WD=00000003 | RD=00000009
+# PC=0020 | Instr=e2811001 | MW=0 | Addr=0004 | WD=00000003 | RD=00000003
+# PC=0024 | Instr=ea000000 | MW=0 | Addr=000c | WD=00000004 | RD=00000003
+# PC=000c | Instr=e3a0402a | MW=0 | Addr=000X | WD=xxxxxxxx | RD=00000009
+# PC=0010 | Instr=e5801004 | MW=1 | Addr=0008 | WD=00000004 | RD=00000000
+# PC=0014 | Instr=e5902000 | MW=0 | Addr=0004 | WD=00000004 | RD=xxxxxxxx
+# PC=0018 | Instr=e2523008 | MW=0 | Addr=0008 | WD=xxxxxxxx | RD=00000004
+# PC=001c | Instr=0a000001 | MW=0 | Addr=0008 | WD=00000004 | RD=00000009
+# PC=0020 | Instr=e2811001 | MW=0 | Addr=0005 | WD=00000004 | RD=00000004
+# PC=0024 | Instr=ea000000 | MW=0 | Addr=000c | WD=00000004 | RD=00000004
+# PC=000c | Instr=e3a0402a | MW=0 | Addr=000X | WD=xxxxxxxx | RD=00000009
+# PC=0010 | Instr=e5801004 | MW=1 | Addr=0008 | WD=00000005 | RD=00000000
+# PC=0014 | Instr=e5902000 | MW=0 | Addr=0004 | WD=00000004 | RD=xxxxxxxx
+# PC=0018 | Instr=e2523008 | MW=0 | Addr=0008 | WD=xxxxxxxx | RD=00000005
+# PC=001c | Instr=0a000001 | MW=0 | Addr=0008 | WD=00000005 | RD=00000009
+# PC=0020 | Instr=e2811001 | MW=0 | Addr=0006 | WD=00000005 | RD=00000005
+# PC=0024 | Instr=ea000000 | MW=0 | Addr=000c | WD=00000004 | RD=00000005
+# PC=000c | Instr=e3a0402a | MW=0 | Addr=000X | WD=xxxxxxxx | RD=00000009
+# PC=0010 | Instr=e5801004 | MW=1 | Addr=0008 | WD=00000006 | RD=00000000
+# PC=0014 | Instr=e5902000 | MW=0 | Addr=0004 | WD=00000004 | RD=xxxxxxxx
+# PC=0018 | Instr=e2523008 | MW=0 | Addr=0008 | WD=xxxxxxxx | RD=00000006
+# PC=001c | Instr=0a000001 | MW=0 | Addr=0008 | WD=00000006 | RD=00000009
+# PC=0020 | Instr=e2811001 | MW=0 | Addr=0007 | WD=00000006 | RD=00000006
+# PC=0024 | Instr=ea000000 | MW=0 | Addr=000c | WD=00000004 | RD=00000006
+# PC=000c | Instr=e3a0402a | MW=0 | Addr=000X | WD=xxxxxxxx | RD=00000009
+# PC=0010 | Instr=e5801004 | MW=1 | Addr=0008 | WD=00000007 | RD=00000000
+# PC=0014 | Instr=e5902000 | MW=0 | Addr=0004 | WD=00000004 | RD=xxxxxxxx
+# PC=0018 | Instr=e2523008 | MW=0 | Addr=0008 | WD=xxxxxxxx | RD=00000007
+# PC=001c | Instr=0a000001 | MW=0 | Addr=0008 | WD=00000007 | RD=00000009
+# PC=0020 | Instr=e2811001 | MW=0 | Addr=0008 | WD=00000007 | RD=00000007
+# PC=0024 | Instr=ea000000 | MW=0 | Addr=000c | WD=00000004 | RD=00000007
+# PC=000c | Instr=e3a0402a | MW=0 | Addr=000X | WD=xxxxxxxx | RD=00000007
+# PC=0010 | Instr=e5801004 | MW=1 | Addr=0008 | WD=00000008 | RD=00000000
+# PC=0014 | Instr=e5902000 | MW=0 | Addr=0004 | WD=00000004 | RD=xxxxxxxx
+# PC=0018 | Instr=e2523008 | MW=0 | Addr=0008 | WD=xxxxxxxx | RD=00000008
+# PC=001c | Instr=0a000001 | MW=0 | Addr=0008 | WD=00000008 | RD=00000009
+# PC=0020 | Instr=e2811001 | MW=0 | Addr=0009 | WD=00000008 | RD=00000008
+# PC=0024 | Instr=ea000000 | MW=0 | Addr=000c | WD=00000004 | RD=00000008
+# PC=000c | Instr=e3a0402a | MW=0 | Addr=000X | WD=xxxxxxxx | RD=00000008
+# PC=0010 | Instr=e5801004 | MW=1 | Addr=0008 | WD=00000009 | RD=00000000
+# PC=0014 | Instr=e5902000 | MW=0 | Addr=0004 | WD=00000004 | RD=xxxxxxxx
+# PC=0018 | Instr=e2523008 | MW=0 | Addr=0008 | WD=xxxxxxxx | RD=00000009
+# PC=001c | Instr=0a000001 | MW=0 | Addr=0008 | WD=00000009 | RD=00000009
+# PC=0020 | Instr=e2811001 | MW=0 | Addr=000a | WD=00000009 | RD=00000009
+# PC=0024 | Instr=ea000000 | MW=0 | Addr=000c | WD=00000004 | RD=00000009
+# PC=000c | Instr=e3a0402a | MW=0 | Addr=000X | WD=xxxxxxxx | RD=00000009
+# PC=0010 | Instr=e5801004 | MW=1 | Addr=0008 | WD=0000000a | RD=00000000
+# PC=0014 | Instr=e5902000 | MW=0 | Addr=0004 | WD=00000004 | RD=xxxxxxxx
+# PC=0018 | Instr=e2523008 | MW=0 | Addr=0008 | WD=xxxxxxxx | RD=0000000a
+# PC=001c | Instr=0a000001 | MW=0 | Addr=0008 | WD=0000000a | RD=00000009
+# PC=0020 | Instr=e2811001 | MW=0 | Addr=000b | WD=0000000a | RD=0000000a
+# PC=0024 | Instr=ea000000 | MW=0 | Addr=000c | WD=00000004 | RD=0000000a
+# PC=000c | Instr=e3a0402a | MW=0 | Addr=000X | WD=xxxxxxxx | RD=0000000a
+# PC=0010 | Instr=e5801004 | MW=1 | Addr=0008 | WD=0000000b | RD=00000000
+# PC=0014 | Instr=e5902000 | MW=0 | Addr=0004 | WD=00000004 | RD=xxxxxxxx
+# PC=0018 | Instr=e2523008 | MW=0 | Addr=0008 | WD=xxxxxxxx | RD=0000000b
+# PC=001c | Instr=0a000001 | MW=0 | Addr=0008 | WD=0000000b | RD=00000009
+# PC=0020 | Instr=e2811001 | MW=0 | Addr=000c | WD=0000000b | RD=0000000b
+# PC=0024 | Instr=ea000000 | MW=0 | Addr=000c | WD=00000004 | RD=0000000b
+# PC=000c | Instr=e3a0402a | MW=0 | Addr=000X | WD=xxxxxxxx | RD=00000000
+# PC=0010 | Instr=e5801004 | MW=1 | Addr=0008 | WD=0000000c | RD=00000000
+# PC=0014 | Instr=e5902000 | MW=0 | Addr=0004 | WD=00000004 | RD=xxxxxxxx
+# PC=0018 | Instr=e2523008 | MW=0 | Addr=0008 | WD=xxxxxxxx | RD=0000000c
+# PC=001c | Instr=0a000001 | MW=0 | Addr=0008 | WD=0000000c | RD=00000009
+# PC=0020 | Instr=e2811001 | MW=0 | Addr=000d | WD=0000000c | RD=0000000c
+# PC=0024 | Instr=ea000000 | MW=0 | Addr=000c | WD=00000004 | RD=0000000c
+# PC=000c | Instr=e3a0402a | MW=0 | Addr=000X | WD=xxxxxxxx | RD=00000000
+# PC=0010 | Instr=e5801004 | MW=1 | Addr=0008 | WD=0000000d | RD=00000000
+# PC=0014 | Instr=e5902000 | MW=0 | Addr=0004 | WD=00000004 | RD=xxxxxxxx
+# PC=0018 | Instr=e2523008 | MW=0 | Addr=0008 | WD=xxxxxxxx | RD=0000000d
+# PC=001c | Instr=0a000001 | MW=0 | Addr=0008 | WD=0000000d | RD=00000009
+# PC=0020 | Instr=e2811001 | MW=0 | Addr=000e | WD=0000000d | RD=0000000d
+# PC=0024 | Instr=ea000000 | MW=0 | Addr=000c | WD=00000004 | RD=0000000d
+# PC=000c | Instr=e3a0402a | MW=0 | Addr=000X | WD=xxxxxxxx | RD=00000000
+# PC=0010 | Instr=e5801004 | MW=1 | Addr=0008 | WD=0000000e | RD=00000000
+# PC=0014 | Instr=e5902000 | MW=0 | Addr=0004 | WD=00000004 | RD=xxxxxxxx
+# PC=0018 | Instr=e2523008 | MW=0 | Addr=0008 | WD=xxxxxxxx | RD=0000000e
+# PC=001c | Instr=0a000001 | MW=0 | Addr=0008 | WD=0000000e | RD=00000009
+# PC=0020 | Instr=e2811001 | MW=0 | Addr=000f | WD=0000000e | RD=0000000e
+# PC=0024 | Instr=ea000000 | MW=0 | Addr=000c | WD=00000004 | RD=0000000e
+# PC=000c | Instr=e3a0402a | MW=0 | Addr=000X | WD=xxxxxxxx | RD=00000000
+# PC=0010 | Instr=e5801004 | MW=1 | Addr=0008 | WD=0000000f | RD=00000000
+# PC=0014 | Instr=e5902000 | MW=0 | Addr=0004 | WD=00000004 | RD=xxxxxxxx
+# PC=0018 | Instr=e2523008 | MW=0 | Addr=0008 | WD=xxxxxxxx | RD=0000000f
+# PC=001c | Instr=0a000001 | MW=0 | Addr=0008 | WD=0000000f | RD=00000009
+# PC=0020 | Instr=e2811001 | MW=0 | Addr=0000 | WD=0000000f | RD=0000000f
+# PC=0024 | Instr=ea000000 | MW=0 | Addr=000c | WD=00000004 | RD=0000000f
+# Test Finalizado
+# PC final = 0000000c
+# ** Note: $finish    : C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/top_tb.sv(63)
+#    Time: 5020 ns  Iteration: 0  Instance: /top_tb
+# 1
+# Break in Module top_tb at C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/top_tb.sv line 63
+# End time: 13:45:46 on Nov 05,2025, Elapsed time: 0:06:33
+# Errors: 0, Warnings: 15

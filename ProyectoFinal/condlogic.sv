@@ -16,7 +16,7 @@ module condlogic(input logic clk,reset,
 	 flopenr #(2)flagreg0(clk,reset,FlagWrite[0],
 	 ALUFlags[1:0],Flags[1:0]);
 	 
-	 //writecontrolsareconditional
+	 //write controls are conditional
 	 condcheck cc(Cond, Flags, CondEx);
 	 assign FlagWrite= FlagW & {2{CondEx}};
 	 assign RegWrite = RegW & CondEx;
