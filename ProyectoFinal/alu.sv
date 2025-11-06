@@ -1,41 +1,49 @@
-//Main 
-module alu #(parameter WIDTH = 4) (
-    input logic [WIDTH - 1:0] A, B,
-    input logic [1:0] opcode,
-    output logic [WIDTH - 1:0] result,
-    output logic N, Z, C, V,
-    output logic [6:0]seg1, seg2
+module alu(
+    input  logic [31:0] A, B,
+    input  logic [1:0]  ALUControl,
+    output logic [31:0] ALUResult,
+    output logic [3:0]  ALUFlags
 );
-
-	logic [WIDTH-1:0] addResult;
-	logic [WIDTH-1:0] subResult;
-	logic [WIDTH-1:0] andResult;
-	logic [WIDTH-1:0] orResult;
-
-	adder_n_bit #(WIDTH) adder(
-		 .a(A), 
-		 .b(B), 
-		 .sum(addResult), 
-		 .cout());
-
-	subtractor_n_bit #(WIDTH) subtractor(
-		 .a(A), 
-		 .b(B), 
-		 .difference(subResult), 
-		 .bout());
-
-	assign result = (opcode == 2'b00) ? addResult :
-						 (opcode == 2'b01) ? subResult :
-						 (opcode == 2'b10) ? andResult :
-						 (opcode == 2'b11) ? orResult :
-						 0;
-
-	assign N = (opcode == 2'b01 && (A < B));
-	assign Z = (result == 0);
-	assign C = (opcode == 2'b00) && (result < A);
-	assign V = (opcode == 2'b00) && (result > 0) && (result < A);
-
-	assign andResult = A & B;
-	assign orResult = A | B;
-
+    logic N, Z, C, V;
+    logic [32:0] tmp;
+    
+    always_comb begin
+        tmp = 33'b0;
+        ALUResult = 32'b0;
+        C = 1'b0;
+        V = 1'b0;
+        
+        case (ALUControl)
+            2'b00: begin // ADD
+                tmp = {1'b0, A} + {1'b0, B};
+                ALUResult = tmp[31:0];
+                C = tmp[32];
+                V = (~A[31] & ~B[31] & ALUResult[31]) | 
+                    ( A[31] &  B[31] & ~ALUResult[31]);
+            end
+            
+            2'b01: begin // SUB
+                tmp = {1'b0, A} - {1'b0, B};
+                ALUResult = tmp[31:0];
+                C = ~tmp[32];
+                V = ( A[31] & ~B[31] & ~ALUResult[31]) | 
+                    (~A[31] &  B[31] &  ALUResult[31]);
+            end
+            
+            2'b10: begin // AND
+                ALUResult = A & B;
+            end
+            
+            2'b11: begin // ORR (tambien se usa para MOV)
+                ALUResult = A | B;
+            end
+            
+            default: ALUResult = 32'b0;
+        endcase
+        
+        N = ALUResult[31];
+        Z = (ALUResult == 32'b0);
+        ALUFlags = {N, Z, C, V};
+    end
+    
 endmodule
