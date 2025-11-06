@@ -42,7 +42,7 @@ module top(
 
     // Instantiate Instruction Memory (ROM)
     rom imem(
-        .address(PC[10:2]),
+        .address(PC[7:2]),
         .clock(clk),
         .q(Instr)
     );

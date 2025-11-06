@@ -1,5 +1,5 @@
 Analysis & Elaboration report for ProyectoFinal
-Wed Nov 05 18:13:33 2025
+Thu Nov 06 14:27:54 2025
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -10,14 +10,14 @@ Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
   2. Analysis & Elaboration Summary
   3. Parallel Compilation
   4. Analysis & Elaboration IP Cores Summary
-  5. Source assignments for rom:imem|altsyncram:altsyncram_component|altsyncram_2og1:auto_generated
+  5. Source assignments for rom:imem|altsyncram:altsyncram_component|altsyncram_neh1:auto_generated
   6. Source assignments for ram:dmem|altsyncram:altsyncram_component|altsyncram_a7o1:auto_generated
   7. Parameter Settings for User Entity Instance: arm:arm_inst|controller:c|condlogic:cl|flopenr:flagreg1
   8. Parameter Settings for User Entity Instance: arm:arm_inst|controller:c|condlogic:cl|flopenr:flagreg0
   9. Parameter Settings for User Entity Instance: arm:arm_inst|datapath:dp|mux2:pcmux
  10. Parameter Settings for User Entity Instance: arm:arm_inst|datapath:dp|flopr:pcreg
- 11. Parameter Settings for User Entity Instance: arm:arm_inst|datapath:dp|adder_n_bit:pcadd1
- 12. Parameter Settings for User Entity Instance: arm:arm_inst|datapath:dp|adder_n_bit:pcadd2
+ 11. Parameter Settings for User Entity Instance: arm:arm_inst|datapath:dp|adder:pcadd1
+ 12. Parameter Settings for User Entity Instance: arm:arm_inst|datapath:dp|adder:pcadd2
  13. Parameter Settings for User Entity Instance: arm:arm_inst|datapath:dp|mux2:ra1mux
  14. Parameter Settings for User Entity Instance: arm:arm_inst|datapath:dp|mux2:ra2mux
  15. Parameter Settings for User Entity Instance: arm:arm_inst|datapath:dp|mux2:resmux
@@ -26,14 +26,12 @@ Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
  18. Parameter Settings for User Entity Instance: ram:dmem|altsyncram:altsyncram_component
  19. altsyncram Parameter Settings by Entity Instance
  20. Analysis & Elaboration Settings
- 21. Port Connectivity Checks: "rom:imem"
- 22. Port Connectivity Checks: "arm:arm_inst|datapath:dp|mux2:ra1mux"
- 23. Port Connectivity Checks: "arm:arm_inst|datapath:dp|adder_n_bit:pcadd2"
- 24. Port Connectivity Checks: "arm:arm_inst|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[0].FA1"
- 25. Port Connectivity Checks: "arm:arm_inst|datapath:dp|adder_n_bit:pcadd1"
- 26. Port Connectivity Checks: "arm:arm_inst"
- 27. Analysis & Elaboration Messages
- 28. Analysis & Elaboration Suppressed Messages
+ 21. Port Connectivity Checks: "arm:arm_inst|datapath:dp|mux2:ra1mux"
+ 22. Port Connectivity Checks: "arm:arm_inst|datapath:dp|adder:pcadd2"
+ 23. Port Connectivity Checks: "arm:arm_inst|datapath:dp|adder:pcadd1"
+ 24. Port Connectivity Checks: "arm:arm_inst"
+ 25. Analysis & Elaboration Messages
+ 26. Analysis & Elaboration Suppressed Messages
 
 
 
@@ -60,7 +58,7 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------------------------------------------------------+
 ; Analysis & Elaboration Summary                                              ;
 +-------------------------------+---------------------------------------------+
-; Analysis & Elaboration Status ; Successful - Wed Nov 05 18:13:33 2025       ;
+; Analysis & Elaboration Status ; Successful - Thu Nov 06 14:27:54 2025       ;
 ; Quartus Prime Version         ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                 ; ProyectoFinal                               ;
 ; Top-level Entity Name         ; top                                         ;
@@ -102,7 +100,7 @@ https://fpgasoftware.intel.com/eula.
 
 
 +------------------------------------------------------------------------------------------------+
-; Source assignments for rom:imem|altsyncram:altsyncram_component|altsyncram_2og1:auto_generated ;
+; Source assignments for rom:imem|altsyncram:altsyncram_component|altsyncram_neh1:auto_generated ;
 +---------------------------------+--------------------+------+----------------------------------+
 ; Assignment                      ; Value              ; From ; To                               ;
 +---------------------------------+--------------------+------+----------------------------------+
@@ -159,23 +157,23 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: arm:arm_inst|datapath:dp|adder_n_bit:pcadd1 ;
-+----------------+-------+-----------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                            ;
-+----------------+-------+-----------------------------------------------------------------+
-; N              ; 32    ; Signed Integer                                                  ;
-+----------------+-------+-----------------------------------------------------------------+
++------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: arm:arm_inst|datapath:dp|adder:pcadd1 ;
++----------------+-------+-----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                      ;
++----------------+-------+-----------------------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                                            ;
++----------------+-------+-----------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: arm:arm_inst|datapath:dp|adder_n_bit:pcadd2 ;
-+----------------+-------+-----------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                            ;
-+----------------+-------+-----------------------------------------------------------------+
-; N              ; 32    ; Signed Integer                                                  ;
-+----------------+-------+-----------------------------------------------------------------+
++------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: arm:arm_inst|datapath:dp|adder:pcadd2 ;
++----------------+-------+-----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                      ;
++----------------+-------+-----------------------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                                            ;
++----------------+-------+-----------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -234,7 +232,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; WIDTH_A                            ; 32                     ; Signed Integer          ;
 ; WIDTHAD_A                          ; 6                      ; Signed Integer          ;
 ; NUMWORDS_A                         ; 64                     ; Signed Integer          ;
-; OUTDATA_REG_A                      ; CLOCK0                 ; Untyped                 ;
+; OUTDATA_REG_A                      ; UNREGISTERED           ; Untyped                 ;
 ; ADDRESS_ACLR_A                     ; NONE                   ; Untyped                 ;
 ; OUTDATA_ACLR_A                     ; NONE                   ; Untyped                 ;
 ; WRCONTROL_ACLR_A                   ; NONE                   ; Untyped                 ;
@@ -275,7 +273,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                  ; Untyped                 ;
 ; WIDTH_ECCSTATUS                    ; 3                      ; Untyped                 ;
 ; DEVICE_FAMILY                      ; Cyclone V              ; Untyped                 ;
-; CBXI_PARAMETER                     ; altsyncram_2og1        ; Untyped                 ;
+; CBXI_PARAMETER                     ; altsyncram_neh1        ; Untyped                 ;
 +------------------------------------+------------------------+-------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -351,7 +349,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     -- OPERATION_MODE                     ; ROM                                      ;
 ;     -- WIDTH_A                            ; 32                                       ;
 ;     -- NUMWORDS_A                         ; 64                                       ;
-;     -- OUTDATA_REG_A                      ; CLOCK0                                   ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                             ;
 ;     -- WIDTH_B                            ; 1                                        ;
 ;     -- NUMWORDS_B                         ; 1                                        ;
 ;     -- ADDRESS_REG_B                      ; CLOCK1                                   ;
@@ -459,15 +457,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "rom:imem"                                                                                                                                                                          ;
-+---------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port    ; Type  ; Severity ; Details                                                                                                                                                                          ;
-+---------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; address ; Input ; Warning  ; Input port expression (9 bits) is wider than the input port (6 bits) it drives.  The 3 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-+---------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-
-
 +------------------------------------------------------------------+
 ; Port Connectivity Checks: "arm:arm_inst|datapath:dp|mux2:ra1mux" ;
 +------+-------+----------+----------------------------------------+
@@ -477,37 +466,26 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------+-------+----------+----------------------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "arm:arm_inst|datapath:dp|adder_n_bit:pcadd2"                                                                 ;
-+----------+--------+----------+----------------------------------------------------------------------------------------------------------+
-; Port     ; Type   ; Severity ; Details                                                                                                  ;
-+----------+--------+----------+----------------------------------------------------------------------------------------------------------+
-; b[31..3] ; Input  ; Info     ; Stuck at GND                                                                                             ;
-; b[1..0]  ; Input  ; Info     ; Stuck at GND                                                                                             ;
-; b[2]     ; Input  ; Info     ; Stuck at VCC                                                                                             ;
-; cout     ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
-+----------+--------+----------+----------------------------------------------------------------------------------------------------------+
++-------------------------------------------------------------------+
+; Port Connectivity Checks: "arm:arm_inst|datapath:dp|adder:pcadd2" ;
++----------+-------+----------+-------------------------------------+
+; Port     ; Type  ; Severity ; Details                             ;
++----------+-------+----------+-------------------------------------+
+; b[31..3] ; Input ; Info     ; Stuck at GND                        ;
+; b[1..0]  ; Input ; Info     ; Stuck at GND                        ;
+; b[2]     ; Input ; Info     ; Stuck at VCC                        ;
++----------+-------+----------+-------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "arm:arm_inst|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[0].FA1" ;
-+------+-------+----------+--------------------------------------------------------------------------+
-; Port ; Type  ; Severity ; Details                                                                  ;
-+------+-------+----------+--------------------------------------------------------------------------+
-; cin  ; Input ; Info     ; Stuck at GND                                                             ;
-+------+-------+----------+--------------------------------------------------------------------------+
-
-
-+-----------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "arm:arm_inst|datapath:dp|adder_n_bit:pcadd1"                                                                 ;
-+----------+--------+----------+----------------------------------------------------------------------------------------------------------+
-; Port     ; Type   ; Severity ; Details                                                                                                  ;
-+----------+--------+----------+----------------------------------------------------------------------------------------------------------+
-; b[31..3] ; Input  ; Info     ; Stuck at GND                                                                                             ;
-; b[1..0]  ; Input  ; Info     ; Stuck at GND                                                                                             ;
-; b[2]     ; Input  ; Info     ; Stuck at VCC                                                                                             ;
-; cout     ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
-+----------+--------+----------+----------------------------------------------------------------------------------------------------------+
++-------------------------------------------------------------------+
+; Port Connectivity Checks: "arm:arm_inst|datapath:dp|adder:pcadd1" ;
++----------+-------+----------+-------------------------------------+
+; Port     ; Type  ; Severity ; Details                             ;
++----------+-------+----------+-------------------------------------+
+; b[31..3] ; Input ; Info     ; Stuck at GND                        ;
+; b[1..0]  ; Input ; Info     ; Stuck at GND                        ;
+; b[2]     ; Input ; Info     ; Stuck at VCC                        ;
++----------+-------+----------+-------------------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------+
@@ -536,7 +514,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Wed Nov 05 18:13:28 2025
+    Info: Processing started: Thu Nov 06 14:27:49 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ProyectoFinal -c ProyectoFinal --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
@@ -570,6 +548,8 @@ Info (12021): Found 1 design units, including 1 entities, in source file top_tb.
     Info (12023): Found entity 1: top_tb File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/top_tb.sv Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file ram.v
     Info (12023): Found entity 1: ram File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/ram.v Line: 40
+Info (12021): Found 1 design units, including 1 entities, in source file adder.sv
+    Info (12023): Found entity 1: adder File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/adder.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file rom.v
     Info (12023): Found entity 1: rom File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/rom.v Line: 40
 Info (12127): Elaborating entity "top" for the top level hierarchy
@@ -580,19 +560,13 @@ Info (12128): Elaborating entity "condlogic" for hierarchy "arm:arm_inst|control
 Info (12128): Elaborating entity "flopenr" for hierarchy "arm:arm_inst|controller:c|condlogic:cl|flopenr:flagreg1" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/condlogic.sv Line: 14
 Info (12128): Elaborating entity "condcheck" for hierarchy "arm:arm_inst|controller:c|condlogic:cl|condcheck:cc" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/condlogic.sv Line: 20
 Info (12128): Elaborating entity "datapath" for hierarchy "arm:arm_inst|datapath:dp" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/arm.sv Line: 29
-Info (12128): Elaborating entity "mux2" for hierarchy "arm:arm_inst|datapath:dp|mux2:pcmux" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/datapath.sv Line: 22
-Info (12128): Elaborating entity "flopr" for hierarchy "arm:arm_inst|datapath:dp|flopr:pcreg" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/datapath.sv Line: 23
-Warning (12125): Using design file adder_n_bit.sv, which is not specified as a design file for the current project, but contains definitions for 3 design units and 3 entities in project
-    Info (12023): Found entity 1: half_adder File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/adder_n_bit.sv Line: 2
-    Info (12023): Found entity 2: full_adder File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/adder_n_bit.sv Line: 14
-    Info (12023): Found entity 3: adder_n_bit File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/adder_n_bit.sv Line: 29
-Info (12128): Elaborating entity "adder_n_bit" for hierarchy "arm:arm_inst|datapath:dp|adder_n_bit:pcadd1" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/datapath.sv Line: 24
-Info (12128): Elaborating entity "full_adder" for hierarchy "arm:arm_inst|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[0].FA1" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/adder_n_bit.sv Line: 40
-Info (12128): Elaborating entity "half_adder" for hierarchy "arm:arm_inst|datapath:dp|adder_n_bit:pcadd1|full_adder:ADD_LOOP[0].FA1|half_adder:HA1" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/adder_n_bit.sv Line: 22
-Info (12128): Elaborating entity "mux2" for hierarchy "arm:arm_inst|datapath:dp|mux2:ra1mux" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/datapath.sv Line: 28
-Info (12128): Elaborating entity "regfile" for hierarchy "arm:arm_inst|datapath:dp|regfile:rf" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/datapath.sv Line: 32
-Info (12128): Elaborating entity "extend" for hierarchy "arm:arm_inst|datapath:dp|extend:ext" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/datapath.sv Line: 34
-Info (12128): Elaborating entity "alu" for hierarchy "arm:arm_inst|datapath:dp|alu:alu" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/datapath.sv Line: 41
+Info (12128): Elaborating entity "mux2" for hierarchy "arm:arm_inst|datapath:dp|mux2:pcmux" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/datapath.sv Line: 23
+Info (12128): Elaborating entity "flopr" for hierarchy "arm:arm_inst|datapath:dp|flopr:pcreg" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/datapath.sv Line: 24
+Info (12128): Elaborating entity "adder" for hierarchy "arm:arm_inst|datapath:dp|adder:pcadd1" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/datapath.sv Line: 25
+Info (12128): Elaborating entity "mux2" for hierarchy "arm:arm_inst|datapath:dp|mux2:ra1mux" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/datapath.sv Line: 29
+Info (12128): Elaborating entity "regfile" for hierarchy "arm:arm_inst|datapath:dp|regfile:rf" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/datapath.sv Line: 33
+Info (12128): Elaborating entity "extend" for hierarchy "arm:arm_inst|datapath:dp|extend:ext" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/datapath.sv Line: 35
+Info (12128): Elaborating entity "alu" for hierarchy "arm:arm_inst|datapath:dp|alu:alu" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/datapath.sv Line: 43
 Info (12128): Elaborating entity "rom" for hierarchy "rom:imem" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/top.sv Line: 48
 Info (12128): Elaborating entity "altsyncram" for hierarchy "rom:imem|altsyncram:altsyncram_component" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/rom.v Line: 82
 Info (12130): Elaborated megafunction instantiation "rom:imem|altsyncram:altsyncram_component" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/rom.v Line: 82
@@ -607,13 +581,13 @@ Info (12133): Instantiated megafunction "rom:imem|altsyncram:altsyncram_componen
     Info (12134): Parameter "numwords_a" = "64"
     Info (12134): Parameter "operation_mode" = "ROM"
     Info (12134): Parameter "outdata_aclr_a" = "NONE"
-    Info (12134): Parameter "outdata_reg_a" = "CLOCK0"
+    Info (12134): Parameter "outdata_reg_a" = "UNREGISTERED"
     Info (12134): Parameter "widthad_a" = "6"
     Info (12134): Parameter "width_a" = "32"
     Info (12134): Parameter "width_byteena_a" = "1"
-Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_2og1.tdf
-    Info (12023): Found entity 1: altsyncram_2og1 File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/db/altsyncram_2og1.tdf Line: 28
-Info (12128): Elaborating entity "altsyncram_2og1" for hierarchy "rom:imem|altsyncram:altsyncram_component|altsyncram_2og1:auto_generated" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_neh1.tdf
+    Info (12023): Found entity 1: altsyncram_neh1 File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/db/altsyncram_neh1.tdf Line: 28
+Info (12128): Elaborating entity "altsyncram_neh1" for hierarchy "rom:imem|altsyncram:altsyncram_component|altsyncram_neh1:auto_generated" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
 Info (12128): Elaborating entity "ram" for hierarchy "ram:dmem" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/top.sv Line: 57
 Info (12128): Elaborating entity "altsyncram" for hierarchy "ram:dmem|altsyncram:altsyncram_component" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/ram.v Line: 86
 Info (12130): Elaborated megafunction instantiation "ram:dmem|altsyncram:altsyncram_component" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/ram.v Line: 86
@@ -636,13 +610,12 @@ Info (12133): Instantiated megafunction "ram:dmem|altsyncram:altsyncram_componen
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_a7o1.tdf
     Info (12023): Found entity 1: altsyncram_a7o1 File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/db/altsyncram_a7o1.tdf Line: 28
 Info (12128): Elaborating entity "altsyncram_a7o1" for hierarchy "ram:dmem|altsyncram:altsyncram_component|altsyncram_a7o1:auto_generated" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
-Warning (12241): 3 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Info (144001): Generated suppressed messages file C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/output_files/ProyectoFinal.map.smsg
-Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 3 warnings
-    Info: Peak virtual memory: 4793 megabytes
-    Info: Processing ended: Wed Nov 05 18:13:33 2025
+Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 4796 megabytes
+    Info: Processing ended: Thu Nov 06 14:27:54 2025
     Info: Elapsed time: 00:00:05
-    Info: Total CPU time (on all processors): 00:00:11
+    Info: Total CPU time (on all processors): 00:00:12
 
 
 +--------------------------------------------+

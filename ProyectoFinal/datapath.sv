@@ -18,11 +18,12 @@
 	 logic is_mov;
 	 logic [31:0] SrcA_ALU;
 	 
+	 
 	 //next PC logic
-	 mux2 #(32) pcmux(PCPlus4,Result,PCSrc,PCNext);
-	 flopr #(32) pcreg(clk,reset,PCNext,PC);
-	 adder_n_bit #(32) pcadd1(PC,32'b100,PCPlus4);
-	 adder_n_bit #(32) pcadd2(PCPlus4,32'b100,PCPlus8);
+	 mux2 #(32) pcmux(PCPlus4, Result, PCSrc, PCNext);
+	 flopr #(32) pcreg(clk, reset, PCNext, PC);
+	 adder #(32) pcadd1(PC, 32'b100, PCPlus4);
+	 adder #(32) pcadd2(PCPlus4, 32'b100, PCPlus8);
 	 
 	 //register file logic
 	 mux2 #(4) ra1mux(Instr[19:16],4'b1111,RegSrc[0],RA1);
@@ -33,10 +34,11 @@
 	 mux2 #(32)resmux(ALUResult,ReadData,MemtoReg,Result);
 	 extend ext(Instr[23:0],ImmSrc,ExtImm);
 	 
+	 //ALU logic
 	 assign is_mov = (Instr[27:26] == 2'b00) && (Instr[24:21] == 4'b1101);
 	 assign SrcA_ALU = is_mov ? 32'b0 : SrcA;
 	 
-	 //ALU logic
+	 
 	 mux2#(32) srcbmux(WriteData,ExtImm,ALUSrc,SrcB);
 	 alu alu(SrcA_ALU,SrcB,ALUControl,ALUResult,ALUFlags);
  endmodule

@@ -45,7 +45,7 @@ module top_tb;
     
     //Instruction Memory 
     rom imem(
-        .address(PC[10:2]),
+        .address(PC[7:2]),
         .clock(clk),
         .q(Instr)
     );
@@ -70,7 +70,7 @@ module top_tb;
         $display("ARM Processor Test - Iniciando");
         
         reset = 1;
-        #22; //Mas de 2 ciclos de reloj
+        #1
         reset = 0;
         
         #200;  
@@ -83,8 +83,7 @@ module top_tb;
     
     always @(posedge clk) begin
         if (!reset) begin
-            #1;  // DELAY 
-            
+        
             $display("----------------------------------------");
             $display("PC=%04h | Instr=%08h | MW=%b | Addr=%04h | WD=%08h | RD=%08h",
                      PC[15:0], Instr, MemWrite, 

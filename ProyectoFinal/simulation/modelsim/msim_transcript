@@ -12,181 +12,179 @@
 # 
 # vlog -vlog01compat -work work +incdir+C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal {C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/ram.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:13:40 on Nov 05,2025
+# Start time: 14:28:08 on Nov 06,2025
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal" C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/ram.v 
 # -- Compiling module ram
 # 
 # Top level modules:
 # 	ram
-# End time: 18:13:40 on Nov 05,2025, Elapsed time: 0:00:00
+# End time: 14:28:08 on Nov 06,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal {C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/rom.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:13:40 on Nov 05,2025
+# Start time: 14:28:08 on Nov 06,2025
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal" C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/rom.v 
 # -- Compiling module rom
 # 
 # Top level modules:
 # 	rom
-# End time: 18:13:40 on Nov 05,2025, Elapsed time: 0:00:00
+# End time: 14:28:08 on Nov 06,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal {C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/alu.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:13:40 on Nov 05,2025
+# Start time: 14:28:08 on Nov 06,2025
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal" C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/alu.sv 
 # -- Compiling module alu
 # 
 # Top level modules:
 # 	alu
-# End time: 18:13:40 on Nov 05,2025, Elapsed time: 0:00:00
+# End time: 14:28:08 on Nov 06,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal {C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/arm.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:13:40 on Nov 05,2025
+# Start time: 14:28:08 on Nov 06,2025
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal" C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/arm.sv 
 # -- Compiling module arm
 # 
 # Top level modules:
 # 	arm
-# End time: 18:13:40 on Nov 05,2025, Elapsed time: 0:00:00
+# End time: 14:28:08 on Nov 06,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal {C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/condcheck.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:13:40 on Nov 05,2025
+# Start time: 14:28:08 on Nov 06,2025
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal" C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/condcheck.sv 
 # -- Compiling module condcheck
 # 
 # Top level modules:
 # 	condcheck
-# End time: 18:13:40 on Nov 05,2025, Elapsed time: 0:00:00
+# End time: 14:28:08 on Nov 06,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal {C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/condlogic.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:13:41 on Nov 05,2025
+# Start time: 14:28:08 on Nov 06,2025
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal" C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/condlogic.sv 
 # -- Compiling module condlogic
 # 
 # Top level modules:
 # 	condlogic
-# End time: 18:13:41 on Nov 05,2025, Elapsed time: 0:00:00
+# End time: 14:28:08 on Nov 06,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal {C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/controller.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:13:41 on Nov 05,2025
+# Start time: 14:28:08 on Nov 06,2025
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal" C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/controller.sv 
 # -- Compiling module controller
 # 
 # Top level modules:
 # 	controller
-# End time: 18:13:41 on Nov 05,2025, Elapsed time: 0:00:00
+# End time: 14:28:08 on Nov 06,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal {C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/datapath.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:13:41 on Nov 05,2025
+# Start time: 14:28:08 on Nov 06,2025
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal" C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/datapath.sv 
 # -- Compiling module datapath
 # 
 # Top level modules:
 # 	datapath
-# End time: 18:13:41 on Nov 05,2025, Elapsed time: 0:00:00
+# End time: 14:28:08 on Nov 06,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal {C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/decoder.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:13:41 on Nov 05,2025
+# Start time: 14:28:08 on Nov 06,2025
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal" C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/decoder.sv 
 # -- Compiling module decoder
 # 
 # Top level modules:
 # 	decoder
-# End time: 18:13:41 on Nov 05,2025, Elapsed time: 0:00:00
+# End time: 14:28:08 on Nov 06,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal {C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/extend.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:13:41 on Nov 05,2025
+# Start time: 14:28:08 on Nov 06,2025
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal" C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/extend.sv 
 # -- Compiling module extend
 # 
 # Top level modules:
 # 	extend
-# End time: 18:13:41 on Nov 05,2025, Elapsed time: 0:00:00
+# End time: 14:28:09 on Nov 06,2025, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal {C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/flopenr.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:13:41 on Nov 05,2025
+# Start time: 14:28:09 on Nov 06,2025
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal" C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/flopenr.sv 
 # -- Compiling module flopenr
 # 
 # Top level modules:
 # 	flopenr
-# End time: 18:13:41 on Nov 05,2025, Elapsed time: 0:00:00
+# End time: 14:28:09 on Nov 06,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal {C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/flopr.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:13:41 on Nov 05,2025
+# Start time: 14:28:09 on Nov 06,2025
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal" C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/flopr.sv 
 # -- Compiling module flopr
 # 
 # Top level modules:
 # 	flopr
-# End time: 18:13:41 on Nov 05,2025, Elapsed time: 0:00:00
+# End time: 14:28:09 on Nov 06,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal {C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/mux2.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:13:41 on Nov 05,2025
+# Start time: 14:28:09 on Nov 06,2025
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal" C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/mux2.sv 
 # -- Compiling module mux2
 # 
 # Top level modules:
 # 	mux2
-# End time: 18:13:41 on Nov 05,2025, Elapsed time: 0:00:00
+# End time: 14:28:09 on Nov 06,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal {C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/regfile.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:13:41 on Nov 05,2025
+# Start time: 14:28:09 on Nov 06,2025
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal" C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/regfile.sv 
 # -- Compiling module regfile
 # 
 # Top level modules:
 # 	regfile
-# End time: 18:13:41 on Nov 05,2025, Elapsed time: 0:00:00
+# End time: 14:28:09 on Nov 06,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal {C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/top.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:13:41 on Nov 05,2025
+# Start time: 14:28:09 on Nov 06,2025
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal" C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/top.sv 
 # -- Compiling module top
 # 
 # Top level modules:
 # 	top
-# End time: 18:13:41 on Nov 05,2025, Elapsed time: 0:00:00
+# End time: 14:28:09 on Nov 06,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal {C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/adder_n_bit.sv}
+# vlog -sv -work work +incdir+C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal {C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/adder.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:13:41 on Nov 05,2025
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal" C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/adder_n_bit.sv 
-# -- Compiling module half_adder
-# -- Compiling module full_adder
-# -- Compiling module adder_n_bit
+# Start time: 14:28:09 on Nov 06,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal" C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/adder.sv 
+# -- Compiling module adder
 # 
 # Top level modules:
-# 	adder_n_bit
-# End time: 18:13:42 on Nov 05,2025, Elapsed time: 0:00:01
+# 	adder
+# End time: 14:28:09 on Nov 06,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vlog -sv -work work +incdir+C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal {C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/top_tb.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:13:42 on Nov 05,2025
+# Start time: 14:28:09 on Nov 06,2025
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal" C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/top_tb.sv 
 # -- Compiling module top_tb
 # 
 # Top level modules:
 # 	top_tb
-# End time: 18:13:42 on Nov 05,2025, Elapsed time: 0:00:00
+# End time: 14:28:09 on Nov 06,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  top_tb
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" top_tb 
-# Start time: 18:13:42 on Nov 05,2025
+# Start time: 14:28:09 on Nov 06,2025
 # Loading sv_std.std
 # Loading work.top_tb
 # Loading work.arm
@@ -198,26 +196,16 @@
 # Loading work.datapath
 # Loading work.mux2
 # Loading work.flopr
-# Loading work.adder_n_bit
+# Loading work.adder
 # Loading work.regfile
 # Loading work.extend
 # Loading work.alu
 # Loading work.rom
 # Loading altera_mf_ver.altsyncram
 # Loading work.ram
-# Loading work.full_adder
-# Loading work.half_adder
 # Loading altera_mf_ver.altsyncram_body
 # Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
 # Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'pcadd1'.  Expected 4, found 3.
-#    Time: 0 ps  Iteration: 0  Instance: /top_tb/arm_inst/dp/pcadd1 File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/datapath.sv Line: 24
-# ** Warning: (vsim-3722) C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/datapath.sv(24): [TFMPC] - Missing connection for port 'cout'.
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'pcadd2'.  Expected 4, found 3.
-#    Time: 0 ps  Iteration: 0  Instance: /top_tb/arm_inst/dp/pcadd2 File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/datapath.sv Line: 25
-# ** Warning: (vsim-3722) C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/datapath.sv(25): [TFMPC] - Missing connection for port 'cout'.
-# ** Warning: (vsim-3015) [PCDPC] - Port size (6) does not match connection size (9) for port 'address'. The port definition is at: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/rom.v(41).
-#    Time: 0 ps  Iteration: 0  Instance: /top_tb/imem File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/top_tb.sv Line: 47
 # 
 # add wave *
 # view structure
@@ -227,113 +215,110 @@
 # run -all
 # ARM Processor Test - Iniciando
 # ----------------------------------------
-# PC=0004 | Instr=e3a00010 | MW=0 | Addr=0010 | WD=00000010 | RD=00000000
+# PC=0000 | Instr=00000000 | MW=0 | Addr=0000 | WD=00000000 | RD=00000000
+# ALUFlags [N Z C V] = 0100
+# RegWrite=0  ALUSrc=0  MemtoReg=0  PCSrc=0  ALUControl=10  RegSrc=00  ImmSrc=00
+# R0..R7 : 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+# ----------------------------------------
+# PC=0004 | Instr=e3a00010 | MW=0 | Addr=0010 | WD=00000000 | RD=00000000
 # ALUFlags [N Z C V] = 0000
 # RegWrite=1  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=11  RegSrc=00  ImmSrc=00
-# R0..R7 : 00000010 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+# R0..R7 : 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
 # ----------------------------------------
-# PC=0008 | Instr=e3a00010 | MW=0 | Addr=0010 | WD=00000010 | RD=00000000
-# ALUFlags [N Z C V] = 0000
-# RegWrite=1  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=11  RegSrc=00  ImmSrc=00
-# R0..R7 : 00000010 00000000 00000000 00000000 00000000 00000000 00000000 00000000
-# ----------------------------------------
-# PC=000c | Instr=e2807004 | MW=0 | Addr=0014 | WD=00000000 | RD=00000000
+# PC=0008 | Instr=e2807004 | MW=0 | Addr=0014 | WD=00000000 | RD=00000000
 # ALUFlags [N Z C V] = 0000
 # RegWrite=1  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=00  RegSrc=00  ImmSrc=00
 # R0..R7 : 00000010 00000000 00000000 00000000 00000000 00000000 00000000 00000000
 # ----------------------------------------
-# PC=0010 | Instr=e3a02008 | MW=0 | Addr=0008 | WD=00000000 | RD=00000000
+# PC=000c | Instr=e3a02008 | MW=0 | Addr=0008 | WD=00000000 | RD=00000000
 # ALUFlags [N Z C V] = 0000
 # RegWrite=1  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=11  RegSrc=00  ImmSrc=00
 # R0..R7 : 00000010 00000000 00000000 00000000 00000000 00000000 00000000 00000014
 # ----------------------------------------
-# PC=0014 | Instr=e5802000 | MW=1 | Addr=0010 | WD=00000008 | RD=00000000
+# PC=0010 | Instr=e5802000 | MW=1 | Addr=0010 | WD=00000008 | RD=00000000
 # ALUFlags [N Z C V] = 0000
 # RegWrite=0  ALUSrc=1  MemtoReg=1  PCSrc=0  ALUControl=00  RegSrc=10  ImmSrc=01
 # R0..R7 : 00000010 00000000 00000008 00000000 00000000 00000000 00000000 00000014
 # ----------------------------------------
-# PC=0018 | Instr=00000008 | MW=0 | Addr=0000 | WD=00000000 | RD=00000000
+# PC=0014 | Instr=e1a06006 | MW=0 | Addr=0000 | WD=00000000 | RD=00000000
 # ALUFlags [N Z C V] = 0100
-# RegWrite=0  ALUSrc=0  MemtoReg=0  PCSrc=0  ALUControl=10  RegSrc=00  ImmSrc=00
+# RegWrite=1  ALUSrc=0  MemtoReg=0  PCSrc=0  ALUControl=11  RegSrc=00  ImmSrc=00
 # R0..R7 : 00000010 00000000 00000008 00000000 00000000 00000000 00000000 00000014
 # ----------------------------------------
-# PC=001c | Instr=e5903000 | MW=0 | Addr=0010 | WD=00000010 | RD=00000008
+# PC=0018 | Instr=e5903000 | MW=0 | Addr=0010 | WD=00000010 | RD=00000008
 # ALUFlags [N Z C V] = 0000
 # RegWrite=1  ALUSrc=1  MemtoReg=1  PCSrc=0  ALUControl=00  RegSrc=00  ImmSrc=01
 # R0..R7 : 00000010 00000000 00000008 00000000 00000000 00000000 00000000 00000014
 # ----------------------------------------
-# PC=0020 | Instr=e2533008 | MW=0 | Addr=0000 | WD=00000000 | RD=00000000
+# PC=001c | Instr=e2533008 | MW=0 | Addr=0000 | WD=00000000 | RD=00000000
 # ALUFlags [N Z C V] = 0110
 # RegWrite=1  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=01  RegSrc=00  ImmSrc=00
 # R0..R7 : 00000010 00000000 00000008 00000008 00000000 00000000 00000000 00000014
 # ----------------------------------------
-# PC=0024 | Instr=0a000000 | MW=0 | Addr=002c | WD=00000010 | RD=00000008
+# PC=0020 | Instr=0a000001 | MW=0 | Addr=002c | WD=00000000 | RD=00000008
 # ALUFlags [N Z C V] = 0000
 # RegWrite=0  ALUSrc=1  MemtoReg=0  PCSrc=1  ALUControl=00  RegSrc=01  ImmSrc=10
 # R0..R7 : 00000010 00000000 00000008 00000000 00000000 00000000 00000000 00000014
 # ----------------------------------------
-# PC=002c | Instr=ea000001 | MW=0 | Addr=0038 | WD=00000000 | RD=00000000
+# PC=002c | Instr=ea000002 | MW=0 | Addr=003c | WD=00000008 | RD=00000000
 # ALUFlags [N Z C V] = 0000
 # RegWrite=0  ALUSrc=1  MemtoReg=0  PCSrc=1  ALUControl=00  RegSrc=01  ImmSrc=10
-# R0..R7 : 00000010 00000000 00000008 00000000 00000000 00000000 00000000 00000014
-# ----------------------------------------
-# PC=0038 | Instr=e3a0402a | MW=0 | Addr=002a | WD=00000000 | RD=00000000
-# ALUFlags [N Z C V] = 0000
-# RegWrite=1  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=11  RegSrc=00  ImmSrc=00
 # R0..R7 : 00000010 00000000 00000008 00000000 00000000 00000000 00000000 00000014
 # ----------------------------------------
 # PC=003c | Instr=e3a04001 | MW=0 | Addr=0001 | WD=00000000 | RD=00000000
 # ALUFlags [N Z C V] = 0000
 # RegWrite=1  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=11  RegSrc=00  ImmSrc=00
-# R0..R7 : 00000010 00000000 00000008 00000000 0000002a 00000000 00000000 00000014
+# R0..R7 : 00000010 00000000 00000008 00000000 00000000 00000000 00000000 00000014
 # ----------------------------------------
-# PC=0040 | Instr=e0477002 | MW=0 | Addr=000c | WD=00000008 | RD=00000000
-# ALUFlags [N Z C V] = 0010
-# RegWrite=1  ALUSrc=0  MemtoReg=0  PCSrc=0  ALUControl=01  RegSrc=00  ImmSrc=00
+# PC=0040 | Instr=00000000 | MW=0 | Addr=0010 | WD=00000010 | RD=00000000
+# ALUFlags [N Z C V] = 0000
+# RegWrite=1  ALUSrc=0  MemtoReg=0  PCSrc=0  ALUControl=10  RegSrc=00  ImmSrc=00
 # R0..R7 : 00000010 00000000 00000008 00000000 00000001 00000000 00000000 00000014
 # ----------------------------------------
-# PC=0044 | Instr=e5837054 | MW=1 | Addr=0054 | WD=0000000c | RD=00000000
-# ALUFlags [N Z C V] = 0000
-# RegWrite=0  ALUSrc=1  MemtoReg=1  PCSrc=0  ALUControl=00  RegSrc=10  ImmSrc=01
-# R0..R7 : 00000010 00000000 00000008 00000000 00000001 00000000 00000000 0000000c
-# ----------------------------------------
-# PC=0048 | Instr=e5902060 | MW=0 | Addr=0070 | WD=00000010 | RD=00000000
-# ALUFlags [N Z C V] = 0000
-# RegWrite=1  ALUSrc=1  MemtoReg=1  PCSrc=0  ALUControl=00  RegSrc=00  ImmSrc=01
-# R0..R7 : 00000010 00000000 00000008 00000000 00000001 00000000 00000000 0000000c
-# ----------------------------------------
-# PC=004c | Instr=e08ff000 | MW=0 | Addr=0064 | WD=00000010 | RD=0000000c
-# ALUFlags [N Z C V] = 0000
-# RegWrite=1  ALUSrc=0  MemtoReg=0  PCSrc=1  ALUControl=00  RegSrc=00  ImmSrc=00
-# R0..R7 : 00000010 00000000 00000000 00000000 00000001 00000000 00000000 0000000c
-# ----------------------------------------
-# PC=0064 | Instr=e280200e | MW=0 | Addr=001e | WD=00000000 | RD=00000000
-# ALUFlags [N Z C V] = 0000
-# RegWrite=1  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=00  RegSrc=00  ImmSrc=00
-# R0..R7 : 00000010 00000000 00000000 00000000 00000001 00000000 00000000 0000000c
-# ----------------------------------------
-# PC=0068 | Instr=ea000001 | MW=0 | Addr=0074 | WD=00000000 | RD=00000000
-# ALUFlags [N Z C V] = 0000
-# RegWrite=0  ALUSrc=1  MemtoReg=0  PCSrc=1  ALUControl=00  RegSrc=01  ImmSrc=10
-# R0..R7 : 00000010 00000000 0000001e 00000000 00000001 00000000 00000000 0000000c
-# ----------------------------------------
-# PC=0074 | Instr=00000000 | MW=0 | Addr=0010 | WD=00000010 | RD=00000000
+# PC=0044 | Instr=00000000 | MW=0 | Addr=0010 | WD=00000010 | RD=00000000
 # ALUFlags [N Z C V] = 0000
 # RegWrite=1  ALUSrc=0  MemtoReg=0  PCSrc=0  ALUControl=10  RegSrc=00  ImmSrc=00
-# R0..R7 : 00000010 00000000 0000001e 00000000 00000001 00000000 00000000 0000000c
+# R0..R7 : 00000010 00000000 00000008 00000000 00000001 00000000 00000000 00000014
 # ----------------------------------------
-# PC=0078 | Instr=00000000 | MW=0 | Addr=0010 | WD=00000010 | RD=00000000
+# PC=0048 | Instr=00000000 | MW=0 | Addr=0010 | WD=00000010 | RD=00000008
 # ALUFlags [N Z C V] = 0000
 # RegWrite=1  ALUSrc=0  MemtoReg=0  PCSrc=0  ALUControl=10  RegSrc=00  ImmSrc=00
-# R0..R7 : 00000010 00000000 0000001e 00000000 00000001 00000000 00000000 0000000c
+# R0..R7 : 00000010 00000000 00000008 00000000 00000001 00000000 00000000 00000014
+# ----------------------------------------
+# PC=004c | Instr=00000000 | MW=0 | Addr=0010 | WD=00000010 | RD=00000008
+# ALUFlags [N Z C V] = 0000
+# RegWrite=1  ALUSrc=0  MemtoReg=0  PCSrc=0  ALUControl=10  RegSrc=00  ImmSrc=00
+# R0..R7 : 00000010 00000000 00000008 00000000 00000001 00000000 00000000 00000014
+# ----------------------------------------
+# PC=0050 | Instr=00000000 | MW=0 | Addr=0010 | WD=00000010 | RD=00000008
+# ALUFlags [N Z C V] = 0000
+# RegWrite=1  ALUSrc=0  MemtoReg=0  PCSrc=0  ALUControl=10  RegSrc=00  ImmSrc=00
+# R0..R7 : 00000010 00000000 00000008 00000000 00000001 00000000 00000000 00000014
+# ----------------------------------------
+# PC=0054 | Instr=00000000 | MW=0 | Addr=0010 | WD=00000010 | RD=00000008
+# ALUFlags [N Z C V] = 0000
+# RegWrite=1  ALUSrc=0  MemtoReg=0  PCSrc=0  ALUControl=10  RegSrc=00  ImmSrc=00
+# R0..R7 : 00000010 00000000 00000008 00000000 00000001 00000000 00000000 00000014
+# ----------------------------------------
+# PC=0058 | Instr=00000000 | MW=0 | Addr=0010 | WD=00000010 | RD=00000008
+# ALUFlags [N Z C V] = 0000
+# RegWrite=1  ALUSrc=0  MemtoReg=0  PCSrc=0  ALUControl=10  RegSrc=00  ImmSrc=00
+# R0..R7 : 00000010 00000000 00000008 00000000 00000001 00000000 00000000 00000014
+# ----------------------------------------
+# PC=005c | Instr=00000000 | MW=0 | Addr=0010 | WD=00000010 | RD=00000008
+# ALUFlags [N Z C V] = 0000
+# RegWrite=1  ALUSrc=0  MemtoReg=0  PCSrc=0  ALUControl=10  RegSrc=00  ImmSrc=00
+# R0..R7 : 00000010 00000000 00000008 00000000 00000001 00000000 00000000 00000014
+# ----------------------------------------
+# PC=0060 | Instr=00000000 | MW=0 | Addr=0010 | WD=00000010 | RD=00000008
+# ALUFlags [N Z C V] = 0000
+# RegWrite=1  ALUSrc=0  MemtoReg=0  PCSrc=0  ALUControl=10  RegSrc=00  ImmSrc=00
+# R0..R7 : 00000010 00000000 00000008 00000000 00000001 00000000 00000000 00000014
 # Test Finalizado
-# PC final = 00000078
+# PC final = 00000064
 # ** Note: $finish    : C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/top_tb.sv(81)
-#    Time: 222 ns  Iteration: 0  Instance: /top_tb
+#    Time: 201 ns  Iteration: 0  Instance: /top_tb
 # 1
 # Break in Module top_tb at C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/top_tb.sv line 81
-# A time value could not be extracted from the current line
-# A time value could not be extracted from the current line
-# A time value could not be extracted from the current line
-# End time: 18:28:25 on Nov 05,2025, Elapsed time: 0:14:43
-# Errors: 0, Warnings: 5
+# End time: 14:29:56 on Nov 06,2025, Elapsed time: 0:01:47
+# Errors: 0, Warnings: 0
