@@ -15,6 +15,8 @@
 	 logic [31:0] PCNext,PCPlus4,PCPlus8;
 	 logic [31:0] ExtImm,SrcA,SrcB,Result;
 	 logic [3:0] RA1,RA2;
+	 logic is_mov;
+	 logic [31:0] SrcA_ALU;
 	 
 	 //next PC logic
 	 mux2 #(32) pcmux(PCPlus4,Result,PCSrc,PCNext);
@@ -25,13 +27,16 @@
 	 //register file logic
 	 mux2 #(4) ra1mux(Instr[19:16],4'b1111,RegSrc[0],RA1);
 	 mux2 #(4) ra2mux(Instr[3:0],Instr[15:12],RegSrc[1],RA2);
-	 regfile rf(clk,RegWrite,RA1,RA2,
-	 Instr[15:12],Result,PCPlus8,
-	 SrcA,WriteData);
+	 regfile rf(clk, RegWrite, reset, RA1, RA2, 
+           Instr[15:12], Result, PCPlus8,
+           SrcA, WriteData);
 	 mux2 #(32)resmux(ALUResult,ReadData,MemtoReg,Result);
 	 extend ext(Instr[23:0],ImmSrc,ExtImm);
 	 
+	 assign is_mov = (Instr[27:26] == 2'b00) && (Instr[24:21] == 4'b1101);
+	 assign SrcA_ALU = is_mov ? 32'b0 : SrcA;
+	 
 	 //ALU logic
 	 mux2#(32) srcbmux(WriteData,ExtImm,ALUSrc,SrcB);
-	 alu alu(SrcA,SrcB,ALUControl,ALUResult,ALUFlags);
+	 alu alu(SrcA_ALU,SrcB,ALUControl,ALUResult,ALUFlags);
  endmodule

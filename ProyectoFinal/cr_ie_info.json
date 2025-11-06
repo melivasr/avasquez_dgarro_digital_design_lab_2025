@@ -1,0 +1,22 @@
+{
+	"system" : {
+		"platform" : "windows64",
+		"os_name" : "Windows 10",
+		"os_version" : "10.0"
+	},
+	"error" : {
+		"executable" : "quartus",
+		"comment" : "not_applicable",
+		"error_message" : "Access Violation at 0X00007FFC74B57FF4",
+		"source_file" : "unknown",
+		"line" : "0",
+		"stack_trace" : "\t0x7ffc74b57ff3: DB_CSYN + 0x167ff3 (std::`dynamic atexit destructor for &apos;_Fac_tidy_reg&apos;&apos; + 0x7)\n\t0x7ffc74b3a2cf: DB_CSYN + 0x14a2cf (_CRT_INIT + 0xeb)\n\t0x7ffc74b3a551: DB_CSYN + 0x14a551 (__DllMainCRTStartup + 0xe1)\n\t0x7ffd94b7f89d: ntdll + 0x15f89d (RtlEncodeRemotePointer + 0xcd)\n\t0x7ffd94a2bcad: ntdll + 0xbcad (RtlRaiseException + 0x156d)\n\t0x7ffd94aad4ae: ntdll + 0x8d4ae (LdrShutdownProcess + 0x17e)\n\t0x7ffd94aac67d: ntdll + 0x8c67d (RtlExitUserProcess + 0x9d)\n\t0x7ffd933318aa: KERNEL32 + 0x418aa (FatalExit + 0xa)\n\t0x7ffd13f129a6: MSVCR120 + 0x229a6 (_initterm_e + 0x21a)\n\t0x7ff760de1f57: quartus + 0x1f57 (__tmainCRTStartup + 0x15f)\n\t0x7ffd9331e8d6: KERNEL32 + 0x2e8d6 (BaseThreadInitThunk + 0x16)\n\t0x7ffd94aac53b: ntdll + 0x8c53b (RtlUserThreadStart + 0x2b)\n",
+		"subsystem" : "unknown"
+	},
+	"quartus" : {
+		"quartus_bits" : "64",
+		"version" : "20.1.0",
+		"build" : "711",
+		"edition" : "Lite Edition"
+	}
+}

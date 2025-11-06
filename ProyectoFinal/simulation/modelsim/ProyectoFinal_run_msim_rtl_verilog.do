@@ -7,7 +7,6 @@ vmap work rtl_work
 
 vlog -vlog01compat -work work +incdir+C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal {C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/ram.v}
 vlog -vlog01compat -work work +incdir+C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal {C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/rom.v}
-vlog -sv -work work +incdir+C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal {C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/adder_n_bit.sv}
 vlog -sv -work work +incdir+C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal {C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/alu.sv}
 vlog -sv -work work +incdir+C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal {C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/arm.sv}
 vlog -sv -work work +incdir+C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal {C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/condcheck.sv}
@@ -20,8 +19,8 @@ vlog -sv -work work +incdir+C:/Users/melis/Documents/github/avasquez_dgarro_digi
 vlog -sv -work work +incdir+C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal {C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/flopr.sv}
 vlog -sv -work work +incdir+C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal {C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/mux2.sv}
 vlog -sv -work work +incdir+C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal {C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/regfile.sv}
-vlog -sv -work work +incdir+C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal {C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/subtractor_n_bit.sv}
 vlog -sv -work work +incdir+C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal {C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/top.sv}
+vlog -sv -work work +incdir+C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal {C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/adder_n_bit.sv}
 
 vlog -sv -work work +incdir+C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal {C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/top_tb.sv}
 
