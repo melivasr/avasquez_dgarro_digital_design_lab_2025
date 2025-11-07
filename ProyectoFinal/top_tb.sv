@@ -44,9 +44,8 @@ module top_tb;
     );
     
     //Instruction Memory 
-    rom imem(
+    rom_i imem(
         .address(PC[7:2]),
-        .clock(clk),
         .q(Instr)
     );
     
@@ -70,7 +69,7 @@ module top_tb;
         $display("ARM Processor Test - Iniciando");
         
         reset = 1;
-        #1
+        @(posedge clk);
         reset = 0;
         
         #200;  
@@ -85,9 +84,9 @@ module top_tb;
         if (!reset) begin
         
             $display("----------------------------------------");
-            $display("PC=%04h | Instr=%08h | MW=%b | Addr=%04h | WD=%08h | RD=%08h",
+            $display("PC=%04h | Instr=%08h | MW=%b | WD=%08h | RD=%08h",
                      PC[15:0], Instr, MemWrite, 
-                     DataAdr[15:0], WriteData, ReadData);
+							WriteData, ReadData);
             $display("ALUFlags [N Z C V] = %b", ALUFlags_dbg);
             $display("RegWrite=%b  ALUSrc=%b  MemtoReg=%b  PCSrc=%b  ALUControl=%b  RegSrc=%b  ImmSrc=%b",
                      RegWrite_dbg, ALUSrc_dbg, MemtoReg_dbg, PCSrc_dbg,

@@ -1,5 +1,5 @@
 Analysis & Elaboration report for ProyectoFinal
-Thu Nov 06 14:27:54 2025
+Thu Nov 06 17:53:26 2025
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -10,28 +10,26 @@ Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
   2. Analysis & Elaboration Summary
   3. Parallel Compilation
   4. Analysis & Elaboration IP Cores Summary
-  5. Source assignments for rom:imem|altsyncram:altsyncram_component|altsyncram_neh1:auto_generated
-  6. Source assignments for ram:dmem|altsyncram:altsyncram_component|altsyncram_a7o1:auto_generated
-  7. Parameter Settings for User Entity Instance: arm:arm_inst|controller:c|condlogic:cl|flopenr:flagreg1
-  8. Parameter Settings for User Entity Instance: arm:arm_inst|controller:c|condlogic:cl|flopenr:flagreg0
-  9. Parameter Settings for User Entity Instance: arm:arm_inst|datapath:dp|mux2:pcmux
- 10. Parameter Settings for User Entity Instance: arm:arm_inst|datapath:dp|flopr:pcreg
- 11. Parameter Settings for User Entity Instance: arm:arm_inst|datapath:dp|adder:pcadd1
- 12. Parameter Settings for User Entity Instance: arm:arm_inst|datapath:dp|adder:pcadd2
- 13. Parameter Settings for User Entity Instance: arm:arm_inst|datapath:dp|mux2:ra1mux
- 14. Parameter Settings for User Entity Instance: arm:arm_inst|datapath:dp|mux2:ra2mux
- 15. Parameter Settings for User Entity Instance: arm:arm_inst|datapath:dp|mux2:resmux
- 16. Parameter Settings for User Entity Instance: arm:arm_inst|datapath:dp|mux2:srcbmux
- 17. Parameter Settings for User Entity Instance: rom:imem|altsyncram:altsyncram_component
- 18. Parameter Settings for User Entity Instance: ram:dmem|altsyncram:altsyncram_component
- 19. altsyncram Parameter Settings by Entity Instance
- 20. Analysis & Elaboration Settings
- 21. Port Connectivity Checks: "arm:arm_inst|datapath:dp|mux2:ra1mux"
- 22. Port Connectivity Checks: "arm:arm_inst|datapath:dp|adder:pcadd2"
- 23. Port Connectivity Checks: "arm:arm_inst|datapath:dp|adder:pcadd1"
- 24. Port Connectivity Checks: "arm:arm_inst"
- 25. Analysis & Elaboration Messages
- 26. Analysis & Elaboration Suppressed Messages
+  5. Source assignments for ram:dmem|altsyncram:altsyncram_component|altsyncram_a7o1:auto_generated
+  6. Parameter Settings for User Entity Instance: arm:arm_inst|controller:c|condlogic:cl|flopenr:flagreg1
+  7. Parameter Settings for User Entity Instance: arm:arm_inst|controller:c|condlogic:cl|flopenr:flagreg0
+  8. Parameter Settings for User Entity Instance: arm:arm_inst|datapath:dp|mux2:pcmux
+  9. Parameter Settings for User Entity Instance: arm:arm_inst|datapath:dp|flopr:pcreg
+ 10. Parameter Settings for User Entity Instance: arm:arm_inst|datapath:dp|adder:pcadd1
+ 11. Parameter Settings for User Entity Instance: arm:arm_inst|datapath:dp|adder:pcadd2
+ 12. Parameter Settings for User Entity Instance: arm:arm_inst|datapath:dp|mux2:ra1mux
+ 13. Parameter Settings for User Entity Instance: arm:arm_inst|datapath:dp|mux2:ra2mux
+ 14. Parameter Settings for User Entity Instance: arm:arm_inst|datapath:dp|mux2:resmux
+ 15. Parameter Settings for User Entity Instance: arm:arm_inst|datapath:dp|mux2:srcbmux
+ 16. Parameter Settings for User Entity Instance: ram:dmem|altsyncram:altsyncram_component
+ 17. altsyncram Parameter Settings by Entity Instance
+ 18. Analysis & Elaboration Settings
+ 19. Port Connectivity Checks: "arm:arm_inst|datapath:dp|mux2:ra1mux"
+ 20. Port Connectivity Checks: "arm:arm_inst|datapath:dp|adder:pcadd2"
+ 21. Port Connectivity Checks: "arm:arm_inst|datapath:dp|adder:pcadd1"
+ 22. Port Connectivity Checks: "arm:arm_inst"
+ 23. Analysis & Elaboration Messages
+ 24. Analysis & Elaboration Suppressed Messages
 
 
 
@@ -58,7 +56,7 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------------------------------------------------------+
 ; Analysis & Elaboration Summary                                              ;
 +-------------------------------+---------------------------------------------+
-; Analysis & Elaboration Status ; Successful - Thu Nov 06 14:27:54 2025       ;
+; Analysis & Elaboration Status ; Successful - Thu Nov 06 17:53:26 2025       ;
 ; Quartus Prime Version         ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                 ; ProyectoFinal                               ;
 ; Top-level Entity Name         ; top                                         ;
@@ -95,17 +93,7 @@ https://fpgasoftware.intel.com/eula.
 ; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance ; IP Include File ;
 +--------+--------------+---------+--------------+--------------+-----------------+-----------------+
 ; Altera ; RAM: 1-PORT  ; 20.1    ; N/A          ; N/A          ; |top|ram:dmem   ; ram.v           ;
-; Altera ; ROM: 1-PORT  ; 20.1    ; N/A          ; N/A          ; |top|rom:imem   ; rom.v           ;
 +--------+--------------+---------+--------------+--------------+-----------------+-----------------+
-
-
-+------------------------------------------------------------------------------------------------+
-; Source assignments for rom:imem|altsyncram:altsyncram_component|altsyncram_neh1:auto_generated ;
-+---------------------------------+--------------------+------+----------------------------------+
-; Assignment                      ; Value              ; From ; To                               ;
-+---------------------------------+--------------------+------+----------------------------------+
-; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                ;
-+---------------------------------+--------------------+------+----------------------------------+
 
 
 +------------------------------------------------------------------------------------------------+
@@ -218,67 +206,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +---------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: rom:imem|altsyncram:altsyncram_component ;
-+------------------------------------+------------------------+-------------------------+
-; Parameter Name                     ; Value                  ; Type                    ;
-+------------------------------------+------------------------+-------------------------+
-; BYTE_SIZE_BLOCK                    ; 8                      ; Untyped                 ;
-; AUTO_CARRY_CHAINS                  ; ON                     ; AUTO_CARRY              ;
-; IGNORE_CARRY_BUFFERS               ; OFF                    ; IGNORE_CARRY            ;
-; AUTO_CASCADE_CHAINS                ; ON                     ; AUTO_CASCADE            ;
-; IGNORE_CASCADE_BUFFERS             ; OFF                    ; IGNORE_CASCADE          ;
-; WIDTH_BYTEENA                      ; 1                      ; Untyped                 ;
-; OPERATION_MODE                     ; ROM                    ; Untyped                 ;
-; WIDTH_A                            ; 32                     ; Signed Integer          ;
-; WIDTHAD_A                          ; 6                      ; Signed Integer          ;
-; NUMWORDS_A                         ; 64                     ; Signed Integer          ;
-; OUTDATA_REG_A                      ; UNREGISTERED           ; Untyped                 ;
-; ADDRESS_ACLR_A                     ; NONE                   ; Untyped                 ;
-; OUTDATA_ACLR_A                     ; NONE                   ; Untyped                 ;
-; WRCONTROL_ACLR_A                   ; NONE                   ; Untyped                 ;
-; INDATA_ACLR_A                      ; NONE                   ; Untyped                 ;
-; BYTEENA_ACLR_A                     ; NONE                   ; Untyped                 ;
-; WIDTH_B                            ; 1                      ; Untyped                 ;
-; WIDTHAD_B                          ; 1                      ; Untyped                 ;
-; NUMWORDS_B                         ; 1                      ; Untyped                 ;
-; INDATA_REG_B                       ; CLOCK1                 ; Untyped                 ;
-; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1                 ; Untyped                 ;
-; RDCONTROL_REG_B                    ; CLOCK1                 ; Untyped                 ;
-; ADDRESS_REG_B                      ; CLOCK1                 ; Untyped                 ;
-; OUTDATA_REG_B                      ; UNREGISTERED           ; Untyped                 ;
-; BYTEENA_REG_B                      ; CLOCK1                 ; Untyped                 ;
-; INDATA_ACLR_B                      ; NONE                   ; Untyped                 ;
-; WRCONTROL_ACLR_B                   ; NONE                   ; Untyped                 ;
-; ADDRESS_ACLR_B                     ; NONE                   ; Untyped                 ;
-; OUTDATA_ACLR_B                     ; NONE                   ; Untyped                 ;
-; RDCONTROL_ACLR_B                   ; NONE                   ; Untyped                 ;
-; BYTEENA_ACLR_B                     ; NONE                   ; Untyped                 ;
-; WIDTH_BYTEENA_A                    ; 1                      ; Signed Integer          ;
-; WIDTH_BYTEENA_B                    ; 1                      ; Untyped                 ;
-; RAM_BLOCK_TYPE                     ; AUTO                   ; Untyped                 ;
-; BYTE_SIZE                          ; 8                      ; Untyped                 ;
-; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE              ; Untyped                 ;
-; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ   ; Untyped                 ;
-; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ   ; Untyped                 ;
-; INIT_FILE                          ; instruction_memory.mif ; Untyped                 ;
-; INIT_FILE_LAYOUT                   ; PORT_A                 ; Untyped                 ;
-; MAXIMUM_DEPTH                      ; 0                      ; Untyped                 ;
-; CLOCK_ENABLE_INPUT_A               ; BYPASS                 ; Untyped                 ;
-; CLOCK_ENABLE_INPUT_B               ; NORMAL                 ; Untyped                 ;
-; CLOCK_ENABLE_OUTPUT_A              ; BYPASS                 ; Untyped                 ;
-; CLOCK_ENABLE_OUTPUT_B              ; NORMAL                 ; Untyped                 ;
-; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN        ; Untyped                 ;
-; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN        ; Untyped                 ;
-; ENABLE_ECC                         ; FALSE                  ; Untyped                 ;
-; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                  ; Untyped                 ;
-; WIDTH_ECCSTATUS                    ; 3                      ; Untyped                 ;
-; DEVICE_FAMILY                      ; Cyclone V              ; Untyped                 ;
-; CBXI_PARAMETER                     ; altsyncram_neh1        ; Untyped                 ;
-+------------------------------------+------------------------+-------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+---------------------------------------------------------------------------------------+
 ; Parameter Settings for User Entity Instance: ram:dmem|altsyncram:altsyncram_component ;
 +------------------------------------+----------------------+---------------------------+
 ; Parameter Name                     ; Value                ; Type                      ;
@@ -344,18 +271,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------------------+------------------------------------------+
 ; Name                                      ; Value                                    ;
 +-------------------------------------------+------------------------------------------+
-; Number of entity instances                ; 2                                        ;
-; Entity Instance                           ; rom:imem|altsyncram:altsyncram_component ;
-;     -- OPERATION_MODE                     ; ROM                                      ;
-;     -- WIDTH_A                            ; 32                                       ;
-;     -- NUMWORDS_A                         ; 64                                       ;
-;     -- OUTDATA_REG_A                      ; UNREGISTERED                             ;
-;     -- WIDTH_B                            ; 1                                        ;
-;     -- NUMWORDS_B                         ; 1                                        ;
-;     -- ADDRESS_REG_B                      ; CLOCK1                                   ;
-;     -- OUTDATA_REG_B                      ; UNREGISTERED                             ;
-;     -- RAM_BLOCK_TYPE                     ; AUTO                                     ;
-;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                ;
+; Number of entity instances                ; 1                                        ;
 ; Entity Instance                           ; ram:dmem|altsyncram:altsyncram_component ;
 ;     -- OPERATION_MODE                     ; SINGLE_PORT                              ;
 ;     -- WIDTH_A                            ; 32                                       ;
@@ -514,7 +430,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Thu Nov 06 14:27:49 2025
+    Info: Processing started: Thu Nov 06 17:53:19 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ProyectoFinal -c ProyectoFinal --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
@@ -552,6 +468,8 @@ Info (12021): Found 1 design units, including 1 entities, in source file adder.s
     Info (12023): Found entity 1: adder File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/adder.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file rom.v
     Info (12023): Found entity 1: rom File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/rom.v Line: 40
+Info (12021): Found 1 design units, including 1 entities, in source file rom_i.sv
+    Info (12023): Found entity 1: rom_i File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/rom_i.sv Line: 1
 Info (12127): Elaborating entity "top" for the top level hierarchy
 Info (12128): Elaborating entity "arm" for hierarchy "arm:arm_inst" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/top.sv Line: 41
 Info (12128): Elaborating entity "controller" for hierarchy "arm:arm_inst|controller:c" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/arm.sv Line: 23
@@ -567,28 +485,12 @@ Info (12128): Elaborating entity "mux2" for hierarchy "arm:arm_inst|datapath:dp|
 Info (12128): Elaborating entity "regfile" for hierarchy "arm:arm_inst|datapath:dp|regfile:rf" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/datapath.sv Line: 33
 Info (12128): Elaborating entity "extend" for hierarchy "arm:arm_inst|datapath:dp|extend:ext" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/datapath.sv Line: 35
 Info (12128): Elaborating entity "alu" for hierarchy "arm:arm_inst|datapath:dp|alu:alu" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/datapath.sv Line: 43
-Info (12128): Elaborating entity "rom" for hierarchy "rom:imem" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/top.sv Line: 48
-Info (12128): Elaborating entity "altsyncram" for hierarchy "rom:imem|altsyncram:altsyncram_component" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/rom.v Line: 82
-Info (12130): Elaborated megafunction instantiation "rom:imem|altsyncram:altsyncram_component" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/rom.v Line: 82
-Info (12133): Instantiated megafunction "rom:imem|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/rom.v Line: 82
-    Info (12134): Parameter "address_aclr_a" = "NONE"
-    Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
-    Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
-    Info (12134): Parameter "init_file" = "instruction_memory.mif"
-    Info (12134): Parameter "intended_device_family" = "Cyclone V"
-    Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
-    Info (12134): Parameter "lpm_type" = "altsyncram"
-    Info (12134): Parameter "numwords_a" = "64"
-    Info (12134): Parameter "operation_mode" = "ROM"
-    Info (12134): Parameter "outdata_aclr_a" = "NONE"
-    Info (12134): Parameter "outdata_reg_a" = "UNREGISTERED"
-    Info (12134): Parameter "widthad_a" = "6"
-    Info (12134): Parameter "width_a" = "32"
-    Info (12134): Parameter "width_byteena_a" = "1"
-Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_neh1.tdf
-    Info (12023): Found entity 1: altsyncram_neh1 File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/db/altsyncram_neh1.tdf Line: 28
-Info (12128): Elaborating entity "altsyncram_neh1" for hierarchy "rom:imem|altsyncram:altsyncram_component|altsyncram_neh1:auto_generated" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
-Info (12128): Elaborating entity "ram" for hierarchy "ram:dmem" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/top.sv Line: 57
+Info (12128): Elaborating entity "rom_i" for hierarchy "rom_i:imem" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/top.sv Line: 47
+Warning (10850): Verilog HDL warning at rom_i.sv(6): number of words (65) in memory file does not match the number of elements in the address range [0:63] File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/rom_i.sv Line: 6
+Warning (10030): Net "mem.data_a" at rom_i.sv(5) has no driver or initial value, using a default initial value '0' File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/rom_i.sv Line: 5
+Warning (10030): Net "mem.waddr_a" at rom_i.sv(5) has no driver or initial value, using a default initial value '0' File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/rom_i.sv Line: 5
+Warning (10030): Net "mem.we_a" at rom_i.sv(5) has no driver or initial value, using a default initial value '0' File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/rom_i.sv Line: 5
+Info (12128): Elaborating entity "ram" for hierarchy "ram:dmem" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/top.sv Line: 56
 Info (12128): Elaborating entity "altsyncram" for hierarchy "ram:dmem|altsyncram:altsyncram_component" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/ram.v Line: 86
 Info (12130): Elaborated megafunction instantiation "ram:dmem|altsyncram:altsyncram_component" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/ram.v Line: 86
 Info (12133): Instantiated megafunction "ram:dmem|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/ram.v Line: 86
@@ -611,10 +513,10 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/alts
     Info (12023): Found entity 1: altsyncram_a7o1 File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/db/altsyncram_a7o1.tdf Line: 28
 Info (12128): Elaborating entity "altsyncram_a7o1" for hierarchy "ram:dmem|altsyncram:altsyncram_component|altsyncram_a7o1:auto_generated" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
 Info (144001): Generated suppressed messages file C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/output_files/ProyectoFinal.map.smsg
-Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4796 megabytes
-    Info: Processing ended: Thu Nov 06 14:27:54 2025
-    Info: Elapsed time: 00:00:05
+Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 5 warnings
+    Info: Peak virtual memory: 4795 megabytes
+    Info: Processing ended: Thu Nov 06 17:53:26 2025
+    Info: Elapsed time: 00:00:07
     Info: Total CPU time (on all processors): 00:00:12
 
 
