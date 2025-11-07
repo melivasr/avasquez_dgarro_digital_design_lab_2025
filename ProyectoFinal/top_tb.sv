@@ -87,7 +87,6 @@ module top_tb;
             $display("PC=%04h | Instr=%08h | MW=%b | WD=%08h | RD=%08h",
                      PC[15:0], Instr, MemWrite, 
 							WriteData, ReadData);
-            $display("ALUFlags [N Z C V] = %b", ALUFlags_dbg);
             $display("RegWrite=%b  ALUSrc=%b  MemtoReg=%b  PCSrc=%b  ALUControl=%b  RegSrc=%b  ImmSrc=%b",
                      RegWrite_dbg, ALUSrc_dbg, MemtoReg_dbg, PCSrc_dbg,
                      ALUControl_dbg, RegSrc_dbg, ImmSrc_dbg);
