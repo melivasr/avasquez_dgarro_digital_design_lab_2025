@@ -44,8 +44,9 @@ module top_tb;
     );
     
     //Instruction Memory 
-    rom_i imem(
+    rom imem(
         .address(PC[7:2]),
+		  .clock(clk),
         .q(Instr)
     );
     
@@ -87,7 +88,7 @@ module top_tb;
             $display("PC=%04h | Instr=%08h | MW=%b | WD=%08h | RD=%08h",
                      PC[15:0], Instr, MemWrite, 
 							WriteData, ReadData);
-            $display("RegWrite=%b  ALUSrc=%b  MemtoReg=%b  PCSrc=%b  ALUControl=%b  RegSrc=%b  ImmSrc=%b",
+            $display("RegWrite=%b  ALUSrc=%b  MemtoReg=%b  PCSrc=%b  ALUControl=%b  RegSrc=%b",
                      RegWrite_dbg, ALUSrc_dbg, MemtoReg_dbg, PCSrc_dbg,
                      ALUControl_dbg, RegSrc_dbg, ImmSrc_dbg);
             $display("R0..R7 : %08h %08h %08h %08h %08h %08h %08h %08h",
