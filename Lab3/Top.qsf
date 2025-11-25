@@ -116,7 +116,7 @@ set_location_assignment PIN_AD17 -to seg_tens[3]
 set_location_assignment PIN_AE18 -to seg_tens[4]
 set_location_assignment PIN_AE17 -to seg_tens[5]
 set_location_assignment PIN_V17 -to seg_tens[6]
-set_global_assignment -name LAST_QUARTUS_VERSION "20.1.0 Lite Edition"
+set_global_assignment -name LAST_QUARTUS_VERSION "20.1.1 Lite Edition"
 set_global_assignment -name TOP_LEVEL_ENTITY time_counter
 set_global_assignment -name SYSTEMVERILOG_FILE shuffle.sv
 set_global_assignment -name SYSTEMVERILOG_FILE btn_debounced_pulse.sv
