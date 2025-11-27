@@ -1,0 +1,451 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/simulation/modelsim
+vadder
+Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+Z2 !s110 1762473224
+!i10b 1
+!s100 TB^hnR53]ckCVRY8;@>QR0
+Z3 !s11b Dg1SIo80bB@j0V0VzS_@n1
+Io:ScQhSKgQ_:IIdzLzSaW1
+Z4 VDg1SIo80bB@j0V0VzS_@n1
+S1
+R0
+w1762406775
+8C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/adder.sv
+FC:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/adder.sv
+!i122 14
+L0 1 5
+Z5 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z6 !s108 1762473224.000000
+!s107 C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/adder.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal|C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/adder.sv|
+!i113 1
+Z7 o-sv -work work
+Z8 !s92 -sv -work work +incdir+C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal
+Z9 tCvgOpt 0
+valu
+R1
+Z10 !s110 1762473222
+!i10b 1
+!s100 2?[Hm_N`hz[F6U4aF_WGL2
+R3
+IbMo[eLjVH;R_9N_m4PEM50
+R4
+S1
+R0
+w1762387389
+8C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/alu.sv
+FC:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/alu.sv
+!i122 1
+L0 1 49
+R5
+r1
+!s85 0
+31
+Z11 !s108 1762473222.000000
+!s107 C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/alu.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal|C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/alu.sv|
+!i113 1
+R7
+R8
+R9
+varm
+R1
+Z12 !s110 1762473223
+!i10b 1
+!s100 7;8l;jBfU6YoU^jgh7Co:3
+R3
+Ij1I`Cc7YU]:]9YT3:P=Mi3
+R4
+S1
+R0
+w1762465113
+8C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/arm.sv
+FC:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/arm.sv
+!i122 2
+L0 1 31
+R5
+r1
+!s85 0
+31
+Z13 !s108 1762473223.000000
+!s107 C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/arm.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal|C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/arm.sv|
+!i113 1
+R7
+R8
+R9
+vcondcheck
+R1
+R12
+!i10b 1
+!s100 hhST6^E[L:>Z[5eo6TUo_1
+R3
+IAJgziV:hN[FM<ON>>Lj0P1
+R4
+S1
+R0
+w1762295005
+8C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/condcheck.sv
+FC:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/condcheck.sv
+!i122 3
+L0 1 29
+R5
+r1
+!s85 0
+31
+R13
+!s107 C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/condcheck.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal|C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/condcheck.sv|
+!i113 1
+R7
+R8
+R9
+vcondlogic
+R1
+R12
+!i10b 1
+!s100 Z?Mag2l=YlPOgB9I_gWhK3
+R3
+Izc;a8RDCnVP7nk3H58OA;3
+R4
+S1
+R0
+Z14 w1762361162
+8C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/condlogic.sv
+FC:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/condlogic.sv
+!i122 4
+L0 1 26
+R5
+r1
+!s85 0
+31
+R13
+!s107 C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/condlogic.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal|C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/condlogic.sv|
+!i113 1
+R7
+R8
+R9
+vcontroller
+R1
+R12
+!i10b 1
+!s100 =dWfO`A>m[AGK[fF:Al^50
+R3
+I1JPk:c[E_8HI6Ta=iM1Y73
+R4
+S1
+R0
+Z15 w1762470291
+8C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/controller.sv
+FC:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/controller.sv
+!i122 5
+L0 1 23
+R5
+r1
+!s85 0
+31
+R13
+!s107 C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/controller.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal|C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/controller.sv|
+!i113 1
+R7
+R8
+R9
+vdatapath
+R1
+R12
+!i10b 1
+!s100 9gzhU36YC9]`F?^N:c2GE3
+R3
+I<ObU51lCGh5W>>J=RTzgD2
+R4
+S1
+R0
+R15
+8C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/datapath.sv
+FC:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/datapath.sv
+!i122 6
+L0 1 44
+R5
+r1
+!s85 0
+31
+R13
+!s107 C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/datapath.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal|C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/datapath.sv|
+!i113 1
+R7
+R8
+R9
+vdecoder
+R1
+R12
+!i10b 1
+!s100 hm]bEbhiQI`GI6dJFObHS3
+R3
+IfazJVVWjA2cVN6LD9o[fi2
+R4
+S1
+R0
+w1762386167
+8C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/decoder.sv
+FC:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/decoder.sv
+!i122 7
+L0 1 54
+R5
+r1
+!s85 0
+31
+R13
+!s107 C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/decoder.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal|C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/decoder.sv|
+!i113 1
+R7
+R8
+R9
+vextend
+R1
+R12
+!i10b 1
+!s100 O:PlLIX:4:0V?L^Cg_JF71
+R3
+IHY>m0R5cL9a8MjchimT3A3
+R4
+S1
+R0
+R14
+8C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/extend.sv
+FC:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/extend.sv
+!i122 8
+L0 1 16
+R5
+r1
+!s85 0
+31
+R13
+!s107 C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/extend.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal|C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/extend.sv|
+!i113 1
+R7
+R8
+R9
+vflopenr
+R1
+R12
+!i10b 1
+!s100 gJRQW1:S;[PTE>c7>CTE81
+R3
+I?AT6MB=l7hIIG[0`1IRJ:0
+R4
+S1
+R0
+R14
+8C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/flopenr.sv
+FC:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/flopenr.sv
+!i122 9
+L0 1 12
+R5
+r1
+!s85 0
+31
+R13
+!s107 C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/flopenr.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal|C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/flopenr.sv|
+!i113 1
+R7
+R8
+R9
+vflopr
+R1
+R12
+!i10b 1
+!s100 H8i5_UkdA;llS8<J:HJ@>3
+R3
+IZGR:0CejOnMNXzL5di0cn1
+R4
+S1
+R0
+w1762471506
+8C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/flopr.sv
+FC:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/flopr.sv
+!i122 10
+Z16 L0 1 11
+R5
+r1
+!s85 0
+31
+R13
+!s107 C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/flopr.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal|C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/flopr.sv|
+!i113 1
+R7
+R8
+R9
+vmux2
+R1
+R12
+!i10b 1
+!s100 chEUMf29dLm;hkSPWAcdA0
+R3
+IO;R3OolEg5DWcaN2?Xg<n0
+R4
+S1
+R0
+w1762291655
+8C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/mux2.sv
+FC:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/mux2.sv
+!i122 11
+L0 1 8
+R5
+r1
+!s85 0
+31
+R13
+!s107 C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/mux2.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal|C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/mux2.sv|
+!i113 1
+R7
+R8
+R9
+vram
+R10
+!i10b 1
+!s100 o07MeCULdYb_[9J=?Q86Q3
+R3
+I3Fb[5c2AYLl3l9e8VO>i83
+R4
+R0
+w1762448006
+8C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/ram.v
+FC:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/ram.v
+!i122 0
+L0 40 66
+R5
+r1
+!s85 0
+31
+R11
+!s107 C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/ram.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal|C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/ram.v|
+!i113 1
+o-vlog01compat -work work
+!s92 -vlog01compat -work work +incdir+C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal
+R9
+vregfile
+R1
+R2
+!i10b 1
+!s100 A_zUlU=8B?hS>]`[``^?a2
+R3
+I_:UCIR>gI>?nl6=?WhbTC3
+R4
+S1
+R0
+w1762451184
+8C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/regfile.sv
+FC:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/regfile.sv
+!i122 12
+L0 1 34
+R5
+r1
+!s85 0
+31
+R13
+!s107 C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/regfile.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal|C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/regfile.sv|
+!i113 1
+R7
+R8
+R9
+vrom_i
+R1
+R2
+!i10b 1
+!s100 nTgeUTP_]?<8WzS7VbSW20
+R3
+IPV2I8oTRQ`B:GnJmEjNKG0
+R4
+S1
+R0
+w1762472936
+8C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/rom_i.sv
+FC:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/rom_i.sv
+!i122 15
+R16
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/rom_i.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal|C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/rom_i.sv|
+!i113 1
+R7
+R8
+R9
+vtop
+R1
+R2
+!i10b 1
+!s100 ;18=8O6M2;Jl5eci2T02<2
+R3
+I:NX3:FC<2Jl:knZQ09EkT0
+R4
+S1
+R0
+w1762472975
+8C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/top.sv
+FC:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/top.sv
+!i122 13
+L0 1 58
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/top.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal|C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/top.sv|
+!i113 1
+R7
+R8
+R9
+vtop_tb
+R1
+R2
+!i10b 1
+!s100 XWG@NEd1ndR5:R0V8YO[93
+R3
+IbdV<nZ98fnWjQjj9XJ`lC2
+R4
+S1
+R0
+w1762473086
+8C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/top_tb.sv
+FC:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/top_tb.sv
+!i122 16
+L0 2 101
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/top_tb.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal|C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/top_tb.sv|
+!i113 1
+R7
+R8
+R9

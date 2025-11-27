@@ -1,0 +1,77 @@
+module fsm(
+	input logic rst,
+	input logic clk,
+	input logic timer_flag,
+	input logic btn,
+	
+	output logic led_g_vh,
+	output logic led_y_vh,
+	output logic led_r_vh,
+	output logic led_g_p,
+	output logic led_r_p,
+	output logic [3:0] timer
+);
+
+
+	typedef enum logic [1:0]{
+		INIT  2'b00,
+		VEHICULAR = 2'b01,
+		PEATONAL = 2'b10,
+	}t_state;
+	
+	t_state state next_state
+	
+	always_ff@(posedge rst or posedge clk) begin
+		if(rst) next_state <= INIT;
+		else state <= next_state;
+	end
+	
+	always_comb begin
+			next_state = state;
+		unique case begin
+		
+			INIT: begin
+				next_state = VEHICULAR;
+			end
+			
+			VEHICULAR:begin
+				if (timer_flag) begin
+					next_state = PEATONAL;
+				end else if (btn) begin
+					next_state = PEATONAL;
+				end else begin
+					next_state = VEHICULAR;
+				end
+			end
+			
+			PEATONAL: begin 
+				if (timer_flag) begin
+					next_state = INIT;
+				end else begin 
+					next_state = PEATONAL;
+				end 
+			end
+			
+		endcase
+	end 
+	
+	assign led_g_vh = (state == INIT) ? 1'b0 :
+							(state == VEHICULAR) ? 1'b1 :
+							(state == PEATONAL) ? 1'b0 ;
+	assign led_y_vh = (state == INIT) ? 1'b1 :
+							(state == VEHICULAR) ? 1'b0 :
+							(state == PEATONAL) ? 1'b0 ;
+	assign led_r_vh = (state == INIT) ? 1'b0 :
+							(state == VEHICULAR) ? 1'b0 :
+							(state == PEATONAL) ? 1'b1;
+	assign led_g_p =  (state == INIT) ? 1'b0 :
+							(state == VEHICULAR) ? 1'b0 :
+							(state == PEATONAL) ? 1'b1 ;
+	assign led_r_p =  (state == INIT) ? 1'b1 :
+							(state == VEHICULAR) ? 1'b1 :
+							(state == PEATONAL) ? 1'b0 ;
+	assign [3:0] timer = (state == INIT) ? 4'd0 :
+							(state == VEHICULAR) ? 4'd10 :
+							(state == PEATONAL) ? 4'd5 ;
+	
+endmodule 

@@ -1,0 +1,30 @@
+`timescale 1ns / 1ps
+
+module top_tb;
+    
+    logic clk;
+    logic reset;
+    
+    //top
+    top uut(
+        .clk(clk),
+        .reset(reset)
+    );
+    
+    // Clock
+    initial begin
+        clk = 0;
+        forever #5 clk = ~clk;
+    end
+    
+    // Test
+    initial begin
+        reset = 1;
+        #20;
+        reset = 0;
+        
+        #5000;
+        $finish;
+    end
+    
+endmodule
