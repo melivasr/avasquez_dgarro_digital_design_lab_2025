@@ -1,0 +1,55 @@
+# Copyright (C) 2020  Intel Corporation. All rights reserved.
+# Your use of Intel Corporation's design tools, logic functions 
+# and other software and tools, and any partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Intel Program License 
+# Subscription Agreement, the Intel Quartus Prime License Agreement,
+# the Intel FPGA IP License Agreement, or other applicable license
+# agreement, including, without limitation, that your use is for
+# the sole purpose of programming logic devices manufactured by
+# Intel and sold by Intel or its authorized distributors.  Please
+# refer to the applicable agreement for further details, at
+# https://fpgasoftware.intel.com/eula.
+
+# Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+# File: C:\Users\melis\Documents\github\avasquez_dgarro_digital_design_lab_2025\ProyectoFinal\pins.csv
+# Generated on: Thu Nov 27 11:18:07 2025
+
+# Note: The column header names should not be changed if you wish to import this .csv file into the Quartus Prime software.
+
+To,Direction,Location,I/O Bank,VREF Group,I/O Standard,Reserved,Current Strength,Slew Rate,Differential Pair,Transceiver Analog Settings Protocol,VCCR_GXB/VCCT_GXB Voltage,Transceiver I/O Pin Termination,Transceiver Dedicated Refclk Pin Termination,Transmitter Common Mode Driver Voltage,Transmitter Slew Rate Control,Transmitter Differential Output Voltage,Receiver Buffer Common Mode Voltage,Strict Preservation
+PS2_KBCLK,Input,PIN_AB25,5A,B5A_N0,3.3-V LVTTL,,,,,,,,,,,,,
+PS2_KBDAT,Input,PIN_AA25,5A,B5A_N0,3.3-V LVTTL,,,,,,,,,,,,,
+b[7],Output,PIN_AK16,4A,B4A_N0,3.3-V LVTTL,,,,,,,,,,,,,
+b[6],Output,PIN_AJ16,4A,B4A_N0,3.3-V LVTTL,,,,,,,,,,,,,
+b[5],Output,PIN_AJ17,4A,B4A_N0,3.3-V LVTTL,,,,,,,,,,,,,
+b[4],Output,PIN_AH19,4A,B4A_N0,3.3-V LVTTL,,,,,,,,,,,,,
+b[3],Output,PIN_AJ19,4A,B4A_N0,3.3-V LVTTL,,,,,,,,,,,,,
+b[2],Output,PIN_AH20,4A,B4A_N0,3.3-V LVTTL,,,,,,,,,,,,,
+b[1],Output,PIN_AJ20,4A,B4A_N0,3.3-V LVTTL,,,,,,,,,,,,,
+b[0],Output,PIN_AJ21,4A,B4A_N0,3.3-V LVTTL,,,,,,,,,,,,,
+blank_b,Output,PIN_AK22,4A,B4A_N0,3.3-V LVTTL,,,,,,,,,,,,,
+clk,Input,PIN_AF14,3B,B3B_N0,3.3-V LVTTL,,,,,,,,,,,,,
+g[7],Output,PIN_AH23,4A,B4A_N0,3.3-V LVTTL,,,,,,,,,,,,,
+g[6],Output,PIN_AK23,4A,B4A_N0,3.3-V LVTTL,,,,,,,,,,,,,
+g[5],Output,PIN_AH24,4A,B4A_N0,3.3-V LVTTL,,,,,,,,,,,,,
+g[4],Output,PIN_AJ24,4A,B4A_N0,3.3-V LVTTL,,,,,,,,,,,,,
+g[3],Output,PIN_AK24,4A,B4A_N0,3.3-V LVTTL,,,,,,,,,,,,,
+g[2],Output,PIN_AH25,4A,B4A_N0,3.3-V LVTTL,,,,,,,,,,,,,
+g[1],Output,PIN_AJ25,4A,B4A_N0,3.3-V LVTTL,,,,,,,,,,,,,
+g[0],Output,PIN_AK26,4A,B4A_N0,3.3-V LVTTL,,,,,,,,,,,,,
+hsync,Output,PIN_AK19,4A,B4A_N0,3.3-V LVTTL,,,,,,,,,,,,,
+r[7],Output,PIN_AJ26,4A,B4A_N0,3.3-V LVTTL,,,,,,,,,,,,,
+r[6],Output,PIN_AG26,4A,B4A_N0,3.3-V LVTTL,,,,,,,,,,,,,
+r[5],Output,PIN_AF26,4A,B4A_N0,3.3-V LVTTL,,,,,,,,,,,,,
+r[4],Output,PIN_AH27,4A,B4A_N0,3.3-V LVTTL,,,,,,,,,,,,,
+r[3],Output,PIN_AJ27,4A,B4A_N0,3.3-V LVTTL,,,,,,,,,,,,,
+r[2],Output,PIN_AK27,4A,B4A_N0,3.3-V LVTTL,,,,,,,,,,,,,
+r[1],Output,PIN_AK28,4A,B4A_N0,3.3-V LVTTL,,,,,,,,,,,,,
+r[0],Output,PIN_AK29,4A,B4A_N0,3.3-V LVTTL,,,,,,,,,,,,,
+reset,Input,PIN_AA30,5B,B5B_N0,3.3-V LVTTL,,,,,,,,,,,,,
+sync_b,Output,PIN_AJ22,4A,B4A_N0,3.3-V LVTTL,,,,,,,,,,,,,
+vgaclk,Output,PIN_AK21,4A,B4A_N0,3.3-V LVTTL,,,,,,,,,,,,,
+vsync,Output,PIN_AK18,4A,B4A_N0,3.3-V LVTTL,,,,,,,,,,,,,

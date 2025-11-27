@@ -44,9 +44,8 @@ module top_tb;
     );
     
     //Instruction Memory 
-    rom imem(
+    rom_i imem(
         .address(PC[7:2]),
-		  .clock(clk),
         .q(Instr)
     );
     
