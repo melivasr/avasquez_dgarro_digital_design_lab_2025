@@ -99,12 +99,12 @@ endmodule
 // Retrieval info: PRIVATE: MAXIMUM_DEPTH NUMERIC "0"
 // Retrieval info: PRIVATE: MEMSIZE NUMERIC "256"
 // Retrieval info: PRIVATE: MEM_IN_BITS NUMERIC "1"
-// Retrieval info: PRIVATE: MIFfilename STRING "data_memory.mif"
+// Retrieval info: PRIVATE: MIFfilename STRING "instruction_memory.mif"
 // Retrieval info: PRIVATE: OPERATION_MODE NUMERIC "3"
 // Retrieval info: PRIVATE: OUTDATA_ACLR_B NUMERIC "0"
 // Retrieval info: PRIVATE: OUTDATA_REG_B NUMERIC "1"
 // Retrieval info: PRIVATE: RAM_BLOCK_TYPE NUMERIC "0"
-// Retrieval info: PRIVATE: READ_DURING_WRITE_MODE_MIXED_PORTS NUMERIC "1"
+// Retrieval info: PRIVATE: READ_DURING_WRITE_MODE_MIXED_PORTS NUMERIC "2"
 // Retrieval info: PRIVATE: READ_DURING_WRITE_MODE_PORT_A NUMERIC "3"
 // Retrieval info: PRIVATE: READ_DURING_WRITE_MODE_PORT_B NUMERIC "3"
 // Retrieval info: PRIVATE: REGdata NUMERIC "1"
@@ -133,7 +133,7 @@ endmodule
 // Retrieval info: CONSTANT: CLOCK_ENABLE_OUTPUT_A STRING "BYPASS"
 // Retrieval info: CONSTANT: CLOCK_ENABLE_OUTPUT_B STRING "BYPASS"
 // Retrieval info: CONSTANT: INDATA_REG_B STRING "CLOCK0"
-// Retrieval info: CONSTANT: INIT_FILE STRING "data_memory.mif"
+// Retrieval info: CONSTANT: INIT_FILE STRING "instruction_memory.mif"
 // Retrieval info: CONSTANT: INTENDED_DEVICE_FAMILY STRING "Cyclone V"
 // Retrieval info: CONSTANT: LPM_TYPE STRING "altsyncram"
 // Retrieval info: CONSTANT: NUMWORDS_A NUMERIC "8"
@@ -144,7 +144,7 @@ endmodule
 // Retrieval info: CONSTANT: OUTDATA_REG_A STRING "CLOCK0"
 // Retrieval info: CONSTANT: OUTDATA_REG_B STRING "CLOCK0"
 // Retrieval info: CONSTANT: POWER_UP_UNINITIALIZED STRING "FALSE"
-// Retrieval info: CONSTANT: READ_DURING_WRITE_MODE_MIXED_PORTS STRING "OLD_DATA"
+// Retrieval info: CONSTANT: READ_DURING_WRITE_MODE_MIXED_PORTS STRING "DONT_CARE"
 // Retrieval info: CONSTANT: READ_DURING_WRITE_MODE_PORT_A STRING "NEW_DATA_NO_NBE_READ"
 // Retrieval info: CONSTANT: READ_DURING_WRITE_MODE_PORT_B STRING "NEW_DATA_NO_NBE_READ"
 // Retrieval info: CONSTANT: WIDTHAD_A NUMERIC "3"
@@ -175,7 +175,7 @@ endmodule
 // Retrieval info: GEN_FILE: TYPE_NORMAL ram.v TRUE
 // Retrieval info: GEN_FILE: TYPE_NORMAL ram.inc FALSE
 // Retrieval info: GEN_FILE: TYPE_NORMAL ram.cmp FALSE
-// Retrieval info: GEN_FILE: TYPE_NORMAL ram.bsf TRUE
-// Retrieval info: GEN_FILE: TYPE_NORMAL ram_inst.v TRUE
+// Retrieval info: GEN_FILE: TYPE_NORMAL ram.bsf FALSE
+// Retrieval info: GEN_FILE: TYPE_NORMAL ram_inst.v FALSE
 // Retrieval info: GEN_FILE: TYPE_NORMAL ram_bb.v TRUE
 // Retrieval info: LIB_FILE: altera_mf

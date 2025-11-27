@@ -31,10 +31,11 @@ assign{RegSrc,ImmSrc,ALUSrc,MemtoReg,
 	 
  //ALUDecoder
  always_comb
-	 if(ALUOp)begin //which DP Instr?
+	 if(ALUOp)begin 
 	 case(Funct[4:1])
 		 4'b0100: ALUControl=2'b00; //ADD
 		 4'b0010: ALUControl=2'b01; //SUB
+		 4'b0011: ALUControl = 2'b01; // RSB
 		 4'b0000: ALUControl=2'b10; //AND
 		 4'b1100: ALUControl=2'b11; //ORR
 		 4'b1101: ALUControl = 2'b11; // MOV
@@ -45,7 +46,7 @@ assign{RegSrc,ImmSrc,ALUSrc,MemtoReg,
 	 FlagW[0] =Funct[0]&
 	 (ALUControl==2'b00|ALUControl==2'b01);
 	 end else begin
-	 ALUControl=2'b00; //add for non-DP instructions
+	 ALUControl=2'b00; 
 	 FlagW =2'b00; //don't update Flags
 	end
 	

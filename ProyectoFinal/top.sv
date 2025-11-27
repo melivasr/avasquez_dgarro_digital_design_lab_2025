@@ -130,7 +130,8 @@ module top(
         .ball_x   (ball_x_vga),
         .ball_y   (ball_y_vga),
         .score1   (score1_vga),
-        .score2   (score2_vga)
+        .score2   (score2_vga),
+		  .winner   (winner_vga) 
     );
 
     // VideoGen
@@ -143,6 +144,7 @@ module top(
         .ball_y   (ball_y_vga),
         .score1   (score1_vga),
         .score2   (score2_vga),
+		  .winner   (winner_vga),
         .r(r),
         .g(g),
         .b(b)
