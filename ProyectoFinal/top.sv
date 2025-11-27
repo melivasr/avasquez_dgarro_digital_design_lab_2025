@@ -32,7 +32,7 @@ module top(
 
     // Instantiate ARM processor
     arm arm_inst(
-        .clk(clk),
+        .clk(vgaclk),
         .reset(reset),
         .PC(PC),
         .Instr(Instr),
@@ -53,7 +53,7 @@ module top(
 
     // Instantiate Instruction Memory (ROM)
     rom_i imem(
-        .address(PC[7:2]),
+        .address(PC[8:2]),
         .q(Instr)
     );
 
@@ -68,7 +68,7 @@ module top(
     ram dmem(
         .address_a (cpu_word_addr),
         .address_b (vga_word_addr),
-        .clock     (clk),
+        .clock     (vgaclk),
         .data_a    (WriteData),
         .data_b    (32'b0),    // VGA solo lee
         .wren_a    (MemWrite), // ARM escribe
@@ -88,21 +88,34 @@ module top(
         .x(x), .y(y)
     );
 	 
-	 //PS/2
+	  // PS/2
     logic [15:0] ps2_hex;
+    logic [3:0]  keys_bits;
 
     ps2 kb_inst (
         .PS2_KBCLK   (PS2_KBCLK),
         .PS2_KBDAT   (PS2_KBDAT),
         .rst_n       (~reset),
-        .computerClk (clk),
+        .computerClk (vgaclk),
         .hexo        (ps2_hex)
     );
 
+    // Decodificador de teclas R/F/O/L
+    key_mapper keymap_inst (
+        .clk    (vgaclk),
+        .reset  (reset),
+        .ps2_hex(ps2_hex),
+        .keys   (keys_bits)
+    );
+
+    // Registro de teclas visto por el ARM:
+    // bit0: plyer 1 up (R)
+    // bit1: player 1 down (F)
+    // bit2: player 2 up  (O)
+    // bit3: player 3 down (L)
+    wire [31:0] keys_reg = {28'b0, keys_bits};
+
 	 
-	 // Registro de teclas: bits [3:0]
-    // bit0: P1_UP, bit1: P1_DOWN, bit2: P2_UP, bit3: P2_DOWN 
-    wire [31:0] keys_reg = {16'b0, ps2_hex};
     // Mux de lectura para el ARM:
     logic [31:0] read_mux;
 
@@ -119,20 +132,24 @@ module top(
     logic [9:0] paddle1_y_vga, paddle2_y_vga;
     logic [9:0] ball_x_vga, ball_y_vga;
     logic [3:0] score1_vga, score2_vga;
+	 logic [1:0] winner_vga;
 
-    ram2vga_bridge u_bridge (
-        .clk      (clk),
-        .reset    (reset),
-        .addr_b   (vga_word_addr),
-        .q_b      (ram_q_b),
-        .paddle1_y(paddle1_y_vga),
-        .paddle2_y(paddle2_y_vga),
-        .ball_x   (ball_x_vga),
-        .ball_y   (ball_y_vga),
-        .score1   (score1_vga),
-        .score2   (score2_vga),
-		  .winner   (winner_vga) 
-    );
+	 ram2vga_bridge u_bridge (
+		 .clk      (vgaclk),
+		 .reset    (reset),
+		 .x        (x),
+		 .y        (y),
+		 .addr_b   (vga_word_addr),
+		 .q_b      (ram_q_b),
+		 .paddle1_y(paddle1_y_vga),
+		 .paddle2_y(paddle2_y_vga),
+		 .ball_x   (ball_x_vga),
+		 .ball_y   (ball_y_vga),
+		 .score1   (score1_vga),
+		 .score2   (score2_vga),
+		 .winner   (winner_vga)
+	 );
+
 
     // VideoGen
     videoGen_pong u_video (

@@ -1276,3 +1276,5 @@
 #    Time: 2005 ns  Iteration: 0  Instance: /top_tb
 # 1
 # Break in Module top_tb at C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/top_tb.sv line 90
+# End time: 15:41:36 on Nov 27,2025, Elapsed time: 0:29:48
+# Errors: 0, Warnings: 2

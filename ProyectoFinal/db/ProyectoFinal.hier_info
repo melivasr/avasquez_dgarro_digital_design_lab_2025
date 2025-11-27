@@ -1,6 +1,6 @@
 |top
-clk => clk.IN5
-reset => reset.IN2
+clk => clk.IN1
+reset => reset.IN3
 PS2_KBCLK => PS2_KBCLK.IN1
 PS2_KBDAT => PS2_KBDAT.IN1
 vgaclk << vgaclk.DB_MAX_OUTPUT_PORT_TYPE
@@ -4117,6 +4117,7 @@ address[2] => mem.RADDR2
 address[3] => mem.RADDR3
 address[4] => mem.RADDR4
 address[5] => mem.RADDR5
+address[6] => mem.RADDR6
 q[0] <= mem.DATAOUT
 q[1] <= mem.DATAOUT1
 q[2] <= mem.DATAOUT2
@@ -5852,6 +5853,37 @@ in => ff_reg[0].DATAIN
 out <= out_reg.DB_MAX_OUTPUT_PORT_TYPE
 
 
+|top|key_mapper:keymap_inst
+clk => p2_down.CLK
+clk => p2_up.CLK
+clk => p1_down.CLK
+clk => p1_up.CLK
+reset => p2_down.ACLR
+reset => p2_up.ACLR
+reset => p1_down.ACLR
+reset => p1_up.ACLR
+ps2_hex[0] => Decoder0.IN7
+ps2_hex[1] => Decoder0.IN6
+ps2_hex[2] => Decoder0.IN5
+ps2_hex[3] => Decoder0.IN4
+ps2_hex[4] => Decoder0.IN3
+ps2_hex[5] => Decoder0.IN2
+ps2_hex[6] => Decoder0.IN1
+ps2_hex[7] => Decoder0.IN0
+ps2_hex[8] => Equal0.IN7
+ps2_hex[9] => Equal0.IN6
+ps2_hex[10] => Equal0.IN5
+ps2_hex[11] => Equal0.IN4
+ps2_hex[12] => Equal0.IN3
+ps2_hex[13] => Equal0.IN2
+ps2_hex[14] => Equal0.IN1
+ps2_hex[15] => Equal0.IN0
+keys[0] <= p1_up.DB_MAX_OUTPUT_PORT_TYPE
+keys[1] <= p1_down.DB_MAX_OUTPUT_PORT_TYPE
+keys[2] <= p2_up.DB_MAX_OUTPUT_PORT_TYPE
+keys[3] <= p2_down.DB_MAX_OUTPUT_PORT_TYPE
+
+
 |top|ram2vga_bridge:u_bridge
 clk => winner_reg[0].CLK
 clk => winner_reg[1].CLK
@@ -5906,7 +5938,7 @@ clk => paddle1_y_reg[9].CLK
 clk => addr_b[0]~reg0.CLK
 clk => addr_b[1]~reg0.CLK
 clk => addr_b[2]~reg0.CLK
-clk => state~1.DATAIN
+clk => state~9.DATAIN
 reset => winner_reg[0].ACLR
 reset => winner_reg[1].ACLR
 reset => score2_reg[0].ACLR
@@ -5960,7 +5992,27 @@ reset => paddle1_y_reg[9].ACLR
 reset => addr_b[0]~reg0.ACLR
 reset => addr_b[1]~reg0.ACLR
 reset => addr_b[2]~reg0.ACLR
-reset => state~3.DATAIN
+reset => state~11.DATAIN
+x[0] => Equal0.IN9
+x[1] => Equal0.IN8
+x[2] => Equal0.IN7
+x[3] => Equal0.IN6
+x[4] => Equal0.IN5
+x[5] => Equal0.IN4
+x[6] => Equal0.IN3
+x[7] => Equal0.IN2
+x[8] => Equal0.IN1
+x[9] => Equal0.IN0
+y[0] => Equal1.IN9
+y[1] => Equal1.IN8
+y[2] => Equal1.IN7
+y[3] => Equal1.IN6
+y[4] => Equal1.IN5
+y[5] => Equal1.IN4
+y[6] => Equal1.IN3
+y[7] => Equal1.IN2
+y[8] => Equal1.IN1
+y[9] => Equal1.IN0
 addr_b[0] <= addr_b[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 addr_b[1] <= addr_b[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 addr_b[2] <= addr_b[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE

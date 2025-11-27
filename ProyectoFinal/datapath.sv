@@ -14,21 +14,19 @@ module datapath(
     input  logic [31:0] ReadData
 );
     logic [31:0] PCNext,PCPlus4,PCPlus8;
-    logic [31:0] ExtImm,SrcA,/*SrcB,*/Result; // SrcB ya no lo usas
+    logic [31:0] ExtImm,SrcA, Result; 
     logic [3:0]  RA1,RA2;
 
-    // NUEVO
     logic        is_mov, is_rsb;
     logic [31:0] SrcA_pre, SrcB_pre;
     logic [31:0] ALU_A, ALU_B;
 
-    // ========== PC ==========
     mux2 #(32) pcmux(PCPlus4, Result, PCSrc, PCNext);
     flopr #(32) pcreg(clk, reset, PCNext, PC);
     adder #(32) pcadd1(PC, 32'b100, PCPlus4);
     adder #(32) pcadd2(PCPlus4, 32'b100, PCPlus8);
 
-    // ========== Regfile ==========
+    // Regfile
     mux2 #(4) ra1mux(Instr[19:16],4'b1111,RegSrc[0],RA1);
     mux2 #(4) ra2mux(Instr[3:0],Instr[15:12],RegSrc[1],RA2);
 
