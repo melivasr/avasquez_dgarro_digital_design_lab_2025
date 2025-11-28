@@ -1,4 +1,4 @@
-/* pong_main.s - Main game loop */
+/* pong_main.s - Main game loop (ARMv4 Compatible) */
 
 .global pong_main
 
@@ -23,12 +23,19 @@
 .extern paddle_check_collision
 .extern check_winner
 .extern draw_win_message
+.extern draw_rect
+
+/* Constants */
+.equ SCREEN_WIDTH, 640
+.equ SCREEN_HEIGHT, 480
+.equ CENTER_X, 318  /* (640 / 2) - 2 */
 
 .section .text
 
 /* Main game entry point */
 pong_main:
-    push {r4-r11, lr}
+    /* Save registers using STMFD */
+    stmfd sp!, {r4-r11, lr}
     
     /* Initialize all game systems */
     bl score_init
@@ -135,11 +142,12 @@ game_over:
 game_over_loop:
     b game_over_loop
     
-    pop {r4-r11, pc}
+    /* Restore registers using LDMFD */
+    ldmfd sp!, {r4-r11, pc}
 
 /* Draw center line (dashed) */
 draw_center_line:
-    push {r0-r4, lr}
+    stmfd sp!, {r0-r6, lr}
     
     mov r5, #0                  /* Y position */
     ldr r6, =SCREEN_HEIGHT
@@ -149,38 +157,33 @@ center_line_loop:
     bge center_line_done
     
     /* Draw a small segment */
-    ldr r0, =CENTER_X                /* X position (center) */
-    mov r1, r5                       /* Y position */
-    mov r2, #4                       /* Width */
-    mov r3, #10                      /* Height (dash length) */
-    ldr r4, =0xFFFF                  /* White color */
+    ldr r0, =CENTER_X           /* X position (center) */
+    mov r1, r5                  /* Y position */
+    mov r2, #4                  /* Width */
+    mov r3, #10                 /* Height (dash length) */
+    ldr r4, =0xFFFF             /* White color */
     bl draw_rect
     
     add r5, r5, #20             /* Move down (dash + gap) */
     b center_line_loop
     
 center_line_done:
-    pop {r0-r4, pc}
+    ldmfd sp!, {r0-r6, pc}
 
 /* Frame rate delay (controls game speed) */
 delay:
-    push {r0, lr}
+    stmfd sp!, {r0, lr}
     ldr r0, =200000             /* Adjust this for game speed */
 delay_loop:
     subs r0, r0, #1
     bne delay_loop
-    pop {r0, pc}
+    ldmfd sp!, {r0, pc}
 
 /* Longer delay after scoring */
 delay_long:
-    push {r0, lr}
+    stmfd sp!, {r0, lr}
     ldr r0, =500000
 delay_long_loop:
     subs r0, r0, #1
     bne delay_long_loop
-    pop {r0, pc}
-
-/* Constants */
-.equ SCREEN_WIDTH, 640
-.equ SCREEN_HEIGHT, 480
-.equ CENTER_X, 318  /* (640 / 2) - 2 */
+    ldmfd sp!, {r0, pc}

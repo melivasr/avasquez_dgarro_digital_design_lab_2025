@@ -28,7 +28,10 @@ player2_score: .word 0
 
 /* Initialize scores */
 score_init:
-    push {r0-r1, lr}
+    sub sp, sp, #12
+    str r0, [sp, #0]
+    str r1, [sp, #4]
+    str lr, [sp, #8]
     
     ldr r0, =player1_score
     mov r1, #0
@@ -38,29 +41,47 @@ score_init:
     mov r1, #0
     str r1, [r0]
     
-    pop {r0-r1, pc}
+    ldr r0, [sp, #0]
+    ldr r1, [sp, #4]
+    ldr lr, [sp, #8]
+    add sp, sp, #12
+    mov pc, lr
 
 /* Add point to player 1 */
 score_player1:
-    push {r0-r1, lr}
+    sub sp, sp, #12
+    str r0, [sp, #0]
+    str r1, [sp, #4]
+    str lr, [sp, #8]
     
     ldr r0, =player1_score
     ldr r1, [r0]
     add r1, r1, #1
     str r1, [r0]
     
-    pop {r0-r1, pc}
+    ldr r0, [sp, #0]
+    ldr r1, [sp, #4]
+    ldr lr, [sp, #8]
+    add sp, sp, #12
+    mov pc, lr
 
 /* Add point to player 2 */
 score_player2:
-    push {r0-r1, lr}
+    sub sp, sp, #12
+    str r0, [sp, #0]
+    str r1, [sp, #4]
+    str lr, [sp, #8]
     
     ldr r0, =player2_score
     ldr r1, [r0]
     add r1, r1, #1
     str r1, [r0]
     
-    pop {r0-r1, pc}
+    ldr r0, [sp, #0]
+    ldr r1, [sp, #4]
+    ldr lr, [sp, #8]
+    add sp, sp, #12
+    mov pc, lr
 
 /* Get player 1 score */
 /* Returns score in r0 */
@@ -78,7 +99,13 @@ get_score_p2:
 
 /* Draw both scores on screen */
 draw_scores:
-    push {r0-r4, lr}
+    sub sp, sp, #24
+    str r0, [sp, #0]
+    str r1, [sp, #4]
+    str r2, [sp, #8]
+    str r3, [sp, #12]
+    str r4, [sp, #16]
+    str lr, [sp, #20]
     
     /* Draw player 1 score (left side) */
     bl get_score_p1
@@ -94,12 +121,25 @@ draw_scores:
     mov r2, #50             /* Y position */
     bl draw_digit
     
-    pop {r0-r4, pc}
+    ldr r0, [sp, #0]
+    ldr r1, [sp, #4]
+    ldr r2, [sp, #8]
+    ldr r3, [sp, #12]
+    ldr r4, [sp, #16]
+    ldr lr, [sp, #20]
+    add sp, sp, #24
+    mov pc, lr
 
 /* Draw a single digit (0-9) */
 /* r0 = x position, r1 = digit value, r2 = y position */
 draw_digit:
-    push {r0-r4, lr}
+    sub sp, sp, #24
+    str r0, [sp, #0]
+    str r1, [sp, #4]
+    str r2, [sp, #8]
+    str r3, [sp, #12]
+    str r4, [sp, #16]
+    str lr, [sp, #20]
     
     /* Limit to single digit (0-9) */
     cmp r1, #9
@@ -133,45 +173,90 @@ draw_digit:
 
 draw_0:
     /* Top horizontal */
-    push {r0-r4}
+    sub sp, sp, #20
+    str r0, [sp, #0]
+    str r1, [sp, #4]
+    str r2, [sp, #8]
+    str r3, [sp, #12]
+    str r4, [sp, #16]
     mov r1, r2
     ldr r2, =DIGIT_WIDTH
     ldr r3, =DIGIT_THICKNESS
     ldr r4, =COLOR_WHITE
     bl draw_rect
-    pop {r0-r4}
+    ldr r0, [sp, #0]
+    ldr r1, [sp, #4]
+    ldr r2, [sp, #8]
+    ldr r3, [sp, #12]
+    ldr r4, [sp, #16]
+    add sp, sp, #20
     
     /* Top left vertical */
-    push {r0-r4}
+    sub sp, sp, #20
+    str r0, [sp, #0]
+    str r1, [sp, #4]
+    str r2, [sp, #8]
+    str r3, [sp, #12]
+    str r4, [sp, #16]
     mov r1, r2
     ldr r2, =DIGIT_THICKNESS
     ldr r3, =(DIGIT_HEIGHT / 2)
     ldr r4, =COLOR_WHITE
     bl draw_rect
-    pop {r0-r4}
+    ldr r0, [sp, #0]
+    ldr r1, [sp, #4]
+    ldr r2, [sp, #8]
+    ldr r3, [sp, #12]
+    ldr r4, [sp, #16]
+    add sp, sp, #20
     
     /* Top right vertical */
-    push {r0-r4}
+    sub sp, sp, #20
+    str r0, [sp, #0]
+    str r1, [sp, #4]
+    str r2, [sp, #8]
+    str r3, [sp, #12]
+    str r4, [sp, #16]
     add r0, r0, #DIGIT_WIDTH - DIGIT_THICKNESS
     mov r1, r2
     ldr r2, =DIGIT_THICKNESS
     ldr r3, =(DIGIT_HEIGHT / 2)
     ldr r4, =COLOR_WHITE
     bl draw_rect
-    pop {r0-r4}
+    ldr r0, [sp, #0]
+    ldr r1, [sp, #4]
+    ldr r2, [sp, #8]
+    ldr r3, [sp, #12]
+    ldr r4, [sp, #16]
+    add sp, sp, #20
     
     /* Bottom left vertical */
-    push {r0-r4}
+    sub sp, sp, #20
+    str r0, [sp, #0]
+    str r1, [sp, #4]
+    str r2, [sp, #8]
+    str r3, [sp, #12]
+    str r4, [sp, #16]
     mov r1, r2
     add r1, r1, #(DIGIT_HEIGHT / 2)
     ldr r2, =DIGIT_THICKNESS
     ldr r3, =(DIGIT_HEIGHT / 2)
     ldr r4, =COLOR_WHITE
     bl draw_rect
-    pop {r0-r4}
+    ldr r0, [sp, #0]
+    ldr r1, [sp, #4]
+    ldr r2, [sp, #8]
+    ldr r3, [sp, #12]
+    ldr r4, [sp, #16]
+    add sp, sp, #20
     
     /* Bottom right vertical */
-    push {r0-r4}
+    sub sp, sp, #20
+    str r0, [sp, #0]
+    str r1, [sp, #4]
+    str r2, [sp, #8]
+    str r3, [sp, #12]
+    str r4, [sp, #16]
     add r0, r0, #DIGIT_WIDTH - DIGIT_THICKNESS
     mov r1, r2
     add r1, r1, #(DIGIT_HEIGHT / 2)
@@ -179,115 +264,225 @@ draw_0:
     ldr r3, =(DIGIT_HEIGHT / 2)
     ldr r4, =COLOR_WHITE
     bl draw_rect
-    pop {r0-r4}
+    ldr r0, [sp, #0]
+    ldr r1, [sp, #4]
+    ldr r2, [sp, #8]
+    ldr r3, [sp, #12]
+    ldr r4, [sp, #16]
+    add sp, sp, #20
     
     /* Bottom horizontal */
-    push {r0-r4}
+    sub sp, sp, #20
+    str r0, [sp, #0]
+    str r1, [sp, #4]
+    str r2, [sp, #8]
+    str r3, [sp, #12]
+    str r4, [sp, #16]
     mov r1, r2
     add r1, r1, #DIGIT_HEIGHT - DIGIT_THICKNESS
     ldr r2, =DIGIT_WIDTH
     ldr r3, =DIGIT_THICKNESS
     ldr r4, =COLOR_WHITE
     bl draw_rect
-    pop {r0-r4}
+    ldr r0, [sp, #0]
+    ldr r1, [sp, #4]
+    ldr r2, [sp, #8]
+    ldr r3, [sp, #12]
+    ldr r4, [sp, #16]
+    add sp, sp, #20
     
     b digit_done
 
 draw_1:
     /* Right vertical bar only */
-    push {r0-r4}
+    sub sp, sp, #20
+    str r0, [sp, #0]
+    str r1, [sp, #4]
+    str r2, [sp, #8]
+    str r3, [sp, #12]
+    str r4, [sp, #16]
     add r0, r0, #DIGIT_WIDTH - DIGIT_THICKNESS
     mov r1, r2
     ldr r2, =DIGIT_THICKNESS
     ldr r3, =DIGIT_HEIGHT
     ldr r4, =COLOR_WHITE
     bl draw_rect
-    pop {r0-r4}
+    ldr r0, [sp, #0]
+    ldr r1, [sp, #4]
+    ldr r2, [sp, #8]
+    ldr r3, [sp, #12]
+    ldr r4, [sp, #16]
+    add sp, sp, #20
     b digit_done
 
 draw_2:
     /* Top horizontal */
-    push {r0-r4}
+    sub sp, sp, #20
+    str r0, [sp, #0]
+    str r1, [sp, #4]
+    str r2, [sp, #8]
+    str r3, [sp, #12]
+    str r4, [sp, #16]
     mov r1, r2
     ldr r2, =DIGIT_WIDTH
     ldr r3, =DIGIT_THICKNESS
     ldr r4, =COLOR_WHITE
     bl draw_rect
-    pop {r0-r4}
+    ldr r0, [sp, #0]
+    ldr r1, [sp, #4]
+    ldr r2, [sp, #8]
+    ldr r3, [sp, #12]
+    ldr r4, [sp, #16]
+    add sp, sp, #20
     
     /* Top right vertical */
-    push {r0-r4}
+    sub sp, sp, #20
+    str r0, [sp, #0]
+    str r1, [sp, #4]
+    str r2, [sp, #8]
+    str r3, [sp, #12]
+    str r4, [sp, #16]
     add r0, r0, #DIGIT_WIDTH - DIGIT_THICKNESS
     mov r1, r2
     ldr r2, =DIGIT_THICKNESS
     ldr r3, =(DIGIT_HEIGHT / 2)
     ldr r4, =COLOR_WHITE
     bl draw_rect
-    pop {r0-r4}
+    ldr r0, [sp, #0]
+    ldr r1, [sp, #4]
+    ldr r2, [sp, #8]
+    ldr r3, [sp, #12]
+    ldr r4, [sp, #16]
+    add sp, sp, #20
     
     /* Middle horizontal */
-    push {r0-r4}
+    sub sp, sp, #20
+    str r0, [sp, #0]
+    str r1, [sp, #4]
+    str r2, [sp, #8]
+    str r3, [sp, #12]
+    str r4, [sp, #16]
     mov r1, r2
     add r1, r1, #(DIGIT_HEIGHT / 2) - (DIGIT_THICKNESS / 2)
     ldr r2, =DIGIT_WIDTH
     ldr r3, =DIGIT_THICKNESS
     ldr r4, =COLOR_WHITE
     bl draw_rect
-    pop {r0-r4}
+    ldr r0, [sp, #0]
+    ldr r1, [sp, #4]
+    ldr r2, [sp, #8]
+    ldr r3, [sp, #12]
+    ldr r4, [sp, #16]
+    add sp, sp, #20
     
     /* Bottom left vertical */
-    push {r0-r4}
+    sub sp, sp, #20
+    str r0, [sp, #0]
+    str r1, [sp, #4]
+    str r2, [sp, #8]
+    str r3, [sp, #12]
+    str r4, [sp, #16]
     mov r1, r2
     add r1, r1, #(DIGIT_HEIGHT / 2)
     ldr r2, =DIGIT_THICKNESS
     ldr r3, =(DIGIT_HEIGHT / 2)
     ldr r4, =COLOR_WHITE
     bl draw_rect
-    pop {r0-r4}
+    ldr r0, [sp, #0]
+    ldr r1, [sp, #4]
+    ldr r2, [sp, #8]
+    ldr r3, [sp, #12]
+    ldr r4, [sp, #16]
+    add sp, sp, #20
     
     /* Bottom horizontal */
-    push {r0-r4}
+    sub sp, sp, #20
+    str r0, [sp, #0]
+    str r1, [sp, #4]
+    str r2, [sp, #8]
+    str r3, [sp, #12]
+    str r4, [sp, #16]
     mov r1, r2
     add r1, r1, #DIGIT_HEIGHT - DIGIT_THICKNESS
     ldr r2, =DIGIT_WIDTH
     ldr r3, =DIGIT_THICKNESS
     ldr r4, =COLOR_WHITE
     bl draw_rect
-    pop {r0-r4}
+    ldr r0, [sp, #0]
+    ldr r1, [sp, #4]
+    ldr r2, [sp, #8]
+    ldr r3, [sp, #12]
+    ldr r4, [sp, #16]
+    add sp, sp, #20
     b digit_done
 
 draw_3:
     /* Top horizontal */
-    push {r0-r4}
+    sub sp, sp, #20
+    str r0, [sp, #0]
+    str r1, [sp, #4]
+    str r2, [sp, #8]
+    str r3, [sp, #12]
+    str r4, [sp, #16]
     mov r1, r2
     ldr r2, =DIGIT_WIDTH
     ldr r3, =DIGIT_THICKNESS
     ldr r4, =COLOR_WHITE
     bl draw_rect
-    pop {r0-r4}
+    ldr r0, [sp, #0]
+    ldr r1, [sp, #4]
+    ldr r2, [sp, #8]
+    ldr r3, [sp, #12]
+    ldr r4, [sp, #16]
+    add sp, sp, #20
     
     /* Top right vertical */
-    push {r0-r4}
+    sub sp, sp, #20
+    str r0, [sp, #0]
+    str r1, [sp, #4]
+    str r2, [sp, #8]
+    str r3, [sp, #12]
+    str r4, [sp, #16]
     add r0, r0, #DIGIT_WIDTH - DIGIT_THICKNESS
     mov r1, r2
     ldr r2, =DIGIT_THICKNESS
     ldr r3, =(DIGIT_HEIGHT / 2)
     ldr r4, =COLOR_WHITE
     bl draw_rect
-    pop {r0-r4}
+    ldr r0, [sp, #0]
+    ldr r1, [sp, #4]
+    ldr r2, [sp, #8]
+    ldr r3, [sp, #12]
+    ldr r4, [sp, #16]
+    add sp, sp, #20
     
     /* Middle horizontal */
-    push {r0-r4}
+    sub sp, sp, #20
+    str r0, [sp, #0]
+    str r1, [sp, #4]
+    str r2, [sp, #8]
+    str r3, [sp, #12]
+    str r4, [sp, #16]
     mov r1, r2
     add r1, r1, #(DIGIT_HEIGHT / 2) - (DIGIT_THICKNESS / 2)
     ldr r2, =DIGIT_WIDTH
     ldr r3, =DIGIT_THICKNESS
     ldr r4, =COLOR_WHITE
     bl draw_rect
-    pop {r0-r4}
+    ldr r0, [sp, #0]
+    ldr r1, [sp, #4]
+    ldr r2, [sp, #8]
+    ldr r3, [sp, #12]
+    ldr r4, [sp, #16]
+    add sp, sp, #20
     
     /* Bottom right vertical */
-    push {r0-r4}
+    sub sp, sp, #20
+    str r0, [sp, #0]
+    str r1, [sp, #4]
+    str r2, [sp, #8]
+    str r3, [sp, #12]
+    str r4, [sp, #16]
     add r0, r0, #DIGIT_WIDTH - DIGIT_THICKNESS
     mov r1, r2
     add r1, r1, #(DIGIT_HEIGHT / 2)
@@ -295,81 +490,161 @@ draw_3:
     ldr r3, =(DIGIT_HEIGHT / 2)
     ldr r4, =COLOR_WHITE
     bl draw_rect
-    pop {r0-r4}
+    ldr r0, [sp, #0]
+    ldr r1, [sp, #4]
+    ldr r2, [sp, #8]
+    ldr r3, [sp, #12]
+    ldr r4, [sp, #16]
+    add sp, sp, #20
     
     /* Bottom horizontal */
-    push {r0-r4}
+    sub sp, sp, #20
+    str r0, [sp, #0]
+    str r1, [sp, #4]
+    str r2, [sp, #8]
+    str r3, [sp, #12]
+    str r4, [sp, #16]
     mov r1, r2
     add r1, r1, #DIGIT_HEIGHT - DIGIT_THICKNESS
     ldr r2, =DIGIT_WIDTH
     ldr r3, =DIGIT_THICKNESS
     ldr r4, =COLOR_WHITE
     bl draw_rect
-    pop {r0-r4}
+    ldr r0, [sp, #0]
+    ldr r1, [sp, #4]
+    ldr r2, [sp, #8]
+    ldr r3, [sp, #12]
+    ldr r4, [sp, #16]
+    add sp, sp, #20
     b digit_done
 
 draw_4:
     /* Top left vertical */
-    push {r0-r4}
+    sub sp, sp, #20
+    str r0, [sp, #0]
+    str r1, [sp, #4]
+    str r2, [sp, #8]
+    str r3, [sp, #12]
+    str r4, [sp, #16]
     mov r1, r2
     ldr r2, =DIGIT_THICKNESS
     ldr r3, =(DIGIT_HEIGHT / 2)
     ldr r4, =COLOR_WHITE
     bl draw_rect
-    pop {r0-r4}
+    ldr r0, [sp, #0]
+    ldr r1, [sp, #4]
+    ldr r2, [sp, #8]
+    ldr r3, [sp, #12]
+    ldr r4, [sp, #16]
+    add sp, sp, #20
     
     /* Top right vertical */
-    push {r0-r4}
+    sub sp, sp, #20
+    str r0, [sp, #0]
+    str r1, [sp, #4]
+    str r2, [sp, #8]
+    str r3, [sp, #12]
+    str r4, [sp, #16]
     add r0, r0, #DIGIT_WIDTH - DIGIT_THICKNESS
     mov r1, r2
     ldr r2, =DIGIT_THICKNESS
     ldr r3, =DIGIT_HEIGHT
     ldr r4, =COLOR_WHITE
     bl draw_rect
-    pop {r0-r4}
+    ldr r0, [sp, #0]
+    ldr r1, [sp, #4]
+    ldr r2, [sp, #8]
+    ldr r3, [sp, #12]
+    ldr r4, [sp, #16]
+    add sp, sp, #20
     
     /* Middle horizontal */
-    push {r0-r4}
+    sub sp, sp, #20
+    str r0, [sp, #0]
+    str r1, [sp, #4]
+    str r2, [sp, #8]
+    str r3, [sp, #12]
+    str r4, [sp, #16]
     mov r1, r2
     add r1, r1, #(DIGIT_HEIGHT / 2) - (DIGIT_THICKNESS / 2)
     ldr r2, =DIGIT_WIDTH
     ldr r3, =DIGIT_THICKNESS
     ldr r4, =COLOR_WHITE
     bl draw_rect
-    pop {r0-r4}
+    ldr r0, [sp, #0]
+    ldr r1, [sp, #4]
+    ldr r2, [sp, #8]
+    ldr r3, [sp, #12]
+    ldr r4, [sp, #16]
+    add sp, sp, #20
     b digit_done
 
 draw_5:
     /* Top horizontal */
-    push {r0-r4}
+    sub sp, sp, #20
+    str r0, [sp, #0]
+    str r1, [sp, #4]
+    str r2, [sp, #8]
+    str r3, [sp, #12]
+    str r4, [sp, #16]
     mov r1, r2
     ldr r2, =DIGIT_WIDTH
     ldr r3, =DIGIT_THICKNESS
     ldr r4, =COLOR_WHITE
     bl draw_rect
-    pop {r0-r4}
+    ldr r0, [sp, #0]
+    ldr r1, [sp, #4]
+    ldr r2, [sp, #8]
+    ldr r3, [sp, #12]
+    ldr r4, [sp, #16]
+    add sp, sp, #20
     
     /* Top left vertical */
-    push {r0-r4}
+    sub sp, sp, #20
+    str r0, [sp, #0]
+    str r1, [sp, #4]
+    str r2, [sp, #8]
+    str r3, [sp, #12]
+    str r4, [sp, #16]
     mov r1, r2
     ldr r2, =DIGIT_THICKNESS
     ldr r3, =(DIGIT_HEIGHT / 2)
     ldr r4, =COLOR_WHITE
     bl draw_rect
-    pop {r0-r4}
+    ldr r0, [sp, #0]
+    ldr r1, [sp, #4]
+    ldr r2, [sp, #8]
+    ldr r3, [sp, #12]
+    ldr r4, [sp, #16]
+    add sp, sp, #20
     
     /* Middle horizontal */
-    push {r0-r4}
+    sub sp, sp, #20
+    str r0, [sp, #0]
+    str r1, [sp, #4]
+    str r2, [sp, #8]
+    str r3, [sp, #12]
+    str r4, [sp, #16]
     mov r1, r2
     add r1, r1, #(DIGIT_HEIGHT / 2) - (DIGIT_THICKNESS / 2)
     ldr r2, =DIGIT_WIDTH
     ldr r3, =DIGIT_THICKNESS
     ldr r4, =COLOR_WHITE
     bl draw_rect
-    pop {r0-r4}
+    ldr r0, [sp, #0]
+    ldr r1, [sp, #4]
+    ldr r2, [sp, #8]
+    ldr r3, [sp, #12]
+    ldr r4, [sp, #16]
+    add sp, sp, #20
     
     /* Bottom right vertical */
-    push {r0-r4}
+    sub sp, sp, #20
+    str r0, [sp, #0]
+    str r1, [sp, #4]
+    str r2, [sp, #8]
+    str r3, [sp, #12]
+    str r4, [sp, #16]
     add r0, r0, #DIGIT_WIDTH - DIGIT_THICKNESS
     mov r1, r2
     add r1, r1, #(DIGIT_HEIGHT / 2)
@@ -377,47 +652,120 @@ draw_5:
     ldr r3, =(DIGIT_HEIGHT / 2)
     ldr r4, =COLOR_WHITE
     bl draw_rect
-    pop {r0-r4}
+    ldr r0, [sp, #0]
+    ldr r1, [sp, #4]
+    ldr r2, [sp, #8]
+    ldr r3, [sp, #12]
+    ldr r4, [sp, #16]
+    add sp, sp, #20
     
     /* Bottom horizontal */
-    push {r0-r4}
+    sub sp, sp, #20
+    str r0, [sp, #0]
+    str r1, [sp, #4]
+    str r2, [sp, #8]
+    str r3, [sp, #12]
+    str r4, [sp, #16]
     mov r1, r2
     add r1, r1, #DIGIT_HEIGHT - DIGIT_THICKNESS
     ldr r2, =DIGIT_WIDTH
     ldr r3, =DIGIT_THICKNESS
     ldr r4, =COLOR_WHITE
     bl draw_rect
-    pop {r0-r4}
+    ldr r0, [sp, #0]
+    ldr r1, [sp, #4]
+    ldr r2, [sp, #8]
+    ldr r3, [sp, #12]
+    ldr r4, [sp, #16]
+    add sp, sp, #20
     b digit_done
 
 draw_6:
-    /* Similar to 5 but add bottom left vertical */
-    push {r0-r4}
+    /* Top horizontal */
+    sub sp, sp, #20
+    str r0, [sp, #0]
+    str r1, [sp, #4]
+    str r2, [sp, #8]
+    str r3, [sp, #12]
+    str r4, [sp, #16]
     mov r1, r2
     ldr r2, =DIGIT_WIDTH
     ldr r3, =DIGIT_THICKNESS
     ldr r4, =COLOR_WHITE
     bl draw_rect
-    pop {r0-r4}
+    ldr r0, [sp, #0]
+    ldr r1, [sp, #4]
+    ldr r2, [sp, #8]
+    ldr r3, [sp, #12]
+    ldr r4, [sp, #16]
+    add sp, sp, #20
     
-    push {r0-r4}
+    /* Top left vertical */
+    sub sp, sp, #20
+    str r0, [sp, #0]
+    str r1, [sp, #4]
+    str r2, [sp, #8]
+    str r3, [sp, #12]
+    str r4, [sp, #16]
     mov r1, r2
     ldr r2, =DIGIT_THICKNESS
-    ldr r3, =DIGIT_HEIGHT
+    ldr r3, =(DIGIT_HEIGHT / 2)
     ldr r4, =COLOR_WHITE
     bl draw_rect
-    pop {r0-r4}
+    ldr r0, [sp, #0]
+    ldr r1, [sp, #4]
+    ldr r2, [sp, #8]
+    ldr r3, [sp, #12]
+    ldr r4, [sp, #16]
+    add sp, sp, #20
     
-    push {r0-r4}
+    /* Middle horizontal */
+    sub sp, sp, #20
+    str r0, [sp, #0]
+    str r1, [sp, #4]
+    str r2, [sp, #8]
+    str r3, [sp, #12]
+    str r4, [sp, #16]
     mov r1, r2
     add r1, r1, #(DIGIT_HEIGHT / 2) - (DIGIT_THICKNESS / 2)
     ldr r2, =DIGIT_WIDTH
     ldr r3, =DIGIT_THICKNESS
     ldr r4, =COLOR_WHITE
     bl draw_rect
-    pop {r0-r4}
+    ldr r0, [sp, #0]
+    ldr r1, [sp, #4]
+    ldr r2, [sp, #8]
+    ldr r3, [sp, #12]
+    ldr r4, [sp, #16]
+    add sp, sp, #20
     
-    push {r0-r4}
+    /* Bottom left vertical */
+    sub sp, sp, #20
+    str r0, [sp, #0]
+    str r1, [sp, #4]
+    str r2, [sp, #8]
+    str r3, [sp, #12]
+    str r4, [sp, #16]
+    mov r1, r2
+    add r1, r1, #(DIGIT_HEIGHT / 2)
+    ldr r2, =DIGIT_THICKNESS
+    ldr r3, =(DIGIT_HEIGHT / 2)
+    ldr r4, =COLOR_WHITE
+    bl draw_rect
+    ldr r0, [sp, #0]
+    ldr r1, [sp, #4]
+    ldr r2, [sp, #8]
+    ldr r3, [sp, #12]
+    ldr r4, [sp, #16]
+    add sp, sp, #20
+    
+    /* Bottom right vertical */
+    sub sp, sp, #20
+    str r0, [sp, #0]
+    str r1, [sp, #4]
+    str r2, [sp, #8]
+    str r3, [sp, #12]
+    str r4, [sp, #16]
     add r0, r0, #DIGIT_WIDTH - DIGIT_THICKNESS
     mov r1, r2
     add r1, r1, #(DIGIT_HEIGHT / 2)
@@ -425,131 +773,322 @@ draw_6:
     ldr r3, =(DIGIT_HEIGHT / 2)
     ldr r4, =COLOR_WHITE
     bl draw_rect
-    pop {r0-r4}
+    ldr r0, [sp, #0]
+    ldr r1, [sp, #4]
+    ldr r2, [sp, #8]
+    ldr r3, [sp, #12]
+    ldr r4, [sp, #16]
+    add sp, sp, #20
     
-    push {r0-r4}
+    /* Bottom horizontal */
+    sub sp, sp, #20
+    str r0, [sp, #0]
+    str r1, [sp, #4]
+    str r2, [sp, #8]
+    str r3, [sp, #12]
+    str r4, [sp, #16]
     mov r1, r2
     add r1, r1, #DIGIT_HEIGHT - DIGIT_THICKNESS
     ldr r2, =DIGIT_WIDTH
     ldr r3, =DIGIT_THICKNESS
     ldr r4, =COLOR_WHITE
     bl draw_rect
-    pop {r0-r4}
+    ldr r0, [sp, #0]
+    ldr r1, [sp, #4]
+    ldr r2, [sp, #8]
+    ldr r3, [sp, #12]
+    ldr r4, [sp, #16]
+    add sp, sp, #20
     b digit_done
 
 draw_7:
     /* Top horizontal */
-    push {r0-r4}
+    sub sp, sp, #20
+    str r0, [sp, #0]
+    str r1, [sp, #4]
+    str r2, [sp, #8]
+    str r3, [sp, #12]
+    str r4, [sp, #16]
     mov r1, r2
     ldr r2, =DIGIT_WIDTH
     ldr r3, =DIGIT_THICKNESS
     ldr r4, =COLOR_WHITE
     bl draw_rect
-    pop {r0-r4}
+    ldr r0, [sp, #0]
+    ldr r1, [sp, #4]
+    ldr r2, [sp, #8]
+    ldr r3, [sp, #12]
+    ldr r4, [sp, #16]
+    add sp, sp, #20
     
-    /* Right vertical */
-    push {r0-r4}
+    /* Right vertical bar */
+    sub sp, sp, #20
+    str r0, [sp, #0]
+    str r1, [sp, #4]
+    str r2, [sp, #8]
+    str r3, [sp, #12]
+    str r4, [sp, #16]
     add r0, r0, #DIGIT_WIDTH - DIGIT_THICKNESS
     mov r1, r2
     ldr r2, =DIGIT_THICKNESS
     ldr r3, =DIGIT_HEIGHT
     ldr r4, =COLOR_WHITE
     bl draw_rect
-    pop {r0-r4}
+    ldr r0, [sp, #0]
+    ldr r1, [sp, #4]
+    ldr r2, [sp, #8]
+    ldr r3, [sp, #12]
+    ldr r4, [sp, #16]
+    add sp, sp, #20
     b digit_done
 
 draw_8:
-    /* All segments (0 with middle bar) */
-    push {r0-r4}
+    /* Top horizontal */
+    sub sp, sp, #20
+    str r0, [sp, #0]
+    str r1, [sp, #4]
+    str r2, [sp, #8]
+    str r3, [sp, #12]
+    str r4, [sp, #16]
     mov r1, r2
     ldr r2, =DIGIT_WIDTH
     ldr r3, =DIGIT_THICKNESS
     ldr r4, =COLOR_WHITE
     bl draw_rect
-    pop {r0-r4}
+    ldr r0, [sp, #0]
+    ldr r1, [sp, #4]
+    ldr r2, [sp, #8]
+    ldr r3, [sp, #12]
+    ldr r4, [sp, #16]
+    add sp, sp, #20
     
-    push {r0-r4}
-    mov r1, r2
-    ldr r2, =DIGIT_THICKNESS
-    ldr r3, =DIGIT_HEIGHT
-    ldr r4, =COLOR_WHITE
-    bl draw_rect
-    pop {r0-r4}
-    
-    push {r0-r4}
-    add r0, r0, #DIGIT_WIDTH - DIGIT_THICKNESS
-    mov r1, r2
-    ldr r2, =DIGIT_THICKNESS
-    ldr r3, =DIGIT_HEIGHT
-    ldr r4, =COLOR_WHITE
-    bl draw_rect
-    pop {r0-r4}
-    
-    push {r0-r4}
-    mov r1, r2
-    add r1, r1, #(DIGIT_HEIGHT / 2) - (DIGIT_THICKNESS / 2)
-    ldr r2, =DIGIT_WIDTH
-    ldr r3, =DIGIT_THICKNESS
-    ldr r4, =COLOR_WHITE
-    bl draw_rect
-    pop {r0-r4}
-    
-    push {r0-r4}
-    mov r1, r2
-    add r1, r1, #DIGIT_HEIGHT - DIGIT_THICKNESS
-    ldr r2, =DIGIT_WIDTH
-    ldr r3, =DIGIT_THICKNESS
-    ldr r4, =COLOR_WHITE
-    bl draw_rect
-    pop {r0-r4}
-    b digit_done
-
-draw_9:
-    /* Similar to 8 but no bottom left vertical */
-    push {r0-r4}
-    mov r1, r2
-    ldr r2, =DIGIT_WIDTH
-    ldr r3, =DIGIT_THICKNESS
-    ldr r4, =COLOR_WHITE
-    bl draw_rect
-    pop {r0-r4}
-    
-    push {r0-r4}
+    /* Top left vertical */
+    sub sp, sp, #20
+    str r0, [sp, #0]
+    str r1, [sp, #4]
+    str r2, [sp, #8]
+    str r3, [sp, #12]
+    str r4, [sp, #16]
     mov r1, r2
     ldr r2, =DIGIT_THICKNESS
     ldr r3, =(DIGIT_HEIGHT / 2)
     ldr r4, =COLOR_WHITE
     bl draw_rect
-    pop {r0-r4}
+    ldr r0, [sp, #0]
+    ldr r1, [sp, #4]
+    ldr r2, [sp, #8]
+    ldr r3, [sp, #12]
+    ldr r4, [sp, #16]
+    add sp, sp, #20
     
-    push {r0-r4}
+    /* Top right vertical */
+    sub sp, sp, #20
+    str r0, [sp, #0]
+    str r1, [sp, #4]
+    str r2, [sp, #8]
+    str r3, [sp, #12]
+    str r4, [sp, #16]
     add r0, r0, #DIGIT_WIDTH - DIGIT_THICKNESS
     mov r1, r2
     ldr r2, =DIGIT_THICKNESS
-    ldr r3, =DIGIT_HEIGHT
+    ldr r3, =(DIGIT_HEIGHT / 2)
     ldr r4, =COLOR_WHITE
     bl draw_rect
-    pop {r0-r4}
+    ldr r0, [sp, #0]
+    ldr r1, [sp, #4]
+    ldr r2, [sp, #8]
+    ldr r3, [sp, #12]
+    ldr r4, [sp, #16]
+    add sp, sp, #20
     
-    push {r0-r4}
+    /* Middle horizontal */
+    sub sp, sp, #20
+    str r0, [sp, #0]
+    str r1, [sp, #4]
+    str r2, [sp, #8]
+    str r3, [sp, #12]
+    str r4, [sp, #16]
     mov r1, r2
     add r1, r1, #(DIGIT_HEIGHT / 2) - (DIGIT_THICKNESS / 2)
     ldr r2, =DIGIT_WIDTH
     ldr r3, =DIGIT_THICKNESS
     ldr r4, =COLOR_WHITE
     bl draw_rect
-    pop {r0-r4}
+    ldr r0, [sp, #0]
+    ldr r1, [sp, #4]
+    ldr r2, [sp, #8]
+    ldr r3, [sp, #12]
+    ldr r4, [sp, #16]
+    add sp, sp, #20
     
-    push {r0-r4}
+    /* Bottom left vertical */
+    sub sp, sp, #20
+    str r0, [sp, #0]
+    str r1, [sp, #4]
+    str r2, [sp, #8]
+    str r3, [sp, #12]
+    str r4, [sp, #16]
+    mov r1, r2
+    add r1, r1, #(DIGIT_HEIGHT / 2)
+    ldr r2, =DIGIT_THICKNESS
+    ldr r3, =(DIGIT_HEIGHT / 2)
+    ldr r4, =COLOR_WHITE
+    bl draw_rect
+    ldr r0, [sp, #0]
+    ldr r1, [sp, #4]
+    ldr r2, [sp, #8]
+    ldr r3, [sp, #12]
+    ldr r4, [sp, #16]
+    add sp, sp, #20
+    
+    /* Bottom right vertical */
+    sub sp, sp, #20
+    str r0, [sp, #0]
+    str r1, [sp, #4]
+    str r2, [sp, #8]
+    str r3, [sp, #12]
+    str r4, [sp, #16]
+    add r0, r0, #DIGIT_WIDTH - DIGIT_THICKNESS
+    mov r1, r2
+    add r1, r1, #(DIGIT_HEIGHT / 2)
+    ldr r2, =DIGIT_THICKNESS
+    ldr r3, =(DIGIT_HEIGHT / 2)
+    ldr r4, =COLOR_WHITE
+    bl draw_rect
+    ldr r0, [sp, #0]
+    ldr r1, [sp, #4]
+    ldr r2, [sp, #8]
+    ldr r3, [sp, #12]
+    ldr r4, [sp, #16]
+    add sp, sp, #20
+    
+    /* Bottom horizontal */
+    sub sp, sp, #20
+    str r0, [sp, #0]
+    str r1, [sp, #4]
+    str r2, [sp, #8]
+    str r3, [sp, #12]
+    str r4, [sp, #16]
     mov r1, r2
     add r1, r1, #DIGIT_HEIGHT - DIGIT_THICKNESS
     ldr r2, =DIGIT_WIDTH
     ldr r3, =DIGIT_THICKNESS
     ldr r4, =COLOR_WHITE
     bl draw_rect
-    pop {r0-r4}
+    ldr r0, [sp, #0]
+    ldr r1, [sp, #4]
+    ldr r2, [sp, #8]
+    ldr r3, [sp, #12]
+    ldr r4, [sp, #16]
+    add sp, sp, #20
+    b digit_done
+
+draw_9:
+    /* Top horizontal */
+    sub sp, sp, #20
+    str r0, [sp, #0]
+    str r1, [sp, #4]
+    str r2, [sp, #8]
+    str r3, [sp, #12]
+    str r4, [sp, #16]
+    mov r1, r2
+    ldr r2, =DIGIT_WIDTH
+    ldr r3, =DIGIT_THICKNESS
+    ldr r4, =COLOR_WHITE
+    bl draw_rect
+    ldr r0, [sp, #0]
+    ldr r1, [sp, #4]
+    ldr r2, [sp, #8]
+    ldr r3, [sp, #12]
+    ldr r4, [sp, #16]
+    add sp, sp, #20
+    
+    /* Top left vertical */
+    sub sp, sp, #20
+    str r0, [sp, #0]
+    str r1, [sp, #4]
+    str r2, [sp, #8]
+    str r3, [sp, #12]
+    str r4, [sp, #16]
+    mov r1, r2
+    ldr r2, =DIGIT_THICKNESS
+    ldr r3, =(DIGIT_HEIGHT / 2)
+    ldr r4, =COLOR_WHITE
+    bl draw_rect
+    ldr r0, [sp, #0]
+    ldr r1, [sp, #4]
+    ldr r2, [sp, #8]
+    ldr r3, [sp, #12]
+    ldr r4, [sp, #16]
+    add sp, sp, #20
+    
+    /* Top right vertical */
+    sub sp, sp, #20
+    str r0, [sp, #0]
+    str r1, [sp, #4]
+    str r2, [sp, #8]
+    str r3, [sp, #12]
+    str r4, [sp, #16]
+    add r0, r0, #DIGIT_WIDTH - DIGIT_THICKNESS
+    mov r1, r2
+    ldr r2, =DIGIT_THICKNESS
+    ldr r3, =DIGIT_HEIGHT
+    ldr r4, =COLOR_WHITE
+    bl draw_rect
+    ldr r0, [sp, #0]
+    ldr r1, [sp, #4]
+    ldr r2, [sp, #8]
+    ldr r3, [sp, #12]
+    ldr r4, [sp, #16]
+    add sp, sp, #20
+    
+    /* Middle horizontal */
+    sub sp, sp, #20
+    str r0, [sp, #0]
+    str r1, [sp, #4]
+    str r2, [sp, #8]
+    str r3, [sp, #12]
+    str r4, [sp, #16]
+    mov r1, r2
+    add r1, r1, #(DIGIT_HEIGHT / 2) - (DIGIT_THICKNESS / 2)
+    ldr r2, =DIGIT_WIDTH
+    ldr r3, =DIGIT_THICKNESS
+    ldr r4, =COLOR_WHITE
+    bl draw_rect
+    ldr r0, [sp, #0]
+    ldr r1, [sp, #4]
+    ldr r2, [sp, #8]
+    ldr r3, [sp, #12]
+    ldr r4, [sp, #16]
+    add sp, sp, #20
+    
+    /* Bottom horizontal */
+    sub sp, sp, #20
+    str r0, [sp, #0]
+    str r1, [sp, #4]
+    str r2, [sp, #8]
+    str r3, [sp, #12]
+    str r4, [sp, #16]
+    mov r1, r2
+    add r1, r1, #DIGIT_HEIGHT - DIGIT_THICKNESS
+    ldr r2, =DIGIT_WIDTH
+    ldr r3, =DIGIT_THICKNESS
+    ldr r4, =COLOR_WHITE
+    bl draw_rect
+    ldr r0, [sp, #0]
+    ldr r1, [sp, #4]
+    ldr r2, [sp, #8]
+    ldr r3, [sp, #12]
+    ldr r4, [sp, #16]
+    add sp, sp, #20
     b digit_done
 
 digit_done:
-    pop {r0-r4, pc}
-    
+    ldr r0, [sp, #0]
+    ldr r1, [sp, #4]
+    ldr r2, [sp, #8]
+    ldr r3, [sp, #12]
+    ldr r4, [sp, #16]
+    ldr lr, [sp, #20]
+    add sp, sp, #24
+    mov pc, lr

@@ -33,7 +33,12 @@ current_back_buffer: .word FRAMEBUFFER_BACK
 
 /* Initialize LCD Controller */
 lcd_init:
-    push {r0-r3, lr}
+    sub sp, sp, #20
+    str r0, [sp, #0]
+    str r1, [sp, #4]
+    str r2, [sp, #8]
+    str r3, [sp, #12]
+    str lr, [sp, #16]
     
     ldr r0, =LCD_BASE
     
@@ -63,7 +68,13 @@ lcd_init:
     ldr r0, =FRAMEBUFFER_BACK
     bl clear_buffer_at_address
     
-    pop {r0-r3, pc}
+    ldr r0, [sp, #0]
+    ldr r1, [sp, #4]
+    ldr r2, [sp, #8]
+    ldr r3, [sp, #12]
+    ldr lr, [sp, #16]
+    add sp, sp, #20
+    mov pc, lr
 
 /* Get back buffer address */
 /* Returns address in r0 */
@@ -74,31 +85,59 @@ get_back_buffer:
 
 /* Clear back buffer to black */
 clear_buffer:
-    push {r0-r3, lr}
+    sub sp, sp, #20
+    str r0, [sp, #0]
+    str r1, [sp, #4]
+    str r2, [sp, #8]
+    str r3, [sp, #12]
+    str lr, [sp, #16]
     
     bl get_back_buffer
     bl clear_buffer_at_address
     
-    pop {r0-r3, pc}
+    ldr r0, [sp, #0]
+    ldr r1, [sp, #4]
+    ldr r2, [sp, #8]
+    ldr r3, [sp, #12]
+    ldr lr, [sp, #16]
+    add sp, sp, #20
+    mov pc, lr
 
 /* Clear buffer at specific address */
 /* r0 = buffer address */
 clear_buffer_at_address:
-    push {r0-r3, lr}
+    sub sp, sp, #20
+    str r0, [sp, #0]
+    str r1, [sp, #4]
+    str r2, [sp, #8]
+    str r3, [sp, #12]
+    str lr, [sp, #16]
     
     ldr r1, =COLOR_BLACK
     ldr r2, =(SCREEN_WIDTH * SCREEN_HEIGHT)
     
 clear_loop:
     strh r1, [r0], #2
-    subs r2, r2, #1
+    sub r2, r2, #1
+    cmp r2, #0
     bne clear_loop
     
-    pop {r0-r3, pc}
+    ldr r0, [sp, #0]
+    ldr r1, [sp, #4]
+    ldr r2, [sp, #8]
+    ldr r3, [sp, #12]
+    ldr lr, [sp, #16]
+    add sp, sp, #20
+    mov pc, lr
 
 /* Swap buffers (copy back to front) */
 swap_buffers:
-    push {r0-r3, lr}
+    sub sp, sp, #20
+    str r0, [sp, #0]
+    str r1, [sp, #4]
+    str r2, [sp, #8]
+    str r3, [sp, #12]
+    str lr, [sp, #16]
     
     ldr r0, =FRAMEBUFFER_FRONT
     ldr r1, =FRAMEBUFFER_BACK
@@ -107,15 +146,32 @@ swap_buffers:
 copy_loop:
     ldrh r3, [r1], #2
     strh r3, [r0], #2
-    subs r2, r2, #1
+    sub r2, r2, #1
+    cmp r2, #0
     bne copy_loop
     
-    pop {r0-r3, pc}
+    ldr r0, [sp, #0]
+    ldr r1, [sp, #4]
+    ldr r2, [sp, #8]
+    ldr r3, [sp, #12]
+    ldr lr, [sp, #16]
+    add sp, sp, #20
+    mov pc, lr
 
 /* Draw filled rectangle to back buffer */
 /* r0 = x, r1 = y, r2 = width, r3 = height, r4 = color */
 draw_rect:
-    push {r0-r8, lr}
+    sub sp, sp, #40
+    str r0, [sp, #0]
+    str r1, [sp, #4]
+    str r2, [sp, #8]
+    str r3, [sp, #12]
+    str r4, [sp, #16]
+    str r5, [sp, #20]
+    str r6, [sp, #24]
+    str r7, [sp, #28]
+    str r8, [sp, #32]
+    str lr, [sp, #36]
     
     mov r5, r1                  /* r5 = current Y */
     add r6, r1, r3              /* r6 = end Y */
@@ -132,12 +188,25 @@ draw_rect_x_loop:
     bge draw_rect_next_y
     
     /* Calculate pixel address in back buffer */
-    push {r0-r4}
+    /* Save r0-r4 manually */
+    sub sp, sp, #20
+    str r0, [sp, #0]
+    str r1, [sp, #4]
+    str r2, [sp, #8]
+    str r3, [sp, #12]
+    str r4, [sp, #16]
+    
     mov r0, r7                  /* X */
     mov r1, r5                  /* Y */
     bl get_pixel_address_back
     strh r4, [r0]               /* Write color */
-    pop {r0-r4}
+    
+    ldr r0, [sp, #0]
+    ldr r1, [sp, #4]
+    ldr r2, [sp, #8]
+    ldr r3, [sp, #12]
+    ldr r4, [sp, #16]
+    add sp, sp, #20
     
     add r7, r7, #1
     b draw_rect_x_loop
@@ -147,21 +216,40 @@ draw_rect_next_y:
     b draw_rect_y_loop
     
 draw_rect_done:
-    pop {r0-r8, pc}
+    ldr r0, [sp, #0]
+    ldr r1, [sp, #4]
+    ldr r2, [sp, #8]
+    ldr r3, [sp, #12]
+    ldr r4, [sp, #16]
+    ldr r5, [sp, #20]
+    ldr r6, [sp, #24]
+    ldr r7, [sp, #28]
+    ldr r8, [sp, #32]
+    ldr lr, [sp, #36]
+    add sp, sp, #40
+    mov pc, lr
 
 /* Get pixel address in back buffer */
 /* r0 = x, r1 = y */
 /* Returns address in r0 */
 get_pixel_address_back:
-    push {r1-r3, lr}
+    sub sp, sp, #16
+    str r1, [sp, #0]
+    str r2, [sp, #4]
+    str r3, [sp, #8]
+    str lr, [sp, #12]
     
     ldr r2, =SCREEN_WIDTH
     mul r3, r1, r2              /* y * width */
     add r3, r3, r0              /* + x */
-    lsl r3, r3, #1              /* * 2 (16-bit pixels) */
+    mov r3, r3, lsl #1          /* * 2 (16-bit pixels) */
     
     bl get_back_buffer
     add r0, r0, r3
     
-    pop {r1-r3, pc}
-    
+    ldr r1, [sp, #0]
+    ldr r2, [sp, #4]
+    ldr r3, [sp, #8]
+    ldr lr, [sp, #12]
+    add sp, sp, #16
+    mov pc, lr

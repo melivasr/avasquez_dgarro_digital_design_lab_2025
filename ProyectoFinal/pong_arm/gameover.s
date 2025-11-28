@@ -1,9 +1,12 @@
-/* gameover.s - Game over and win condition module */
+/* gameover.s - Game over and win condition module (ARMv4 Compatible) */
 
 .global check_winner
 .global draw_win_message
 .global draw_char
 .global draw_string
+.extern get_score_p1
+.extern get_score_p2
+.extern draw_rect
 
 /* Game constants */
 .equ WINNING_SCORE, 5
@@ -26,7 +29,8 @@
 /* Check if there's a winner */
 /* Returns: r0 = 0 (no winner), 1 (player 1), 2 (player 2) */
 check_winner:
-    push {r1-r2, lr}
+    /* Save registers using STMFD (store multiple full descending) */
+    stmfd sp!, {r1-r2, lr}
     
     /* Check player 1 score */
     bl get_score_p1
@@ -50,47 +54,48 @@ player2_wins:
     mov r0, #2
     
 check_done:
-    pop {r1-r2, pc}
+    /* Restore registers using LDMFD (load multiple full descending) */
+    ldmfd sp!, {r1-r2, pc}
 
 /* Draw win message for specified player */
 /* r0 = player number (1 or 2) */
 draw_win_message:
-    push {r0-r4, lr}
+    stmfd sp!, {r0-r4, lr}
     
     mov r4, r0                  /* Save player number */
     
     /* Draw "PLAYER" */
-    ldr r0, =140               /* X position (centered) */
-    mov r1, #160               /* Y position */
+    mov r0, #140                /* X position (centered) */
+    mov r1, #160                /* Y position */
     ldr r2, =msg_player
     bl draw_string
     
     /* Draw player number (space already in string) */
-    mov r0, #380               /* X position for number */
+    mov r0, #380                /* X position for number */
     mov r1, #160
-    add r2, r4, #'0'           /* Convert to ASCII */
+    add r2, r4, #'0'            /* Convert to ASCII */
     bl draw_large_char
     
     /* Draw "WINS!" on next line */
-    ldr r0, =180               /* X position */
-    mov r1, #220               /* Y position */
+    mov r0, #180                /* X position */
+    mov r1, #220                /* Y position */
     ldr r2, =msg_wins
     bl draw_string
     
-    pop {r0-r4, pc}
+    ldmfd sp!, {r0-r4, pc}
 
 /* Draw a string */
 /* r0 = x, r1 = y, r2 = string address */
 draw_string:
-    push {r0-r5, lr}
+    stmfd sp!, {r0-r5, lr}
     
     mov r3, r0                  /* Current X position */
     mov r4, r1                  /* Y position */
     mov r5, r2                  /* String pointer */
     
 draw_string_loop:
-    ldrb r2, [r5], #1          /* Load character */
-    cmp r2, #0                 /* Check for null terminator */
+    ldrb r2, [r5], #1           /* Load character with post-increment */
+    cmp r2, #0                  /* Check for null terminator */
     beq draw_string_done
     
     /* Draw character */
@@ -99,16 +104,20 @@ draw_string_loop:
     bl draw_large_char
     
     /* Move to next character position */
-    add r3, r3, #((CHAR_WIDTH * CHAR_SCALE) + 8)  /* More spacing between chars */
+    mov r6, #CHAR_WIDTH
+    mov r7, #CHAR_SCALE
+    mul r6, r7, r6              /* CHAR_WIDTH * CHAR_SCALE */
+    add r6, r6, #8              /* Add spacing */
+    add r3, r3, r6              /* Update X position */
     b draw_string_loop
     
 draw_string_done:
-    pop {r0-r5, pc}
+    ldmfd sp!, {r0-r5, pc}
 
 /* Draw a large character (scaled up) */
 /* r0 = x, r1 = y, r2 = ASCII character */
 draw_large_char:
-    push {r0-r8, lr}
+    stmfd sp!, {r0-r8, lr}
     
     /* Only support uppercase letters and space */
     cmp r2, #' '
@@ -123,17 +132,17 @@ draw_large_char:
     bgt char_done
     
     /* Get character bitmap */
-    sub r2, r2, #'A'           /* Convert to index */
+    sub r2, r2, #'A'            /* Convert to index */
     ldr r3, =font_data
-    mov r4, #7                 /* 7 rows per character */
+    mov r4, #7                  /* 7 rows per character */
     mul r5, r2, r4
-    add r3, r3, r5             /* Pointer to character data */
+    add r3, r3, r5              /* Pointer to character data */
     
     b draw_char_bitmap
 
 char_digit:
     sub r2, r2, #'0'
-    add r2, r2, #26            /* Digits come after letters */
+    add r2, r2, #26             /* Digits come after letters */
     ldr r3, =font_data
     mov r4, #7
     mul r5, r2, r4
@@ -145,40 +154,43 @@ char_space:
     b char_done
 
 draw_char_bitmap:
-    mov r6, #0                 /* Row counter */
+    mov r6, #0                  /* Row counter */
     
 char_row_loop:
     cmp r6, #CHAR_HEIGHT
     bge char_done
     
-    ldrb r7, [r3, r6]          /* Load row bitmap */
-    mov r8, #0                 /* Column counter */
+    ldrb r7, [r3, r6]           /* Load row bitmap */
+    mov r8, #0                  /* Column counter */
     
 char_col_loop:
     cmp r8, #CHAR_WIDTH
     bge char_next_row
     
     /* Check if pixel is set (check from right to left) */
-    mov r4, #CHAR_WIDTH - 1
-    sub r4, r4, r8             /* Reverse column index */
+    mov r4, #CHAR_WIDTH
+    sub r4, r4, #1
+    sub r4, r4, r8              /* Reverse column index */
     mov r5, #1
-    lsl r5, r5, r4
+    mov r5, r5, lsl r4          /* Shift left by r4 */
     tst r7, r5
     beq char_skip_pixel
     
     /* Draw scaled pixel */
-    push {r0-r4}
+    stmfd sp!, {r0-r4}
+    
     mov r4, #CHAR_SCALE
-    mul r2, r8, r4             /* X offset */
+    mul r2, r8, r4              /* X offset */
     add r0, r0, r2
     mov r4, #CHAR_SCALE
-    mul r2, r6, r4             /* Y offset */
+    mul r2, r6, r4              /* Y offset */
     add r1, r1, r2
-    ldr r2, =CHAR_SCALE
-    mov r3, r2
+    mov r2, #CHAR_SCALE         /* Width */
+    mov r3, #CHAR_SCALE         /* Height */
     ldr r4, =COLOR_YELLOW
     bl draw_rect
-    pop {r0-r4}
+    
+    ldmfd sp!, {r0-r4}
     
 char_skip_pixel:
     add r8, r8, #1
@@ -189,7 +201,7 @@ char_next_row:
     b char_row_loop
     
 char_done:
-    pop {r0-r8, pc}
+    ldmfd sp!, {r0-r8, pc}
 
 /* Simple 5x7 bitmap font data */
 /* Each character is 7 bytes (7 rows), 5 bits per row */

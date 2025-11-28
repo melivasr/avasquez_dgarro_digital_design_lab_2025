@@ -37,7 +37,11 @@ paddle2_y: .word 210         /* Right paddle Y position */
 
 /* Initialize paddles */
 paddle_init:
-    push {r0-r2, lr}
+    sub sp, sp, #16
+    str r0, [sp, #0]
+    str r1, [sp, #4]
+    str r2, [sp, #8]
+    str lr, [sp, #12]
     
     ldr r0, =paddle1_y
     ldr r1, =(SCREEN_HEIGHT / 2 - PADDLE_HEIGHT / 2)
@@ -47,11 +51,21 @@ paddle_init:
     ldr r1, =(SCREEN_HEIGHT / 2 - PADDLE_HEIGHT / 2)
     str r1, [r0]
     
-    pop {r0-r2, pc}
+    ldr r0, [sp, #0]
+    ldr r1, [sp, #4]
+    ldr r2, [sp, #8]
+    ldr lr, [sp, #12]
+    add sp, sp, #16
+    mov pc, lr
 
 /* Update paddles based on input */
 paddle_update:
-    push {r0-r3, lr}
+    sub sp, sp, #20
+    str r0, [sp, #0]
+    str r1, [sp, #4]
+    str r2, [sp, #8]
+    str r3, [sp, #12]
+    str lr, [sp, #16]
     
     ldr r0, =UART0_BASE
     
@@ -68,7 +82,7 @@ paddle_update:
     bne check_s
     ldr r0, =paddle1_y
     ldr r1, [r0]
-    subs r1, r1, #PADDLE_SPEED
+    sub r1, r1, #PADDLE_SPEED
     cmp r1, #0
     movlt r1, #0
     str r1, [r0]
@@ -93,7 +107,7 @@ check_up:
     bne check_down
     ldr r0, =paddle2_y
     ldr r1, [r0]
-    subs r1, r1, #PADDLE_SPEED
+    sub r1, r1, #PADDLE_SPEED
     cmp r1, #0
     movlt r1, #0
     str r1, [r0]
@@ -112,11 +126,23 @@ check_down:
     str r1, [r0]
     
 input_done:
-    pop {r0-r3, pc}
+    ldr r0, [sp, #0]
+    ldr r1, [sp, #4]
+    ldr r2, [sp, #8]
+    ldr r3, [sp, #12]
+    ldr lr, [sp, #16]
+    add sp, sp, #20
+    mov pc, lr
 
 /* Draw both paddles */
 paddle_draw:
-    push {r0-r4, lr}
+    sub sp, sp, #24
+    str r0, [sp, #0]
+    str r1, [sp, #4]
+    str r2, [sp, #8]
+    str r3, [sp, #12]
+    str r4, [sp, #16]
+    str lr, [sp, #20]
     
     /* Draw left paddle */
     ldr r0, =PADDLE1_X
@@ -136,13 +162,27 @@ paddle_draw:
     ldr r4, =COLOR_PADDLE
     bl draw_rect
     
-    pop {r0-r4, pc}
+    ldr r0, [sp, #0]
+    ldr r1, [sp, #4]
+    ldr r2, [sp, #8]
+    ldr r3, [sp, #12]
+    ldr r4, [sp, #16]
+    ldr lr, [sp, #20]
+    add sp, sp, #24
+    mov pc, lr
 
 /* Check collision between ball and paddles */
 /* Input: r0 = ball_x, r1 = ball_y */
 /* Returns: r0 = 0 (no collision), 1 (left paddle), 2 (right paddle) */
 paddle_check_collision:
-    push {r1-r6, lr}
+    sub sp, sp, #28
+    str r1, [sp, #0]
+    str r2, [sp, #4]
+    str r3, [sp, #8]
+    str r4, [sp, #12]
+    str r5, [sp, #16]
+    str r6, [sp, #20]
+    str lr, [sp, #24]
     
     mov r4, r0                  /* Save ball_x */
     mov r5, r1                  /* Save ball_y */
@@ -202,17 +242,29 @@ no_collision:
     mov r0, #0
     
 collision_done:
-    pop {r1-r6, pc}
+    ldr r1, [sp, #0]
+    ldr r2, [sp, #4]
+    ldr r3, [sp, #8]
+    ldr r4, [sp, #12]
+    ldr r5, [sp, #16]
+    ldr r6, [sp, #20]
+    ldr lr, [sp, #24]
+    add sp, sp, #28
+    mov pc, lr
 
 /* Get paddle positions */
 /* Returns: r0 = paddle1_y, r1 = paddle2_y */
 paddle_get_positions:
-    push {r2, lr}
+    sub sp, sp, #8
+    str r2, [sp, #0]
+    str lr, [sp, #4]
     
     ldr r2, =paddle1_y
     ldr r0, [r2]
     ldr r2, =paddle2_y
     ldr r1, [r2]
     
-    pop {r2, pc}
-    
+    ldr r2, [sp, #0]
+    ldr lr, [sp, #4]
+    add sp, sp, #8
+    mov pc, lr

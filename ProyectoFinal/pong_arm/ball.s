@@ -31,7 +31,11 @@ ball_dy: .word 1             /* Ball Y velocity */
 
 /* Initialize ball to center */
 ball_init:
-    push {r0-r2, lr}
+    sub sp, sp, #16
+    str r0, [sp, #0]
+    str r1, [sp, #4]
+    str r2, [sp, #8]
+    str lr, [sp, #12]
     
     ldr r0, =ball_x
     ldr r1, =(SCREEN_WIDTH / 2)
@@ -49,11 +53,20 @@ ball_init:
     ldr r1, =BALL_SPEED_Y
     str r1, [r0]
     
-    pop {r0-r2, pc}
+    ldr r0, [sp, #0]
+    ldr r1, [sp, #4]
+    ldr r2, [sp, #8]
+    ldr lr, [sp, #12]
+    add sp, sp, #16
+    mov pc, lr
 
 /* Reset ball to center (after scoring) */
 ball_reset:
-    push {r0-r2, lr}
+    sub sp, sp, #16
+    str r0, [sp, #0]
+    str r1, [sp, #4]
+    str r2, [sp, #8]
+    str lr, [sp, #12]
     
     ldr r0, =ball_x
     ldr r1, =(SCREEN_WIDTH / 2)
@@ -69,11 +82,21 @@ ball_reset:
     rsb r1, r1, #0
     str r1, [r0]
     
-    pop {r0-r2, pc}
+    ldr r0, [sp, #0]
+    ldr r1, [sp, #4]
+    ldr r2, [sp, #8]
+    ldr lr, [sp, #12]
+    add sp, sp, #16
+    mov pc, lr
 
 /* Update ball position */
 ball_update:
-    push {r0-r3, lr}
+    sub sp, sp, #20
+    str r0, [sp, #0]
+    str r1, [sp, #4]
+    str r2, [sp, #8]
+    str r3, [sp, #12]
+    str lr, [sp, #16]
     
     /* Update X position */
     ldr r0, =ball_x
@@ -94,11 +117,21 @@ ball_update:
     /* Check top/bottom wall collisions */
     bl ball_check_walls
     
-    pop {r0-r3, pc}
+    ldr r0, [sp, #0]
+    ldr r1, [sp, #4]
+    ldr r2, [sp, #8]
+    ldr r3, [sp, #12]
+    ldr lr, [sp, #16]
+    add sp, sp, #20
+    mov pc, lr
 
 /* Check wall collisions (top and bottom) */
 ball_check_walls:
-    push {r0-r2, lr}
+    sub sp, sp, #16
+    str r0, [sp, #0]
+    str r1, [sp, #4]
+    str r2, [sp, #8]
+    str lr, [sp, #12]
     
     ldr r0, =ball_y
     ldr r1, [r0]
@@ -122,12 +155,20 @@ bounce_vertical:
     str r1, [r0]
     
 walls_done:
-    pop {r0-r2, pc}
+    ldr r0, [sp, #0]
+    ldr r1, [sp, #4]
+    ldr r2, [sp, #8]
+    ldr lr, [sp, #12]
+    add sp, sp, #16
+    mov pc, lr
 
 /* Check if ball scored (went past paddles) */
 /* Returns: r0 = 0 (no score), 1 (player 1 scored), 2 (player 2 scored) */
 ball_check_score:
-    push {r1-r2, lr}
+    sub sp, sp, #12
+    str r1, [sp, #0]
+    str r2, [sp, #4]
+    str lr, [sp, #8]
     
     ldr r0, =ball_x
     ldr r1, [r0]
@@ -153,11 +194,21 @@ player2_scored:
     mov r0, #2
     
 score_check_done:
-    pop {r1-r2, pc}
+    ldr r1, [sp, #0]
+    ldr r2, [sp, #4]
+    ldr lr, [sp, #8]
+    add sp, sp, #12
+    mov pc, lr
 
 /* Draw ball */
 ball_draw:
-    push {r0-r4, lr}
+    sub sp, sp, #24
+    str r0, [sp, #0]
+    str r1, [sp, #4]
+    str r2, [sp, #8]
+    str r3, [sp, #12]
+    str r4, [sp, #16]
+    str lr, [sp, #20]
     
     ldr r0, =ball_x
     ldr r0, [r0]
@@ -168,39 +219,63 @@ ball_draw:
     ldr r4, =COLOR_BALL
     bl draw_rect
     
-    pop {r0-r4, pc}
+    ldr r0, [sp, #0]
+    ldr r1, [sp, #4]
+    ldr r2, [sp, #8]
+    ldr r3, [sp, #12]
+    ldr r4, [sp, #16]
+    ldr lr, [sp, #20]
+    add sp, sp, #24
+    mov pc, lr
 
 /* Get ball position */
 /* Returns: r0 = x, r1 = y */
 ball_get_pos:
-    push {r2, lr}
+    sub sp, sp, #8
+    str r2, [sp, #0]
+    str lr, [sp, #4]
     
     ldr r2, =ball_x
     ldr r0, [r2]
     ldr r2, =ball_y
     ldr r1, [r2]
     
-    pop {r2, pc}
+    ldr r2, [sp, #0]
+    ldr lr, [sp, #4]
+    add sp, sp, #8
+    mov pc, lr
 
 /* Get ball velocity */
 /* Returns: r0 = dx, r1 = dy */
 ball_get_velocity:
-    push {r2, lr}
+    sub sp, sp, #8
+    str r2, [sp, #0]
+    str lr, [sp, #4]
     
     ldr r2, =ball_dx
     ldr r0, [r2]
     ldr r2, =ball_dy
     ldr r1, [r2]
     
-    pop {r2, pc}
+    ldr r2, [sp, #0]
+    ldr lr, [sp, #4]
+    add sp, sp, #8
+    mov pc, lr
 
 /* Bounce ball horizontally (for paddle collision) */
 ball_bounce_horizontal:
-    push {r0-r1, lr}
+    sub sp, sp, #12
+    str r0, [sp, #0]
+    str r1, [sp, #4]
+    str lr, [sp, #8]
     
     ldr r0, =ball_dx
     ldr r1, [r0]
     rsb r1, r1, #0
     str r1, [r0]
     
-    pop {r0-r1, pc}
+    ldr r0, [sp, #0]
+    ldr r1, [sp, #4]
+    ldr lr, [sp, #8]
+    add sp, sp, #12
+    mov pc, lr
