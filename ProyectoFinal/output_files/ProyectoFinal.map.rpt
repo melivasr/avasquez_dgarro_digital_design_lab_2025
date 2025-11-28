@@ -1,5 +1,5 @@
-Analysis & Synthesis report for ProyectoFinal
-Thu Nov 27 17:26:49 2025
+Analysis & Elaboration report for ProyectoFinal
+Thu Nov 27 23:05:59 2025
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -7,42 +7,26 @@ Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 ; Table of Contents ;
 ---------------------
   1. Legal Notice
-  2. Analysis & Synthesis Summary
-  3. Analysis & Synthesis Settings
-  4. Parallel Compilation
-  5. Analysis & Synthesis Source Files Read
-  6. Analysis & Synthesis Resource Usage Summary
-  7. Analysis & Synthesis Resource Utilization by Entity
-  8. Analysis & Synthesis RAM Summary
-  9. State Machine - |top|ram2vga_bridge:u_bridge|state
- 10. State Machine - |top|ps2:kb_inst|state_reg
- 11. Registers Removed During Synthesis
- 12. General Register Statistics
- 13. Registers Added for RAM Pass-Through Logic
- 14. Multiplexer Restructuring Statistics (Restructuring Performed)
- 15. Source assignments for ram:dmem|altsyncram:mem_rtl_0|altsyncram_ovm1:auto_generated
- 16. Parameter Settings for User Entity Instance: arm:arm_inst|controller:c|condlogic:cl|flopenr:flagreg1
- 17. Parameter Settings for User Entity Instance: arm:arm_inst|controller:c|condlogic:cl|flopenr:flagreg0
- 18. Parameter Settings for User Entity Instance: arm:arm_inst|datapath:dp|mux2:pcmux
- 19. Parameter Settings for User Entity Instance: arm:arm_inst|datapath:dp|flopr:pcreg
- 20. Parameter Settings for User Entity Instance: arm:arm_inst|datapath:dp|adder:pcadd1
- 21. Parameter Settings for User Entity Instance: arm:arm_inst|datapath:dp|adder:pcadd2
- 22. Parameter Settings for User Entity Instance: arm:arm_inst|datapath:dp|mux2:ra1mux
- 23. Parameter Settings for User Entity Instance: arm:arm_inst|datapath:dp|mux2:ra2mux
- 24. Parameter Settings for User Entity Instance: arm:arm_inst|datapath:dp|mux2:resmux
- 25. Parameter Settings for User Entity Instance: arm:arm_inst|datapath:dp|mux2:srcbmux
- 26. Parameter Settings for Inferred Entity Instance: ram:dmem|altsyncram:mem_rtl_0
- 27. Parameter Settings for Inferred Entity Instance: videoGen_pong:u_video|lpm_divide:Mod0
- 28. altsyncram Parameter Settings by Entity Instance
- 29. Port Connectivity Checks: "ram:dmem"
- 30. Port Connectivity Checks: "arm:arm_inst|datapath:dp|mux2:ra1mux"
- 31. Port Connectivity Checks: "arm:arm_inst|datapath:dp|adder:pcadd2"
- 32. Port Connectivity Checks: "arm:arm_inst|datapath:dp|adder:pcadd1"
- 33. Port Connectivity Checks: "arm:arm_inst"
- 34. Post-Synthesis Netlist Statistics for Top Partition
- 35. Elapsed Time Per Partition
- 36. Analysis & Synthesis Messages
- 37. Analysis & Synthesis Suppressed Messages
+  2. Analysis & Elaboration Summary
+  3. Parallel Compilation
+  4. Parameter Settings for User Entity Instance: arm:arm_inst|controller:c|condlogic:cl|flopenr:flagreg1
+  5. Parameter Settings for User Entity Instance: arm:arm_inst|controller:c|condlogic:cl|flopenr:flagreg0
+  6. Parameter Settings for User Entity Instance: arm:arm_inst|datapath:dp|mux2:pcmux
+  7. Parameter Settings for User Entity Instance: arm:arm_inst|datapath:dp|flopr:pcreg
+  8. Parameter Settings for User Entity Instance: arm:arm_inst|datapath:dp|adder:pcadd1
+  9. Parameter Settings for User Entity Instance: arm:arm_inst|datapath:dp|adder:pcadd2
+ 10. Parameter Settings for User Entity Instance: arm:arm_inst|datapath:dp|mux2:ra1mux
+ 11. Parameter Settings for User Entity Instance: arm:arm_inst|datapath:dp|mux2:ra2mux
+ 12. Parameter Settings for User Entity Instance: arm:arm_inst|datapath:dp|mux2:resmux
+ 13. Parameter Settings for User Entity Instance: arm:arm_inst|datapath:dp|mux2:srcbmux
+ 14. Analysis & Elaboration Settings
+ 15. Port Connectivity Checks: "ram:dmem"
+ 16. Port Connectivity Checks: "arm:arm_inst|datapath:dp|mux2:ra1mux"
+ 17. Port Connectivity Checks: "arm:arm_inst|datapath:dp|adder:pcadd2"
+ 18. Port Connectivity Checks: "arm:arm_inst|datapath:dp|adder:pcadd1"
+ 19. Port Connectivity Checks: "arm:arm_inst"
+ 20. Analysis & Elaboration Messages
+ 21. Analysis & Elaboration Suppressed Messages
 
 
 
@@ -66,114 +50,22 @@ https://fpgasoftware.intel.com/eula.
 
 
 
-+-------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                  ;
-+---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Thu Nov 27 17:26:49 2025       ;
-; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
-; Revision Name                   ; ProyectoFinal                               ;
-; Top-level Entity Name           ; top                                         ;
-; Family                          ; Cyclone V                                   ;
-; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 931                                         ;
-; Total pins                      ; 33                                          ;
-; Total virtual pins              ; 0                                           ;
-; Total block memory bits         ; 80                                          ;
-; Total DSP Blocks                ; 0                                           ;
-; Total HSSI RX PCSs              ; 0                                           ;
-; Total HSSI PMA RX Deserializers ; 0                                           ;
-; Total HSSI TX PCSs              ; 0                                           ;
-; Total HSSI PMA TX Serializers   ; 0                                           ;
-; Total PLLs                      ; 0                                           ;
-; Total DLLs                      ; 0                                           ;
-+---------------------------------+---------------------------------------------+
-
-
-+---------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Settings                                                                                             ;
-+---------------------------------------------------------------------------------+--------------------+--------------------+
-; Option                                                                          ; Setting            ; Default Value      ;
-+---------------------------------------------------------------------------------+--------------------+--------------------+
-; Device                                                                          ; 5CSXFC6D6F31C6     ;                    ;
-; Top-level entity name                                                           ; top                ; ProyectoFinal      ;
-; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
-; Use smart compilation                                                           ; Off                ; Off                ;
-; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
-; Enable compact report table                                                     ; Off                ; Off                ;
-; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
-; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
-; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
-; Preserve fewer node names                                                       ; On                 ; On                 ;
-; Intel FPGA IP Evaluation Mode                                                   ; Enable             ; Enable             ;
-; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
-; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
-; State Machine Processing                                                        ; Auto               ; Auto               ;
-; Safe State Machine                                                              ; Off                ; Off                ;
-; Extract Verilog State Machines                                                  ; On                 ; On                 ;
-; Extract VHDL State Machines                                                     ; On                 ; On                 ;
-; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
-; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
-; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
-; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
-; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
-; Parallel Synthesis                                                              ; On                 ; On                 ;
-; DSP Block Balancing                                                             ; Auto               ; Auto               ;
-; NOT Gate Push-Back                                                              ; On                 ; On                 ;
-; Power-Up Don't Care                                                             ; On                 ; On                 ;
-; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
-; Remove Duplicate Registers                                                      ; On                 ; On                 ;
-; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
-; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
-; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
-; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
-; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
-; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
-; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
-; Optimization Technique                                                          ; Balanced           ; Balanced           ;
-; Carry Chain Length                                                              ; 70                 ; 70                 ;
-; Auto Carry Chains                                                               ; On                 ; On                 ;
-; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
-; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
-; Auto ROM Replacement                                                            ; On                 ; On                 ;
-; Auto RAM Replacement                                                            ; On                 ; On                 ;
-; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
-; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
-; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
-; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
-; Strict RAM Replacement                                                          ; Off                ; Off                ;
-; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
-; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
-; Auto Resource Sharing                                                           ; Off                ; Off                ;
-; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
-; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
-; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
-; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
-; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
-; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
-; Report Parameter Settings                                                       ; On                 ; On                 ;
-; Report Source Assignments                                                       ; On                 ; On                 ;
-; Report Connectivity Checks                                                      ; On                 ; On                 ;
-; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
-; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
-; Power Optimization During Synthesis                                             ; Normal compilation ; Normal compilation ;
-; HDL message level                                                               ; Level2             ; Level2             ;
-; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
-; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
-; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
-; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
-; Clock MUX Protection                                                            ; On                 ; On                 ;
-; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
-; Block Design Naming                                                             ; Auto               ; Auto               ;
-; SDC constraint protection                                                       ; Off                ; Off                ;
-; Synthesis Effort                                                                ; Auto               ; Auto               ;
-; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
-; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
-; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
-; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
-; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
-; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
-; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                ;
-+---------------------------------------------------------------------------------+--------------------+--------------------+
++-----------------------------------------------------------------------------+
+; Analysis & Elaboration Summary                                              ;
++-------------------------------+---------------------------------------------+
+; Analysis & Elaboration Status ; Successful - Thu Nov 27 23:05:59 2025       ;
+; Quartus Prime Version         ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
+; Revision Name                 ; ProyectoFinal                               ;
+; Top-level Entity Name         ; top                                         ;
+; Family                        ; Cyclone V                                   ;
+; Logic utilization (in ALMs)   ; N/A until Partition Merge                   ;
+; Total registers               ; N/A until Partition Merge                   ;
+; Total pins                    ; N/A until Partition Merge                   ;
+; Total virtual pins            ; N/A until Partition Merge                   ;
+; Total block memory bits       ; N/A until Partition Merge                   ;
+; Total PLLs                    ; N/A until Partition Merge                   ;
+; Total DLLs                    ; N/A until Partition Merge                   ;
++-------------------------------+---------------------------------------------+
 
 
 +------------------------------------------+
@@ -185,259 +77,11 @@ https://fpgasoftware.intel.com/eula.
 ; Maximum allowed            ; 8           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 8           ;
+; Maximum used               ; 1           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.1%      ;
-;     Processor 3            ;   0.0%      ;
-;     Processor 4            ;   0.0%      ;
-;     Processor 5            ;   0.0%      ;
-;     Processor 6            ;   0.0%      ;
-;     Processor 7            ;   0.0%      ;
-;     Processor 8            ;   0.0%      ;
 +----------------------------+-------------+
-
-
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                                  ;
-+----------------------------------+-----------------+---------------------------------------+------------------------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                             ; File Name with Absolute Path                                                                                     ; Library ;
-+----------------------------------+-----------------+---------------------------------------+------------------------------------------------------------------------------------------------------------------+---------+
-; alu.sv                           ; yes             ; User SystemVerilog HDL File           ; C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/alu.sv                     ;         ;
-; arm.sv                           ; yes             ; User SystemVerilog HDL File           ; C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/arm.sv                     ;         ;
-; condcheck.sv                     ; yes             ; User SystemVerilog HDL File           ; C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/condcheck.sv               ;         ;
-; condlogic.sv                     ; yes             ; User SystemVerilog HDL File           ; C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/condlogic.sv               ;         ;
-; controller.sv                    ; yes             ; User SystemVerilog HDL File           ; C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/controller.sv              ;         ;
-; datapath.sv                      ; yes             ; User SystemVerilog HDL File           ; C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/datapath.sv                ;         ;
-; decoder.sv                       ; yes             ; User SystemVerilog HDL File           ; C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/decoder.sv                 ;         ;
-; extend.sv                        ; yes             ; User SystemVerilog HDL File           ; C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/extend.sv                  ;         ;
-; flopenr.sv                       ; yes             ; User SystemVerilog HDL File           ; C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/flopenr.sv                 ;         ;
-; flopr.sv                         ; yes             ; User SystemVerilog HDL File           ; C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/flopr.sv                   ;         ;
-; mux2.sv                          ; yes             ; User SystemVerilog HDL File           ; C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/mux2.sv                    ;         ;
-; regfile.sv                       ; yes             ; User SystemVerilog HDL File           ; C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/regfile.sv                 ;         ;
-; top.sv                           ; yes             ; User SystemVerilog HDL File           ; C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/top.sv                     ;         ;
-; adder.sv                         ; yes             ; User SystemVerilog HDL File           ; C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/adder.sv                   ;         ;
-; program.hex                      ; yes             ; User Hexadecimal (Intel-Format) File  ; C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/program.hex                ;         ;
-; rom_i.sv                         ; yes             ; User SystemVerilog HDL File           ; C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/rom_i.sv                   ;         ;
-; ps2.sv                           ; yes             ; User SystemVerilog HDL File           ; C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/ps2.sv                     ;         ;
-; deb.sv                           ; yes             ; User SystemVerilog HDL File           ; C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/deb.sv                     ;         ;
-; pll.sv                           ; yes             ; User SystemVerilog HDL File           ; C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/pll.sv                     ;         ;
-; vgaController.sv                 ; yes             ; User SystemVerilog HDL File           ; C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/vgaController.sv           ;         ;
-; videoGen_pong.sv                 ; yes             ; User SystemVerilog HDL File           ; C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/videoGen_pong.sv           ;         ;
-; ram2vga_bridge.sv                ; yes             ; User SystemVerilog HDL File           ; C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/ram2vga_bridge.sv          ;         ;
-; ram.sv                           ; yes             ; User SystemVerilog HDL File           ; C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/ram.sv                     ;         ;
-; key_mapper.sv                    ; yes             ; User SystemVerilog HDL File           ; C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/key_mapper.sv              ;         ;
-; altsyncram.tdf                   ; yes             ; Megafunction                          ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altsyncram.tdf                                            ;         ;
-; stratix_ram_block.inc            ; yes             ; Megafunction                          ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/stratix_ram_block.inc                                     ;         ;
-; lpm_mux.inc                      ; yes             ; Megafunction                          ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_mux.inc                                               ;         ;
-; lpm_decode.inc                   ; yes             ; Megafunction                          ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_decode.inc                                            ;         ;
-; aglobal201.inc                   ; yes             ; Megafunction                          ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/aglobal201.inc                                            ;         ;
-; a_rdenreg.inc                    ; yes             ; Megafunction                          ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/a_rdenreg.inc                                             ;         ;
-; altrom.inc                       ; yes             ; Megafunction                          ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altrom.inc                                                ;         ;
-; altram.inc                       ; yes             ; Megafunction                          ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altram.inc                                                ;         ;
-; altdpram.inc                     ; yes             ; Megafunction                          ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altdpram.inc                                              ;         ;
-; db/altsyncram_ovm1.tdf           ; yes             ; Auto-Generated Megafunction           ; C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/db/altsyncram_ovm1.tdf     ;         ;
-; lpm_divide.tdf                   ; yes             ; Megafunction                          ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_divide.tdf                                            ;         ;
-; abs_divider.inc                  ; yes             ; Megafunction                          ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/abs_divider.inc                                           ;         ;
-; sign_div_unsign.inc              ; yes             ; Megafunction                          ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sign_div_unsign.inc                                       ;         ;
-; db/lpm_divide_i3m.tdf            ; yes             ; Auto-Generated Megafunction           ; C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/db/lpm_divide_i3m.tdf      ;         ;
-; db/sign_div_unsign_llh.tdf       ; yes             ; Auto-Generated Megafunction           ; C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/db/sign_div_unsign_llh.tdf ;         ;
-; db/alt_u_div_gve.tdf             ; yes             ; Auto-Generated Megafunction           ; C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/db/alt_u_div_gve.tdf       ;         ;
-+----------------------------------+-----------------+---------------------------------------+------------------------------------------------------------------------------------------------------------------+---------+
-
-
-+-----------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                     ;
-+---------------------------------------------+-------------------+
-; Resource                                    ; Usage             ;
-+---------------------------------------------+-------------------+
-; Estimate of Logic utilization (ALMs needed) ; 877               ;
-;                                             ;                   ;
-; Combinational ALUT usage for logic          ; 1191              ;
-;     -- 7 input functions                    ; 6                 ;
-;     -- 6 input functions                    ; 456               ;
-;     -- 5 input functions                    ; 267               ;
-;     -- 4 input functions                    ; 103               ;
-;     -- <=3 input functions                  ; 359               ;
-;                                             ;                   ;
-; Dedicated logic registers                   ; 931               ;
-;                                             ;                   ;
-; I/O pins                                    ; 33                ;
-; Total MLAB memory bits                      ; 0                 ;
-; Total block memory bits                     ; 80                ;
-;                                             ;                   ;
-; Total DSP Blocks                            ; 0                 ;
-;                                             ;                   ;
-; Maximum fan-out node                        ; pll:vgapll|toggle ;
-; Maximum fan-out                             ; 900               ;
-; Total fan-out                               ; 8991              ;
-; Average fan-out                             ; 4.09              ;
-+---------------------------------------------+-------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                  ;
-+-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
-; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                        ; Entity Name         ; Library Name ;
-+-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
-; |top                                      ; 1191 (0)            ; 931 (0)                   ; 80                ; 0          ; 33   ; 0            ; |top                                                                                                                       ; top                 ; work         ;
-;    |arm:arm_inst|                         ; 806 (0)             ; 516 (0)                   ; 0                 ; 0          ; 0    ; 0            ; |top|arm:arm_inst                                                                                                          ; arm                 ; work         ;
-;       |controller:c|                      ; 19 (0)              ; 4 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|arm:arm_inst|controller:c                                                                                             ; controller          ; work         ;
-;          |condlogic:cl|                   ; 10 (5)              ; 4 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|arm:arm_inst|controller:c|condlogic:cl                                                                                ; condlogic           ; work         ;
-;             |condcheck:cc|                ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|arm:arm_inst|controller:c|condlogic:cl|condcheck:cc                                                                   ; condcheck           ; work         ;
-;             |flopenr:flagreg0|            ; 0 (0)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |top|arm:arm_inst|controller:c|condlogic:cl|flopenr:flagreg0                                                               ; flopenr             ; work         ;
-;             |flopenr:flagreg1|            ; 0 (0)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |top|arm:arm_inst|controller:c|condlogic:cl|flopenr:flagreg1                                                               ; flopenr             ; work         ;
-;          |decoder:dec|                    ; 9 (9)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|arm:arm_inst|controller:c|decoder:dec                                                                                 ; decoder             ; work         ;
-;       |datapath:dp|                       ; 787 (219)           ; 512 (0)                   ; 0                 ; 0          ; 0    ; 0            ; |top|arm:arm_inst|datapath:dp                                                                                              ; datapath            ; work         ;
-;          |adder:pcadd1|                   ; 30 (30)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|arm:arm_inst|datapath:dp|adder:pcadd1                                                                                 ; adder               ; work         ;
-;          |adder:pcadd2|                   ; 30 (30)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|arm:arm_inst|datapath:dp|adder:pcadd2                                                                                 ; adder               ; work         ;
-;          |alu:alu|                        ; 108 (108)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|arm:arm_inst|datapath:dp|alu:alu                                                                                      ; alu                 ; work         ;
-;          |flopr:pcreg|                    ; 0 (0)               ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |top|arm:arm_inst|datapath:dp|flopr:pcreg                                                                                  ; flopr               ; work         ;
-;          |mux2:ra1mux|                    ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|arm:arm_inst|datapath:dp|mux2:ra1mux                                                                                  ; mux2                ; work         ;
-;          |mux2:ra2mux|                    ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|arm:arm_inst|datapath:dp|mux2:ra2mux                                                                                  ; mux2                ; work         ;
-;          |mux2:resmux|                    ; 99 (99)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|arm:arm_inst|datapath:dp|mux2:resmux                                                                                  ; mux2                ; work         ;
-;          |mux2:srcbmux|                   ; 56 (56)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|arm:arm_inst|datapath:dp|mux2:srcbmux                                                                                 ; mux2                ; work         ;
-;          |regfile:rf|                     ; 238 (238)           ; 480 (480)                 ; 0                 ; 0          ; 0    ; 0            ; |top|arm:arm_inst|datapath:dp|regfile:rf                                                                                   ; regfile             ; work         ;
-;    |key_mapper:keymap_inst|               ; 11 (11)             ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |top|key_mapper:keymap_inst                                                                                                ; key_mapper          ; work         ;
-;    |pll:vgapll|                           ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |top|pll:vgapll                                                                                                            ; pll                 ; work         ;
-;    |ps2:kb_inst|                          ; 43 (32)             ; 53 (42)                   ; 0                 ; 0          ; 0    ; 0            ; |top|ps2:kb_inst                                                                                                           ; ps2                 ; work         ;
-;       |deb:deb0|                          ; 11 (11)             ; 11 (11)                   ; 0                 ; 0          ; 0    ; 0            ; |top|ps2:kb_inst|deb:deb0                                                                                                  ; deb                 ; work         ;
-;    |ram2vga_bridge:u_bridge|              ; 10 (10)             ; 53 (53)                   ; 0                 ; 0          ; 0    ; 0            ; |top|ram2vga_bridge:u_bridge                                                                                               ; ram2vga_bridge      ; work         ;
-;    |ram:dmem|                             ; 21 (21)             ; 284 (284)                 ; 80                ; 0          ; 0    ; 0            ; |top|ram:dmem                                                                                                              ; ram                 ; work         ;
-;       |altsyncram:mem_rtl_0|              ; 0 (0)               ; 0 (0)                     ; 80                ; 0          ; 0    ; 0            ; |top|ram:dmem|altsyncram:mem_rtl_0                                                                                         ; altsyncram          ; work         ;
-;          |altsyncram_ovm1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 80                ; 0          ; 0    ; 0            ; |top|ram:dmem|altsyncram:mem_rtl_0|altsyncram_ovm1:auto_generated                                                          ; altsyncram_ovm1     ; work         ;
-;    |rom_i:imem|                           ; 90 (90)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|rom_i:imem                                                                                                            ; rom_i               ; work         ;
-;    |vgaController:vgaCont|                ; 31 (31)             ; 20 (20)                   ; 0                 ; 0          ; 0    ; 0            ; |top|vgaController:vgaCont                                                                                                 ; vgaController       ; work         ;
-;    |videoGen_pong:u_video|                ; 178 (105)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|videoGen_pong:u_video                                                                                                 ; videoGen_pong       ; work         ;
-;       |lpm_divide:Mod0|                   ; 73 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|videoGen_pong:u_video|lpm_divide:Mod0                                                                                 ; lpm_divide          ; work         ;
-;          |lpm_divide_i3m:auto_generated|  ; 73 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|videoGen_pong:u_video|lpm_divide:Mod0|lpm_divide_i3m:auto_generated                                                   ; lpm_divide_i3m      ; work         ;
-;             |sign_div_unsign_llh:divider| ; 73 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|videoGen_pong:u_video|lpm_divide:Mod0|lpm_divide_i3m:auto_generated|sign_div_unsign_llh:divider                       ; sign_div_unsign_llh ; work         ;
-;                |alt_u_div_gve:divider|    ; 73 (73)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|videoGen_pong:u_video|lpm_divide:Mod0|lpm_divide_i3m:auto_generated|sign_div_unsign_llh:divider|alt_u_div_gve:divider ; alt_u_div_gve       ; work         ;
-+-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
-Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis RAM Summary                                                                                                                                            ;
-+-------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------+
-; Name                                                                    ; Type ; Mode             ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size ; MIF  ;
-+-------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------+
-; ram:dmem|altsyncram:mem_rtl_0|altsyncram_ovm1:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 8            ; 10           ; 8            ; 10           ; 80   ; None ;
-+-------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------+
-
-
-Encoding Type:  One-Hot
-+------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |top|ram2vga_bridge:u_bridge|state                                                                     ;
-+-------------+-------------+------------+------------+------------+------------+-------------+-------------+------------+
-; Name        ; state.R_WIN ; state.R_S2 ; state.R_S1 ; state.R_BY ; state.R_BX ; state.R_P2Y ; state.R_P1Y ; state.IDLE ;
-+-------------+-------------+------------+------------+------------+------------+-------------+-------------+------------+
-; state.IDLE  ; 0           ; 0          ; 0          ; 0          ; 0          ; 0           ; 0           ; 0          ;
-; state.R_P1Y ; 0           ; 0          ; 0          ; 0          ; 0          ; 0           ; 1           ; 1          ;
-; state.R_P2Y ; 0           ; 0          ; 0          ; 0          ; 0          ; 1           ; 0           ; 1          ;
-; state.R_BX  ; 0           ; 0          ; 0          ; 0          ; 1          ; 0           ; 0           ; 1          ;
-; state.R_BY  ; 0           ; 0          ; 0          ; 1          ; 0          ; 0           ; 0           ; 1          ;
-; state.R_S1  ; 0           ; 0          ; 1          ; 0          ; 0          ; 0           ; 0           ; 1          ;
-; state.R_S2  ; 0           ; 1          ; 0          ; 0          ; 0          ; 0           ; 0           ; 1          ;
-; state.R_WIN ; 1           ; 0          ; 0          ; 0          ; 0          ; 0           ; 0           ; 1          ;
-+-------------+-------------+------------+------------+------------+------------+-------------+-------------+------------+
-
-
-Encoding Type:  One-Hot
-+---------------------------------------------------------------------------------------------------------------+
-; State Machine - |top|ps2:kb_inst|state_reg                                                                    ;
-+-----------------------------+-----------------------------+--------------------------+------------------------+
-; Name                        ; state_reg.WAITING_FOR_START ; state_reg.END_PROCESSING ; state_reg.SENDING_DATA ;
-+-----------------------------+-----------------------------+--------------------------+------------------------+
-; state_reg.WAITING_FOR_START ; 0                           ; 0                        ; 0                      ;
-; state_reg.SENDING_DATA      ; 1                           ; 0                        ; 1                      ;
-; state_reg.END_PROCESSING    ; 1                           ; 1                        ; 0                      ;
-+-----------------------------+-----------------------------+--------------------------+------------------------+
-
-
-+------------------------------------------------------------+
-; Registers Removed During Synthesis                         ;
-+---------------------------------------+--------------------+
-; Register name                         ; Reason for Removal ;
-+---------------------------------------+--------------------+
-; ram2vga_bridge:u_bridge|state~12      ; Lost fanout        ;
-; ram2vga_bridge:u_bridge|state~13      ; Lost fanout        ;
-; ram2vga_bridge:u_bridge|state~14      ; Lost fanout        ;
-; Total Number of Removed Registers = 3 ;                    ;
-+---------------------------------------+--------------------+
-
-
-+------------------------------------------------------+
-; General Register Statistics                          ;
-+----------------------------------------------+-------+
-; Statistic                                    ; Value ;
-+----------------------------------------------+-------+
-; Total registers                              ; 931   ;
-; Number of registers using Synchronous Clear  ; 45    ;
-; Number of registers using Synchronous Load   ; 30    ;
-; Number of registers using Asynchronous Clear ; 630   ;
-; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 838   ;
-; Number of registers using Preset             ; 0     ;
-+----------------------------------------------+-------+
-
-
-+----------------------------------------------------+
-; Registers Added for RAM Pass-Through Logic         ;
-+-------------------------------+--------------------+
-; Register Name                 ; RAM Name           ;
-+-------------------------------+--------------------+
-; ram:dmem|mem_rtl_0_bypass[0]  ; ram:dmem|mem_rtl_0 ;
-; ram:dmem|mem_rtl_0_bypass[1]  ; ram:dmem|mem_rtl_0 ;
-; ram:dmem|mem_rtl_0_bypass[2]  ; ram:dmem|mem_rtl_0 ;
-; ram:dmem|mem_rtl_0_bypass[3]  ; ram:dmem|mem_rtl_0 ;
-; ram:dmem|mem_rtl_0_bypass[4]  ; ram:dmem|mem_rtl_0 ;
-; ram:dmem|mem_rtl_0_bypass[5]  ; ram:dmem|mem_rtl_0 ;
-; ram:dmem|mem_rtl_0_bypass[6]  ; ram:dmem|mem_rtl_0 ;
-; ram:dmem|mem_rtl_0_bypass[7]  ; ram:dmem|mem_rtl_0 ;
-; ram:dmem|mem_rtl_0_bypass[8]  ; ram:dmem|mem_rtl_0 ;
-; ram:dmem|mem_rtl_0_bypass[9]  ; ram:dmem|mem_rtl_0 ;
-; ram:dmem|mem_rtl_0_bypass[10] ; ram:dmem|mem_rtl_0 ;
-; ram:dmem|mem_rtl_0_bypass[11] ; ram:dmem|mem_rtl_0 ;
-; ram:dmem|mem_rtl_0_bypass[12] ; ram:dmem|mem_rtl_0 ;
-; ram:dmem|mem_rtl_0_bypass[13] ; ram:dmem|mem_rtl_0 ;
-; ram:dmem|mem_rtl_0_bypass[14] ; ram:dmem|mem_rtl_0 ;
-; ram:dmem|mem_rtl_0_bypass[15] ; ram:dmem|mem_rtl_0 ;
-; ram:dmem|mem_rtl_0_bypass[16] ; ram:dmem|mem_rtl_0 ;
-+-------------------------------+--------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                 ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                       ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------+
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |top|ps2:kb_inst|display_bin_code_reg[1]         ;
-; 4:1                ; 9 bits    ; 18 LEs        ; 0 LEs                ; 18 LEs                 ; Yes        ; |top|ps2:kb_inst|data_reg[7]                     ;
-; 5:1                ; 4 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |top|ps2:kb_inst|n_reg[1]                        ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 0 LEs                ; 24 LEs                 ; Yes        ; |top|ps2:kb_inst|bin_code_reg[3]                 ;
-; 3:1                ; 13 bits   ; 26 LEs        ; 26 LEs               ; 0 LEs                  ; No         ; |top|arm:arm_inst|datapath:dp|mux2:srcbmux|y[19] ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |top|arm:arm_inst|datapath:dp|mux2:srcbmux|y[0]  ;
-; 3:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |top|arm:arm_inst|datapath:dp|mux2:srcbmux|y[3]  ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |top|arm:arm_inst|datapath:dp|alu:alu|Mux23      ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; No         ; |top|ram:dmem|Mux54                              ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |top|arm:arm_inst|datapath:dp|mux2:srcbmux|y[10] ;
-; 17:1               ; 32 bits   ; 352 LEs       ; 352 LEs              ; 0 LEs                  ; No         ; |top|arm:arm_inst|datapath:dp|regfile:rf|rd2[14] ;
-; 10:1               ; 28 bits   ; 168 LEs       ; 168 LEs              ; 0 LEs                  ; No         ; |top|arm:arm_inst|datapath:dp|mux2:resmux|y[20]  ;
-; 10:1               ; 4 bits    ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |top|arm:arm_inst|datapath:dp|mux2:resmux|y[0]   ;
-; 6:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |top|ps2:kb_inst|Selector13                      ;
-; 18:1               ; 32 bits   ; 384 LEs       ; 384 LEs              ; 0 LEs                  ; No         ; |top|arm:arm_inst|datapath:dp|SrcA_pre[29]       ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------+
-
-
-+-------------------------------------------------------------------------------------+
-; Source assignments for ram:dmem|altsyncram:mem_rtl_0|altsyncram_ovm1:auto_generated ;
-+---------------------------------+--------------------+------+-----------------------+
-; Assignment                      ; Value              ; From ; To                    ;
-+---------------------------------+--------------------+------+-----------------------+
-; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                     ;
-+---------------------------------+--------------------+------+-----------------------+
 
 
 +------------------------------------------------------------------------------------------------------+
@@ -540,108 +184,91 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+--------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: ram:dmem|altsyncram:mem_rtl_0 ;
-+------------------------------------+----------------------+--------------------+
-; Parameter Name                     ; Value                ; Type               ;
-+------------------------------------+----------------------+--------------------+
-; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped            ;
-; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY         ;
-; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY       ;
-; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE       ;
-; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE     ;
-; WIDTH_BYTEENA                      ; 1                    ; Untyped            ;
-; OPERATION_MODE                     ; DUAL_PORT            ; Untyped            ;
-; WIDTH_A                            ; 10                   ; Untyped            ;
-; WIDTHAD_A                          ; 3                    ; Untyped            ;
-; NUMWORDS_A                         ; 8                    ; Untyped            ;
-; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped            ;
-; ADDRESS_ACLR_A                     ; NONE                 ; Untyped            ;
-; OUTDATA_ACLR_A                     ; NONE                 ; Untyped            ;
-; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped            ;
-; INDATA_ACLR_A                      ; NONE                 ; Untyped            ;
-; BYTEENA_ACLR_A                     ; NONE                 ; Untyped            ;
-; WIDTH_B                            ; 10                   ; Untyped            ;
-; WIDTHAD_B                          ; 3                    ; Untyped            ;
-; NUMWORDS_B                         ; 8                    ; Untyped            ;
-; INDATA_REG_B                       ; CLOCK1               ; Untyped            ;
-; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped            ;
-; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped            ;
-; ADDRESS_REG_B                      ; CLOCK0               ; Untyped            ;
-; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped            ;
-; BYTEENA_REG_B                      ; CLOCK1               ; Untyped            ;
-; INDATA_ACLR_B                      ; NONE                 ; Untyped            ;
-; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped            ;
-; ADDRESS_ACLR_B                     ; NONE                 ; Untyped            ;
-; OUTDATA_ACLR_B                     ; NONE                 ; Untyped            ;
-; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped            ;
-; BYTEENA_ACLR_B                     ; NONE                 ; Untyped            ;
-; WIDTH_BYTEENA_A                    ; 1                    ; Untyped            ;
-; WIDTH_BYTEENA_B                    ; 1                    ; Untyped            ;
-; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped            ;
-; BYTE_SIZE                          ; 8                    ; Untyped            ;
-; READ_DURING_WRITE_MODE_MIXED_PORTS ; OLD_DATA             ; Untyped            ;
-; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped            ;
-; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped            ;
-; INIT_FILE                          ; UNUSED               ; Untyped            ;
-; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped            ;
-; MAXIMUM_DEPTH                      ; 0                    ; Untyped            ;
-; CLOCK_ENABLE_INPUT_A               ; NORMAL               ; Untyped            ;
-; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped            ;
-; CLOCK_ENABLE_OUTPUT_A              ; NORMAL               ; Untyped            ;
-; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped            ;
-; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped            ;
-; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped            ;
-; ENABLE_ECC                         ; FALSE                ; Untyped            ;
-; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped            ;
-; WIDTH_ECCSTATUS                    ; 3                    ; Untyped            ;
-; DEVICE_FAMILY                      ; Cyclone V            ; Untyped            ;
-; CBXI_PARAMETER                     ; altsyncram_ovm1      ; Untyped            ;
-+------------------------------------+----------------------+--------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+----------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: videoGen_pong:u_video|lpm_divide:Mod0 ;
-+------------------------+----------------+----------------------------------------------+
-; Parameter Name         ; Value          ; Type                                         ;
-+------------------------+----------------+----------------------------------------------+
-; LPM_WIDTHN             ; 10             ; Untyped                                      ;
-; LPM_WIDTHD             ; 5              ; Untyped                                      ;
-; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                      ;
-; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                      ;
-; LPM_PIPELINE           ; 0              ; Untyped                                      ;
-; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                      ;
-; MAXIMIZE_SPEED         ; 5              ; Untyped                                      ;
-; CBXI_PARAMETER         ; lpm_divide_i3m ; Untyped                                      ;
-; CARRY_CHAIN            ; MANUAL         ; Untyped                                      ;
-; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                      ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                   ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                 ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                 ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                               ;
-+------------------------+----------------+----------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+---------------------------------------------------------------------------+
-; altsyncram Parameter Settings by Entity Instance                          ;
-+-------------------------------------------+-------------------------------+
-; Name                                      ; Value                         ;
-+-------------------------------------------+-------------------------------+
-; Number of entity instances                ; 1                             ;
-; Entity Instance                           ; ram:dmem|altsyncram:mem_rtl_0 ;
-;     -- OPERATION_MODE                     ; DUAL_PORT                     ;
-;     -- WIDTH_A                            ; 10                            ;
-;     -- NUMWORDS_A                         ; 8                             ;
-;     -- OUTDATA_REG_A                      ; UNREGISTERED                  ;
-;     -- WIDTH_B                            ; 10                            ;
-;     -- NUMWORDS_B                         ; 8                             ;
-;     -- ADDRESS_REG_B                      ; CLOCK0                        ;
-;     -- OUTDATA_REG_B                      ; UNREGISTERED                  ;
-;     -- RAM_BLOCK_TYPE                     ; AUTO                          ;
-;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; OLD_DATA                      ;
-+-------------------------------------------+-------------------------------+
++---------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Elaboration Settings                                                                                           ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                          ; Setting            ; Default Value      ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                          ; 5CSXFC6D6F31C6     ;                    ;
+; Top-level entity name                                                           ; top                ; ProyectoFinal      ;
+; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
+; Use smart compilation                                                           ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
+; Enable compact report table                                                     ; Off                ; Off                ;
+; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
+; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
+; Preserve fewer node names                                                       ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                                   ; Enable             ; Enable             ;
+; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                        ; Auto               ; Auto               ;
+; Safe State Machine                                                              ; Off                ; Off                ;
+; Extract Verilog State Machines                                                  ; On                 ; On                 ;
+; Extract VHDL State Machines                                                     ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
+; Parallel Synthesis                                                              ; On                 ; On                 ;
+; DSP Block Balancing                                                             ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                              ; On                 ; On                 ;
+; Power-Up Don't Care                                                             ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
+; Remove Duplicate Registers                                                      ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
+; Optimization Technique                                                          ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                              ; 70                 ; 70                 ;
+; Auto Carry Chains                                                               ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
+; Auto ROM Replacement                                                            ; On                 ; On                 ;
+; Auto RAM Replacement                                                            ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
+; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
+; Strict RAM Replacement                                                          ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                           ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
+; Report Parameter Settings                                                       ; On                 ; On                 ;
+; Report Source Assignments                                                       ; On                 ; On                 ;
+; Report Connectivity Checks                                                      ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
+; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
+; Power Optimization During Synthesis                                             ; Normal compilation ; Normal compilation ;
+; HDL message level                                                               ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
+; Clock MUX Protection                                                            ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
+; Block Design Naming                                                             ; Auto               ; Auto               ;
+; SDC constraint protection                                                       ; Off                ; Off                ;
+; Synthesis Effort                                                                ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
+; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
+; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
 
 
 +------------------------------------------+
@@ -705,66 +332,14 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+-----------------------------------------------------+
-; Post-Synthesis Netlist Statistics for Top Partition ;
-+-----------------------+-----------------------------+
-; Type                  ; Count                       ;
-+-----------------------+-----------------------------+
-; arriav_ff             ; 931                         ;
-;     CLR               ; 30                          ;
-;     CLR SCLR          ; 8                           ;
-;     CLR SLD           ; 30                          ;
-;     ENA               ; 266                         ;
-;     ENA CLR           ; 545                         ;
-;     ENA CLR SCLR      ; 17                          ;
-;     ENA SCLR          ; 10                          ;
-;     SCLR              ; 10                          ;
-;     plain             ; 15                          ;
-; arriav_lcell_comb     ; 1192                        ;
-;     arith             ; 227                         ;
-;         0 data inputs ; 17                          ;
-;         1 data inputs ; 119                         ;
-;         2 data inputs ; 4                           ;
-;         3 data inputs ; 31                          ;
-;         4 data inputs ; 26                          ;
-;         5 data inputs ; 30                          ;
-;     extend            ; 6                           ;
-;         7 data inputs ; 6                           ;
-;     normal            ; 953                         ;
-;         1 data inputs ; 2                           ;
-;         2 data inputs ; 101                         ;
-;         3 data inputs ; 80                          ;
-;         4 data inputs ; 77                          ;
-;         5 data inputs ; 237                         ;
-;         6 data inputs ; 456                         ;
-;     shared            ; 6                           ;
-;         0 data inputs ; 1                           ;
-;         1 data inputs ; 5                           ;
-; boundary_port         ; 33                          ;
-; stratixv_ram_block    ; 10                          ;
-;                       ;                             ;
-; Max LUT depth         ; 14.40                       ;
-; Average LUT depth     ; 8.52                        ;
-+-----------------------+-----------------------------+
-
-
-+-------------------------------+
-; Elapsed Time Per Partition    ;
-+----------------+--------------+
-; Partition Name ; Elapsed Time ;
-+----------------+--------------+
-; Top            ; 00:00:03     ;
-+----------------+--------------+
-
-
-+-------------------------------+
-; Analysis & Synthesis Messages ;
-+-------------------------------+
++---------------------------------+
+; Analysis & Elaboration Messages ;
++---------------------------------+
 Info: *******************************************************************
-Info: Running Quartus Prime Analysis & Synthesis
+Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Thu Nov 27 17:26:41 2025
-Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ProyectoFinal -c ProyectoFinal
+    Info: Processing started: Thu Nov 27 23:05:54 2025
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ProyectoFinal -c ProyectoFinal --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file alu.sv
@@ -794,7 +369,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file regfile
 Info (12021): Found 1 design units, including 1 entities, in source file top.sv
     Info (12023): Found entity 1: top File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/top.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file top_tb.sv
-    Info (12023): Found entity 1: top_tb File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/top_tb.sv Line: 2
+    Info (12023): Found entity 1: top_tb File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/top_tb.sv Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file adder.sv
     Info (12023): Found entity 1: adder File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/adder.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file rom.v
@@ -833,21 +408,21 @@ Info (12021): Found 1 design units, including 1 entities, in source file key_map
     Info (12023): Found entity 1: key_mapper File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/key_mapper.sv Line: 1
 Info (12127): Elaborating entity "top" for the top level hierarchy
 Info (12128): Elaborating entity "arm" for hierarchy "arm:arm_inst" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/top.sv Line: 52
-Info (12128): Elaborating entity "controller" for hierarchy "arm:arm_inst|controller:c" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/arm.sv Line: 23
-Info (12128): Elaborating entity "decoder" for hierarchy "arm:arm_inst|controller:c|decoder:dec" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/controller.sv Line: 17
-Info (12128): Elaborating entity "condlogic" for hierarchy "arm:arm_inst|controller:c|condlogic:cl" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/controller.sv Line: 21
+Info (12128): Elaborating entity "controller" for hierarchy "arm:arm_inst|controller:c" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/arm.sv Line: 25
+Info (12128): Elaborating entity "decoder" for hierarchy "arm:arm_inst|controller:c|decoder:dec" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/controller.sv Line: 18
+Info (12128): Elaborating entity "condlogic" for hierarchy "arm:arm_inst|controller:c|condlogic:cl" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/controller.sv Line: 22
 Info (12128): Elaborating entity "flopenr" for hierarchy "arm:arm_inst|controller:c|condlogic:cl|flopenr:flagreg1" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/condlogic.sv Line: 14
 Info (12128): Elaborating entity "condcheck" for hierarchy "arm:arm_inst|controller:c|condlogic:cl|condcheck:cc" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/condlogic.sv Line: 20
-Info (12128): Elaborating entity "datapath" for hierarchy "arm:arm_inst|datapath:dp" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/arm.sv Line: 29
-Info (12128): Elaborating entity "mux2" for hierarchy "arm:arm_inst|datapath:dp|mux2:pcmux" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/datapath.sv Line: 24
-Info (12128): Elaborating entity "flopr" for hierarchy "arm:arm_inst|datapath:dp|flopr:pcreg" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/datapath.sv Line: 25
-Info (12128): Elaborating entity "adder" for hierarchy "arm:arm_inst|datapath:dp|adder:pcadd1" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/datapath.sv Line: 26
-Info (12128): Elaborating entity "mux2" for hierarchy "arm:arm_inst|datapath:dp|mux2:ra1mux" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/datapath.sv Line: 30
-Info (12128): Elaborating entity "regfile" for hierarchy "arm:arm_inst|datapath:dp|regfile:rf" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/datapath.sv Line: 44
-Info (12128): Elaborating entity "extend" for hierarchy "arm:arm_inst|datapath:dp|extend:ext" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/datapath.sv Line: 47
-Info (12128): Elaborating entity "alu" for hierarchy "arm:arm_inst|datapath:dp|alu:alu" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/datapath.sv Line: 74
+Info (12128): Elaborating entity "datapath" for hierarchy "arm:arm_inst|datapath:dp" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/arm.sv Line: 31
+Info (12128): Elaborating entity "mux2" for hierarchy "arm:arm_inst|datapath:dp|mux2:pcmux" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/datapath.sv Line: 29
+Info (12128): Elaborating entity "flopr" for hierarchy "arm:arm_inst|datapath:dp|flopr:pcreg" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/datapath.sv Line: 30
+Info (12128): Elaborating entity "adder" for hierarchy "arm:arm_inst|datapath:dp|adder:pcadd1" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/datapath.sv Line: 31
+Info (12128): Elaborating entity "mux2" for hierarchy "arm:arm_inst|datapath:dp|mux2:ra1mux" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/datapath.sv Line: 35
+Info (12128): Elaborating entity "regfile" for hierarchy "arm:arm_inst|datapath:dp|regfile:rf" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/datapath.sv Line: 55
+Info (12128): Elaborating entity "extend" for hierarchy "arm:arm_inst|datapath:dp|extend:ext" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/datapath.sv Line: 58
+Info (12128): Elaborating entity "alu" for hierarchy "arm:arm_inst|datapath:dp|alu:alu" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/datapath.sv Line: 85
 Info (12128): Elaborating entity "rom_i" for hierarchy "rom_i:imem" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/top.sv Line: 58
-Warning (10850): Verilog HDL warning at rom_i.sv(7): number of words (80) in memory file does not match the number of elements in the address range [0:127] File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/rom_i.sv Line: 7
+Warning (10850): Verilog HDL warning at rom_i.sv(7): number of words (24) in memory file does not match the number of elements in the address range [0:127] File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/rom_i.sv Line: 7
 Warning (10030): Net "mem.data_a" at rom_i.sv(5) has no driver or initial value, using a default initial value '0' File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/rom_i.sv Line: 5
 Warning (10030): Net "mem.waddr_a" at rom_i.sv(5) has no driver or initial value, using a default initial value '0' File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/rom_i.sv Line: 5
 Warning (10030): Net "mem.we_a" at rom_i.sv(5) has no driver or initial value, using a default initial value '0' File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/rom_i.sv Line: 5
@@ -862,80 +437,17 @@ Info (12128): Elaborating entity "key_mapper" for hierarchy "key_mapper:keymap_i
 Info (12128): Elaborating entity "ram2vga_bridge" for hierarchy "ram2vga_bridge:u_bridge" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/top.sv Line: 151
 Info (12128): Elaborating entity "videoGen_pong" for hierarchy "videoGen_pong:u_video" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/top.sv Line: 168
 Warning (10230): Verilog HDL assignment warning at videoGen_pong.sv(53): truncated value with size 32 to match size of target (10) File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/videoGen_pong.sv Line: 53
-Warning (276020): Inferred RAM node "ram:dmem|mem_rtl_0" from synchronous design logic.  Pass-through logic has been added to match the read-during-write behavior of the original design.
-Info (276014): Found 1 instances of uninferred RAM logic
-    Info (276004): RAM logic "rom_i:imem|mem" is uninferred due to inappropriate RAM size File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/rom_i.sv Line: 5
-Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/db/ProyectoFinal.ram0_rom_i_7563c55.hdl.mif" contains "don't care" values -- overwriting them with 0s
-Info (19000): Inferred 1 megafunctions from design logic
-    Info (276029): Inferred altsyncram megafunction from the following design logic: "ram:dmem|mem_rtl_0" 
-        Info (286033): Parameter OPERATION_MODE set to DUAL_PORT
-        Info (286033): Parameter WIDTH_A set to 10
-        Info (286033): Parameter WIDTHAD_A set to 3
-        Info (286033): Parameter NUMWORDS_A set to 8
-        Info (286033): Parameter WIDTH_B set to 10
-        Info (286033): Parameter WIDTHAD_B set to 3
-        Info (286033): Parameter NUMWORDS_B set to 8
-        Info (286033): Parameter ADDRESS_ACLR_A set to NONE
-        Info (286033): Parameter OUTDATA_REG_B set to UNREGISTERED
-        Info (286033): Parameter ADDRESS_ACLR_B set to NONE
-        Info (286033): Parameter OUTDATA_ACLR_B set to NONE
-        Info (286033): Parameter ADDRESS_REG_B set to CLOCK0
-        Info (286033): Parameter INDATA_ACLR_A set to NONE
-        Info (286033): Parameter WRCONTROL_ACLR_A set to NONE
-        Info (286033): Parameter READ_DURING_WRITE_MODE_MIXED_PORTS set to OLD_DATA
-Info (278001): Inferred 1 megafunctions from design logic
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "videoGen_pong:u_video|Mod0" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/videoGen_pong.sv Line: 53
-Info (12130): Elaborated megafunction instantiation "ram:dmem|altsyncram:mem_rtl_0"
-Info (12133): Instantiated megafunction "ram:dmem|altsyncram:mem_rtl_0" with the following parameter:
-    Info (12134): Parameter "OPERATION_MODE" = "DUAL_PORT"
-    Info (12134): Parameter "WIDTH_A" = "10"
-    Info (12134): Parameter "WIDTHAD_A" = "3"
-    Info (12134): Parameter "NUMWORDS_A" = "8"
-    Info (12134): Parameter "WIDTH_B" = "10"
-    Info (12134): Parameter "WIDTHAD_B" = "3"
-    Info (12134): Parameter "NUMWORDS_B" = "8"
-    Info (12134): Parameter "ADDRESS_ACLR_A" = "NONE"
-    Info (12134): Parameter "OUTDATA_REG_B" = "UNREGISTERED"
-    Info (12134): Parameter "ADDRESS_ACLR_B" = "NONE"
-    Info (12134): Parameter "OUTDATA_ACLR_B" = "NONE"
-    Info (12134): Parameter "ADDRESS_REG_B" = "CLOCK0"
-    Info (12134): Parameter "INDATA_ACLR_A" = "NONE"
-    Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
-    Info (12134): Parameter "READ_DURING_WRITE_MODE_MIXED_PORTS" = "OLD_DATA"
-Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_ovm1.tdf
-    Info (12023): Found entity 1: altsyncram_ovm1 File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/db/altsyncram_ovm1.tdf Line: 28
-Info (12130): Elaborated megafunction instantiation "videoGen_pong:u_video|lpm_divide:Mod0" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/videoGen_pong.sv Line: 53
-Info (12133): Instantiated megafunction "videoGen_pong:u_video|lpm_divide:Mod0" with the following parameter: File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/videoGen_pong.sv Line: 53
-    Info (12134): Parameter "LPM_WIDTHN" = "10"
-    Info (12134): Parameter "LPM_WIDTHD" = "5"
-    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
-    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
-Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_i3m.tdf
-    Info (12023): Found entity 1: lpm_divide_i3m File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/db/lpm_divide_i3m.tdf Line: 25
-Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_llh.tdf
-    Info (12023): Found entity 1: sign_div_unsign_llh File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/db/sign_div_unsign_llh.tdf Line: 25
-Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_gve.tdf
-    Info (12023): Found entity 1: alt_u_div_gve File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/db/alt_u_div_gve.tdf Line: 23
-Info (286030): Timing-Driven Synthesis is running
-Info (17049): 3 registers lost all their fanouts during netlist optimizations.
 Info (144001): Generated suppressed messages file C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/output_files/ProyectoFinal.map.smsg
-Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
-    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 2102 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 4 input pins
-    Info (21059): Implemented 29 output pins
-    Info (21061): Implemented 2059 logic cells
-    Info (21064): Implemented 10 RAM segments
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 10 warnings
-    Info: Peak virtual memory: 4896 megabytes
-    Info: Processing ended: Thu Nov 27 17:26:49 2025
-    Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:14
+Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 8 warnings
+    Info: Peak virtual memory: 4785 megabytes
+    Info: Processing ended: Thu Nov 27 23:05:59 2025
+    Info: Elapsed time: 00:00:05
+    Info: Total CPU time (on all processors): 00:00:11
 
 
-+------------------------------------------+
-; Analysis & Synthesis Suppressed Messages ;
-+------------------------------------------+
++--------------------------------------------+
+; Analysis & Elaboration Suppressed Messages ;
++--------------------------------------------+
 The suppressed messages can be found in C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/output_files/ProyectoFinal.map.smsg.
 
 

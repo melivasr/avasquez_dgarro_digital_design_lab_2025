@@ -11,7 +11,8 @@ module datapath(
     output logic [31:0] PC,
     input  logic [31:0] Instr,
     output logic [31:0] ALUResult,WriteData,
-    input  logic [31:0] ReadData
+    input  logic [31:0] ReadData,
+	 input  logic Link 
 );
     logic [31:0] PCNext,PCPlus4,PCPlus8;
     logic [31:0] ExtImm,SrcA, Result; 
@@ -20,6 +21,10 @@ module datapath(
     logic        is_mov, is_rsb;
     logic [31:0] SrcA_pre, SrcB_pre;
     logic [31:0] ALU_A, ALU_B;
+	
+	 // para BL: destino y dato de escritura
+    logic [3:0]  WA3;
+    logic [31:0] WD3;
 
     mux2 #(32) pcmux(PCPlus4, Result, PCSrc, PCNext);
     flopr #(32) pcreg(clk, reset, PCNext, PC);
@@ -29,6 +34,12 @@ module datapath(
     // Regfile
     mux2 #(4) ra1mux(Instr[19:16],4'b1111,RegSrc[0],RA1);
     mux2 #(4) ra2mux(Instr[3:0],Instr[15:12],RegSrc[1],RA2);
+	 
+	 //WA3: si Link, escribir en R14; si no, en Instr[15:12]
+    assign WA3 = Link ? 4'd14 : Instr[15:12];
+    // WD3: si Link, escribir PC+4; si no, el Result normal
+	 mux2 #(32) resmux(ALUResult, ReadData, MemtoReg, Result);
+    assign WD3 = Link ? PCPlus4 : Result;
 
     regfile rf(
         .clk (clk),
@@ -36,14 +47,14 @@ module datapath(
         .reset(reset),
         .ra1 (RA1),
         .ra2 (RA2),
-        .wa3 (Instr[15:12]),
-        .wd3 (Result),
+        .wa3   (WA3), 
+        .wd3   (WD3),
         .r15 (PCPlus8),
         .rd1 (SrcA),
         .rd2 (WriteData)
     );
 
-    mux2 #(32) resmux(ALUResult, ReadData, MemtoReg, Result);
+   
     extend ext(Instr[23:0], ImmSrc, ExtImm);
 
     // Detectar MOV y RSB

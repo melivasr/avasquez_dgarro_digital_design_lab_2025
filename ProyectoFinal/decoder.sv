@@ -4,30 +4,39 @@
 	output logic [1:0] FlagW,
 	output logic PCS,RegW,MemW,
 	output logic MemtoReg,ALUSrc,
-	output logic [1:0] ImmSrc,RegSrc,ALUControl);
+	output logic [1:0] ImmSrc,RegSrc,ALUControl,
+	output logic Link);
 	
- logic [9:0] controls;
+ logic [9:0] controls_raw;
  logic Branch,ALUOp;
+ logic RegW_int;
+ 
+ logic is_cmp;
+ assign is_cmp = (Op == 2'b00) && (Funct[4:1] == 4'b1010);
+ assign Link = (Op == 2'b10) && Funct[5];
  
  //MainDecoder
  always_comb
 	 casex(Op)
 		//Data-processing immediate
-		 2'b00:if(Funct[5]) controls = 10'b0000101001;
+		 2'b00:if(Funct[5]) controls_raw = 10'b0000101001;
 		 //Data-processing register
-			else controls=10'b0000001001;
+			else controls_raw=10'b0000001001;
 		 //LDR
-		 2'b01:if(Funct[0]) controls=10'b0001111000;
+		 2'b01:if(Funct[0]) controls_raw=10'b0001111000;
 		 //STR
-			else controls=10'b1001110100;
+			else controls_raw=10'b1001110100;
 		 //B
-		 2'b10: controls=10'b0110100010;
+		 2'b10: controls_raw=10'b0110100010;
 		 //Unimplemented
-		 default: controls=10'bx;
-	 endcase
+		 default: controls_raw=10'b0000000000;
+  endcase
+
 	 
-assign{RegSrc,ImmSrc,ALUSrc,MemtoReg,
-	 RegW,MemW,Branch,ALUOp}=controls;
+  assign {RegSrc, ImmSrc, ALUSrc, MemtoReg,
+          RegW_int, MemW, Branch, ALUOp} = controls_raw;
+
+  assign RegW = is_cmp ? 1'b0 : RegW_int;
 	 
  //ALUDecoder
  always_comb
@@ -39,7 +48,8 @@ assign{RegSrc,ImmSrc,ALUSrc,MemtoReg,
 		 4'b0000: ALUControl=2'b10; //AND
 		 4'b1100: ALUControl=2'b11; //ORR
 		 4'b1101: ALUControl = 2'b11; // MOV
-		 default: ALUControl=2'bx; //unimplemented
+		 4'b1010: ALUControl = 2'b01; // CMP
+       default: ALUControl = 2'b00; // por defecto ADD
 	 endcase
 	 //update flags if S bit is set (C & V only for arith)
 	 FlagW[1] =Funct[0]; 
