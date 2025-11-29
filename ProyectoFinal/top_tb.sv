@@ -86,7 +86,7 @@ module top_tb;
         reset = 0;
         
         // tiempo de simulación
-        #200;
+        #400;
         
         $display("Test Finalizado");
         $display("PC final = %h", PC);

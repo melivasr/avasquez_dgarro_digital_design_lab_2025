@@ -1,5 +1,5 @@
 Analysis & Elaboration report for ProyectoFinal
-Thu Nov 27 23:05:59 2025
+Fri Nov 28 23:09:28 2025
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -15,13 +15,13 @@ Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
   7. Parameter Settings for User Entity Instance: arm:arm_inst|datapath:dp|flopr:pcreg
   8. Parameter Settings for User Entity Instance: arm:arm_inst|datapath:dp|adder:pcadd1
   9. Parameter Settings for User Entity Instance: arm:arm_inst|datapath:dp|adder:pcadd2
- 10. Parameter Settings for User Entity Instance: arm:arm_inst|datapath:dp|mux2:ra1mux
- 11. Parameter Settings for User Entity Instance: arm:arm_inst|datapath:dp|mux2:ra2mux
+ 10. Parameter Settings for User Entity Instance: arm:arm_inst|datapath:dp|mux2:ra1mux_dp
+ 11. Parameter Settings for User Entity Instance: arm:arm_inst|datapath:dp|mux2:ra2mux_dp
  12. Parameter Settings for User Entity Instance: arm:arm_inst|datapath:dp|mux2:resmux
  13. Parameter Settings for User Entity Instance: arm:arm_inst|datapath:dp|mux2:srcbmux
  14. Analysis & Elaboration Settings
  15. Port Connectivity Checks: "ram:dmem"
- 16. Port Connectivity Checks: "arm:arm_inst|datapath:dp|mux2:ra1mux"
+ 16. Port Connectivity Checks: "arm:arm_inst|datapath:dp|mux2:ra1mux_dp"
  17. Port Connectivity Checks: "arm:arm_inst|datapath:dp|adder:pcadd2"
  18. Port Connectivity Checks: "arm:arm_inst|datapath:dp|adder:pcadd1"
  19. Port Connectivity Checks: "arm:arm_inst"
@@ -53,7 +53,7 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------------------------------------------------------+
 ; Analysis & Elaboration Summary                                              ;
 +-------------------------------+---------------------------------------------+
-; Analysis & Elaboration Status ; Successful - Thu Nov 27 23:05:59 2025       ;
+; Analysis & Elaboration Status ; Successful - Fri Nov 28 23:09:28 2025       ;
 ; Quartus Prime Version         ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                 ; ProyectoFinal                               ;
 ; Top-level Entity Name         ; top                                         ;
@@ -144,23 +144,23 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-----------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: arm:arm_inst|datapath:dp|mux2:ra1mux ;
-+----------------+-------+----------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                     ;
-+----------------+-------+----------------------------------------------------------+
-; WIDTH          ; 4     ; Signed Integer                                           ;
-+----------------+-------+----------------------------------------------------------+
++--------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: arm:arm_inst|datapath:dp|mux2:ra1mux_dp ;
++----------------+-------+-------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                        ;
++----------------+-------+-------------------------------------------------------------+
+; WIDTH          ; 4     ; Signed Integer                                              ;
++----------------+-------+-------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-----------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: arm:arm_inst|datapath:dp|mux2:ra2mux ;
-+----------------+-------+----------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                     ;
-+----------------+-------+----------------------------------------------------------+
-; WIDTH          ; 4     ; Signed Integer                                           ;
-+----------------+-------+----------------------------------------------------------+
++--------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: arm:arm_inst|datapath:dp|mux2:ra2mux_dp ;
++----------------+-------+-------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                        ;
++----------------+-------+-------------------------------------------------------------+
+; WIDTH          ; 4     ; Signed Integer                                              ;
++----------------+-------+-------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -281,13 +281,13 @@ Note: In order to hide this table in the UI and the text report file, please set
 +--------+-------+----------+--------------+
 
 
-+------------------------------------------------------------------+
-; Port Connectivity Checks: "arm:arm_inst|datapath:dp|mux2:ra1mux" ;
-+------+-------+----------+----------------------------------------+
-; Port ; Type  ; Severity ; Details                                ;
-+------+-------+----------+----------------------------------------+
-; d1   ; Input ; Info     ; Stuck at VCC                           ;
-+------+-------+----------+----------------------------------------+
++---------------------------------------------------------------------+
+; Port Connectivity Checks: "arm:arm_inst|datapath:dp|mux2:ra1mux_dp" ;
++------+-------+----------+-------------------------------------------+
+; Port ; Type  ; Severity ; Details                                   ;
++------+-------+----------+-------------------------------------------+
+; d1   ; Input ; Info     ; Stuck at VCC                              ;
++------+-------+----------+-------------------------------------------+
 
 
 +-------------------------------------------------------------------+
@@ -338,7 +338,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Thu Nov 27 23:05:54 2025
+    Info: Processing started: Fri Nov 28 23:09:21 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ProyectoFinal -c ProyectoFinal --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
@@ -406,43 +406,48 @@ Info (12021): Found 1 design units, including 1 entities, in source file ram.sv
     Info (12023): Found entity 1: ram File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/ram.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file key_mapper.sv
     Info (12023): Found entity 1: key_mapper File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/key_mapper.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file shifter.sv
+    Info (12023): Found entity 1: shifter File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/shifter.sv Line: 1
 Info (12127): Elaborating entity "top" for the top level hierarchy
-Info (12128): Elaborating entity "arm" for hierarchy "arm:arm_inst" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/top.sv Line: 52
-Info (12128): Elaborating entity "controller" for hierarchy "arm:arm_inst|controller:c" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/arm.sv Line: 25
-Info (12128): Elaborating entity "decoder" for hierarchy "arm:arm_inst|controller:c|decoder:dec" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/controller.sv Line: 18
-Info (12128): Elaborating entity "condlogic" for hierarchy "arm:arm_inst|controller:c|condlogic:cl" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/controller.sv Line: 22
+Info (12128): Elaborating entity "arm" for hierarchy "arm:arm_inst" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/top.sv Line: 53
+Info (12128): Elaborating entity "controller" for hierarchy "arm:arm_inst|controller:c" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/arm.sv Line: 26
+Info (12128): Elaborating entity "decoder" for hierarchy "arm:arm_inst|controller:c|decoder:dec" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/controller.sv Line: 20
+Info (12128): Elaborating entity "condlogic" for hierarchy "arm:arm_inst|controller:c|condlogic:cl" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/controller.sv Line: 24
 Info (12128): Elaborating entity "flopenr" for hierarchy "arm:arm_inst|controller:c|condlogic:cl|flopenr:flagreg1" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/condlogic.sv Line: 14
 Info (12128): Elaborating entity "condcheck" for hierarchy "arm:arm_inst|controller:c|condlogic:cl|condcheck:cc" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/condlogic.sv Line: 20
-Info (12128): Elaborating entity "datapath" for hierarchy "arm:arm_inst|datapath:dp" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/arm.sv Line: 31
-Info (12128): Elaborating entity "mux2" for hierarchy "arm:arm_inst|datapath:dp|mux2:pcmux" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/datapath.sv Line: 29
-Info (12128): Elaborating entity "flopr" for hierarchy "arm:arm_inst|datapath:dp|flopr:pcreg" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/datapath.sv Line: 30
-Info (12128): Elaborating entity "adder" for hierarchy "arm:arm_inst|datapath:dp|adder:pcadd1" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/datapath.sv Line: 31
-Info (12128): Elaborating entity "mux2" for hierarchy "arm:arm_inst|datapath:dp|mux2:ra1mux" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/datapath.sv Line: 35
-Info (12128): Elaborating entity "regfile" for hierarchy "arm:arm_inst|datapath:dp|regfile:rf" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/datapath.sv Line: 55
-Info (12128): Elaborating entity "extend" for hierarchy "arm:arm_inst|datapath:dp|extend:ext" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/datapath.sv Line: 58
-Info (12128): Elaborating entity "alu" for hierarchy "arm:arm_inst|datapath:dp|alu:alu" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/datapath.sv Line: 85
-Info (12128): Elaborating entity "rom_i" for hierarchy "rom_i:imem" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/top.sv Line: 58
-Warning (10850): Verilog HDL warning at rom_i.sv(7): number of words (24) in memory file does not match the number of elements in the address range [0:127] File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/rom_i.sv Line: 7
+Info (12128): Elaborating entity "datapath" for hierarchy "arm:arm_inst|datapath:dp" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/arm.sv Line: 32
+Info (12128): Elaborating entity "mux2" for hierarchy "arm:arm_inst|datapath:dp|mux2:pcmux" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/datapath.sv Line: 39
+Info (12128): Elaborating entity "flopr" for hierarchy "arm:arm_inst|datapath:dp|flopr:pcreg" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/datapath.sv Line: 40
+Info (12128): Elaborating entity "adder" for hierarchy "arm:arm_inst|datapath:dp|adder:pcadd1" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/datapath.sv Line: 41
+Info (12128): Elaborating entity "mux2" for hierarchy "arm:arm_inst|datapath:dp|mux2:ra1mux_dp" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/datapath.sv Line: 45
+Info (12128): Elaborating entity "regfile" for hierarchy "arm:arm_inst|datapath:dp|regfile:rf" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/datapath.sv Line: 98
+Info (12128): Elaborating entity "extend" for hierarchy "arm:arm_inst|datapath:dp|extend:ext" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/datapath.sv Line: 102
+Info (12128): Elaborating entity "shifter" for hierarchy "arm:arm_inst|datapath:dp|shifter:sh" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/datapath.sv Line: 120
+Info (12128): Elaborating entity "alu" for hierarchy "arm:arm_inst|datapath:dp|alu:alu" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/datapath.sv Line: 148
+Info (12128): Elaborating entity "rom_i" for hierarchy "rom_i:imem" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/top.sv Line: 59
+Warning (10850): Verilog HDL warning at rom_i.sv(7): number of words (36) in memory file does not match the number of elements in the address range [0:127] File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/rom_i.sv Line: 7
 Warning (10030): Net "mem.data_a" at rom_i.sv(5) has no driver or initial value, using a default initial value '0' File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/rom_i.sv Line: 5
 Warning (10030): Net "mem.waddr_a" at rom_i.sv(5) has no driver or initial value, using a default initial value '0' File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/rom_i.sv Line: 5
 Warning (10030): Net "mem.we_a" at rom_i.sv(5) has no driver or initial value, using a default initial value '0' File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/rom_i.sv Line: 5
-Info (12128): Elaborating entity "ram" for hierarchy "ram:dmem" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/top.sv Line: 78
-Info (12128): Elaborating entity "pll" for hierarchy "pll:vgapll" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/top.sv Line: 82
-Info (12128): Elaborating entity "vgaController" for hierarchy "vgaController:vgaCont" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/top.sv Line: 89
+Info (12128): Elaborating entity "ram" for hierarchy "ram:dmem" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/top.sv Line: 79
+Warning (10027): Verilog HDL or VHDL warning at the ram.sv(23): index expression is not wide enough to address all of the elements in the array File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/ram.sv Line: 23
+Warning (10027): Verilog HDL or VHDL warning at the ram.sv(24): index expression is not wide enough to address all of the elements in the array File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/ram.sv Line: 24
+Info (12128): Elaborating entity "pll" for hierarchy "pll:vgapll" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/top.sv Line: 83
+Info (12128): Elaborating entity "vgaController" for hierarchy "vgaController:vgaCont" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/top.sv Line: 90
 Warning (10230): Verilog HDL assignment warning at vgaController.sv(22): truncated value with size 32 to match size of target (10) File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/vgaController.sv Line: 22
 Warning (10230): Verilog HDL assignment warning at vgaController.sv(24): truncated value with size 32 to match size of target (10) File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/vgaController.sv Line: 24
-Info (12128): Elaborating entity "ps2" for hierarchy "ps2:kb_inst" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/top.sv Line: 101
+Info (12128): Elaborating entity "ps2" for hierarchy "ps2:kb_inst" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/top.sv Line: 102
 Info (12128): Elaborating entity "deb" for hierarchy "ps2:kb_inst|deb:deb0" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/ps2.sv Line: 28
-Info (12128): Elaborating entity "key_mapper" for hierarchy "key_mapper:keymap_inst" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/top.sv Line: 109
-Info (12128): Elaborating entity "ram2vga_bridge" for hierarchy "ram2vga_bridge:u_bridge" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/top.sv Line: 151
-Info (12128): Elaborating entity "videoGen_pong" for hierarchy "videoGen_pong:u_video" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/top.sv Line: 168
+Info (12128): Elaborating entity "key_mapper" for hierarchy "key_mapper:keymap_inst" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/top.sv Line: 110
+Info (12128): Elaborating entity "ram2vga_bridge" for hierarchy "ram2vga_bridge:u_bridge" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/top.sv Line: 152
+Info (12128): Elaborating entity "videoGen_pong" for hierarchy "videoGen_pong:u_video" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/top.sv Line: 169
 Warning (10230): Verilog HDL assignment warning at videoGen_pong.sv(53): truncated value with size 32 to match size of target (10) File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/videoGen_pong.sv Line: 53
 Info (144001): Generated suppressed messages file C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/output_files/ProyectoFinal.map.smsg
-Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 8 warnings
-    Info: Peak virtual memory: 4785 megabytes
-    Info: Processing ended: Thu Nov 27 23:05:59 2025
-    Info: Elapsed time: 00:00:05
-    Info: Total CPU time (on all processors): 00:00:11
+Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 10 warnings
+    Info: Peak virtual memory: 4775 megabytes
+    Info: Processing ended: Fri Nov 28 23:09:28 2025
+    Info: Elapsed time: 00:00:07
+    Info: Total CPU time (on all processors): 00:00:13
 
 
 +--------------------------------------------+

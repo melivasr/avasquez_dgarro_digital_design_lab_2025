@@ -17,17 +17,18 @@ module arm(
     output logic [1:0]   RegSrc,
     output logic [1:0]   ImmSrc
 );
-
  logic Link;
+ logic ByteOp; 
+ logic IsMul;
  
- controller c(clk,reset,Instr[31:12],ALUFlags, RegSrc,RegWrite,ImmSrc,
+ controller c(clk,reset,Instr[31:0],ALUFlags, RegSrc,RegWrite,ImmSrc,
  ALUSrc,ALUControl,
- MemWrite,MemtoReg,PCSrc, Link);
+ MemWrite,MemtoReg,PCSrc, Link, ByteOp,IsMul);
  
  datapath dp(clk,reset, RegSrc,RegWrite,ImmSrc,
  ALUSrc,ALUControl,
  MemtoReg,PCSrc,
  ALUFlags,PC,Instr,
- ALUResult,WriteData,ReadData, Link);
+ ALUResult,WriteData,ReadData, Link, IsMul, ByteOp);
  
  endmodule

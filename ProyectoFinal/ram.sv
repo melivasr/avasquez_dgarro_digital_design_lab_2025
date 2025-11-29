@@ -9,8 +9,8 @@ module ram (
     output logic [31:0] q_a,
     output logic [31:0] q_b
 );
-    // 8 palabras de 32 bits
-    logic [31:0] mem [0:7];
+    // 32 palabras de 32 bits
+    logic [31:0] mem [0:31];
 
     // Escritura síncrona
     always_ff @(posedge clock) begin

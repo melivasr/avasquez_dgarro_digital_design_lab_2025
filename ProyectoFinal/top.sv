@@ -30,6 +30,7 @@ module top(
     logic [1:0]  RegSrc_dbg;
     logic [1:0]  ImmSrc_dbg;
 
+
     // Instantiate ARM processor
     arm arm_inst(
         .clk(vgaclk),
