@@ -29,11 +29,11 @@ module key_mapper (
                     if (is_break) p1_down <= 1'b0;
                     else          p1_down <= 1'b1;
                 end
-                8'h43: begin  // O = P2 UP
+                8'h44: begin  // O = P2 UP
                     if (is_break) p2_up <= 1'b0;
                     else          p2_up <= 1'b1;
                 end
-                8'h42: begin  // L = P2 DOWN
+                8'h4B: begin  // L = P2 DOWN
                     if (is_break) p2_down <= 1'b0;
                     else          p2_down <= 1'b1;
                 end
