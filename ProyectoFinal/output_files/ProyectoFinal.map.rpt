@@ -1,5 +1,5 @@
 Analysis & Synthesis report for ProyectoFinal
-Mon Dec 01 02:37:43 2025
+Mon Dec 01 03:41:02 2025
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -76,7 +76,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Mon Dec 01 02:37:43 2025       ;
+; Analysis & Synthesis Status     ; Successful - Mon Dec 01 03:41:02 2025       ;
 ; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                   ; ProyectoFinal                               ;
 ; Top-level Entity Name           ; top                                         ;
@@ -274,14 +274,14 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-------------------+
 ; Resource                                    ; Usage             ;
 +---------------------------------------------+-------------------+
-; Estimate of Logic utilization (ALMs needed) ; 2147              ;
+; Estimate of Logic utilization (ALMs needed) ; 2065              ;
 ;                                             ;                   ;
-; Combinational ALUT usage for logic          ; 2918              ;
-;     -- 7 input functions                    ; 33                ;
-;     -- 6 input functions                    ; 856               ;
-;     -- 5 input functions                    ; 451               ;
-;     -- 4 input functions                    ; 359               ;
-;     -- <=3 input functions                  ; 1219              ;
+; Combinational ALUT usage for logic          ; 2810              ;
+;     -- 7 input functions                    ; 36                ;
+;     -- 6 input functions                    ; 797               ;
+;     -- 5 input functions                    ; 390               ;
+;     -- 4 input functions                    ; 356               ;
+;     -- <=3 input functions                  ; 1231              ;
 ;                                             ;                   ;
 ; Dedicated logic registers                   ; 945               ;
 ;                                             ;                   ;
@@ -293,8 +293,8 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;                   ;
 ; Maximum fan-out node                        ; pll:vgapll|toggle ;
 ; Maximum fan-out                             ; 914               ;
-; Total fan-out                               ; 16816             ;
-; Average fan-out                             ; 4.21              ;
+; Total fan-out                               ; 16203             ;
+; Average fan-out                             ; 4.17              ;
 +---------------------------------------------+-------------------+
 
 
@@ -303,25 +303,25 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------------------------------------------------------------------------------+-----------------------+--------------+
 ; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                        ; Entity Name           ; Library Name ;
 +-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------------------------------------------------------------------------------+-----------------------+--------------+
-; |top                                      ; 2918 (118)          ; 945 (0)                   ; 80                ; 2          ; 61   ; 0            ; |top                                                                                                                       ; top                   ; work         ;
-;    |arm:arm_inst|                         ; 1341 (0)            ; 516 (0)                   ; 0                 ; 2          ; 0    ; 0            ; |top|arm:arm_inst                                                                                                          ; arm                   ; work         ;
-;       |controller:c|                      ; 23 (0)              ; 4 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|arm:arm_inst|controller:c                                                                                             ; controller            ; work         ;
+; |top                                      ; 2810 (118)          ; 945 (0)                   ; 80                ; 2          ; 61   ; 0            ; |top                                                                                                                       ; top                   ; work         ;
+;    |arm:arm_inst|                         ; 1229 (0)            ; 516 (0)                   ; 0                 ; 2          ; 0    ; 0            ; |top|arm:arm_inst                                                                                                          ; arm                   ; work         ;
+;       |controller:c|                      ; 24 (0)              ; 4 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|arm:arm_inst|controller:c                                                                                             ; controller            ; work         ;
 ;          |condlogic:cl|                   ; 11 (6)              ; 4 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|arm:arm_inst|controller:c|condlogic:cl                                                                                ; condlogic             ; work         ;
 ;             |condcheck:cc|                ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|arm:arm_inst|controller:c|condlogic:cl|condcheck:cc                                                                   ; condcheck             ; work         ;
 ;             |flopenr:flagreg0|            ; 0 (0)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |top|arm:arm_inst|controller:c|condlogic:cl|flopenr:flagreg0                                                               ; flopenr               ; work         ;
 ;             |flopenr:flagreg1|            ; 0 (0)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |top|arm:arm_inst|controller:c|condlogic:cl|flopenr:flagreg1                                                               ; flopenr               ; work         ;
-;          |decoder:dec|                    ; 12 (12)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|arm:arm_inst|controller:c|decoder:dec                                                                                 ; decoder               ; work         ;
-;       |datapath:dp|                       ; 1318 (285)          ; 512 (0)                   ; 0                 ; 2          ; 0    ; 0            ; |top|arm:arm_inst|datapath:dp                                                                                              ; datapath              ; work         ;
+;          |decoder:dec|                    ; 13 (13)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|arm:arm_inst|controller:c|decoder:dec                                                                                 ; decoder               ; work         ;
+;       |datapath:dp|                       ; 1205 (286)          ; 512 (0)                   ; 0                 ; 2          ; 0    ; 0            ; |top|arm:arm_inst|datapath:dp                                                                                              ; datapath              ; work         ;
 ;          |adder:pcadd1|                   ; 30 (30)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|arm:arm_inst|datapath:dp|adder:pcadd1                                                                                 ; adder                 ; work         ;
 ;          |adder:pcadd2|                   ; 30 (30)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|arm:arm_inst|datapath:dp|adder:pcadd2                                                                                 ; adder                 ; work         ;
 ;          |alu:alu|                        ; 142 (142)           ; 0 (0)                     ; 0                 ; 2          ; 0    ; 0            ; |top|arm:arm_inst|datapath:dp|alu:alu                                                                                      ; alu                   ; work         ;
-;          |extend:ext|                     ; 13 (13)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|arm:arm_inst|datapath:dp|extend:ext                                                                                   ; extend                ; work         ;
+;          |extend:ext|                     ; 10 (10)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|arm:arm_inst|datapath:dp|extend:ext                                                                                   ; extend                ; work         ;
 ;          |flopr:pcreg|                    ; 0 (0)               ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |top|arm:arm_inst|datapath:dp|flopr:pcreg                                                                                  ; flopr                 ; work         ;
 ;          |mux2:resmux|                    ; 68 (68)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|arm:arm_inst|datapath:dp|mux2:resmux                                                                                  ; mux2                  ; work         ;
-;          |mux2:srcbmux|                   ; 138 (138)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|arm:arm_inst|datapath:dp|mux2:srcbmux                                                                                 ; mux2                  ; work         ;
-;          |regfile:rf|                     ; 334 (334)           ; 480 (480)                 ; 0                 ; 0          ; 0    ; 0            ; |top|arm:arm_inst|datapath:dp|regfile:rf                                                                                   ; regfile               ; work         ;
+;          |mux2:srcbmux|                   ; 143 (143)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|arm:arm_inst|datapath:dp|mux2:srcbmux                                                                                 ; mux2                  ; work         ;
+;          |regfile:rf|                     ; 218 (218)           ; 480 (480)                 ; 0                 ; 0          ; 0    ; 0            ; |top|arm:arm_inst|datapath:dp|regfile:rf                                                                                   ; regfile               ; work         ;
 ;          |shifter:sh|                     ; 278 (278)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|arm:arm_inst|datapath:dp|shifter:sh                                                                                   ; shifter               ; work         ;
-;    |key_mapper:keymap_inst|               ; 9 (9)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |top|key_mapper:keymap_inst                                                                                                ; key_mapper            ; work         ;
+;    |key_mapper:keymap_inst|               ; 11 (11)             ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |top|key_mapper:keymap_inst                                                                                                ; key_mapper            ; work         ;
 ;    |lpm_divide:Div0|                      ; 38 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|lpm_divide:Div0                                                                                                       ; lpm_divide            ; work         ;
 ;       |lpm_divide_4am:auto_generated|     ; 38 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|lpm_divide:Div0|lpm_divide_4am:auto_generated                                                                         ; lpm_divide_4am        ; work         ;
 ;          |sign_div_unsign_akh:divider|    ; 38 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|lpm_divide:Div0|lpm_divide_4am:auto_generated|sign_div_unsign_akh:divider                                             ; sign_div_unsign_akh   ; work         ;
@@ -345,7 +345,7 @@ https://fpgasoftware.intel.com/eula.
 ;    |ram:dmem|                             ; 22 (22)             ; 284 (284)                 ; 80                ; 0          ; 0    ; 0            ; |top|ram:dmem                                                                                                              ; ram                   ; work         ;
 ;       |altsyncram:mem_rtl_0|              ; 0 (0)               ; 0 (0)                     ; 80                ; 0          ; 0    ; 0            ; |top|ram:dmem|altsyncram:mem_rtl_0                                                                                         ; altsyncram            ; work         ;
 ;          |altsyncram_ovm1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 80                ; 0          ; 0    ; 0            ; |top|ram:dmem|altsyncram:mem_rtl_0|altsyncram_ovm1:auto_generated                                                          ; altsyncram_ovm1       ; work         ;
-;    |rom_i:imem|                           ; 132 (132)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|rom_i:imem                                                                                                            ; rom_i                 ; work         ;
+;    |rom_i:imem|                           ; 134 (134)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|rom_i:imem                                                                                                            ; rom_i                 ; work         ;
 ;    |seven_segment_display:disp_p1_tens|   ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|seven_segment_display:disp_p1_tens                                                                                    ; seven_segment_display ; work         ;
 ;    |seven_segment_display:disp_p1_units|  ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|seven_segment_display:disp_p1_units                                                                                   ; seven_segment_display ; work         ;
 ;    |seven_segment_display:disp_p2_tens|   ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|seven_segment_display:disp_p2_tens                                                                                    ; seven_segment_display ; work         ;
@@ -989,7 +989,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     ENA SCLR          ; 10                          ;
 ;     SCLR              ; 10                          ;
 ;     plain             ; 15                          ;
-; arriav_lcell_comb     ; 2923                        ;
+; arriav_lcell_comb     ; 2815                        ;
 ;     arith             ; 810                         ;
 ;         0 data inputs ; 148                         ;
 ;         1 data inputs ; 211                         ;
@@ -997,15 +997,15 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;         3 data inputs ; 190                         ;
 ;         4 data inputs ; 148                         ;
 ;         5 data inputs ; 27                          ;
-;     extend            ; 33                          ;
-;         7 data inputs ; 33                          ;
-;     normal            ; 2007                        ;
+;     extend            ; 36                          ;
+;         7 data inputs ; 36                          ;
+;     normal            ; 1896                        ;
 ;         1 data inputs ; 6                           ;
-;         2 data inputs ; 323                         ;
-;         3 data inputs ; 189                         ;
-;         4 data inputs ; 209                         ;
-;         5 data inputs ; 424                         ;
-;         6 data inputs ; 856                         ;
+;         2 data inputs ; 322                         ;
+;         3 data inputs ; 202                         ;
+;         4 data inputs ; 206                         ;
+;         5 data inputs ; 363                         ;
+;         6 data inputs ; 797                         ;
 ;     shared            ; 73                          ;
 ;         0 data inputs ; 12                          ;
 ;         1 data inputs ; 34                          ;
@@ -1016,7 +1016,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; stratixv_ram_block    ; 10                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 80.30                       ;
-; Average LUT depth     ; 28.40                       ;
+; Average LUT depth     ; 28.33                       ;
 +-----------------------+-----------------------------+
 
 
@@ -1035,7 +1035,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Mon Dec 01 02:37:29 2025
+    Info: Processing started: Mon Dec 01 03:40:47 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ProyectoFinal -c ProyectoFinal
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
@@ -1117,7 +1117,7 @@ Info (12128): Elaborating entity "extend" for hierarchy "arm:arm_inst|datapath:d
 Info (12128): Elaborating entity "shifter" for hierarchy "arm:arm_inst|datapath:dp|shifter:sh" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/datapath.sv Line: 120
 Info (12128): Elaborating entity "alu" for hierarchy "arm:arm_inst|datapath:dp|alu:alu" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/datapath.sv Line: 148
 Info (12128): Elaborating entity "rom_i" for hierarchy "rom_i:imem" File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/top.sv Line: 65
-Warning (10850): Verilog HDL warning at rom_i.sv(12): number of words (172) in memory file does not match the number of elements in the address range [0:255] File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/rom_i.sv Line: 12
+Warning (10850): Verilog HDL warning at rom_i.sv(12): number of words (180) in memory file does not match the number of elements in the address range [0:255] File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/rom_i.sv Line: 12
 Warning (10030): Net "mem.data_a" at rom_i.sv(8) has no driver or initial value, using a default initial value '0' File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/rom_i.sv Line: 8
 Warning (10030): Net "mem.waddr_a" at rom_i.sv(8) has no driver or initial value, using a default initial value '0' File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/rom_i.sv Line: 8
 Warning (10030): Net "mem.we_a" at rom_i.sv(8) has no driver or initial value, using a default initial value '0' File: C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/rom_i.sv Line: 8
@@ -1264,16 +1264,16 @@ Info (286030): Timing-Driven Synthesis is running
 Info (17049): 3 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 3873 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 3765 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 4 input pins
     Info (21059): Implemented 57 output pins
-    Info (21061): Implemented 3800 logic cells
+    Info (21061): Implemented 3692 logic cells
     Info (21064): Implemented 10 RAM segments
     Info (21062): Implemented 2 DSP elements
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 24 warnings
-    Info: Peak virtual memory: 4919 megabytes
-    Info: Processing ended: Mon Dec 01 02:37:43 2025
-    Info: Elapsed time: 00:00:14
-    Info: Total CPU time (on all processors): 00:00:18
+    Info: Peak virtual memory: 4920 megabytes
+    Info: Processing ended: Mon Dec 01 03:41:02 2025
+    Info: Elapsed time: 00:00:15
+    Info: Total CPU time (on all processors): 00:00:19
 
 

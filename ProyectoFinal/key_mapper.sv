@@ -21,19 +21,19 @@ module key_mapper (
             p2_down <= 1'b0;
         end else begin
             case (code)
-                8'h2D: begin  // R = P1 UP
+                8'h3C: begin  // R = P1 UP
                     if (is_break) p1_up <= 1'b0;
                     else          p1_up <= 1'b1;
                 end
-                8'h2B: begin  // F = P1 DOWN
+                8'h3B: begin  // F = P1 DOWN
                     if (is_break) p1_down <= 1'b0;
                     else          p1_down <= 1'b1;
                 end
-                8'h43: begin  // O = P2 UP
+                8'h75: begin  // O = P2 UP
                     if (is_break) p2_up <= 1'b0;
                     else          p2_up <= 1'b1;
                 end
-                8'h42: begin  // L = P2 DOWN
+                8'h72: begin  // L = P2 DOWN
                     if (is_break) p2_down <= 1'b0;
                     else          p2_down <= 1'b1;
                 end
