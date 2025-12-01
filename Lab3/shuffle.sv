@@ -27,7 +27,6 @@ module shuffle(
 
     always_ff @(posedge clk or posedge rst) begin
         if (rst) begin
-            // NO modificar 'board' en reset
             j    <= 5'd0;
             busy <= 1'b0;
             done <= 1'b0;

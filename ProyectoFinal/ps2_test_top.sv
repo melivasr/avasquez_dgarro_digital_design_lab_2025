@@ -1,0 +1,37 @@
+module ps2_test_top (
+    input  logic CLOCK_50,
+    input  logic [2:0] BUTTON,      // BUTTON[0] = reset
+    input  logic PS2_KBCLK,
+    input  logic PS2_KBDAT,
+    output logic [6:0] HEX0_D,
+    output logic [6:0] HEX1_D,
+    output logic [6:0] HEX2_D,
+    output logic HEX0_DP,
+    output logic HEX1_DP,
+    output logic HEX2_DP,
+    output logic [9:0] LEDG
+);
+    logic [15:0] hexo;
+    logic rst_n;
+    
+    assign rst_n = BUTTON[0];  // Reset activo bajo
+    assign {HEX2_DP, HEX1_DP, HEX0_DP} = 4'b1111;
+    
+
+    assign LEDG = hexo[9:0];
+    
+    // Instancia del módulo PS/2
+    ps2 ps2_inst (
+        .PS2_KBCLK(PS2_KBCLK),
+        .PS2_KBDAT(PS2_KBDAT),
+        .rst_n(rst_n),
+        .computerClk(CLOCK_50),
+        .hexo(hexo)
+    );
+    
+    // Decodificadores de 7 segmentos
+    hex hex_inst0 (.in(hexo[3:0]),   .out(HEX0_D));
+    hex hex_inst1 (.in(hexo[7:4]),   .out(HEX1_D));
+    hex hex_inst2 (.in(hexo[11:8]),  .out(HEX2_D));
+    
+endmodule

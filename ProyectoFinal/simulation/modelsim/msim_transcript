@@ -1,0 +1,2301 @@
+# Reading pref.tcl
+# do ProyectoFinal_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -sv -work work +incdir+C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal {C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/alu.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 22:55:19 on Nov 30,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal" C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/alu.sv 
+# -- Compiling module alu
+# 
+# Top level modules:
+# 	alu
+# End time: 22:55:19 on Nov 30,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal {C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/arm.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 22:55:19 on Nov 30,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal" C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/arm.sv 
+# -- Compiling module arm
+# 
+# Top level modules:
+# 	arm
+# End time: 22:55:19 on Nov 30,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal {C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/condcheck.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 22:55:19 on Nov 30,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal" C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/condcheck.sv 
+# -- Compiling module condcheck
+# 
+# Top level modules:
+# 	condcheck
+# End time: 22:55:19 on Nov 30,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal {C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/condlogic.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 22:55:19 on Nov 30,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal" C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/condlogic.sv 
+# -- Compiling module condlogic
+# 
+# Top level modules:
+# 	condlogic
+# End time: 22:55:19 on Nov 30,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal {C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/controller.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 22:55:19 on Nov 30,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal" C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/controller.sv 
+# -- Compiling module controller
+# 
+# Top level modules:
+# 	controller
+# End time: 22:55:19 on Nov 30,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal {C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/datapath.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 22:55:20 on Nov 30,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal" C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/datapath.sv 
+# -- Compiling module datapath
+# 
+# Top level modules:
+# 	datapath
+# End time: 22:55:20 on Nov 30,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal {C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/decoder.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 22:55:20 on Nov 30,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal" C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/decoder.sv 
+# -- Compiling module decoder
+# 
+# Top level modules:
+# 	decoder
+# End time: 22:55:20 on Nov 30,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal {C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/extend.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 22:55:20 on Nov 30,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal" C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/extend.sv 
+# -- Compiling module extend
+# 
+# Top level modules:
+# 	extend
+# End time: 22:55:20 on Nov 30,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal {C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/flopenr.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 22:55:20 on Nov 30,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal" C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/flopenr.sv 
+# -- Compiling module flopenr
+# 
+# Top level modules:
+# 	flopenr
+# End time: 22:55:20 on Nov 30,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal {C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/flopr.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 22:55:20 on Nov 30,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal" C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/flopr.sv 
+# -- Compiling module flopr
+# 
+# Top level modules:
+# 	flopr
+# End time: 22:55:20 on Nov 30,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal {C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/mux2.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 22:55:20 on Nov 30,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal" C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/mux2.sv 
+# -- Compiling module mux2
+# 
+# Top level modules:
+# 	mux2
+# End time: 22:55:20 on Nov 30,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal {C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/regfile.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 22:55:20 on Nov 30,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal" C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/regfile.sv 
+# -- Compiling module regfile
+# 
+# Top level modules:
+# 	regfile
+# End time: 22:55:21 on Nov 30,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal {C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/top.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 22:55:21 on Nov 30,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal" C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/top.sv 
+# -- Compiling module top
+# 
+# Top level modules:
+# 	top
+# End time: 22:55:21 on Nov 30,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal {C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/adder.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 22:55:21 on Nov 30,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal" C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/adder.sv 
+# -- Compiling module adder
+# 
+# Top level modules:
+# 	adder
+# End time: 22:55:21 on Nov 30,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal {C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/ps2.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 22:55:21 on Nov 30,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal" C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/ps2.sv 
+# -- Compiling module ps2
+# 
+# Top level modules:
+# 	ps2
+# End time: 22:55:21 on Nov 30,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal {C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/deb.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 22:55:21 on Nov 30,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal" C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/deb.sv 
+# -- Compiling module deb
+# 
+# Top level modules:
+# 	deb
+# End time: 22:55:21 on Nov 30,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal {C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/pll.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 22:55:21 on Nov 30,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal" C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/pll.sv 
+# -- Compiling module pll
+# 
+# Top level modules:
+# 	pll
+# End time: 22:55:21 on Nov 30,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal {C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/vgaController.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 22:55:21 on Nov 30,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal" C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/vgaController.sv 
+# -- Compiling module vgaController
+# 
+# Top level modules:
+# 	vgaController
+# End time: 22:55:21 on Nov 30,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal {C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/videoGen_pong.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 22:55:22 on Nov 30,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal" C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/videoGen_pong.sv 
+# -- Compiling module videoGen_pong
+# 
+# Top level modules:
+# 	videoGen_pong
+# End time: 22:55:22 on Nov 30,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal {C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/ram2vga_bridge.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 22:55:22 on Nov 30,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal" C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/ram2vga_bridge.sv 
+# -- Compiling module ram2vga_bridge
+# 
+# Top level modules:
+# 	ram2vga_bridge
+# End time: 22:55:22 on Nov 30,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal {C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/ram.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 22:55:22 on Nov 30,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal" C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/ram.sv 
+# -- Compiling module ram
+# 
+# Top level modules:
+# 	ram
+# End time: 22:55:22 on Nov 30,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal {C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/key_mapper.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 22:55:22 on Nov 30,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal" C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/key_mapper.sv 
+# -- Compiling module key_mapper
+# 
+# Top level modules:
+# 	key_mapper
+# End time: 22:55:22 on Nov 30,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal {C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/shifter.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 22:55:22 on Nov 30,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal" C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/shifter.sv 
+# -- Compiling module shifter
+# 
+# Top level modules:
+# 	shifter
+# End time: 22:55:22 on Nov 30,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal {C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/rom_i.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 22:55:22 on Nov 30,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal" C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/rom_i.sv 
+# -- Compiling module rom_i
+# 
+# Top level modules:
+# 	rom_i
+# End time: 22:55:22 on Nov 30,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -sv -work work +incdir+C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal {C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/top_tb.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 22:55:22 on Nov 30,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal" C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/top_tb.sv 
+# -- Compiling module top_tb
+# 
+# Top level modules:
+# 	top_tb
+# End time: 22:55:22 on Nov 30,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  top_tb
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" top_tb 
+# Start time: 22:55:23 on Nov 30,2025
+# Loading sv_std.std
+# Loading work.top_tb
+# Loading work.arm
+# Loading work.controller
+# Loading work.decoder
+# Loading work.condlogic
+# Loading work.flopenr
+# Loading work.condcheck
+# Loading work.datapath
+# Loading work.mux2
+# Loading work.flopr
+# Loading work.adder
+# Loading work.regfile
+# Loading work.extend
+# Loading work.shifter
+# Loading work.alu
+# Loading work.rom_i
+# Loading work.ram
+# 
+# add wave *
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: melis  Hostname: MELIVR  ProcessID: 22900
+#           Attempting to use alternate WLF file "./wlft9jvbjt".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft9jvbjt
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# ARM Processor Test - Iniciando
+# ----------------------------------------
+# PC=0000 | Instr=eb00000a | MW=0 | WD=00000000 | RD=00000000 | DataAdr=00000030
+# RegWrite=1  ALUSrc=1  MemtoReg=0  PCSrc=1  ALUControl=00  RegSrc=01  ImmSrc=10
+# r0..r7  : 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+# ----------------------------------------
+# PC=0030 | Instr=e3a00000 | MW=0 | WD=00000000 | RD=00000000 | DataAdr=00000000
+# RegWrite=1  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000000 00000000 00000000 00000000 00000004
+# ----------------------------------------
+# PC=0034 | Instr=e3a010d2 | MW=0 | WD=00000000 | RD=00000000 | DataAdr=000000d2
+# RegWrite=1  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000000 00000000 00000000 00000000 00000004
+# ----------------------------------------
+# PC=0038 | Instr=e5801000 | MW=1 | WD=000000d2 | RD=00000000 | DataAdr=00000000
+# RegWrite=0  ALUSrc=1  MemtoReg=1  PCSrc=0  ALUControl=00  RegSrc=10  ImmSrc=01
+# r0..r7  : 00000000 000000d2 00000000 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000000 00000000 00000000 00000000 00000004
+# ----------------------------------------
+# PC=003c | Instr=e3a00004 | MW=0 | WD=00000000 | RD=00000000 | DataAdr=00000004
+# RegWrite=1  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 000000d2 00000000 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000000 00000000 00000000 00000000 00000004
+# ----------------------------------------
+# PC=0040 | Instr=e3a010d2 | MW=0 | WD=00000000 | RD=00000000 | DataAdr=000000d2
+# RegWrite=1  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000004 000000d2 00000000 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000000 00000000 00000000 00000000 00000004
+# ----------------------------------------
+# PC=0044 | Instr=e5801000 | MW=1 | WD=000000d2 | RD=00000000 | DataAdr=00000004
+# RegWrite=0  ALUSrc=1  MemtoReg=1  PCSrc=0  ALUControl=00  RegSrc=10  ImmSrc=01
+# r0..r7  : 00000004 000000d2 00000000 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000000 00000000 00000000 00000000 00000004
+# ----------------------------------------
+# PC=0048 | Instr=e3a00008 | MW=0 | WD=00000000 | RD=00000000 | DataAdr=00000008
+# RegWrite=1  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000004 000000d2 00000000 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000000 00000000 00000000 00000000 00000004
+# ----------------------------------------
+# PC=004c | Instr=e3a01f4f | MW=0 | WD=00000054 | RD=00000000 | DataAdr=0000004f
+# RegWrite=1  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000008 000000d2 00000000 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000000 00000000 00000000 00000000 00000004
+# ----------------------------------------
+# PC=0050 | Instr=e5801000 | MW=1 | WD=0000004f | RD=00000000 | DataAdr=00000008
+# RegWrite=0  ALUSrc=1  MemtoReg=1  PCSrc=0  ALUControl=00  RegSrc=10  ImmSrc=01
+# r0..r7  : 00000008 0000004f 00000000 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000000 00000000 00000000 00000000 00000004
+# ----------------------------------------
+# PC=0054 | Instr=e3a0000c | MW=0 | WD=00000000 | RD=00000000 | DataAdr=0000000c
+# RegWrite=1  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000008 0000004f 00000000 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000000 00000000 00000000 00000000 00000004
+# ----------------------------------------
+# PC=0058 | Instr=e3a010ec | MW=0 | WD=00000000 | RD=00000000 | DataAdr=000000ec
+# RegWrite=1  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 0000000c 0000004f 00000000 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000000 00000000 00000000 00000000 00000004
+# ----------------------------------------
+# PC=005c | Instr=e5801000 | MW=1 | WD=000000ec | RD=00000000 | DataAdr=0000000c
+# RegWrite=0  ALUSrc=1  MemtoReg=1  PCSrc=0  ALUControl=00  RegSrc=10  ImmSrc=01
+# r0..r7  : 0000000c 000000ec 00000000 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000000 00000000 00000000 00000000 00000004
+# ----------------------------------------
+# PC=0060 | Instr=e3a0a003 | MW=0 | WD=00000000 | RD=000000d2 | DataAdr=00000003
+# RegWrite=1  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 0000000c 000000ec 00000000 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000000 00000000 00000000 00000000 00000004
+# ----------------------------------------
+# PC=0064 | Instr=e3a0b002 | MW=0 | WD=00000000 | RD=000000d2 | DataAdr=00000002
+# RegWrite=1  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 0000000c 000000ec 00000000 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000000 00000000 00000000 00000004
+# ----------------------------------------
+# PC=0068 | Instr=e3a00010 | MW=0 | WD=0000000c | RD=00000000 | DataAdr=00000010
+# RegWrite=1  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 0000000c 000000ec 00000000 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 00000004
+# ----------------------------------------
+# PC=006c | Instr=e3a01000 | MW=0 | WD=00000010 | RD=000000d2 | DataAdr=00000000
+# RegWrite=1  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000010 000000ec 00000000 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 00000004
+# ----------------------------------------
+# PC=0070 | Instr=e5801000 | MW=1 | WD=00000000 | RD=00000000 | DataAdr=00000010
+# RegWrite=0  ALUSrc=1  MemtoReg=1  PCSrc=0  ALUControl=00  RegSrc=10  ImmSrc=01
+# r0..r7  : 00000010 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 00000004
+# ----------------------------------------
+# PC=0074 | Instr=e3a00014 | MW=0 | WD=00000000 | RD=00000000 | DataAdr=00000014
+# RegWrite=1  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000010 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 00000004
+# ----------------------------------------
+# PC=0078 | Instr=e3a01000 | MW=0 | WD=00000014 | RD=000000d2 | DataAdr=00000000
+# RegWrite=1  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000014 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 00000004
+# ----------------------------------------
+# PC=007c | Instr=e5801000 | MW=1 | WD=00000000 | RD=00000000 | DataAdr=00000014
+# RegWrite=0  ALUSrc=1  MemtoReg=1  PCSrc=0  ALUControl=00  RegSrc=10  ImmSrc=01
+# r0..r7  : 00000014 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 00000004
+# ----------------------------------------
+# PC=0080 | Instr=e3a00018 | MW=0 | WD=00000000 | RD=00000000 | DataAdr=00000018
+# RegWrite=1  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000014 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 00000004
+# ----------------------------------------
+# PC=0084 | Instr=e3a01000 | MW=0 | WD=00000018 | RD=000000d2 | DataAdr=00000000
+# RegWrite=1  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000018 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 00000004
+# ----------------------------------------
+# PC=0088 | Instr=e5801000 | MW=1 | WD=00000000 | RD=00000000 | DataAdr=00000018
+# RegWrite=0  ALUSrc=1  MemtoReg=1  PCSrc=0  ALUControl=00  RegSrc=10  ImmSrc=01
+# r0..r7  : 00000018 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 00000004
+# ----------------------------------------
+# PC=008c | Instr=e1a0f00e | MW=0 | WD=00000004 | RD=000000d2 | DataAdr=00000004
+# RegWrite=1  ALUSrc=0  MemtoReg=0  PCSrc=1  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000018 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 00000004
+# ----------------------------------------
+# PC=0004 | Instr=e3a00018 | MW=0 | WD=00000000 | RD=00000000 | DataAdr=00000018
+# RegWrite=1  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000018 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 00000004
+# ----------------------------------------
+# PC=0008 | Instr=e5901000 | MW=0 | WD=00000018 | RD=00000000 | DataAdr=00000018
+# RegWrite=1  ALUSrc=1  MemtoReg=1  PCSrc=0  ALUControl=00  RegSrc=00  ImmSrc=01
+# r0..r7  : 00000018 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 00000004
+# ----------------------------------------
+# PC=000c | Instr=e3510000 | MW=0 | WD=00000018 | RD=000000d2 | DataAdr=00000000
+# RegWrite=0  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=01  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000018 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 00000004
+# ----------------------------------------
+# PC=0010 | Instr=1afffffb | MW=0 | WD=00000002 | RD=000000d2 | DataAdr=00000004
+# RegWrite=0  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=00  RegSrc=01  ImmSrc=10
+# r0..r7  : 00000018 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 00000004
+# ----------------------------------------
+# PC=0014 | Instr=e3a0001c | MW=0 | WD=00000000 | RD=00000000 | DataAdr=0000001c
+# RegWrite=1  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000018 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 00000004
+# ----------------------------------------
+# PC=0018 | Instr=e5904000 | MW=0 | WD=0000001c | RD=00000000 | DataAdr=0000001c
+# RegWrite=1  ALUSrc=1  MemtoReg=1  PCSrc=0  ALUControl=00  RegSrc=00  ImmSrc=01
+# r0..r7  : 0000001c 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 00000004
+# ----------------------------------------
+# PC=001c | Instr=eb00001b | MW=0 | WD=00000002 | RD=00000000 | DataAdr=00000090
+# RegWrite=1  ALUSrc=1  MemtoReg=0  PCSrc=1  ALUControl=00  RegSrc=01  ImmSrc=10
+# r0..r7  : 0000001c 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 00000004
+# ----------------------------------------
+# PC=0090 | Instr=e3a00000 | MW=0 | WD=0000001c | RD=000000d2 | DataAdr=00000000
+# RegWrite=1  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 0000001c 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 00000020
+# ----------------------------------------
+# PC=0094 | Instr=e5901000 | MW=0 | WD=00000000 | RD=000000d2 | DataAdr=00000000
+# RegWrite=1  ALUSrc=1  MemtoReg=1  PCSrc=0  ALUControl=00  RegSrc=00  ImmSrc=01
+# r0..r7  : 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 00000020
+# ----------------------------------------
+# PC=0098 | Instr=e2042001 | MW=0 | WD=000000d2 | RD=000000d2 | DataAdr=00000000
+# RegWrite=1  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=10  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 000000d2 00000000 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 00000020
+# ----------------------------------------
+# PC=009c | Instr=e3520000 | MW=0 | WD=00000000 | RD=000000d2 | DataAdr=00000000
+# RegWrite=0  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=01  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 000000d2 00000000 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 00000020
+# ----------------------------------------
+# PC=00a0 | Instr=0a000004 | MW=0 | WD=00000000 | RD=00000000 | DataAdr=000000b8
+# RegWrite=1  ALUSrc=1  MemtoReg=0  PCSrc=1  ALUControl=00  RegSrc=01  ImmSrc=10
+# r0..r7  : 00000000 000000d2 00000000 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 00000020
+# ----------------------------------------
+# PC=00b8 | Instr=e2042002 | MW=0 | WD=00000000 | RD=000000d2 | DataAdr=00000000
+# RegWrite=1  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=10  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 000000d2 00000000 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000a4
+# ----------------------------------------
+# PC=00bc | Instr=e3520000 | MW=0 | WD=00000000 | RD=000000d2 | DataAdr=00000000
+# RegWrite=0  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=01  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 000000d2 00000000 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000a4
+# ----------------------------------------
+# PC=00c0 | Instr=0a000004 | MW=0 | WD=00000000 | RD=00000000 | DataAdr=000000d8
+# RegWrite=1  ALUSrc=1  MemtoReg=0  PCSrc=1  ALUControl=00  RegSrc=01  ImmSrc=10
+# r0..r7  : 00000000 000000d2 00000000 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000a4
+# ----------------------------------------
+# PC=00d8 | Instr=e5801000 | MW=1 | WD=000000d2 | RD=000000d2 | DataAdr=00000000
+# RegWrite=0  ALUSrc=1  MemtoReg=1  PCSrc=0  ALUControl=00  RegSrc=10  ImmSrc=01
+# r0..r7  : 00000000 000000d2 00000000 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00dc | Instr=e1a0f00e | MW=0 | WD=000000c4 | RD=000000d2 | DataAdr=000000c4
+# RegWrite=1  ALUSrc=0  MemtoReg=0  PCSrc=1  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 000000d2 00000000 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00c4 | Instr=e2811004 | MW=0 | WD=00000000 | RD=00000000 | DataAdr=000000d6
+# RegWrite=1  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=00  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 000000d2 00000000 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00c8 | Instr=e3a02f69 | MW=0 | WD=00000000 | RD=0000004f | DataAdr=00000069
+# RegWrite=1  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 000000d6 00000000 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00cc | Instr=e1510002 | MW=0 | WD=00000069 | RD=000000ec | DataAdr=0000006d
+# RegWrite=0  ALUSrc=0  MemtoReg=0  PCSrc=0  ALUControl=01  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 000000d6 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00d0 | Instr=da000000 | MW=0 | WD=00000000 | RD=00000000 | DataAdr=000000d8
+# RegWrite=0  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=00  RegSrc=01  ImmSrc=10
+# r0..r7  : 00000000 000000d6 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00d4 | Instr=e1a01002 | MW=0 | WD=00000069 | RD=0000004f | DataAdr=00000069
+# RegWrite=1  ALUSrc=0  MemtoReg=0  PCSrc=0  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 000000d6 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00d8 | Instr=e5801000 | MW=1 | WD=00000069 | RD=000000d2 | DataAdr=00000000
+# RegWrite=0  ALUSrc=1  MemtoReg=1  PCSrc=0  ALUControl=00  RegSrc=10  ImmSrc=01
+# r0..r7  : 00000000 00000069 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00dc | Instr=e1a0f00e | MW=0 | WD=000000c4 | RD=000000d2 | DataAdr=000000c4
+# RegWrite=1  ALUSrc=0  MemtoReg=0  PCSrc=1  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 00000069 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00c4 | Instr=e2811004 | MW=0 | WD=00000000 | RD=000000ec | DataAdr=0000006d
+# RegWrite=1  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=00  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 00000069 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00c8 | Instr=e3a02f69 | MW=0 | WD=00000000 | RD=0000004f | DataAdr=00000069
+# RegWrite=1  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00cc | Instr=e1510002 | MW=0 | WD=00000069 | RD=000000d2 | DataAdr=00000004
+# RegWrite=0  ALUSrc=0  MemtoReg=0  PCSrc=0  ALUControl=01  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00d0 | Instr=da000000 | MW=0 | WD=00000000 | RD=00000000 | DataAdr=000000d8
+# RegWrite=0  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=00  RegSrc=01  ImmSrc=10
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00d4 | Instr=e1a01002 | MW=0 | WD=00000069 | RD=0000004f | DataAdr=00000069
+# RegWrite=1  ALUSrc=0  MemtoReg=0  PCSrc=0  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00d8 | Instr=e5801000 | MW=1 | WD=00000069 | RD=00000069 | DataAdr=00000000
+# RegWrite=0  ALUSrc=1  MemtoReg=1  PCSrc=0  ALUControl=00  RegSrc=10  ImmSrc=01
+# r0..r7  : 00000000 00000069 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00dc | Instr=e1a0f00e | MW=0 | WD=000000c4 | RD=000000d2 | DataAdr=000000c4
+# RegWrite=1  ALUSrc=0  MemtoReg=0  PCSrc=1  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 00000069 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00c4 | Instr=e2811004 | MW=0 | WD=00000000 | RD=000000ec | DataAdr=0000006d
+# RegWrite=1  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=00  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 00000069 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00c8 | Instr=e3a02f69 | MW=0 | WD=00000000 | RD=0000004f | DataAdr=00000069
+# RegWrite=1  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00cc | Instr=e1510002 | MW=0 | WD=00000069 | RD=000000d2 | DataAdr=00000004
+# RegWrite=0  ALUSrc=0  MemtoReg=0  PCSrc=0  ALUControl=01  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00d0 | Instr=da000000 | MW=0 | WD=00000000 | RD=00000000 | DataAdr=000000d8
+# RegWrite=0  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=00  RegSrc=01  ImmSrc=10
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00d4 | Instr=e1a01002 | MW=0 | WD=00000069 | RD=0000004f | DataAdr=00000069
+# RegWrite=1  ALUSrc=0  MemtoReg=0  PCSrc=0  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00d8 | Instr=e5801000 | MW=1 | WD=00000069 | RD=00000069 | DataAdr=00000000
+# RegWrite=0  ALUSrc=1  MemtoReg=1  PCSrc=0  ALUControl=00  RegSrc=10  ImmSrc=01
+# r0..r7  : 00000000 00000069 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00dc | Instr=e1a0f00e | MW=0 | WD=000000c4 | RD=000000d2 | DataAdr=000000c4
+# RegWrite=1  ALUSrc=0  MemtoReg=0  PCSrc=1  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 00000069 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00c4 | Instr=e2811004 | MW=0 | WD=00000000 | RD=000000ec | DataAdr=0000006d
+# RegWrite=1  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=00  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 00000069 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00c8 | Instr=e3a02f69 | MW=0 | WD=00000000 | RD=0000004f | DataAdr=00000069
+# RegWrite=1  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00cc | Instr=e1510002 | MW=0 | WD=00000069 | RD=000000d2 | DataAdr=00000004
+# RegWrite=0  ALUSrc=0  MemtoReg=0  PCSrc=0  ALUControl=01  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00d0 | Instr=da000000 | MW=0 | WD=00000000 | RD=00000000 | DataAdr=000000d8
+# RegWrite=0  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=00  RegSrc=01  ImmSrc=10
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00d4 | Instr=e1a01002 | MW=0 | WD=00000069 | RD=0000004f | DataAdr=00000069
+# RegWrite=1  ALUSrc=0  MemtoReg=0  PCSrc=0  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00d8 | Instr=e5801000 | MW=1 | WD=00000069 | RD=00000069 | DataAdr=00000000
+# RegWrite=0  ALUSrc=1  MemtoReg=1  PCSrc=0  ALUControl=00  RegSrc=10  ImmSrc=01
+# r0..r7  : 00000000 00000069 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00dc | Instr=e1a0f00e | MW=0 | WD=000000c4 | RD=000000d2 | DataAdr=000000c4
+# RegWrite=1  ALUSrc=0  MemtoReg=0  PCSrc=1  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 00000069 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00c4 | Instr=e2811004 | MW=0 | WD=00000000 | RD=000000ec | DataAdr=0000006d
+# RegWrite=1  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=00  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 00000069 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00c8 | Instr=e3a02f69 | MW=0 | WD=00000000 | RD=0000004f | DataAdr=00000069
+# RegWrite=1  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00cc | Instr=e1510002 | MW=0 | WD=00000069 | RD=000000d2 | DataAdr=00000004
+# RegWrite=0  ALUSrc=0  MemtoReg=0  PCSrc=0  ALUControl=01  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00d0 | Instr=da000000 | MW=0 | WD=00000000 | RD=00000000 | DataAdr=000000d8
+# RegWrite=0  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=00  RegSrc=01  ImmSrc=10
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00d4 | Instr=e1a01002 | MW=0 | WD=00000069 | RD=0000004f | DataAdr=00000069
+# RegWrite=1  ALUSrc=0  MemtoReg=0  PCSrc=0  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00d8 | Instr=e5801000 | MW=1 | WD=00000069 | RD=00000069 | DataAdr=00000000
+# RegWrite=0  ALUSrc=1  MemtoReg=1  PCSrc=0  ALUControl=00  RegSrc=10  ImmSrc=01
+# r0..r7  : 00000000 00000069 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00dc | Instr=e1a0f00e | MW=0 | WD=000000c4 | RD=000000d2 | DataAdr=000000c4
+# RegWrite=1  ALUSrc=0  MemtoReg=0  PCSrc=1  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 00000069 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00c4 | Instr=e2811004 | MW=0 | WD=00000000 | RD=000000ec | DataAdr=0000006d
+# RegWrite=1  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=00  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 00000069 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00c8 | Instr=e3a02f69 | MW=0 | WD=00000000 | RD=0000004f | DataAdr=00000069
+# RegWrite=1  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00cc | Instr=e1510002 | MW=0 | WD=00000069 | RD=000000d2 | DataAdr=00000004
+# RegWrite=0  ALUSrc=0  MemtoReg=0  PCSrc=0  ALUControl=01  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00d0 | Instr=da000000 | MW=0 | WD=00000000 | RD=00000000 | DataAdr=000000d8
+# RegWrite=0  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=00  RegSrc=01  ImmSrc=10
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00d4 | Instr=e1a01002 | MW=0 | WD=00000069 | RD=0000004f | DataAdr=00000069
+# RegWrite=1  ALUSrc=0  MemtoReg=0  PCSrc=0  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00d8 | Instr=e5801000 | MW=1 | WD=00000069 | RD=00000069 | DataAdr=00000000
+# RegWrite=0  ALUSrc=1  MemtoReg=1  PCSrc=0  ALUControl=00  RegSrc=10  ImmSrc=01
+# r0..r7  : 00000000 00000069 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00dc | Instr=e1a0f00e | MW=0 | WD=000000c4 | RD=000000d2 | DataAdr=000000c4
+# RegWrite=1  ALUSrc=0  MemtoReg=0  PCSrc=1  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 00000069 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00c4 | Instr=e2811004 | MW=0 | WD=00000000 | RD=000000ec | DataAdr=0000006d
+# RegWrite=1  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=00  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 00000069 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00c8 | Instr=e3a02f69 | MW=0 | WD=00000000 | RD=0000004f | DataAdr=00000069
+# RegWrite=1  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00cc | Instr=e1510002 | MW=0 | WD=00000069 | RD=000000d2 | DataAdr=00000004
+# RegWrite=0  ALUSrc=0  MemtoReg=0  PCSrc=0  ALUControl=01  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00d0 | Instr=da000000 | MW=0 | WD=00000000 | RD=00000000 | DataAdr=000000d8
+# RegWrite=0  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=00  RegSrc=01  ImmSrc=10
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00d4 | Instr=e1a01002 | MW=0 | WD=00000069 | RD=0000004f | DataAdr=00000069
+# RegWrite=1  ALUSrc=0  MemtoReg=0  PCSrc=0  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00d8 | Instr=e5801000 | MW=1 | WD=00000069 | RD=00000069 | DataAdr=00000000
+# RegWrite=0  ALUSrc=1  MemtoReg=1  PCSrc=0  ALUControl=00  RegSrc=10  ImmSrc=01
+# r0..r7  : 00000000 00000069 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00dc | Instr=e1a0f00e | MW=0 | WD=000000c4 | RD=000000d2 | DataAdr=000000c4
+# RegWrite=1  ALUSrc=0  MemtoReg=0  PCSrc=1  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 00000069 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00c4 | Instr=e2811004 | MW=0 | WD=00000000 | RD=000000ec | DataAdr=0000006d
+# RegWrite=1  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=00  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 00000069 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00c8 | Instr=e3a02f69 | MW=0 | WD=00000000 | RD=0000004f | DataAdr=00000069
+# RegWrite=1  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00cc | Instr=e1510002 | MW=0 | WD=00000069 | RD=000000d2 | DataAdr=00000004
+# RegWrite=0  ALUSrc=0  MemtoReg=0  PCSrc=0  ALUControl=01  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00d0 | Instr=da000000 | MW=0 | WD=00000000 | RD=00000000 | DataAdr=000000d8
+# RegWrite=0  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=00  RegSrc=01  ImmSrc=10
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00d4 | Instr=e1a01002 | MW=0 | WD=00000069 | RD=0000004f | DataAdr=00000069
+# RegWrite=1  ALUSrc=0  MemtoReg=0  PCSrc=0  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00d8 | Instr=e5801000 | MW=1 | WD=00000069 | RD=00000069 | DataAdr=00000000
+# RegWrite=0  ALUSrc=1  MemtoReg=1  PCSrc=0  ALUControl=00  RegSrc=10  ImmSrc=01
+# r0..r7  : 00000000 00000069 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00dc | Instr=e1a0f00e | MW=0 | WD=000000c4 | RD=000000d2 | DataAdr=000000c4
+# RegWrite=1  ALUSrc=0  MemtoReg=0  PCSrc=1  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 00000069 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00c4 | Instr=e2811004 | MW=0 | WD=00000000 | RD=000000ec | DataAdr=0000006d
+# RegWrite=1  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=00  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 00000069 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00c8 | Instr=e3a02f69 | MW=0 | WD=00000000 | RD=0000004f | DataAdr=00000069
+# RegWrite=1  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00cc | Instr=e1510002 | MW=0 | WD=00000069 | RD=000000d2 | DataAdr=00000004
+# RegWrite=0  ALUSrc=0  MemtoReg=0  PCSrc=0  ALUControl=01  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00d0 | Instr=da000000 | MW=0 | WD=00000000 | RD=00000000 | DataAdr=000000d8
+# RegWrite=0  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=00  RegSrc=01  ImmSrc=10
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00d4 | Instr=e1a01002 | MW=0 | WD=00000069 | RD=0000004f | DataAdr=00000069
+# RegWrite=1  ALUSrc=0  MemtoReg=0  PCSrc=0  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00d8 | Instr=e5801000 | MW=1 | WD=00000069 | RD=00000069 | DataAdr=00000000
+# RegWrite=0  ALUSrc=1  MemtoReg=1  PCSrc=0  ALUControl=00  RegSrc=10  ImmSrc=01
+# r0..r7  : 00000000 00000069 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00dc | Instr=e1a0f00e | MW=0 | WD=000000c4 | RD=000000d2 | DataAdr=000000c4
+# RegWrite=1  ALUSrc=0  MemtoReg=0  PCSrc=1  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 00000069 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00c4 | Instr=e2811004 | MW=0 | WD=00000000 | RD=000000ec | DataAdr=0000006d
+# RegWrite=1  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=00  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 00000069 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00c8 | Instr=e3a02f69 | MW=0 | WD=00000000 | RD=0000004f | DataAdr=00000069
+# RegWrite=1  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00cc | Instr=e1510002 | MW=0 | WD=00000069 | RD=000000d2 | DataAdr=00000004
+# RegWrite=0  ALUSrc=0  MemtoReg=0  PCSrc=0  ALUControl=01  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00d0 | Instr=da000000 | MW=0 | WD=00000000 | RD=00000000 | DataAdr=000000d8
+# RegWrite=0  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=00  RegSrc=01  ImmSrc=10
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00d4 | Instr=e1a01002 | MW=0 | WD=00000069 | RD=0000004f | DataAdr=00000069
+# RegWrite=1  ALUSrc=0  MemtoReg=0  PCSrc=0  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00d8 | Instr=e5801000 | MW=1 | WD=00000069 | RD=00000069 | DataAdr=00000000
+# RegWrite=0  ALUSrc=1  MemtoReg=1  PCSrc=0  ALUControl=00  RegSrc=10  ImmSrc=01
+# r0..r7  : 00000000 00000069 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00dc | Instr=e1a0f00e | MW=0 | WD=000000c4 | RD=000000d2 | DataAdr=000000c4
+# RegWrite=1  ALUSrc=0  MemtoReg=0  PCSrc=1  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 00000069 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00c4 | Instr=e2811004 | MW=0 | WD=00000000 | RD=000000ec | DataAdr=0000006d
+# RegWrite=1  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=00  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 00000069 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00c8 | Instr=e3a02f69 | MW=0 | WD=00000000 | RD=0000004f | DataAdr=00000069
+# RegWrite=1  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00cc | Instr=e1510002 | MW=0 | WD=00000069 | RD=000000d2 | DataAdr=00000004
+# RegWrite=0  ALUSrc=0  MemtoReg=0  PCSrc=0  ALUControl=01  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00d0 | Instr=da000000 | MW=0 | WD=00000000 | RD=00000000 | DataAdr=000000d8
+# RegWrite=0  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=00  RegSrc=01  ImmSrc=10
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00d4 | Instr=e1a01002 | MW=0 | WD=00000069 | RD=0000004f | DataAdr=00000069
+# RegWrite=1  ALUSrc=0  MemtoReg=0  PCSrc=0  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00d8 | Instr=e5801000 | MW=1 | WD=00000069 | RD=00000069 | DataAdr=00000000
+# RegWrite=0  ALUSrc=1  MemtoReg=1  PCSrc=0  ALUControl=00  RegSrc=10  ImmSrc=01
+# r0..r7  : 00000000 00000069 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00dc | Instr=e1a0f00e | MW=0 | WD=000000c4 | RD=000000d2 | DataAdr=000000c4
+# RegWrite=1  ALUSrc=0  MemtoReg=0  PCSrc=1  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 00000069 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00c4 | Instr=e2811004 | MW=0 | WD=00000000 | RD=000000ec | DataAdr=0000006d
+# RegWrite=1  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=00  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 00000069 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00c8 | Instr=e3a02f69 | MW=0 | WD=00000000 | RD=0000004f | DataAdr=00000069
+# RegWrite=1  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00cc | Instr=e1510002 | MW=0 | WD=00000069 | RD=000000d2 | DataAdr=00000004
+# RegWrite=0  ALUSrc=0  MemtoReg=0  PCSrc=0  ALUControl=01  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00d0 | Instr=da000000 | MW=0 | WD=00000000 | RD=00000000 | DataAdr=000000d8
+# RegWrite=0  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=00  RegSrc=01  ImmSrc=10
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00d4 | Instr=e1a01002 | MW=0 | WD=00000069 | RD=0000004f | DataAdr=00000069
+# RegWrite=1  ALUSrc=0  MemtoReg=0  PCSrc=0  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00d8 | Instr=e5801000 | MW=1 | WD=00000069 | RD=00000069 | DataAdr=00000000
+# RegWrite=0  ALUSrc=1  MemtoReg=1  PCSrc=0  ALUControl=00  RegSrc=10  ImmSrc=01
+# r0..r7  : 00000000 00000069 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00dc | Instr=e1a0f00e | MW=0 | WD=000000c4 | RD=000000d2 | DataAdr=000000c4
+# RegWrite=1  ALUSrc=0  MemtoReg=0  PCSrc=1  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 00000069 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00c4 | Instr=e2811004 | MW=0 | WD=00000000 | RD=000000ec | DataAdr=0000006d
+# RegWrite=1  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=00  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 00000069 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00c8 | Instr=e3a02f69 | MW=0 | WD=00000000 | RD=0000004f | DataAdr=00000069
+# RegWrite=1  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00cc | Instr=e1510002 | MW=0 | WD=00000069 | RD=000000d2 | DataAdr=00000004
+# RegWrite=0  ALUSrc=0  MemtoReg=0  PCSrc=0  ALUControl=01  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00d0 | Instr=da000000 | MW=0 | WD=00000000 | RD=00000000 | DataAdr=000000d8
+# RegWrite=0  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=00  RegSrc=01  ImmSrc=10
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00d4 | Instr=e1a01002 | MW=0 | WD=00000069 | RD=0000004f | DataAdr=00000069
+# RegWrite=1  ALUSrc=0  MemtoReg=0  PCSrc=0  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00d8 | Instr=e5801000 | MW=1 | WD=00000069 | RD=00000069 | DataAdr=00000000
+# RegWrite=0  ALUSrc=1  MemtoReg=1  PCSrc=0  ALUControl=00  RegSrc=10  ImmSrc=01
+# r0..r7  : 00000000 00000069 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00dc | Instr=e1a0f00e | MW=0 | WD=000000c4 | RD=000000d2 | DataAdr=000000c4
+# RegWrite=1  ALUSrc=0  MemtoReg=0  PCSrc=1  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 00000069 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00c4 | Instr=e2811004 | MW=0 | WD=00000000 | RD=000000ec | DataAdr=0000006d
+# RegWrite=1  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=00  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 00000069 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00c8 | Instr=e3a02f69 | MW=0 | WD=00000000 | RD=0000004f | DataAdr=00000069
+# RegWrite=1  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00cc | Instr=e1510002 | MW=0 | WD=00000069 | RD=000000d2 | DataAdr=00000004
+# RegWrite=0  ALUSrc=0  MemtoReg=0  PCSrc=0  ALUControl=01  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00d0 | Instr=da000000 | MW=0 | WD=00000000 | RD=00000000 | DataAdr=000000d8
+# RegWrite=0  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=00  RegSrc=01  ImmSrc=10
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00d4 | Instr=e1a01002 | MW=0 | WD=00000069 | RD=0000004f | DataAdr=00000069
+# RegWrite=1  ALUSrc=0  MemtoReg=0  PCSrc=0  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00d8 | Instr=e5801000 | MW=1 | WD=00000069 | RD=00000069 | DataAdr=00000000
+# RegWrite=0  ALUSrc=1  MemtoReg=1  PCSrc=0  ALUControl=00  RegSrc=10  ImmSrc=01
+# r0..r7  : 00000000 00000069 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00dc | Instr=e1a0f00e | MW=0 | WD=000000c4 | RD=000000d2 | DataAdr=000000c4
+# RegWrite=1  ALUSrc=0  MemtoReg=0  PCSrc=1  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 00000069 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00c4 | Instr=e2811004 | MW=0 | WD=00000000 | RD=000000ec | DataAdr=0000006d
+# RegWrite=1  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=00  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 00000069 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00c8 | Instr=e3a02f69 | MW=0 | WD=00000000 | RD=0000004f | DataAdr=00000069
+# RegWrite=1  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00cc | Instr=e1510002 | MW=0 | WD=00000069 | RD=000000d2 | DataAdr=00000004
+# RegWrite=0  ALUSrc=0  MemtoReg=0  PCSrc=0  ALUControl=01  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00d0 | Instr=da000000 | MW=0 | WD=00000000 | RD=00000000 | DataAdr=000000d8
+# RegWrite=0  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=00  RegSrc=01  ImmSrc=10
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00d4 | Instr=e1a01002 | MW=0 | WD=00000069 | RD=0000004f | DataAdr=00000069
+# RegWrite=1  ALUSrc=0  MemtoReg=0  PCSrc=0  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00d8 | Instr=e5801000 | MW=1 | WD=00000069 | RD=00000069 | DataAdr=00000000
+# RegWrite=0  ALUSrc=1  MemtoReg=1  PCSrc=0  ALUControl=00  RegSrc=10  ImmSrc=01
+# r0..r7  : 00000000 00000069 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00dc | Instr=e1a0f00e | MW=0 | WD=000000c4 | RD=000000d2 | DataAdr=000000c4
+# RegWrite=1  ALUSrc=0  MemtoReg=0  PCSrc=1  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 00000069 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00c4 | Instr=e2811004 | MW=0 | WD=00000000 | RD=000000ec | DataAdr=0000006d
+# RegWrite=1  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=00  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 00000069 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00c8 | Instr=e3a02f69 | MW=0 | WD=00000000 | RD=0000004f | DataAdr=00000069
+# RegWrite=1  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00cc | Instr=e1510002 | MW=0 | WD=00000069 | RD=000000d2 | DataAdr=00000004
+# RegWrite=0  ALUSrc=0  MemtoReg=0  PCSrc=0  ALUControl=01  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00d0 | Instr=da000000 | MW=0 | WD=00000000 | RD=00000000 | DataAdr=000000d8
+# RegWrite=0  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=00  RegSrc=01  ImmSrc=10
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00d4 | Instr=e1a01002 | MW=0 | WD=00000069 | RD=0000004f | DataAdr=00000069
+# RegWrite=1  ALUSrc=0  MemtoReg=0  PCSrc=0  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00d8 | Instr=e5801000 | MW=1 | WD=00000069 | RD=00000069 | DataAdr=00000000
+# RegWrite=0  ALUSrc=1  MemtoReg=1  PCSrc=0  ALUControl=00  RegSrc=10  ImmSrc=01
+# r0..r7  : 00000000 00000069 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00dc | Instr=e1a0f00e | MW=0 | WD=000000c4 | RD=000000d2 | DataAdr=000000c4
+# RegWrite=1  ALUSrc=0  MemtoReg=0  PCSrc=1  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 00000069 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00c4 | Instr=e2811004 | MW=0 | WD=00000000 | RD=000000ec | DataAdr=0000006d
+# RegWrite=1  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=00  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 00000069 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00c8 | Instr=e3a02f69 | MW=0 | WD=00000000 | RD=0000004f | DataAdr=00000069
+# RegWrite=1  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00cc | Instr=e1510002 | MW=0 | WD=00000069 | RD=000000d2 | DataAdr=00000004
+# RegWrite=0  ALUSrc=0  MemtoReg=0  PCSrc=0  ALUControl=01  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00d0 | Instr=da000000 | MW=0 | WD=00000000 | RD=00000000 | DataAdr=000000d8
+# RegWrite=0  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=00  RegSrc=01  ImmSrc=10
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00d4 | Instr=e1a01002 | MW=0 | WD=00000069 | RD=0000004f | DataAdr=00000069
+# RegWrite=1  ALUSrc=0  MemtoReg=0  PCSrc=0  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00d8 | Instr=e5801000 | MW=1 | WD=00000069 | RD=00000069 | DataAdr=00000000
+# RegWrite=0  ALUSrc=1  MemtoReg=1  PCSrc=0  ALUControl=00  RegSrc=10  ImmSrc=01
+# r0..r7  : 00000000 00000069 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00dc | Instr=e1a0f00e | MW=0 | WD=000000c4 | RD=000000d2 | DataAdr=000000c4
+# RegWrite=1  ALUSrc=0  MemtoReg=0  PCSrc=1  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 00000069 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00c4 | Instr=e2811004 | MW=0 | WD=00000000 | RD=000000ec | DataAdr=0000006d
+# RegWrite=1  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=00  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 00000069 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00c8 | Instr=e3a02f69 | MW=0 | WD=00000000 | RD=0000004f | DataAdr=00000069
+# RegWrite=1  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00cc | Instr=e1510002 | MW=0 | WD=00000069 | RD=000000d2 | DataAdr=00000004
+# RegWrite=0  ALUSrc=0  MemtoReg=0  PCSrc=0  ALUControl=01  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00d0 | Instr=da000000 | MW=0 | WD=00000000 | RD=00000000 | DataAdr=000000d8
+# RegWrite=0  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=00  RegSrc=01  ImmSrc=10
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00d4 | Instr=e1a01002 | MW=0 | WD=00000069 | RD=0000004f | DataAdr=00000069
+# RegWrite=1  ALUSrc=0  MemtoReg=0  PCSrc=0  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00d8 | Instr=e5801000 | MW=1 | WD=00000069 | RD=00000069 | DataAdr=00000000
+# RegWrite=0  ALUSrc=1  MemtoReg=1  PCSrc=0  ALUControl=00  RegSrc=10  ImmSrc=01
+# r0..r7  : 00000000 00000069 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00dc | Instr=e1a0f00e | MW=0 | WD=000000c4 | RD=000000d2 | DataAdr=000000c4
+# RegWrite=1  ALUSrc=0  MemtoReg=0  PCSrc=1  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 00000069 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00c4 | Instr=e2811004 | MW=0 | WD=00000000 | RD=000000ec | DataAdr=0000006d
+# RegWrite=1  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=00  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 00000069 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00c8 | Instr=e3a02f69 | MW=0 | WD=00000000 | RD=0000004f | DataAdr=00000069
+# RegWrite=1  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00cc | Instr=e1510002 | MW=0 | WD=00000069 | RD=000000d2 | DataAdr=00000004
+# RegWrite=0  ALUSrc=0  MemtoReg=0  PCSrc=0  ALUControl=01  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00d0 | Instr=da000000 | MW=0 | WD=00000000 | RD=00000000 | DataAdr=000000d8
+# RegWrite=0  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=00  RegSrc=01  ImmSrc=10
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00d4 | Instr=e1a01002 | MW=0 | WD=00000069 | RD=0000004f | DataAdr=00000069
+# RegWrite=1  ALUSrc=0  MemtoReg=0  PCSrc=0  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00d8 | Instr=e5801000 | MW=1 | WD=00000069 | RD=00000069 | DataAdr=00000000
+# RegWrite=0  ALUSrc=1  MemtoReg=1  PCSrc=0  ALUControl=00  RegSrc=10  ImmSrc=01
+# r0..r7  : 00000000 00000069 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00dc | Instr=e1a0f00e | MW=0 | WD=000000c4 | RD=000000d2 | DataAdr=000000c4
+# RegWrite=1  ALUSrc=0  MemtoReg=0  PCSrc=1  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 00000069 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00c4 | Instr=e2811004 | MW=0 | WD=00000000 | RD=000000ec | DataAdr=0000006d
+# RegWrite=1  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=00  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 00000069 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00c8 | Instr=e3a02f69 | MW=0 | WD=00000000 | RD=0000004f | DataAdr=00000069
+# RegWrite=1  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00cc | Instr=e1510002 | MW=0 | WD=00000069 | RD=000000d2 | DataAdr=00000004
+# RegWrite=0  ALUSrc=0  MemtoReg=0  PCSrc=0  ALUControl=01  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00d0 | Instr=da000000 | MW=0 | WD=00000000 | RD=00000000 | DataAdr=000000d8
+# RegWrite=0  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=00  RegSrc=01  ImmSrc=10
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00d4 | Instr=e1a01002 | MW=0 | WD=00000069 | RD=0000004f | DataAdr=00000069
+# RegWrite=1  ALUSrc=0  MemtoReg=0  PCSrc=0  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00d8 | Instr=e5801000 | MW=1 | WD=00000069 | RD=00000069 | DataAdr=00000000
+# RegWrite=0  ALUSrc=1  MemtoReg=1  PCSrc=0  ALUControl=00  RegSrc=10  ImmSrc=01
+# r0..r7  : 00000000 00000069 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00dc | Instr=e1a0f00e | MW=0 | WD=000000c4 | RD=000000d2 | DataAdr=000000c4
+# RegWrite=1  ALUSrc=0  MemtoReg=0  PCSrc=1  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 00000069 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00c4 | Instr=e2811004 | MW=0 | WD=00000000 | RD=000000ec | DataAdr=0000006d
+# RegWrite=1  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=00  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 00000069 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00c8 | Instr=e3a02f69 | MW=0 | WD=00000000 | RD=0000004f | DataAdr=00000069
+# RegWrite=1  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00cc | Instr=e1510002 | MW=0 | WD=00000069 | RD=000000d2 | DataAdr=00000004
+# RegWrite=0  ALUSrc=0  MemtoReg=0  PCSrc=0  ALUControl=01  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00d0 | Instr=da000000 | MW=0 | WD=00000000 | RD=00000000 | DataAdr=000000d8
+# RegWrite=0  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=00  RegSrc=01  ImmSrc=10
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00d4 | Instr=e1a01002 | MW=0 | WD=00000069 | RD=0000004f | DataAdr=00000069
+# RegWrite=1  ALUSrc=0  MemtoReg=0  PCSrc=0  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00d8 | Instr=e5801000 | MW=1 | WD=00000069 | RD=00000069 | DataAdr=00000000
+# RegWrite=0  ALUSrc=1  MemtoReg=1  PCSrc=0  ALUControl=00  RegSrc=10  ImmSrc=01
+# r0..r7  : 00000000 00000069 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00dc | Instr=e1a0f00e | MW=0 | WD=000000c4 | RD=000000d2 | DataAdr=000000c4
+# RegWrite=1  ALUSrc=0  MemtoReg=0  PCSrc=1  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 00000069 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00c4 | Instr=e2811004 | MW=0 | WD=00000000 | RD=000000ec | DataAdr=0000006d
+# RegWrite=1  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=00  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 00000069 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00c8 | Instr=e3a02f69 | MW=0 | WD=00000000 | RD=0000004f | DataAdr=00000069
+# RegWrite=1  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00cc | Instr=e1510002 | MW=0 | WD=00000069 | RD=000000d2 | DataAdr=00000004
+# RegWrite=0  ALUSrc=0  MemtoReg=0  PCSrc=0  ALUControl=01  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00d0 | Instr=da000000 | MW=0 | WD=00000000 | RD=00000000 | DataAdr=000000d8
+# RegWrite=0  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=00  RegSrc=01  ImmSrc=10
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00d4 | Instr=e1a01002 | MW=0 | WD=00000069 | RD=0000004f | DataAdr=00000069
+# RegWrite=1  ALUSrc=0  MemtoReg=0  PCSrc=0  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00d8 | Instr=e5801000 | MW=1 | WD=00000069 | RD=00000069 | DataAdr=00000000
+# RegWrite=0  ALUSrc=1  MemtoReg=1  PCSrc=0  ALUControl=00  RegSrc=10  ImmSrc=01
+# r0..r7  : 00000000 00000069 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00dc | Instr=e1a0f00e | MW=0 | WD=000000c4 | RD=000000d2 | DataAdr=000000c4
+# RegWrite=1  ALUSrc=0  MemtoReg=0  PCSrc=1  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 00000069 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00c4 | Instr=e2811004 | MW=0 | WD=00000000 | RD=000000ec | DataAdr=0000006d
+# RegWrite=1  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=00  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 00000069 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00c8 | Instr=e3a02f69 | MW=0 | WD=00000000 | RD=0000004f | DataAdr=00000069
+# RegWrite=1  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00cc | Instr=e1510002 | MW=0 | WD=00000069 | RD=000000d2 | DataAdr=00000004
+# RegWrite=0  ALUSrc=0  MemtoReg=0  PCSrc=0  ALUControl=01  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00d0 | Instr=da000000 | MW=0 | WD=00000000 | RD=00000000 | DataAdr=000000d8
+# RegWrite=0  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=00  RegSrc=01  ImmSrc=10
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00d4 | Instr=e1a01002 | MW=0 | WD=00000069 | RD=0000004f | DataAdr=00000069
+# RegWrite=1  ALUSrc=0  MemtoReg=0  PCSrc=0  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00d8 | Instr=e5801000 | MW=1 | WD=00000069 | RD=00000069 | DataAdr=00000000
+# RegWrite=0  ALUSrc=1  MemtoReg=1  PCSrc=0  ALUControl=00  RegSrc=10  ImmSrc=01
+# r0..r7  : 00000000 00000069 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00dc | Instr=e1a0f00e | MW=0 | WD=000000c4 | RD=000000d2 | DataAdr=000000c4
+# RegWrite=1  ALUSrc=0  MemtoReg=0  PCSrc=1  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 00000069 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00c4 | Instr=e2811004 | MW=0 | WD=00000000 | RD=000000ec | DataAdr=0000006d
+# RegWrite=1  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=00  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 00000069 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00c8 | Instr=e3a02f69 | MW=0 | WD=00000000 | RD=0000004f | DataAdr=00000069
+# RegWrite=1  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00cc | Instr=e1510002 | MW=0 | WD=00000069 | RD=000000d2 | DataAdr=00000004
+# RegWrite=0  ALUSrc=0  MemtoReg=0  PCSrc=0  ALUControl=01  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00d0 | Instr=da000000 | MW=0 | WD=00000000 | RD=00000000 | DataAdr=000000d8
+# RegWrite=0  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=00  RegSrc=01  ImmSrc=10
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00d4 | Instr=e1a01002 | MW=0 | WD=00000069 | RD=0000004f | DataAdr=00000069
+# RegWrite=1  ALUSrc=0  MemtoReg=0  PCSrc=0  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00d8 | Instr=e5801000 | MW=1 | WD=00000069 | RD=00000069 | DataAdr=00000000
+# RegWrite=0  ALUSrc=1  MemtoReg=1  PCSrc=0  ALUControl=00  RegSrc=10  ImmSrc=01
+# r0..r7  : 00000000 00000069 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00dc | Instr=e1a0f00e | MW=0 | WD=000000c4 | RD=000000d2 | DataAdr=000000c4
+# RegWrite=1  ALUSrc=0  MemtoReg=0  PCSrc=1  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 00000069 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00c4 | Instr=e2811004 | MW=0 | WD=00000000 | RD=000000ec | DataAdr=0000006d
+# RegWrite=1  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=00  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 00000069 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00c8 | Instr=e3a02f69 | MW=0 | WD=00000000 | RD=0000004f | DataAdr=00000069
+# RegWrite=1  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00cc | Instr=e1510002 | MW=0 | WD=00000069 | RD=000000d2 | DataAdr=00000004
+# RegWrite=0  ALUSrc=0  MemtoReg=0  PCSrc=0  ALUControl=01  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00d0 | Instr=da000000 | MW=0 | WD=00000000 | RD=00000000 | DataAdr=000000d8
+# RegWrite=0  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=00  RegSrc=01  ImmSrc=10
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00d4 | Instr=e1a01002 | MW=0 | WD=00000069 | RD=0000004f | DataAdr=00000069
+# RegWrite=1  ALUSrc=0  MemtoReg=0  PCSrc=0  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00d8 | Instr=e5801000 | MW=1 | WD=00000069 | RD=00000069 | DataAdr=00000000
+# RegWrite=0  ALUSrc=1  MemtoReg=1  PCSrc=0  ALUControl=00  RegSrc=10  ImmSrc=01
+# r0..r7  : 00000000 00000069 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00dc | Instr=e1a0f00e | MW=0 | WD=000000c4 | RD=000000d2 | DataAdr=000000c4
+# RegWrite=1  ALUSrc=0  MemtoReg=0  PCSrc=1  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 00000069 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00c4 | Instr=e2811004 | MW=0 | WD=00000000 | RD=000000ec | DataAdr=0000006d
+# RegWrite=1  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=00  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 00000069 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00c8 | Instr=e3a02f69 | MW=0 | WD=00000000 | RD=0000004f | DataAdr=00000069
+# RegWrite=1  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00cc | Instr=e1510002 | MW=0 | WD=00000069 | RD=000000d2 | DataAdr=00000004
+# RegWrite=0  ALUSrc=0  MemtoReg=0  PCSrc=0  ALUControl=01  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00d0 | Instr=da000000 | MW=0 | WD=00000000 | RD=00000000 | DataAdr=000000d8
+# RegWrite=0  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=00  RegSrc=01  ImmSrc=10
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00d4 | Instr=e1a01002 | MW=0 | WD=00000069 | RD=0000004f | DataAdr=00000069
+# RegWrite=1  ALUSrc=0  MemtoReg=0  PCSrc=0  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00d8 | Instr=e5801000 | MW=1 | WD=00000069 | RD=00000069 | DataAdr=00000000
+# RegWrite=0  ALUSrc=1  MemtoReg=1  PCSrc=0  ALUControl=00  RegSrc=10  ImmSrc=01
+# r0..r7  : 00000000 00000069 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00dc | Instr=e1a0f00e | MW=0 | WD=000000c4 | RD=000000d2 | DataAdr=000000c4
+# RegWrite=1  ALUSrc=0  MemtoReg=0  PCSrc=1  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 00000069 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00c4 | Instr=e2811004 | MW=0 | WD=00000000 | RD=000000ec | DataAdr=0000006d
+# RegWrite=1  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=00  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 00000069 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00c8 | Instr=e3a02f69 | MW=0 | WD=00000000 | RD=0000004f | DataAdr=00000069
+# RegWrite=1  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00cc | Instr=e1510002 | MW=0 | WD=00000069 | RD=000000d2 | DataAdr=00000004
+# RegWrite=0  ALUSrc=0  MemtoReg=0  PCSrc=0  ALUControl=01  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00d0 | Instr=da000000 | MW=0 | WD=00000000 | RD=00000000 | DataAdr=000000d8
+# RegWrite=0  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=00  RegSrc=01  ImmSrc=10
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00d4 | Instr=e1a01002 | MW=0 | WD=00000069 | RD=0000004f | DataAdr=00000069
+# RegWrite=1  ALUSrc=0  MemtoReg=0  PCSrc=0  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00d8 | Instr=e5801000 | MW=1 | WD=00000069 | RD=00000069 | DataAdr=00000000
+# RegWrite=0  ALUSrc=1  MemtoReg=1  PCSrc=0  ALUControl=00  RegSrc=10  ImmSrc=01
+# r0..r7  : 00000000 00000069 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00dc | Instr=e1a0f00e | MW=0 | WD=000000c4 | RD=000000d2 | DataAdr=000000c4
+# RegWrite=1  ALUSrc=0  MemtoReg=0  PCSrc=1  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 00000069 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00c4 | Instr=e2811004 | MW=0 | WD=00000000 | RD=000000ec | DataAdr=0000006d
+# RegWrite=1  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=00  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 00000069 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00c8 | Instr=e3a02f69 | MW=0 | WD=00000000 | RD=0000004f | DataAdr=00000069
+# RegWrite=1  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00cc | Instr=e1510002 | MW=0 | WD=00000069 | RD=000000d2 | DataAdr=00000004
+# RegWrite=0  ALUSrc=0  MemtoReg=0  PCSrc=0  ALUControl=01  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00d0 | Instr=da000000 | MW=0 | WD=00000000 | RD=00000000 | DataAdr=000000d8
+# RegWrite=0  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=00  RegSrc=01  ImmSrc=10
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00d4 | Instr=e1a01002 | MW=0 | WD=00000069 | RD=0000004f | DataAdr=00000069
+# RegWrite=1  ALUSrc=0  MemtoReg=0  PCSrc=0  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00d8 | Instr=e5801000 | MW=1 | WD=00000069 | RD=00000069 | DataAdr=00000000
+# RegWrite=0  ALUSrc=1  MemtoReg=1  PCSrc=0  ALUControl=00  RegSrc=10  ImmSrc=01
+# r0..r7  : 00000000 00000069 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00dc | Instr=e1a0f00e | MW=0 | WD=000000c4 | RD=000000d2 | DataAdr=000000c4
+# RegWrite=1  ALUSrc=0  MemtoReg=0  PCSrc=1  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 00000069 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00c4 | Instr=e2811004 | MW=0 | WD=00000000 | RD=000000ec | DataAdr=0000006d
+# RegWrite=1  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=00  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 00000069 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00c8 | Instr=e3a02f69 | MW=0 | WD=00000000 | RD=0000004f | DataAdr=00000069
+# RegWrite=1  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00cc | Instr=e1510002 | MW=0 | WD=00000069 | RD=000000d2 | DataAdr=00000004
+# RegWrite=0  ALUSrc=0  MemtoReg=0  PCSrc=0  ALUControl=01  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00d0 | Instr=da000000 | MW=0 | WD=00000000 | RD=00000000 | DataAdr=000000d8
+# RegWrite=0  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=00  RegSrc=01  ImmSrc=10
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00d4 | Instr=e1a01002 | MW=0 | WD=00000069 | RD=0000004f | DataAdr=00000069
+# RegWrite=1  ALUSrc=0  MemtoReg=0  PCSrc=0  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00d8 | Instr=e5801000 | MW=1 | WD=00000069 | RD=00000069 | DataAdr=00000000
+# RegWrite=0  ALUSrc=1  MemtoReg=1  PCSrc=0  ALUControl=00  RegSrc=10  ImmSrc=01
+# r0..r7  : 00000000 00000069 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00dc | Instr=e1a0f00e | MW=0 | WD=000000c4 | RD=000000d2 | DataAdr=000000c4
+# RegWrite=1  ALUSrc=0  MemtoReg=0  PCSrc=1  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 00000069 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00c4 | Instr=e2811004 | MW=0 | WD=00000000 | RD=000000ec | DataAdr=0000006d
+# RegWrite=1  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=00  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 00000069 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00c8 | Instr=e3a02f69 | MW=0 | WD=00000000 | RD=0000004f | DataAdr=00000069
+# RegWrite=1  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00cc | Instr=e1510002 | MW=0 | WD=00000069 | RD=000000d2 | DataAdr=00000004
+# RegWrite=0  ALUSrc=0  MemtoReg=0  PCSrc=0  ALUControl=01  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00d0 | Instr=da000000 | MW=0 | WD=00000000 | RD=00000000 | DataAdr=000000d8
+# RegWrite=0  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=00  RegSrc=01  ImmSrc=10
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00d4 | Instr=e1a01002 | MW=0 | WD=00000069 | RD=0000004f | DataAdr=00000069
+# RegWrite=1  ALUSrc=0  MemtoReg=0  PCSrc=0  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00d8 | Instr=e5801000 | MW=1 | WD=00000069 | RD=00000069 | DataAdr=00000000
+# RegWrite=0  ALUSrc=1  MemtoReg=1  PCSrc=0  ALUControl=00  RegSrc=10  ImmSrc=01
+# r0..r7  : 00000000 00000069 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00dc | Instr=e1a0f00e | MW=0 | WD=000000c4 | RD=000000d2 | DataAdr=000000c4
+# RegWrite=1  ALUSrc=0  MemtoReg=0  PCSrc=1  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 00000069 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00c4 | Instr=e2811004 | MW=0 | WD=00000000 | RD=000000ec | DataAdr=0000006d
+# RegWrite=1  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=00  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 00000069 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00c8 | Instr=e3a02f69 | MW=0 | WD=00000000 | RD=0000004f | DataAdr=00000069
+# RegWrite=1  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00cc | Instr=e1510002 | MW=0 | WD=00000069 | RD=000000d2 | DataAdr=00000004
+# RegWrite=0  ALUSrc=0  MemtoReg=0  PCSrc=0  ALUControl=01  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00d0 | Instr=da000000 | MW=0 | WD=00000000 | RD=00000000 | DataAdr=000000d8
+# RegWrite=0  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=00  RegSrc=01  ImmSrc=10
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00d4 | Instr=e1a01002 | MW=0 | WD=00000069 | RD=0000004f | DataAdr=00000069
+# RegWrite=1  ALUSrc=0  MemtoReg=0  PCSrc=0  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00d8 | Instr=e5801000 | MW=1 | WD=00000069 | RD=00000069 | DataAdr=00000000
+# RegWrite=0  ALUSrc=1  MemtoReg=1  PCSrc=0  ALUControl=00  RegSrc=10  ImmSrc=01
+# r0..r7  : 00000000 00000069 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00dc | Instr=e1a0f00e | MW=0 | WD=000000c4 | RD=000000d2 | DataAdr=000000c4
+# RegWrite=1  ALUSrc=0  MemtoReg=0  PCSrc=1  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 00000069 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00c4 | Instr=e2811004 | MW=0 | WD=00000000 | RD=000000ec | DataAdr=0000006d
+# RegWrite=1  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=00  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 00000069 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00c8 | Instr=e3a02f69 | MW=0 | WD=00000000 | RD=0000004f | DataAdr=00000069
+# RegWrite=1  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00cc | Instr=e1510002 | MW=0 | WD=00000069 | RD=000000d2 | DataAdr=00000004
+# RegWrite=0  ALUSrc=0  MemtoReg=0  PCSrc=0  ALUControl=01  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00d0 | Instr=da000000 | MW=0 | WD=00000000 | RD=00000000 | DataAdr=000000d8
+# RegWrite=0  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=00  RegSrc=01  ImmSrc=10
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00d4 | Instr=e1a01002 | MW=0 | WD=00000069 | RD=0000004f | DataAdr=00000069
+# RegWrite=1  ALUSrc=0  MemtoReg=0  PCSrc=0  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00d8 | Instr=e5801000 | MW=1 | WD=00000069 | RD=00000069 | DataAdr=00000000
+# RegWrite=0  ALUSrc=1  MemtoReg=1  PCSrc=0  ALUControl=00  RegSrc=10  ImmSrc=01
+# r0..r7  : 00000000 00000069 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00dc | Instr=e1a0f00e | MW=0 | WD=000000c4 | RD=000000d2 | DataAdr=000000c4
+# RegWrite=1  ALUSrc=0  MemtoReg=0  PCSrc=1  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 00000069 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00c4 | Instr=e2811004 | MW=0 | WD=00000000 | RD=000000ec | DataAdr=0000006d
+# RegWrite=1  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=00  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 00000069 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00c8 | Instr=e3a02f69 | MW=0 | WD=00000000 | RD=0000004f | DataAdr=00000069
+# RegWrite=1  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00cc | Instr=e1510002 | MW=0 | WD=00000069 | RD=000000d2 | DataAdr=00000004
+# RegWrite=0  ALUSrc=0  MemtoReg=0  PCSrc=0  ALUControl=01  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00d0 | Instr=da000000 | MW=0 | WD=00000000 | RD=00000000 | DataAdr=000000d8
+# RegWrite=0  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=00  RegSrc=01  ImmSrc=10
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00d4 | Instr=e1a01002 | MW=0 | WD=00000069 | RD=0000004f | DataAdr=00000069
+# RegWrite=1  ALUSrc=0  MemtoReg=0  PCSrc=0  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00d8 | Instr=e5801000 | MW=1 | WD=00000069 | RD=00000069 | DataAdr=00000000
+# RegWrite=0  ALUSrc=1  MemtoReg=1  PCSrc=0  ALUControl=00  RegSrc=10  ImmSrc=01
+# r0..r7  : 00000000 00000069 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00dc | Instr=e1a0f00e | MW=0 | WD=000000c4 | RD=000000d2 | DataAdr=000000c4
+# RegWrite=1  ALUSrc=0  MemtoReg=0  PCSrc=1  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 00000069 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00c4 | Instr=e2811004 | MW=0 | WD=00000000 | RD=000000ec | DataAdr=0000006d
+# RegWrite=1  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=00  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 00000069 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00c8 | Instr=e3a02f69 | MW=0 | WD=00000000 | RD=0000004f | DataAdr=00000069
+# RegWrite=1  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00cc | Instr=e1510002 | MW=0 | WD=00000069 | RD=000000d2 | DataAdr=00000004
+# RegWrite=0  ALUSrc=0  MemtoReg=0  PCSrc=0  ALUControl=01  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00d0 | Instr=da000000 | MW=0 | WD=00000000 | RD=00000000 | DataAdr=000000d8
+# RegWrite=0  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=00  RegSrc=01  ImmSrc=10
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00d4 | Instr=e1a01002 | MW=0 | WD=00000069 | RD=0000004f | DataAdr=00000069
+# RegWrite=1  ALUSrc=0  MemtoReg=0  PCSrc=0  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00d8 | Instr=e5801000 | MW=1 | WD=00000069 | RD=00000069 | DataAdr=00000000
+# RegWrite=0  ALUSrc=1  MemtoReg=1  PCSrc=0  ALUControl=00  RegSrc=10  ImmSrc=01
+# r0..r7  : 00000000 00000069 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00dc | Instr=e1a0f00e | MW=0 | WD=000000c4 | RD=000000d2 | DataAdr=000000c4
+# RegWrite=1  ALUSrc=0  MemtoReg=0  PCSrc=1  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 00000069 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00c4 | Instr=e2811004 | MW=0 | WD=00000000 | RD=000000ec | DataAdr=0000006d
+# RegWrite=1  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=00  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 00000069 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00c8 | Instr=e3a02f69 | MW=0 | WD=00000000 | RD=0000004f | DataAdr=00000069
+# RegWrite=1  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00cc | Instr=e1510002 | MW=0 | WD=00000069 | RD=000000d2 | DataAdr=00000004
+# RegWrite=0  ALUSrc=0  MemtoReg=0  PCSrc=0  ALUControl=01  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00d0 | Instr=da000000 | MW=0 | WD=00000000 | RD=00000000 | DataAdr=000000d8
+# RegWrite=0  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=00  RegSrc=01  ImmSrc=10
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00d4 | Instr=e1a01002 | MW=0 | WD=00000069 | RD=0000004f | DataAdr=00000069
+# RegWrite=1  ALUSrc=0  MemtoReg=0  PCSrc=0  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00d8 | Instr=e5801000 | MW=1 | WD=00000069 | RD=00000069 | DataAdr=00000000
+# RegWrite=0  ALUSrc=1  MemtoReg=1  PCSrc=0  ALUControl=00  RegSrc=10  ImmSrc=01
+# r0..r7  : 00000000 00000069 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00dc | Instr=e1a0f00e | MW=0 | WD=000000c4 | RD=000000d2 | DataAdr=000000c4
+# RegWrite=1  ALUSrc=0  MemtoReg=0  PCSrc=1  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 00000069 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00c4 | Instr=e2811004 | MW=0 | WD=00000000 | RD=000000ec | DataAdr=0000006d
+# RegWrite=1  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=00  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 00000069 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00c8 | Instr=e3a02f69 | MW=0 | WD=00000000 | RD=0000004f | DataAdr=00000069
+# RegWrite=1  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00cc | Instr=e1510002 | MW=0 | WD=00000069 | RD=000000d2 | DataAdr=00000004
+# RegWrite=0  ALUSrc=0  MemtoReg=0  PCSrc=0  ALUControl=01  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00d0 | Instr=da000000 | MW=0 | WD=00000000 | RD=00000000 | DataAdr=000000d8
+# RegWrite=0  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=00  RegSrc=01  ImmSrc=10
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00d4 | Instr=e1a01002 | MW=0 | WD=00000069 | RD=0000004f | DataAdr=00000069
+# RegWrite=1  ALUSrc=0  MemtoReg=0  PCSrc=0  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00d8 | Instr=e5801000 | MW=1 | WD=00000069 | RD=00000069 | DataAdr=00000000
+# RegWrite=0  ALUSrc=1  MemtoReg=1  PCSrc=0  ALUControl=00  RegSrc=10  ImmSrc=01
+# r0..r7  : 00000000 00000069 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00dc | Instr=e1a0f00e | MW=0 | WD=000000c4 | RD=000000d2 | DataAdr=000000c4
+# RegWrite=1  ALUSrc=0  MemtoReg=0  PCSrc=1  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 00000069 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00c4 | Instr=e2811004 | MW=0 | WD=00000000 | RD=000000ec | DataAdr=0000006d
+# RegWrite=1  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=00  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 00000069 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00c8 | Instr=e3a02f69 | MW=0 | WD=00000000 | RD=0000004f | DataAdr=00000069
+# RegWrite=1  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00cc | Instr=e1510002 | MW=0 | WD=00000069 | RD=000000d2 | DataAdr=00000004
+# RegWrite=0  ALUSrc=0  MemtoReg=0  PCSrc=0  ALUControl=01  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00d0 | Instr=da000000 | MW=0 | WD=00000000 | RD=00000000 | DataAdr=000000d8
+# RegWrite=0  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=00  RegSrc=01  ImmSrc=10
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00d4 | Instr=e1a01002 | MW=0 | WD=00000069 | RD=0000004f | DataAdr=00000069
+# RegWrite=1  ALUSrc=0  MemtoReg=0  PCSrc=0  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00d8 | Instr=e5801000 | MW=1 | WD=00000069 | RD=00000069 | DataAdr=00000000
+# RegWrite=0  ALUSrc=1  MemtoReg=1  PCSrc=0  ALUControl=00  RegSrc=10  ImmSrc=01
+# r0..r7  : 00000000 00000069 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00dc | Instr=e1a0f00e | MW=0 | WD=000000c4 | RD=000000d2 | DataAdr=000000c4
+# RegWrite=1  ALUSrc=0  MemtoReg=0  PCSrc=1  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 00000069 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00c4 | Instr=e2811004 | MW=0 | WD=00000000 | RD=000000ec | DataAdr=0000006d
+# RegWrite=1  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=00  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 00000069 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00c8 | Instr=e3a02f69 | MW=0 | WD=00000000 | RD=0000004f | DataAdr=00000069
+# RegWrite=1  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00cc | Instr=e1510002 | MW=0 | WD=00000069 | RD=000000d2 | DataAdr=00000004
+# RegWrite=0  ALUSrc=0  MemtoReg=0  PCSrc=0  ALUControl=01  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00d0 | Instr=da000000 | MW=0 | WD=00000000 | RD=00000000 | DataAdr=000000d8
+# RegWrite=0  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=00  RegSrc=01  ImmSrc=10
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00d4 | Instr=e1a01002 | MW=0 | WD=00000069 | RD=0000004f | DataAdr=00000069
+# RegWrite=1  ALUSrc=0  MemtoReg=0  PCSrc=0  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00d8 | Instr=e5801000 | MW=1 | WD=00000069 | RD=00000069 | DataAdr=00000000
+# RegWrite=0  ALUSrc=1  MemtoReg=1  PCSrc=0  ALUControl=00  RegSrc=10  ImmSrc=01
+# r0..r7  : 00000000 00000069 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00dc | Instr=e1a0f00e | MW=0 | WD=000000c4 | RD=000000d2 | DataAdr=000000c4
+# RegWrite=1  ALUSrc=0  MemtoReg=0  PCSrc=1  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 00000069 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00c4 | Instr=e2811004 | MW=0 | WD=00000000 | RD=000000ec | DataAdr=0000006d
+# RegWrite=1  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=00  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 00000069 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00c8 | Instr=e3a02f69 | MW=0 | WD=00000000 | RD=0000004f | DataAdr=00000069
+# RegWrite=1  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00cc | Instr=e1510002 | MW=0 | WD=00000069 | RD=000000d2 | DataAdr=00000004
+# RegWrite=0  ALUSrc=0  MemtoReg=0  PCSrc=0  ALUControl=01  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00d0 | Instr=da000000 | MW=0 | WD=00000000 | RD=00000000 | DataAdr=000000d8
+# RegWrite=0  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=00  RegSrc=01  ImmSrc=10
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00d4 | Instr=e1a01002 | MW=0 | WD=00000069 | RD=0000004f | DataAdr=00000069
+# RegWrite=1  ALUSrc=0  MemtoReg=0  PCSrc=0  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00d8 | Instr=e5801000 | MW=1 | WD=00000069 | RD=00000069 | DataAdr=00000000
+# RegWrite=0  ALUSrc=1  MemtoReg=1  PCSrc=0  ALUControl=00  RegSrc=10  ImmSrc=01
+# r0..r7  : 00000000 00000069 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00dc | Instr=e1a0f00e | MW=0 | WD=000000c4 | RD=000000d2 | DataAdr=000000c4
+# RegWrite=1  ALUSrc=0  MemtoReg=0  PCSrc=1  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 00000069 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00c4 | Instr=e2811004 | MW=0 | WD=00000000 | RD=000000ec | DataAdr=0000006d
+# RegWrite=1  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=00  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 00000069 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00c8 | Instr=e3a02f69 | MW=0 | WD=00000000 | RD=0000004f | DataAdr=00000069
+# RegWrite=1  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00cc | Instr=e1510002 | MW=0 | WD=00000069 | RD=000000d2 | DataAdr=00000004
+# RegWrite=0  ALUSrc=0  MemtoReg=0  PCSrc=0  ALUControl=01  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00d0 | Instr=da000000 | MW=0 | WD=00000000 | RD=00000000 | DataAdr=000000d8
+# RegWrite=0  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=00  RegSrc=01  ImmSrc=10
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00d4 | Instr=e1a01002 | MW=0 | WD=00000069 | RD=0000004f | DataAdr=00000069
+# RegWrite=1  ALUSrc=0  MemtoReg=0  PCSrc=0  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00d8 | Instr=e5801000 | MW=1 | WD=00000069 | RD=00000069 | DataAdr=00000000
+# RegWrite=0  ALUSrc=1  MemtoReg=1  PCSrc=0  ALUControl=00  RegSrc=10  ImmSrc=01
+# r0..r7  : 00000000 00000069 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00dc | Instr=e1a0f00e | MW=0 | WD=000000c4 | RD=000000d2 | DataAdr=000000c4
+# RegWrite=1  ALUSrc=0  MemtoReg=0  PCSrc=1  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 00000069 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00c4 | Instr=e2811004 | MW=0 | WD=00000000 | RD=000000ec | DataAdr=0000006d
+# RegWrite=1  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=00  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 00000069 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00c8 | Instr=e3a02f69 | MW=0 | WD=00000000 | RD=0000004f | DataAdr=00000069
+# RegWrite=1  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00cc | Instr=e1510002 | MW=0 | WD=00000069 | RD=000000d2 | DataAdr=00000004
+# RegWrite=0  ALUSrc=0  MemtoReg=0  PCSrc=0  ALUControl=01  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00d0 | Instr=da000000 | MW=0 | WD=00000000 | RD=00000000 | DataAdr=000000d8
+# RegWrite=0  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=00  RegSrc=01  ImmSrc=10
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00d4 | Instr=e1a01002 | MW=0 | WD=00000069 | RD=0000004f | DataAdr=00000069
+# RegWrite=1  ALUSrc=0  MemtoReg=0  PCSrc=0  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00d8 | Instr=e5801000 | MW=1 | WD=00000069 | RD=00000069 | DataAdr=00000000
+# RegWrite=0  ALUSrc=1  MemtoReg=1  PCSrc=0  ALUControl=00  RegSrc=10  ImmSrc=01
+# r0..r7  : 00000000 00000069 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00dc | Instr=e1a0f00e | MW=0 | WD=000000c4 | RD=000000d2 | DataAdr=000000c4
+# RegWrite=1  ALUSrc=0  MemtoReg=0  PCSrc=1  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 00000069 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00c4 | Instr=e2811004 | MW=0 | WD=00000000 | RD=000000ec | DataAdr=0000006d
+# RegWrite=1  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=00  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 00000069 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00c8 | Instr=e3a02f69 | MW=0 | WD=00000000 | RD=0000004f | DataAdr=00000069
+# RegWrite=1  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00cc | Instr=e1510002 | MW=0 | WD=00000069 | RD=000000d2 | DataAdr=00000004
+# RegWrite=0  ALUSrc=0  MemtoReg=0  PCSrc=0  ALUControl=01  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00d0 | Instr=da000000 | MW=0 | WD=00000000 | RD=00000000 | DataAdr=000000d8
+# RegWrite=0  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=00  RegSrc=01  ImmSrc=10
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00d4 | Instr=e1a01002 | MW=0 | WD=00000069 | RD=0000004f | DataAdr=00000069
+# RegWrite=1  ALUSrc=0  MemtoReg=0  PCSrc=0  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00d8 | Instr=e5801000 | MW=1 | WD=00000069 | RD=00000069 | DataAdr=00000000
+# RegWrite=0  ALUSrc=1  MemtoReg=1  PCSrc=0  ALUControl=00  RegSrc=10  ImmSrc=01
+# r0..r7  : 00000000 00000069 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00dc | Instr=e1a0f00e | MW=0 | WD=000000c4 | RD=000000d2 | DataAdr=000000c4
+# RegWrite=1  ALUSrc=0  MemtoReg=0  PCSrc=1  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 00000069 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00c4 | Instr=e2811004 | MW=0 | WD=00000000 | RD=000000ec | DataAdr=0000006d
+# RegWrite=1  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=00  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 00000069 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00c8 | Instr=e3a02f69 | MW=0 | WD=00000000 | RD=0000004f | DataAdr=00000069
+# RegWrite=1  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00cc | Instr=e1510002 | MW=0 | WD=00000069 | RD=000000d2 | DataAdr=00000004
+# RegWrite=0  ALUSrc=0  MemtoReg=0  PCSrc=0  ALUControl=01  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00d0 | Instr=da000000 | MW=0 | WD=00000000 | RD=00000000 | DataAdr=000000d8
+# RegWrite=0  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=00  RegSrc=01  ImmSrc=10
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00d4 | Instr=e1a01002 | MW=0 | WD=00000069 | RD=0000004f | DataAdr=00000069
+# RegWrite=1  ALUSrc=0  MemtoReg=0  PCSrc=0  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00d8 | Instr=e5801000 | MW=1 | WD=00000069 | RD=00000069 | DataAdr=00000000
+# RegWrite=0  ALUSrc=1  MemtoReg=1  PCSrc=0  ALUControl=00  RegSrc=10  ImmSrc=01
+# r0..r7  : 00000000 00000069 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00dc | Instr=e1a0f00e | MW=0 | WD=000000c4 | RD=000000d2 | DataAdr=000000c4
+# RegWrite=1  ALUSrc=0  MemtoReg=0  PCSrc=1  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 00000069 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00c4 | Instr=e2811004 | MW=0 | WD=00000000 | RD=000000ec | DataAdr=0000006d
+# RegWrite=1  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=00  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 00000069 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00c8 | Instr=e3a02f69 | MW=0 | WD=00000000 | RD=0000004f | DataAdr=00000069
+# RegWrite=1  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00cc | Instr=e1510002 | MW=0 | WD=00000069 | RD=000000d2 | DataAdr=00000004
+# RegWrite=0  ALUSrc=0  MemtoReg=0  PCSrc=0  ALUControl=01  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00d0 | Instr=da000000 | MW=0 | WD=00000000 | RD=00000000 | DataAdr=000000d8
+# RegWrite=0  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=00  RegSrc=01  ImmSrc=10
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00d4 | Instr=e1a01002 | MW=0 | WD=00000069 | RD=0000004f | DataAdr=00000069
+# RegWrite=1  ALUSrc=0  MemtoReg=0  PCSrc=0  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00d8 | Instr=e5801000 | MW=1 | WD=00000069 | RD=00000069 | DataAdr=00000000
+# RegWrite=0  ALUSrc=1  MemtoReg=1  PCSrc=0  ALUControl=00  RegSrc=10  ImmSrc=01
+# r0..r7  : 00000000 00000069 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00dc | Instr=e1a0f00e | MW=0 | WD=000000c4 | RD=000000d2 | DataAdr=000000c4
+# RegWrite=1  ALUSrc=0  MemtoReg=0  PCSrc=1  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 00000069 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00c4 | Instr=e2811004 | MW=0 | WD=00000000 | RD=000000ec | DataAdr=0000006d
+# RegWrite=1  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=00  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 00000069 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00c8 | Instr=e3a02f69 | MW=0 | WD=00000000 | RD=0000004f | DataAdr=00000069
+# RegWrite=1  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00cc | Instr=e1510002 | MW=0 | WD=00000069 | RD=000000d2 | DataAdr=00000004
+# RegWrite=0  ALUSrc=0  MemtoReg=0  PCSrc=0  ALUControl=01  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00d0 | Instr=da000000 | MW=0 | WD=00000000 | RD=00000000 | DataAdr=000000d8
+# RegWrite=0  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=00  RegSrc=01  ImmSrc=10
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00d4 | Instr=e1a01002 | MW=0 | WD=00000069 | RD=0000004f | DataAdr=00000069
+# RegWrite=1  ALUSrc=0  MemtoReg=0  PCSrc=0  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00d8 | Instr=e5801000 | MW=1 | WD=00000069 | RD=00000069 | DataAdr=00000000
+# RegWrite=0  ALUSrc=1  MemtoReg=1  PCSrc=0  ALUControl=00  RegSrc=10  ImmSrc=01
+# r0..r7  : 00000000 00000069 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00dc | Instr=e1a0f00e | MW=0 | WD=000000c4 | RD=000000d2 | DataAdr=000000c4
+# RegWrite=1  ALUSrc=0  MemtoReg=0  PCSrc=1  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 00000069 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00c4 | Instr=e2811004 | MW=0 | WD=00000000 | RD=000000ec | DataAdr=0000006d
+# RegWrite=1  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=00  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 00000069 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00c8 | Instr=e3a02f69 | MW=0 | WD=00000000 | RD=0000004f | DataAdr=00000069
+# RegWrite=1  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00cc | Instr=e1510002 | MW=0 | WD=00000069 | RD=000000d2 | DataAdr=00000004
+# RegWrite=0  ALUSrc=0  MemtoReg=0  PCSrc=0  ALUControl=01  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00d0 | Instr=da000000 | MW=0 | WD=00000000 | RD=00000000 | DataAdr=000000d8
+# RegWrite=0  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=00  RegSrc=01  ImmSrc=10
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00d4 | Instr=e1a01002 | MW=0 | WD=00000069 | RD=0000004f | DataAdr=00000069
+# RegWrite=1  ALUSrc=0  MemtoReg=0  PCSrc=0  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00d8 | Instr=e5801000 | MW=1 | WD=00000069 | RD=00000069 | DataAdr=00000000
+# RegWrite=0  ALUSrc=1  MemtoReg=1  PCSrc=0  ALUControl=00  RegSrc=10  ImmSrc=01
+# r0..r7  : 00000000 00000069 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00dc | Instr=e1a0f00e | MW=0 | WD=000000c4 | RD=000000d2 | DataAdr=000000c4
+# RegWrite=1  ALUSrc=0  MemtoReg=0  PCSrc=1  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 00000069 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00c4 | Instr=e2811004 | MW=0 | WD=00000000 | RD=000000ec | DataAdr=0000006d
+# RegWrite=1  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=00  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 00000069 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00c8 | Instr=e3a02f69 | MW=0 | WD=00000000 | RD=0000004f | DataAdr=00000069
+# RegWrite=1  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00cc | Instr=e1510002 | MW=0 | WD=00000069 | RD=000000d2 | DataAdr=00000004
+# RegWrite=0  ALUSrc=0  MemtoReg=0  PCSrc=0  ALUControl=01  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00d0 | Instr=da000000 | MW=0 | WD=00000000 | RD=00000000 | DataAdr=000000d8
+# RegWrite=0  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=00  RegSrc=01  ImmSrc=10
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00d4 | Instr=e1a01002 | MW=0 | WD=00000069 | RD=0000004f | DataAdr=00000069
+# RegWrite=1  ALUSrc=0  MemtoReg=0  PCSrc=0  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00d8 | Instr=e5801000 | MW=1 | WD=00000069 | RD=00000069 | DataAdr=00000000
+# RegWrite=0  ALUSrc=1  MemtoReg=1  PCSrc=0  ALUControl=00  RegSrc=10  ImmSrc=01
+# r0..r7  : 00000000 00000069 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00dc | Instr=e1a0f00e | MW=0 | WD=000000c4 | RD=000000d2 | DataAdr=000000c4
+# RegWrite=1  ALUSrc=0  MemtoReg=0  PCSrc=1  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 00000069 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00c4 | Instr=e2811004 | MW=0 | WD=00000000 | RD=000000ec | DataAdr=0000006d
+# RegWrite=1  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=00  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 00000069 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00c8 | Instr=e3a02f69 | MW=0 | WD=00000000 | RD=0000004f | DataAdr=00000069
+# RegWrite=1  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00cc | Instr=e1510002 | MW=0 | WD=00000069 | RD=000000d2 | DataAdr=00000004
+# RegWrite=0  ALUSrc=0  MemtoReg=0  PCSrc=0  ALUControl=01  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00d0 | Instr=da000000 | MW=0 | WD=00000000 | RD=00000000 | DataAdr=000000d8
+# RegWrite=0  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=00  RegSrc=01  ImmSrc=10
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00d4 | Instr=e1a01002 | MW=0 | WD=00000069 | RD=0000004f | DataAdr=00000069
+# RegWrite=1  ALUSrc=0  MemtoReg=0  PCSrc=0  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00d8 | Instr=e5801000 | MW=1 | WD=00000069 | RD=00000069 | DataAdr=00000000
+# RegWrite=0  ALUSrc=1  MemtoReg=1  PCSrc=0  ALUControl=00  RegSrc=10  ImmSrc=01
+# r0..r7  : 00000000 00000069 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00dc | Instr=e1a0f00e | MW=0 | WD=000000c4 | RD=000000d2 | DataAdr=000000c4
+# RegWrite=1  ALUSrc=0  MemtoReg=0  PCSrc=1  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 00000069 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00c4 | Instr=e2811004 | MW=0 | WD=00000000 | RD=000000ec | DataAdr=0000006d
+# RegWrite=1  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=00  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 00000069 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00c8 | Instr=e3a02f69 | MW=0 | WD=00000000 | RD=0000004f | DataAdr=00000069
+# RegWrite=1  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00cc | Instr=e1510002 | MW=0 | WD=00000069 | RD=000000d2 | DataAdr=00000004
+# RegWrite=0  ALUSrc=0  MemtoReg=0  PCSrc=0  ALUControl=01  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00d0 | Instr=da000000 | MW=0 | WD=00000000 | RD=00000000 | DataAdr=000000d8
+# RegWrite=0  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=00  RegSrc=01  ImmSrc=10
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00d4 | Instr=e1a01002 | MW=0 | WD=00000069 | RD=0000004f | DataAdr=00000069
+# RegWrite=1  ALUSrc=0  MemtoReg=0  PCSrc=0  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00d8 | Instr=e5801000 | MW=1 | WD=00000069 | RD=00000069 | DataAdr=00000000
+# RegWrite=0  ALUSrc=1  MemtoReg=1  PCSrc=0  ALUControl=00  RegSrc=10  ImmSrc=01
+# r0..r7  : 00000000 00000069 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00dc | Instr=e1a0f00e | MW=0 | WD=000000c4 | RD=000000d2 | DataAdr=000000c4
+# RegWrite=1  ALUSrc=0  MemtoReg=0  PCSrc=1  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 00000069 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00c4 | Instr=e2811004 | MW=0 | WD=00000000 | RD=000000ec | DataAdr=0000006d
+# RegWrite=1  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=00  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 00000069 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00c8 | Instr=e3a02f69 | MW=0 | WD=00000000 | RD=0000004f | DataAdr=00000069
+# RegWrite=1  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00cc | Instr=e1510002 | MW=0 | WD=00000069 | RD=000000d2 | DataAdr=00000004
+# RegWrite=0  ALUSrc=0  MemtoReg=0  PCSrc=0  ALUControl=01  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00d0 | Instr=da000000 | MW=0 | WD=00000000 | RD=00000000 | DataAdr=000000d8
+# RegWrite=0  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=00  RegSrc=01  ImmSrc=10
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00d4 | Instr=e1a01002 | MW=0 | WD=00000069 | RD=0000004f | DataAdr=00000069
+# RegWrite=1  ALUSrc=0  MemtoReg=0  PCSrc=0  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00d8 | Instr=e5801000 | MW=1 | WD=00000069 | RD=00000069 | DataAdr=00000000
+# RegWrite=0  ALUSrc=1  MemtoReg=1  PCSrc=0  ALUControl=00  RegSrc=10  ImmSrc=01
+# r0..r7  : 00000000 00000069 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00dc | Instr=e1a0f00e | MW=0 | WD=000000c4 | RD=000000d2 | DataAdr=000000c4
+# RegWrite=1  ALUSrc=0  MemtoReg=0  PCSrc=1  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 00000069 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00c4 | Instr=e2811004 | MW=0 | WD=00000000 | RD=000000ec | DataAdr=0000006d
+# RegWrite=1  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=00  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 00000069 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00c8 | Instr=e3a02f69 | MW=0 | WD=00000000 | RD=0000004f | DataAdr=00000069
+# RegWrite=1  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00cc | Instr=e1510002 | MW=0 | WD=00000069 | RD=000000d2 | DataAdr=00000004
+# RegWrite=0  ALUSrc=0  MemtoReg=0  PCSrc=0  ALUControl=01  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00d0 | Instr=da000000 | MW=0 | WD=00000000 | RD=00000000 | DataAdr=000000d8
+# RegWrite=0  ALUSrc=1  MemtoReg=0  PCSrc=0  ALUControl=00  RegSrc=01  ImmSrc=10
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00d4 | Instr=e1a01002 | MW=0 | WD=00000069 | RD=0000004f | DataAdr=00000069
+# RegWrite=1  ALUSrc=0  MemtoReg=0  PCSrc=0  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 0000006d 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00d8 | Instr=e5801000 | MW=1 | WD=00000069 | RD=00000069 | DataAdr=00000000
+# RegWrite=0  ALUSrc=1  MemtoReg=1  PCSrc=0  ALUControl=00  RegSrc=10  ImmSrc=01
+# r0..r7  : 00000000 00000069 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# ----------------------------------------
+# PC=00dc | Instr=e1a0f00e | MW=0 | WD=000000c4 | RD=000000d2 | DataAdr=000000c4
+# RegWrite=1  ALUSrc=0  MemtoReg=0  PCSrc=1  ALUControl=11  RegSrc=00  ImmSrc=00
+# r0..r7  : 00000000 00000069 00000069 00000000 00000000 00000000 00000000 00000000
+# r8..r14 : 00000000 00000000 00000003 00000002 00000000 00000000 000000c4
+# Test Finalizado
+# PC final = 000000c4
+# ** Note: $finish    : C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/top_tb.sv(129)
+#    Time: 4005 ns  Iteration: 0  Instance: /top_tb
+# 1
+# Break in Module top_tb at C:/Users/melis/Documents/github/avasquez_dgarro_digital_design_lab_2025/ProyectoFinal/top_tb.sv line 129
+# End time: 22:59:16 on Nov 30,2025, Elapsed time: 0:03:53
+# Errors: 0, Warnings: 2
