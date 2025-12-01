@@ -42,13 +42,14 @@ module top_tb;
         .ImmSrc    (ImmSrc_dbg)
     );
     
+    // ROM de instrucciones
     rom_i imem(
-        .address(PC[8:2]),  
+        .address(PC[9:2]),  
         .q      (Instr)
     );
 
-    // Memoria de datos (RAM)
-    // Puerto A: CPU, Puerto B:
+    // Memoria de datos (RAM) 2-PORT
+    // Puerto A: CPU, Puerto B: dummy
     logic [2:0]  cpu_word_addr;
     logic [2:0]  vga_word_addr_dummy;
     logic [31:0] ram_q_a;
@@ -69,7 +70,41 @@ module top_tb;
         .q_b       (ram_q_b_dummy)
     );
 
-    assign ReadData = ram_q_a;
+    // ----------------------------------------------------------------
+    // Emulación del registro de teclas en simulación
+    // ADDR_KEYS = 28 -> 28/4 = 7 -> cpu_word_addr == 3'd7
+    // bits: [0]=P1_UP, [1]=P1_DOWN, [2]=P2_UP, [3]=P2_DOWN
+    // ----------------------------------------------------------------
+    logic [31:0] keys_reg;
+    initial keys_reg = 32'b0;  
+
+
+    initial begin
+        keys_reg = 32'b0;
+        #500;
+        // P1 UP (bit 0) durante un rato
+        keys_reg[0] = 1'b1;
+        #500;
+        keys_reg[0] = 1'b0;
+        // Luego P2 DOWN (bit 3)
+        #500;
+        keys_reg[3] = 1'b1;
+        #500;
+        keys_reg[3] = 1'b0;
+    end
+ 
+
+    logic [31:0] read_mux;
+
+    always_comb begin
+        read_mux = ram_q_a;
+        if (cpu_word_addr == 3'd7) begin
+            // Dirección 7 se mapea al registro de teclas
+            read_mux = keys_reg;
+        end
+    end
+
+    assign ReadData = read_mux;
     
     // Generación de reloj
     initial begin
@@ -86,7 +121,7 @@ module top_tb;
         reset = 0;
         
         // tiempo de simulación
-        #400;
+        #4000;
         
         $display("Test Finalizado");
         $display("PC final = %h", PC);

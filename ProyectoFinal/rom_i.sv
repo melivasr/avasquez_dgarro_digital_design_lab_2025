@@ -1,14 +1,14 @@
 module rom_i (
-    input  logic [6:0]  address,  // 128 palabras (0..127)
+    input  logic [7:0]  address,    // 0..255 (8 bits)
     output logic [31:0] q
 );
 
-    // Para FPGA
+    // Memoria de 256 palabras de 32 bits para código
     (* ram_init_file = "program.hex" *)
-    logic [31:0] mem [0:127];
+    logic [31:0] mem [0:255];
 
 `ifndef SYNTHESIS
-    // Solo para simulación (ModelSim)
+    // Para simulación
     initial $readmemh("program.hex", mem);
 `endif
 

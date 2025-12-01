@@ -12,8 +12,16 @@ module ram (
     // 32 palabras de 32 bits
     logic [31:0] mem [0:31];
 
+    // Inicialización en simulación
+    integer i;
+    initial begin
+        for (i = 0; i < 32; i = i + 1) begin
+            mem[i] = 32'b0;
+        end
+    end
+
     // Escritura síncrona
-    always_ff @(posedge clock) begin
+    always @(posedge clock) begin
         if (wren_a) mem[address_a] <= data_a;
         if (wren_b) mem[address_b] <= data_b;
     end

@@ -21,7 +21,7 @@ module decoder(
 
     assign is_cmp = (Op == 2'b00) && (Funct[4:1] == 4'b1010); // CMP
     assign is_tst = (Op == 2'b00) && (Funct[4:1] == 4'b1000); // TST
-    assign Link   = (Op == 2'b10) && Funct[5];
+    assign Link   = (Op == 2'b10) && Funct[4];
 
     // usar bit22, no Funct[2] 
     assign ByteOp = (Op == 2'b01) && bit22;                   // LDRB/STRB

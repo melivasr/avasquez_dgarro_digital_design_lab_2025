@@ -3,147 +3,147 @@ Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1100mV 85C Model Setup 'pll:vgapll|toggle'
-Slack : -16.301
-TNS   : -13130.383
+Slack : -21.517
+TNS   : -17700.944
 
 Type  : Slow 1100mV 85C Model Setup 'clk'
-Slack : -2.822
-TNS   : -2.822
+Slack : -2.496
+TNS   : -2.496
 
 Type  : Slow 1100mV 85C Model Setup 'ps2:kb_inst|deb:deb0|out_reg'
-Slack : -2.415
-TNS   : -79.963
+Slack : -2.391
+TNS   : -90.050
 
 Type  : Slow 1100mV 85C Model Hold 'ps2:kb_inst|deb:deb0|out_reg'
-Slack : 0.211
+Slack : 0.280
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Hold 'pll:vgapll|toggle'
-Slack : 0.465
+Slack : 0.482
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Hold 'clk'
-Slack : 1.045
+Slack : 0.893
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'pll:vgapll|toggle'
 Slack : -2.636
-TNS   : -775.321
+TNS   : -775.958
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'clk'
-Slack : -0.693
-TNS   : -1.147
+Slack : -0.663
+TNS   : -1.084
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'ps2:kb_inst|deb:deb0|out_reg'
 Slack : -0.394
-TNS   : -23.140
+TNS   : -25.208
 
 Type  : Slow 1100mV 0C Model Setup 'pll:vgapll|toggle'
-Slack : -16.165
-TNS   : -13021.578
+Slack : -21.117
+TNS   : -17359.780
 
 Type  : Slow 1100mV 0C Model Setup 'clk'
-Slack : -2.709
-TNS   : -2.709
+Slack : -2.339
+TNS   : -2.339
 
 Type  : Slow 1100mV 0C Model Setup 'ps2:kb_inst|deb:deb0|out_reg'
-Slack : -2.324
-TNS   : -74.756
+Slack : -2.251
+TNS   : -84.619
 
 Type  : Slow 1100mV 0C Model Hold 'ps2:kb_inst|deb:deb0|out_reg'
-Slack : 0.226
+Slack : 0.342
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Hold 'pll:vgapll|toggle'
-Slack : 0.417
+Slack : 0.544
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Hold 'clk'
-Slack : 0.995
+Slack : 0.789
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'pll:vgapll|toggle'
 Slack : -2.636
-TNS   : -754.701
+TNS   : -769.464
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'clk'
-Slack : -0.734
-TNS   : -1.257
+Slack : -0.706
+TNS   : -1.198
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'ps2:kb_inst|deb:deb0|out_reg'
 Slack : -0.394
-TNS   : -22.165
+TNS   : -22.964
 
 Type  : Fast 1100mV 85C Model Setup 'pll:vgapll|toggle'
-Slack : -9.659
-TNS   : -7625.777
+Slack : -12.897
+TNS   : -10476.215
 
 Type  : Fast 1100mV 85C Model Setup 'clk'
-Slack : -2.201
-TNS   : -2.201
+Slack : -2.044
+TNS   : -2.044
 
 Type  : Fast 1100mV 85C Model Setup 'ps2:kb_inst|deb:deb0|out_reg'
-Slack : -1.128
-TNS   : -33.785
+Slack : -1.208
+TNS   : -38.914
 
 Type  : Fast 1100mV 85C Model Hold 'ps2:kb_inst|deb:deb0|out_reg'
-Slack : 0.101
+Slack : 0.119
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Hold 'pll:vgapll|toggle'
-Slack : 0.287
+Slack : 0.286
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Hold 'clk'
-Slack : 1.046
+Slack : 0.966
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'pll:vgapll|toggle'
 Slack : -2.636
-TNS   : -166.073
+TNS   : -167.561
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'clk'
-Slack : -0.788
-TNS   : -1.389
+Slack : -0.764
+TNS   : -1.341
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'ps2:kb_inst|deb:deb0|out_reg'
-Slack : 0.090
+Slack : 0.002
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Setup 'pll:vgapll|toggle'
-Slack : -8.602
-TNS   : -6787.503
+Slack : -11.532
+TNS   : -9360.889
 
 Type  : Fast 1100mV 0C Model Setup 'clk'
-Slack : -1.868
-TNS   : -1.868
+Slack : -1.694
+TNS   : -1.694
 
 Type  : Fast 1100mV 0C Model Setup 'ps2:kb_inst|deb:deb0|out_reg'
-Slack : -0.980
-TNS   : -27.829
+Slack : -1.021
+TNS   : -32.730
 
 Type  : Fast 1100mV 0C Model Hold 'ps2:kb_inst|deb:deb0|out_reg'
-Slack : 0.088
+Slack : 0.119
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Hold 'pll:vgapll|toggle'
-Slack : 0.275
+Slack : 0.281
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Hold 'clk'
-Slack : 0.800
+Slack : 0.692
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'pll:vgapll|toggle'
 Slack : -2.636
-TNS   : -118.367
+TNS   : -122.414
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'clk'
-Slack : -0.828
-TNS   : -1.528
+Slack : -0.806
+TNS   : -1.483
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'ps2:kb_inst|deb:deb0|out_reg'
-Slack : 0.086
+Slack : 0.024
 TNS   : 0.000
 
 ------------------------------------------------------------

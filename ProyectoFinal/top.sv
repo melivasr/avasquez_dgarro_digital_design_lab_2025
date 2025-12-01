@@ -53,10 +53,10 @@ module top(
     );
 
     // Instantiate Instruction Memory (ROM)
-    rom_i imem(
-        .address(PC[8:2]),
-        .q(Instr)
-    );
+	rom_i imem(
+		 .address(PC[9:2]),   // 8 bits, hasta 256 palabras
+		 .q(Instr)
+	);
 
     //RAM de datos 2-PORT
     logic [31:0] ram_q_a;  //para ARM

@@ -1,4 +1,4 @@
-Analysis & Synthesis Status : Successful - Sat Nov 29 02:02:58 2025
+Analysis & Synthesis Status : Successful - Mon Dec 01 00:37:00 2025
 Quartus Prime Version : 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 Revision Name : ProyectoFinal
 Top-level Entity Name : top
@@ -8,7 +8,7 @@ Total registers : 931
 Total pins : 33
 Total virtual pins : 0
 Total block memory bits : 80
-Total DSP Blocks : 0
+Total DSP Blocks : 2
 Total HSSI RX PCSs : 0
 Total HSSI PMA RX Deserializers : 0
 Total HSSI TX PCSs : 0

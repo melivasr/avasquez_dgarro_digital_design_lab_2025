@@ -1,5 +1,5 @@
 Timing Analyzer report for ProyectoFinal
-Thu Nov 27 17:29:04 2025
+Mon Dec 01 00:40:41 2025
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -100,18 +100,18 @@ https://fpgasoftware.intel.com/eula.
 ; Number detected on machine ; 8           ;
 ; Maximum allowed            ; 8           ;
 ;                            ;             ;
-; Average used               ; 1.44        ;
+; Average used               ; 1.76        ;
 ; Maximum used               ; 8           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   8.5%      ;
-;     Processor 3            ;   8.5%      ;
-;     Processor 4            ;   8.4%      ;
-;     Processor 5            ;   4.6%      ;
-;     Processor 6            ;   4.6%      ;
-;     Processor 7            ;   4.6%      ;
-;     Processor 8            ;   4.6%      ;
+;     Processor 2            ;  16.3%      ;
+;     Processor 3            ;  16.2%      ;
+;     Processor 4            ;  16.1%      ;
+;     Processor 5            ;   7.0%      ;
+;     Processor 6            ;   7.0%      ;
+;     Processor 7            ;   7.0%      ;
+;     Processor 8            ;   7.0%      ;
 +----------------------------+-------------+
 
 
@@ -126,14 +126,14 @@ https://fpgasoftware.intel.com/eula.
 +------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+----------------------------------+
 
 
-+--------------------------------------------------------------------+
-; Slow 1100mV 85C Model Fmax Summary                                 ;
-+------------+-----------------+------------------------------+------+
-; Fmax       ; Restricted Fmax ; Clock Name                   ; Note ;
-+------------+-----------------+------------------------------+------+
-; 75.67 MHz  ; 75.67 MHz       ; pll:vgapll|toggle            ;      ;
-; 264.41 MHz ; 264.41 MHz      ; ps2:kb_inst|deb:deb0|out_reg ;      ;
-+------------+-----------------+------------------------------+------+
++-------------------------------------------------------------------+
+; Slow 1100mV 85C Model Fmax Summary                                ;
++-----------+-----------------+------------------------------+------+
+; Fmax      ; Restricted Fmax ; Clock Name                   ; Note ;
++-----------+-----------------+------------------------------+------+
+; 44.41 MHz ; 44.41 MHz       ; pll:vgapll|toggle            ;      ;
+; 294.9 MHz ; 294.9 MHz       ; ps2:kb_inst|deb:deb0|out_reg ;      ;
++-----------+-----------------+------------------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
 
@@ -148,9 +148,9 @@ HTML report is unavailable in plain text report export.
 +------------------------------+---------+---------------+
 ; Clock                        ; Slack   ; End Point TNS ;
 +------------------------------+---------+---------------+
-; pll:vgapll|toggle            ; -12.216 ; -10293.402    ;
-; ps2:kb_inst|deb:deb0|out_reg ; -2.782  ; -96.228       ;
-; clk                          ; -2.341  ; -2.341        ;
+; pll:vgapll|toggle            ; -21.517 ; -17700.944    ;
+; clk                          ; -2.496  ; -2.496        ;
+; ps2:kb_inst|deb:deb0|out_reg ; -2.391  ; -90.050       ;
 +------------------------------+---------+---------------+
 
 
@@ -159,9 +159,9 @@ HTML report is unavailable in plain text report export.
 +------------------------------+-------+---------------+
 ; Clock                        ; Slack ; End Point TNS ;
 +------------------------------+-------+---------------+
-; ps2:kb_inst|deb:deb0|out_reg ; 0.273 ; 0.000         ;
-; pll:vgapll|toggle            ; 0.413 ; 0.000         ;
-; clk                          ; 0.722 ; 0.000         ;
+; ps2:kb_inst|deb:deb0|out_reg ; 0.280 ; 0.000         ;
+; pll:vgapll|toggle            ; 0.482 ; 0.000         ;
+; clk                          ; 0.893 ; 0.000         ;
 +------------------------------+-------+---------------+
 
 
@@ -182,9 +182,9 @@ No paths to report.
 +------------------------------+--------+---------------+
 ; Clock                        ; Slack  ; End Point TNS ;
 +------------------------------+--------+---------------+
-; pll:vgapll|toggle            ; -2.636 ; -751.195      ;
-; clk                          ; -0.642 ; -1.049        ;
-; ps2:kb_inst|deb:deb0|out_reg ; -0.394 ; -25.234       ;
+; pll:vgapll|toggle            ; -2.636 ; -775.958      ;
+; clk                          ; -0.663 ; -1.084        ;
+; ps2:kb_inst|deb:deb0|out_reg ; -0.394 ; -25.208       ;
 +------------------------------+--------+---------------+
 
 
@@ -199,8 +199,8 @@ No synchronizer chains to report.
 +-----------+-----------------+------------------------------+------+
 ; Fmax      ; Restricted Fmax ; Clock Name                   ; Note ;
 +-----------+-----------------+------------------------------+------+
-; 76.62 MHz ; 76.62 MHz       ; pll:vgapll|toggle            ;      ;
-; 274.2 MHz ; 274.2 MHz       ; ps2:kb_inst|deb:deb0|out_reg ;      ;
+; 45.21 MHz ; 45.21 MHz       ; pll:vgapll|toggle            ;      ;
+; 307.6 MHz ; 307.6 MHz       ; ps2:kb_inst|deb:deb0|out_reg ;      ;
 +-----------+-----------------+------------------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -210,9 +210,9 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +------------------------------+---------+---------------+
 ; Clock                        ; Slack   ; End Point TNS ;
 +------------------------------+---------+---------------+
-; pll:vgapll|toggle            ; -12.052 ; -10109.668    ;
-; ps2:kb_inst|deb:deb0|out_reg ; -2.647  ; -89.520       ;
-; clk                          ; -2.207  ; -2.207        ;
+; pll:vgapll|toggle            ; -21.117 ; -17359.780    ;
+; clk                          ; -2.339  ; -2.339        ;
+; ps2:kb_inst|deb:deb0|out_reg ; -2.251  ; -84.619       ;
 +------------------------------+---------+---------------+
 
 
@@ -221,9 +221,9 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +------------------------------+-------+---------------+
 ; Clock                        ; Slack ; End Point TNS ;
 +------------------------------+-------+---------------+
-; ps2:kb_inst|deb:deb0|out_reg ; 0.337 ; 0.000         ;
-; pll:vgapll|toggle            ; 0.467 ; 0.000         ;
-; clk                          ; 0.660 ; 0.000         ;
+; ps2:kb_inst|deb:deb0|out_reg ; 0.342 ; 0.000         ;
+; pll:vgapll|toggle            ; 0.544 ; 0.000         ;
+; clk                          ; 0.789 ; 0.000         ;
 +------------------------------+-------+---------------+
 
 
@@ -244,9 +244,9 @@ No paths to report.
 +------------------------------+--------+---------------+
 ; Clock                        ; Slack  ; End Point TNS ;
 +------------------------------+--------+---------------+
-; pll:vgapll|toggle            ; -2.636 ; -733.443      ;
-; clk                          ; -0.686 ; -1.161        ;
-; ps2:kb_inst|deb:deb0|out_reg ; -0.394 ; -22.865       ;
+; pll:vgapll|toggle            ; -2.636 ; -769.464      ;
+; clk                          ; -0.706 ; -1.198        ;
+; ps2:kb_inst|deb:deb0|out_reg ; -0.394 ; -22.964       ;
 +------------------------------+--------+---------------+
 
 
@@ -256,15 +256,15 @@ No paths to report.
 No synchronizer chains to report.
 
 
-+-------------------------------------------------------+
-; Fast 1100mV 85C Model Setup Summary                   ;
-+------------------------------+--------+---------------+
-; Clock                        ; Slack  ; End Point TNS ;
-+------------------------------+--------+---------------+
-; pll:vgapll|toggle            ; -7.138 ; -5859.932     ;
-; clk                          ; -1.896 ; -1.896        ;
-; ps2:kb_inst|deb:deb0|out_reg ; -1.461 ; -45.125       ;
-+------------------------------+--------+---------------+
++--------------------------------------------------------+
+; Fast 1100mV 85C Model Setup Summary                    ;
++------------------------------+---------+---------------+
+; Clock                        ; Slack   ; End Point TNS ;
++------------------------------+---------+---------------+
+; pll:vgapll|toggle            ; -12.897 ; -10476.215    ;
+; clk                          ; -2.044  ; -2.044        ;
+; ps2:kb_inst|deb:deb0|out_reg ; -1.208  ; -38.914       ;
++------------------------------+---------+---------------+
 
 
 +------------------------------------------------------+
@@ -272,9 +272,9 @@ No synchronizer chains to report.
 +------------------------------+-------+---------------+
 ; Clock                        ; Slack ; End Point TNS ;
 +------------------------------+-------+---------------+
-; ps2:kb_inst|deb:deb0|out_reg ; 0.114 ; 0.000         ;
-; pll:vgapll|toggle            ; 0.176 ; 0.000         ;
-; clk                          ; 0.841 ; 0.000         ;
+; ps2:kb_inst|deb:deb0|out_reg ; 0.119 ; 0.000         ;
+; pll:vgapll|toggle            ; 0.286 ; 0.000         ;
+; clk                          ; 0.966 ; 0.000         ;
 +------------------------------+-------+---------------+
 
 
@@ -295,9 +295,9 @@ No paths to report.
 +------------------------------+--------+---------------+
 ; Clock                        ; Slack  ; End Point TNS ;
 +------------------------------+--------+---------------+
-; pll:vgapll|toggle            ; -2.636 ; -132.534      ;
-; clk                          ; -0.744 ; -1.304        ;
-; ps2:kb_inst|deb:deb0|out_reg ; 0.022  ; 0.000         ;
+; pll:vgapll|toggle            ; -2.636 ; -167.561      ;
+; clk                          ; -0.764 ; -1.341        ;
+; ps2:kb_inst|deb:deb0|out_reg ; 0.002  ; 0.000         ;
 +------------------------------+--------+---------------+
 
 
@@ -307,15 +307,15 @@ No paths to report.
 No synchronizer chains to report.
 
 
-+-------------------------------------------------------+
-; Fast 1100mV 0C Model Setup Summary                    ;
-+------------------------------+--------+---------------+
-; Clock                        ; Slack  ; End Point TNS ;
-+------------------------------+--------+---------------+
-; pll:vgapll|toggle            ; -6.361 ; -5232.673     ;
-; clk                          ; -1.586 ; -1.586        ;
-; ps2:kb_inst|deb:deb0|out_reg ; -1.234 ; -37.621       ;
-+------------------------------+--------+---------------+
++--------------------------------------------------------+
+; Fast 1100mV 0C Model Setup Summary                     ;
++------------------------------+---------+---------------+
+; Clock                        ; Slack   ; End Point TNS ;
++------------------------------+---------+---------------+
+; pll:vgapll|toggle            ; -11.532 ; -9360.889     ;
+; clk                          ; -1.694  ; -1.694        ;
+; ps2:kb_inst|deb:deb0|out_reg ; -1.021  ; -32.730       ;
++------------------------------+---------+---------------+
 
 
 +------------------------------------------------------+
@@ -323,9 +323,9 @@ No synchronizer chains to report.
 +------------------------------+-------+---------------+
 ; Clock                        ; Slack ; End Point TNS ;
 +------------------------------+-------+---------------+
-; ps2:kb_inst|deb:deb0|out_reg ; 0.117 ; 0.000         ;
-; pll:vgapll|toggle            ; 0.161 ; 0.000         ;
-; clk                          ; 0.604 ; 0.000         ;
+; ps2:kb_inst|deb:deb0|out_reg ; 0.119 ; 0.000         ;
+; pll:vgapll|toggle            ; 0.281 ; 0.000         ;
+; clk                          ; 0.692 ; 0.000         ;
 +------------------------------+-------+---------------+
 
 
@@ -346,9 +346,9 @@ No paths to report.
 +------------------------------+--------+---------------+
 ; Clock                        ; Slack  ; End Point TNS ;
 +------------------------------+--------+---------------+
-; pll:vgapll|toggle            ; -2.636 ; -93.093       ;
-; clk                          ; -0.788 ; -1.448        ;
-; ps2:kb_inst|deb:deb0|out_reg ; 0.038  ; 0.000         ;
+; pll:vgapll|toggle            ; -2.636 ; -122.414      ;
+; clk                          ; -0.806 ; -1.483        ;
+; ps2:kb_inst|deb:deb0|out_reg ; 0.024  ; 0.000         ;
 +------------------------------+--------+---------------+
 
 
@@ -363,14 +363,14 @@ No synchronizer chains to report.
 +-------------------------------+------------+-------+----------+---------+---------------------+
 ; Clock                         ; Setup      ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
 +-------------------------------+------------+-------+----------+---------+---------------------+
-; Worst-case Slack              ; -12.216    ; 0.114 ; N/A      ; N/A     ; -2.636              ;
-;  clk                          ; -2.341     ; 0.604 ; N/A      ; N/A     ; -0.788              ;
-;  pll:vgapll|toggle            ; -12.216    ; 0.161 ; N/A      ; N/A     ; -2.636              ;
-;  ps2:kb_inst|deb:deb0|out_reg ; -2.782     ; 0.114 ; N/A      ; N/A     ; -0.394              ;
-; Design-wide TNS               ; -10391.971 ; 0.0   ; 0.0      ; 0.0     ; -777.478            ;
-;  clk                          ; -2.341     ; 0.000 ; N/A      ; N/A     ; -1.448              ;
-;  pll:vgapll|toggle            ; -10293.402 ; 0.000 ; N/A      ; N/A     ; -751.195            ;
-;  ps2:kb_inst|deb:deb0|out_reg ; -96.228    ; 0.000 ; N/A      ; N/A     ; -25.234             ;
+; Worst-case Slack              ; -21.517    ; 0.119 ; N/A      ; N/A     ; -2.636              ;
+;  clk                          ; -2.496     ; 0.692 ; N/A      ; N/A     ; -0.806              ;
+;  pll:vgapll|toggle            ; -21.517    ; 0.281 ; N/A      ; N/A     ; -2.636              ;
+;  ps2:kb_inst|deb:deb0|out_reg ; -2.391     ; 0.119 ; N/A      ; N/A     ; -0.394              ;
+; Design-wide TNS               ; -17793.49  ; 0.0   ; 0.0      ; 0.0     ; -802.25             ;
+;  clk                          ; -2.496     ; 0.000 ; N/A      ; N/A     ; -1.483              ;
+;  pll:vgapll|toggle            ; -17700.944 ; 0.000 ; N/A      ; N/A     ; -775.958            ;
+;  ps2:kb_inst|deb:deb0|out_reg ; -90.050    ; 0.000 ; N/A      ; N/A     ; -25.208             ;
 +-------------------------------+------------+-------+----------+---------+---------------------+
 
 
@@ -571,29 +571,29 @@ No synchronizer chains to report.
 +---------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------+
-; Setup Transfers                                                                                          ;
-+------------------------------+------------------------------+-----------+----------+----------+----------+
-; From Clock                   ; To Clock                     ; RR Paths  ; FR Paths ; RF Paths ; FF Paths ;
-+------------------------------+------------------------------+-----------+----------+----------+----------+
-; pll:vgapll|toggle            ; clk                          ; 1         ; 1        ; 0        ; 0        ;
-; pll:vgapll|toggle            ; pll:vgapll|toggle            ; 216637302 ; 0        ; 0        ; 0        ;
-; ps2:kb_inst|deb:deb0|out_reg ; pll:vgapll|toggle            ; 1         ; 65       ; 0        ; 0        ;
-; ps2:kb_inst|deb:deb0|out_reg ; ps2:kb_inst|deb:deb0|out_reg ; 0         ; 0        ; 0        ; 381      ;
-+------------------------------+------------------------------+-----------+----------+----------+----------+
++-------------------------------------------------------------------------------------------------------------+
+; Setup Transfers                                                                                             ;
++------------------------------+------------------------------+--------------+----------+----------+----------+
+; From Clock                   ; To Clock                     ; RR Paths     ; FR Paths ; RF Paths ; FF Paths ;
++------------------------------+------------------------------+--------------+----------+----------+----------+
+; pll:vgapll|toggle            ; clk                          ; 1            ; 1        ; 0        ; 0        ;
+; pll:vgapll|toggle            ; pll:vgapll|toggle            ; > 2147483647 ; 0        ; 0        ; 0        ;
+; ps2:kb_inst|deb:deb0|out_reg ; pll:vgapll|toggle            ; 1            ; 65       ; 0        ; 0        ;
+; ps2:kb_inst|deb:deb0|out_reg ; ps2:kb_inst|deb:deb0|out_reg ; 0            ; 0        ; 0        ; 381      ;
++------------------------------+------------------------------+--------------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
 
-+----------------------------------------------------------------------------------------------------------+
-; Hold Transfers                                                                                           ;
-+------------------------------+------------------------------+-----------+----------+----------+----------+
-; From Clock                   ; To Clock                     ; RR Paths  ; FR Paths ; RF Paths ; FF Paths ;
-+------------------------------+------------------------------+-----------+----------+----------+----------+
-; pll:vgapll|toggle            ; clk                          ; 1         ; 1        ; 0        ; 0        ;
-; pll:vgapll|toggle            ; pll:vgapll|toggle            ; 216637302 ; 0        ; 0        ; 0        ;
-; ps2:kb_inst|deb:deb0|out_reg ; pll:vgapll|toggle            ; 1         ; 65       ; 0        ; 0        ;
-; ps2:kb_inst|deb:deb0|out_reg ; ps2:kb_inst|deb:deb0|out_reg ; 0         ; 0        ; 0        ; 381      ;
-+------------------------------+------------------------------+-----------+----------+----------+----------+
++-------------------------------------------------------------------------------------------------------------+
+; Hold Transfers                                                                                              ;
++------------------------------+------------------------------+--------------+----------+----------+----------+
+; From Clock                   ; To Clock                     ; RR Paths     ; FR Paths ; RF Paths ; FF Paths ;
++------------------------------+------------------------------+--------------+----------+----------+----------+
+; pll:vgapll|toggle            ; clk                          ; 1            ; 1        ; 0        ; 0        ;
+; pll:vgapll|toggle            ; pll:vgapll|toggle            ; > 2147483647 ; 0        ; 0        ; 0        ;
+; ps2:kb_inst|deb:deb0|out_reg ; pll:vgapll|toggle            ; 1            ; 65       ; 0        ; 0        ;
+; ps2:kb_inst|deb:deb0|out_reg ; ps2:kb_inst|deb:deb0|out_reg ; 0            ; 0        ; 0        ; 381      ;
++------------------------------+------------------------------+--------------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
 
@@ -617,9 +617,9 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; Illegal Clocks                  ; 0     ; 0    ;
 ; Unconstrained Clocks            ; 0     ; 0    ;
 ; Unconstrained Input Ports       ; 3     ; 3    ;
-; Unconstrained Input Port Paths  ; 783   ; 783  ;
+; Unconstrained Input Port Paths  ; 754   ; 754  ;
 ; Unconstrained Output Ports      ; 29    ; 29   ;
-; Unconstrained Output Port Paths ; 1231  ; 1231 ;
+; Unconstrained Output Port Paths ; 1239  ; 1239 ;
 +---------------------------------+-------+------+
 
 
@@ -736,7 +736,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Thu Nov 27 17:28:51 2025
+    Info: Processing started: Mon Dec 01 00:40:26 2025
 Info: Command: quartus_sta ProyectoFinal -c ProyectoFinal
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -755,108 +755,108 @@ Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1100mV 85C Model
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -12.216
+Info (332146): Worst-case setup slack is -21.517
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):   -12.216          -10293.402 pll:vgapll|toggle 
-    Info (332119):    -2.782             -96.228 ps2:kb_inst|deb:deb0|out_reg 
-    Info (332119):    -2.341              -2.341 clk 
-Info (332146): Worst-case hold slack is 0.273
+    Info (332119):   -21.517          -17700.944 pll:vgapll|toggle 
+    Info (332119):    -2.496              -2.496 clk 
+    Info (332119):    -2.391             -90.050 ps2:kb_inst|deb:deb0|out_reg 
+Info (332146): Worst-case hold slack is 0.280
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.273               0.000 ps2:kb_inst|deb:deb0|out_reg 
-    Info (332119):     0.413               0.000 pll:vgapll|toggle 
-    Info (332119):     0.722               0.000 clk 
+    Info (332119):     0.280               0.000 ps2:kb_inst|deb:deb0|out_reg 
+    Info (332119):     0.482               0.000 pll:vgapll|toggle 
+    Info (332119):     0.893               0.000 clk 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -2.636
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.636            -751.195 pll:vgapll|toggle 
-    Info (332119):    -0.642              -1.049 clk 
-    Info (332119):    -0.394             -25.234 ps2:kb_inst|deb:deb0|out_reg 
+    Info (332119):    -2.636            -775.958 pll:vgapll|toggle 
+    Info (332119):    -0.663              -1.084 clk 
+    Info (332119):    -0.394             -25.208 ps2:kb_inst|deb:deb0|out_reg 
 Info: Analyzing Slow 1100mV 0C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -12.052
+Info (332146): Worst-case setup slack is -21.117
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):   -12.052          -10109.668 pll:vgapll|toggle 
-    Info (332119):    -2.647             -89.520 ps2:kb_inst|deb:deb0|out_reg 
-    Info (332119):    -2.207              -2.207 clk 
-Info (332146): Worst-case hold slack is 0.337
+    Info (332119):   -21.117          -17359.780 pll:vgapll|toggle 
+    Info (332119):    -2.339              -2.339 clk 
+    Info (332119):    -2.251             -84.619 ps2:kb_inst|deb:deb0|out_reg 
+Info (332146): Worst-case hold slack is 0.342
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.337               0.000 ps2:kb_inst|deb:deb0|out_reg 
-    Info (332119):     0.467               0.000 pll:vgapll|toggle 
-    Info (332119):     0.660               0.000 clk 
+    Info (332119):     0.342               0.000 ps2:kb_inst|deb:deb0|out_reg 
+    Info (332119):     0.544               0.000 pll:vgapll|toggle 
+    Info (332119):     0.789               0.000 clk 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -2.636
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.636            -733.443 pll:vgapll|toggle 
-    Info (332119):    -0.686              -1.161 clk 
-    Info (332119):    -0.394             -22.865 ps2:kb_inst|deb:deb0|out_reg 
+    Info (332119):    -2.636            -769.464 pll:vgapll|toggle 
+    Info (332119):    -0.706              -1.198 clk 
+    Info (332119):    -0.394             -22.964 ps2:kb_inst|deb:deb0|out_reg 
 Info: Analyzing Fast 1100mV 85C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -7.138
+Info (332146): Worst-case setup slack is -12.897
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -7.138           -5859.932 pll:vgapll|toggle 
-    Info (332119):    -1.896              -1.896 clk 
-    Info (332119):    -1.461             -45.125 ps2:kb_inst|deb:deb0|out_reg 
-Info (332146): Worst-case hold slack is 0.114
+    Info (332119):   -12.897          -10476.215 pll:vgapll|toggle 
+    Info (332119):    -2.044              -2.044 clk 
+    Info (332119):    -1.208             -38.914 ps2:kb_inst|deb:deb0|out_reg 
+Info (332146): Worst-case hold slack is 0.119
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.114               0.000 ps2:kb_inst|deb:deb0|out_reg 
-    Info (332119):     0.176               0.000 pll:vgapll|toggle 
-    Info (332119):     0.841               0.000 clk 
+    Info (332119):     0.119               0.000 ps2:kb_inst|deb:deb0|out_reg 
+    Info (332119):     0.286               0.000 pll:vgapll|toggle 
+    Info (332119):     0.966               0.000 clk 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -2.636
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.636            -132.534 pll:vgapll|toggle 
-    Info (332119):    -0.744              -1.304 clk 
-    Info (332119):     0.022               0.000 ps2:kb_inst|deb:deb0|out_reg 
+    Info (332119):    -2.636            -167.561 pll:vgapll|toggle 
+    Info (332119):    -0.764              -1.341 clk 
+    Info (332119):     0.002               0.000 ps2:kb_inst|deb:deb0|out_reg 
 Info: Analyzing Fast 1100mV 0C Model
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -6.361
+Info (332146): Worst-case setup slack is -11.532
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -6.361           -5232.673 pll:vgapll|toggle 
-    Info (332119):    -1.586              -1.586 clk 
-    Info (332119):    -1.234             -37.621 ps2:kb_inst|deb:deb0|out_reg 
-Info (332146): Worst-case hold slack is 0.117
+    Info (332119):   -11.532           -9360.889 pll:vgapll|toggle 
+    Info (332119):    -1.694              -1.694 clk 
+    Info (332119):    -1.021             -32.730 ps2:kb_inst|deb:deb0|out_reg 
+Info (332146): Worst-case hold slack is 0.119
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.117               0.000 ps2:kb_inst|deb:deb0|out_reg 
-    Info (332119):     0.161               0.000 pll:vgapll|toggle 
-    Info (332119):     0.604               0.000 clk 
+    Info (332119):     0.119               0.000 ps2:kb_inst|deb:deb0|out_reg 
+    Info (332119):     0.281               0.000 pll:vgapll|toggle 
+    Info (332119):     0.692               0.000 clk 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -2.636
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.636             -93.093 pll:vgapll|toggle 
-    Info (332119):    -0.788              -1.448 clk 
-    Info (332119):     0.038               0.000 ps2:kb_inst|deb:deb0|out_reg 
+    Info (332119):    -2.636            -122.414 pll:vgapll|toggle 
+    Info (332119):    -0.806              -1.483 clk 
+    Info (332119):     0.024               0.000 ps2:kb_inst|deb:deb0|out_reg 
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 5261 megabytes
-    Info: Processing ended: Thu Nov 27 17:29:04 2025
-    Info: Elapsed time: 00:00:13
-    Info: Total CPU time (on all processors): 00:00:16
+    Info: Peak virtual memory: 5290 megabytes
+    Info: Processing ended: Mon Dec 01 00:40:41 2025
+    Info: Elapsed time: 00:00:15
+    Info: Total CPU time (on all processors): 00:00:22
 
 
