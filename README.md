@@ -5,7 +5,8 @@ Este repositorio contiene el desarrollo de los laboratorios del curso **CE3201 �
 - **Laboratorio 2:** Lógica Combinacional y Aritmética.
 - **Laboratorio 3:** Lógica Secuencial y Controladores.
 - **Laboratorio 4:** Prueba de comprobación.
-- 
+- **Proyecto FInal del Curso:** Desarrollo de un Procesador Uniciclo para Ejecutar el Juego Pong en Ensamblador.
+  
 ## Estudiantes
 - Ana Melissa Vásquez Rojas  
 - Darío Garro Moya  
