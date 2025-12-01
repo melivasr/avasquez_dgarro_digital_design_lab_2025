@@ -1,9 +1,9 @@
 module alu(
     input  logic [31:0] A, B,
-    input  logic [1:0]  ALUControl,
-	 input  logic        IsMul, 
+    input  logic [1:0] ALUControl,
+	 input  logic IsMul, 
     output logic [31:0] ALUResult,
-    output logic [3:0]  ALUFlags
+    output logic [3:0] ALUFlags
 );
     logic N, Z, C, V;
     logic [32:0] tmp;

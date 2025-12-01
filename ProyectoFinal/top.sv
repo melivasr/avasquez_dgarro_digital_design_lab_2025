@@ -9,7 +9,13 @@ module top(
     output logic vgaclk,
     output logic hsync, vsync,
     output logic sync_b, blank_b,
-    output logic [7:0] r, g, b
+    output logic [7:0] r, g, b,
+	 
+    // 7-seg (decenas y unidades de cada jugador)
+    output logic [6:0] seg_p1_units,
+    output logic [6:0] seg_p1_tens,
+    output logic [6:0] seg_p2_units,
+    output logic [6:0] seg_p2_tens
 );
 
 
@@ -21,14 +27,14 @@ module top(
     logic MemWrite;
 
     //debug signals
-    logic [3:0]  ALUFlags_dbg;
-    logic        RegWrite_dbg;
-    logic        ALUSrc_dbg;
-    logic        MemtoReg_dbg;
-    logic        PCSrc_dbg;
-    logic [1:0]  ALUControl_dbg;
-    logic [1:0]  RegSrc_dbg;
-    logic [1:0]  ImmSrc_dbg;
+    logic [3:0] ALUFlags_dbg;
+    logic RegWrite_dbg;
+    logic ALUSrc_dbg;
+    logic MemtoReg_dbg;
+    logic PCSrc_dbg;
+    logic [1:0] ALUControl_dbg;
+    logic [1:0] RegSrc_dbg;
+    logic [1:0] ImmSrc_dbg;
 
 
     // Instantiate ARM processor
@@ -67,15 +73,15 @@ module top(
     assign cpu_word_addr = DataAdr[4:2];
 
     ram dmem(
-        .address_a (cpu_word_addr),
-        .address_b (vga_word_addr),
-        .clock     (vgaclk),
-        .data_a    (WriteData),
-        .data_b    (32'b0),    // VGA solo lee
-        .wren_a    (MemWrite), // ARM escribe
-        .wren_b    (1'b0),
-        .q_a       (ram_q_a),
-        .q_b       (ram_q_b)
+        .address_a(cpu_word_addr),
+        .address_b(vga_word_addr),
+        .clock(vgaclk),
+        .data_a(WriteData),
+        .data_b(32'b0),    // VGA solo lee
+        .wren_a(MemWrite), // ARM escribe
+        .wren_b(1'b0),
+        .q_a(ram_q_a),
+        .q_b(ram_q_b)
     );
 	 
 	 // reloj y coordenadas VGA
@@ -94,19 +100,19 @@ module top(
     logic [3:0]  keys_bits;
 
     ps2 kb_inst (
-        .PS2_KBCLK   (PS2_KBCLK),
-        .PS2_KBDAT   (PS2_KBDAT),
-        .rst_n       (~reset),
+        .PS2_KBCLK(PS2_KBCLK),
+        .PS2_KBDAT(PS2_KBDAT),
+        .rst_n (~reset),
         .computerClk (vgaclk),
-        .hexo        (ps2_hex)
+        .hexo(ps2_hex)
     );
 
     // Decodificador de teclas R/F/O/L
     key_mapper keymap_inst (
-        .clk    (vgaclk),
-        .reset  (reset),
+        .clk(vgaclk),
+        .reset(reset),
         .ps2_hex(ps2_hex),
-        .keys   (keys_bits)
+        .keys(keys_bits)
     );
 
     // Registro de teclas visto por el ARM:
@@ -132,23 +138,23 @@ module top(
 	 // Bridge RAM->VGA
     logic [9:0] paddle1_y_vga, paddle2_y_vga;
     logic [9:0] ball_x_vga, ball_y_vga;
-    logic [3:0] score1_vga, score2_vga;
+    logic [6:0] score1_vga, score2_vga;
 	 logic [1:0] winner_vga;
 
 	 ram2vga_bridge u_bridge (
-		 .clk      (vgaclk),
-		 .reset    (reset),
-		 .x        (x),
-		 .y        (y),
-		 .addr_b   (vga_word_addr),
-		 .q_b      (ram_q_b),
+		 .clk(vgaclk),
+		 .reset(reset),
+		 .x(x),
+		 .y(y),
+		 .addr_b(vga_word_addr),
+		 .q_b(ram_q_b),
 		 .paddle1_y(paddle1_y_vga),
 		 .paddle2_y(paddle2_y_vga),
-		 .ball_x   (ball_x_vga),
-		 .ball_y   (ball_y_vga),
-		 .score1   (score1_vga),
-		 .score2   (score2_vga),
-		 .winner   (winner_vga)
+		 .ball_x(ball_x_vga),
+		 .ball_y(ball_y_vga),
+		 .score1(score1_vga),
+		 .score2(score2_vga),
+		 .winner(winner_vga)
 	 );
 
 
@@ -158,14 +164,45 @@ module top(
         .y(y),
         .paddle1_y(paddle1_y_vga),
         .paddle2_y(paddle2_y_vga),
-        .ball_x   (ball_x_vga),
-        .ball_y   (ball_y_vga),
-        .score1   (score1_vga),
-        .score2   (score2_vga),
-		  .winner   (winner_vga),
+        .ball_x(ball_x_vga),
+        .ball_y(ball_y_vga),
+        .score1(score1_vga),
+        .score2(score2_vga),
+		  .winner(winner_vga),
         .r(r),
         .g(g),
         .b(b)
     );
+	 
+	 logic [3:0] p1_units, p1_tens;
+    logic [3:0] p2_units, p2_tens;
+
+    always_comb begin
+        // Player 1
+        if (score1_vga >= 7'd50) begin
+            p1_tens  = 4'd5;
+            p1_units = 4'd0;
+        end else begin
+            p1_tens  = score1_vga / 10;
+            p1_units = score1_vga % 10;
+        end
+
+        // Player 2
+        if (score2_vga >= 7'd50) begin
+            p2_tens  = 4'd5;
+            p2_units = 4'd0;
+        end else begin
+            p2_tens  = score2_vga / 10;
+            p2_units = score2_vga % 10;
+        end
+    end
+
+	 
+	  // 7-seg para mostrar los puntajes
+		seven_segment_display disp_p1_units (.num(p1_units), .seg(seg_p1_units));
+		seven_segment_display disp_p1_tens  (.num(p1_tens),  .seg(seg_p1_tens));
+		seven_segment_display disp_p2_units (.num(p2_units), .seg(seg_p2_units));
+		seven_segment_display disp_p2_tens  (.num(p2_tens),  .seg(seg_p2_tens));
+
 
 endmodule

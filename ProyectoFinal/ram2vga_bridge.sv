@@ -14,8 +14,8 @@ module ram2vga_bridge (
     output logic [9:0]  paddle2_y,
     output logic [9:0]  ball_x,
     output logic [9:0]  ball_y,
-    output logic [3:0]  score1,
-    output logic [3:0]  score2,
+    output logic [6:0]  score1,
+    output logic [6:0]  score2,
     output logic [1:0]  winner
 );
 
@@ -100,8 +100,8 @@ module ram2vga_bridge (
         paddle2_y = paddle2_y_reg[9:0];
         ball_x    = ball_x_reg[9:0];
         ball_y    = ball_y_reg[9:0];
-        score1    = score1_reg[3:0];
-        score2    = score2_reg[3:0];
+        score1    = score1_reg[6:0];
+        score2    = score2_reg[6:0];
         winner    = winner_reg[1:0];
     end
 

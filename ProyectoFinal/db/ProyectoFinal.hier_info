@@ -32,6 +32,34 @@ b[4] << videoGen_pong:u_video.b
 b[5] << videoGen_pong:u_video.b
 b[6] << videoGen_pong:u_video.b
 b[7] << videoGen_pong:u_video.b
+seg_p1_units[0] << seven_segment_display:disp_p1_units.seg
+seg_p1_units[1] << seven_segment_display:disp_p1_units.seg
+seg_p1_units[2] << seven_segment_display:disp_p1_units.seg
+seg_p1_units[3] << seven_segment_display:disp_p1_units.seg
+seg_p1_units[4] << seven_segment_display:disp_p1_units.seg
+seg_p1_units[5] << seven_segment_display:disp_p1_units.seg
+seg_p1_units[6] << seven_segment_display:disp_p1_units.seg
+seg_p1_tens[0] << seven_segment_display:disp_p1_tens.seg
+seg_p1_tens[1] << seven_segment_display:disp_p1_tens.seg
+seg_p1_tens[2] << seven_segment_display:disp_p1_tens.seg
+seg_p1_tens[3] << seven_segment_display:disp_p1_tens.seg
+seg_p1_tens[4] << seven_segment_display:disp_p1_tens.seg
+seg_p1_tens[5] << seven_segment_display:disp_p1_tens.seg
+seg_p1_tens[6] << seven_segment_display:disp_p1_tens.seg
+seg_p2_units[0] << seven_segment_display:disp_p2_units.seg
+seg_p2_units[1] << seven_segment_display:disp_p2_units.seg
+seg_p2_units[2] << seven_segment_display:disp_p2_units.seg
+seg_p2_units[3] << seven_segment_display:disp_p2_units.seg
+seg_p2_units[4] << seven_segment_display:disp_p2_units.seg
+seg_p2_units[5] << seven_segment_display:disp_p2_units.seg
+seg_p2_units[6] << seven_segment_display:disp_p2_units.seg
+seg_p2_tens[0] << seven_segment_display:disp_p2_tens.seg
+seg_p2_tens[1] << seven_segment_display:disp_p2_tens.seg
+seg_p2_tens[2] << seven_segment_display:disp_p2_tens.seg
+seg_p2_tens[3] << seven_segment_display:disp_p2_tens.seg
+seg_p2_tens[4] << seven_segment_display:disp_p2_tens.seg
+seg_p2_tens[5] << seven_segment_display:disp_p2_tens.seg
+seg_p2_tens[6] << seven_segment_display:disp_p2_tens.seg
 
 
 |top|arm:arm_inst
@@ -6438,10 +6466,16 @@ clk => score2_reg[0].CLK
 clk => score2_reg[1].CLK
 clk => score2_reg[2].CLK
 clk => score2_reg[3].CLK
+clk => score2_reg[4].CLK
+clk => score2_reg[5].CLK
+clk => score2_reg[6].CLK
 clk => score1_reg[0].CLK
 clk => score1_reg[1].CLK
 clk => score1_reg[2].CLK
 clk => score1_reg[3].CLK
+clk => score1_reg[4].CLK
+clk => score1_reg[5].CLK
+clk => score1_reg[6].CLK
 clk => ball_y_reg[0].CLK
 clk => ball_y_reg[1].CLK
 clk => ball_y_reg[2].CLK
@@ -6492,10 +6526,16 @@ reset => score2_reg[0].ACLR
 reset => score2_reg[1].ACLR
 reset => score2_reg[2].ACLR
 reset => score2_reg[3].ACLR
+reset => score2_reg[4].ACLR
+reset => score2_reg[5].ACLR
+reset => score2_reg[6].ACLR
 reset => score1_reg[0].ACLR
 reset => score1_reg[1].ACLR
 reset => score1_reg[2].ACLR
 reset => score1_reg[3].ACLR
+reset => score1_reg[4].ACLR
+reset => score1_reg[5].ACLR
+reset => score1_reg[6].ACLR
 reset => ball_y_reg[0].ACLR
 reset => ball_y_reg[1].ACLR
 reset => ball_y_reg[2].ACLR
@@ -6593,14 +6633,20 @@ q_b[4] => paddle1_y_reg[4].DATAIN
 q_b[4] => paddle2_y_reg[4].DATAIN
 q_b[4] => ball_x_reg[4].DATAIN
 q_b[4] => ball_y_reg[4].DATAIN
+q_b[4] => score1_reg[4].DATAIN
+q_b[4] => score2_reg[4].DATAIN
 q_b[5] => paddle1_y_reg[5].DATAIN
 q_b[5] => paddle2_y_reg[5].DATAIN
 q_b[5] => ball_x_reg[5].DATAIN
 q_b[5] => ball_y_reg[5].DATAIN
+q_b[5] => score1_reg[5].DATAIN
+q_b[5] => score2_reg[5].DATAIN
 q_b[6] => paddle1_y_reg[6].DATAIN
 q_b[6] => paddle2_y_reg[6].DATAIN
 q_b[6] => ball_x_reg[6].DATAIN
 q_b[6] => ball_y_reg[6].DATAIN
+q_b[6] => score1_reg[6].DATAIN
+q_b[6] => score2_reg[6].DATAIN
 q_b[7] => paddle1_y_reg[7].DATAIN
 q_b[7] => paddle2_y_reg[7].DATAIN
 q_b[7] => ball_x_reg[7].DATAIN
@@ -6679,10 +6725,16 @@ score1[0] <= score1_reg[0].DB_MAX_OUTPUT_PORT_TYPE
 score1[1] <= score1_reg[1].DB_MAX_OUTPUT_PORT_TYPE
 score1[2] <= score1_reg[2].DB_MAX_OUTPUT_PORT_TYPE
 score1[3] <= score1_reg[3].DB_MAX_OUTPUT_PORT_TYPE
+score1[4] <= score1_reg[4].DB_MAX_OUTPUT_PORT_TYPE
+score1[5] <= score1_reg[5].DB_MAX_OUTPUT_PORT_TYPE
+score1[6] <= score1_reg[6].DB_MAX_OUTPUT_PORT_TYPE
 score2[0] <= score2_reg[0].DB_MAX_OUTPUT_PORT_TYPE
 score2[1] <= score2_reg[1].DB_MAX_OUTPUT_PORT_TYPE
 score2[2] <= score2_reg[2].DB_MAX_OUTPUT_PORT_TYPE
 score2[3] <= score2_reg[3].DB_MAX_OUTPUT_PORT_TYPE
+score2[4] <= score2_reg[4].DB_MAX_OUTPUT_PORT_TYPE
+score2[5] <= score2_reg[5].DB_MAX_OUTPUT_PORT_TYPE
+score2[6] <= score2_reg[6].DB_MAX_OUTPUT_PORT_TYPE
 winner[0] <= winner_reg[0].DB_MAX_OUTPUT_PORT_TYPE
 winner[1] <= winner_reg[1].DB_MAX_OUTPUT_PORT_TYPE
 
@@ -6696,7 +6748,9 @@ x[0] => LessThan8.IN10
 x[0] => LessThan9.IN19
 x[0] => LessThan12.IN20
 x[0] => LessThan13.IN20
-x[0] => LessThan15.IN20
+x[0] => LessThan16.IN32
+x[0] => LessThan17.IN64
+x[0] => Add11.IN64
 x[1] => LessThan0.IN19
 x[1] => LessThan1.IN19
 x[1] => LessThan4.IN19
@@ -6705,7 +6759,9 @@ x[1] => LessThan8.IN9
 x[1] => LessThan9.IN18
 x[1] => LessThan12.IN19
 x[1] => LessThan13.IN19
-x[1] => LessThan15.IN19
+x[1] => LessThan16.IN31
+x[1] => LessThan17.IN63
+x[1] => Add11.IN63
 x[2] => LessThan0.IN18
 x[2] => LessThan1.IN18
 x[2] => LessThan4.IN18
@@ -6714,7 +6770,9 @@ x[2] => LessThan8.IN8
 x[2] => LessThan9.IN17
 x[2] => LessThan12.IN18
 x[2] => LessThan13.IN18
-x[2] => LessThan15.IN18
+x[2] => LessThan16.IN30
+x[2] => LessThan17.IN62
+x[2] => Add11.IN62
 x[3] => LessThan0.IN17
 x[3] => LessThan1.IN17
 x[3] => LessThan4.IN17
@@ -6723,7 +6781,9 @@ x[3] => LessThan8.IN7
 x[3] => LessThan9.IN16
 x[3] => LessThan12.IN17
 x[3] => LessThan13.IN17
-x[3] => LessThan15.IN17
+x[3] => LessThan16.IN29
+x[3] => LessThan17.IN61
+x[3] => Add11.IN61
 x[4] => LessThan0.IN16
 x[4] => LessThan1.IN16
 x[4] => LessThan4.IN16
@@ -6732,7 +6792,9 @@ x[4] => LessThan8.IN6
 x[4] => LessThan9.IN15
 x[4] => LessThan12.IN16
 x[4] => LessThan13.IN16
-x[4] => LessThan15.IN16
+x[4] => LessThan16.IN28
+x[4] => LessThan17.IN60
+x[4] => Add11.IN60
 x[5] => LessThan0.IN15
 x[5] => LessThan1.IN15
 x[5] => LessThan4.IN15
@@ -6741,7 +6803,9 @@ x[5] => LessThan8.IN5
 x[5] => LessThan9.IN14
 x[5] => LessThan12.IN15
 x[5] => LessThan13.IN15
-x[5] => LessThan15.IN15
+x[5] => LessThan16.IN27
+x[5] => LessThan17.IN59
+x[5] => Add11.IN59
 x[6] => LessThan0.IN14
 x[6] => LessThan1.IN14
 x[6] => LessThan4.IN14
@@ -6750,7 +6814,9 @@ x[6] => LessThan8.IN4
 x[6] => LessThan9.IN13
 x[6] => LessThan12.IN14
 x[6] => LessThan13.IN14
-x[6] => LessThan15.IN14
+x[6] => LessThan16.IN26
+x[6] => LessThan17.IN58
+x[6] => Add11.IN58
 x[7] => LessThan0.IN13
 x[7] => LessThan1.IN13
 x[7] => LessThan4.IN13
@@ -6759,7 +6825,9 @@ x[7] => LessThan8.IN3
 x[7] => LessThan9.IN12
 x[7] => LessThan12.IN13
 x[7] => LessThan13.IN13
-x[7] => LessThan15.IN13
+x[7] => LessThan16.IN25
+x[7] => LessThan17.IN57
+x[7] => Add11.IN57
 x[8] => LessThan0.IN12
 x[8] => LessThan1.IN12
 x[8] => LessThan4.IN12
@@ -6768,7 +6836,9 @@ x[8] => LessThan8.IN2
 x[8] => LessThan9.IN11
 x[8] => LessThan12.IN12
 x[8] => LessThan13.IN12
-x[8] => LessThan15.IN12
+x[8] => LessThan16.IN24
+x[8] => LessThan17.IN56
+x[8] => Add11.IN56
 x[9] => LessThan0.IN11
 x[9] => LessThan1.IN11
 x[9] => LessThan4.IN11
@@ -6777,7 +6847,9 @@ x[9] => LessThan8.IN1
 x[9] => LessThan9.IN10
 x[9] => LessThan12.IN11
 x[9] => LessThan13.IN11
-x[9] => LessThan15.IN11
+x[9] => LessThan16.IN23
+x[9] => LessThan17.IN55
+x[9] => Add11.IN55
 y[0] => LessThan2.IN10
 y[0] => LessThan3.IN20
 y[0] => LessThan6.IN10
@@ -6785,6 +6857,9 @@ y[0] => LessThan7.IN20
 y[0] => LessThan10.IN10
 y[0] => LessThan11.IN19
 y[0] => Mod0.IN14
+y[0] => LessThan18.IN60
+y[0] => LessThan19.IN64
+y[0] => Add12.IN64
 y[1] => LessThan2.IN9
 y[1] => LessThan3.IN19
 y[1] => LessThan6.IN9
@@ -6792,6 +6867,9 @@ y[1] => LessThan7.IN19
 y[1] => LessThan10.IN9
 y[1] => LessThan11.IN18
 y[1] => Mod0.IN13
+y[1] => LessThan18.IN59
+y[1] => LessThan19.IN63
+y[1] => Add12.IN63
 y[2] => LessThan2.IN8
 y[2] => LessThan3.IN18
 y[2] => LessThan6.IN8
@@ -6799,6 +6877,9 @@ y[2] => LessThan7.IN18
 y[2] => LessThan10.IN8
 y[2] => LessThan11.IN17
 y[2] => Mod0.IN12
+y[2] => LessThan18.IN58
+y[2] => LessThan19.IN62
+y[2] => Add12.IN62
 y[3] => LessThan2.IN7
 y[3] => LessThan3.IN17
 y[3] => LessThan6.IN7
@@ -6806,6 +6887,9 @@ y[3] => LessThan7.IN17
 y[3] => LessThan10.IN7
 y[3] => LessThan11.IN16
 y[3] => Mod0.IN11
+y[3] => LessThan18.IN57
+y[3] => LessThan19.IN61
+y[3] => Add12.IN61
 y[4] => LessThan2.IN6
 y[4] => LessThan3.IN16
 y[4] => LessThan6.IN6
@@ -6813,6 +6897,9 @@ y[4] => LessThan7.IN16
 y[4] => LessThan10.IN6
 y[4] => LessThan11.IN15
 y[4] => Mod0.IN10
+y[4] => LessThan18.IN56
+y[4] => LessThan19.IN60
+y[4] => Add12.IN60
 y[5] => LessThan2.IN5
 y[5] => LessThan3.IN15
 y[5] => LessThan6.IN5
@@ -6820,6 +6907,9 @@ y[5] => LessThan7.IN15
 y[5] => LessThan10.IN5
 y[5] => LessThan11.IN14
 y[5] => Mod0.IN9
+y[5] => LessThan18.IN55
+y[5] => LessThan19.IN59
+y[5] => Add12.IN59
 y[6] => LessThan2.IN4
 y[6] => LessThan3.IN14
 y[6] => LessThan6.IN4
@@ -6827,6 +6917,9 @@ y[6] => LessThan7.IN14
 y[6] => LessThan10.IN4
 y[6] => LessThan11.IN13
 y[6] => Mod0.IN8
+y[6] => LessThan18.IN54
+y[6] => LessThan19.IN58
+y[6] => Add12.IN58
 y[7] => LessThan2.IN3
 y[7] => LessThan3.IN13
 y[7] => LessThan6.IN3
@@ -6834,6 +6927,9 @@ y[7] => LessThan7.IN13
 y[7] => LessThan10.IN3
 y[7] => LessThan11.IN12
 y[7] => Mod0.IN7
+y[7] => LessThan18.IN53
+y[7] => LessThan19.IN57
+y[7] => Add12.IN57
 y[8] => LessThan2.IN2
 y[8] => LessThan3.IN12
 y[8] => LessThan6.IN2
@@ -6841,6 +6937,9 @@ y[8] => LessThan7.IN12
 y[8] => LessThan10.IN2
 y[8] => LessThan11.IN11
 y[8] => Mod0.IN6
+y[8] => LessThan18.IN52
+y[8] => LessThan19.IN56
+y[8] => Add12.IN56
 y[9] => LessThan2.IN1
 y[9] => LessThan3.IN11
 y[9] => LessThan6.IN1
@@ -6848,6 +6947,9 @@ y[9] => LessThan7.IN11
 y[9] => LessThan10.IN1
 y[9] => LessThan11.IN10
 y[9] => Mod0.IN5
+y[9] => LessThan18.IN51
+y[9] => LessThan19.IN55
+y[9] => Add12.IN55
 paddle1_y[0] => LessThan2.IN20
 paddle1_y[0] => LessThan3.IN22
 paddle1_y[1] => LessThan2.IN19
@@ -6932,39 +7034,99 @@ score1[0] => ~NO_FANOUT~
 score1[1] => ~NO_FANOUT~
 score1[2] => ~NO_FANOUT~
 score1[3] => ~NO_FANOUT~
+score1[4] => ~NO_FANOUT~
+score1[5] => ~NO_FANOUT~
+score1[6] => ~NO_FANOUT~
 score2[0] => ~NO_FANOUT~
 score2[1] => ~NO_FANOUT~
 score2[2] => ~NO_FANOUT~
 score2[3] => ~NO_FANOUT~
+score2[4] => ~NO_FANOUT~
+score2[5] => ~NO_FANOUT~
+score2[6] => ~NO_FANOUT~
 winner[0] => Equal0.IN1
-winner[0] => Equal1.IN0
-winner[0] => Equal2.IN1
+winner[0] => Equal1.IN30
 winner[1] => Equal0.IN0
-winner[1] => Equal1.IN1
-winner[1] => Equal2.IN0
-r[0] <= r.DB_MAX_OUTPUT_PORT_TYPE
-r[1] <= r.DB_MAX_OUTPUT_PORT_TYPE
-r[2] <= r.DB_MAX_OUTPUT_PORT_TYPE
-r[3] <= r.DB_MAX_OUTPUT_PORT_TYPE
-r[4] <= r.DB_MAX_OUTPUT_PORT_TYPE
-r[5] <= r.DB_MAX_OUTPUT_PORT_TYPE
-r[6] <= r.DB_MAX_OUTPUT_PORT_TYPE
-r[7] <= r.DB_MAX_OUTPUT_PORT_TYPE
-g[0] <= g.DB_MAX_OUTPUT_PORT_TYPE
-g[1] <= g.DB_MAX_OUTPUT_PORT_TYPE
-g[2] <= g.DB_MAX_OUTPUT_PORT_TYPE
-g[3] <= g.DB_MAX_OUTPUT_PORT_TYPE
-g[4] <= g.DB_MAX_OUTPUT_PORT_TYPE
-g[5] <= g.DB_MAX_OUTPUT_PORT_TYPE
-g[6] <= g.DB_MAX_OUTPUT_PORT_TYPE
-g[7] <= g.DB_MAX_OUTPUT_PORT_TYPE
-b[0] <= b.DB_MAX_OUTPUT_PORT_TYPE
-b[1] <= b.DB_MAX_OUTPUT_PORT_TYPE
-b[2] <= b.DB_MAX_OUTPUT_PORT_TYPE
-b[3] <= b.DB_MAX_OUTPUT_PORT_TYPE
-b[4] <= b.DB_MAX_OUTPUT_PORT_TYPE
-b[5] <= b.DB_MAX_OUTPUT_PORT_TYPE
-b[6] <= b.DB_MAX_OUTPUT_PORT_TYPE
-b[7] <= b.DB_MAX_OUTPUT_PORT_TYPE
+winner[1] => Equal1.IN61
+r[0] <= rr.DB_MAX_OUTPUT_PORT_TYPE
+r[1] <= rr.DB_MAX_OUTPUT_PORT_TYPE
+r[2] <= rr.DB_MAX_OUTPUT_PORT_TYPE
+r[3] <= rr.DB_MAX_OUTPUT_PORT_TYPE
+r[4] <= rr.DB_MAX_OUTPUT_PORT_TYPE
+r[5] <= rr.DB_MAX_OUTPUT_PORT_TYPE
+r[6] <= rr.DB_MAX_OUTPUT_PORT_TYPE
+r[7] <= rr.DB_MAX_OUTPUT_PORT_TYPE
+g[0] <= gg.DB_MAX_OUTPUT_PORT_TYPE
+g[1] <= gg.DB_MAX_OUTPUT_PORT_TYPE
+g[2] <= gg.DB_MAX_OUTPUT_PORT_TYPE
+g[3] <= gg.DB_MAX_OUTPUT_PORT_TYPE
+g[4] <= gg.DB_MAX_OUTPUT_PORT_TYPE
+g[5] <= gg.DB_MAX_OUTPUT_PORT_TYPE
+g[6] <= gg.DB_MAX_OUTPUT_PORT_TYPE
+g[7] <= gg.DB_MAX_OUTPUT_PORT_TYPE
+b[0] <= bb.DB_MAX_OUTPUT_PORT_TYPE
+b[1] <= bb.DB_MAX_OUTPUT_PORT_TYPE
+b[2] <= bb.DB_MAX_OUTPUT_PORT_TYPE
+b[3] <= bb.DB_MAX_OUTPUT_PORT_TYPE
+b[4] <= bb.DB_MAX_OUTPUT_PORT_TYPE
+b[5] <= bb.DB_MAX_OUTPUT_PORT_TYPE
+b[6] <= bb.DB_MAX_OUTPUT_PORT_TYPE
+b[7] <= bb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top|seven_segment_display:disp_p1_units
+num[0] => Decoder0.IN3
+num[1] => Decoder0.IN2
+num[2] => Decoder0.IN1
+num[3] => Decoder0.IN0
+seg[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+seg[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+seg[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+seg[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+seg[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+seg[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+seg[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top|seven_segment_display:disp_p1_tens
+num[0] => Decoder0.IN3
+num[1] => Decoder0.IN2
+num[2] => Decoder0.IN1
+num[3] => Decoder0.IN0
+seg[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+seg[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+seg[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+seg[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+seg[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+seg[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+seg[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top|seven_segment_display:disp_p2_units
+num[0] => Decoder0.IN3
+num[1] => Decoder0.IN2
+num[2] => Decoder0.IN1
+num[3] => Decoder0.IN0
+seg[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+seg[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+seg[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+seg[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+seg[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+seg[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+seg[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top|seven_segment_display:disp_p2_tens
+num[0] => Decoder0.IN3
+num[1] => Decoder0.IN2
+num[2] => Decoder0.IN1
+num[3] => Decoder0.IN0
+seg[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+seg[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+seg[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+seg[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+seg[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+seg[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+seg[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
 
 

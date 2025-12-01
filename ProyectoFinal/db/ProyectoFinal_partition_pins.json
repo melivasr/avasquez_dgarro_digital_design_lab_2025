@@ -120,6 +120,118 @@
 					"strict" : false
 				},
 				{
+					"name" : "seg_p1_units[0]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_p1_units[1]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_p1_units[2]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_p1_units[3]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_p1_units[4]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_p1_units[5]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_p1_units[6]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_p1_tens[0]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_p1_tens[1]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_p1_tens[2]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_p1_tens[3]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_p1_tens[4]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_p1_tens[5]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_p1_tens[6]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_p2_units[0]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_p2_units[1]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_p2_units[2]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_p2_units[3]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_p2_units[4]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_p2_units[5]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_p2_units[6]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_p2_tens[0]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_p2_tens[1]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_p2_tens[2]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_p2_tens[3]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_p2_tens[4]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_p2_tens[5]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_p2_tens[6]",
+					"strict" : false
+				},
+				{
 					"name" : "clk",
 					"strict" : false
 				},

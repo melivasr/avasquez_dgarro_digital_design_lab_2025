@@ -14,10 +14,10 @@ module top_tb;
     
     // debug desde el ARM
     logic [3:0]  ALUFlags_dbg;
-    logic        RegWrite_dbg;
-    logic        ALUSrc_dbg;
-    logic        MemtoReg_dbg;
-    logic        PCSrc_dbg;
+    logic RegWrite_dbg;
+    logic ALUSrc_dbg;
+    logic MemtoReg_dbg;
+    logic PCSrc_dbg;
     logic [1:0]  ALUControl_dbg;
     logic [1:0]  RegSrc_dbg;
     logic [1:0]  ImmSrc_dbg;
@@ -49,7 +49,7 @@ module top_tb;
     );
 
     // Memoria de datos (RAM) 2-PORT
-    // Puerto A: CPU, Puerto B: dummy
+    // Puerto A: CPU, Puerto B:
     logic [2:0]  cpu_word_addr;
     logic [2:0]  vga_word_addr_dummy;
     logic [31:0] ram_q_a;
@@ -70,11 +70,10 @@ module top_tb;
         .q_b       (ram_q_b_dummy)
     );
 
-    // ----------------------------------------------------------------
+   
     // Emulación del registro de teclas en simulación
     // ADDR_KEYS = 28 -> 28/4 = 7 -> cpu_word_addr == 3'd7
     // bits: [0]=P1_UP, [1]=P1_DOWN, [2]=P2_UP, [3]=P2_DOWN
-    // ----------------------------------------------------------------
     logic [31:0] keys_reg;
     initial keys_reg = 32'b0;  
 

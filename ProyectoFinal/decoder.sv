@@ -2,20 +2,20 @@ module decoder(
     input  logic [1:0] Op,
     input  logic [5:0] Funct,
     input  logic [3:0] Rd,
-    input  logic       bit22,        // B (LDRB/STRB)
+    input  logic bit22,        // B (LDRB/STRB)
     input  logic [3:0] mulcode,      // bits[7:4]
     output logic [1:0] FlagW,
-    output logic       PCS,RegW,MemW,
-    output logic       MemtoReg,ALUSrc,
+    output logic PCS,RegW,MemW,
+    output logic MemtoReg,ALUSrc,
     output logic [1:0] ImmSrc,RegSrc,ALUControl,
-    output logic       Link, 
-    output logic       ByteOp,
-    output logic       IsMul
+    output logic Link, 
+    output logic ByteOp,
+    output logic IsMul
 );
 
     logic [9:0] controls_raw;
-    logic       Branch,ALUOp;
-    logic       RegW_int;
+    logic Branch,ALUOp;
+    logic RegW_int;
 
     logic is_cmp, is_tst, is_mul;
 
